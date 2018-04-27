@@ -1,5 +1,5 @@
 <div class="pay container">
-  <h1>{{ recipient.full_name }}</h1>
+  <h1>{{ t 'pay.recipient.title' name=recipient.full_name }}</h1>
   <h2>{{ amount }} {{ asset.symbol }}</h2>
 
   {{#if isPaid}}

@@ -17,6 +17,9 @@
     "instruction.title": "在手機上使用 Mixin 來掃描代碼",
     "instruction.install": "在 Google Play 或 App Store 中搜索 Mixin"
   },
+  "pay": {
+    "recipient.title": "轉賬給 %{name}"
+  },
   "code": {
     "open.action": "在 Mixin 中打開",
     "install.action": "獲取 Mixin 應用",

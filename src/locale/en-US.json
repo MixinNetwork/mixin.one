@@ -17,6 +17,9 @@
     "instruction.title": "Use Mixin on your phone to scan the code",
     "instruction.install": "Search Mixin in Google Play or App Store"
   },
+  "pay": {
+    "recipient.title": "Transfer to %{name}"
+  },
   "code": {
     "open.action": "Open In Mixin",
     "install.action": "Get Mixin App",
