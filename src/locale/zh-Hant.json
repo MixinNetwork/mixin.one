@@ -1,0 +1,46 @@
+{
+  "general": {
+    "errors": {
+      "0": "網絡錯誤。",
+      "400": "錯誤的請求。",
+      "403": "拒絕訪問。",
+      "429": "您的請求超出了限制，請稍後再試。",
+      "500": "內部服務器錯誤。",
+      "10001": "內部服務器錯誤。",
+      "10002": "提交的數據無效。",
+      "20110": "電話號碼無效。",
+      "20112": "邀請碼無效。",
+      "20113": "電話驗證碼無效。"
+    }
+  },
+  "oauth": {
+    "instruction.title": "在手機上使用 Mixin 來掃描代碼",
+    "instruction.install": "在 Google Play 或 App Store 中搜索 Mixin"
+  },
+  "code": {
+    "open.action": "在 Mixin 中打開",
+    "install.action": "獲取 Mixin 應用",
+    "group.participants": "%{count} 成員"
+  },
+  "snapshots": {
+    "search.placeholder": "Search transactions",
+    "transaction": {
+      "id": "Transaction ID",
+      "time": "Timestamp",
+      "source": "Type",
+      "amount": "Amount",
+      "asset": "Asset"
+    }
+  },
+  "network": {
+    "stats": {
+      "assets.title": "Assets",
+      "transactions.title": "Transactions",
+      "peak.throughput.title": "Peak TPS"
+    },
+    "assets": {
+      "title": "Top Assets"
+    },
+    "back.title": "Back to Mixin Network"
+  }
+}

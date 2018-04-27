@@ -1,0 +1,41 @@
+<div class="particles container">
+</div>
+<div class="particles overlay">
+</div>
+<div class="flex content">
+  <div class="header container">
+    <div class="wrapper">
+      <h1 class="logo"><a href="/snapshots" data-navigo><img src="{{logoURL}}" /><span>Mixin Network</span></a></h1>
+      <ul class="network stats">
+        <li class="assets amount"><i class="icon-wallet"></i> {{assetsCount}} <span>{{t 'network.stats.assets.title'}}</span></li>
+        <li><i class="icon-layers"></i> {{snapshotsCount}} <span>{{t 'network.stats.transactions.title'}}</span></li>
+        <li class="thoroughput"><i class="icon-energy"></i> {{peakTPS}} <span>{{t 'network.stats.peak.throughput.title'}}</span></li>
+      </ul>
+      <h2>{{t 'network.assets.title'}}</h2>
+      <ul class="network assets">
+      </ul>
+    </div>
+  </div>
+  <ul class="{{flow}} snapshot main container">
+    <li class="meta id">
+      <div class="meta name">{{t 'snapshots.transaction.id'}}</div>
+      <div class="meta value">{{snapshot_id}}</div>
+    </li>
+    <li class="meta time">
+      <div class="meta name">{{t 'snapshots.transaction.time'}}</div>
+      <div class="meta value">{{created_at}}</div>
+    </li>
+    <li class="meta source">
+      <div class="meta name">{{t 'snapshots.transaction.source'}}</div>
+      <div class="meta value">{{source}}</div>
+    </li>
+    <li class="meta amount">
+      <div class="meta name">{{t 'snapshots.transaction.amount'}}</div>
+      <div class="meta value">{{amount}} {{asset.symbol}}</div>
+    </li>
+    <li class="meta asset">
+      <div class="meta name">{{t 'snapshots.transaction.asset'}}</div>
+      <div class="meta value"><a href="/snapshots/{{asset.asset_id}}" data-navigo>{{asset.name}}</a></div>
+    </li>
+  </ul>
+</div>

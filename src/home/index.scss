@@ -1,0 +1,122 @@
+@import '../constant.scss';
+
+.home.layout {
+  background-image: url('./masthead.png');
+  background-position: center top;
+  background-repeat: no-repeat;
+
+  #layout-container {
+    position: relative;
+  }
+
+  .particles.container,
+  .particles.overlay {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.92);
+    z-index: 0;
+    top: 0;
+    left: 0;
+  }
+
+  .masthead {
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+  }
+
+  .content {
+    width: 100%;
+    max-width: 600px;
+    box-sizing: border-box;
+    padding: 0 32px 32px;
+    margin: 128px auto 0;
+    text-align: center;
+  }
+
+  .logo {
+    margin: 0;
+  }
+
+  .logo img {
+    width: 96px;
+    height: 96px;
+  }
+
+  .title {
+    font-family: $font-main-title;
+    font-size: 32px;
+    font-weight: 500;
+    margin: 16px 0 32px;
+  }
+
+  .vision {
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 1.5em;
+    color: $color-main-foreground-light;
+    margin: 64px 0;
+  }
+
+  .contacts {
+    margin: 64px 0 16px;
+    padding: 0;
+  }
+
+  .contact {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: inline-block;
+    margin: 8px;
+    font-size: 16px;
+  }
+
+  .contact a {
+    color: $color-main-foreground-dark;
+    text-decoration: none;
+  }
+
+  .contact a:hover {
+    color: $color-main-highlight;
+  }
+
+  .app.button a img {
+    width: 215px;
+    height: 83px;
+  }
+
+  .ios.button {
+    a img {
+      width: 188px;
+      height: 56px;
+    }
+    margin: 16px 0;
+  }
+
+  .whitepaper.link {
+    margin: 16px 0 64px;
+    font-size: 10px;
+    font-weight: 300;
+    text-transform: uppercase;
+
+    a {
+      color: $color-main-foreground-light;
+      opacity: 0.5;
+      margin: 0 8px;
+
+      &:hover {
+        color: $color-main-highlight;
+        opacity: 1;
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    .content {
+      margin: 64px auto 0;
+      padding: 0 24px 24px;
+    }
+  }
+}

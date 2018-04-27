@@ -1,0 +1,27 @@
+<div class="user container">
+  <h1>{{full_name}}</h1>
+  <h2>{{identity_number}}</h2>
+
+  <div class="mixin code container">
+    <canvas id="mixin-code"></canvas>
+    <div class="avatar image">
+      {{#if hasAvatar}}
+      <img src="{{avatar_url}}" alt="{{full_name}}"/>
+      {{else}}
+      <p>{{firstLetter}}</p>
+      {{/if}}
+    </div>
+  </div>
+
+
+  <p class="instruction title">{{ t 'oauth.instruction.title' }}</p>
+  <p class="instruction install">{{ t 'oauth.instruction.install' }}</p>
+
+  <div class="actions">
+    <a href="mixin://codes/{{code_id}}" class="open action">{{t 'code.open.action'}}</a>
+  </div>
+
+  <div class="logo footer">
+    <img src="{{logoURL}}" alt="Mixin Logo" />
+  </div>
+</div>

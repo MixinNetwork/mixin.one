@@ -1,0 +1,136 @@
+@import "../constant.scss";
+
+.user.code.layout {
+  background-image: url('../home/masthead.png');
+  background-position: center top;
+  background-repeat: no-repeat;
+
+  .user.container {
+    width: 100%;
+    max-width: 600px;
+    box-sizing: border-box;
+    padding: 0 32px;
+    margin: 128px auto;
+    text-align: center;
+
+    .mixin.code.container {
+      position: relative;
+      margin: 64px auto;
+      width: 256px;
+      height: 256px;
+
+      canvas {
+        width: 100%;
+        height: 100%;
+      }
+
+      .avatar.image {
+        position: absolute;
+        width: 64px;
+        height: 64px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border-radius: 32px;
+        background-color: #FFFFFF;
+        color: #00B0E9;
+        text-align: center;
+        padding: 0;
+        margin: 0;
+
+        p {
+          line-height: 64px;
+          font-size: 32px;
+          font-weight: 400;
+          padding: 0;
+          margin: 0;
+        }
+
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+
+    h1 {
+      font-size: 32px;
+      font-weight: 400;
+      color: $color-main-foreground-light;
+      margin: 32px 0 0;
+    }
+
+    h2 {
+      font-family: $font-main-title;
+      font-weight: 300;
+      font-size: 16px;
+      color: $color-main-foreground-light;
+      opacity: 0.3;
+      margin: 8px;
+    }
+
+    .instruction.install {
+      opacity: 0.5;
+      font-size: 12px;
+    }
+
+    .actions {
+      margin: 32px auto;
+      width: 256px;
+
+      .action {
+        width: 128px;
+        display: inline-block;
+        color: $color-main-foreground-dark;
+        padding: 12px 16px;
+        font-size: 16px;
+        margin: 16px 0;
+      }
+
+      .open.action {
+        background: $color-main-highlight;
+        color: $color-main-background;
+        border-radius: 2px;
+      }
+    }
+
+    .logo img {
+      width: 32px;
+      height: 32px;
+      margin-top: 16px;
+      opacity: 0.3;
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    .user.container {
+      margin: 64px auto;
+      padding: 0 24px;
+    }
+  }
+
+  @media (max-width: 520px) {
+    .user.container {
+      .mixin.code.container {
+        margin: 32px auto;
+        width: 196px;
+        height: 196px;
+
+        .avatar.image {
+          width: 48px;
+          height: 48px;
+          border-radius: 24px;
+
+          p {
+            line-height: 48px;
+            font-size: 24px;
+          }
+        }
+      }
+    }
+  }
+}

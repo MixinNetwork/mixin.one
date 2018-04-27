@@ -1,0 +1,46 @@
+{
+  "general": {
+    "errors": {
+      "0": "Network error.",
+      "400": "Bad request",
+      "403": "Access denied.",
+      "429": "Your requests exceed the rate limit, please try again later.",
+      "500": "Internal server error.",
+      "10001": "Internal server error.",
+      "10002": "Invalid data submitted.",
+      "20110": "Invalid phone number.",
+      "20112": "Invalid invitation code.",
+      "20113": "Invalid phone verification code."
+    }
+  },
+  "oauth": {
+    "instruction.title": "Use Mixin on your phone to scan the code",
+    "instruction.install": "Search Mixin in Google Play or App Store"
+  },
+  "code": {
+    "open.action": "Open In Mixin",
+    "install.action": "Get Mixin App",
+    "group.participants": "%{count} members"
+  },
+  "snapshots": {
+    "search.placeholder": "Search transactions",
+    "transaction": {
+      "id": "Transaction ID",
+      "time": "Timestamp",
+      "source": "Type",
+      "amount": "Amount",
+      "asset": "Asset"
+    }
+  },
+  "network": {
+    "stats": {
+      "assets.title": "Assets",
+      "transactions.title": "Transactions",
+      "peak.throughput.title": "Peak TPS"
+    },
+    "assets": {
+      "title": "Top Assets"
+    },
+    "back.title": "Back to Mixin Network"
+  }
+}

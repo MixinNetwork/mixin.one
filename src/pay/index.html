@@ -1,0 +1,26 @@
+<div class="pay container">
+  <h1>{{ recipient.full_name }}</h1>
+  <h2>{{ amount }} {{ asset.symbol }}</h2>
+
+  {{#if isPaid}}
+  <div class="mixin paid status">
+    <i class="icon-check"></i>
+  </div>
+  {{else}}
+  <div class="mixin code container">
+    <canvas id="mixin-code"></canvas>
+    <img src="{{ recipient.avatar_url }}" alt="app logo" />
+  </div>
+
+  <p class="instruction title">{{ t 'oauth.instruction.title' }}</p>
+  <p class="instruction install">{{ t 'oauth.instruction.install' }}</p>
+
+  <div class="actions">
+    <a href="mixin://pay{{params}}" class="open action">{{t 'code.open.action'}}</a>
+  </div>
+  {{/if}}
+
+  <div class="logo footer">
+    <img src="{{logoURL}}" alt="Mixin Logo" />
+  </div>
+</div>
