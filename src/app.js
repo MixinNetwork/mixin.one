@@ -57,7 +57,7 @@ router.on({
     new Snapshot(router, api).index(params['id']);
   },
   '/logs': function (params) {
-    new Log(router).render();
+    new Log(router, api).render();
   },
   '/pages/:id': function (params) {
     new Page(router).show(params['id']);
