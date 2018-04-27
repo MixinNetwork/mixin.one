@@ -5,7 +5,7 @@
   "main": "app.js",
   "dependencies": {
     "handlebars": "^4.0.10",
-    "jquery": "^3.2.1",
+    "jquery": "^3.3.1",
     "navigo": "^5.2.0",
     "node-polyglot": "^2.2.2",
     "noty": "^3.1.4",
@@ -14,22 +14,22 @@
     "reconnecting-websocket": "^3.0.7",
     "simple-line-icons": "^2.4.1",
     "three": "^0.91.0",
-    "uuid": "^3.1.0",
+    "uuid": "^3.2.1",
     "uuid-validate": "0.0.2"
   },
   "devDependencies": {
     "compression-webpack-plugin": "^0.4.0",
-    "css-loader": "^0.28.8",
+    "css-loader": "^0.28.11",
     "extract-text-webpack-plugin": "^2.1.2",
     "favicons-webpack-plugin": "0.0.7",
     "file-loader": "^0.11.2",
-    "handlebars-loader": "^1.6.0",
+    "handlebars-loader": "^1.7.0",
     "html-webpack-plugin": "^2.29.0",
-    "node-sass": "^4.5.3",
-    "sass-loader": "^6.0.6",
+    "node-sass": "^4.9.0",
+    "sass-loader": "^6.0.7",
     "script-ext-html-webpack-plugin": "^1.8.3",
     "style-loader": "^0.18.2",
-    "webpack": "^3.10.0"
+    "webpack": "^3.11.0"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
