@@ -7,6 +7,7 @@ function Home(router, api) {
   this.api = api;
   this.animator = new Animator();
   this.templateIndex = require('./index.html');
+  this.templateXIN = require('./xin.html');
 }
 
 Home.prototype = {
@@ -27,6 +28,15 @@ Home.prototype = {
     self.animator.init($('.particles.container')[0]);
     self.animator.animate();
     self.router.updatePageLinks();
+  },
+
+  xin: function () {
+    var self = this;
+    $('title').html('XIN Token Distribution - Mixin');
+    $('body').attr('class', 'home layout');
+    $('#layout-container').html(self.templateXIN({
+      logoURL: require('./logo.png')
+    }));
   },
 
   getMobileOperatingSystem: function () {

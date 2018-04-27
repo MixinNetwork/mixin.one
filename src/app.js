@@ -74,6 +74,9 @@ router.on({
   '/codes/:id': function (params) {
     new Code(router, api).render(params['id']);
   },
+  '/xin': function () {
+    new Home(router, api).xin();
+  },
   '/': function () {
     new Home(router, api).index();
   }
