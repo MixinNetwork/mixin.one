@@ -18,7 +18,7 @@
     "uuid-validate": "0.0.2"
   },
   "devDependencies": {
-    "compression-webpack-plugin": "^0.4.0",
+    "compression-webpack-plugin": "^1.1.11",
     "css-loader": "^0.28.11",
     "extract-text-webpack-plugin": "^2.1.2",
     "favicons-webpack-plugin": "0.0.7",
