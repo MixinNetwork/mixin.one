@@ -74,7 +74,7 @@ Pay.prototype = {
     if (!validate(traceId)) {
       return false;
     }
-    if (memo && memo.length > 32) {
+    if (memo && memo.length > 140) {
       return false;
     }
     return parseFloat(amount) > 0;
