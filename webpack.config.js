@@ -66,12 +66,7 @@ module.exports = {
         fallback: "style-loader"
       })
     }, {
-      test: /\.(woff|woff2|eot|ttf|otf|svg)$/,
-      use: [
-        'file-loader'
-      ]
-    }, {
-      test: /\.(png|svg|jpg|gif)$/,
+      test: /\.(woff|woff2|eot|ttf|otf|svg|png|jpg|gif)$/,
       use: [
         'file-loader'
       ]

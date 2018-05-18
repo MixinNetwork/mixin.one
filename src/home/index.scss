@@ -56,7 +56,31 @@
     font-size: 20px;
     line-height: 1.5em;
     color: $color-main-foreground-light;
-    margin: 64px 0;
+    margin: 64px 0 32px;
+  }
+
+  .blockchains.list {
+    margin: 32px 0;
+    padding: 0;
+    list-style: none;
+    opacity: 0.5;
+
+    &:hover {
+      opacity: 1;
+    }
+
+    li {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      display: inline-block;
+      margin: 0 2px;
+
+      img {
+        width: 24px;
+        height: 24px;
+      }
+    }
   }
 
   .contacts {
