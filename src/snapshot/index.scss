@@ -130,6 +130,45 @@
     }
   }
 
+  .chains.container {
+    position: fixed;
+    right: 32px;
+    top: 32px;
+
+    ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      text-align: right;
+
+      li {
+        margin: 0 0 16px 0;
+        padding: 0;
+        display: flex;
+
+        img {
+          display: block;
+          width: 40px;
+          height: 40px;
+          padding-left: 16px;
+        }
+
+        .state {
+          font-size: 14px;
+          line-height: 20px;
+        }
+
+        .deposit {
+          color: rgba(20,204,112,0.7);
+        }
+
+        .withdrawal {
+          color: rgba(255,97,76,0.7);
+        }
+      }
+    }
+  }
+
   .main.container {
     box-sizing: border-box;
     padding: 32px;
@@ -276,6 +315,12 @@
 
     &.out li.id {
       border-top: 4px solid rgba(255,97,76,1);
+    }
+  }
+
+  @media (max-width: 1200px) {
+    .chains.container {
+      display: none;
     }
   }
 

@@ -99,12 +99,19 @@ Snapshot.prototype = {
             var a = network.assets[i];
             a.amount = Math.round(parseFloat(a.amount)).toLocaleString(undefined, { minimumFractionDigits: 0 });
           }
+          for (var i in network.chains) {
+            var c = network.chains[i];
+            c.deposit_block_height = c.deposit_block_height.toLocaleString(undefined, { minimumFractionDigits: 0 });
+            c.withdrawal_timestamp = TimeUtils.format(c.withdrawal_timestamp);
+          }
+
           $('#layout-container').html(self.templateIndex({
             logoURL: require('../home/logo.png'),
             assetsCount: parseInt(network.assets_count).toLocaleString(undefined, { minimumFractionDigits: 0 }),
             snapshotsCount: parseInt(network.snapshots_count).toLocaleString(undefined, { minimumFractionDigits: 0 }),
             peakTPS: parseInt(network.peak_throughput).toLocaleString(undefined, { minimumFractionDigits: 0 }),
-            assets: network.assets
+            assets: network.assets,
+            chains: network.chains
           }));
         }
         $('form.search').on('submit', function (event) {

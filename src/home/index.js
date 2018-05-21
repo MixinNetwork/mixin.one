@@ -28,6 +28,11 @@ Home.prototype = {
     self.animator.init($('.particles.container')[0]);
     self.animator.animate();
     self.router.updatePageLinks();
+
+    $('.blockchains.list').click(function (e) {
+      e.preventDefault();
+      self.router.navigate('/snapshots');
+    });
   },
 
   xin: function () {
