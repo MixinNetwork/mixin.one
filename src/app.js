@@ -51,10 +51,10 @@ router.on({
     }
   },
   '/snapshots': function () {
-    new Snapshot(router, api).index(undefined, 'after');
+    new Snapshot(router, api).index(undefined, 'after', false);
   },
   '/snapshots/:id': function (params) {
-    new Snapshot(router, api).index(params['id']);
+    new Snapshot(router, api).index(params['id'], 'after', false);
   },
   '/logs': function (params) {
     new Log(router, api).render();

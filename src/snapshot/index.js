@@ -4,6 +4,7 @@ import jQueryColor from '../jquery-color-plus-names.js';
 import TimeUtils from '../utils/time.js';
 import URLUtils from '../utils/url.js';
 import Animator from './animator.js';
+import validate from 'uuid-validate';
 
 function Snapshot(router, api) {
   this.router = router;
@@ -19,18 +20,27 @@ function Snapshot(router, api) {
 }
 
 Snapshot.prototype = {
-  index: function(id, order) {
+  index: function(id, order, refresh) {
     const self = this;
 
+    if (refresh && !($('body').hasClass('index') || !$('body').hasClass(id))) {
+      return;
+    }
+
     self.api.network.index(function (resp) {
+      if (refresh && !($('body').hasClass('index') || !$('body').hasClass(id))) {
+        return;
+      }
       if (resp.error) {
         return;
       }
       var network = resp.data;
 
-      if (!id) {
-        $('body').addClass('index').addClass('undefined');
-        self.load(network, undefined, '', order, 100);
+      if (!validate(id)) {
+        if (!refresh) {
+          $('body').addClass('index').addClass('undefined');
+        }
+        self.load(network, 'undefined', '', order, 100);
         return;
       }
 
@@ -41,7 +51,9 @@ Snapshot.prototype = {
           }
           return resp.error.code === 404;
         }
-        $('body').addClass('index').removeClass('undefined').addClass(id);
+        if (!refresh) {
+          $('body').addClass('index').addClass(id);
+        }
         self.load(network, id, '', order, 100, resp.data);
       }, id);
     });
@@ -79,7 +91,7 @@ Snapshot.prototype = {
         return;
       }
       if (resp.error) {
-        setTimeout(function() { self.index(assetId, order); }, 2100);
+        setTimeout(function() { self.index(assetId, order, true); }, 2100);
         if (order === 'before') {
           return true;
         }
@@ -161,7 +173,7 @@ Snapshot.prototype = {
       }
       order = 'before';
       self.router.updatePageLinks();
-      setTimeout(function() { self.index(assetId, order); }, 2100);
+      setTimeout(function() { self.index(assetId, order, true); }, 2100);
     }, assetId, offset, limit);
   }
 };
