@@ -64,11 +64,6 @@ Snapshot.prototype = {
       $('body').attr('class', 'snapshot layout');
       $('title').html('Mixin Network');
       $('#layout-container').html(self.templateShow(s));
-      for (var i in network.assets) {
-        var a = network.assets[i];
-        a.amount = Math.round(parseFloat(a.amount)).toLocaleString(undefined, { minimumFractionDigits: 0 });
-        $('.network.assets').append(self.partialTop(a));
-      }
       self.animator.init($('.particles.container')[0]);
       self.animator.animate();
       self.router.updatePageLinks();
