@@ -13,7 +13,6 @@ function Snapshot(router, api) {
   this.templateAsset = require('./asset.html');
   this.templateShow = require('./show.html');
   this.partialItem = require('./item.html');
-  this.partialTop = require('./top.html');
   this.animator = new Animator();
   jQueryColor($);
 }
@@ -96,17 +95,17 @@ Snapshot.prototype = {
           asset.amount = Math.round(parseFloat(asset.amount)).toLocaleString(undefined, { minimumFractionDigits: 0 });
           $('#layout-container').html(self.templateAsset(asset));
         } else {
+          for (var i in network.assets) {
+            var a = network.assets[i];
+            a.amount = Math.round(parseFloat(a.amount)).toLocaleString(undefined, { minimumFractionDigits: 0 });
+          }
           $('#layout-container').html(self.templateIndex({
             logoURL: require('../home/logo.png'),
             assetsCount: parseInt(network.assets_count).toLocaleString(undefined, { minimumFractionDigits: 0 }),
             snapshotsCount: parseInt(network.snapshots_count).toLocaleString(undefined, { minimumFractionDigits: 0 }),
-            peakTPS: parseInt(network.peak_throughput).toLocaleString(undefined, { minimumFractionDigits: 0 })
+            peakTPS: parseInt(network.peak_throughput).toLocaleString(undefined, { minimumFractionDigits: 0 }),
+            assets: network.assets
           }));
-          for (var i in network.assets) {
-            var a = network.assets[i];
-            a.amount = Math.round(parseFloat(a.amount)).toLocaleString(undefined, { minimumFractionDigits: 0 });
-            $('.network.assets').append(self.partialTop(a));
-          }
         }
         $('form.search').on('submit', function (event) {
           event.preventDefault();

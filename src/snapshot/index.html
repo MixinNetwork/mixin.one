@@ -13,6 +13,11 @@
       </ul>
       <h2>{{t 'network.assets.title'}}</h2>
       <ul class="network assets">
+        {{#each assets}}
+        <li data-id="{{this.asset_id}}">
+          <a href="/snapshots/{{this.asset_id}}" data-navigo><img src="{{this.icon_url}}" /> {{this.amount}} <span>{{this.symbol}}</span></a>
+        </li>
+        {{/each}}
       </ul>
     </div>
   </div>
