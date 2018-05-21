@@ -4,7 +4,6 @@ import jQueryColor from '../jquery-color-plus-names.js';
 import TimeUtils from '../utils/time.js';
 import URLUtils from '../utils/url.js';
 import Animator from './animator.js';
-var validate = require('uuid-validate');
 
 function Snapshot(router, api) {
   this.router = router;
@@ -12,13 +11,15 @@ function Snapshot(router, api) {
   this.templateIndex = require('./index.html');
   this.templateAsset = require('./asset.html');
   this.templateShow = require('./show.html');
+  this.partialHeader = require('./header.html');
+  this.partialChains = require('./chains.html');
   this.partialItem = require('./item.html');
   this.animator = new Animator();
   jQueryColor($);
 }
 
 Snapshot.prototype = {
-  index: function(id) {
+  index: function(id, order) {
     const self = this;
 
     self.api.network.index(function (resp) {
@@ -28,9 +29,8 @@ Snapshot.prototype = {
       var network = resp.data;
 
       if (!id) {
-        var assetId = 'undefined';
-        $('body').addClass('index').addClass(assetId);
-        self.load(network, assetId, '', 'after', 100);
+        $('body').addClass('index').addClass('undefined');
+        self.load(network, undefined, '', order, 100);
         return;
       }
 
@@ -41,8 +41,8 @@ Snapshot.prototype = {
           }
           return resp.error.code === 404;
         }
-        $('body').addClass('index').addClass(id);
-        self.load(network, id, '', 'after', 100, resp.data);
+        $('body').addClass('index').removeClass('undefined').addClass(id);
+        self.load(network, id, '', order, 100, resp.data);
       }, id);
     });
   },
@@ -79,7 +79,7 @@ Snapshot.prototype = {
         return;
       }
       if (resp.error) {
-        setTimeout(function() { self.load(network, assetId, offset, order, limit, asset); }, 2100);
+        setTimeout(function() { self.index(assetId, order); }, 2100);
         if (order === 'before') {
           return true;
         }
@@ -89,30 +89,13 @@ Snapshot.prototype = {
         $('body').addClass('snapshot');
         $('body').removeClass('loading');
         $('title').html('Mixin Network');
-        if (validate(assetId)) {
+        if ($('body').hasClass('undefined')) {
+          $('#layout-container').html(self.templateIndex());
+        } else {
           asset.logoURL = require('../home/logo.png');
           asset.snapshotsCount = parseInt(asset.snapshots_count).toLocaleString(undefined, { minimumFractionDigits: 0 });
           asset.amount = Math.round(parseFloat(asset.amount)).toLocaleString(undefined, { minimumFractionDigits: 0 });
           $('#layout-container').html(self.templateAsset(asset));
-        } else {
-          for (var i in network.assets) {
-            var a = network.assets[i];
-            a.amount = Math.round(parseFloat(a.amount)).toLocaleString(undefined, { minimumFractionDigits: 0 });
-          }
-          for (var i in network.chains) {
-            var c = network.chains[i];
-            c.deposit_block_height = c.deposit_block_height.toLocaleString(undefined, { minimumFractionDigits: 0 });
-            c.withdrawal_timestamp = TimeUtils.format(c.withdrawal_timestamp);
-          }
-
-          $('#layout-container').html(self.templateIndex({
-            logoURL: require('../home/logo.png'),
-            assetsCount: parseInt(network.assets_count).toLocaleString(undefined, { minimumFractionDigits: 0 }),
-            snapshotsCount: parseInt(network.snapshots_count).toLocaleString(undefined, { minimumFractionDigits: 0 }),
-            peakTPS: parseInt(network.peak_throughput).toLocaleString(undefined, { minimumFractionDigits: 0 }),
-            assets: network.assets,
-            chains: network.chains
-          }));
         }
         $('form.search').on('submit', function (event) {
           event.preventDefault();
@@ -124,6 +107,27 @@ Snapshot.prototype = {
         self.animator.init($('.particles.container')[0]);
         self.animator.animate();
       }
+
+      if ($('body').hasClass('undefined')) {
+        for (var i in network.assets) {
+          var a = network.assets[i];
+          a.amount = Math.round(parseFloat(a.amount)).toLocaleString(undefined, { minimumFractionDigits: 0 });
+        }
+        $('.header.container').html(self.partialHeader({
+          logoURL: require('../home/logo.png'),
+          assetsCount: parseInt(network.assets_count).toLocaleString(undefined, { minimumFractionDigits: 0 }),
+          snapshotsCount: parseInt(network.snapshots_count).toLocaleString(undefined, { minimumFractionDigits: 0 }),
+          peakTPS: parseInt(network.peak_throughput).toLocaleString(undefined, { minimumFractionDigits: 0 }),
+          assets: network.assets
+        }));
+        for (var i in network.chains) {
+          var c = network.chains[i];
+          c.deposit_block_height = c.deposit_block_height.toLocaleString(undefined, { minimumFractionDigits: 0 });
+          c.withdrawal_timestamp = TimeUtils.format(c.withdrawal_timestamp);
+        }
+        $('.chains.container').html(self.partialChains(network));
+      }
+
       if (order === 'before') {
         resp.data.reverse();
       }
@@ -157,7 +161,7 @@ Snapshot.prototype = {
       }
       order = 'before';
       self.router.updatePageLinks();
-      setTimeout(function() { self.load(network, assetId, offset, order, limit, asset); }, 2100);
+      setTimeout(function() { self.index(assetId, order); }, 2100);
     }, assetId, offset, limit);
   }
 };

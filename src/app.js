@@ -51,7 +51,7 @@ router.on({
     }
   },
   '/snapshots': function () {
-    new Snapshot(router, api).index();
+    new Snapshot(router, api).index(undefined, 'after');
   },
   '/snapshots/:id': function (params) {
     new Snapshot(router, api).index(params['id']);
