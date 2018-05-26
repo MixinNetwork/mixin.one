@@ -6,36 +6,38 @@
   "dependencies": {
     "handlebars": "^4.0.10",
     "jquery": "^3.3.1",
-    "navigo": "^5.2.0",
+    "navigo": "^7.1.2",
     "node-polyglot": "^2.2.2",
-    "noty": "^3.1.4",
+    "noty": "^3.2.0-beta",
     "pako": "^1.0.6",
     "qrious": "^4.0.2",
-    "reconnecting-websocket": "^3.0.7",
+    "reconnecting-websocket": "^4.0.0-rc3",
     "simple-line-icons": "^2.4.1",
-    "three": "^0.91.0",
+    "three": "^0.92.0",
     "uuid": "^3.2.1",
-    "uuid-validate": "0.0.2"
+    "uuid-validate": "0.0.3"
   },
   "devDependencies": {
     "compression-webpack-plugin": "^1.1.11",
     "css-loader": "^0.28.11",
-    "extract-text-webpack-plugin": "^2.1.2",
+    "extract-text-webpack-plugin": "^4.0.0-beta.0",
     "favicons-webpack-plugin": "0.0.9",
-    "file-loader": "^0.11.2",
+    "file-loader": "^1.1.11",
     "handlebars-loader": "^1.7.0",
-    "html-webpack-plugin": "^2.29.0",
+    "html-webpack-plugin": "^3.2.0",
     "node-sass": "^4.9.0",
-    "sass-loader": "^6.0.7",
-    "script-ext-html-webpack-plugin": "^1.8.3",
-    "style-loader": "^0.18.2",
-    "webpack": "^3.12.0"
+    "npm-check-updates": "^2.14.2",
+    "sass-loader": "^7.0.1",
+    "script-ext-html-webpack-plugin": "^2.0.1",
+    "style-loader": "^0.21.0",
+    "webpack": "^4.9.1",
+    "webpack-cli": "^2.1.4"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack",
-    "watch": "webpack -w",
-    "dist": "NODE_ENV=production webpack -p"
+    "build": "webpack --mode=development",
+    "watch": "webpack -w --mode=development",
+    "dist": "NODE_ENV=production webpack -p --mode=production"
   },
   "keywords": [],
   "author": "Cedric Fung",
