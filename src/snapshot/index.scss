@@ -147,6 +147,7 @@
         margin: 0 0 16px 0;
         padding: 0;
         display: flex;
+        flex-direction: row-reverse;
 
         img {
           display: block;
