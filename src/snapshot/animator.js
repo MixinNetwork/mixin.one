@@ -1,4 +1,5 @@
-import * as THREE from 'three';
+//import * as THREE from 'three';
+var THREE = require('three');
 import CanvasRenderer from './CanvasRenderer.js';
 import $ from 'jquery';
 import uuidv4 from 'uuid/v4';

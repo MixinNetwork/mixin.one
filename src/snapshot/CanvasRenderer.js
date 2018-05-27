@@ -1,4 +1,4 @@
-import * as THREE from 'three';
+var THREE = require('three');
 import Projector from './Projector.js';
 /**
  * @author mrdoob / http://mrdoob.com/
