@@ -14,7 +14,7 @@ Log.prototype = {
     $('title').html('Mixin Logs');
     $.ajax({
       type: 'GET',
-      url: 'https://logs.mixin.one',
+      url: 'https://mixin.one/assets/logs.json',
       success: function(resp) {
         $('body').attr('class', 'log layout');
         $('#layout-container').html(self.templateIndex({
