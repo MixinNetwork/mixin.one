@@ -172,6 +172,11 @@
         .withdrawal {
           color: rgba(255,97,76,0.7);
         }
+
+        .fee {
+          color: $color-main-foreground-light;
+          opacity: 0.3;
+        }
       }
     }
   }
