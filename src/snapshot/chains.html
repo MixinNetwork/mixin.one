@@ -1,7 +1,10 @@
 <ul class="network chains">
   {{#each chains}}
   <li data-id="{{this.chain_id}}">
-    <img src="{{this.icon_url}}" alt="{{this.name}}" title="{{this.name}}" />
+    <div class="chain icon">
+      <img src="{{this.icon_url}}" alt="{{this.name}}" title="{{this.name}}" />
+      <span class="chain sync {{this.is_synchronized}}"></span>
+    </div>
     <div class="chain state">
       <div class="chain deposit state">
         <i class="icon-arrow-right-circle"></i>
