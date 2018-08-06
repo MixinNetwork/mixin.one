@@ -218,6 +218,10 @@
     }
   }
 
+  svg:hover {
+    fill: #00b0e9;
+  }
+
   @media (max-width: 768px) {
     .content {
       margin: 64px auto 0;
