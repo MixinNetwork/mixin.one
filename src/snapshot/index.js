@@ -69,9 +69,9 @@ Snapshot.prototype = {
       s.flow = parseFloat(s.amount) > 0 ? 'in' : 'out';
       s.amount = parseFloat(s.amount) < 0 ? s.amount : '+' + s.amount;
       s.logoURL = require('../home/logo.png');
-      s.peakTPS = parseInt(network.peak_throughput).toLocaleString(undefined, { minimumFractionDigits: 0 });
-      s.snapshotsCount = parseInt(network.snapshots_count).toLocaleString(undefined, { minimumFractionDigits: 0 });
-      s.assetsCount = parseInt(network.assets_count).toLocaleString(undefined, { minimumFractionDigits: 0 });
+      s.peakTPS = parseInt(network.peak_throughput).toLocaleString(undefined, { maximumFractionDigits: 0 });
+      s.snapshotsCount = parseInt(network.snapshots_count).toLocaleString(undefined, { maximumFractionDigits: 0 });
+      s.assetsCount = parseInt(network.assets_count).toLocaleString(undefined, { maximumFractionDigits: 0 });
       $('body').attr('class', 'snapshot layout');
       $('title').html('Mixin Network');
       $('#layout-container').html(self.templateShow(s));
@@ -105,8 +105,8 @@ Snapshot.prototype = {
           $('#layout-container').html(self.templateIndex());
         } else {
           asset.logoURL = require('../home/logo.png');
-          asset.snapshotsCount = parseInt(asset.snapshots_count).toLocaleString(undefined, { minimumFractionDigits: 0 });
-          asset.amount = Math.round(parseFloat(asset.amount)).toLocaleString(undefined, { minimumFractionDigits: 0 });
+          asset.snapshotsCount = parseInt(asset.snapshots_count).toLocaleString(undefined, { maximumFractionDigits: 0 });
+          asset.amount = Math.round(parseFloat(asset.amount)).toLocaleString(undefined, { maximumFractionDigits: 0 });
           $('#layout-container').html(self.templateAsset(asset));
         }
         $('form.search').on('submit', function (event) {
@@ -123,18 +123,18 @@ Snapshot.prototype = {
       if ($('body').hasClass('undefined')) {
         for (var i in network.assets) {
           var a = network.assets[i];
-          a.amount = Math.round(parseFloat(a.amount)).toLocaleString(undefined, { minimumFractionDigits: 0 });
+          a.amount = Math.round(parseFloat(a.amount)).toLocaleString(undefined, { maximumFractionDigits: 0 });
         }
         $('.header.container').html(self.partialHeader({
           logoURL: require('../home/logo.png'),
-          assetsCount: parseInt(network.assets_count).toLocaleString(undefined, { minimumFractionDigits: 0 }),
-          snapshotsCount: parseInt(network.snapshots_count).toLocaleString(undefined, { minimumFractionDigits: 0 }),
-          peakTPS: parseInt(network.peak_throughput).toLocaleString(undefined, { minimumFractionDigits: 0 }),
+          assetsCount: parseInt(network.assets_count).toLocaleString(undefined, { maximumFractionDigits: 0 }),
+          snapshotsCount: parseInt(network.snapshots_count).toLocaleString(undefined, { maximumFractionDigits: 0 }),
+          peakTPS: parseInt(network.peak_throughput).toLocaleString(undefined, { maximumFractionDigits: 0 }),
           assets: network.assets
         }));
         for (var i in network.chains) {
           var c = network.chains[i];
-          c.deposit_block_height = c.deposit_block_height.toLocaleString(undefined, { minimumFractionDigits: 0 });
+          c.deposit_block_height = c.deposit_block_height.toLocaleString(undefined, { maximumFractionDigits: 0 });
           c.withdrawal_timestamp = TimeUtils.format(c.withdrawal_timestamp);
         }
         $('.chains.container').html(self.partialChains(network));
