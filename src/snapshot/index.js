@@ -97,7 +97,7 @@ Snapshot.prototype = {
       }
       $('#layout-container').html(self.templateSoloAsset(resp.data));
       $('body').attr('class', 'assets layout');
-      //setTimeout(function() { self.index(assetId, order, true); }, 2100);
+      setTimeout(function() { self.assets(); }, 2100);
     });
   },
 
@@ -114,7 +114,7 @@ Snapshot.prototype = {
       }
       $('#layout-container').html(self.templateSoloChain({chains: resp.data.chains}));
       $('body').attr('class', 'chains layout');
-      //setTimeout(function() { self.chains(); }, 2100);
+      setTimeout(function() { self.chains(); }, 2100);
     });
   },
 
