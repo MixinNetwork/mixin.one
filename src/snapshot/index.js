@@ -90,14 +90,18 @@ Snapshot.prototype = {
       if (resp.error) {
         return;
       }
-
-      for (let i = 0; i < resp.data.assets.length; i++) {
-        let asset = resp.data.assets[i];
+      var s = resp.data;
+      s.peakTPS = parseInt(s.peak_throughput).toLocaleString(undefined, { maximumFractionDigits: 0 });
+      s.snapshotsCount = parseInt(s.snapshots_count).toLocaleString(undefined, { maximumFractionDigits: 0 });
+      s.assetsCount = parseInt(s.assets_count).toLocaleString(undefined, { maximumFractionDigits: 0 });
+      for (let i = 0; i < s.assets.length; i++) {
+        let asset = s.assets[i];
         asset.amount = Math.round(parseFloat(asset.amount)).toLocaleString(undefined, { maximumFractionDigits: 0 });
       }
-      $('#layout-container').html(self.templateSoloAsset(resp.data));
+      console.info(s);
+      $('#layout-container').html(self.templateSoloAsset(s));
       $('body').attr('class', 'assets layout');
-      setTimeout(function() { self.assets(); }, 2100);
+      //setTimeout(function() { self.assets(); }, 2100);
     });
   },
 
