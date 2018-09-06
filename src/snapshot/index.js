@@ -98,10 +98,9 @@ Snapshot.prototype = {
         let asset = s.assets[i];
         asset.amount = Math.round(parseFloat(asset.amount)).toLocaleString(undefined, { maximumFractionDigits: 0 });
       }
-      console.info(s);
       $('#layout-container').html(self.templateSoloAsset(s));
       $('body').attr('class', 'assets layout');
-      //setTimeout(function() { self.assets(); }, 2100);
+      setTimeout(function() { self.assets(); }, 2100);
     });
   },
 
