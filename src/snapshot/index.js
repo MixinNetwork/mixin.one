@@ -96,6 +96,7 @@ Snapshot.prototype = {
         asset.amount = Math.round(parseFloat(asset.amount)).toLocaleString(undefined, { maximumFractionDigits: 0 });
       }
       $('#layout-container').html(self.templateSoloAsset(resp.data));
+      $('body').attr('class', 'assets layout');
       //setTimeout(function() { self.index(assetId, order, true); }, 2100);
     });
   },
@@ -112,6 +113,7 @@ Snapshot.prototype = {
         resp.data.chains[i].withdrawal_timestamp = TimeUtils.format(resp.data.chains[i].withdrawal_timestamp);
       }
       $('#layout-container').html(self.templateSoloChain({chains: resp.data.chains}));
+      $('body').attr('class', 'chains layout');
       //setTimeout(function() { self.chains(); }, 2100);
     });
   },

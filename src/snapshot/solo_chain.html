@@ -1,4 +1,5 @@
 <div class="chains container">
+  <h2>{{t 'network.blockchain.title'}}</h2>
   <ul class="network chains">
     {{#each chains}}
     <li data-id="{{this.chain_id}}">
@@ -6,7 +7,7 @@
         <img src="{{this.icon_url}}" alt="{{this.name}}" title="{{this.name}}" />
         <span class="chain sync {{this.is_synchronized}}"></span>
       </div>
-      <div class="chain state">
+      <div class="chain state container">
         <div class="chain deposit state">
           <i class="icon-arrow-right-circle"></i>
           <span>{{this.deposit_block_height}}</span>
