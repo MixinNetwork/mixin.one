@@ -24,14 +24,14 @@ Animator.prototype = {
     container.appendChild( self.renderer.domElement );
     // particles
     var PI2 = Math.PI * 2;
-    var material = new THREE.SpriteCanvasMaterial( {
+    var material = new THREE.SpriteCanvasMaterial({
       color: 0x00B0E9,
       program: function ( context ) {
         context.beginPath();
         context.arc( 0, 0, 0.5, 0, PI2, true );
         context.fill();
       }
-    } );
+    });
     var points = [];
     for ( var i = 0; i < 100; i ++ ) {
       particle = new THREE.Sprite( material );
