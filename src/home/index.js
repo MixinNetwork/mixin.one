@@ -56,7 +56,6 @@ Home.prototype = {
       messengerURL: require('./messenger.png')
     }));
     var os = self.getMobileOperatingSystem();
-    console.info(os);
     if (os === 'iOS') {
       $('.android.button').hide();
     } else if (os === 'Android') {
