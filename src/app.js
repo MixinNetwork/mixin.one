@@ -56,6 +56,12 @@ router.on({
   '/snapshots/:id': function (params) {
     new Snapshot(router, api).index(params['id'], 'after', false);
   },
+  '/network/assets': function () {
+    new Snapshot(router, api).assets();
+  },
+  '/network/chains': function () {
+    new Snapshot(router, api).chains();
+  },
   '/logs': function (params) {
     new Log(router, api).render();
   },

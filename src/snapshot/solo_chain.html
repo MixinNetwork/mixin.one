@@ -1,0 +1,36 @@
+<div class="solo chains container">
+  <header class="header">
+    <a class="nav back" href="javascript:history.back();"><i class="icon-arrow-left"></i></a>
+    <h1 class="title">{{t 'network.chains.title'}}</h1>
+    <a class="nav dashboard" href="/snapshots" data-navigo=""><i class="icon-globe"></i></a>
+  </header>
+  <div class="content">
+    <ul class="network chains">
+      {{#each chains}}
+      <li data-id="{{this.chain_id}}">
+        <div class="chain icon">
+          <img src="{{this.icon_url}}" alt="{{this.name}}" title="{{this.name}}" />
+          <div>
+            <span class="chain sync {{this.is_synchronized}}"></span>
+          </div>
+        </div>
+        <div class="chain state container">
+          <div class="chain deposit state">
+            <i class="icon-arrow-right-circle"></i>
+            <span>{{this.deposit_block_height}}</span>
+          </div>
+          <div class="chain withdrawal state">
+            <i class="icon-arrow-left-circle"></i>
+            <span class="timestamp">{{this.withdrawal_timestamp}}</span>
+            <span class="pending count">[{{this.withdrawal_pending_count}}]</span>
+          </div>
+          <div class="chain fee state">
+            <i class="icon-layers"></i>
+            <span>{{this.withdrawal_fee}}</span>
+          </div>
+        </div>
+      </li>
+      {{/each}}
+    </ul>
+  </div>
+</div>
