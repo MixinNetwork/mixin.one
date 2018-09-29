@@ -1,0 +1,45 @@
+<div class="solo assets container">
+  <header class="header">
+    <a class="nav back" href="javascript:history.back();"><i class="icon-arrow-left"></i></a>
+    <h1 class="title">{{t 'network.assets.analytics'}}</h1>
+    <a class="nav dashboard" href="/snapshots" data-navigo=""><i class="icon-globe"></i></a>
+  </header>
+  <div class="content">
+    <ul class="network stats">
+      <li class="assets amount">
+        <i class="icon-wallet"></i>
+        <div class="body">
+          {{assetsCount}}
+          <div>{{t 'network.stats.assets.title'}}</div>
+        </div>
+      </li>
+      <li>
+        <i class="icon-layers"></i>
+        <div class="body">
+          {{snapshotsCount}}
+          <div>{{t 'network.stats.transactions.title'}}</div>
+        </div>
+      </li>
+      <li class="thoroughput">
+        <i class="icon-energy"></i>
+        <div class="body">
+          {{peakTPS}}
+          <div>{{t 'network.stats.peak.throughput.title'}}</div>
+        </div>
+      </li>
+    </ul>
+    <h2>{{t 'network.assets.title'}}</h2>
+    <ul class="network assets">
+      {{#each assets}}
+      <li data-id="{{this.asset_id}}">
+        <a href="/snapshots/{{this.asset_id}}" data-navigo>
+          <img src="{{this.icon_url}}" />
+          <div>
+            {{this.amount}} <span>{{this.symbol}}</span>
+          </div>
+        </a>
+      </li>
+      {{/each}}
+    </ul>
+  </div>
+</div>
