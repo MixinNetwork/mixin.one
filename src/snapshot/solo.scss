@@ -51,184 +51,184 @@
     max-width: 100%;
     margin: 0 auto;
   }
-}
 
-.assets.container {
-  h2 {
-    text-align: center;
-    margin-top: 0;
-    opacity: .2;
-  }
-  ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-  }
-
-  .network.assets {
-    margin: 16px 0 32px;
-    padding: 0;
-
-    li {
-      margin: 8px 0;
-      padding: 0;
-      list-style: none;
-      font-size: 20px;
-
-      a {
-        color: $color-main-foreground-light;
-
-        &:hover {
-          color: $color-main-highlight;
-        }
-      }
-
-      img {
-        vertical-align: baseline;
-        width: 16px;
-        height: 16px;
-        border-radius: 8px;
-      }
-
-      span {
-        font-size: 14px;
-        text-transform: uppercase;
-        opacity: 0.2;
-      }
-    }
-  }
-
-  .network.stats {
-    margin-bottom: 32px;
-    padding: 0;
-    &:after {
-      content: '';
-      display: block;
-      clear: both;
-    }
-
-    li {
-      margin: 8px 0;
-      padding: 0;
-      list-style: none;
-      font-size: 20px;
-      display: inline-block;
-      width: 33%;
-      float: left;
+  &.container {
+    h2 {
       text-align: center;
+      margin-top: 0;
+      opacity: .2;
+    }
+    ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
 
-      i {
-        font-size: 32px;
-        vertical-align: top;
-      }
+    .network.assets {
+      margin: 16px 0 32px;
+      padding: 0;
 
-      .body {
-        margin-left: 16px;
-        font-size: 26px;
-        text-transform: uppercase;
-        div {
-          margin-top: 8px;
+      li {
+        margin: 8px 0;
+        padding: 0;
+        list-style: none;
+        font-size: 20px;
+
+        a {
+          color: $color-main-foreground-light;
+
+          &:hover {
+            color: $color-main-highlight;
+          }
+        }
+
+        img {
+          vertical-align: baseline;
+          width: 16px;
+          height: 16px;
+          border-radius: 8px;
+        }
+
+        span {
           font-size: 14px;
+          text-transform: uppercase;
           opacity: 0.2;
         }
       }
     }
-  }
 
-  .network.assets {
-    &:after {
-      content: '';
-      display: block;
-      clear: both;
-    }
-    li {
-      display: inline-block;
-      width: 33%;
-      float: left;
-      text-align: center;
-    }
-  }
-
-  @media only screen and (max-width: 720px) {
-    .network.stats, .network.assets {
-      li {
-        width: 100%;
-      }
-    }
-    .network.assets {
-      div {
-        display: inline-block;
-      }
-    }
-  }
-}
-
-.chains.container {
-  h2 {
-    margin-top: 0;
-  }
-  ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    text-align: left;
-    &:after {
-      content: '';
-      display: block;
-      clear: both;
-    }
-
-    li {
-      box-sizing: border-box;
-      text-align: center;
-      margin: 0 0 16px 0;
+    .network.stats {
+      margin-bottom: 32px;
       padding: 0;
-      float: left;
-      width: 50%;
+      &:after {
+        content: '';
+        display: block;
+        clear: both;
+      }
 
-      .chain.icon {
+      li {
+        margin: 8px 0;
+        padding: 0;
+        list-style: none;
+        font-size: 20px;
+        display: inline-block;
+        width: 33%;
+        float: left;
         text-align: center;
 
-        img {
-          width: 40px;
-          height: 40px;
+        i {
+          font-size: 32px;
+          vertical-align: top;
         }
 
-        span {
-          display: inline-block;
-          width: 8px;
-          height: 8px;
-          background: rgba(255,97,76,0.7);
-          border-radius: 4px;
-          line-height: 8px;
-          vertical-align: top;
-
-          &.true {
-            background: rgba(20,204,112,0.7);
+        .body {
+          margin-left: 16px;
+          font-size: 26px;
+          text-transform: uppercase;
+          div {
+            margin-top: 8px;
+            font-size: 14px;
+            opacity: 0.2;
           }
         }
       }
+    }
 
-      .state {
-        font-size: 14px;
-        line-height: 20px;
+    .network.assets {
+      &:after {
+        content: '';
+        display: block;
+        clear: both;
+      }
+      li {
+        display: inline-block;
+        width: 33%;
+        float: left;
+        text-align: center;
+      }
+    }
 
-        i {
-          font-size: 12px;
+    @media only screen and (max-width: 720px) {
+      .network.stats, .network.assets {
+        li {
+          width: 100%;
         }
       }
+      .network.assets {
+        div {
+          display: inline-block;
+        }
+      }
+    }
+  }
 
-      .deposit {
-        color: rgba(20,204,112,0.7);
+  &.container {
+    h2 {
+      margin-top: 0;
+    }
+    ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      text-align: left;
+      &:after {
+        content: '';
+        display: block;
+        clear: both;
       }
 
-      .withdrawal {
-        color: rgba(255,97,76,0.7);
-      }
+      li {
+        box-sizing: border-box;
+        text-align: center;
+        margin: 0 0 16px 0;
+        padding: 0;
+        float: left;
+        width: 50%;
 
-      .fee {
-        color: $color-main-foreground-light;
-        opacity: 0.3;
+        .chain.icon {
+          text-align: center;
+
+          img {
+            width: 40px;
+            height: 40px;
+          }
+
+          span {
+            display: inline-block;
+            width: 8px;
+            height: 8px;
+            background: rgba(255,97,76,0.7);
+            border-radius: 4px;
+            line-height: 8px;
+            vertical-align: top;
+
+            &.true {
+              background: rgba(20,204,112,0.7);
+            }
+          }
+        }
+
+        .state {
+          font-size: 14px;
+          line-height: 20px;
+
+          i {
+            font-size: 12px;
+          }
+        }
+
+        .deposit {
+          color: rgba(20,204,112,0.7);
+        }
+
+        .withdrawal {
+          color: rgba(255,97,76,0.7);
+        }
+
+        .fee {
+          color: $color-main-foreground-light;
+          opacity: 0.3;
+        }
       }
     }
   }
