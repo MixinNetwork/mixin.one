@@ -83,6 +83,9 @@ router.on({
   '/xin': function () {
     new Home(router, api).xin();
   },
+  '/messenger': function () {
+    new Home(router, api).messenger();
+  },
   '/': function () {
     new Home(router, api).index();
   }
