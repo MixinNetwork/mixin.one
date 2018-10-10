@@ -42,8 +42,10 @@
       "peak.throughput.title": "Peak TPS"
     },
     "assets": {
-      "title": "Top Assets"
+      "title": "Top Assets",
+      "analytics": "Analytics"
     },
-    "back.title": "Back to Mixin Network"
+    "back.title": "Back to Mixin Network",
+    "chains.title": "Chains"
   }
 }

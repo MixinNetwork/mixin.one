@@ -1,0 +1,252 @@
+@import '../constant.scss';
+
+.messenger.layout {
+  color: #333;
+  img {
+    max-width: 100%;
+  }
+
+  .particles.container,
+  .particles.overlay {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.92);
+    z-index: 0;
+    top: 0;
+    left: 0;
+  }
+
+  #layout-container {
+    position: relative;
+  }
+
+  .masthead {
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+  }
+
+  .content {
+    z-index: 1;
+    max-width: 960px;
+    box-sizing: border-box;
+    margin: 0 auto;
+    padding: 36px 16px 16px;
+  }
+
+  ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+
+  header {
+    margin: 0 0 32px;
+    &:after {
+      content: '';
+      display: table;
+      clear: both;
+    }
+    a {
+      color: #333;
+    }
+    img {
+      width: 48px;
+      height: 48px;
+      float: left;
+      margin: 0 16px 0 0;
+    }
+    .brand {
+      font-size: 32px;
+      font-weight: 500;
+      line-height: 48px;
+    }
+  }
+
+  .display {
+    display: flex;
+    flex-direction: row;
+    margin: 0 0 64px;
+
+    main {
+      flex-grow: 1;
+      box-sizing: border-box;
+      width: 55%;
+      padding: 32px 16px 0 0;
+      .mobile.title {
+        display: none;
+      }
+      h1.slogan {
+        font-size: 18px;
+        font-weight: normal;
+        line-height: 26px;
+        margin: 0 0 16px;
+      }
+      .blockchains.container {
+        display: flex;
+        flex-direction: row;
+        margin: 0 0 32px -8px;
+        opacity: 0.4;
+        li {
+          padding: 0 8px;
+        }
+      }
+      .download.mobile {
+        display: none;
+      }
+      .features {
+        margin: 0 0 48px;
+        h2 {
+          font-size: 18px;
+          font-weight: normal;
+        }
+        .list {
+          font-size: 14px;
+        }
+        ul {
+          color: #797278;
+          list-style-type: disc;
+          padding-left: 16px;
+          box-sizing: border-box;
+        }
+        li {
+          margin: 0 0 8px;
+        }
+      }
+
+      .download {
+        display: flex;
+        flex-direction: row;
+        .android.button {
+          margin-right: 32px;
+        }
+      }
+    }
+
+    aside {
+      width: 45%;
+      flex-grow: 1;
+      box-sizing: border-box;
+      padding: 0 0 0 16px;
+      img {
+        width: 100%;
+      }
+    }
+  }
+
+  footer {
+    text-align: center;
+    .contacts {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+    }
+    .contacts {
+      font-size: 14px;
+      li {
+        padding: 0 8px;
+      }
+      a {
+        color: #333;
+      }
+    }
+    .whitepaper.link {
+      text-transform: uppercase;
+      font-size: 12px;
+      a {
+        color: #333;
+        opacity: .5;
+        padding: 0 8px;
+      }
+    }
+
+    a:hover {
+      color: $color-main-highlight;
+    }
+  }
+
+  @media only screen and (max-width: 768px) {
+    .content {
+      padding: 16px;
+
+      header {
+        img {
+          width: 24px;
+          height: 24px;
+        }
+        .brand {
+          display: none;
+        }
+      }
+
+      .display {
+        flex-direction: column;
+        margin: 0;
+        main {
+          width: 100%;
+          .intro {
+            text-align: center;
+          }
+          h1.slogan {
+            margin: 0 0 20px;
+            font-size: 16px;
+            line-height: 20px;
+          }
+          .mobile.title {
+            display: block;
+            font-size: 22px;
+            margin: 0 0 24px;
+          }
+          .blockchains.container {
+            justify-content: center;
+            margin: 0 0 40px;
+            li {
+              padding: 0 4px;
+            }
+            img {
+              width: 24px;
+              height: 24px;
+            }
+            .asset.mobile {
+              display: none;
+            }
+          }
+          .download.mobile {
+            display: block;
+            padding: 0 64px 32px;
+            box-sizing: border-box;
+            text-align: center;
+            .screenshot {
+              margin: 0 0 32px;
+            }
+            .android.button {
+              margin: 0 0 8px;
+            }
+          }
+          .download.pc {
+            display: none;
+          }
+          .features {
+            box-sizing: border-box;
+            padding: 0 16px 8px;
+            h2 {
+              font-size: 16px;
+            }
+          }
+        }
+        aside {
+          display: none;
+        }
+      }
+    }
+
+    footer {
+      .whitepaper.link {
+        a {
+          padding: 0 4px;
+        }
+      }
+    }
+  }
+}

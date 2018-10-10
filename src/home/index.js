@@ -2,6 +2,7 @@ import './index.scss';
 import 'slick-carousel/slick/slick.scss';
 import 'slick-carousel/slick/slick-theme.scss';
 import 'slick-carousel';
+import './messenger.scss';
 import $ from 'jquery';
 import Animator from '../snapshot/animator.js';
 
@@ -11,6 +12,7 @@ function Home(router, api) {
   this.animator = new Animator();
   this.templateIndex = require('./index.html');
   this.templateXIN = require('./xin.html');
+  this.templateMessenger = require('./messenger.html');
 }
 
 Home.prototype = {
@@ -71,6 +73,26 @@ Home.prototype = {
     $('#layout-container').html(self.templateXIN({
       logoURL: require('./logo.png')
     }));
+  },
+
+  messenger: function () {
+    const self = this;
+    $('body').attr('class', 'messenger layout');
+    $('#layout-container').html(self.templateMessenger({
+      logoURL: require('./logo.png'),
+      playURL: require('./google-play.png'),
+      storeURL: require('./app-store.png'),
+      messengerURL: require('./messenger.png')
+    }));
+    var os = self.getMobileOperatingSystem();
+    if (os === 'iOS') {
+      $('.android.button').hide();
+    } else if (os === 'Android') {
+      $('.ios.button').hide();
+    }
+    self.animator.init($('.particles.container')[0]);
+    self.animator.animate();
+    self.router.updatePageLinks();
   },
 
   getMobileOperatingSystem: function () {

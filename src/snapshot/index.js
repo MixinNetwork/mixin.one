@@ -1,4 +1,5 @@
 import './index.scss';
+import './solo.scss';
 import $ from 'jquery';
 import jQueryColor from '../jquery-color-plus-names.js';
 import TimeUtils from '../utils/time.js';
@@ -10,6 +11,8 @@ function Snapshot(router, api) {
   this.router = router;
   this.api = api;
   this.templateIndex = require('./index.html');
+  this.templateSoloAsset = require('./solo_asset.html');
+  this.templateSoloChain = require('./solo_chain.html');
   this.templateAsset = require('./asset.html');
   this.templateShow = require('./show.html');
   this.partialHeader = require('./header.html');
@@ -79,6 +82,43 @@ Snapshot.prototype = {
       self.animator.animate();
       self.router.updatePageLinks();
     }, id);
+  },
+
+  assets: function () {
+    const self = this;
+    self.api.network.index(function (resp) {
+      if (resp.error) {
+        return;
+      }
+      var s = resp.data;
+      s.peakTPS = parseInt(s.peak_throughput).toLocaleString(undefined, { maximumFractionDigits: 0 });
+      s.snapshotsCount = parseInt(s.snapshots_count).toLocaleString(undefined, { maximumFractionDigits: 0 });
+      s.assetsCount = parseInt(s.assets_count).toLocaleString(undefined, { maximumFractionDigits: 0 });
+      for (let i = 0; i < s.assets.length; i++) {
+        let asset = s.assets[i];
+        asset.amount = Math.round(parseFloat(asset.amount)).toLocaleString(undefined, { maximumFractionDigits: 0 });
+      }
+      $('#layout-container').html(self.templateSoloAsset(s));
+      $('body').attr('class', 'assets layout');
+      setTimeout(function() { self.assets(); }, 2100);
+    });
+  },
+
+  chains: function () {
+    const self = this;
+    self.api.network.index(function (resp) {
+      if (resp.error) {
+        return;
+      }
+
+      for (let i = 0; i < resp.data.chains.length; i++) {
+        resp.data.chains[i].deposit_block_height = resp.data.chains[i].deposit_block_height.toLocaleString(undefined, { maximumFractionDigits: 0 });
+        resp.data.chains[i].withdrawal_timestamp = TimeUtils.format(resp.data.chains[i].withdrawal_timestamp);
+      }
+      $('#layout-container').html(self.templateSoloChain({chains: resp.data.chains}));
+      $('body').attr('class', 'chains layout');
+      setTimeout(function() { self.chains(); }, 2100);
+    });
   },
 
   load: function (network, assetId, offset, order, limit, asset) {
