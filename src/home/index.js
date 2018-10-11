@@ -1,4 +1,7 @@
 import './index.scss';
+import 'slick-carousel/slick/slick.scss';
+import 'slick-carousel/slick/slick-theme.scss';
+import 'slick-carousel';
 import './messenger.scss';
 import $ from 'jquery';
 import Animator from '../snapshot/animator.js';
@@ -19,7 +22,13 @@ Home.prototype = {
     $('#layout-container').html(self.templateIndex({
       logoURL: require('./logo.png'),
       playURL: require('./google-play.png'),
-      storeURL: require('./app-store.png')
+      storeURL: require('./app-store.png'),
+      secureURL: require('./secure.png'),
+      instantURL: require('./instant.png'),
+      privateURL: require('./private.png'),
+      powerfulURL: require('./powerful.png'),
+      messengerURL: require('./messenger.png'),
+      oceanOneURL: require('./ocean-one.png')
     }));
     var os = self.getMobileOperatingSystem();
     if (os === 'iOS') {
@@ -31,9 +40,29 @@ Home.prototype = {
     self.animator.animate();
     self.router.updatePageLinks();
 
-    $('.blockchains.list').click(function (e) {
-      e.preventDefault();
-      self.router.navigate('/snapshots');
+    $('.blockchains.list').slick({
+      "slidesToShow": 6,
+      "slidesToScroll": 2,
+      'speed': 500,
+      "prevArrow": "<span class='icon-arrow-left arrow-left'></span>",
+      "nextArrow": "<span class='icon-arrow-right arrow-right'></span>",
+      responsive: [{
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 5,
+          slidesToScroll: 2,
+          infinite: true
+        }
+      }]
+    });
+    var src = $('.video-container iframe').attr('src');
+    $('.video.button').click(function () {
+      $('.modal-dialog').css('display', 'table');
+      $('.video-container iframe').attr('src', src+'&autoplay=1');
+    });
+    $('.close').click(function () {
+      $('.modal-dialog').hide();
+      $('.video-container iframe').attr('src', src);
     });
   },
 
