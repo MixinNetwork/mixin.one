@@ -14,7 +14,7 @@ Account.prototype = {
   token: function () {
     let str = window.localStorage.getItem('access_token');
     if (str == null || str == undefined) {
-      return "";
+      return '';
     }
     return str;
   },
