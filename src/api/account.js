@@ -12,7 +12,11 @@ Account.prototype = {
   },
 
   token: function () {
-    return window.localStorage.getItem('access_token');
+    let str = window.localStorage.getItem('access_token');
+    if (str == null || str == undefined) {
+      return "";
+    }
+    return str;
   },
 
   clear: function (callback) {
