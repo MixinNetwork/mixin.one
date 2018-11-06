@@ -92,6 +92,10 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: './src/layout.html'
     }),
+    new HtmlWebpackPlugin({
+      filename: 'messenger.html',
+      template: './src/messenger.html'
+    }),
     new FaviconsWebpackPlugin({
       logo: './src/launcher.png',
       prefix: 'icons-[hash]-',
