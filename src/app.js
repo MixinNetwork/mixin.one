@@ -5,6 +5,7 @@ import Navigo from 'navigo';
 import MixinUtils from './utils/mixin.js';
 import Locale from './locale';
 import API from './api';
+import Activity from './activity';
 import Home from './home';
 import Code from './code';
 import OAuth from './oauth';
@@ -49,6 +50,9 @@ router.on({
     } else {
       $('#layout-container').html('undefined');
     }
+  },
+  '/activities/hackathon': function () {
+    new Activity(router, api).developer();
   },
   '/snapshots': function () {
     new Snapshot(router, api).index(undefined, 'after', false);

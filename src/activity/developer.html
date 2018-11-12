@@ -1,0 +1,336 @@
+<section class="head">
+  <div class="wrapper">
+    <header>
+      <span class="brand">
+        <img src="{{ logoURL }}" class="logo" /> MIXIN
+      </span>
+      <a href="/activities/hackathon#competition" class="navi">{{t 'activity.navi.intro'}}</a>
+      <a href="/activities/hackathon#platform" class="navi">{{t 'activity.navi.platform'}}</a>
+      <a href="/activities/hackathon#schedule" class="navi">{{t 'activity.navi.schedule'}}</a>
+      <a href="/activities/hackathon#prizes" class="navi">{{t 'activity.navi.reward'}}</a>
+      <a href="/activities/hackathon#rules" class="navi">{{t 'activity.navi.rule'}}</a>
+      <a href="/activities/hackathon#judges" class="navi">{{t 'activity.navi.judge'}}</a>
+      <a href="/activities/hackathon#criteria" class="navi">{{t 'activity.navi.criterion'}}</a>
+      <a href="/activities/hackathon#partners" class="navi">{{t 'activity.navi.ecology'}}</a>
+      <a href="/activities/hackathon#cooperators" class="navi">{{t 'activity.navi.cooperation'}}</a>
+    </header>
+    <div class="context">
+      <div>
+        <img src="{{ headBannerURL }}" class="banner" />
+      </div>
+      <div>
+        <a href="javascript:;" class="apply">{{t 'activity.other.apply'}}</a>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="competition">
+  <a name="competition"></a>
+  <div class="wrapper">
+    <img src="{{ termOneURL }}" class="term" />
+    <div class="desc">
+      {{t 'activity.term.competition'}}
+    </div>
+  </div>
+</section>
+<section class="platform">
+  <a name="platform"></a>
+  <div class="wrapper">
+    <img src="{{ termTwoURL }}" class="term" />
+    <div class="list">
+      <div class="item">
+        <h3>Mixin Network</h3>
+        <div class="desc">{{t 'activity.term.platform.network'}}</div>
+        <div class="website">
+          <a href="https://mixin.one/">{{t 'activity.term.platform.website'}}</a>
+        </div>
+        <div>
+          <a href="https://github.com/" class="github">github</a>
+        </div>
+      </div>
+      <div class="item">
+        <h3>Mixin Messenger</h3>
+        <div class="desc">{{t 'activity.term.platform.messenger'}}</div>
+        <div class="website">
+          <a href="https://mixin.one/messenger">{{t 'activity.term.platform.website'}}</a>
+        </div>
+        <div> <a href="https://github.com/" class="github">github</a> </div>
+      </div>
+      <div class="item">
+        <h3>OceanONE</h3>
+        <div class="desc">{{t 'activity.term.platform.ocean'}}</div>
+        <div class="website">
+          <a href="https://ocean.one">{{t 'activity.term.platform.website'}}</a>
+        </div>
+        <div> <a href="https://github.com/" class="github">github</a> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="schedule">
+  <a name="schedule"></a>
+  <div class="wrapper">
+    <img src="{{ termThreeURL }}" class="term" />
+    <div class="list">
+      <div class="item">
+        <img src="{{scheduleOneURL}}" class="step" />
+        <div class="stage">
+          {{t 'activity.term.schedule.begin'}}
+        </div>
+        <div>
+          {{t 'activity.term.schedule.begin.date'}}
+        </div>
+      </div>
+      <div class="item">
+        <img src="{{scheduleTwoURL}}" class="step" />
+        <div class="stage">
+          {{t 'activity.term.schedule.over'}}
+        </div>
+        <div>
+          {{t 'activity.term.schedule.over.date'}}
+        </div>
+      </div>
+      <div class="item">
+        <img src="{{scheduleThreeURL}}" class="step" />
+        <div class="stage">
+          {{t 'activity.term.schedule.deadline'}}
+        </div>
+        <div>
+          {{t 'activity.term.schedule.deadline.date'}}
+        </div>
+      </div>
+      <div class="item">
+        <img src="{{scheduleFourURL}}" class="step trophy" />
+        <div class="stage">
+          {{t 'activity.term.schedule.award'}}
+        </div>
+        <div>
+          {{t 'activity.term.schedule.award.date'}}
+        </div>
+      </div>
+    </div>
+    </div>
+  </div>
+</section>
+<section class="prizes">
+  <a name="prizes"></a>
+  <div class="wrapper">
+    <img src="{{ termFourURL }}" class="term" />
+    <div class="podia">
+      <div class="item">
+        <div class="podium">
+          <div class="second bonus">100 XIN</div>
+        </div>
+        <h3>{{t 'activity.term.prize.second'}}</h3>
+        <div>{{t 'activity.term.prize.second.desc'}}</div>
+      </div>
+      <div class="item">
+        <div class="podium">
+          <img src="{{ prizeURL }}" class="prize" />
+          <div class="first bonus">300 XIN</div>
+        </div>
+        <h3>{{t 'activity.term.prize.first'}}</h3>
+        <div>{{t 'activity.term.prize.first.desc'}}</div>
+      </div>
+      <div class="item">
+        <div class="podium">
+          <div class="third bonus">50 XIN</div>
+        </div>
+        <h3>{{t 'activity.term.prize.third'}}</h3>
+        <div>{{t 'activity.term.prize.third.desc'}}</div>
+      </div>
+    </div>
+    <div class="excellent">
+      {{t 'activity.term.prize.excellent'}}
+    </div>
+  </div>
+</section>
+<section class="rules">
+  <a name="rules"></a>
+  <div class="wrapper">
+    <img src="{{ termFiveURL }}" class="term" />
+    <ul>
+      {{{t 'activity.term.rules'}}}
+    </ul>
+  </div>
+</section>
+<section class="judges">
+  <a name="judges"></a>
+  <div class="wrapper">
+    <img src="{{ termSixURL }}" class="term" />
+    <div class="list">
+      <div class="item">
+        <img src="{{cedricURL}}" />
+        <div class="name">
+          Cedric Fung
+        </div>
+        <div>
+          Mixin Network CEO
+        </div>
+      </div>
+      <div class="item">
+        <img src="{{juURL}}" />
+        <div class="name">
+          Huo Ju
+        </div>
+        <div>
+          PRESS.one CTO
+        </div>
+      </div>
+      <div class="item">
+        <img src="{{lilinURL}}" />
+        <div class="name">
+          Li Lin
+        </div>
+        <div>
+          Mixin Labs Manager
+        </div>
+      </div>
+      <div class="item">
+        <img src="{{jeffreyURL}}" />
+        <div class="name">
+          Jeffrey Wernick
+        </div>
+        <div>
+          Uber, Airbnb, Bitcoin Investor
+        </div>
+      </div>
+      <div class="item">
+        <img src="{{liuURL}}" />
+        <div class="name">
+          Joeseph Liu
+        </div>
+        <div>
+          Hcash Chief Science
+        </div>
+      </div>
+      <div class="item">
+        <img src="{{yuURL}}" />
+        <div class="name">
+          Jiangshan Yu
+        </div>
+        <div>
+          Lecturer of Monash University
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="criteria">
+  <a name="criteria"></a>
+  <div class="wrapper">
+    <img src="{{ termSevenURL }}" class="term" />
+    <div class="desc">{{t 'activity.term.criteria.desc'}}</div>
+    <div class="list">
+      <div class="criterion">
+        <img src="{{judgeOneURL}}" class="step" />
+        <h3>
+          {{t 'activity.term.criteria.first' }}
+        </h3>
+        <div>
+          {{t 'activity.term.criteria.first.desc' }}
+        </div>
+      </div>
+      <div class="criterion">
+        <img src="{{judgeTwoURL}}" class="step" />
+        <h3>
+          {{t 'activity.term.criteria.second' }}
+        </h3>
+        <div>
+          {{t 'activity.term.criteria.second.desc' }}
+        </div>
+      </div>
+      <div class="criterion">
+        <img src="{{judgeThreeURL}}" class="step" />
+        <h3>
+          {{t 'activity.term.criteria.third' }}
+        </h3>
+        <div>
+          {{t 'activity.term.criteria.third.desc' }}
+        </div>
+      </div>
+      <div class="criterion">
+        <img src="{{judgeFourURL}}" class="step" />
+        <h3>
+          {{t 'activity.term.criteria.four' }}
+        </h3>
+        <div>
+          {{t 'activity.term.criteria.four.desc' }}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="partners">
+  <a name="partners"></a>
+  <div class="wrapper">
+    <img src="{{termEightURL}}" class="term"/>
+    <div class="list">
+      <div class="partner">
+        <div class="item">
+          <img src="{{coinviewURL}}" class="brand" />
+          <h3> Coinview </h3>
+        </div>
+      </div>
+      <div class="partner">
+        <div class="item">
+          <img src="{{foxURL}}" class="brand" />
+          <h3> FOX </h3>
+        </div>
+      </div>
+      <div class="partner">
+        <div class="item">
+          <img src="{{onoURL}}" class="brand" />
+          <h3> ONO </h3>
+        </div>
+      </div>
+      <div class="partner">
+        <div class="item">
+          <img src="{{candyURL}}" class="brand" />
+          <h3> CandyONE </h3>
+        </div>
+      </div>
+    </div>
+</section>
+<section class="cooperators">
+  <a name="cooperators"></a>
+  <div class="wrapper">
+    <img src="{{termNineURL}}" class="term"/>
+    <div class="list">
+      <div class="brand"><img src="{{mediaOneURL}}" class="media" /></div>
+      <div class="brand"><img src="{{mediaTwoURL}}" class="media" /></div>
+      <div class="brand"><img src="{{mediaThreeURL}}" class="media" /></div>
+      <div class="brand"><img src="{{mediaFourURL}}" class="media" /></div>
+      <div class="brand"><img src="{{mediaFiveURL}}" class="media" /></div>
+      <div class="brand"><img src="{{mediaSixURL}}" class="media" /></div>
+      <div class="brand"><img src="{{mediaSevenURL}}" class="media" /></div>
+      <div class="brand"><img src="{{mediaEightURL}}" class="media" /></div>
+      <div class="brand"><img src="{{mediaNineURL}}" class="media" /></div>
+      <div class="brand"><img src="{{mediaTenURL}}" class="media" /></div>
+      <div class="brand"><img src="{{mediaElevenURL}}" class="media" /></div>
+      <div class="brand"><img src="{{mediaTwelveURL}}" class="media" /></div>
+      <div class="brand"><img src="{{mediaThirteenURL}}" class="media" /></div>
+      <div class="brand"><img src="{{mediaFourteenURL}}" class="media" /></div>
+      <div class="brand"><img src="{{mediaFifTeenURL}}" class="media" /></div>
+      <div class="brand"><img src="{{mediaSixteenURL}}" class="media" /></div>
+      <div class="brand"><img src="{{mediaSeventeenURL}}" class="media" /></div>
+      <div class="brand"><img src="{{mediaEighteenURL}}" class="media" /></div>
+      <div class="brand"><img src="{{mediaNineteenURL}}" class="media" /></div>
+      <div class="brand"><img src="{{mediaTwentyURL}}" class="media" /></div>
+      <div class="brand"><img src="{{mediaTwentyOneURL}}" class="media" /></div>
+      <div class="brand"><img src="{{mediaTwentyTwoURL}}" class="media" /></div>
+      <div class="brand"><img src="{{mediaTwentyThreeURL}}" class="media" /></div>
+      <div class="brand"><img src="{{mediaTwentyFourURL}}" class="media" /></div>
+    </div>
+  </div>
+</section>
+<section class="foot">
+  <footer>
+    <div class="promo">
+      {{t 'activity.term.promo'}}
+    </div>
+    <div>
+      {{t 'activity.term.explain'}}
+    </div>
+  </footer>
+</section>

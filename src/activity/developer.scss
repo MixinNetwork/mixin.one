@@ -1,0 +1,322 @@
+@import '../constant.scss';
+
+.developer.layout {
+  color: #667899;
+  img {
+    max-width: 100%;
+  }
+  .wrapper {
+    width: 60rem;
+    max-width: 96%;
+    margin: 0 auto;
+  }
+
+  .head {
+    background: url('./material/head.png') no-repeat center center;
+    background-size: cover;
+    color: white;
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      padding: .6rem 0;
+    }
+    .context {
+      padding: 6rem 0 8rem 2rem;
+    }
+    .banner {
+      width: 80%;
+      margin-bottom: 3rem;
+    }
+    .apply {
+      display: inline-block;
+      padding: 1rem 3rem;
+      border-radius: 3rem;
+      background-color: rgb(47, 76, 220);
+      color: white;
+    }
+    .navi {
+      color: white;
+      padding: .3rem;
+      font-size: 0.875rem;
+    }
+    .brand {
+      align-items: center;
+      display: flex;
+      flex-grow: 1;
+    }
+    .lang {
+      font-size: 0.75rem;
+    }
+    .logo {
+      width: 2rem;
+      margin-right: 0.6rem;
+    }
+  }
+
+  .criteria {
+    .list {
+      display: flex;
+    }
+    .criterion {
+      width: 25%;
+      box-sizing: border-box;
+      text-align: center;
+    }
+    img.step {
+      width: 6rem;
+    }
+  }
+
+  .platform, .schedule, .prizes, .rules {
+    padding: 8rem 0;
+    img.term {
+      width: 24rem;
+      margin-bottom: 2rem;
+    }
+  }
+
+  .schedule {
+    .term {
+      margin-bottom: 3rem;
+    }
+    .list {
+      display: flex;
+    }
+    .item {
+      flex-grow: 1;
+      text-align: center;
+      width: 25%;
+    }
+    .step {
+      width: 4rem;
+    }
+    .trophy {
+      width: 2.5rem;
+    }
+    .stage {
+      margin: 1rem 0;
+    }
+  }
+
+  .competition {
+    .wrapper {
+      padding: 8rem 0;
+      background: url('./material/competition_bg.png');
+      background-repeat: no-repeat;
+      background-size: 24rem;
+      background-position: right center;
+    }
+    img.term {
+      width: 24rem;
+      margin-bottom: 2rem;
+    }
+    .desc {
+      width: 60%;
+      padding-left: 5rem;
+      line-height: 1.6rem;
+    }
+  }
+
+  .platform {
+    background-color: rgb(246, 250, 255);
+    .term {
+      margin-left: 5rem;
+    }
+    .list {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      text-align: center;
+    }
+    h3 {
+      color: $color-main-highlight;
+    }
+    .item {
+      flex: 1;
+      cursor: pointer;
+      width: 30%;
+      border-radius: .6rem;
+      box-sizing: border-box;
+      box-shadow: 0px 0px 0.25rem rgba(0,0,0,0.2);
+      padding: 1.6rem;
+      margin: 1rem;
+      background: white;
+    }
+    .desc {
+      line-height: 1.6rem;
+      text-align: left;
+      margin-bottom: 1.6rem;
+    }
+    .website {
+      margin-bottom: 1.2rem;
+      a {
+        display: inline-block;
+        background-color: $color-main-highlight;
+        border-radius: 1.2rem;
+        color: white;
+        padding: .6rem 1.6rem;
+      }
+    }
+    .github {
+      display: inline-block;
+      color: $color-main-highlight;
+    }
+  }
+
+  .prizes {
+    background-color: rgb(246, 250, 255);
+    .term {
+      margin-left: 5rem;
+    }
+    .podia {
+      text-align: center;
+      display: flex;
+      align-items: flex-end;
+      max-width: 60%;
+      margin: 0 auto;
+      .item {
+        flex-grow: 1;
+      }
+      .bonus {
+        color: white;
+        font-weight: bold;
+      }
+      .first {
+        background: rgba(0, 0, 0, 0.5);
+        border-radius: .3rem .3rem 0 0;
+        line-height: 4.2rem;
+        width: 100%;
+      }
+      .second {
+        background: rgba(0, 0, 0, 0.3);
+        border-radius: .3rem 0 0 0;
+        line-height: 3.2rem;
+        width: 100%;
+        text-align: center;
+      }
+      .third {
+        background: rgba(0, 0, 0, 0.2);
+        border-radius: 0 .3rem 0 0;
+        line-height: 2.6rem;
+        width: 100%;
+      }
+      .prize {
+        width: 2.4rem;
+      }
+      .podium {
+        text-align: center;
+      }
+    }
+    .excellent {
+      text-align: center;
+      margin-top: 2rem;
+    }
+  }
+
+  .rules {
+    ul {
+      max-width: 70%;
+      padding: 0 0 0 6rem;
+      line-height: 1.6rem;
+    }
+  }
+
+  .judges, .criteria {
+    text-align: center;
+    padding: 3rem 0;
+    .term {
+      width: 18rem;
+    }
+  }
+
+  .judges {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 0.875rem;
+    background: #61667B;
+    text-align: center;
+    .list {
+      display: flex;
+      flex-wrap: wrap;
+    }
+    .item {
+      width: 33%;
+      padding: 2rem 1rem;
+      box-sizing: border-box;
+    }
+    img {
+      width: 10rem;
+    }
+    .name {
+      color: white;
+      font-size: 1rem;
+      margin: .6rem;
+    }
+  }
+
+  .criteria {
+    background-color: rgb(246, 250, 255);
+    .term {
+      margin-bottom: 3rem;
+    }
+    .desc {
+      margin-bottom: 3rem;
+    }
+    .criterion {
+      padding: 1rem;
+    }
+  }
+
+  .partners, .cooperators {
+    box-sizing: border-box;
+    text-align: center;
+    padding: 4rem 0;
+    .term {
+      width: 18rem;
+      margin-bottom: 4rem;
+    }
+  }
+  .partners {
+    .list {
+      display: flex;
+      padding: 0 2rem;
+    }
+    .partner {
+      width: 25%;
+      padding: 1rem 2rem;
+      box-sizing: border-box;
+      text-align: center;
+      h3 {
+        font-weight: 500;
+      }
+    }
+    .item {
+      padding: 2rem 1rem;
+      box-shadow: 0px 0px 0.25rem rgba(0,0,0,0.2);
+    }
+    img.brand {
+      width: 4rem;
+    }
+  }
+  .cooperators {
+    margin-bottom: 3rem;
+    .list {
+      display: flex;
+      flex-wrap: wrap;
+    }
+    .brand {
+      width: 25%;
+      text-align: center;
+    }
+    .media {
+      width: 8rem;
+    }
+  }
+  .foot {
+    padding: 3rem 6rem;
+    text-align: center;
+    .promo {
+      margin-bottom: .6rem;
+    }
+  }
+}

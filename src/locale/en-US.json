@@ -47,5 +47,55 @@
     },
     "back.title": "Back to Mixin Network",
     "chains.title": "Chains"
+  },
+  "activity": {
+    "navi": {
+      "intro": "Competition",
+      "platform": "Technology",
+      "schedule": "Schedule",
+      "reward": "Prizes",
+      "rule": "Rules",
+      "judge": "Judge Panel",
+      "criterion": "Cretieria",
+      "ecology": "Ecosystem",
+      "cooperation": "Cooperative"
+    },
+    "term": {
+      "competition": "Mixn Network’s first Developers Competition provides a platform for all developers who are passionate about blockchain technology to display their talents. We sincerely welcome all aspired people to participate in this competition and help build the Mixin Network technology ecosystem together. The entries should be based on the Mixin Network technology platform, with no limit to the application fields, and the more innovative, the better. Hurry up to register and win the prize.",
+      "platform.network": "Mixin Network is new generation transaction network. For developers, entrepreneurs, businesses and financial institutions, etc. which need a transaction solution for the instant transaction with the full-currency selection.Mixin Network is the answer.",
+      "platform.messenger": "Mixin Messenger is the first Dapp built on Mixin Network. Mixin Messenger uses Signal encryption protocol, end-to-end encryption. Allow the general public to quickly access the crypto world. Payment function which supports the transfer and withdrawal over 50000 cryptocurrencies. An ecosystem which allows developers to create different bots.",
+      "platform.ocean": "OceanONE is the first exchange built in Mixin Network and also the first decentralized exchange that brings the exerpeince exactly the same as centralized exchange.",
+      "platform.website": "Official",
+      "schedule.begin": "Sign-up starts",
+      "schedule.begin.date": "11/13/2018",
+      "schedule.over": "Sign-up ends",
+      "schedule.over.date": "01/03/2019",
+      "schedule.deadline": "Submit for entry ends",
+      "schedule.deadline.date": "01/04/2019",
+      "schedule.award": "Announcement of Result",
+      "schedule.award.date": "10/01/2019",
+      "prize.first": "First Prize",
+      "prize.first.desc": "One seat, total value around $45000",
+      "prize.second": "Second Prize",
+      "prize.second.desc": "Two seats, total value around $15000",
+      "prize.third": "Third Prize",
+      "prize.third.desc": "Three seats, Total value around $7500",
+      "prize.excellent": "Excellent Prize (14 seats) 25 XIN, total value around $3750",
+      "rules": "<li>A competition team consists of 5 members at most, and all members agree with the competition rules after sign-up.</li><li>Sign-up starts on Nov.13, 2018, and ends on Jan.3, 2019.</li><li>Participants shuld submit the entries from Nov.13, 2018 to Jan.4, 2019, and give up the competition if no entries submitted during this period of time.</li><li>Entries must be campatible with and can built in Mixin Network. More details, refer to the related code and technical documents of Mixin Network, Mixin Messenger and OceanOne.</li><li>Developers are allowed to communicate with members of Mixin Network community, and work together for the application.</li><li>Entries submitted in Mixin Network must include the applicale executable application and related code.</li>",
+      "criteria.desc": "Participants should develop DApps based on Mixin Network (Such as Mixin Network-based transcation solutions; Mixin Messenger full-currency wallet applications; bot development; OceanONE exchange engine application, etc.)",
+      "criteria.first": "Technical Application",
+      "criteria.first.desc": "Application of Mixin technology: participating entries must be based on Mixin Network",
+      "criteria.second": "Technical Realization",
+      "criteria.second.desc": "The plan submitted at the time of registration and the degree of completion of the submitted entry",
+      "criteria.third": "Innovation of Project",
+      "criteria.third.desc": "Based on Mixin, the more innovative the entry, the better it is",
+      "criteria.four": "Commercial Values",
+      "criteria.four.desc": "The higher the business value, the more valuable the entry is",
+      "promo": "Mixin reserves the final explanation rights for this campaign",
+      "explain": "Mixin reserves the final explanation rights for this campaign"
+    },
+    "other": {
+      "apply": "Register Now"
+    }
   }
 }
