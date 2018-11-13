@@ -9,11 +9,16 @@ function Activity (router, api) {
 
 Activity.prototype = {
   developer: function() {
+    var lang = navigator.language;
+    var headBanner = require('./material/head_banner_en.png');
+    if (lang && lang.indexOf('zh') >= 0) {
+      headBanner = require('./material/head_banner.png');
+    }
     $('body').attr('class', 'developer layout');;
     $('#layout-container').html(this.templateDeveloper({
-      logoURL: require('../home/logo.png'),
+      logoURL: require('./material/logo.png'),
       headURL: require('./material/head.png'),
-      headBannerURL: require('./material/head-banner.png'),
+      headBannerURL: headBanner,
       coinviewURL: require('./material/ic_coinview.png'),
       foxURL: require('./material/ic_fox.png'),
       onoURL: require('./material/ic_ono.png'),
@@ -49,6 +54,11 @@ Activity.prototype = {
       mediaTwentyTwoURL: require('./material/media_22.png'),
       mediaTwentyThreeURL: require('./material/media_23.png'),
       mediaTwentyFourURL: require('./material/media_24.png'),
+      mediaTwentyFiveURL: require('./material/media_25.png'),
+      mediaTwentySixURL: require('./material/media_26.png'),
+      mediaTwentySevenURL: require('./material/media_27.png'),
+      mediaTwentyEightURL: require('./material/media_28.png'),
+      mediaTwentyNineURL: require('./material/media_29.png'),
       scheduleOneURL: require('./material/schedule_1.png'),
       scheduleTwoURL: require('./material/schedule_2.png'),
       scheduleThreeURL: require('./material/schedule_3.png'),

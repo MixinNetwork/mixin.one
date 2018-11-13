@@ -2,12 +2,21 @@
 
 .developer.layout {
   color: #667899;
+  .float {
+    position: fixed;
+    bottom: 3rem;
+    right: 3rem;
+    img {
+      width: 4rem;
+      height: 4rem;
+    }
+  }
   img {
     max-width: 100%;
   }
   .wrapper {
     width: 60rem;
-    max-width: 96%;
+    max-width: 92%;
     margin: 0 auto;
   }
 
@@ -15,6 +24,11 @@
     background: url('./material/head.png') no-repeat center center;
     background-size: cover;
     color: white;
+    a {
+      &:hover {
+        text-decoration: underline;
+      }
+    }
     header {
       display: flex;
       align-items: center;
@@ -57,6 +71,7 @@
   .criteria {
     .list {
       display: flex;
+      flex-wrap: wrap;
     }
     .criterion {
       width: 25%;
@@ -82,6 +97,7 @@
     }
     .list {
       display: flex;
+      flex-wrap: wrap;
     }
     .item {
       flex-grow: 1;
@@ -89,12 +105,13 @@
       width: 25%;
     }
     .step {
-      width: 4rem;
+      height: 3.25rem;
     }
     .trophy {
       width: 2.5rem;
     }
     .stage {
+      color: $color-main-highlight;
       margin: 1rem 0;
     }
   }
@@ -183,20 +200,20 @@
         font-weight: bold;
       }
       .first {
-        background: rgba(0, 0, 0, 0.5);
+        background: #56677e;
         border-radius: .3rem .3rem 0 0;
         line-height: 4.2rem;
         width: 100%;
       }
       .second {
-        background: rgba(0, 0, 0, 0.3);
+        background: #78879d;
         border-radius: .3rem 0 0 0;
         line-height: 3.2rem;
         width: 100%;
         text-align: center;
       }
       .third {
-        background: rgba(0, 0, 0, 0.2);
+        background: #8e9bae;
         border-radius: 0 .3rem 0 0;
         line-height: 2.6rem;
         width: 100%;
@@ -216,9 +233,20 @@
 
   .rules {
     ul {
+      list-style: none;
       max-width: 70%;
-      padding: 0 0 0 6rem;
+      padding: 0 0 0 5rem;
       line-height: 1.6rem;
+    }
+    h3 {
+      color: #FFAC0D;
+      padding-left: 5rem;
+    }
+    span {
+      color: #FFAC0D;
+    }
+    a {
+      color: $color-main-highlight;
     }
   }
 
@@ -279,6 +307,7 @@
   .partners {
     .list {
       display: flex;
+      flex-wrap: wrap;
       padding: 0 2rem;
     }
     .partner {
@@ -312,11 +341,109 @@
       width: 8rem;
     }
   }
-  .foot {
-    padding: 3rem 6rem;
+  .footer {
     text-align: center;
+    padding: 0 0 6rem 0;
+    .contacts {
+      margin: 0 0 1.6rem;
+      padding: 0;
+      list-style: none;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      font-size: 14px;
+      li {
+        padding: 0 8px;
+      }
+      a {
+        color: #333;
+      }
+    }
     .promo {
-      margin-bottom: .6rem;
+      margin: 1.6rem 0;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    .head {
+      .navi {
+        display: none;
+      }
+    }
+    .competition, .platform, .schedule,
+    .prizes, .rules {
+      img.term {
+        width: 16rem;
+      }
+    }
+    .competition {
+      .wrapper {
+        background: none;
+      }
+      .desc {
+        width: 100%;
+        padding-left: 0;
+      }
+    }
+    .schedule {
+      .item {
+        width: 50%;
+        margin-bottom: 1rem;
+      }
+    }
+    .platform {
+      .term {
+        margin-left: 0;
+      }
+      .list {
+        flex-direction: column;
+      }
+      .item {
+        width: 100%;
+        margin: 0 0 1rem 0;
+      }
+    }
+    .criteria {
+      .criterion {
+        width: 50%;
+      }
+    }
+    .prizes {
+      .podia {
+        max-width: 100%;
+      }
+      .term {
+        margin-left: 0rem;
+      }
+    }
+    .rules {
+      ul {
+        max-width: 100%;
+        padding: 0;
+      }
+      h3 {
+        padding-left: 0;
+      }
+    }
+    .partners {
+      .list {
+        padding: 0;
+      }
+      .partner {
+        padding: 1rem 1rem;
+        width: 50%;
+      }
+    }
+    .cooperators {
+      .brand {
+        width: 50%;
+      }
+    }
+    .float {
+      img {
+        width: 3rem;
+        height: 3rem;
+      }
     }
   }
 }
