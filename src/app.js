@@ -51,7 +51,7 @@ router.on({
       $('#layout-container').html('undefined');
     }
   },
-  '/activities/hackathon': function () {
+  '/events/hackathon': function () {
     new Activity(router, api).developer();
   },
   '/snapshots': function () {
