@@ -5,7 +5,7 @@
   .float {
     position: fixed;
     bottom: 3rem;
-    right: 3rem;
+    right: 4rem;
     img {
       width: 4rem;
       height: 4rem;
@@ -237,6 +237,9 @@
       max-width: 70%;
       padding: 0 0 0 5rem;
       line-height: 1.6rem;
+    }
+    li {
+      margin-bottom: 0.3rem;
     }
     h3 {
       color: #FFAC0D;
