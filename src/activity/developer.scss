@@ -87,7 +87,7 @@
     padding: 8rem 0;
     img.term {
       width: 24rem;
-      margin-bottom: 2rem;
+      margin-bottom: 3rem;
     }
   }
 
@@ -369,9 +369,13 @@
       .navi {
         display: none;
       }
+      .context {
+        padding: 4rem 0 6rem 2rem;
+      }
     }
     .competition, .platform, .schedule,
     .prizes, .rules {
+    padding: 6rem 0;
       img.term {
         width: 16rem;
       }
@@ -379,6 +383,7 @@
     .competition {
       .wrapper {
         background: none;
+        padding: 0;
       }
       .desc {
         width: 100%;
