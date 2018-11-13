@@ -47,5 +47,55 @@
     },
     "back.title": "Back to Mixin Network",
     "chains.title": "Chains"
+  },
+  "activity": {
+    "navi": {
+      "intro": "Competition",
+      "platform": "Technology",
+      "schedule": "Schedule",
+      "reward": "Prizes",
+      "rule": "Rules",
+      "judge": "Judge Panel",
+      "criterion": "Cretieria",
+      "ecology": "Ecosystem",
+      "cooperation": "Cooperative"
+    },
+    "term": {
+      "competition": "Mixn Network’s first Developers Competition provides a platform for all developers who are passionate about blockchain technology to display their talents. We sincerely welcome all aspired people to participate in this competition and help build the Mixin Network technology ecosystem together. The entries should be based on the Mixin Network technology platform, with no limit to the application fields, and the more innovative, the better. Hurry up to register and win the prize.",
+      "platform.network": "Mixin Network is new generation transaction network. For developers, entrepreneurs, businesses and financial institutions, etc. which need a transaction solution for the instant transaction with the full-currency selection.Mixin Network is the answer.",
+      "platform.messenger": "Mixin Messenger is the first Dapp built on Mixin Network. Mixin Messenger uses Signal encryption protocol, end-to-end encryption. Allow the general public to quickly access the crypto world. Payment function which supports the transfer and withdrawal over 50000 cryptocurrencies. An ecosystem which allows developers to create different bots.",
+      "platform.ocean": "OceanONE is the first exchange built in Mixin Network and also the first decentralized exchange that brings the exerpeince exactly the same as centralized exchange.",
+      "platform.website": "Official",
+      "schedule.begin": "Sign-up starts",
+      "schedule.begin.date": "11/14/2018",
+      "schedule.over": "Sign-up ends",
+      "schedule.over.date": "01/03/2019",
+      "schedule.deadline": "Submit for entry ends",
+      "schedule.deadline.date": "01/04/2019",
+      "schedule.award": "Announcement of Result",
+      "schedule.award.date": "10/01/2019",
+      "prize.first": "First Prize",
+      "prize.first.desc": "One seat, total value around $45000",
+      "prize.second": "Second Prize",
+      "prize.second.desc": "Two seats, total value around $15000",
+      "prize.third": "Third Prize",
+      "prize.third.desc": "Three seats, total value around $7500",
+      "prize.excellent": "Excellent Prize (14 seats) 25 XIN, total value around $3750",
+      "rules": "<li>A competition team consists of <span>5</span> members at most, and all members agree with the competition rules after sign-up.  </li><li>Sign-up starts on <span>Nov.14, 2018</span>, and ends at <span>11:59 PM (GMT+8) on Jan.3, 2019</span>.  </li><li>Participants should submit the entries from <span>Nov.14, 2018</span> to <span>Jan.4, 2019 at 11:59PM (GMT+8) </span>, and give up the competition if no entries submitted during this period of time.  </li><li>Entries must be campatible with and can built in Mixin Network. More details, refer to the related code and technical documents of Mixin Network, Mixin Messenger and OceanOne: <a href='https://github.com/MixinNetwork'>https://github.com/MixinNetwork</a> and <a href='https://developers.mixin.one/api'>https://developers.mixin.one/api</a>.  </li><li>Developers are allowed to communicate with members of Mixin Network community, and work together for the application.  </li><li>Entries submitted in Mixin Network must include the applicale executable application and related code.  </li></ul><h3>Mixin Network reserves the final explanation rights for this campaign.  </h3><ul><li>Eligibility will be invalid once the entry is proved to get involved in the copyright disreputes, features & function plagiarism.  </li><li>Competitors should submit the proposals in the sigh-up window in the sigh-up period, we will evaluate the feasibility of each proposal, and contact the competitors for entry delivery in the valid competition period when the proposal get approved by Mixin Network.  </li><li>Competitors can fix and improve the applications and resubmit them again in the valid competition period, and the final edition will be regarded as the entry. Notice that, theme and overall proposal can not be changed.  </li><li>Mixin Network will start the project assessment following the criteria of judgement strictly, and no rewards for unqualified projects.  </li><li>All the entries belong to Mixin Network after winners receive the rewards from Mixin Network. Mixin Network has the rights to utilize, publish and distribute them in all platforms if needed. </li>",
+      "criteria.desc": "Participants should develop DApps based on Mixin Network (Such as Mixin Network-based transcation solutions, Mixin Messenger full-currency wallet applications, bot development, OceanONE exchange engine application, etc.)",
+      "criteria.first": "Technical Application",
+      "criteria.first.desc": "Application of Mixin technology: participating entries must be based on Mixin Network",
+      "criteria.second": "Technical Realization",
+      "criteria.second.desc": "The plan submitted at the time of registration and the degree of completion of the submitted entry",
+      "criteria.third": "Innovation of Project",
+      "criteria.third.desc": "Based on Mixin, the more innovative the entry, the better it is",
+      "criteria.four": "Commercial Values",
+      "criteria.four.desc": "The higher the business value, the more valuable the entry is",
+      "promo": "All the entries belong to Mixin Network after winners receive the rewards from Mixin Network. Mixin Network has the rights to utilize, publish and distribute them in all platforms if needed",
+      "explain": "Mixin reserves the final explanation rights for this campaign"
+    },
+    "other": {
+      "apply": "Register Now"
+    }
   }
 }
