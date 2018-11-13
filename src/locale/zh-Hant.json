@@ -61,7 +61,7 @@
       "cooperation": "合作伙伴"
     },
     "term": {
-      "competition": "Mixn Network 首届开发者大赛为所有热衷于区块链技术开发者提供施展才华的平台。我们真诚欢迎所有有志之士参加本次开发者大赛，共同搭建 Mixin Network 技术生态。参赛作品基于 Mixin Network 技术平台，不限应用领域，越创新，越出彩。赶快参加赢取百万大奖。",
+      "competition": "<p>Mixin Network 已经支持13条公链和超过5万多种数字货币资产，超过1亿多笔交易，累计数字货币资产超过5000万美元。为了扩大交易网络和技术生态，团队决定举办 Mixin Network 首届开发者大赛，为所有热衷于区块链技术的开发者提供施展才华的平台。</p><p> 我们真诚欢迎所有志之士参加本次开发者大赛，参赛作品基于 Mixin Network 技术平台，不限应用领域，越创新，越出彩。赶快参加来赢取百万大奖吧！</p>",
       "platform.network": "Mixin Network 继承了比特币的 UTXO 结构，通过组合使用成熟的 aBFT，POS 和 DAG 技术，结合 Intel 硬件签名机制和高速数据中心实现了超高容量，超快确认，非常安全的分布式记账网络。Mixin Network，作为一个为所有优质数字货币提供闪电网络服务的技术方案，同时也是一个开放、透明，加强隐私保护的经济体。",
       "platform.messenger": "Mixin Messenger 是体现 Mixin Network 交易性能的一个例子，作为第一个在 Mixin Network 的 DApp, 为用户提供了一个 Signal 社交和支持全币种的钱包。此外 Mixin Messenger 里各式各样的机器人构建了和用户以及全币种互动的社交生态。",
       "platform.ocean": "OceanONE 是建立在 Mixin Network 上的交易所。也是第一个可以带来和中心化交易所一样体验的去中心化交易所。交易完全透明，无需投票上币，支持所有的币种互相交易。",
@@ -78,10 +78,10 @@
       "prize.first.desc": "总价值约 300000 元",
       "prize.second": "二等奖 (2名)",
       "prize.second.desc": "总价值约 100000 元",
-      "prize.third": "Third 三等奖 (3名)",
+      "prize.third": "三等奖 (3名)",
       "prize.third.desc": "总价值约 50000 元",
       "prize.excellent": "优秀奖 ( 14 名): 每个优秀项目 25 XIN，约 25000 元",
-      "rules": "<li>一个参赛团队最多<span>5</span>人。所有报名团队成员都视为同意参赛协议 </li><li>报名将于<span>2018年11月14日</span>开始到<span>2019年1月3日23时59分</span>。</li><li>提交作品代码时间为<span>2018年11月14日</span>至<span>2019年1月4日23时59分</span>。截止时间前未提交代码的视为放弃比赛。 </li><li>参赛者须基于 Mixin Network 技术平台进行开发，Mixin Network, Mixin Messenger, OceanONE 相关代码及技术文档详见：<a href='https://github.com/MixinNetwork'>https://github.com/MixinNetwork</a> 和 <a href='https://developers.mixin.one/api'>https://developers.mixin.one/api</a>。 </li><li>开发者可以在 Mixin Network 社区自由组队交流讨论，协同创作，将创意变成现实。 </li><li>提交的作品必须包含可执行程序及代码。 </li></ul><h3>Mixin Network对本次活动保留最终解释权。 </h3><ul><li>参赛团队需独立完成作品，无任何作弊、欺诈、侵犯他人知识产权行为，如有违反取消参赛资格和比赛成绩。 </li><li>参赛者需在大赛有效期内报名并同时在报名页面提交作品方案，Mixin在收到作品方案后会及时评估方案的可行性。如果方案通过，Mixin会在第一时间联系参赛者在大赛结束前提交参赛作品。</li><li>在大赛结束前参赛者可以修改参赛作品，但是不可更改主题和整体方案。最终进行评估的有效作品以最后一次提交的版本为准。 </li><li>Mixin Network会严格按照评审标准来评估参赛作品。若无符合要求的优秀作品，将取消颁奖。 </li><li>本次大赛参赛作品的知识产权归参赛团队所有，主办方有权将参赛作品、作品相关、参赛团队信息用于宣传品、相关出版物、指定及授权媒体发布、官方网站浏览及下载、展览（含巡展）。</li>",
+      "rules": "<li>一个参赛团队最多<span>5</span>人。所有报名团队成员都视为同意参赛协议 </li><li>报名将于<span>2018年11月14日</span>开始到<span>2019年1月3日23时59分</span>。</li><li>提交作品代码时间为<span>2018年11月14日</span>至<span>2019年1月4日23时59分</span>。截止时间前未提交代码的视为放弃比赛。 </li><li>参赛者须基于 Mixin Network 技术平台进行开发，Mixin Network, Mixin Messenger, OceanONE 相关代码及技术文档详见：<a href='https://github.com/MixinNetwork'>https://github.com/MixinNetwork</a> 和 <a href='https://developers.mixin.one/api'>https://developers.mixin.one/api</a>。 </li><li>开发者可以在 Mixin Network 社区自由组队交流讨论，协同创作，将创意变成现实。 </li><li>提交的作品必须包含可执行程序及代码。 </li></ul><h3>Mixin Network对本次活动保留最终解释权。 </h3><ul><li>参赛团队需独立完成作品，无任何作弊、欺诈、侵犯他人知识产权行为，如有违反取消参赛资格和比赛成绩。 </li><li>参赛者需在大赛有效期内报名并同时在报名页面提交作品方案，Mixin在收到作品方案后会及时评估方案的可行性。如果方案通过，Mixin会在第一时间联系参赛者在大赛结束前提交参赛作品。</li><li>在大赛结束前参赛者可以修改参赛作品，但是不可更改主题和整体方案。最终进行评估的有效作品以最后一次提交的版本为准。 </li><li>Mixin Network 会严格按照评审标准来评估参赛作品。若无符合要求的优秀作品，将取消颁奖。 </li><li>本次大赛参赛作品的知识产权归参赛团队所有，主办方有权将参赛作品、作品相关、参赛团队信息用于宣传品、相关出版物、指定及授权媒体发布、官方网站浏览及下载、展览（含巡展）。</li>",
       "criteria.desc": "参与大赛的开发者将基于 Mixin 开发应用 （如基于 Mixin Network 的交易解决方案；Mixin Messenger 全币种钱包的应用；机器人的开发；OceanONE 交易所引擎的使用等）",
       "criteria.first": "技术运用",
       "criteria.first.desc": "Mixin 技术的运用，参赛作品必须基于 Mixin Network",
