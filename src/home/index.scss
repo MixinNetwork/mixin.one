@@ -51,6 +51,7 @@
     text-align: right;
     a {
       color: $color-main-foreground-light;
+      padding: 0 6px;
       &:hover {
         color: $color-main-highlight;
       }

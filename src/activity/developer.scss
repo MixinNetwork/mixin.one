@@ -20,6 +20,41 @@
     margin: 0 auto;
   }
 
+  header.navi {
+    padding: .3rem 0;
+    background: #2C3447;
+    position: fixed;
+    width: 100%;
+    .wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      padding: .6rem 0;
+    }
+    .navi {
+      color: white;
+      padding: .3rem;
+      font-size: 0.875rem;
+    }
+    .brand {
+      align-items: center;
+      display: flex;
+      flex-grow: 1;
+      a {
+        display: flex;
+        align-items: center;
+        color: white;
+        &:hover {
+          text-decoration: none;
+        }
+      }
+    }
+    .logo {
+      width: 2rem;
+      margin-right: 0.6rem;
+    }
+  }
+
   .head {
     background: url('./material/head.png') no-repeat center center;
     background-size: cover;
@@ -29,11 +64,24 @@
         text-decoration: underline;
       }
     }
-    header {
-      display: flex;
-      align-items: center;
-      justify-content: flex-end;
+    .brand {
+      display: none;
       padding: .6rem 0;
+      align-items: center;
+      display: flex;
+      flex-grow: 1;
+      a {
+        display: flex;
+        align-items: center;
+        color: white;
+        &:hover {
+          text-decoration: none;
+        }
+      }
+    }
+    .logo {
+      width: 2rem;
+      margin-right: 0.6rem;
     }
     .context {
       padding: 6rem 0 8rem 2rem;
@@ -48,23 +96,6 @@
       border-radius: 3rem;
       background-color: rgb(47, 76, 220);
       color: white;
-    }
-    .navi {
-      color: white;
-      padding: .3rem;
-      font-size: 0.875rem;
-    }
-    .brand {
-      align-items: center;
-      display: flex;
-      flex-grow: 1;
-    }
-    .lang {
-      font-size: 0.75rem;
-    }
-    .logo {
-      width: 2rem;
-      margin-right: 0.6rem;
     }
   }
 
@@ -242,6 +273,7 @@
       margin-bottom: 0.3rem;
     }
     h3 {
+      font-weight: 300;
       color: #FFAC0D;
       padding-left: 5rem;
     }
@@ -365,15 +397,24 @@
     .promo {
       margin: 1.6rem 0;
     }
+    .explain {
+      font-size: 0.875rem;
+    }
   }
 
   @media screen and (max-width: 768px) {
-    .head {
-      .navi {
+    header.navi {
+      display: none;
+      a.navi {
         display: none;
       }
+    }
+    .head {
       .context {
         padding: 4rem 0 6rem 2rem;
+      }
+      .brand {
+        display: block;
       }
     }
     .competition, .platform, .schedule,
