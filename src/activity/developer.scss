@@ -339,6 +339,15 @@
       margin-bottom: 4rem;
     }
   }
+  .medias {
+    box-sizing: border-box;
+    text-align: center;
+    padding: 4rem 0;
+    .term {
+      width: 5rem;
+      margin-bottom: 4rem;
+    }
+  }
   .partners {
     .list {
       display: flex;
@@ -362,7 +371,7 @@
       width: 4rem;
     }
   }
-  .cooperators {
+  .cooperators, .medias {
     margin-bottom: 3rem;
     .list {
       display: flex;
