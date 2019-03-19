@@ -69,6 +69,18 @@
     flex-direction: row;
     margin: 0 0 64px;
 
+    h1.slogan, h1.title {
+      font-size: 18px;
+      font-weight: normal;
+      line-height: 26px;
+      margin: 0 0 16px;
+    }
+
+    .description {
+      font-size: 16px;
+      margin: 0 0 36px;
+    }
+
     main {
       flex-grow: 1;
       box-sizing: border-box;
@@ -76,12 +88,6 @@
       padding: 32px 16px 0 0;
       .mobile.title {
         display: none;
-      }
-      h1.slogan {
-        font-size: 18px;
-        font-weight: normal;
-        line-height: 26px;
-        margin: 0 0 16px;
       }
       .blockchains.container {
         display: flex;
@@ -118,8 +124,11 @@
       .download {
         display: flex;
         flex-direction: row;
+        .ios.button {
+          margin-right: 16px;
+        }
         .android.button {
-          margin-right: 32px;
+          margin-right: 16px;
         }
       }
     }
@@ -129,8 +138,28 @@
       flex-grow: 1;
       box-sizing: border-box;
       padding: 0 0 0 16px;
+      &.desktop {
+        padding-top: 64px;
+      }
       img {
         width: 100%;
+      }
+      .title {
+        margin-bottom: 36px;
+      }
+      .description {
+        color: #797278;
+        margin-bottom: 72px;
+      }
+      .download {
+        display: flex;
+        flex-direction: row;
+        img {
+          width: 148px;
+        }
+        .mac.button {
+          margin-right: 16px;
+        }
       }
     }
   }
@@ -181,6 +210,9 @@
       .display {
         flex-direction: column;
         margin: 0;
+        &.pc {
+          display: none;
+        }
         main {
           width: 100%;
           .intro {
@@ -221,6 +253,9 @@
             .android.button {
               margin: 0 0 8px;
             }
+            .ios.button {
+              margin: 0 0 8px 0;
+            }
           }
           .download.pc {
             display: none;
@@ -240,6 +275,7 @@
     }
 
     footer {
+      margin-top: 36px;
       .whitepaper.link {
         a {
           padding: 0 4px;
