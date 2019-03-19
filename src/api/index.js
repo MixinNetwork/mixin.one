@@ -49,6 +49,21 @@ API.prototype = {
     });
   },
 
+  externalRequest: function(method, path, callback) {
+    const self = this;
+    $.ajax({
+      type: method,
+      url: path,
+      contentType: "application/json",
+      success: function(resp) {
+        var consumed = false;
+        if (typeof callback === 'function') {
+          consumed = callback(resp);
+        }
+      }
+    });
+  },
+
   error: function(resp, callback) {
     if (resp == null || resp == undefined || resp.error === null || resp.error === undefined) {
       resp = {error: { code: 0, description: 'unknown error' }};

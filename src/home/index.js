@@ -82,7 +82,11 @@ Home.prototype = {
       logoURL: require('./logo.png'),
       playURL: require('./google-play.png'),
       storeURL: require('./app-store.png'),
-      messengerURL: require('./messenger.png')
+      apkURL: require('./apk.png'),
+      messengerURL: require('./messenger.png'),
+      macURL: require('./mac.png'),
+      windowsURL: require('./windows.png'),
+      macDesktopURL: require('./mac-desktop.png')
     }));
     var os = self.getMobileOperatingSystem();
     if (os === 'iOS') {
@@ -90,6 +94,16 @@ Home.prototype = {
     } else if (os === 'Android') {
       $('.ios.button').hide();
     }
+    self.api.externalRequest('GET', "https://api.github.com/repos/MixinNetwork/desktop-app/releases/latest", (resp) => {
+      resp.assets.map(asset => {
+        if (asset.browser_download_url.endsWith('dmg')) {
+          $('a', '.mac.app').attr('href', asset.browser_download_url);
+        }
+        if (asset.browser_download_url.endsWith('exe')) {
+          $('a', '.windows.app').attr('href', asset.browser_download_url);
+        }
+      })
+    })
     self.animator.init($('.particles.container')[0]);
     self.animator.animate();
     self.router.updatePageLinks();
