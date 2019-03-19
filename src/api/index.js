@@ -50,15 +50,13 @@ API.prototype = {
   },
 
   externalRequest: function(method, path, callback) {
-    const self = this;
     $.ajax({
       type: method,
       url: path,
       contentType: "application/json",
       success: function(resp) {
-        var consumed = false;
         if (typeof callback === 'function') {
-          consumed = callback(resp);
+          callback(resp);
         }
       }
     });
