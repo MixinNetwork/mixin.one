@@ -22,6 +22,9 @@ Pay.prototype = {
       arrowURL: require('./arrow.svg')
     };
     self.api.account.check(function (user) {
+      if (!user.data) {
+        return
+      }
       data.user = user.data;
       self.api.account.assets(function (assets) {
         data.assets = assets.data.sort((i, j) => {

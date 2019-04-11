@@ -21,6 +21,10 @@ a {
   text-decoration: none;
 }
 
+input, textarea {
+  -webkit-appearance: none;
+}
+
 input[type='number'] {
     -moz-appearance:textfield;
 }
