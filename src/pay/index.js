@@ -64,7 +64,7 @@ Pay.prototype = {
         });
         $('li', '.assets').on('click', (e) => {
           window.localStorage.setItem('selected_id', $(e.currentTarget).data('id'));
-          window.location = '/pay/new';
+          window.location = '/receipts/new';
         });
         $('.receipt-form').on('submit', (e) => {
           e.preventDefault();
