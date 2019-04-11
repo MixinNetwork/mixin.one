@@ -74,6 +74,9 @@ router.on({
   '/oauth/callback': function () {
     new OAuth(router, api).callback();
   },
+  '/pay/new': function () {
+    new Pay(router, api).new();
+  },
   '/pay': function () {
     new Pay(router, api).render();
   },

@@ -11,6 +11,14 @@ Account.prototype = {
     });
   },
 
+  assets: function (callback) {
+    this.api.request('GET', '/assets', undefined, function(resp) {
+      if (typeof callback === 'function') {
+        return callback(resp);
+      }
+    });
+  },
+
   token: function () {
     let str = window.localStorage.getItem('access_token');
     if (str == null || str == undefined) {

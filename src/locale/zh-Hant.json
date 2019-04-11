@@ -35,6 +35,13 @@
       "asset": "Asset"
     }
   },
+  "receipt": {
+    "title": "Mixin 收據",
+    "receiptor": "收款人",
+    "amount": "金額",
+    "memo": "備註",
+    "submit": "創建收據"
+  },
   "network": {
     "stats": {
       "assets.title": "Assets",

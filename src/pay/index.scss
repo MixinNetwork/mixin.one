@@ -113,4 +113,117 @@
       }
     }
   }
+
+  .receipt {
+    width: 100%;
+    max-width: 768px;
+    box-sizing: border-box;
+    padding: 0 32px;
+    margin: 64px auto 0;
+    h1 {
+      margin-bottom: 64px;
+      text-align: center;
+      font-weight: normal;
+    }
+    label {
+      display: block;
+      margin-bottom: 6px;
+    }
+    input[type='text'], input[type='number'], textarea {
+      border: 1px solid rgba(0,0,0,.1);
+      box-sizing: border-box;
+      border-radius: 2px;
+      padding: 16px 8px;
+      width: 100%;
+      &:focus {
+        border-color: #3a7ee4;
+      }
+    }
+    .field {
+      margin-bottom: 16px;
+    }
+    ul {
+      margin: 0 0 16px;
+      padding: 0;
+    }
+    .asset {
+      display: flex;
+      align-items: center;
+      padding: 4px 0;
+      &.selected {
+        padding: 8px 16px 8px 8px;
+        border: 1px solid rgba(0,0,0,.1);
+        border-radius: 2px;
+      }
+      img {
+        width: 56px;
+        height: 56px;
+      }
+      .info {
+        flex-grow: 1;
+        padding-left: 16px;
+        font-size: 14px;
+        color: rgba(0, 0, 0, .6);
+      }
+      .arrow {
+        img {
+          width: 18px;
+          height: 18px;
+        }
+      }
+      h2 {
+        color: rgba(0, 0, 0, 1);
+        font-size: 20px;
+        font-weight: normal;
+        margin: 0 0 8px;
+      }
+    }
+    .submit {
+      cursor: pointer;
+      display: inline-block;
+      border: 1px solid #000;
+      background: transparent;
+      border-radius: 26px;
+      font-weight: 300;
+      line-height: 1em;
+      padding: 16px 32px;
+      &:hover {
+        background-color: #00b0e9;
+        border-color: #00b0e9;
+        color: #fff;
+      }
+    }
+    .action {
+      font-size: 20px;
+      margin-top: 64px;
+      text-align: center;
+    }
+    .modal {
+      display: none;
+      background: white;
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      overflow: scroll;
+      box-sizing: border-box;
+      top: 0;
+      left: 0;
+      z-index: 999;
+    }
+    .close {
+      font-size: 48px;
+      font-weight: 100;
+      display: inline-block;
+      position: fixed;
+      top: 16px;
+      right: 32px;
+      z-index: 1000;
+      cursor: pointer;
+    }
+    .assets {
+      max-width: 768px;
+      margin: 0 auto;
+      padding: 64px 32px;
+    }
+  }
 }
