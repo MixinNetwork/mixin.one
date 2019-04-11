@@ -74,7 +74,7 @@ router.on({
   '/oauth/callback': function () {
     new OAuth(router, api).callback();
   },
-  '/pay/new': function () {
+  '/receipts/new': function () {
     new Pay(router, api).new();
   },
   '/pay': function () {

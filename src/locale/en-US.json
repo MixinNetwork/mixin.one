@@ -36,7 +36,7 @@
     }
   },
   "receipt": {
-    "title": "Mixin Payment Receipt",
+    "title": "Mixin Receipt",
     "recipient": "Recipient",
     "amount": "Amount",
     "memo": "Memo",
