@@ -35,6 +35,13 @@
       "asset": "Asset"
     }
   },
+  "receipt": {
+    "title": "Mixin Receipt",
+    "recipient": "Recipient",
+    "amount": "Amount",
+    "memo": "Memo",
+    "submit": "Create Receipt"
+  },
   "network": {
     "stats": {
       "assets.title": "Assets",

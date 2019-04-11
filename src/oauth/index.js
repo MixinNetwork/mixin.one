@@ -91,7 +91,7 @@ OAuth.prototype = {
       if (resp.error) {
         return false;
       }
-      self.router.replace('/me');
+      self.router.replace('/pay/new');
     }, authorizationCode);
   }
 };

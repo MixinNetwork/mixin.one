@@ -1,0 +1,46 @@
+<div class='receipt'>
+  <h1>{{t 'receipt.title'}}</h1>
+  <form class='receipt-form'>
+    <div class='field'>
+      <div class='asset selected'>
+        <img src="{{asset.icon_url}}" alt="asset icon" class="icon" />
+        <div class='info'>
+          <h2>{{asset.name}}</h2>
+          <div>{{asset.symbol}}</div>
+        </div>
+        <div class='arrow'>
+          <img src={{arrowURL}} />
+        </div>
+      </div>
+    </div>
+    <div class='field'>
+      <label>{{t 'receipt.recipient'}}</label>
+      <input type="text" value="{{user.full_name}} (Mixin ID: {{user.identity_number}})" disabled="disabled">
+    </div>
+    <div class='field'>
+      <label>{{t 'receipt.amount'}}</label>
+      <input type="number" step="0.00000001" value="" required class="amount">
+    </div>
+    <div class='field'>
+      <label>{{t 'receipt.memo'}}</label>
+      <input type="text" class="memo">
+    </div>
+    <div class='action'>
+      <input type="submit" value="{{t 'receipt.submit'}}" class="submit">
+    </div>
+  </form>
+  <div class='modal'>
+    <span class='close'>×</span>
+    <ul class='assets'>
+      {{#each assets}}
+      <li class='asset' data-id='{{asset_id}}'>
+        <img src="{{icon_url}}" alt="asset icon" class="icon" />
+        <div class='info'>
+          <h2>{{name}}</h2>
+          <div>{{symbol}}</div>
+        </div>
+      </li>
+      {{/each}}
+    </ul>
+  </div>
+</div>

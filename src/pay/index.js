@@ -1,6 +1,8 @@
 import './index.scss';
 import $ from 'jquery';
 import QRious from 'qrious';
+import { Decimal } from 'decimal.js';
+import uuidv4 from 'uuid/v4';
 import URLUtils from '../utils/url.js';
 var validate = require('uuid-validate');
 
@@ -9,9 +11,71 @@ function Pay(router, api) {
   this.api = api;
   this.ErrorGeneral = require('../error.html');
   this.template = require('./index.html');
+  this.templateNew = require('./new.html');
 }
 
 Pay.prototype = {
+  new: function () {
+    const self = this;
+    const defaultIcon = "https://images.mixin.one/yH_I5b0GiV2zDmvrXRyr3bK5xusjfy5q7FX3lw3mM2Ryx4Dfuj6Xcw8SHNRnDKm7ZVE3_LvpKlLdcLrlFQUBhds=s128";
+    let data = {
+      arrowURL: require('./arrow.svg')
+    };
+    self.api.account.check(function (user) {
+      data.user = user.data;
+      self.api.account.assets(function (assets) {
+        data.assets = assets.data.sort((i, j) => {
+          if (new Decimal(i.price_usd).times(i.balance).cmp(new Decimal(j.price_usd).times(j.balance)) === -1) {
+            return 1;
+          }
+          if (new Decimal(i.price_usd).times(i.balance).cmp(new Decimal(j.price_usd).times(j.balance)) === 1) {
+            return -1;
+          }
+          if (i.icon_url === defaultIcon && j.icon_url !== defaultIcon) {
+            return 1;
+          }
+          if (i.icon_url !== defaultIcon && j.icon_url === defaultIcon) {
+            return -1;
+          }
+          if ((new Decimal(i.balance)).cmp(j.balance) === -1) {
+            return 1;
+          }
+          if ((new Decimal(i.balance)).cmp(j.balance) === 1) {
+            return -1;
+          }
+          return 0;
+        });
+        if (data.assets.length > 0) {
+          data.asset = data.assets[0];
+          let assetId = window.localStorage.getItem('selected_id');
+          if (!!assetId) {
+            data.asset = data.assets.find((e) => {
+              return e.asset_id === assetId;
+            });
+          }
+        }
+        $('body').attr('class', 'pay layout');
+        $('#layout-container').html(self.templateNew(data));
+        $('.asset.selected').on('click', () => {
+          $('.modal').show();
+        });
+        $('.close', '.modal').on('click', () => {
+          $('.modal').hide();
+        });
+        $('li', '.assets').on('click', (e) => {
+          window.localStorage.setItem('selected_id', $(e.currentTarget).data('id'));
+          window.location = '/pay/new';
+        });
+        $('.receipt-form').on('submit', (e) => {
+          e.preventDefault();
+          let amount = $('.amount').val();
+          let memo = $('.memo').val();
+          self.router.replace(`/pay?recipient=${data.user.user_id}&asset=${data.asset.asset_id}&amount=${amount}&memo=${memo}&trace=${uuidv4()}`);
+        });
+      });
+    });
+  },
+
   render: function (id) {
     const self = this;
     const recipientId = URLUtils.getUrlParameter("recipient");
