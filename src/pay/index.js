@@ -3,6 +3,7 @@ import $ from 'jquery';
 import QRious from 'qrious';
 import { Decimal } from 'decimal.js';
 import uuidv4 from 'uuid/v4';
+import MixinUtils from '../utils/mixin.js';
 import URLUtils from '../utils/url.js';
 var validate = require('uuid-validate');
 
@@ -73,7 +74,13 @@ Pay.prototype = {
           e.preventDefault();
           let amount = $('.amount').val();
           let memo = $('.memo').val();
-          self.router.replace(`/pay?recipient=${data.user.user_id}&asset=${data.asset.asset_id}&amount=${amount}&memo=${memo}&trace=${uuidv4()}`);
+          let path = `/pay?recipient=${data.user.user_id}&asset=${data.asset.asset_id}&amount=${amount}&memo=${memo}&trace=${uuidv4()}`;
+          if (MixinUtils.environment()) {
+            let route = `https://${window.location.host}${path}`;
+            window.location = `mixin://send?text=${escape(route)}`;
+          } else {
+            self.router.replace(path);
+          }
         });
       });
     });
