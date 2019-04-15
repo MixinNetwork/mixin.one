@@ -28,6 +28,9 @@ Pay.prototype = {
       }
       data.user = user.data;
       self.api.account.assets(function (assets) {
+        if (!assets.data) {
+          return
+        }
         data.assets = assets.data.sort((i, j) => {
           if (new Decimal(i.price_usd).times(i.balance).cmp(new Decimal(j.price_usd).times(j.balance)) === -1) {
             return 1;
@@ -77,7 +80,7 @@ Pay.prototype = {
           let path = `/pay?recipient=${data.user.user_id}&asset=${data.asset.asset_id}&amount=${amount}&memo=${memo}&trace=${uuidv4()}`;
           if (MixinUtils.environment()) {
             let route = `https://${window.location.host}${path}`;
-            window.location = `mixin://send?text=${escape(route)}`;
+            window.location = `mixin://send?text=${encodeURIComponent(route)}`;
           } else {
             self.router.replace(path);
           }
