@@ -76,7 +76,7 @@ Pay.prototype = {
         $('.receipt-form').on('submit', (e) => {
           e.preventDefault();
           let amount = $('.amount').val();
-          let memo = $('.memo').val();
+          let memo = $('.memo').val().trim();
           let path = `/pay?recipient=${data.user.user_id}&asset=${data.asset.asset_id}&amount=${amount}&memo=${memo}&trace=${uuidv4()}`;
           if (MixinUtils.environment()) {
             let route = `https://${window.location.host}${path}`;
