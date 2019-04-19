@@ -13,6 +13,10 @@ Account.prototype = {
 
   assets: function (callback) {
     this.api.request('GET', '/assets', undefined, function(resp) {
+      if (!!resp.error && resp.error.code === 403) {
+        resp.error.code = 401;
+        return
+      }
       if (typeof callback === 'function') {
         return callback(resp);
       }
