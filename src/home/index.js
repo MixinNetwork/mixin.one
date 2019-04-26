@@ -91,8 +91,8 @@ Home.prototype = {
     if (!!localStorage.getItem('hide_top_bar')) {
       $('.special.version').hide();
     }
-    if (navigator.language && !navigator.language.includes('zh')) {
-      $('.special.version').hide();
+    if (navigator.language && navigator.language.includes('zh-CN')) {
+      $('.special.version').removeClass('hidden');
     }
     var os = self.getMobileOperatingSystem();
     if (os === 'iOS') {

@@ -32,6 +32,9 @@
     line-height: 1.6rem;
     padding: .8rem 1.6rem;
     display: flex;
+    &.hidden {
+      display: none;
+    }
     .bar {
       flex-grow: 1;
     }
