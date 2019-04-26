@@ -88,11 +88,11 @@ Home.prototype = {
       windowsURL: require('./windows.png'),
       macDesktopURL: require('./mac-desktop.png')
     }));
-    if (!!localStorage.getItem('hide_top_bar')) {
-      $('.special.version').hide();
-    }
     if (navigator.language && navigator.language.includes('zh-CN')) {
       $('.special.version').removeClass('hidden');
+    }
+    if (!!localStorage.getItem('hide_top_bar')) {
+      $('.special.version').hide();
     }
     var os = self.getMobileOperatingSystem();
     if (os === 'iOS') {
