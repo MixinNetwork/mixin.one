@@ -27,6 +27,28 @@
     z-index: 1;
   }
 
+  .special.version {
+    background-color: #FDF585;
+    line-height: 1.6rem;
+    padding: .8rem 1.6rem;
+    display: flex;
+    &.hidden {
+      display: none;
+    }
+    .bar {
+      flex-grow: 1;
+    }
+    a {
+      color: #729fe8;
+    }
+    .close {
+      cursor: pointer;
+      font-size: 1.2rem;
+      float: right;
+      padding-left: 1.6rem;
+    }
+  }
+
   .content {
     z-index: 1;
     max-width: 960px;
