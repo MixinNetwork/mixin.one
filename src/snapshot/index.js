@@ -188,6 +188,8 @@ Snapshot.prototype = {
         s.created_at = TimeUtils.format(s.created_at);
         switch (s.source) {
           case 'TRANSFER_INITIALIZED':
+          case 'RAW_TRASACTION_INITIALIZED':
+          case 'RAW_TRASACTION_RECEIVED':
             s.source = 'energy';
             break;
           case 'DEPOSIT_CONFIRMED':
