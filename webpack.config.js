@@ -82,7 +82,7 @@ module.exports = {
       APP_NAME: JSON.stringify('Mixin')
     }),
     new CompressionPlugin({
-      filename: "[path].gz[query]",
+      filename: "[path]",
       algorithm: "gzip",
       test: /\.(js|css)$/,
       threshold: process.env.NODE_ENV === 'production' ? 0 : 100000000000000,
