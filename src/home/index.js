@@ -1,8 +1,8 @@
 import './index.scss';
+import './messenger.scss';
 import 'slick-carousel/slick/slick.scss';
 import 'slick-carousel/slick/slick-theme.scss';
 import 'slick-carousel';
-import './messenger.scss';
 import $ from 'jquery';
 import Animator from '../snapshot/animator.js';
 
