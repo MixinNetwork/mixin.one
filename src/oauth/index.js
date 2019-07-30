@@ -17,6 +17,7 @@ OAuth.prototype = {
     const clientId = URLUtils.getUrlParameter("client_id");
     const scope = URLUtils.getUrlParameter("scope");
     const codeChallenge = URLUtils.getUrlParameter("code_challenge");
+    const state = URLUtils.getUrlParameter("state");
     const returnTo = URLUtils.getUrlParameter("return_to");
     self.api.authorization.connect(function (resp) {
       if (resp.error) {
@@ -35,7 +36,7 @@ OAuth.prototype = {
         return false;
       }
       if (auth.authorization_code.length > 16) {
-        var redirectUri = auth.app.redirect_uri + '?code=' + auth.authorization_code;
+        var redirectUri = auth.app.redirect_uri + '?code=' + auth.authorization_code + '&state=' + state;
         if (returnTo && returnTo.length > 0) {
           redirectUri = redirectUri + '&return_to=' + encodeURIComponent(returnTo);
         }
@@ -43,7 +44,7 @@ OAuth.prototype = {
         return true;
       }
       if (auth.scopes.length === 0) {
-        var redirectUri = auth.app.redirect_uri + '?error=access_denied';
+        var redirectUri = auth.app.redirect_uri + '?error=access_denied&state=' + state;
         if (returnTo && returnTo.length > 0) {
           redirectUri = redirectUri + '&return_to=' + encodeURIComponent(returnTo);
         }
