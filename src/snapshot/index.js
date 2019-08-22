@@ -194,7 +194,7 @@ Snapshot.prototype = {
             c.withdrawal_timestamp = TimeUtils.format(c.withdrawal_timestamp);
             $(`.${c.chain_id}-height`, '.chains.container').html(c.deposit_block_height);
             $(`.${c.chain_id}-timestamp`, '.chains.container').html(c.withdrawal_timestamp);
-            $(`.${c.chain_id}-pending`, '.chains.container').html(c.withdrawal_pending_count);
+            $(`.${c.chain_id}-pending`, '.chains.container').html(`[${c.withdrawal_pending_count}]`);
             $(`.${c.chain_id}-fee`, '.chains.container').html(c.withdrawal_fee);
           }
         } else {
