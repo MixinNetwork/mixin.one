@@ -26,6 +26,7 @@
     padding: 32px;
     float: left;
     position: sticky;
+    position: -webkit-sticky;
     top: -300px;
     left: 0;
 
@@ -130,6 +131,7 @@
 
   .chains.container {
     position: sticky;
+    position: -webkit-sticky;
     padding: 32px 16px 0;
     top: -1000px;
     width: 180px;
