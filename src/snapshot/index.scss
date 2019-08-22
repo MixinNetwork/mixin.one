@@ -6,10 +6,8 @@
   }
 
   .flex.content {
-    display: flex;
     width: 100%;
-    position: absolute;
-    width: 100%;
+    position: relative;
     z-index: 1;
   }
 
@@ -24,11 +22,15 @@
 
   .header.container {
     box-sizing: border-box;
+    width: 320px;
     padding: 32px;
-    min-width: 320px;
-
-    .wrapper {
-      position: fixed;
+    float: left;
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
+    left: 0;
+    &.index {
+      top: -300px;
     }
 
     .logo {
@@ -131,9 +133,12 @@
   }
 
   .chains.container {
-    position: fixed;
-    right: 32px;
-    top: 32px;
+    position: sticky;
+    position: -webkit-sticky;
+    padding: 32px 16px 0;
+    top: -1000px;
+    width: 180px;
+    float: right;
     font-family: $font-main-mono;
     font-weight: 300;
 
@@ -203,7 +208,8 @@
   .main.container {
     box-sizing: border-box;
     padding: 32px;
-    min-width: 640px;
+    max-width: 640px;
+    margin-left: 320px;
   }
 
   .search {
@@ -315,7 +321,6 @@
 
   .snapshot.container {
     list-style: none;
-    margin: 0;
 
     li {
       margin: 0 0 32px;
@@ -417,6 +422,7 @@
   @media (max-width: 768px) {
     .header.container {
       padding: 32px 20px 0;
+      float: initial;
 
       .wrapper {
         .stats {
