@@ -71,7 +71,7 @@
           font-size: 18px;
         }
 
-        span {
+        span.note {
           font-size: 14px;
           text-transform: uppercase;
           opacity: 0.2;
@@ -111,7 +111,7 @@
           border-radius: 8px;
         }
 
-        span {
+        span.note {
           font-size: 14px;
           text-transform: uppercase;
           opacity: 0.2;
@@ -422,6 +422,7 @@
   @media (max-width: 768px) {
     .header.container {
       padding: 32px 20px 0;
+      position: initial;
       float: initial;
 
       .wrapper {

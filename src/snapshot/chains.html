@@ -8,16 +8,16 @@
     <div class="chain state">
       <div class="chain deposit state">
         <i class="icon-arrow-right-circle"></i>
-        <span>{{this.deposit_block_height}}</span>
+        <span class="{{this.chain_id}}-height">{{this.deposit_block_height}}</span>
       </div>
       <div class="chain withdrawal state">
         <i class="icon-arrow-left-circle"></i>
-        <span class="timestamp">{{this.withdrawal_timestamp}}</span>
-        <span class="pending count">[{{this.withdrawal_pending_count}}]</span>
+        <span class="timestamp {{this.chain_id}}-timestamp">{{this.withdrawal_timestamp}}</span>
+        <span class="pending count {{this.chain_id}}-pending">[{{this.withdrawal_pending_count}}]</span>
       </div>
       <div class="chain fee state">
         <i class="icon-layers"></i>
-        <span>{{this.withdrawal_fee}}</span>
+        <span class"{{this.chain_id}}-fee">{{this.withdrawal_fee}}</span>
       </div>
     </div>
   </li>

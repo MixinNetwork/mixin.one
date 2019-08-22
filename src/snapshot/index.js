@@ -30,7 +30,7 @@ Snapshot.prototype = {
       return;
     }
     $('.header.container').addClass('index');
-    if (!$('body').hasClass('undefined')) {
+    if (validate(id)) {
       $('.header.container').removeClass('index');
     }
 
@@ -169,19 +169,43 @@ Snapshot.prototype = {
           var a = network.assets[i];
           a.amount = Math.round(parseFloat(a.amount)).toLocaleString(undefined, { maximumFractionDigits: 0 });
         }
-        $('.header.container').html(self.partialHeader({
-          logoURL: require('../home/logo.png'),
-          assetsCount: parseInt(network.assets_count).toLocaleString(undefined, { maximumFractionDigits: 0 }),
-          snapshotsCount: parseInt(network.snapshots_count).toLocaleString(undefined, { maximumFractionDigits: 0 }),
-          peakTPS: parseInt(network.peak_throughput).toLocaleString(undefined, { maximumFractionDigits: 0 }),
-          assets: network.assets
-        }));
-        for (var i in network.chains) {
-          var c = network.chains[i];
-          c.deposit_block_height = c.deposit_block_height.toLocaleString(undefined, { maximumFractionDigits: 0 });
-          c.withdrawal_timestamp = TimeUtils.format(c.withdrawal_timestamp);
+        if ($('.header.container').hasClass('render')) {
+          $('.assets-amount', '.header.container').html(parseInt(network.assets_count).toLocaleString(undefined, { maximumFractionDigits: 0 }));
+          $('.snapshots-count', '.header.container').html(parseInt(network.snapshots_count).toLocaleString(undefined, { maximumFractionDigits: 0 }));
+          $('.thoroughput-amount', '.header.container').html(parseInt(network.peak_throughput).toLocaleString(undefined, { maximumFractionDigits: 0 }));
+          for (var i in network.assets) {
+            var a = network.assets[i];
+            $(`.${a.asset_id}-amount`, '.header.container').html(a.amount);
+          }
+        } else {
+          $('.header.container').html(self.partialHeader({
+            logoURL: require('../home/logo.png'),
+            assetsCount: parseInt(network.assets_count).toLocaleString(undefined, { maximumFractionDigits: 0 }),
+            snapshotsCount: parseInt(network.snapshots_count).toLocaleString(undefined, { maximumFractionDigits: 0 }),
+            peakTPS: parseInt(network.peak_throughput).toLocaleString(undefined, { maximumFractionDigits: 0 }),
+            assets: network.assets
+          }));
+          $('.header.container').addClass("render");
         }
-        $('.chains.container').html(self.partialChains(network));
+        if ($('.chains.container').hasClass('render')) {
+          for (var i in network.chains) {
+            var c = network.chains[i];
+            c.deposit_block_height = c.deposit_block_height.toLocaleString(undefined, { maximumFractionDigits: 0 });
+            c.withdrawal_timestamp = TimeUtils.format(c.withdrawal_timestamp);
+            $(`.${c.chain_id}-height`, '.chains.container').html(c.deposit_block_height);
+            $(`.${c.chain_id}-timestamp`, '.chains.container').html(c.withdrawal_timestamp);
+            $(`.${c.chain_id}-pending`, '.chains.container').html(c.withdrawal_pending_count);
+            $(`.${c.chain_id}-fee`, '.chains.container').html(c.withdrawal_fee);
+          }
+        } else {
+          for (var i in network.chains) {
+            var c = network.chains[i];
+            c.deposit_block_height = c.deposit_block_height.toLocaleString(undefined, { maximumFractionDigits: 0 });
+            c.withdrawal_timestamp = TimeUtils.format(c.withdrawal_timestamp);
+          }
+          $('.chains.container').html(self.partialChains(network));
+          $('.chains.container').addClass("render");
+        }
       }
 
       if (order === 'before') {
