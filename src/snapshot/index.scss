@@ -27,8 +27,11 @@
     float: left;
     position: sticky;
     position: -webkit-sticky;
-    top: -300px;
+    top: 0;
     left: 0;
+    &.index {
+      top: -300px;
+    }
 
     .logo {
       margin: 0;
@@ -318,7 +321,6 @@
 
   .snapshot.container {
     list-style: none;
-    margin: 0;
 
     li {
       margin: 0 0 32px;

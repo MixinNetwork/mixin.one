@@ -29,6 +29,10 @@ Snapshot.prototype = {
     if (refresh && !($('body').hasClass('index') || !$('body').hasClass(id))) {
       return;
     }
+    $('.header.container').addClass('index');
+    if (!$('body').hasClass('undefined')) {
+      $('.header.container').removeClass('index');
+    }
 
     self.api.network.index(function (resp) {
       if (refresh && !($('body').hasClass('index') || !$('body').hasClass(id))) {
