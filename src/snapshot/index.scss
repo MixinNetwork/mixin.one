@@ -6,10 +6,8 @@
   }
 
   .flex.content {
-    display: flex;
     width: 100%;
-    position: absolute;
-    width: 100%;
+    position: relative;
     z-index: 1;
   }
 
@@ -24,12 +22,12 @@
 
   .header.container {
     box-sizing: border-box;
+    width: 320px;
     padding: 32px;
-    min-width: 320px;
-
-    .wrapper {
-      position: fixed;
-    }
+    float: left;
+    position: sticky;
+    top: -300px;
+    left: 0;
 
     .logo {
       margin: 0;
@@ -131,9 +129,11 @@
   }
 
   .chains.container {
-    position: fixed;
-    right: 32px;
-    top: 32px;
+    position: sticky;
+    padding: 32px 16px 0;
+    top: -1000px;
+    width: 180px;
+    float: right;
     font-family: $font-main-mono;
     font-weight: 300;
 
@@ -203,7 +203,8 @@
   .main.container {
     box-sizing: border-box;
     padding: 32px;
-    min-width: 640px;
+    max-width: 640px;
+    margin-left: 320px;
   }
 
   .search {
@@ -417,6 +418,7 @@
   @media (max-width: 768px) {
     .header.container {
       padding: 32px 20px 0;
+      float: initial;
 
       .wrapper {
         .stats {
