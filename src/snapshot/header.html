@@ -1,15 +1,15 @@
 <div class="wrapper">
   <h1 class="logo"><a href="/snapshots" data-navigo><img src="{{logoURL}}" /><span>Mixin Network</span></a></h1>
   <ul class="network stats">
-    <li class="assets amount"><i class="icon-wallet"></i> {{assetsCount}} <span>{{t 'network.stats.assets.title'}}</span></li>
-    <li><i class="icon-layers"></i> {{snapshotsCount}} <span>{{t 'network.stats.transactions.title'}}</span></li>
-    <li class="thoroughput"><i class="icon-energy"></i> {{peakTPS}} <span>{{t 'network.stats.peak.throughput.title'}}</span></li>
+    <li class="assets amount"><i class="icon-wallet"></i> <span class="assets-amount">{{assetsCount}}</span> <span class="note">{{t 'network.stats.assets.title'}}</span></li>
+    <li><i class="icon-layers"></i> <span class="snapshots-count"> {{snapshotsCount}}</span> <span class="note">{{t 'network.stats.transactions.title'}}</span></li>
+    <li class="thoroughput"><i class="icon-energy"></i> <span class="thoroughput-amount"> {{peakTPS}}</span> <span class="note">{{t 'network.stats.peak.throughput.title'}}</span></li>
   </ul>
   <h2>{{t 'network.assets.title'}}</h2>
   <ul class="network assets">
     {{#each assets}}
     <li data-id="{{this.asset_id}}">
-      <a href="/snapshots/{{this.asset_id}}" data-navigo><img src="{{this.icon_url}}" /> {{this.amount}} <span>{{this.symbol}}</span></a>
+      <a href="/snapshots/{{this.asset_id}}" data-navigo><img src="{{this.icon_url}}" /> <span class="{{this.asset_id}}-amount">{{this.amount}}</span> <span class="note">{{this.symbol}}</span></a>
     </li>
     {{/each}}
   </ul>
