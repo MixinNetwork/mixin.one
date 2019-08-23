@@ -192,8 +192,7 @@ Snapshot.prototype = {
             var c = network.chains[i];
             c.deposit_block_height = c.deposit_block_height.toLocaleString(undefined, { maximumFractionDigits: 0 });
             c.withdrawal_timestamp = TimeUtils.format(c.withdrawal_timestamp);
-            $(`.${c.chain_id}-sync`).removeClass('true');
-            $(`.${c.chain_id}-sync`).removeClass('false');
+            $(`.${c.chain_id}-sync`).removeClass('true false');
             $(`.${c.chain_id}-sync`).addClass(`${c.is_synchronized}`);
             $(`.${c.chain_id}-height`, '.chains.container').html(c.deposit_block_height);
             $(`.${c.chain_id}-timestamp`, '.chains.container').html(c.withdrawal_timestamp);
