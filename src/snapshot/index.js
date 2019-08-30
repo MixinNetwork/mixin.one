@@ -243,7 +243,7 @@ Snapshot.prototype = {
           }
         }
       }
-      $('.snapshots.list li:nth-of-type(1n+1000)').remove();
+      $('.snapshots.list li:nth-of-type(1n+100)').remove();
       order = 'before';
       self.router.updatePageLinks();
       setTimeout(function() { self.index(assetId, order, true); }, 2100);
