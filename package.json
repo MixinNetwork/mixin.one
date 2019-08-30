@@ -12,7 +12,7 @@
     "noty": "^3.2.0-beta",
     "pako": "^1.0.10",
     "qrious": "^4.0.2",
-    "reconnecting-websocket": "^4.1.10",
+    "reconnecting-websocket": "^4.2.0",
     "simple-line-icons": "^2.4.1",
     "slick-carousel": "^1.8.1",
     "three": "^0.108.0",
