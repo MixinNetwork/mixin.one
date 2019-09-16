@@ -102,8 +102,17 @@ Snapshot.prototype = {
         let asset = s.assets[i];
         asset.amount = Math.round(parseFloat(asset.amount)).toLocaleString(undefined, { maximumFractionDigits: 0 });
       }
-      $('#layout-container').html(self.templateSoloAsset(s));
-      $('body').attr('class', 'assets layout');
+      if (!$('body').hasClass('assets')) {
+        $('#layout-container').html(self.templateSoloAsset(s));
+        $('body').attr('class', 'assets layout');
+      } else {
+        $('.assets.count').html(s.assetsCount);
+        $('.snapshots.count').html(s.snapshotsCount);
+        $('.peak').html(s.peakTPS);
+        for (let i = 0; i < s.assets.length; i++) {
+          $('.amount.'+s.assets[i].asset_id).html(s.assets[i].amount);
+        }
+      }
       setTimeout(function() { self.assets(); }, 2100);
     });
   },
@@ -119,8 +128,19 @@ Snapshot.prototype = {
         resp.data.chains[i].deposit_block_height = resp.data.chains[i].deposit_block_height.toLocaleString(undefined, { maximumFractionDigits: 0 });
         resp.data.chains[i].withdrawal_timestamp = TimeUtils.format(resp.data.chains[i].withdrawal_timestamp);
       }
-      $('#layout-container').html(self.templateSoloChain({chains: resp.data.chains}));
-      $('body').attr('class', 'chains layout');
+      if (!$('body').hasClass('chains')) {
+        $('#layout-container').html(self.templateSoloChain({chains: resp.data.chains}));
+        $('body').attr('class', 'chains layout');
+      } else {
+        for (let i = 0; i < resp.data.chains.length; i++) {
+          let chain = resp.data.chains[i];
+          $('.sync.'+chain.chain_id).removeClass('true false').addClass(`${chain.is_synchronized}`);
+          $('.height.'+chain.chain_id).html(chain.deposit_block_height);
+          $('.timestamp.'+chain.chain_id).html(chain.withdrawal_timestamp);
+          $('.pending.count.'+chain.chain_id).html('['+chain.withdrawal_pending_count+']');
+          $('.chain-fee.'+chain.chain_id).html(chain.withdrawal_fee);
+        }
+      }
       setTimeout(function() { self.chains(); }, 2100);
     });
   },

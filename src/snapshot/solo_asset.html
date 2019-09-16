@@ -9,21 +9,27 @@
       <li class="assets amount">
         <i class="icon-wallet"></i>
         <div class="body">
-          {{assetsCount}}
+          <span class="assets count">
+            {{assetsCount}}
+          </span>
           <div>{{t 'network.stats.assets.title'}}</div>
         </div>
       </li>
       <li>
         <i class="icon-layers"></i>
         <div class="body">
-          {{snapshotsCount}}
+          <span class="snapshots count">
+            {{snapshotsCount}}
+          </span>
           <div>{{t 'network.stats.transactions.title'}}</div>
         </div>
       </li>
       <li class="thoroughput">
         <i class="icon-energy"></i>
         <div class="body">
-          {{peakTPS}}
+          <span class="peak">
+            {{peakTPS}}
+          </span>
           <div>{{t 'network.stats.peak.throughput.title'}}</div>
         </div>
       </li>
@@ -35,7 +41,7 @@
         <a href="/snapshots/{{this.asset_id}}" data-navigo>
           <img src="{{this.icon_url}}" />
           <div>
-            {{this.amount}} <span>{{this.symbol}}</span>
+            <span class="amount {{this.asset_id}}">{{this.amount}}</span> <span class="symbol">{{this.symbol}}</span>
           </div>
         </a>
       </li>
