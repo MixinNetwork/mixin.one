@@ -11,22 +11,22 @@
         <div class="chain icon">
           <img src="{{this.icon_url}}" alt="{{this.name}}" title="{{this.name}}" />
           <div>
-            <span class="chain sync {{this.is_synchronized}}"></span>
+            <span class="chain sync {{this.chain_id}} {{this.is_synchronized}}"></span>
           </div>
         </div>
         <div class="chain state container">
           <div class="chain deposit state">
             <i class="icon-arrow-right-circle"></i>
-            <span>{{this.deposit_block_height}}</span>
+            <span class="height {{this.chain_id}}">{{this.deposit_block_height}}</span>
           </div>
           <div class="chain withdrawal state">
             <i class="icon-arrow-left-circle"></i>
-            <span class="timestamp">{{this.withdrawal_timestamp}}</span>
-            <span class="pending count">[{{this.withdrawal_pending_count}}]</span>
+            <span class="timestamp {{this.chain_id}}">{{this.withdrawal_timestamp}}</span>
+            <span class="pending count {{this.chain_id}}">[{{this.withdrawal_pending_count}}]</span>
           </div>
           <div class="chain fee state">
             <i class="icon-layers"></i>
-            <span>{{this.withdrawal_fee}}</span>
+            <span class="chain-fee {{this.chain_id}}">{{this.withdrawal_fee}}</span>
           </div>
         </div>
       </li>
