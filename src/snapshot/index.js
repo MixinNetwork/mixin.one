@@ -134,7 +134,7 @@ Snapshot.prototype = {
       } else {
         for (let i = 0; i < resp.data.chains.length; i++) {
           let chain = resp.data.chains[i];
-          $('.sync.'+chain.chain_id).removeClass('true').removeClass('false').addClass(`${chain.is_synchronized}`);
+          $('.sync.'+chain.chain_id).removeClass('true false').addClass(`${chain.is_synchronized}`);
           $('.height.'+chain.chain_id).html(chain.deposit_block_height);
           $('.timestamp.'+chain.chain_id).html(chain.withdrawal_timestamp);
           $('.pending.count.'+chain.chain_id).html('['+chain.withdrawal_pending_count+']');
