@@ -235,6 +235,7 @@ Snapshot.prototype = {
       }
       for (var i in resp.data) {
         var s = resp.data[i];
+        s.created_at_unix = new Date(s.created_at).getTime();
         s.created_at = TimeUtils.format(s.created_at);
         switch (s.source) {
           case 'TRANSFER_INITIALIZED':
@@ -253,7 +254,8 @@ Snapshot.prototype = {
         }
         s.flow = parseFloat(s.amount) > 0 ? 'in' : 'out';
         s.amount = parseFloat(s.amount) < 0 ? s.amount : '+' + s.amount;
-        if ($('.snapshot[data-id=' + s.snapshot_id + ']').length === 0) {
+        var items = $('.snapshot.item');
+        if (items.length > 0 && parseInt(items[0].attr('data-time')) < s.created_at_unix && $('.snapshot[data-id=' + s.snapshot_id + ']').length === 0) {
           var item = $(self.partialItem(s)).css('background-color', 'rgba(0,176,233,0.3)');
           item = $(item).animate({ backgroundColor: 'transparent' }, 500);
           if (order === 'before') {
