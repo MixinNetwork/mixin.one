@@ -27,7 +27,7 @@ const ids = {
   '05891083-63d2-4f3d-bfbe-d14d7fb9b25a': 'BitShares',
 };
 
-const covers = {
+const logos = {
   'Bitcoin': 'https://images.mixin.one/HvYGJsV5TGeZ-X9Ek3FEQohQZ3fE9LBEBGcOcn4c4BNHovP4fW4YB97Dg5LcXoQ1hUjMEgjbl1DPlKg1TW7kK6XP=s128',
   'BitcoinCash': 'https://images.mixin.one/tqt14x8iwkiCR_vIKIw6gAAVO8XpZH7ku7ZJYB5ArMRA6grN9M1oCI7kKt2QqBODJwr17sZxDCDTjXHOgIixzv6X=s128',
   'BitcoinSV': 'https://images.mixin.one/1iUl5doLjMSv-ElcVCI4YgD1uIayDbZcQP0WjFEajoY1-qQZmVEl5GgUCtsp8CP0aj96a5Rwi-weQ5YA64lyQzU=s128',
@@ -54,10 +54,10 @@ const covers = {
 };
 
 Chains.prototype = {
-  getCover: function (id) {
+  getLogo: function (id) {
     let chain = ids[id];
     if (chain) {
-      return covers[chain];
+      return logos[chain];
     }
     return '';
   }

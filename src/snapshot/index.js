@@ -170,7 +170,7 @@ Snapshot.prototype = {
           $('#layout-container').html(self.templateIndex());
         } else {
           asset.logoURL = require('../home/logo.png');
-          asset.chainLogoURL = Chains.getCover(asset.chain_id);
+          asset.chainLogoURL = Chains.getLogo(asset.chain_id);
           asset.snapshotsCount = parseInt(asset.snapshots_count).toLocaleString(undefined, { maximumFractionDigits: 0 });
           asset.amount = Math.round(parseFloat(asset.amount)).toLocaleString(undefined, { maximumFractionDigits: 0 });
           $('#layout-container').html(self.templateAsset(asset));
