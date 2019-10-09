@@ -8,7 +8,9 @@
       <h1 class="asset logo">
         <div class="asset package">
           <img src="{{icon_url}}" />
+          {{#if chainLogoURL}}
           <img class='chain' src="{{chainLogoURL}}" />
+          {{/if}}
         </div>
         <span>{{name}}</span>
       </h1>
