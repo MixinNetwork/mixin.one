@@ -53,8 +53,23 @@
       margin: -8px 0 8px 2px;
     }
 
-    .asset.logo img {
-      margin-top: 0;
+    .asset.logo {
+      img {
+        margin-top: 0;
+      }
+    }
+
+    .asset.package {
+      position: relative;
+      .chain {
+        border: 1px solid white;
+        border-radius: 16px;
+        width: 16px;
+        height: 16px;
+        position: absolute;
+        bottom: -8px;
+        left: 0;
+      }
     }
 
     .stats {

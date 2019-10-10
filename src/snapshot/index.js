@@ -4,6 +4,7 @@ import $ from 'jquery';
 import jQueryColor from '../jquery-color-plus-names.js';
 import TimeUtils from '../utils/time.js';
 import URLUtils from '../utils/url.js';
+import Chains from '../utils/chains.js';
 import Animator from './animator.js';
 import validate from 'uuid-validate';
 
@@ -169,6 +170,7 @@ Snapshot.prototype = {
           $('#layout-container').html(self.templateIndex());
         } else {
           asset.logoURL = require('../home/logo.png');
+          asset.chainLogoURL = Chains.getLogo(asset.chain_id);
           asset.snapshotsCount = parseInt(asset.snapshots_count).toLocaleString(undefined, { maximumFractionDigits: 0 });
           asset.amount = Math.round(parseFloat(asset.amount)).toLocaleString(undefined, { maximumFractionDigits: 0 });
           $('#layout-container').html(self.templateAsset(asset));
