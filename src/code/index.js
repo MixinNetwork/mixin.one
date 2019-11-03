@@ -24,6 +24,8 @@ Code.prototype = {
         case 'conversation':
           self.renderGroup(resp.data);
           break;
+        default:
+          self.api.error({error: {code: 10002}});
       }
     }, id);
   },

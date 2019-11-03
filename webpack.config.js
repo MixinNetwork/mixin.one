@@ -20,17 +20,17 @@ const webRoot = function (env) {
 
 const apiRoot = function (env) {
   if (env === 'production') {
-    return 'https://api.mixin.one';
+    return 'https://mixin-api.zeromesh.net;
   } else {
-    return 'https://api.mixin.one';
+    return 'https://mixin-api.zeromesh.net;
   }
 };
 
 const blazeRoot = function (env) {
   if (env === 'production') {
-    return 'wss://blaze.mixin.one';
+    return 'wss://blaze-api.zeromesh.net';
   } else {
-    return 'wss://blaze.mixin.one';
+    return 'wss://blaze-api.zeromesh.net';
   }
 };
 
