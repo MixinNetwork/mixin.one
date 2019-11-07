@@ -20,9 +20,9 @@ const webRoot = function (env) {
 
 const apiRoot = function (env) {
   if (env === 'production') {
-    return 'https://mixin-api.zeromesh.net;
+    return 'https://mixin-api.zeromesh.net';
   } else {
-    return 'https://mixin-api.zeromesh.net;
+    return 'https://mixin-api.zeromesh.net';
   }
 };
 
