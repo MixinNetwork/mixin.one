@@ -27,6 +27,19 @@ Snapshot.prototype = {
   index: function(id, order, refresh) {
     const self = this;
 
+    if (id && id.trim() !== '' && id !== 'undefined' && !validate(id)) {
+      return self.api.network.search(function (resp) {
+        if (resp.error) {
+          return;
+        }
+        if (resp.data.length === 0) {
+          resp.error = {code: 404};
+          return;
+        }
+        return self.index(resp.data[0].asset_id, order, refresh);
+      }, id);
+    }
+
     if (refresh && !($('body').hasClass('index') || !$('body').hasClass(id))) {
       return;
     }

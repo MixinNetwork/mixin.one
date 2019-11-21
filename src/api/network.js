@@ -11,6 +11,14 @@ Network.prototype = {
     });
   },
 
+  search: function (callback, key) {
+    this.api.request('GET', '/network/assets/search/' + key, undefined, function(resp) {
+      if (typeof callback === 'function') {
+        return callback(resp);
+      }
+    });
+  },
+
   snapshotsIndex: function (callback, asset, offset, limit) {
     var path = '/network/snapshots?asset=' + asset + '&offset=' + offset + '&limit=' + limit;
     this.api.request('GET', path, undefined, function(resp) {
