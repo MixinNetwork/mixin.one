@@ -36,7 +36,7 @@ Snapshot.prototype = {
           resp.error = {code: 404};
           return;
         }
-        return self.index(resp.data[0].asset_id, order, refresh);
+        return self.router.replace('/snapshots/'+resp.data[0].asset_id);
       }, id);
     }
 
