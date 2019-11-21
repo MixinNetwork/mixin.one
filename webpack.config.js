@@ -28,9 +28,9 @@ const apiRoot = function (env) {
 
 const blazeRoot = function (env) {
   if (env === 'production') {
-    return 'wss://blaze-api.zeromesh.net';
+    return 'wss://mixin-blaze.zeromesh.net';
   } else {
-    return 'wss://blaze-api.zeromesh.net';
+    return 'wss://mixin-blaze.zeromesh.net';
   }
 };
 
