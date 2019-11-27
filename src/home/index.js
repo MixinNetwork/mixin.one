@@ -22,7 +22,7 @@ Home.prototype = {
     $('#layout-container').html(self.templateIndex({
       new_logo_url: require('./assets/logo.png'),
       new_menus_url: require('./assets/menus.png'),
-      new_home_1_url: require('./assets/home_1.jpg'),
+      new_home_1_url: require('./assets/home_1.png'),
       new_home_2_1_url: require('./assets/home_2_1.png'),
       new_home_2_2_url: require('./assets/home_2_2.png'),
       new_home_3_1_url: require('./assets/home_3_1.png'),

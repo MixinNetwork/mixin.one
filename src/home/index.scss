@@ -1,6 +1,5 @@
 @import "../constant.scss";
 
-
 * {
     cursor: default;
     box-sizing: border-box;
@@ -23,7 +22,7 @@
 
 header {
     background: url("./assets/BG.jpg") no-repeat;
-    background-size: 100% 100%;
+    background-size: cover;
     font-family: "Helvetica";
     font-size: initial;
 
@@ -43,13 +42,13 @@ header {
                 display: none;
             }
             .nav-list {
-                padding-top: 2px;
                 a {
                     color: #fff;
                     font-size: 16px;
                     display: inline-block;
                     cursor: pointer;
                     line-height: 20px;
+                    margin-left: 72px;
                 }
                 a:hover {
                     border-bottom: 2px solid #fff;
@@ -58,6 +57,10 @@ header {
         }
 
         .nav-title {
+            position: absolute;
+            top: 45%;
+            left: 50%;
+            transform: translate(-50%, -50%);
             text-align: center;
         }
     }
@@ -139,21 +142,20 @@ footer {
     header {
         height: 1080px;
         & > div {
-            width: 1200px;
             .nav-list-menus-btn {
                 display: none;
             }
+            .nav-logo {
+                width: 34px;
+                height: 24px;
+            }
             nav .nav-list {
                 display: block;
-                a {
-                    margin-left: 56px;
-                }
                 .nav-list-menus-list::after {
                     display: none;
                 }
             }
             .nav-title {
-                margin-top: 330px;
                 h1 {
                     font-size: 60px;
                     line-height: 68px;
@@ -161,7 +163,7 @@ footer {
                     margin: 0 auto;
                 }
                 p {
-                    margin: 100px auto 0 auto !important;
+                    margin: 50px auto 0 auto !important;
                     width: 1012px;
                     font-size: 32px;
                     font-weight: 100;
@@ -285,21 +287,20 @@ footer {
     header {
         height: 720px;
         & > div {
-            width: 960px;
             .nav-list-menus-btn {
                 display: none;
             }
+            .nav-logo {
+                width: 34px;
+                height: 24px;
+            }
             nav .nav-list {
                 display: block;
-                a {
-                    margin-left: 56px;
-                }
                 .nav-list-menus-list::after {
                     display: none;
                 }
             }
             .nav-title {
-                margin-top: 188px;
                 h1 {
                     font-size: 46px;
                     line-height: 50px;
@@ -405,15 +406,15 @@ footer {
     header {
         height: 512px;
         & > div {
-            width: 720px;
             .nav-list-menus-btn {
                 display: none;
             }
+            .nav-logo {
+                width: 34px;
+                height: 24px;
+            }
             nav .nav-list {
                 display: block;
-                a {
-                    margin-left: 56px;
-                }
                 .nav-list-menus-list::after {
                     display: none;
                 }
@@ -422,7 +423,6 @@ footer {
                 }
             }
             .nav-title {
-                margin-top: 120px;
                 h1 {
                     font-size: 32px;
                     line-height: 40px;
@@ -599,7 +599,6 @@ footer {
                 }
             }
             .nav-title {
-                margin-top: 44px;
                 h1 {
                     font-size: 22px;
                     line-height: 26px;
@@ -650,9 +649,9 @@ footer {
             margin-top: 10px;
         }
         &.section-1 {
-            height: 442px;
+            height: 400px;
             .section-info {
-                padding-top: 56px;
+                padding-top: 36px;
                 .content {
                     width: 270px;
                 }
@@ -663,9 +662,9 @@ footer {
             }
         }
         &.section-2 {
-            height: 577px;
+            height: 570px;
             .section-info {
-                padding-top: 55px;
+                padding-top: 35px;
                 .content {
                     width: 250px;
                 }
