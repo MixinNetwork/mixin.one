@@ -536,15 +536,15 @@
             overflow-y: auto;
         }
         header {
-            width: 100%!important;
-            height: 350px!important;
+            width: 100% !important;
+            height: 350px !important;
             & > div {
                 margin: 0 atuo;
                 width: 375px;
                 padding: 0;
                 font-size: initial;
                 nav {
-                    padding: 28px 30px 0 20px;
+                    padding: 28px 20px 0 20px;
                     .nav-logo {
                         width: 22px;
                         height: 16px;
@@ -554,7 +554,7 @@
                         text-align: center;
                         .nav-list-menus-btn {
                             position: absolute;
-                            right: 20px;
+                            right: 0;
                             display: block;
                             cursor: pointer;
                             width: 18px;
@@ -564,7 +564,7 @@
                             display: none;
                             width: 150px;
                             position: absolute;
-                            right: 8px;
+                            right: -13px;
                             top: 24px;
                             background: #fff;
                             box-shadow: 0px 2px 12px 0px rgba(47, 48, 50, 0.3);
@@ -598,21 +598,24 @@
                 .nav-title {
                     position: initial;
                     transform: initial;
-                    margin-top: 95px;
+                    margin-top: 80px;
                     h1 {
                         font-size: 22px;
                         line-height: 26px;
-                        width: 247px;
+                        width: 260px;
                         margin: 0 auto;
                     }
                     p {
                         margin: 10px auto 0 auto !important;
-                        width: 290px;
+                        width: 300px;
                         font-size: 14px;
                         font-family: Helvetica;
                         color: rgba(255, 255, 255, 1);
                         line-height: 22px;
                         font-weight: 100;
+                    }
+                    br {
+                        display: block!important;
                     }
                 }
             }
