@@ -536,7 +536,8 @@
             overflow-y: auto;
         }
         header {
-            height: 274px;
+            width: 100%!important;
+            height: 350px!important;
             & > div {
                 margin: 0 atuo;
                 width: 375px;
@@ -595,6 +596,9 @@
                     }
                 }
                 .nav-title {
+                    position: initial;
+                    transform: initial;
+                    margin-top: 95px;
                     h1 {
                         font-size: 22px;
                         line-height: 26px;
@@ -603,7 +607,7 @@
                     }
                     p {
                         margin: 10px auto 0 auto !important;
-                        width: 295px;
+                        width: 290px;
                         font-size: 14px;
                         font-family: Helvetica;
                         color: rgba(255, 255, 255, 1);
