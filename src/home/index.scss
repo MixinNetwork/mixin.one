@@ -1,6 +1,8 @@
 @import "../constant.scss";
 
 .mixin-one-home-container {
+    min-width: 380px;
+    overflow-x: hidden;
     * {
         cursor: default;
         box-sizing: border-box;
