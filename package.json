@@ -5,7 +5,7 @@
   "main": "app.js",
   "dependencies": {
     "decimal.js": "^10.2.0",
-    "handlebars": "^4.2.0",
+    "handlebars": "^4.5.3",
     "jquery": "^3.4.1",
     "navigo": "^7.1.2",
     "node-polyglot": "^2.4.0",
@@ -15,7 +15,7 @@
     "reconnecting-websocket": "^4.2.0",
     "simple-line-icons": "^2.4.1",
     "slick-carousel": "^1.8.1",
-    "three": "^0.108.0",
+    "three": "^0.111.0",
     "uuid": "^3.3.3",
     "uuid-validate": "0.0.3"
   },
@@ -23,17 +23,17 @@
     "compression-webpack-plugin": "^3.0.0",
     "css-loader": "^3.2.0",
     "extract-text-webpack-plugin": "^4.0.0-beta.0",
-    "file-loader": "^4.2.0",
+    "file-loader": "^5.0.2",
     "handlebars-loader": "^1.7.1",
     "html-webpack-plugin": "^3.2.0",
     "node-sass": "^4.12.0",
     "npm-check-updates": "^3.1.23",
     "sass-loader": "^7.3.1",
     "script-ext-html-webpack-plugin": "^2.1.4",
-    "style-loader": "^1.0.0",
+    "style-loader": "^1.0.1",
     "webapp-webpack-plugin": "^2.7.1",
     "webpack": "^4.40.2",
-    "webpack-cli": "^3.3.8"
+    "webpack-cli": "^3.3.9"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
