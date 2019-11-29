@@ -140,7 +140,6 @@
 
     @media screen and (min-width: 1280px) {
         header {
-            height: 1080px;
             & > div {
                 .nav-list-menus-btn {
                     display: none;
@@ -201,8 +200,8 @@
                 }
             }
             &.section-1 {
-                height: 862px;
-                margin-top: 240px;
+                height: 600px;
+                margin-top: 80px;
                 .section-info {
                     position: absolute;
                     top: 0;
@@ -219,9 +218,8 @@
                 }
             }
             &.section-2 {
-                height: 978px;
+                height: 650px;
                 width: 100%;
-                padding-top: 224px;
                 & > div {
                     width: 1200px;
                     margin: 0 auto;
@@ -285,7 +283,6 @@
 
     @media screen and (max-width: 1280px) and (min-width: 960px) {
         header {
-            height: 720px;
             & > div {
                 .nav-list-menus-btn {
                     display: none;
@@ -349,9 +346,9 @@
                 margin-top: 20px;
             }
             &.section-1 {
-                height: 862px;
+                height: 700px;
                 .section-info {
-                    padding-top: 120px;
+                    padding-top: 80px;
                     .content {
                         width: 653px;
                     }
@@ -362,9 +359,9 @@
                 }
             }
             &.section-2 {
-                height: 1066px;
+                height: 950px;
                 .section-info {
-                    padding-top: 94px;
+                    padding-top: 50px;
                     .content {
                         width: 540px;
                     }
@@ -404,7 +401,6 @@
 
     @media screen and (max-width: 960px) and(min-width: 720px) {
         header {
-            height: 512px;
             & > div {
                 .nav-list-menus-btn {
                     display: none;
@@ -473,9 +469,9 @@
                 margin-top: 10px;
             }
             &.section-1 {
-                height: 623px;
+                height: 520px;
                 .section-info {
-                    padding-top: 110px;
+                    padding-top: 60px;
                     .content {
                         width: 400px;
                     }
@@ -487,9 +483,9 @@
                 }
             }
             &.section-2 {
-                height: 765px;
+                height: 700px;
                 .section-info {
-                    padding-top: 80px;
+                    padding-top: 50px;
                     .content {
                         width: 351px;
                     }

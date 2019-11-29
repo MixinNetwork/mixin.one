@@ -27,7 +27,6 @@ btn.addEventListener('click', event => {
 function resizeTopContent() {
     var cliWidth = document.documentElement.clientWidth;
     var cliHeight = document.documentElement.clientHeight;
-    console.log('cliHeight :', cliHeight);
     $('header').css('width', (cliWidth) + 'px')
     $('header').css('height', (cliHeight + 1) + 'px')
 }
