@@ -104,5 +104,34 @@
     "other": {
       "apply": "立即报名"
     }
+  },
+  "home": {
+    "nav.network": "Mixin Network",
+    "nav.messenger": "Mixin Messenger",
+    "nav.title": "基於 Mixin 從容構建去中心化軟件",
+    "nav.description": "標準的 REST API 接口使得開發者可以以較低的學習成本、任意熟悉的語言快速實現產品和業務邏輯",
+    "section.network": "壹個免費，快速的點對點數字資產交易網絡",
+    "section.messenger": "开源的端对端加密聊天软件，并且集成基于 Mixin Network 的多链钱包",
+    "section.more": "了解更多",
+    "footer.one": "Disclaimer",
+    "footer.two": "Terms of Use",
+    "footer.three": "Privacy Policy",
+    "footer.four": "Cookies Policy",
+    "footer.right": "Copyright © 2019 Mixin.one. All rights reserved."
+  },
+  "messenger": {
+    "features.description": "最牛逼的去中心化钱包",
+    "features": "特性",
+    "features.1": "使用手機號碼登錄，永遠不會丟失您的帳戶",
+    "features.2": "通過六位數PIN進行保護",
+    "features.3": "數字資產存儲在PoS-BFT-DAG分布式網絡中",
+    "features.4": "僅通過電話號碼和PIN碼恢復錢包",
+    "features.5": "簡單的界面",
+    "features.6": "直接將加密貨幣發送到電話聯系人",
+    "features.7": "使用信號協議發送加密的消息",
+    "desktop.title": "Mixin Messenger 桌面端",
+    "desktop.description1": "Mac OS X 10.9及更高版本或Windows 64位，Linux ",
+    "desktop.description2": "從此處下載 ",
+    "desktop.description3": "必須在手機上安裝Mixin Messenger。"
   }
 }

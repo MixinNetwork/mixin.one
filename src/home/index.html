@@ -1,4 +1,4 @@
-<div class="hello">
+<div class="mixin-one-home-container">
   <header>
     <div>
       <nav>
@@ -6,15 +6,14 @@
         <div class="nav-list">
           <img class="nav-list-menus-btn" src="{{new_menus_url}}" />
           <div class="nav-list-menus-list">
-            <a href="/snapshots" class="nav-list-menus-item">Mixin Network</a>
-            <a href="/messenger" class="nav-list-menus-item">Mixin Messenger</a>
+            <a href="/snapshots" class="nav-list-menus-item">{{ t 'home.nav.network' }}</a>
+            <a href="/messenger" class="nav-list-menus-item">{{ t 'home.nav.messenger' }}</a>
           </div>
         </div>
       </nav>
       <div class="nav-title">
-        <h1>Build any decentralized applications on Mixin</h1>
-        <p>mixin.one is a software company that is producing the Mixin software as a free, open source
-          software.</p>
+        <h1>{{ t 'home.nav.title' }}</h1>
+        <p>{{ t 'home.nav.description' }}</p>
       </div>
     </div>
   </header>
@@ -22,12 +21,9 @@
   <section class="section-1">
     <div class="animate-up" data-animate="fadeInUp,2s,easin-in-out">
       <div class="section-info">
-        <div class="title">Mixin Network</div>
-        <div class="content">
-          A free and lightning fast peer-to-peer
-          transactional network for digital assets.
-        </div>
-        <a href="/snapshots" class="more">Learn more</a>
+        <div class="title">{{ t 'home.nav.network' }}</div>
+        <div class="content">{{ t 'home.section.network' }}</div>
+        <a href="/snapshots" class="more">{{ t 'home.section.more' }}</a>
       </div>
       <img src="{{new_home_1_url}}" />
     </div>
@@ -37,9 +33,9 @@
     <div class="animate-up" data-animate="fadeInUp,2s,easin-in-out">
       <div class="section-info">
         <img class="logo" src="{{new_home_2_1_url}}" />
-        <div class="title">Mixin Messenger</div>
-        <div class="content">An open source cryptocurrency wallet with Signal messaging.</div>
-        <a href="/messenger" class="more">Learn more</a>
+        <div class="title">{{ t 'home.nav.messenger' }}</div>
+        <div class="content">{{ t 'home.section.messenger' }}</div>
+        <a href="/messenger" class="more">{{ t 'home.section.more' }}</a>
       </div>
       <img src="{{new_home_2_2_url}}" />
     </div>
