@@ -104,5 +104,36 @@
     "other": {
       "apply": "Register Now"
     }
+  },
+  "home": {
+    "nav.network": "Mixin Network",
+    "nav.messenger": "Mixin Messenger",
+    "nav.title": "Build any decentralized applications on Mixin",
+    "nav.description1": "mixin.one is a software company",
+    "nav.description2": "that is producing the Mixin software as a free,",
+    "nav.description3": "open source software.",
+    "section.network": "A free and lightning fast peer-to-peer transactional network for digital assets.",
+    "section.messenger": "An open source cryptocurrency wallet with Signal messaging.",
+    "section.more": "Learn more",
+    "footer.one":"Disclaimer",
+    "footer.two":"Terms of Use",
+    "footer.three": "Privacy Policy",
+    "footer.four": "Cookies Policy",
+    "footer.right":"Copyright © 2019 Mixin.one. All rights reserved."
+  },
+  "messenger": {
+    "features.description": "An open source cryptocurrency wallet, which supports almost all popular cryptocurrencies.",
+    "features": "Features",
+    "features.1": "Login with mobile phone number, never lose your account",
+    "features.2": "Secured by six digit PIN",
+    "features.3": "Coins and tokens are stored in PoS-BFT-DAG distributed network",
+    "features.4": "Restore wallet just by phone number and PIN",
+    "features.5": "Simple interface",
+    "features.6": "Send cryptocurrencies directly to phone contacts",
+    "features.7": "Send encrypted messages with Signal protocol",
+    "desktop.title": "Mixin Messenger Desktop",
+    "desktop.description1": "Mac OS X 10.9 and higher or Windows 64-bit, Linux download from ",
+    "desktop.description2": "here. ",
+    "desktop.description3": "Mixin Messenger must be installed on your phone."
   }
 }

@@ -20,15 +20,17 @@ Home.prototype = {
     const self = this;
     $('body').attr('class', 'home layout');
     $('#layout-container').html(self.templateIndex({
+      new_logo_url: require('./assets/logo.png'),
+      new_menus_url: require('./assets/menus.png'),
+      new_home_1_url: require('./assets/home_1.png'),
+      new_home_2_1_url: require('./assets/home_2_1.png'),
+      new_home_2_2_url: require('./assets/home_2_2.png'),
+      new_home_3_1_url: require('./assets/home_3_1.png'),
+      new_home_3_2_url: require('./assets/home_3_2.png'),
       logoURL: require('./logo.png'),
       playURL: require('./google-play.png'),
       storeURL: require('./app-store.png'),
-      secureURL: require('./secure.png'),
-      instantURL: require('./instant.png'),
-      privateURL: require('./private.png'),
-      powerfulURL: require('./powerful.png'),
-      messengerURL: require('./messenger.png'),
-      oceanOneURL: require('./ocean-one.png')
+      messengerURL: require('./messenger.png')
     }));
     var os = self.getMobileOperatingSystem();
     if (os === 'iOS') {
@@ -58,12 +60,14 @@ Home.prototype = {
     var src = $('.video-container iframe').attr('src');
     $('.video.button').click(function () {
       $('.modal-dialog').css('display', 'table');
-      $('.video-container iframe').attr('src', src+'&autoplay=1');
+      $('.video-container iframe').attr('src', src + '&autoplay=1');
     });
     $('.close').click(function () {
       $('.modal-dialog').hide();
       $('.video-container iframe').attr('src', src);
     });
+    require('./js/animate-up');
+    require('./js/index');
   },
 
   xin: function () {
