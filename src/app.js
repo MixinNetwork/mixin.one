@@ -90,8 +90,7 @@ router.on({
     new Home(router, api).messenger();
   },
   '/': function () {
-    new Home(router, api).messenger();
-    // new Home(router, api).index();
+    new Home(router, api).index();
   }
 }).notFound(function () {
   $('#layout-container').html(Error404());
