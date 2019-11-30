@@ -35,7 +35,7 @@ Code.prototype = {
     $('body').attr('class', 'user code layout');
     user['hasAvatar'] = user.avatar_url !== '';
     user['firstLetter'] = user.full_name.trim()[0] || '^_^';
-    user['logoURL'] = require('../home/logo.png');
+    user['logoURL'] = require('../home/logo.png').default;
     user['full_name'] = user.full_name.trim().length > 0 ? user.full_name.trim() : '^_^';
     $('#layout-container').html(self.templateUser(user));
     new QRious({
@@ -52,7 +52,7 @@ Code.prototype = {
   renderGroup: function(group) {
     const self = this;
     $('body').attr('class', 'group code layout');
-    group['logoURL'] = require('../home/logo.png');
+    group['logoURL'] = require('../home/logo.png').default;
     group['name'] = group.name.trim().length > 0 ? group.name.trim() : '^_^';
     group['participantsCount'] = group.participants.length;
     $('#layout-container').html(self.templateGroup(group));
