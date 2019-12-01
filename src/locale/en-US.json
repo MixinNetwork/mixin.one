@@ -106,6 +106,7 @@
     }
   },
   "home": {
+    "classname": "home-language-en",
     "nav.network": "Mixin Network",
     "nav.messenger": "Mixin Messenger",
     "nav.title": "Build any decentralized applications on Mixin",
@@ -115,11 +116,11 @@
     "section.network": "A free and lightning fast peer-to-peer transactional network for digital assets.",
     "section.messenger": "An open source cryptocurrency wallet with Signal messaging.",
     "section.more": "Learn more",
-    "footer.one":"Disclaimer",
-    "footer.two":"Terms of Use",
-    "footer.three": "Privacy Policy",
-    "footer.four": "Cookies Policy",
-    "footer.right":"Copyright © 2019 Mixin.one. All rights reserved."
+    "footer.one": "Terms of Use",
+    "footer.two": "Privacy Policy",
+    "footer.three": "Developers",
+    "footer.four": "Press Kit",
+    "footer.right": "Copyright © 2019 mixin.one. All rights reserved."
   },
   "messenger": {
     "features.description": "An open source cryptocurrency wallet, which supports almost all popular cryptocurrencies.",
@@ -134,6 +135,11 @@
     "desktop.title": "Mixin Messenger Desktop",
     "desktop.description1": "Mac OS X 10.9 and higher or Windows 64-bit, Linux download from ",
     "desktop.description2": "here. ",
-    "desktop.description3": "Mixin Messenger must be installed on your phone."
+    "desktop.description3": "Mixin Messenger must be installed on your phone.",
+    "footer.1": "EXPLORER",
+    "footer.2": "LOGS",
+    "footer.3": "WHITEPAPER",
+    "footer.4": "PRESS KIT",
+    "footer.5": "XIN"
   }
 }
