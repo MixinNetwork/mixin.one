@@ -18,7 +18,7 @@ Log.prototype = {
       success: function(resp) {
         $('body').attr('class', 'log layout');
         $('#layout-container').html(self.templateIndex({
-          logoURL: require('../home/logo.png')
+          logoURL: require('../home/logo.png').default
         }));
         for (var i in resp.data) {
           var item = resp.data[i];

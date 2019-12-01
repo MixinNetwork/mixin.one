@@ -89,7 +89,7 @@ Snapshot.prototype = {
       var s = resp.data;
       s.flow = parseFloat(s.amount) > 0 ? 'in' : 'out';
       s.amount = parseFloat(s.amount) < 0 ? s.amount : '+' + s.amount;
-      s.logoURL = require('../home/logo.png');
+      s.logoURL = require('../home/logo.png').default;
       s.peakTPS = parseInt(network.peak_throughput).toLocaleString(undefined, { maximumFractionDigits: 0 });
       s.snapshotsCount = parseInt(network.snapshots_count).toLocaleString(undefined, { maximumFractionDigits: 0 });
       s.assetsCount = parseInt(network.assets_count).toLocaleString(undefined, { maximumFractionDigits: 0 });
@@ -182,7 +182,7 @@ Snapshot.prototype = {
         if ($('body').hasClass('undefined')) {
           $('#layout-container').html(self.templateIndex());
         } else {
-          asset.logoURL = require('../home/logo.png');
+          asset.logoURL = require('../home/logo.png').default;
           asset.chainLogoURL = Chains.getLogo(asset.chain_id);
           asset.snapshotsCount = parseInt(asset.snapshots_count).toLocaleString(undefined, { maximumFractionDigits: 0 });
           asset.amount = Math.round(parseFloat(asset.amount)).toLocaleString(undefined, { maximumFractionDigits: 0 });
@@ -214,7 +214,7 @@ Snapshot.prototype = {
           }
         } else {
           $('.header.container').html(self.partialHeader({
-            logoURL: require('../home/logo.png'),
+            logoURL: require('../home/logo.png').default,
             assetsCount: parseInt(network.assets_count).toLocaleString(undefined, { maximumFractionDigits: 0 }),
             snapshotsCount: parseInt(network.snapshots_count).toLocaleString(undefined, { maximumFractionDigits: 0 }),
             peakTPS: parseInt(network.peak_throughput).toLocaleString(undefined, { maximumFractionDigits: 0 }),

@@ -119,7 +119,7 @@ Pay.prototype = {
       }
       var payment = resp.data;
       payment['params'] = window.location.search;
-      payment['logoURL'] = require('../home/logo.png');
+      payment['logoURL'] = require('../home/logo.png').default;
       payment['isPaid'] = payment.status === 'paid';
       $('body').attr('class', 'pay layout');
       $('#layout-container').html(self.template(payment));
