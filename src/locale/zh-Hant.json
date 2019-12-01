@@ -106,34 +106,40 @@
     }
   },
   "home": {
+    "classname": "home-language-ch",
     "nav.network": "Mixin Network",
     "nav.messenger": "Mixin Messenger",
     "nav.title": "基於 Mixin 從容構建去中心化軟件",
-    "nav.description1": "mixin.one是一家软件公司，",
-    "nav.description2": "正在将Mixin软件作为免费的",
+    "nav.description1": " mixin.one 是一家软件公司，",
+    "nav.description2": "正在将 Mixin 软件作为免费的",
     "nav.description3": "开源软件进行生产。",
     "section.network": "壹個免費，快速的點對點數字資產交易網絡",
     "section.messenger": "开源的端对端加密聊天软件，并且集成基于 Mixin Network 的多链钱包",
     "section.more": "了解更多",
-    "footer.one": "Disclaimer",
-    "footer.two": "Terms of Use",
-    "footer.three": "Privacy Policy",
-    "footer.four": "Cookies Policy",
-    "footer.right": "Copyright © 2019 Mixin.one. All rights reserved."
+    "footer.one": "使用條款",
+    "footer.two": "隱私政策",
+    "footer.three": "開發者",
+    "footer.four": "新聞資料袋",
+    "footer.right": "Copyright ©2019 Mixin.one 版權所有"
   },
   "messenger": {
     "features.description": "最牛逼的去中心化钱包",
     "features": "特性",
     "features.1": "使用手機號碼登錄，永遠不會丟失您的帳戶",
-    "features.2": "通過六位數PIN進行保護",
-    "features.3": "數字資產存儲在PoS-BFT-DAG分布式網絡中",
-    "features.4": "僅通過電話號碼和PIN碼恢復錢包",
+    "features.2": "通過六位數 PIN 進行保護",
+    "features.3": "數字資產存儲在 PoS-BFT-DAG 分布式網絡中",
+    "features.4": "僅通過電話號碼和 PIN 碼恢復錢包",
     "features.5": "簡單的界面",
     "features.6": "直接將加密貨幣發送到電話聯系人",
     "features.7": "使用信號協議發送加密的消息",
     "desktop.title": "Mixin Messenger 桌面端",
-    "desktop.description1": "Mac OS X 10.9及更高版本或Windows 64位，Linux ",
-    "desktop.description2": "從此處下載 ",
-    "desktop.description3": "必須在手機上安裝Mixin Messenger。"
+    "desktop.description1": "Mac OS X 10.9 及更高版本或 Windows 64 位，Linux  ",
+    "desktop.description2": " 從此處下載 ",
+    "desktop.description3": "必須在手機上安裝 Mixin Messenger 。",
+    "footer.1": "勘探者",
+    "footer.2": "日誌",
+    "footer.3": "白皮書",
+    "footer.4": "新聞資料袋",
+    "footer.5": "XIN"
   }
 }

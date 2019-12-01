@@ -1,5 +1,5 @@
 <div class="mixin-one-home-container">
-  <header>
+  <header class="{{ t 'home.classname' }}">
     <div>
       <nav>
         <img class="nav-logo" src="{{new_logo_url}}" />
@@ -48,11 +48,11 @@
 
   <footer>
     <div class="footer-link-list">
-      <a href="https://mixin.one/pages/terms">Terms of Use</a>
-      <a href="https://mixin.one/pages/privacy">Privacy Policy</a>
-      <a href="https://developers.mixin.one/">Developers</a>
-      <a href="https://mixin.one/assets/Mixin-Logo.zip">Press Kit</a>
+      <a href="https://mixin.one/pages/terms">{{ t 'home.footer.one' }}</a>
+      <a href="https://mixin.one/pages/privacy">{{ t 'home.footer.two' }}</a>
+      <a href="https://developers.mixin.one/">{{ t 'home.footer.three' }}</a>
+      <a href="https://mixin.one/assets/Mixin-Logo.zip">{{ t 'home.footer.four' }}</a>
     </div>
-    <div class="copyright">Copyright © 2019 mixin.one. All rights reserved.</div>
+    <div class="copyright">{{ t 'home.footer.right' }}</div>
   </footer>
 </div>
