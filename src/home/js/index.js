@@ -26,10 +26,5 @@ btn.addEventListener('click', event => {
 });
 function resizeTopContent() {
     var cliWidth = document.documentElement.clientWidth;
-    var cliHeight = document.documentElement.clientHeight;
-    $('.mixin-one-home-container header').css('width', (cliWidth) + 'px')
-    $('.mixin-one-home-container header').css('height', (cliHeight + 1) + 'px')
     $('.mixin-one-home-container .home-background').css('width', (cliWidth) + 'px')
-    $('.mixin-one-home-container .home-background').css('height', (cliHeight + 1) + 'px')
-
 }

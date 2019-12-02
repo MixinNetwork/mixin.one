@@ -35,4 +35,4 @@ function my_animation() {
         }
     }
 }
-document.documentElement.clientWidth < 720 && my_animation()
+my_animation()

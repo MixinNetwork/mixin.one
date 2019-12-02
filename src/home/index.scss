@@ -4,6 +4,8 @@
     font-family: "Maven Pro";
     min-width: 380px;
     overflow: hidden;
+    width: 100%;
+    height: 100%;
     * {
         cursor: default;
         box-sizing: border-box;
@@ -26,147 +28,143 @@
         font-family: "Maven Pro", sans-serif;
         font-weight: 300;
     }
+    & {
+        header {
+            background-size: cover;
+            font-size: initial;
+            position: relative;
+            overflow: hidden;
 
-    header {
-        background-size: cover;
-        font-size: initial;
-        position: relative;
-        overflow: hidden;
-
-        & > img {
-            position: absolute;
-            top: 0;
-            left: 0;
-            z-index: -1;
-            background-color: #366bd5;
-        }
-        & > div {
-            z-index: 1;
-            margin: 0 auto;
-            padding: 24px 40px 0px 40px;
-            color: #fff;
-            & > nav {
+            & > img {
+                position: absolute;
+                top: 0;
+                left: 0;
+                z-index: -1;
+                background-color: #366bd5;
+            }
+            & > div {
+                z-index: 1;
                 margin: 0 auto;
-                font-size: 14px;
-                img {
-                    transform: translate(0, -5px);
-                }
-                display: flex;
-                align-items: stretch;
-                justify-content: space-between;
-                .nav-list-menus {
-                    display: none;
-                }
-                .nav-list {
-                    .nav-list-menus-list {
-                        display: block;
+                padding: 24px 40px 0px 40px;
+                color: #fff;
+                & > nav {
+                    margin: 0 auto;
+                    font-size: 14px;
+                    img {
+                        transform: translate(0, -5px);
                     }
-                    a {
-                        color: #fff;
-                        font-size: 16px;
-                        display: inline-block;
-                        cursor: pointer;
-                        line-height: 20px;
-                        &:first-child {
-                            margin-left: 0;
+                    display: flex;
+                    align-items: stretch;
+                    justify-content: space-between;
+                    .nav-list-menus {
+                        display: none;
+                    }
+                    .nav-list {
+                        .nav-list-menus-list {
+                            display: block;
+                        }
+                        a {
+                            color: #fff;
+                            font-size: 16px;
+                            display: inline-block;
+                            cursor: pointer;
+                            line-height: 20px;
+                            &:first-child {
+                                margin-left: 0;
+                            }
+                        }
+                        a:hover {
+                            border-bottom: 2px solid #fff;
                         }
                     }
-                    a:hover {
-                        border-bottom: 2px solid #fff;
+                }
+
+                .nav-title {
+                    text-align: center;
+                    h1 {
+                        font-weight: 500;
+                    }
+                    p {
+                        font-weight: 400;
                     }
                 }
             }
+        }
 
-            .nav-title {
-                position: absolute;
-                top: 45%;
-                left: 50%;
-                transform: translate(-50%, -50%);
-                text-align: center;
-                h1 {
+        section {
+            height: 623px;
+            text-align: center;
+            .section-info {
+                .logo {
+                    width: 110px;
+                    height: 110px;
+                    margin-bottom: 24px;
+                }
+                .title {
+                    font-size: 50px;
+                    line-height: 38px;
                     font-weight: 500;
                 }
-                p {
+                .content {
+                    width: 317px;
+                    font-size: 28px;
                     font-weight: 400;
+                    margin: 15px auto 20px auto;
+                }
+                .more {
+                    cursor: pointer;
+                    margin: 0 auto;
+                    font-size: 26px;
+                    color: rgba(61, 117, 227, 1);
+                    line-height: 22px;
+                    display: inline-block;
                 }
             }
         }
-    }
 
-    section {
-        height: 623px;
-        text-align: center;
-        .section-info {
-            padding-top: 110px;
-            .logo {
-                width: 110px;
-                height: 110px;
-                margin-bottom: 24px;
-            }
-            .title {
-                font-size: 50px;
-                line-height: 38px;
-                font-weight: 500;
-            }
-            .content {
-                width: 317px;
-                font-size: 28px;
-                font-weight: 400;
-                margin: 15px auto 20px auto;
-            }
-            .more {
-                cursor: pointer;
-                margin: 0 auto;
-                font-size: 26px;
-                color: rgba(61, 117, 227, 1);
-                line-height: 22px;
-                display: inline-block;
-            }
+        .bg-gray {
+            background-color: #f5f7ff;
         }
-        img {
-            margin-top: 10px;
-            width: 362px;
-            height: 255px;
-        }
-    }
 
-    .bg-gray {
-        background-color: #f5f7ff;
-    }
-
-    footer {
-        background: rgba(247, 248, 249, 1);
-        text-align: center;
-        font-size: 14px;
-        .footer-link-list {
-            a {
-                cursor: pointer;
-                padding-left: 10px;
-                color: rgba(47, 48, 50, 1);
+        footer {
+            background: rgba(247, 248, 249, 1);
+            text-align: center;
+            font-size: 14px;
+            .footer-link-list {
+                a {
+                    cursor: pointer;
+                    padding-left: 10px;
+                    color: rgba(47, 48, 50, 1);
+                    line-height: 17px;
+                }
+                a::after {
+                    content: "|";
+                    padding-left: 10px;
+                    color: #c7c9d2;
+                }
+                a:last-child {
+                    &::after {
+                        content: "";
+                    }
+                }
+                a:hover {
+                    color: #aaa;
+                }
+            }
+            .copyright {
+                color: #c7c9d2;
                 line-height: 17px;
             }
-            a::after {
-                content: "|";
-                padding-left: 10px;
-                color: #c7c9d2;
-            }
-            a:last-child {
-                &::after {
-                    content: "";
-                }
-            }
-            a:hover {
-                color: #aaa;
-            }
-        }
-        .copyright {
-            color: #c7c9d2;
-            line-height: 17px;
         }
     }
 
     @media screen and (min-width: 1280px) {
         header {
+            height: 1080px;
+            width: 100%;
+            & > img {
+                height: 1080px;
+            }
             & > div {
                 .nav-list-menus-btn {
                     display: none;
@@ -189,6 +187,7 @@
                     }
                 }
                 .nav-title {
+                    margin-top: 330px;
                     h1 {
                         font-size: 60px;
                         line-height: 68px;
@@ -233,25 +232,24 @@
                 }
             }
             &.section-1 {
-                height: 600px;
-                margin-top: 80px;
+                height: 868px;
+
                 .section-info {
                     position: absolute;
-                    top: 0;
+                    top: 279px;
                     left: 0;
-                    padding-top: 100px;
                     text-align: left;
                 }
                 & > div > img {
                     position: absolute;
                     right: 0;
-                    top: 50px;
+                    top: 240px;
                     width: 610px;
                     height: 388px;
                 }
             }
             &.section-2 {
-                height: 650px;
+                height: 978px;
                 width: 100%;
                 & > div {
                     width: 1200px;
@@ -260,19 +258,18 @@
                     .section-info {
                         text-align: left;
                         position: absolute;
-                        top: 0;
+                        top: 240px;
                         right: 0;
                         .logo {
                             margin-left: -10px;
                         }
-                        padding-top: 94px;
                         .content {
                             width: 520px;
                         }
                     }
                     & > img {
                         position: absolute;
-                        top: 110px;
+                        top: 294px;
                         left: 0;
                         margin-top: 40px;
                         width: 481px;
@@ -316,6 +313,10 @@
 
     @media screen and (max-width: 1279px) and (min-width: 960px) {
         header {
+            height: 720px;
+            & > img {
+                height: 720px;
+            }
             & > div {
                 .nav-list-menus-btn {
                     display: none;
@@ -338,6 +339,7 @@
                     }
                 }
                 .nav-title {
+                    margin-top: 188px;
                     h1 {
                         font-size: 46px;
                         line-height: 50px;
@@ -359,7 +361,7 @@
                 .logo {
                     width: 162px;
                     height: 162px;
-                    margin-bottom: 24px;
+                    margin-bottom: 30px;
                 }
                 .title {
                     font-size: 50px;
@@ -385,9 +387,9 @@
                 margin-top: 20px;
             }
             &.section-1 {
-                height: 780px;
+                height: 862px;
                 .section-info {
-                    padding-top: 80px;
+                    padding-top: 120px;
                     .content {
                         width: 694px;
                         line-height: 38px;
@@ -399,12 +401,12 @@
                 }
             }
             &.section-2 {
-                height: 1050px;
+                height: 1066px;
                 .title {
                     font-family: "Maven Pro";
                 }
                 .section-info {
-                    padding-top: 50px;
+                    padding-top: 110px;
                     .content {
                         width: 540px;
                     }
@@ -444,6 +446,10 @@
 
     @media screen and (max-width: 959px) and(min-width: 720px) {
         header {
+            height: 512px;
+            & > img {
+                height: 512px;
+            }
             & > div {
                 .nav-list-menus-btn {
                     display: none;
@@ -469,6 +475,7 @@
                     }
                 }
                 .nav-title {
+                    margin-top: 134px;
                     h1 {
                         font-size: 32px;
                         line-height: 40px;
@@ -486,7 +493,6 @@
         }
 
         section {
-            height: 623px;
             text-align: center;
             .section-info {
                 .logo {
@@ -517,9 +523,9 @@
                 margin-top: 10px;
             }
             &.section-1 {
-                height: 520px;
+                height: 623px;
                 .section-info {
-                    padding-top: 60px;
+                    padding-top: 110px;
                     .content {
                         width: 400px;
                     }
@@ -531,9 +537,9 @@
                 }
             }
             &.section-2 {
-                height: 700px;
+                height: 765px;
                 .section-info {
-                    padding-top: 50px;
+                    padding-top: 90px;
                     .content {
                         width: 351px;
                     }
@@ -584,8 +590,10 @@
             overflow-y: auto;
         }
         header {
-            width: 100% !important;
-            height: 350px !important;
+            height: 274px;
+            & > img {
+                height: 274px;
+            }
             & > div {
                 margin: 0 atuo;
                 width: 375px;
@@ -647,7 +655,7 @@
                 .nav-title {
                     position: initial;
                     transform: initial;
-                    margin-top: 80px;
+                    margin-top: 44px;
                     h1 {
                         font-size: 22px;
                         line-height: 26px;
@@ -659,7 +667,7 @@
                         width: 300px;
                         font-size: 14px;
                         color: rgba(255, 255, 255, 1);
-                        line-height: 22px;
+                        line-height: 16px;
                     }
                     br {
                         display: block !important;
@@ -695,13 +703,13 @@
                     }
                 }
             }
-            img {
-                margin-top: 10px;
-            }
+            // img {
+            //     margin-top: 10px;
+            // }
             &.section-1 {
-                height: 400px;
+                height: 442px;
                 .section-info {
-                    padding-top: 36px;
+                    padding-top: 56px;
                     .content {
                         width: 270px;
                     }
@@ -712,9 +720,9 @@
                 }
             }
             &.section-2 {
-                height: 570px;
+                height: 577px;
                 .section-info {
-                    padding-top: 35px;
+                    padding-top: 60px;
                     .content {
                         width: 250px;
                     }
