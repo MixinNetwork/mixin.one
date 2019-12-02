@@ -67,8 +67,8 @@ Home.prototype = {
       $('.modal-dialog').hide();
       $('.video-container iframe').attr('src', src);
     });
-    require('./js/animate-up');
     require('./js/index');
+    require('./js/animate-up');
   },
 
   xin: function () {

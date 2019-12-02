@@ -47,6 +47,7 @@
                 margin: 0 auto;
                 padding: 24px 40px 0px 40px;
                 color: #fff;
+                height: 100%;
                 & > nav {
                     margin: 0 auto;
                     font-size: 14px;
@@ -80,6 +81,10 @@
                 }
 
                 .nav-title {
+                    position: absolute;
+                    top: 45%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
                     text-align: center;
                     h1 {
                         font-weight: 500;
@@ -92,7 +97,7 @@
         }
 
         section {
-            height: 623px;
+            height: 100%;
             text-align: center;
             .section-info {
                 .logo {
@@ -103,7 +108,7 @@
                 .title {
                     font-size: 50px;
                     line-height: 38px;
-                    font-weight: 500;
+                    font-weight: 700;
                 }
                 .content {
                     width: 317px;
@@ -127,7 +132,7 @@
         }
 
         footer {
-            background: rgba(247, 248, 249, 1);
+            background: #fff;
             text-align: center;
             font-size: 14px;
             .footer-link-list {
@@ -160,10 +165,9 @@
 
     @media screen and (min-width: 1280px) {
         header {
-            height: 1080px;
-            width: 100%;
+            max-height: 1080px;
             & > img {
-                height: 1080px;
+                max-height: 1080px;
             }
             & > div {
                 .nav-list-menus-btn {
@@ -187,7 +191,6 @@
                     }
                 }
                 .nav-title {
-                    margin-top: 330px;
                     h1 {
                         font-size: 60px;
                         line-height: 68px;
@@ -313,9 +316,9 @@
 
     @media screen and (max-width: 1279px) and (min-width: 960px) {
         header {
-            height: 720px;
+            max-height: 720px;
             & > img {
-                height: 720px;
+                max-height: 720px;
             }
             & > div {
                 .nav-list-menus-btn {
@@ -339,7 +342,6 @@
                     }
                 }
                 .nav-title {
-                    margin-top: 188px;
                     h1 {
                         font-size: 46px;
                         line-height: 50px;
@@ -446,9 +448,9 @@
 
     @media screen and (max-width: 959px) and(min-width: 720px) {
         header {
-            height: 512px;
+            max-height: 512px;
             & > img {
-                height: 512px;
+                max-height: 512px;
             }
             & > div {
                 .nav-list-menus-btn {
@@ -475,7 +477,6 @@
                     }
                 }
                 .nav-title {
-                    margin-top: 134px;
                     h1 {
                         font-size: 32px;
                         line-height: 40px;
@@ -590,9 +591,9 @@
             overflow-y: auto;
         }
         header {
-            height: 274px;
+            max-height: 274px;
             & > img {
-                height: 274px;
+                max-height: 274px;
             }
             & > div {
                 margin: 0 atuo;
@@ -655,7 +656,6 @@
                 .nav-title {
                     position: initial;
                     transform: initial;
-                    margin-top: 44px;
                     h1 {
                         font-size: 22px;
                         line-height: 26px;
