@@ -1,8 +1,9 @@
 @import "../constant.scss";
 
 .mixin-one-home-container {
+    font-family: "Maven Pro";
     min-width: 380px;
-    overflow-x: hidden;
+    overflow: hidden;
     * {
         cursor: default;
         box-sizing: border-box;
@@ -27,17 +28,25 @@
     }
 
     header {
-        background: url("./assets/BG.jpg") no-repeat;
-        background-color: #366bd5;
         background-size: cover;
-        font-family: "Helvetica";
         font-size: initial;
+        position: relative;
+        overflow: hidden;
 
+        & > img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1;
+            background-color: #366bd5;
+        }
         & > div {
+            z-index: 1;
             margin: 0 auto;
             padding: 24px 40px 0px 40px;
             color: #fff;
-            nav {
+            & > nav {
+                margin: 0 auto;
                 font-size: 14px;
                 img {
                     transform: translate(0, -5px);
@@ -49,13 +58,18 @@
                     display: none;
                 }
                 .nav-list {
+                    .nav-list-menus-list {
+                        display: block;
+                    }
                     a {
                         color: #fff;
                         font-size: 16px;
                         display: inline-block;
                         cursor: pointer;
                         line-height: 20px;
-                        margin-left: 72px;
+                        &:first-child {
+                            margin-left: 0;
+                        }
                     }
                     a:hover {
                         border-bottom: 2px solid #fff;
@@ -69,6 +83,12 @@
                 left: 50%;
                 transform: translate(-50%, -50%);
                 text-align: center;
+                h1 {
+                    font-weight: 500;
+                }
+                p {
+                    font-weight: 400;
+                }
             }
         }
     }
@@ -84,18 +104,20 @@
                 margin-bottom: 24px;
             }
             .title {
-                font-size: 32px;
+                font-size: 50px;
                 line-height: 38px;
-                font-weight: 700;
+                font-weight: 500;
             }
             .content {
                 width: 317px;
+                font-size: 28px;
+                font-weight: 400;
                 margin: 15px auto 20px auto;
             }
             .more {
                 cursor: pointer;
                 margin: 0 auto;
-                font-size: 18px;
+                font-size: 26px;
                 color: rgba(61, 117, 227, 1);
                 line-height: 22px;
                 display: inline-block;
@@ -120,7 +142,6 @@
             a {
                 cursor: pointer;
                 padding-left: 10px;
-                font-family: Helvetica;
                 color: rgba(47, 48, 50, 1);
                 line-height: 17px;
             }
@@ -139,8 +160,7 @@
             }
         }
         .copyright {
-            font-family: Helvetica;
-            color: rgba(199, 201, 210, 1);
+            color: #c7c9d2;
             line-height: 17px;
         }
     }
@@ -155,10 +175,17 @@
                     width: 34px;
                     height: 24px;
                 }
-                nav .nav-list {
-                    display: block;
-                    .nav-list-menus-list::after {
-                        display: none;
+                nav {
+                    width: 1200px;
+                    margin: 0 auto;
+                    .nav-list {
+                        display: block;
+                        .nav-list-menus-list::after {
+                            display: none;
+                        }
+                        a {
+                            margin-left: 90px;
+                        }
                     }
                 }
                 .nav-title {
@@ -172,7 +199,6 @@
                         margin: 50px auto 0 auto !important;
                         width: 1012px;
                         font-size: 32px;
-                        font-weight: 100;
                         line-height: 42px;
                     }
                 }
@@ -188,7 +214,7 @@
                     line-height: 72px;
                 }
                 .content {
-                    font-size: 24px;
+                    font-size: 28px;
                     line-height: 38px;
                     width: 500px;
                     margin: 20px auto 52px auto;
@@ -213,13 +239,13 @@
                     position: absolute;
                     top: 0;
                     left: 0;
-                    padding-top: 120px;
+                    padding-top: 100px;
                     text-align: left;
                 }
                 & > div > img {
                     position: absolute;
                     right: 0;
-                    top: 70px;
+                    top: 50px;
                     width: 610px;
                     height: 388px;
                 }
@@ -241,7 +267,7 @@
                         }
                         padding-top: 94px;
                         .content {
-                            width: 540px;
+                            width: 520px;
                         }
                     }
                     & > img {
@@ -288,7 +314,7 @@
         }
     }
 
-    @media screen and (max-width: 1280px) and (min-width: 960px) {
+    @media screen and (max-width: 1279px) and (min-width: 960px) {
         header {
             & > div {
                 .nav-list-menus-btn {
@@ -298,10 +324,17 @@
                     width: 34px;
                     height: 24px;
                 }
-                nav .nav-list {
-                    display: block;
-                    .nav-list-menus-list::after {
-                        display: none;
+                nav {
+                    width: 880px;
+                    margin: 0 auto;
+                    .nav-list {
+                        display: block;
+                        .nav-list-menus-list::after {
+                            display: none;
+                        }
+                        a {
+                            margin-left: 70px;
+                        }
                     }
                 }
                 .nav-title {
@@ -315,7 +348,6 @@
                         margin: 40px auto 0 auto;
                         width: 651px;
                         font-size: 24px;
-                        font-weight: 100;
                         line-height: 32px;
                     }
                 }
@@ -330,19 +362,19 @@
                     margin-bottom: 24px;
                 }
                 .title {
-                    font-size: 32px;
-                    line-height: 38px;
-                    font-weight: 700;
+                    font-size: 50px;
+                    line-height: 72px;
                 }
                 .content {
-                    font-size: 24px;
-                    margin: 20px auto 30px auto;
+                    font-size: 28px;
+                    margin: 20px auto 28px auto;
+                    line-height: 38px;
                 }
                 .more {
                     margin: 0 auto;
-                    font-size: 18px;
-                    color: rgba(61, 117, 227, 1);
-                    line-height: 22px;
+                    font-size: 26px;
+                    color: #3d75e3;
+                    line-height: 30px;
                     &::after {
                         content: ">";
                         padding-left: 18px;
@@ -353,11 +385,12 @@
                 margin-top: 20px;
             }
             &.section-1 {
-                height: 700px;
+                height: 780px;
                 .section-info {
                     padding-top: 80px;
                     .content {
-                        width: 653px;
+                        width: 694px;
+                        line-height: 38px;
                     }
                 }
                 & > div > img {
@@ -366,7 +399,10 @@
                 }
             }
             &.section-2 {
-                height: 950px;
+                height: 1050px;
+                .title {
+                    font-family: "Maven Pro";
+                }
                 .section-info {
                     padding-top: 50px;
                     .content {
@@ -406,7 +442,7 @@
         }
     }
 
-    @media screen and (max-width: 960px) and(min-width: 720px) {
+    @media screen and (max-width: 959px) and(min-width: 720px) {
         header {
             & > div {
                 .nav-list-menus-btn {
@@ -416,13 +452,20 @@
                     width: 34px;
                     height: 24px;
                 }
-                nav .nav-list {
-                    display: block;
-                    .nav-list-menus-list::after {
-                        display: none;
-                    }
-                    .nav-list-menus-list {
+                nav {
+                    width: 640px;
+                    margin: 0 auto;
+                    .nav-list {
                         display: block;
+                        a {
+                            margin-left: 56px;
+                        }
+                        .nav-list-menus-list::after {
+                            display: none;
+                        }
+                        .nav-list-menus-list {
+                            display: block;
+                        }
                     }
                 }
                 .nav-title {
@@ -436,7 +479,6 @@
                         margin: 20px auto 0 auto !important;
                         width: 417px;
                         font-size: 18px;
-                        font-weight: 100;
                         line-height: 26px;
                     }
                 }
@@ -455,11 +497,10 @@
                 .title {
                     font-size: 32px;
                     line-height: 38px;
-                    font-weight: 700;
                 }
                 .content {
                     font-size: 18px;
-                    margin: 15px auto 20px auto;
+                    margin: 12px auto 20px auto;
                 }
                 .more {
                     margin: 0 auto;
@@ -520,10 +561,10 @@
         }
 
         footer {
+            font-size: 14px;
             height: 116px;
             .footer-link-list {
                 padding-top: 37px;
-                font-size: initial;
             }
 
             .copyright {
@@ -532,7 +573,7 @@
         }
     }
 
-    @media screen and (max-width: 720px) {
+    @media screen and (max-width: 719px) {
         .hello {
             position: absolute;
             top: 0;
@@ -582,6 +623,7 @@
                                 font-size: 14px;
                                 line-height: 46px;
                                 color: #333333;
+                                border-radius: 6px 6px 4px 4px;
                                 border-bottom: 1px solid rgba(236, 236, 236, 0.5);
                             }
                             a {
@@ -616,10 +658,8 @@
                         margin: 10px auto 0 auto !important;
                         width: 300px;
                         font-size: 14px;
-                        font-family: Helvetica;
                         color: rgba(255, 255, 255, 1);
                         line-height: 22px;
-                        font-weight: 100;
                     }
                     br {
                         display: block !important;
@@ -638,16 +678,16 @@
                 .title {
                     font-size: 24px;
                     line-height: 29px;
-                    font-weight: 700;
                 }
                 .content {
                     font-size: 14px;
+                    line-height: 20px;
                     margin: 12px auto 15px auto;
                 }
                 .more {
                     margin: 0 auto;
                     font-size: 14px;
-                    color: rgba(61, 117, 227, 1);
+                    color: #3d75e3;
                     line-height: 17px;
                     &::after {
                         content: ">";
@@ -714,7 +754,6 @@
 }
 
 .home-xin {
-    // page xin begin
     &.content {
         width: 100%;
         max-width: 960px;
@@ -743,7 +782,6 @@
                 h3 {
                     font-family: $font-main-title;
                     font-size: 24px;
-                    font-weight: 400;
                 }
 
                 p {
@@ -807,5 +845,4 @@
             color: $color-main-foreground-light;
         }
     }
-    // page xin end
 }
