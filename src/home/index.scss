@@ -28,6 +28,7 @@
 
     header {
         background: url("./assets/BG.jpg") no-repeat;
+        background-color: #366bd5;
         background-size: cover;
         font-family: "Helvetica";
         font-size: initial;
@@ -621,7 +622,7 @@
                         font-weight: 100;
                     }
                     br {
-                        display: block!important;
+                        display: block !important;
                     }
                 }
             }
