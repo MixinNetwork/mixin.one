@@ -20,7 +20,7 @@ const api = new API(router, API_ROOT, BLAZE_ROOT);
 
 window.i18n = new Locale(navigator.language);
 
-router.replace = function(url) {
+router.replace = function (url) {
   this.resolve(url);
   this.pause(true);
   this.navigate(url);
@@ -28,15 +28,15 @@ router.replace = function(url) {
 };
 
 router.hooks({
-  before: function(done, params) {
+  before: function (done, params) {
     $('body').attr('class', 'loading layout');
     $('#layout-container').html(PartialLoading());
-    setTimeout(function() {
+    setTimeout(function () {
       $('title').html(APP_NAME);
       done(true);
     }, 100);
   },
-  after: function(params) {
+  after: function (params) {
     router.updatePageLinks();
   }
 });

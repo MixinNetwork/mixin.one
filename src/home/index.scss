@@ -79,7 +79,7 @@
 
                 .nav-title {
                     position: absolute;
-                    top: 45%;
+                    top: 50%;
                     left: 50%;
                     transform: translate(-50%, -50%);
                     text-align: center;
@@ -211,6 +211,9 @@
             margin: 0 auto;
             position: relative;
             .section-info {
+                .logo {
+                    margin-bottom: 14px;
+                }
                 .title {
                     font-size: 60px;
                     line-height: 72px;
@@ -232,6 +235,9 @@
                     line-height: 60px;
                     font-size: 26px;
                     border-radius: 6px;
+                    img {
+                        display: none;
+                    }
                 }
             }
             &.section-1 {
@@ -261,10 +267,11 @@
                     .section-info {
                         text-align: left;
                         position: absolute;
-                        top: 240px;
+                        top: 234px;
                         right: 0;
                         .logo {
-                            margin-left: -10px;
+                            width: 142px;
+                            height: 142px;
                         }
                         .content {
                             width: 520px;
@@ -272,7 +279,7 @@
                     }
                     & > img {
                         position: absolute;
-                        top: 294px;
+                        top: 254px;
                         left: 0;
                         margin-top: 40px;
                         width: 481px;
@@ -316,8 +323,10 @@
 
     @media screen and (max-width: 1279px) and (min-width: 960px) {
         header {
+            min-height: 500px;
             max-height: 720px;
             & > img {
+                min-height: 500px;
                 max-height: 720px;
             }
             & > div {
@@ -361,13 +370,13 @@
             text-align: center;
             .section-info {
                 .logo {
-                    width: 162px;
-                    height: 162px;
-                    margin-bottom: 40px;
+                    width: 142px;
+                    height: 142px;
+                    margin-bottom: 20px;
                 }
                 .title {
                     font-size: 50px;
-                    line-height: 1;
+                    line-height: 72px;
                 }
                 .content {
                     font-size: 28px;
@@ -379,23 +388,26 @@
                     font-size: 26px;
                     color: #3d75e3;
                     line-height: 30px;
-                    &::after {
-                        content: ">";
-                        padding-left: 18px;
+                    img {
+                        display: inline-block;
+                        margin-left: 22px;
+                        color: #3d75e3;
+                        height: 16px;
+                        cursor: pointer;
                     }
                 }
             }
             &.section-1 {
-                height: 862px;
+                height: 945px;
                 .section-info {
-                    padding-top: 110px;
+                    padding-top: 120px;
                     .content {
                         width: 694px;
                         line-height: 38px;
                     }
                 }
                 & > div > img {
-                    width: 670px;
+                    margin-top: 16px;
                     height: 388px;
                 }
             }
@@ -409,7 +421,6 @@
                 }
                 & > div > img {
                     margin-top: 40px;
-                    width: 481px;
                     height: 444px;
                 }
             }
@@ -423,7 +434,6 @@
                 }
                 & > div > img {
                     margin-top: 60px;
-                    width: 646px;
                     height: 400px;
                 }
             }
@@ -442,9 +452,11 @@
 
     @media screen and (max-width: 959px) and(min-width: 720px) {
         header {
-            max-height: 512px;
+            max-height: 400px;
+            min-height: 500px;
             & > img {
-                max-height: 512px;
+                max-height: 400px;
+                min-height: 500px;
             }
             & > div {
                 .nav-list-menus-btn {
@@ -491,39 +503,43 @@
             text-align: center;
             .section-info {
                 .logo {
-                    width: 110px;
-                    height: 110px;
+                    width: 100px;
+                    height: 100px;
                     margin-bottom: 24px;
                 }
                 .title {
                     font-size: 32px;
-                    line-height: 1;
+                    line-height: 38px;
                 }
                 .content {
                     font-size: 18px;
                     margin: 12px auto 20px auto;
+                    line-height: 26px;
                 }
                 .more {
                     margin: 0 auto;
                     font-size: 18px;
                     color: rgba(61, 117, 227, 1);
                     line-height: 22px;
-                    &::after {
-                        content: ">";
-                        padding-left: 10px;
+                    img {
+                        display: inline-block;
+                        margin-left: 14px;
+                        color: #3d75e3;
+                        height: 10px;
+                        cursor: pointer;
                     }
                 }
             }
             &.section-1 {
                 height: 623px;
                 .section-info {
-                    padding-top: 90px;
+                    padding-top: 100px;
                     .content {
                         width: 400px;
                     }
                 }
                 & > div > img {
-                    margin-top: 40px;
+                    // margin-top: 15px;
                     width: 362px;
                     height: 255px;
                 }
@@ -531,7 +547,7 @@
             &.section-2 {
                 height: 765px;
                 .section-info {
-                    padding-top: 90px;
+                    padding-top: 85px;
                     .content {
                         width: 351px;
                     }
@@ -584,10 +600,12 @@
         header {
             width: 100%;
             max-height: 274px;
+            min-height: 260px;
             overflow: hidden;
             & > img {
                 width: 100%;
                 max-height: 274px;
+                min-height: 260px;
             }
             & > div {
                 margin: 0 auto;
@@ -673,9 +691,9 @@
             text-align: center;
             .section-info {
                 .logo {
-                    width: 89px;
-                    height: 89px;
-                    margin-bottom: 24px;
+                    width: 80px;
+                    height: 80px;
+                    margin-bottom: 16px;
                 }
                 .title {
                     font-size: 24px;
@@ -691,9 +709,12 @@
                     font-size: 14px;
                     color: #3d75e3;
                     line-height: 17px;
-                    &::after {
-                        content: ">";
-                        padding-left: 5px;
+                    img {
+                        display: inline-block;
+                        margin-left: 11px;
+                        color: #3d75e3;
+                        height: 8px;
+                        cursor: pointer;
                     }
                 }
             }
@@ -716,7 +737,7 @@
             &.section-2 {
                 height: 577px;
                 .section-info {
-                    padding-top: 60px;
+                    padding-top: 58px;
                     .content {
                         width: 250px;
                     }
