@@ -51,9 +51,6 @@
                 & > nav {
                     margin: 0 auto;
                     font-size: 14px;
-                    img {
-                        transform: translate(0, -5px);
-                    }
                     display: flex;
                     align-items: stretch;
                     justify-content: space-between;
@@ -91,6 +88,7 @@
                     }
                     p {
                         font-weight: 400;
+                        opacity: 0.8;
                     }
                 }
             }
@@ -165,8 +163,10 @@
 
     @media screen and (min-width: 1280px) {
         header {
+            min-height: 780px;
             max-height: 1080px;
             & > img {
+                min-height: 780px;
                 max-height: 1080px;
             }
             & > div {
@@ -229,8 +229,8 @@
                     color: #fff;
                     background: #3d75e3;
                     text-align: center;
-                    line-height: 62px;
-                    font-size: 22px;
+                    line-height: 60px;
+                    font-size: 26px;
                     border-radius: 6px;
                 }
             }
@@ -363,11 +363,11 @@
                 .logo {
                     width: 162px;
                     height: 162px;
-                    margin-bottom: 30px;
+                    margin-bottom: 40px;
                 }
                 .title {
                     font-size: 50px;
-                    line-height: 72px;
+                    line-height: 1;
                 }
                 .content {
                     font-size: 28px;
@@ -385,13 +385,10 @@
                     }
                 }
             }
-            img {
-                margin-top: 20px;
-            }
             &.section-1 {
                 height: 862px;
                 .section-info {
-                    padding-top: 120px;
+                    padding-top: 110px;
                     .content {
                         width: 694px;
                         line-height: 38px;
@@ -404,9 +401,6 @@
             }
             &.section-2 {
                 height: 1066px;
-                .title {
-                    font-family: "Maven Pro";
-                }
                 .section-info {
                     padding-top: 110px;
                     .content {
@@ -503,7 +497,7 @@
                 }
                 .title {
                     font-size: 32px;
-                    line-height: 38px;
+                    line-height: 1;
                 }
                 .content {
                     font-size: 18px;
@@ -520,19 +514,16 @@
                     }
                 }
             }
-            img {
-                margin-top: 10px;
-            }
             &.section-1 {
                 height: 623px;
                 .section-info {
-                    padding-top: 110px;
+                    padding-top: 90px;
                     .content {
                         width: 400px;
                     }
                 }
                 & > div > img {
-                    margin-top: 20px;
+                    margin-top: 40px;
                     width: 362px;
                     height: 255px;
                 }
@@ -546,7 +537,7 @@
                     }
                 }
                 & > div > img {
-                    margin-top: 30px;
+                    margin-top: 40px;
                     width: 314px;
                     height: 288px;
                 }
@@ -560,7 +551,7 @@
                     }
                 }
                 & > div > img {
-                    margin-top: 50px;
+                    margin-top: 40px;
                     width: 390px;
                     height: 241px;
                 }
@@ -591,12 +582,15 @@
             overflow-y: auto;
         }
         header {
+            width: 100%;
             max-height: 274px;
+            overflow: hidden;
             & > img {
+                width: 100%;
                 max-height: 274px;
             }
             & > div {
-                margin: 0 atuo;
+                margin: 0 auto;
                 width: 375px;
                 padding: 0;
                 font-size: initial;
@@ -626,6 +620,7 @@
                             background: #fff;
                             box-shadow: 0px 2px 12px 0px rgba(47, 48, 50, 0.3);
                             border-radius: 6px 6px 4px 4px;
+                            z-index: 10;
                             .nav-list-menus-item {
                                 width: 100%;
                                 height: 50px;
@@ -654,8 +649,7 @@
                     }
                 }
                 .nav-title {
-                    position: initial;
-                    transform: initial;
+                    top: 50%;
                     h1 {
                         font-size: 22px;
                         line-height: 26px;
