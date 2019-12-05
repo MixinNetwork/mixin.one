@@ -164,6 +164,11 @@
 
     @media screen and (min-width: 1280px) {
         header {
+            &.home-language-ch {
+                .nav-title h1 {
+                    width: 600px;
+                }
+            }
             min-height: 780px;
             max-height: 1080px;
             & > img {
@@ -326,6 +331,14 @@
         header {
             min-height: 500px;
             max-height: 720px;
+            &.home-language-ch {
+                .nav-title h1 {
+                    width: 450px;
+                }
+                br {
+                    display: block !important;
+                }
+            }
             & > img {
                 min-height: 500px;
                 max-height: 720px;
@@ -453,6 +466,14 @@
 
     @media screen and (max-width: 959px) and(min-width: 720px) {
         header {
+            &.home-language-ch {
+                .nav-title h1 {
+                    width: 310px;
+                }
+                br {
+                    display: block !important;
+                }
+            }
             max-height: 400px;
             min-height: 500px;
             & > img {
@@ -599,6 +620,9 @@
             overflow-y: auto;
         }
         header {
+            &.home-language-ch .nav-title h1 {
+                width: 210px;
+            }
             width: 100%;
             max-height: 274px;
             min-height: 260px;
@@ -641,6 +665,8 @@
                             border-radius: 6px 6px 4px 4px;
                             z-index: 10;
                             .nav-list-menus-item {
+                                text-align: left;
+                                padding-left: 24px;
                                 width: 100%;
                                 height: 50px;
                                 font-size: 14px;
