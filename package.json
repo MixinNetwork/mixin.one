@@ -33,7 +33,7 @@
     "style-loader": "^1.0.1",
     "webapp-webpack-plugin": "^2.7.1",
     "webpack": "^4.41.2",
-    "webpack-cli": "^3.3.9"
+    "webpack-cli": "^3.3.10"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
