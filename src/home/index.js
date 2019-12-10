@@ -112,23 +112,6 @@ Home.prototype = {
       localStorage.setItem('hide_top_bar', true);
       $('.special.version').hide();
     });
-    self.api.externalRequest('GET', "https://api.github.com/repos/MixinNetwork/desktop-app/releases/latest", (resp) => {
-      resp.assets.map(asset => {
-        if (asset.browser_download_url.endsWith('dmg')) {
-          $('a', '.mac.app').attr('href', asset.browser_download_url);
-        };
-        if (asset.browser_download_url.endsWith('exe')) {
-          $('a', '.windows.app').attr('href', asset.browser_download_url);
-        };
-      });
-    });
-    self.api.externalRequest('GET', "https://api.github.com/repos/MixinNetwork/android-app/releases/latest", (resp) => {
-      resp.assets.map(asset => {
-        if (asset.browser_download_url.endsWith('apk')) {
-          $('a.apk', '.android.bar').attr('href', asset.browser_download_url);
-        };
-      });
-    });
     self.animator.init($('.particles.container')[0]);
     self.animator.animate();
     self.router.updatePageLinks();
