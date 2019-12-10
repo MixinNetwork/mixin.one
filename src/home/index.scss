@@ -653,6 +653,10 @@
                             cursor: pointer;
                             width: 18px;
                             height: 11px;
+                            box-sizing: initial;
+                            padding: 5px;
+                            margin-top: -5px;
+                            margin-right: -5px;
                         }
                         .nav-list-menus-list {
                             display: none;
