@@ -14,33 +14,33 @@
     }
   },
   "oauth": {
-    "instruction.title": "在手機上使用 Mixin 來掃描代碼",
+    "instruction.title": "在手机上使用 Mixin 來扫描二维码",
     "instruction.install": "在 Google Play 或 App Store 中搜索 Mixin"
   },
   "pay": {
-    "recipient.title": "轉賬給 %{name}"
+    "recipient.title": "转账給 %{name}"
   },
   "code": {
-    "open.action": "在 Mixin 中打開",
-    "install.action": "獲取 Mixin 應用",
-    "group.participants": "%{count} 成員"
+    "open.action": "在 Mixin 中打开",
+    "install.action": "获取 Mixin App",
+    "group.participants": "%{count} 成员"
   },
   "snapshots": {
-    "search.placeholder": "Search transactions",
+    "search.placeholder": "搜索交易",
     "transaction": {
-      "id": "Transaction ID",
-      "time": "Timestamp",
-      "source": "Type",
-      "amount": "Amount",
-      "asset": "Asset"
+      "id": "交易 ID",
+      "time": "时间戳",
+      "source": "类型",
+      "amount": "数量",
+      "asset": "资产"
     }
   },
   "receipt": {
     "title": "Mixin 收款",
     "recipient": "收款人",
-    "amount": "金額",
-    "memo": "備註",
-    "submit": "創建收據"
+    "amount": "金额",
+    "memo": "备注",
+    "submit": "创建收据"
   },
   "network": {
     "stats": {
@@ -74,21 +74,21 @@
   },
   "messenger": {
     "features.description": "最牛逼的去中心化钱包",
-    "features": "特性",
-    "features.1": "使用手機號碼登錄，永遠不會丟失您的帳戶",
-    "features.2": "通過六位數 D3M-PIN 進行保護",
-    "features.3": "數字資產存儲在 PoS-BFT-DAG 分布式網絡中",
-    "features.4": "僅通過電話號碼和 PIN 碼恢復錢包",
-    "features.5": "直接將加密貨幣發送到電話聯系人",
-    "features.6": "使用信號協議發送加密的消息",
+    "features": "优秀的特点",
+    "features.1": "使用手机号码登录，永远不会丢失您的账户",
+    "features.2": "通過六位数字 D3M-PIN 保护您的账户安全",
+    "features.3": "数字资产存储在 PoS-BFT-DAT 分布式网络中",
+    "features.4": "通过电话号码和 D3M-PIN 就能恢复钱包",
+    "features.5": "直接将数字货币发送给电话联系人",
+    "features.6": "使用 Signal 协议加密发送的消息",
     "desktop.title": "Mixin Messenger 桌面端",
-    "desktop.description1": "Mac OS X 10.9 及更高版本或 Windows 64 位，Linux  ",
+    "desktop.description1": "macOS 10.9 及更高版本或 Windows 64 位，Linux  ",
     "desktop.description2": " 從此處下載 ",
     "desktop.description3": "必須在手機上安裝 Mixin Messenger 。",
-    "footer.1": "勘探者",
-    "footer.2": "日誌",
-    "footer.3": "白皮書",
-    "footer.4": "新聞資料袋",
+    "footer.1": "浏览器",
+    "footer.2": "日志",
+    "footer.3": "白皮书",
+    "footer.4": "媒体素材",
     "footer.5": "XIN"
   }
 }
