@@ -20,7 +20,7 @@ Pay.prototype = {
     const self = this;
     const defaultIcon = "https://images.mixin.one/yH_I5b0GiV2zDmvrXRyr3bK5xusjfy5q7FX3lw3mM2Ryx4Dfuj6Xcw8SHNRnDKm7ZVE3_LvpKlLdcLrlFQUBhds=s128";
     let data = {
-      arrowURL: require('./arrow.svg')
+      arrowURL: require('./arrow.svg').default
     };
     self.api.account.check(function (user) {
       if (!user.data) {

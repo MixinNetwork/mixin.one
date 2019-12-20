@@ -66,7 +66,7 @@ OAuth.prototype = {
         element: document.getElementById('mixin-code'),
         backgroundAlpha: 0,
         foreground: '#00B0E9',
-        value: WEB_ROOT + '/codes/' + auth.code_id,
+        value: 'https://mixin.one/codes/' + auth.code_id,
         level: 'H',
         size: 500
       });

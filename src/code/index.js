@@ -42,7 +42,7 @@ Code.prototype = {
       element: document.getElementById('mixin-code'),
       backgroundAlpha: 0,
       foreground: '#00B0E9',
-      value: WEB_ROOT + '/codes/' + user.code_id,
+      value: 'https://mixin.one/codes/' + user.code_id,
       level: 'H',
       size: 500
     });
@@ -60,7 +60,7 @@ Code.prototype = {
       element: document.getElementById('mixin-code'),
       backgroundAlpha: 0,
       foreground: '#00B0E9',
-      value: WEB_ROOT + '/codes/' + group.code_id,
+      value: 'https://mixin.one/codes/' + group.code_id,
       level: 'H',
       size: 500
     });
