@@ -10,14 +10,6 @@ const extractSass = new ExtractTextPlugin({
     filename: "[name]-[hash].css"
 });
 
-const webRoot = function (env) {
-  if (env === 'production') {
-    return 'https://mixin.one';
-  } else {
-    return 'http://mixin.local';
-  }
-};
-
 const apiRoot = function (env) {
   if (env === 'production') {
     return 'https://mixin-api.zeromesh.net';
@@ -76,7 +68,6 @@ module.exports = {
   plugins: [
     new webpack.DefinePlugin({
       PRODUCTION: (process.env.NODE_ENV === 'production'),
-      WEB_ROOT: JSON.stringify(webRoot(process.env.NODE_ENV)),
       API_ROOT: JSON.stringify(apiRoot(process.env.NODE_ENV)),
       BLAZE_ROOT: JSON.stringify(blazeRoot(process.env.NODE_ENV)),
       APP_NAME: JSON.stringify('Mixin')
