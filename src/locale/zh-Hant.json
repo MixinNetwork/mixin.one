@@ -18,7 +18,7 @@
     "instruction.install": "在 Google Play 或 App Store 中搜索 Mixin"
   },
   "pay": {
-    "recipient.title": "转账給 %{name}"
+    "recipient.title": "转账给 %{name}"
   },
   "code": {
     "open.action": "在 Mixin 中打开",
@@ -59,18 +59,18 @@
     "classname": "home-language-ch",
     "nav.network": "Mixin Network",
     "nav.messenger": "Mixin Messenger",
-    "nav.title": "基于 Mixin 从容构建去中心化软件",
-    "nav.description1": " Mixin.one 发布了免费、",
-    "nav.description2": "开源的高性能区块链软件 Mixin Network",
+    "nav.title": "在 Mixin 上保护数字资产和消息",
+    "nav.description1": "我们构建的开源软件始终",
+    "nav.description2": "将安全性、隐私性和分散性放在首位。",
     "nav.description3": "",
     "section.network": "一个免费、快速的点对点数字资产交易网络",
     "section.messenger": "开源的端对端加密聊天软件，并且集成了基于 Mixin Network 的多链钱包",
     "section.more": "了解更多",
     "footer.one": "使用条款",
     "footer.two": "隐私政策",
-    "footer.three": "开发者",
+    "footer.three": "开源代码",
     "footer.four": "媒体素材",
-    "footer.right": "Copyright ©2019 Mixin.one 版权所有"
+    "footer.right": "Copyright ©2019 mixin.one 版权所有"
   },
   "messenger": {
     "features.description": "最牛逼的去中心化钱包",
