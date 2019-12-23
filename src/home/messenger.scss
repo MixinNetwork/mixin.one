@@ -166,10 +166,11 @@
         width: 100%;
       }
       .title {
-        margin-bottom: 36px;
+        margin: 8px 0 24px;
+        font-size: 24px;
       }
       .description {
-        margin-bottom: 64px;
+        margin-bottom: 32px;
         line-height: 1.4em;
       }
       .download {
@@ -239,14 +240,9 @@
           .intro {
             text-align: center;
           }
-          h1.slogan {
-            margin: 0 0 20px;
-            font-size: 16px;
-            line-height: 20px;
-          }
           .mobile.title {
             display: block;
-            font-size: 22px;
+            font-size: 32px;
             margin: 0 0 24px;
           }
           .blockchains.container {
