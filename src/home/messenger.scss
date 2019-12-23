@@ -130,10 +130,9 @@
           font-weight: normal;
         }
         .list {
-          font-size: 14px;
+          font-size: 16px;
         }
         ul {
-          color: #797278;
           list-style-type: disc;
           padding-left: 16px;
           box-sizing: border-box;
@@ -170,8 +169,8 @@
         margin-bottom: 36px;
       }
       .description {
-        color: #797278;
-        margin-bottom: 72px;
+        margin-bottom: 64px;
+        line-height: 1.4em;
       }
       .download {
         display: flex;
