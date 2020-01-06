@@ -135,7 +135,9 @@ Pay.prototype = {
       if (payment.isPaid) {
         const returnTo = URLUtils.getUrlParameter("return_to");
         if (returnTo && returnTo.indexOf('http') === 0) {
-          window.location.replace(returnTo);
+          setTimeout(function() {
+            window.location.replace(returnTo);
+          }, 2000)
         }
         return true;
       }
