@@ -133,6 +133,10 @@ Pay.prototype = {
       });
       self.router.updatePageLinks();
       if (payment.isPaid) {
+        const returnTo = URLUtils.getUrlParameter("return_to");
+        if (returnTo && returnTo.indexOf('http') === 0) {
+          window.location.replace(returnTo);
+        }
         return true;
       }
       setTimeout(function() {
