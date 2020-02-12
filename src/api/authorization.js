@@ -16,7 +16,7 @@ Authorization.prototype = {
       maxReconnectionDelay: 5000,
       minReconnectionDelay: 1000,
       reconnectionDelayGrowFactor: 1.2,
-      connectionTimeout: 4000,
+      connectionTimeout: 8000,
       maxRetries: Infinity,
       debug: false
     });
