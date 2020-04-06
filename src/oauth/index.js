@@ -56,8 +56,13 @@ OAuth.prototype = {
       }
       $('body').attr('class', 'oauth code layout');
       $('body').attr('data-code-id', auth.code_id);
-      if (MixinUtils.environment()) {
+      let platform = MixinUtils.environment();
+      if (platform == 'Android' || platform == 'iOS') {
         window.location.replace('mixin://codes/' + auth.code_id);
+        return false;
+      }
+      if (platform == 'Desktop') {
+        window.location.replace('https://mixin.one/codes/' + auth.code_id);
         return false;
       }
       auth['logoURL'] = require('../home/logo.png').default;

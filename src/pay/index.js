@@ -78,7 +78,8 @@ Pay.prototype = {
           let amount = $('.amount').val();
           let memo = $('.memo').val().trim();
           let path = `/pay?recipient=${data.user.user_id}&asset=${data.asset.asset_id}&amount=${amount}&memo=${encodeURI(memo)}&trace=${uuidv4()}`;
-          if (MixinUtils.environment()) {
+          let platform = MixinUtils.environment();
+          if (platform == 'Android' || platform == 'iOS') {
             let route = `https://${window.location.host}${path}`;
             window.location = `mixin://send?text=${encodeURIComponent(route)}`;
           } else {
