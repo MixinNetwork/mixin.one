@@ -6,8 +6,9 @@ MixinUtils.prototype = {
     if (window.webkit && window.webkit.messageHandlers && window.webkit.messageHandlers.MixinContext) {
       return 'iOS';
     }
-    if (window.MixinContext && window.MixinContext.getContext) {
-      return 'Android';
+    if (window.MixinContext && (typeof window.MixinContext.getContext === 'function')) {
+      let ctx = JSON.parse(window.MixinContext.getContext());
+      return ctx.platform || 'Android';
     }
     return undefined;
   },
@@ -15,10 +16,13 @@ MixinUtils.prototype = {
   conversationId: function () {
     switch (this.environment()) {
       case 'iOS':
-        var ctx = prompt('MixinContext.getContext()');
+        let ctx = prompt('MixinContext.getContext()');
         return JSON.parse(ctx).conversation_id;
       case 'Android':
-        var ctx = window.MixinContext.getContext();
+        let ctx = window.MixinContext.getContext();
+        return JSON.parse(ctx).conversation_id;
+      case 'Desktop':
+        let ctx = window.MixinContext.getContext();
         return JSON.parse(ctx).conversation_id;
       default:
         return undefined;
