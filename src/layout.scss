@@ -83,7 +83,7 @@ input::-webkit-inner-spin-button {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    font-size: 10px;
+    font-size: 0px;
     white-space: nowrap;
   }
 
@@ -92,6 +92,7 @@ input::-webkit-inner-spin-button {
     height: 100%;
     width: 6px;
     display: inline-block;
+    margin: 0 2px;
 
     -webkit-animation: sk-stretchdelay 1.2s infinite ease-in-out;
     animation: sk-stretchdelay 1.2s infinite ease-in-out;
