@@ -25,7 +25,7 @@
     "extract-text-webpack-plugin": "^4.0.0-beta.0",
     "file-loader": "^6.0.0",
     "handlebars-loader": "^1.7.1",
-    "html-webpack-plugin": "^4.0.4",
+    "html-webpack-plugin": "^4.3.0",
     "node-sass": "^4.14.1",
     "npm-check-updates": "^3.2.2",
     "sass-loader": "^8.0.2",
