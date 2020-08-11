@@ -12,7 +12,11 @@ Authorization.prototype = {
     const self = this;
     self.handled = false;
     self.callback = callback;
-    self.ws = new ReconnectingWebSocket(self.endpoint, "Mixin-OAuth-1", {
+
+    const urls = [self.endpoint, 'wss://blaze.mixin.one'];
+    let urlIndex = 0;
+    const urlProvider = () => urls[urlIndex++ % urls.length];
+    self.ws = new ReconnectingWebSocket(urlProvider, "Mixin-OAuth-1", {
       maxReconnectionDelay: 5000,
       minReconnectionDelay: 1000,
       reconnectionDelayGrowFactor: 1.2,
