@@ -97,9 +97,6 @@ Home.prototype = {
     if (navigator.language && navigator.language.includes('zh-CN')) {
       $('.special.version').removeClass('hidden');
     }
-    if (!!localStorage.getItem('hide_top_bar')) {
-      $('.special.version').hide();
-    }
     var os = self.getMobileOperatingSystem();
     if (os === 'iOS') {
       $('.android.button').hide();
@@ -109,7 +106,6 @@ Home.prototype = {
       $('.ios.bar').hide();
     }
     $('.close', '.special.version').on('click', () => {
-      localStorage.setItem('hide_top_bar', true);
       $('.special.version').hide();
     });
     self.animator.init($('.particles.container')[0]);
