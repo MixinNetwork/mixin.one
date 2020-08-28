@@ -1,14 +1,12 @@
 const path = require('path');
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const ExtractTextPlugin = require("extract-text-webpack-plugin");
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CompressionPlugin = require("compression-webpack-plugin");
 const ScriptExtHtmlWebpackPlugin = require("script-ext-html-webpack-plugin");
 const WebappWebpackPlugin = require('favicons-webpack-plugin');
 
-const extractSass = new ExtractTextPlugin({
-    filename: "[name]-[hash].css"
-});
+const devMode = process.env.NODE_ENV !== 'production';
 
 const apiRoot = function (env) {
   if (env === 'production') {
@@ -49,14 +47,17 @@ module.exports = {
       test: /\.html$/, loader: "handlebars-loader?helperDirs[]=" + __dirname + "/src/helpers"
     }, {
       test: /\.(scss|css)$/,
-      use: extractSass.extract({
-        use: [{
-          loader: "css-loader"
-        }, {
-          loader: "sass-loader"
-        }],
-        fallback: "style-loader"
-      })
+      use: [
+        {
+          loader: MiniCssExtractPlugin.loader,
+          options: {
+            esModule: true,
+            hmr: process.env.NODE_ENV === 'development'
+          },
+        },
+        'css-loader',
+        'sass-loader',
+      ]
     }, {
       test: /\.(woff|woff2|eot|ttf|otf|svg|png|jpg|gif)$/,
       use: [
@@ -90,6 +91,9 @@ module.exports = {
     new ScriptExtHtmlWebpackPlugin({
       defaultAttribute: 'async'
     }),
-    extractSass
+    new MiniCssExtractPlugin({
+      filename: devMode ? '[name].css' : '[name]-[hash].css',
+      chunkFilename: devMode ? '[id].css' : '[id]-[hash].css',
+    })
   ]
 };
