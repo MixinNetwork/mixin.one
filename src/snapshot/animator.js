@@ -2,7 +2,7 @@
 var THREE = require('three');
 import CanvasRenderer from './CanvasRenderer.js';
 import $ from 'jquery';
-import uuidv4 from 'uuid/v4';
+import { v4 as uuidv4 } from 'uuid';
 
 function Animator() {
   this.angle = 0;

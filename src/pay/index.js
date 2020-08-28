@@ -2,7 +2,7 @@ import './index.scss';
 import $ from 'jquery';
 import QRious from 'qrious';
 import { Decimal } from 'decimal.js';
-import uuidv4 from 'uuid/v4';
+import { v4 as uuidv4 } from 'uuid';
 import MixinUtils from '../utils/mixin.js';
 import URLUtils from '../utils/url.js';
 var validate = require('uuid-validate');
