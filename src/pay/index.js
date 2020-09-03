@@ -128,7 +128,7 @@ Pay.prototype = {
         element: document.getElementById('mixin-code'),
         backgroundAlpha: 0,
         foreground: '#00B0E9',
-        value: window.location.toString(),
+        value: window.location.toString().replace(window.location.host, "mixin.one"),
         level: 'H',
         size: 500
       });
