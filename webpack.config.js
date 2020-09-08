@@ -2,7 +2,6 @@ const path = require('path');
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const CompressionPlugin = require("compression-webpack-plugin");
 const ScriptExtHtmlWebpackPlugin = require("script-ext-html-webpack-plugin");
 const WebappWebpackPlugin = require('favicons-webpack-plugin');
 
@@ -72,14 +71,6 @@ module.exports = {
       API_ROOT: JSON.stringify(apiRoot(process.env.NODE_ENV)),
       BLAZE_ROOT: JSON.stringify(blazeRoot(process.env.NODE_ENV)),
       APP_NAME: JSON.stringify('Mixin')
-    }),
-    new CompressionPlugin({
-      filename: "[path]",
-      algorithm: "gzip",
-      test: /\.(js|css)$/,
-      threshold: process.env.NODE_ENV === 'production' ? 0 : 100000000000000,
-      minRatio: 1,
-      deleteOriginalAssets: false
     }),
     new HtmlWebpackPlugin({
       template: './src/layout.html'
