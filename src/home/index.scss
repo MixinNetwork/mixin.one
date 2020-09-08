@@ -241,11 +241,13 @@
             width: 1012px;
             font-size: 32px;
             line-height: 42px;
-            display: flex;
-            justify-content: center;
           }
         }
       }
+    }
+    .home-language-ch .nav-title p{
+      display: flex;
+      justify-content: center;
     }
 
     section {
