@@ -10,6 +10,7 @@ import Code from './code';
 import OAuth from './oauth';
 import Page from './page';
 import Log from './log';
+import Job from './job';
 import Pay from './pay';
 import Snapshot from './snapshot';
 
@@ -65,6 +66,9 @@ router.on({
   },
   '/logs': function (params) {
     new Log(router, api).render();
+  },
+  '/jobs': function (params) {
+    new Job(router, api).render();
   },
   '/pages/:id': function (params) {
     new Page(router).show(params['id']);
