@@ -94,10 +94,10 @@ Home.prototype = {
       windowsURL: require('./windows.png').default,
       macDesktopURL: require('./mac-desktop.png').default
     }));
-    if (navigator.language && navigator.language.includes('zh-CN')) {
+    var os = self.getMobileOperatingSystem();
+    if (navigator.language && navigator.language.includes('zh-CN') && os !== 'iOS') {
       $('.special.version').removeClass('hidden');
     }
-    var os = self.getMobileOperatingSystem();
     if (os === 'iOS') {
       $('.android.button').hide();
       $('.android.bar').hide();
