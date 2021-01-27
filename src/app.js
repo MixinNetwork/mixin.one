@@ -23,10 +23,7 @@ const api = new API(router, API_ROOT, BLAZE_ROOT);
 window.i18n = new Locale(navigator.language);
 
 router.replace = function (url) {
-  this.resolve(url);
-  this.pause(true);
-  this.navigate(url);
-  this.pause(false);
+  this.navigate(url, {shouldResolve: false})
 };
 
 router.hooks({
