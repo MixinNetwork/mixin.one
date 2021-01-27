@@ -55,8 +55,8 @@ router.on({
   '/snapshots': function () {
     new Snapshot(router, api).index(undefined, 'after', false);
   },
-  '/snapshots/:id': function (params) {
-    new Snapshot(router, api).index(params['id'], 'after', false);
+  '/snapshots/:id': function (match) {
+    new Snapshot(router, api).index(match.data['id'], 'after', false);
   },
   '/network/assets': function () {
     new Snapshot(router, api).assets();
@@ -64,14 +64,14 @@ router.on({
   '/network/chains': function () {
     new Snapshot(router, api).chains();
   },
-  '/logs': function (params) {
+  '/logs': function () {
     new Log(router, api).render();
   },
-  '/jobs': function (params) {
+  '/jobs': function () {
     new Job(router, api).render();
   },
-  '/pages/:id': function (params) {
-    new Page(router).show(params['id']);
+  '/pages/:id': function (match) {
+    new Page(router).show(match.data['id']);
   },
   '/oauth/authorize': function () {
     new OAuth(router, api).authorize();
@@ -85,8 +85,8 @@ router.on({
   '/pay': function () {
     new Pay(router, api).render();
   },
-  '/codes/:id': function (params) {
-    new Code(router, api).render(params['id']);
+  '/codes/:id': function (match) {
+    new Code(router, api).render(match.data['id']);
   },
   '/xin': function () {
     new Home(router, api).xin();
