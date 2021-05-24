@@ -12,13 +12,14 @@ function OAuth(router, api) {
 }
 
 OAuth.prototype = {
-  authorize: function () {
+  authorize: function (data, params) {
     const self = this;
-    const clientId = URLUtils.getUrlParameter("client_id");
-    const scope = URLUtils.getUrlParameter("scope");
-    const codeChallenge = URLUtils.getUrlParameter("code_challenge");
-    const state = URLUtils.getUrlParameter("state");
-    const returnTo = URLUtils.getUrlParameter("return_to");
+    const clientId = params.client_id || "";
+    let scope = params.scope || "";
+    scope = scope.replace(/\+/g, ' ');
+    const codeChallenge = params.code_challenge || "";
+    const state = params.state || "";
+    const returnTo = params.return_to || "";
     self.api.authorization.connect(function (resp) {
       if (resp.error) {
         self.api.notify('error', i18n.t('general.errors.' + resp.error.code));

@@ -70,8 +70,8 @@ router.on({
   '/pages/:id': function (match) {
     new Page(router).show(match.data['id']);
   },
-  '/oauth/authorize': function () {
-    new OAuth(router, api).authorize();
+  '/oauth/authorize': function ({ data, params }) {
+    new OAuth(router, api).authorize(data, params);
   },
   '/oauth/callback': function () {
     new OAuth(router, api).callback();
