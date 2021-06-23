@@ -77,7 +77,7 @@
     "features.description": "オープンソースの暗号資産ウォレット。主要な通貨のほぼすべてに対応しています。",
     "features": "特徴",
     "features.1": "電話番号を利用したウォレットログインで、アカウント消失の心配なし",
-    "features.2": "6桁のD3M-PINコードにより安全に資産を管理 [<a href='https://vec.io/posts/mixin-messenger-d3m-pin'>安全性についての詳細資料</a>]",
+    "features.2": "6桁の <a href='https://github.com/MixinNetwork/tip'>TIP</a> コードにより安全に資産を管理",
     "features.3": "すべての資産はPoS-BFT-DAGネットワーク上で保管",
     "features.4": "チャットやウォレット機能を最大限に活かすボットを数多くご用意",
     "features.5": "連絡先をもとに暗号資産を送金することが可能",
