@@ -6,7 +6,7 @@ import Projector from './Projector.js';
 
 THREE.SpriteCanvasMaterial = function ( parameters ) {
 
-	THREE.Material.call( this );
+	THREE.Material.constructor.call(this);
 
 	this.type = 'SpriteCanvasMaterial';
 

@@ -31,7 +31,7 @@ module.exports = {
   output: {
     publicPath: '/assets/',
     path: path.resolve(__dirname, 'dist'),
-    filename: '[name]-[chunkHash].js'
+    filename: '[name]-[hash].js'
   },
 
   resolve: {
@@ -77,14 +77,14 @@ module.exports = {
     }),
     new WebappWebpackPlugin({
       logo: './src/launcher.png',
-      prefix: 'icons-[fullHash]-'
+      prefix: 'icons-[hash]-'
     }),
     new ScriptExtHtmlWebpackPlugin({
       defaultAttribute: 'async'
     }),
     new MiniCssExtractPlugin({
-      filename: devMode ? '[name].css' : '[name]-[fullHash].css',
-      chunkFilename: devMode ? '[id].css' : '[id]-[fullHash].css',
+      filename: devMode ? '[name].css' : '[name]-[hash].css',
+      chunkFilename: devMode ? '[id].css' : '[id]-[hash].css',
     })
   ]
 };
