@@ -43,7 +43,8 @@ module.exports = {
 
   module: {
     rules: [{
-      test: /\.html$/, loader: "handlebars-loader?helperDirs[]=" + __dirname + "/src/helpers"
+      test: /\.html$/,
+      use: ["handlebars-loader?helperDirs[]=" + __dirname + "/src/helpers"]
     }, {
       test: /\.(scss|css)$/,
       use: [
@@ -76,14 +77,14 @@ module.exports = {
     }),
     new WebappWebpackPlugin({
       logo: './src/launcher.png',
-      prefix: 'icons-[hash]-'
+      prefix: 'icons-[fullHash]-'
     }),
     new ScriptExtHtmlWebpackPlugin({
       defaultAttribute: 'async'
     }),
     new MiniCssExtractPlugin({
-      filename: devMode ? '[name].css' : '[name]-[hash].css',
-      chunkFilename: devMode ? '[id].css' : '[id]-[hash].css',
+      filename: devMode ? '[name].css' : '[name]-[fullHash].css',
+      chunkFilename: devMode ? '[id].css' : '[id]-[fullHash].css',
     })
   ]
 };
