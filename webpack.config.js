@@ -85,6 +85,9 @@ module.exports = {
     new MiniCssExtractPlugin({
       filename: devMode ? '[name].css' : '[name]-[hash].css',
       chunkFilename: devMode ? '[id].css' : '[id]-[hash].css',
+    }),
+    new webpack.ProvidePlugin({
+      Buffer: ["buffer", "Buffer"]
     })
   ]
 };
