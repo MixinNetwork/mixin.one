@@ -77,7 +77,7 @@ module.exports = {
     }),
     new WebappWebpackPlugin({
       logo: './src/launcher.png',
-      prefix: 'icons-[hash]-'
+      prefix: 'icons/'
     }),
     new ScriptExtHtmlWebpackPlugin({
       defaultAttribute: 'async'
