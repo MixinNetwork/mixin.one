@@ -23,7 +23,7 @@ const api = new API(router, API_ROOT, BLAZE_ROOT);
 window.i18n = new Locale(navigator.language);
 
 router.replace = function (url) {
-  this.navigate(url, {shouldResolve: false})
+  this.navigate(url);
 };
 
 router.hooks({
@@ -90,6 +90,9 @@ router.on({
   },
   '/messenger': function () {
     new Home(router, api).messenger();
+  },
+  '/mm': function () {
+    router.replace('/messenger');
   },
   '/': function () {
     new Home(router, api).index();
