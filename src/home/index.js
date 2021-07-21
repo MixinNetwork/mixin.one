@@ -95,7 +95,7 @@ Home.prototype = {
       macDesktopURL: require('./mac-desktop.png').default
     }));
     var os = self.getMobileOperatingSystem();
-    if (navigator.language && navigator.language.includes('zh-CN')) {
+    if (navigator.language && navigator.language.includes('zh-CN') && os !== 'iOS') {
       $('.special.version').removeClass('hidden');
     }
     if (os === 'iOS') {
