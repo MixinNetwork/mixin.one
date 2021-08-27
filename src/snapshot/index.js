@@ -187,7 +187,7 @@ Snapshot.prototype = {
             self.api.network.index(function (resp) {
               if (resp.data) {
                 resp.data.chains.forEach((chain) => {
-                  chainSet[chain.chain_id] = chain.icon_url
+                  chainSet[chain.chain_id] = chain.icon_url;
                 });
               };
               window.localStorage.setItem('chains', JSON.stringify(chainSet));
