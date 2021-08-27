@@ -183,7 +183,7 @@ Snapshot.prototype = {
         } else {
           let chains = window.localStorage.getItem('chains') || '{}';
           let chainSet = JSON.parse(chains);
-          if (!chainSet[asset.chain_id]) {
+          if (!chainSet[asset.chain_id] || (asset.chain_id === asset.asset_id && chainSet[asset.chain_id]) !== asset.icon_url) {
             self.api.network.index(function (resp) {
               if (resp.data) {
                 resp.data.chains.forEach((chain) => {
