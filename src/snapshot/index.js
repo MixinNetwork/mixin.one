@@ -4,7 +4,6 @@ import $ from 'jquery';
 import jQueryColor from '../jquery-color-plus-names.js';
 import TimeUtils from '../utils/time.js';
 import URLUtils from '../utils/url.js';
-import Chains from '../utils/chains.js';
 import Animator from './animator.js';
 import validate from 'uuid-validate';
 
@@ -182,8 +181,21 @@ Snapshot.prototype = {
         if ($('body').hasClass('undefined')) {
           $('#layout-container').html(self.templateIndex());
         } else {
+          let chains = window.localStorage.getItem('chains') || '{}';
+          let chainSet = JSON.parse(chains);
+          if (!chainSet[asset.chain_id] || (asset.chain_id === asset.asset_id && chainSet[asset.chain_id]) !== asset.icon_url) {
+            self.api.network.index(function (resp) {
+              if (resp.data) {
+                resp.data.chains.forEach((chain) => {
+                  chainSet[chain.chain_id] = chain.icon_url;
+                });
+              };
+              window.localStorage.setItem('chains', JSON.stringify(chainSet));
+            });
+          };
+
           asset.logoURL = require('../home/logo.png').default;
-          asset.chainLogoURL = Chains.getLogo(asset.chain_id);
+          asset.chainLogoURL = chainSet[asset.chain_id];
           asset.snapshotsCount = parseInt(asset.snapshots_count).toLocaleString(undefined, { maximumFractionDigits: 0 });
           asset.amount = Math.round(parseFloat(asset.amount)).toLocaleString(undefined, { maximumFractionDigits: 0 });
           $('#layout-container').html(self.templateAsset(asset));
