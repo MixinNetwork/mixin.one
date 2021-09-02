@@ -74,6 +74,77 @@
     "footer.five": "加入我们",
     "footer.right": "Copyright © 2021 mixin.one 版权所有"
   },
+  "homepage": {
+    "slogan": "安全、易用、隐私的去中心化数字资产网络",
+    "mn": {
+      "title": "Mixin Network",
+      "description": "一个 PoS + BFT + DAG 去中心化多链资产网络",
+      "pos": {
+        "title": "PoS",
+        "description": "Mixin Network 是一个 PoS 网络，抵押上一年流通量 2% 的 XIN 即可作为记账节点加入主网，也可以抵押少量的 XIN 作为验证节点加入，无需许可。<br /> 主网专注于转账功能，主网性能可达百万 TPS，区块不可逆最终确认小于 1 秒，转账免费且秒到可应用大型商业级应用。"
+      },
+      "layer2": {
+        "title": "Layer 2",
+        "description": "Mixin Network 是一个纯粹的 Layer 2 多链账本，没有发币功能，所有的资产都是通过链上充值进入，不会凭空产生资产，用户可以通过一个密钥管理 Bitcoin、Ethereum 等多个热门公链的资产。"
+      },
+      "dag": {
+        "title": "DAG",
+        "description": "Mixin 采用 DAG 作为底层数据结构模型，区别于其他 DAG 公链（例如 IOTA、Bytaball 等），Mixin 没有中心权威节点，数据不需要等待中心权威节点的最终确认。"
+      },
+      "tee": {
+        "title": "TEE",
+        "description": "Mixin 使用 Intel SGX 作为 TEE 的实现来进一步提升安全性，所有全节点都必须在可信执行环境中运行，确保全节点 “正在运行的代码” 的确是 “它声称正在运行的代码”，没有人能够在不被察觉的情况下改变可信执行环境里正在运行的代码。"
+      },
+      "crypto_not": {
+        "title": "CryptoNote",
+        "description": "通过 CryptoNote 技术加强 UTXO 交易隐私，交易只有双方知道，全节点也无法知道交易双方，也就是说无法根据交易本身推导出交易具体双方。"
+      }
+    },
+    "mtg": {
+      "title": "MTG",
+      "description": "MTG（Mixin Trusted Group）是一种替代智能合约的去中心化应用程序的解决方案，与以太坊分片技术类似每一个 MTG 都是一个平行链，由多个独立节点组成，通过 Mixin 主网的多重签名技术达成共识。",
+      "security": {
+        "title": "安全性",
+        "description": "除了 MTG 节点自身的安全错误，MTG 所管理的多重签名资产也将受到 Mixin Network 主网保护。"
+      },
+      "flexible": {
+        "title": "灵活性",
+        "description": "开发者可以自由使用任何语言（Go、Java、PHP、 Rust 等）实现 MTG；使用任何数据库（区块链账本、MySQL、PostgreSQL）存储数据；可灵活的组建需要许可或者无需许可的去中心化平行链网络。"
+      }
+    },
+    "tip": {
+      "title": "TIP",
+      "description": "TIP (Throttled Identity Protocol) 是一个去中心化密钥管理协议，通过 6 位数字密码安全、简单的管理数字资产。",
+      "network": {
+        "title": "去中心化签名网络",
+        "description": "去中心化签名网络由许多不同的节点构建，节点运行分布式密钥生成协议，对来自用户的签名请求进行身份验证，并限制恶意尝试。"
+      },
+      "manager": {
+        "title": "受信任的账号管理服务",
+        "description": "为用户提供身份种子，通常通过电子邮件、电话等方式对用户进行身份验证。"
+      },
+      "pin": {
+        "title": "用户的 PIN 密码",
+        "description": "用户记住一个PIN并结合账户管理器的身份种子，然后向足够多的签名者网络节点发出独立的请求，最后推导出他们的秘密密钥。"
+      }
+    },
+    "mm": {
+      "title": "Mixin Messenger",
+      "description": "Mixin Messenger 是一个开源的端对端加密聊天软件，同时集成了 Mixin Network 多链钱包。",
+      "chat": {
+        "title": "端对端加密聊天",
+        "description": "基于 Signal Protocol 的端对端加密功能确保用户的聊天隐私，所有消息包括语音、图片和文件都是端对端加密传输，支持多达 256 人的加密语音群聊。"
+      },
+      "wallet": {
+        "title": "多链钱包",
+        "description": "结合 Mixin Network 的多链钱包和 TIP 提供的去中心化 6 位数字密码方案，用户得以安全、简单、隐私的使用数字钱包，同时畅享免费转账、秒到账的极速体验。"
+      },
+      "bot": {
+        "title": "机器人",
+        "description": "Mixin Messenger 除了提供端对端加密聊天和钱包功能，还支持 Telegram 机器人、微信小程序类似的机器人功能，开发者能很方便实现交易、收费圈子、商城等功能强大的机器人。"
+      }
+    }
+  },
   "messenger": {
     "features.description": "最牛逼的去中心化钱包",
     "features": "优秀的特点",

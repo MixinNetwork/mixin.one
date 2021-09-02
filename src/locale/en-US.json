@@ -74,6 +74,77 @@
     "footer.five": "Jobs",
     "footer.right": "Copyright © 2021 mixin.one. All rights reserved."
   },
+  "homepage": {
+    "slogan": "A secure, easy-to-use, and private decentralized digital asset network",
+    "mn": {
+      "title": "Mixin Network",
+      "description": "A PoS + BFT + DAG decentralized multi-chain asset network",
+      "pos": {
+        "title": "PoS",
+        "description": "Mixin Network is a PoS Mainnet. By staking 2% of the XIN in circulation, anyone can run a bookkeeping node, or pledge a small amount of XIN to join as a verification node. <br /> The Mainnet focuses on transfer, and the performance can be more than one million TPS, the final irreversible confirmation is less than 1 second, and it's free."
+      },
+      "layer2": {
+        "title": "Layer 2",
+        "description": "Mixin Network is a Layer 2 multi-chain ledger without currency issuance function, All assets deposit from outside. Users manage multiple public chains by their own private key."
+      },
+      "dag": {
+        "title": "DAG",
+        "description": "Mixin uses DAG as the underlying data structure model, which is different from other DAG public chains (such as IOTA, Bytaball, etc.) is not have a central authority node, and the data does not require the final confirmation of the central authority node."
+      },
+      "tee": {
+        "title": "TEE",
+        "description": "Mixin Network uses Intel SGX as the implementation of TEE to ensure security. All nodes must run in a trusted execution environment to ensure that no one can change the running code in the trusted execution environment without being noticed."
+      },
+      "crypto_not": {
+        "title": "CryptoNote",
+        "description": "Enhancing UTXO transaction privacy through CryptoNote, the transaction is known by participants only, even Mainnet cannot know the transaction party."
+      }
+    },
+    "mtg": {
+      "title": "MTG",
+      "description": "MTG（Mixin Trusted Group）is a solution that replaces smart contracts. Similar to the sharding technology of Ethereum, each MTG is composed of multiple independent nodes. And reach consensus through the multi-signature technology of the Mixin Mainnet.",
+      "security": {
+        "title": "Security",
+        "description": "In addition to the security mechanism of the MTG node itself, the multi-signature assets managed by MTG will also be protected by the Mixin Network mainnet."
+      },
+      "flexible": {
+        "title": "Flexible",
+        "description": "Developers can use any programing language (Go, Java, PHP, Rust, etc.) to implement MTG, and can flexibly form a decentralized parallel network that requires or does not require a license."
+      }
+    },
+    "tip": {
+      "title": "TIP",
+      "description": "TIP (Throttled Identity Protocol) is a decentralized key management protocol, that manages digital assets safely and simply through a 6-digit password.",
+      "network": {
+        "title": "Decentralized Signature Network",
+        "description": "Decentralized Signature Network is composed of many nodes. The nodes run a distributed key generation protocol to authenticate signature requests from users."
+      },
+      "manager": {
+        "title": "Trusted Account Management Service",
+        "description": "Provide user identity seed, usually through e-mail or phone."
+      },
+      "pin": {
+        "title": "Users' PIN Password",
+        "description": "Through a PIN password and the identity seed of the account manager, with the response of different of signature nodes, finally derives the private key."
+      }
+    },
+    "mm": {
+      "title": "Mixin Messenger",
+      "description": "Mixin Messenger is an open-source E2EE chat APP and multi-chain wallet which supports Mixin Network.",
+      "chat": {
+        "title": "E2EE Chat",
+        "description": "Base on Signal E2EE protocol, all messages are encrypted, includes audio, images and files, and supports up to 256 encrypted group chat."
+      },
+      "wallet": {
+        "title": "Multi Chain Wallet",
+        "description": "Combining the multi-chain wallet of Mixin Network and the decentralized 6-digit digital password solution provided by TIP, users can use digital wallets safely, simply and privately, while enjoying the experience of free transfer and fast account transfer."
+      },
+      "bot": {
+        "title": "Bots",
+        "description": "Besides E2EE chat and wallet, Miin Messenger also supports bots, developers can easily implement the bots which are flexible than Telegram and Wechat."
+      }
+    }
+  },
   "messenger": {
     "features.description": "An open source cryptocurrency wallet, which supports almost all popular cryptocurrencies.",
     "features": "Features",
