@@ -139,11 +139,58 @@ Homepage.prototype = {
       },
     ];
 
+    let nodes = [
+      {
+        class: "",
+        list: [
+          {
+            name: "general.footer.term",
+            address: "/pages/terms",
+          },
+          {
+            name: "general.footer.privacy",
+            address: "/pages/privacy",
+          },
+        ],
+      },
+      {
+        class: "divide",
+        list: [
+          {
+            name: "general.footer.document",
+            address: "https://developers.mixin.one/",
+          },
+          {
+            name: "general.footer.whitepaper",
+            address: "/assets/Mixin-Draft-2018-07-01.pdf",
+          },
+          {
+            name: "general.footer.press",
+            address: "/assets/Mixin-Logo.zip",
+          },
+        ],
+      },
+      {
+        class: "divide",
+        list: [
+          {
+            name: "general.footer.contact",
+            address: "",
+          },
+          {
+            name: "general.footer.token",
+            address: "/xin",
+          },
+        ]
+      }
+    ];
+
     $('#layout-container').html(self.templateIndex({
       logo_white: assets.logo_white,
       logo_text: assets.logo_text,
       products: products,
       socials: socials,
+      nodes: nodes,
     }));
     self.router.updatePageLinks();
   },

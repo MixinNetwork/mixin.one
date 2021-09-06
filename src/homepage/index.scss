@@ -50,7 +50,12 @@ footer.renewal {
   background: #363C40;
   color: white;
 
+  section.renewal {
+    display: flex;
+  }
+
   .socials {
+    flex-grow: 1;
     .brand {
       margin-bottom: 3rem;
     }
@@ -66,6 +71,20 @@ footer.renewal {
       display: flex;
       align-items: center;
       justify-content: center;
+    }
+  }
+
+  .sitemap {
+    display: flex;
+    font-size: 1rem;
+    a {
+      color: rgba(255, 255, 255, 0.8);
+    }
+    .divide {
+      margin-left: 8.75rem;
+    }
+    .item {
+      margin-bottom: 1.25rem;
     }
   }
 }

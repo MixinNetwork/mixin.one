@@ -60,6 +60,17 @@
           {{/each}}
         </div>
       </div>
+      <div class="sitemap">
+        {{#each nodes }}
+        <div class="{{ this.class }}">
+          {{#each this.list }}
+          <div class="item">
+            <a href="{{ this.address }}">{{ t this.name }}</a>
+          </div>
+          {{/each}}
+        </div>
+        {{/each}}
+      </div>
     </section>
   </footer>
 </div>
