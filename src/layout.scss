@@ -34,6 +34,10 @@ input::-webkit-inner-spin-button {
     -webkit-appearance: none;
 }
 
+img {
+  max-width: 100%;
+}
+
 .loading.layout {
   height: 100%;
   cursor: wait;

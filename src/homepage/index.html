@@ -16,86 +16,50 @@
     </section>
   </header>
 
-  <div class="mixin network">
+  {{#each products }}
+  <div class=" product {{ this.class }}">
     <section class="renewal">
       <div class="summary">
         <div class="title">
-          {{ t 'homepage.mn.title' }}
+          {{ t this.title }}
         </div>
         <div class="description">
-          {{ t 'homepage.mn.description' }}
+          {{ t this.description }}
         </div>
       </div>
-      <div class="feature">
+      {{#each this.features}}
+      <div class="feature {{ this.class }}">
         <div class="figure">
-          <img src="{{ mn_kernal_url }}" alt="{{ t 'homepage.mn.pos.title' }}" />
+          <img src="{{ this.cover }}" alt="{{ t this.title }}" />
         </div>
         <dl>
           <dt>
-            {{ t 'homepage.mn.pos.title' }}
+            {{ t this.title }}
           </dt>
           <dd>
-            {{{ t 'homepage.mn.pos.description' }}}
+            {{{ t this.description }}}
           </dd>
         </dl>
       </div>
-      <div class="feature revert">
-        <dl>
-          <dt>
-            {{ t 'homepage.mn.layer2.title' }}
-          </dt>
-          <dd>
-            {{ t 'homepage.mn.layer2.description' }}
-          </dd>
-        </dl>
-        <div class="figure">
-          <img src="{{ mn_domain_url }}" alt="{{ t 'homepage.mn.layer2.title' }}" />
-        </div>
-      </div>
+      {{/each}}
     </section>
   </div>
-
-  <div class="mtg">
-    <section class="renewal">
-      <div class="summary">
-        <div class="title">
-          {{ t 'homepage.mtg.title' }}
-        </div>
-        <div class="description">
-          {{ t 'homepage.mtg.description' }}
-        </div>
-      </div>
-    </section>
-  </div>
-
-  <div class="tip">
-    <section class="renewal">
-      <div class="summary">
-        <div class="title">
-          {{ t 'homepage.tip.title' }}
-        </div>
-        <div class="description">
-          {{ t 'homepage.tip.description' }}
-        </div>
-      </div>
-    </section>
-  </div>
-
-  <div class="mixin messenger">
-    <section class="renewal">
-      <div class="summary">
-        <div class="title">
-          {{ t 'homepage.mm.title' }}
-        </div>
-        <div class="description">
-          {{ t 'homepage.mm.description' }}
-        </div>
-      </div>
-    </section>
-  </div>
+  {{/each}}
 
   <footer class="renewal">
     <section class="renewal">
+      <div class="socials">
+        <div class="brand">
+          <img src="{{ logo_text }}" alt="mixin" />
+        </div>
+        <div class="list">
+          {{#each socials }}
+          <a href="{{ this.address }}">
+            <img src="{{ this.cover }}" alt="mixin" />
+          </a>
+          {{/each}}
+        </div>
+      </div>
     </section>
   </footer>
 </div>

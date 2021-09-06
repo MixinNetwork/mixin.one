@@ -46,17 +46,39 @@ header.renewal {
 }
 
 footer.renewal {
+  padding: 5rem 0 9.25rem;
   background: #363C40;
+  color: white;
+
+  .socials {
+    .brand {
+      margin-bottom: 3rem;
+    }
+    .list {
+      display: flex;
+    }
+    a {
+      background: rgba(254, 255, 255, 0.8);
+      border-radius: 2.5rem;
+      margin-right: 1.25rem;
+      width: 2.5rem;
+      height: 2.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
 }
 
 .home.layout {
   color: rgba(34, 34, 34, 0.9);
+  font-family: Helvetica Neue, Source Han Sans CN sans-serif;
 
-  .mtg {
-    background: #F4F7FF;
+  .product {
+    padding-bottom: 6.25rem;
   }
 
-  .mixin.messenger {
+  .mtg, .mm  {
     background: #F4F7FF;
   }
 
@@ -77,8 +99,9 @@ footer.renewal {
 
   .feature {
     display: flex;
-    padding: 4.375rem;
+    padding: 4.375rem 0;
     &.revert {
+      flex-direction: row-reverse;
       .figure {
         text-align: right;
       }
