@@ -51,7 +51,7 @@ module.exports = {
         {
           loader: MiniCssExtractPlugin.loader,
           options: {
-            esModule: true
+            esModule: true,
           },
         },
         'css-loader',
@@ -59,9 +59,7 @@ module.exports = {
       ]
     }, {
       test: /\.(woff|woff2|eot|ttf|otf|svg|png|jpg|gif)$/,
-      use: [
-        'file-loader'
-      ]
+      type: 'asset/resource'
     }]
   },
 

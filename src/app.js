@@ -6,6 +6,7 @@ import MixinUtils from './utils/mixin.js';
 import Locale from './locale';
 import API from './api';
 import Home from './home';
+import Homepage from './homepage';
 import Code from './code';
 import OAuth from './oauth';
 import Page from './page';
@@ -93,6 +94,9 @@ router.on({
   },
   '/mm': function () {
     router.replace('/messenger');
+  },
+  '/renewal': function () {
+    new Homepage(router, api).index();
   },
   '/': function () {
     new Home(router, api).index();

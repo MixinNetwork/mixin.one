@@ -81,7 +81,7 @@
       "description": "A PoS + BFT + DAG decentralized multi-chain asset network",
       "pos": {
         "title": "PoS",
-        "description": "Mixin Network is a PoS Mainnet. By staking 2% of the XIN in circulation, anyone can run a bookkeeping node, or pledge a small amount of XIN to join as a verification node. <br /> The Mainnet focuses on transfer, and the performance can be more than one million TPS, the final irreversible confirmation is less than 1 second, and it's free."
+        "description": "Mixin Network is a PoS Mainnet. By staking 2% of the XIN in circulation, anyone can run a bookkeeping node, or pledge a small amount of XIN to join as a verification node. <p></p> The Mainnet focuses on transfer, and the performance can be more than one million TPS, the final irreversible confirmation is less than 1 second, and it's free."
       },
       "layer2": {
         "title": "Layer 2",
@@ -95,7 +95,7 @@
         "title": "TEE",
         "description": "Mixin Network uses Intel SGX as the implementation of TEE to ensure security. All nodes must run in a trusted execution environment to ensure that no one can change the running code in the trusted execution environment without being noticed."
       },
-      "crypto_not": {
+      "crypto_note": {
         "title": "CryptoNote",
         "description": "Enhancing UTXO transaction privacy through CryptoNote, the transaction is known by participants only, even Mainnet cannot know the transaction party."
       }

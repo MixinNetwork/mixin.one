@@ -1,0 +1,107 @@
+section.renewal {
+  max-width: 75rem;
+  padding: 0 1.875rem;
+  margin: 0 auto;
+}
+
+header.renewal {
+  background: url("./assets/index_bg.png") no-repeat top;
+  background-size: cover;
+  color: white;
+
+  section.renewal {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .navi {
+    display: flex;
+    align-items: center;
+    height: 6.25rem;
+  }
+
+  a {
+    color: white;
+    margin-left: 3.75rem;
+  }
+
+  .brand {
+    flex-grow: 1;
+    font-size: 1.25rem;
+    display: flex;
+    align-items: center;
+    img {
+      margin-right: .5rem;
+    }
+  }
+
+  .slogan {
+    flex-grow: 1;
+    font-size: 58px;
+    display: flex;
+    align-items: center;
+    width: 50%;
+  }
+}
+
+footer.renewal {
+  background: #363C40;
+}
+
+.home.layout {
+  color: rgba(34, 34, 34, 0.9);
+
+  .mtg {
+    background: #F4F7FF;
+  }
+
+  .mixin.messenger {
+    background: #F4F7FF;
+  }
+
+  .summary {
+    .title {
+      font-size: 58px;
+      font-weight: 700;
+      text-align: center;
+      padding: 110px 0 20px;
+    }
+
+    .description {
+      font-size: 24px;
+      text-align: center;
+      padding-bottom: 34px;
+    }
+  }
+
+  .feature {
+    display: flex;
+    padding: 4.375rem;
+    &.revert {
+      .figure {
+        text-align: right;
+      }
+    }
+
+    .figure {
+      width: 50%;
+    }
+
+    dl {
+      width: 50%;
+    }
+    dt {
+      font-size: 2.375rem;
+      margin-bottom: 1.875rem;
+    }
+    dd {
+      color: rgba(34, 34, 34, 0.7);
+      font-size: 1.25rem;
+      margin: 0;
+    }
+    p {
+      margin-bottom: 1.6rem;
+    }
+  }
+}
