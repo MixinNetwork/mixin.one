@@ -40,6 +40,8 @@ header.renewal {
   .slogan {
     flex-grow: 1;
     font-size: 3.625rem;
+    font-weight: 700;
+    line-height: 5.125rem;
     display: flex;
     align-items: center;
     width: 50%;
@@ -122,6 +124,7 @@ footer.renewal {
     .description {
       font-size: 1.5rem;
       text-align: center;
+      line-height: 2.25rem;
       padding-bottom: 2rem;
     }
   }
@@ -149,9 +152,11 @@ footer.renewal {
     }
     dt {
       font-size: 2.375rem;
+      font-weight: 500;
       margin-bottom: 1.875rem;
     }
     dd {
+      line-height: 2rem;
       color: rgba(34, 34, 34, 0.7);
       margin: 0;
     }
