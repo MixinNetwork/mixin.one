@@ -6,18 +6,21 @@
           <img src="{{ logo_white }}" alt="mixin" />
         </div>
         <div class="menu">
-          <a href="/messenger">{{ t 'home.nav.messenger' }}</a>
-          <a href="https://developers.mixin.one/">{{ t 'home.nav.developers' }}</a>
+          <a href="/messenger">{{ t 'general.header.messenger' }}</a>
+          <a href="https://developers.mixin.one/">{{ t 'general.header.developer' }}</a>
         </div>
       </div>
       <div class="slogan">
         {{ t 'homepage.slogan' }}
       </div>
+      <div class="down">
+        <img src="{{ ic_down }}" alt="down" class="ic_down" />
+      </div>
     </section>
   </header>
 
   {{#each products }}
-  <div class=" product {{ this.class }}">
+  <div class="product {{ this.class }}">
     <section class="renewal">
       <div class="summary">
         <div class="title">
@@ -50,7 +53,7 @@
     <section class="renewal">
       <div class="socials">
         <div class="brand">
-          <img src="{{ logo_text }}" alt="mixin" />
+          <img src="{{ logo_white }}" alt="mixin" />
         </div>
         <div class="list">
           {{#each socials }}

@@ -11,6 +11,26 @@
       "20110": "电话号码无效。",
       "20112": "邀请码无效。",
       "20113": "验证码无效。"
+    },
+    "header": {
+      "messenger": "Messenger",
+      "developer": "开发者"
+    },
+    "footer": {
+      "general": "通用",
+      "contact": "联系我们",
+      "term": "使用条款",
+      "privacy": "隐私政策",
+      "faq": "FAQ",
+
+      "technology": "技术",
+      "document": "文档",
+      "token": "Token",
+      "whitepaper": "白皮书",
+
+      "community": "社区",
+      "chat": "客服",
+      "press": "媒体资料"
     }
   },
   "oauth": {

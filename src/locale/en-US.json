@@ -12,6 +12,10 @@
       "20112": "Invalid invitation code.",
       "20113": "Invalid phone verification code."
     },
+    "header": {
+      "messenger": "Messenger",
+      "developer": "Developer"
+    },
     "footer": {
       "general": "General",
       "contact": "Contact Us",

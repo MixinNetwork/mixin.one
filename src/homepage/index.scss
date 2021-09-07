@@ -33,6 +33,7 @@ header.renewal {
     align-items: center;
     img {
       margin-right: .5rem;
+      width: 2.1rem;
     }
   }
 
@@ -42,6 +43,14 @@ header.renewal {
     display: flex;
     align-items: center;
     width: 50%;
+  }
+
+  .down {
+    text-align: center;
+    padding-bottom: 1.25rem;
+  }
+  .ic_down {
+    cursor: pointer;
   }
 }
 
@@ -91,7 +100,6 @@ footer.renewal {
 
 .home.layout {
   color: rgba(34, 34, 34, 0.9);
-  font-family: Helvetica Neue, Source Han Sans CN sans-serif;
 
   .product {
     padding-bottom: 6.25rem;

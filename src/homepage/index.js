@@ -188,11 +188,18 @@ Homepage.prototype = {
     $('#layout-container').html(self.templateIndex({
       logo_white: assets.logo_white,
       logo_text: assets.logo_text,
+      ic_down: assets.ic_down,
       products: products,
       socials: socials,
       nodes: nodes,
     }));
     self.router.updatePageLinks();
+
+    $('.ic_down').click(function() {
+      $([document.documentElement, document.body]).animate({
+        scrollTop: $(".product.mn").offset().top
+      }, 1000);
+    });
   },
 };
 

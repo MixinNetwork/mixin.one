@@ -23,6 +23,8 @@ const assets = {
   ic_telgram: require('./assets/ic_telegram.svg'),
   ic_discord: require('./assets/ic_discord.svg'),
   ic_youtube: require('./assets/ic_youtube.svg'),
+
+  ic_down: require('./assets/ic_down.svg'),
 };
 
 export default assets;
