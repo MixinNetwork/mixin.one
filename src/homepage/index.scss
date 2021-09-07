@@ -226,6 +226,9 @@ footer.renewal {
       padding: 4.375rem 0 0;
       &.revert {
         flex-direction: column;
+        .figure {
+          text-align: center;
+        }
       }
       h4 {
         font-size: 1.625rem;
@@ -235,6 +238,7 @@ footer.renewal {
       }
       .figure {
         width: 100%;
+        text-align: center;
       }
       dl {
         text-align: center;
