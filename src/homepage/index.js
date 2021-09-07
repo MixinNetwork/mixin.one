@@ -175,7 +175,7 @@ Homepage.prototype = {
         list: [
           {
             name: "general.footer.contact",
-            address: "",
+            address: "mailto:contact@mixin.one",
           },
           {
             name: "general.footer.token",

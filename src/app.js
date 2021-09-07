@@ -95,11 +95,8 @@ router.on({
   '/mm': function () {
     router.replace('/messenger');
   },
-  '/renewal': function () {
-    new Homepage(router, api).index();
-  },
   '/': function () {
-    new Home(router, api).index();
+    new Homepage(router, api).index();
   }
 }).notFound(function () {
   $('#layout-container').html(Error404());
