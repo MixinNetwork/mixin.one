@@ -16,6 +16,7 @@ header.renewal {
   }
 
   .navi {
+    font-size: 1.125rem;
     display: flex;
     align-items: center;
     height: 6.25rem;
@@ -28,9 +29,6 @@ header.renewal {
 
   .brand {
     flex-grow: 1;
-    font-size: 1.25rem;
-    display: flex;
-    align-items: center;
     img {
       margin-right: .5rem;
       width: 2.1rem;
@@ -39,7 +37,7 @@ header.renewal {
 
   .slogan {
     flex-grow: 1;
-    font-size: 58px;
+    font-size: 3.625rem;
     display: flex;
     align-items: center;
     width: 50%;
@@ -49,6 +47,7 @@ header.renewal {
     text-align: center;
     padding-bottom: 1.25rem;
   }
+
   .ic_down {
     cursor: pointer;
   }
@@ -57,7 +56,6 @@ header.renewal {
 footer.renewal {
   padding: 5rem 0 9.25rem;
   background: #363C40;
-  color: white;
 
   section.renewal {
     display: flex;
@@ -100,27 +98,28 @@ footer.renewal {
 
 .home.layout {
   color: rgba(34, 34, 34, 0.9);
+  font-size: 1.25rem;
 
   .product {
     padding-bottom: 6.25rem;
   }
 
-  .mtg, .mm  {
+  .mtg, .mm {
     background: #F4F7FF;
   }
 
   .summary {
     .title {
-      font-size: 58px;
+      font-size: 3.625rem;
       font-weight: 700;
       text-align: center;
-      padding: 110px 0 20px;
+      padding: 6.875rem 0 1.25rem;
     }
 
     .description {
-      font-size: 24px;
+      font-size: 1.5rem;
       text-align: center;
-      padding-bottom: 34px;
+      padding-bottom: 2rem;
     }
   }
 
@@ -147,7 +146,6 @@ footer.renewal {
     }
     dd {
       color: rgba(34, 34, 34, 0.7);
-      font-size: 1.25rem;
       margin: 0;
     }
     p {
