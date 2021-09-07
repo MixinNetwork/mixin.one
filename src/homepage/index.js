@@ -12,7 +12,7 @@ Homepage.prototype = {
     let self = this;
 
     $('title').html('Mixin Official Website');
-    $('body').attr('class', 'home layout');
+    $('body').attr('class', 'home renewal');
 
     let products = [
       {

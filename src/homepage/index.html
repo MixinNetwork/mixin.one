@@ -32,6 +32,9 @@
       </div>
       {{#each this.features}}
       <div class="feature {{ this.class }}">
+        <h4>
+          {{ t this.title }}
+        </h4>
         <div class="figure">
           <img src="{{ this.cover }}" alt="{{ t this.title }}" />
         </div>
@@ -65,7 +68,7 @@
       </div>
       <div class="sitemap">
         {{#each nodes }}
-        <div class="{{ this.class }}">
+        <div class="list {{ this.class }}">
           {{#each this.list }}
           <div class="item">
             <a href="{{ this.address }}">{{ t this.name }}</a>
