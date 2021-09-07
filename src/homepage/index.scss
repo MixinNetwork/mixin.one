@@ -178,6 +178,7 @@ footer.renewal {
     .slogan {
       width: 100%;
       font-size: 1.875rem;
+      line-height: 2.8rem;
       align-items: flex-end;
       text-align: center;
       padding-bottom: 5rem;
@@ -223,7 +224,7 @@ footer.renewal {
       }
       .description {
         font-size: 1.125rem;
-        line-height: 150%;
+        line-height: 1.5rem;
       }
     }
 
@@ -253,6 +254,9 @@ footer.renewal {
       }
       dt {
         display: none;
+      }
+      dd {
+        line-height: 1.5rem;
       }
     }
   }

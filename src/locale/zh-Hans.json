@@ -115,7 +115,7 @@
         "title": "TEE",
         "description": "Mixin 使用 Intel SGX 作为 TEE 的实现来进一步提升安全性，所有全节点都必须在可信执行环境中运行，确保全节点 “正在运行的代码” 的确是 “它声称正在运行的代码”，没有人能够在不被察觉的情况下改变可信执行环境里正在运行的代码。"
       },
-      "crypto_not": {
+      "crypto_note": {
         "title": "CryptoNote",
         "description": "通过 CryptoNote 技术加强 UTXO 交易隐私，交易只有双方知道，全节点也无法知道交易双方，也就是说无法根据交易本身推导出交易具体双方。"
       }
