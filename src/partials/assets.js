@@ -1,4 +1,6 @@
 const assets = {
+  ic_down: require('./assets/ic_down.svg'),
+
   logo_white: require('../logo.svg'),
 
   ic_medium: require('./assets/ic_medium.svg'),

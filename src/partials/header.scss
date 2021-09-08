@@ -48,3 +48,23 @@ header.renewal {
     cursor: pointer;
   }
 }
+
+@media screen and (max-width: 60rem) {
+  header.renewal {
+    background: url("./assets/index_mobile_bg.png") no-repeat top;
+    background-size: cover;
+
+    .slogan {
+      width: 100%;
+      font-size: 1.875rem;
+      line-height: 2.5rem;
+      align-items: flex-end;
+      text-align: center;
+      padding-bottom: 4rem;
+    }
+
+    a {
+      margin-left: 1.75rem;
+    }
+  }
+}

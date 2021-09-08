@@ -121,9 +121,6 @@ Homepage.prototype = {
 
 
     let index = self.templateIndex({
-      logo_white: assets.logo_white,
-      logo_text: assets.logo_text,
-      ic_down: assets.ic_down,
       products: products,
       ...header,
       ...footer

@@ -1,6 +1,4 @@
 const assets = {
-  logo_text: require('./assets/logo_text.png'),
-  index_mobile_bg_url: require('./assets/index_mobile_bg.png'),
   mm_bot_url: require('./assets/mm_bot.png'),
   mm_chat_url: require('./assets/mm_chat.png'),
   mm_wallet_url: require('./assets/mm_wallet.png'),
@@ -14,8 +12,6 @@ const assets = {
   tip_manager_url: require('./assets/tip_manager.png'),
   tip_network_url: require('./assets/tip_network.png'),
   tip_password_url: require('./assets/tip_password.png'),
-
-  ic_down: require('./assets/ic_down.svg'),
 };
 
 export default assets;

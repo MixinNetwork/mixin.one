@@ -40,3 +40,30 @@ footer.renewal {
     }
   }
 }
+
+@media screen and (max-width: 60rem) {
+  footer.renewal {
+    padding: 3.75rem 0;
+
+    section.renewal {
+      flex-direction: column-reverse;
+    }
+
+    .sitemap {
+      flex-wrap: wrap;
+      .divide {
+        margin-left: 0;
+      }
+      .list {
+        width: 50%;
+        margin-bottom: 3rem;
+      }
+    }
+
+    .socials {
+      .brand {
+        margin-bottom: 2rem;
+      }
+    }
+  }
+}
