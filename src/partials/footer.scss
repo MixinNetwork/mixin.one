@@ -1,0 +1,42 @@
+footer.renewal {
+  padding: 5rem 0 9.25rem;
+  background: #363C40;
+
+  section.renewal {
+    display: flex;
+  }
+
+  .socials {
+    flex-grow: 1;
+    .brand {
+      margin-bottom: 3rem;
+    }
+    .list {
+      display: flex;
+    }
+    a {
+      background: rgba(254, 255, 255, 0.8);
+      border-radius: 2.5rem;
+      margin-right: 1.25rem;
+      width: 2.5rem;
+      height: 2.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  .sitemap {
+    display: flex;
+    font-size: 1rem;
+    a {
+      color: rgba(255, 255, 255, 0.8);
+    }
+    .divide {
+      margin-left: 8.75rem;
+    }
+    .item {
+      margin-bottom: 1.25rem;
+    }
+  }
+}

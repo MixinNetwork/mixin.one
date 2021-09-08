@@ -1,0 +1,50 @@
+header.renewal {
+  background: url("./assets/index_bg.png") no-repeat top;
+  background-size: cover;
+  color: white;
+
+  section.renewal {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .navi {
+    font-size: 1.125rem;
+    display: flex;
+    align-items: center;
+    height: 6.25rem;
+  }
+
+  a {
+    color: white;
+    margin-left: 3.75rem;
+  }
+
+  .brand {
+    flex-grow: 1;
+    img {
+      margin-right: .5rem;
+      width: 2.1rem;
+    }
+  }
+
+  .slogan {
+    flex-grow: 1;
+    font-size: 3.625rem;
+    font-weight: 700;
+    line-height: 5.125rem;
+    display: flex;
+    align-items: center;
+    width: 50%;
+  }
+
+  .down {
+    text-align: center;
+    padding-bottom: 1.25rem;
+  }
+
+  .ic_down {
+    cursor: pointer;
+  }
+}

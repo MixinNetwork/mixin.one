@@ -1,6 +1,5 @@
 const assets = {
   logo_text: require('./assets/logo_text.png'),
-  index_bg_url: require('./assets/index_bg.png'),
   index_mobile_bg_url: require('./assets/index_mobile_bg.png'),
   mm_bot_url: require('./assets/mm_bot.png'),
   mm_chat_url: require('./assets/mm_chat.png'),

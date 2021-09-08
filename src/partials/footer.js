@@ -1,3 +1,4 @@
+import './footer.scss';
 import assets from './assets';
 
 let socials = [
