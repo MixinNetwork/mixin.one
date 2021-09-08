@@ -1,6 +1,9 @@
 import './index.scss';
 import $ from 'jquery';
 import assets from './assets';
+import header from '../partials/header';
+import footer from '../partials/footer';
+
 
 function Homepage(router, api) {
   this.router = router;
@@ -116,83 +119,17 @@ Homepage.prototype = {
       }
     ];
 
-    let socials = [
-      {
-        cover: assets.ic_medium,
-        address: "https://medium.com/mixinnetwork"
-      },
-      {
-        cover: assets.ic_twitter,
-        address: "https://twitter.com/Mixin_Network"
-      },
-      {
-        cover: assets.ic_reddit,
-        address: "https://www.reddit.com/r/mixin"
-      },
-      {
-        cover: assets.ic_telgram,
-        address: "https://t.me/MixinCommunity"
-      },
-      {
-        cover: assets.ic_youtube,
-        address: "https://www.youtube.com/channel/UCLWQ94gw7wRK-S5qy4LAVrA"
-      },
-    ];
 
-    let nodes = [
-      {
-        class: "",
-        list: [
-          {
-            name: "general.footer.term",
-            address: "/pages/terms",
-          },
-          {
-            name: "general.footer.privacy",
-            address: "/pages/privacy",
-          },
-        ],
-      },
-      {
-        class: "divide",
-        list: [
-          {
-            name: "general.footer.document",
-            address: "https://developers.mixin.one/",
-          },
-          {
-            name: "general.footer.whitepaper",
-            address: "/assets/Mixin-Draft-2018-07-01.pdf",
-          },
-          {
-            name: "general.footer.press",
-            address: "/assets/Mixin-Logo.zip",
-          },
-        ],
-      },
-      {
-        class: "divide",
-        list: [
-          {
-            name: "general.footer.contact",
-            address: "mailto:contact@mixin.one",
-          },
-          {
-            name: "general.footer.token",
-            address: "/xin",
-          },
-        ]
-      }
-    ];
-
-    $('#layout-container').html(self.templateIndex({
+    let index = self.templateIndex({
       logo_white: assets.logo_white,
       logo_text: assets.logo_text,
       ic_down: assets.ic_down,
       products: products,
-      socials: socials,
-      nodes: nodes,
-    }));
+      ...header,
+      ...footer
+    });
+
+    $('#layout-container').html(index);
     self.router.updatePageLinks();
 
     $('.ic_down').click(function() {

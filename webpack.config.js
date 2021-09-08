@@ -43,8 +43,15 @@ module.exports = {
 
   module: {
     rules: [{
-      test: /\.html$/,
-      use: ["handlebars-loader?helperDirs[]=" + __dirname + "/src/helpers"]
+      test: /\.(html|handlebars)$/,
+      use: [{
+        loader: 'handlebars-loader',
+        options: {
+          helperDirs: [__dirname + "/src/helpers"],
+          extensions: ['.html'],
+          partialDirs: [path.join(__dirname, '/src/partials')]
+        },
+      }]
     }, {
       test: /\.(scss|css)$/,
       use: [

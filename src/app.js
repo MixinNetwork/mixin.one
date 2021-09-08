@@ -15,6 +15,7 @@ import Job from './job';
 import Pay from './pay';
 import Snapshot from './snapshot';
 
+const Handlebars = require("handlebars");
 const WEB_ROOT = location.protocol + '//' + location.host;
 const PartialLoading = require('./loading.html');
 const Error404 = require('./404.html');
