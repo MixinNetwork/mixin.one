@@ -166,6 +166,87 @@
       }
     }
   },
+  "ecosystem": {
+    "ecosystem": "Ecosystem",
+    "slogan": "Decentralized products that are safe, private and used at the same time",
+    "wallet": "Wallet",
+    "messenger": {
+      "name": "Mixin Messenger",
+      "description": "Mixin is a messenger with end-to-end encryption built on the Signal protocol. Besides its messaging features, Mixin supports wallet and transfer functionality for Bitcoin, Ethereum, Bitcoin Cash, Ripple, Zcash, Dogocoin, Horizen, XEM, Dash, Litecoin and Sia."
+    },
+    "poolin": {
+      "name": "Poolin Wallet",
+      "description": "Poolin Wallet guarantees security of cryptocurrency assets, which supports multifunctional operation of BTC, ETH, LTC, ZEC... More currencies are being optimized."
+    },
+    "partners": "Partners",
+    "defi": "DeFi",
+    "4swap": {
+      "name": "4swap",
+      "description": "A fully decentralized protocol for automated liquidity provision."
+    },
+    "leaf": {
+      "name": "Pando Leaf",
+      "description": "A decentralized financial network, implement a derivatives liquidity protocol."
+    },
+    "rings": {
+      "name": "Pand Rings",
+      "description": "An algorithmic, autonomous interest rate protocol."
+    },
+    "mixswap": {
+      "name": "MixSwap",
+      "description": "MixSwap is the MiFi DEX aggregation trading platform of Exin."
+    },
+    "exinlocal": {
+      "name": "ExinLocal",
+      "type": "Trade",
+      "description": "ExinLocal is a worldwide peer-to-peer marketplace where buy and sell cryptocurrencies."
+    },
+    "optiondance": {
+      "name": "OptionDance",
+      "description": "Bitcoin and Ethereum Options Exchange."
+    },
+    "apps": "Apps",
+    "links": {
+      "name": "Links",
+      "type": "Wallet",
+      "description": "An end-to-end encryption messenger built on the Signal protocol."
+    },
+    "exinearn": {
+      "name": "ExinEarn",
+      "type": "Trade",
+      "description": "A platform where you can get bitcoin rewards for eating, drinking and playing"
+    },
+    "exinone": {
+      "name": "ExinOne",
+      "type": "Trade",
+      "description": "Start investing in digital assets such as Bitcoin in one minute"
+    },
+    "blockchair": {
+      "name": "BlockChair",
+      "type": "Explore",
+      "description": "Blockchain explorer, analytics and web services"
+    },
+    "bwatch": {
+      "name": "B.Watch",
+      "type": "ETF",
+      "description": "BOX is a completely open and transparent fund product. It consists of 7 standard samples, which are BTC, ETH, EOS, DOT, MOB, XIN, and UNI."
+    },
+    "oceanone": {
+      "name": "OceanONE",
+      "type": "Exchange",
+      "description": "Ocean ONE is a decentralized exchange built on Mixin Network, it's almost the first time that a decentralized exchange gain the same user experience as a centralized one."
+    },
+    "bigdex": {
+      "name": "BigDex",
+      "type": "Exchange",
+      "description": "BigDEX has launched the PairLaunch function which provides all users to list the tokens."
+    },
+    "coinview": {
+      "name": "CoinView",
+      "type": "Exchange",
+      "description": "CoinView is a free app combining the best cryptocurrency market monitoring and portfolio management tools."
+    }
+  },
   "messenger": {
     "features.description": "An open source cryptocurrency wallet, which supports almost all popular cryptocurrencies.",
     "features": "Features",

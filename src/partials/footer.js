@@ -77,10 +77,6 @@ let nodes = [
         name: "general.footer.press",
         address: "/assets/Mixin-Logo.zip",
       },
-      {
-        name: "general.footer.medium",
-        address: "https://medium.com/mixinnetwork",
-      },
     ]
   }
 ];

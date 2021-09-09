@@ -119,8 +119,8 @@ Homepage.prototype = {
       }
     ];
 
-
     let index = self.templateIndex({
+      slogan: 'homepage.slogan',
       products: products,
       ...header,
       ...footer

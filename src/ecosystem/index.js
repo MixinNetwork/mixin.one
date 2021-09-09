@@ -1,0 +1,149 @@
+import './index.scss';
+import $ from 'jquery';
+import assets from './assets';
+import header from '../partials/header';
+import footer from '../partials/footer';
+
+function Ecosystem(router, api) {
+  this.router = router;
+  this.templateIndex = require('./index.html');
+}
+
+Ecosystem.prototype = {
+
+  index: function () {
+    let self = this;
+
+    $('title').html('Mixin Official Website');
+    $('body').attr('class', 'ecosystem layout');
+
+    let wallets = [
+      {
+        logo: assets.mixin_logo,
+        cover: assets.mixin,
+        name: "ecosystem.messenger.name",
+        description: "ecosystem.messenger.description",
+        address: "/messenger",
+      },
+      {
+        class: "revert",
+        logo: assets.poolin_logo,
+        cover: assets.poolin,
+        name: "ecosystem.poolin.name",
+        description: "ecosystem.poolin.description",
+        address: "https://poolin.fi/",
+      },
+    ];
+
+    let defi = [
+      {
+        logo: assets.foxswap,
+        name: "ecosystem.4swap.name",
+        description: "ecosystem.4swap.description",
+      },
+      {
+        logo: assets.leaf,
+        name: "ecosystem.leaf.name",
+        description: "ecosystem.leaf.description",
+      },
+      {
+        logo: assets.rings,
+        name: "ecosystem.rings.name",
+        description: "ecosystem.rings.description",
+      },
+      {
+        logo: assets.mixswap,
+        name: "ecosystem.mixswap.name",
+        description: "ecosystem.mixswap.description",
+      },
+      {
+        logo: assets.exinlocal,
+        name: "ecosystem.exinlocal.name",
+        description: "ecosystem.exinlocal.description",
+      },
+      {
+        logo: assets.optiondance,
+        name: "ecosystem.optiondance.name",
+        description: "ecosystem.optiondance.description",
+      },
+    ];
+
+    let apps = [
+      {
+        logo: assets.links,
+        type: "ecosystem.links.type",
+        name: "ecosystem.links.name",
+        description: "ecosystem.links.description",
+      },
+      {
+        logo: assets.exinearn,
+        type: "ecosystem.exinearn.type",
+        name: "ecosystem.exinearn.name",
+        description: "ecosystem.exinearn.description",
+      },
+      {
+        logo: assets.exinone,
+        type: "ecosystem.exinone.type",
+        name: "ecosystem.exinone.name",
+        description: "ecosystem.exinone.description",
+      },
+      {
+        logo: assets.blockchair,
+        type: "ecosystem.blockchair.type",
+        name: "ecosystem.blockchair.name",
+        description: "ecosystem.blockchair.description",
+      },
+      {
+        logo: assets.bwatch,
+        type: "ecosystem.bwatch.type",
+        name: "ecosystem.bwatch.name",
+        description: "ecosystem.bwatch.description",
+      },
+      {
+        logo: assets.exinlocal,
+        type: "ecosystem.exinlocal.type",
+        name: "ecosystem.exinlocal.name",
+        description: "ecosystem.exinlocal.description",
+      },
+      {
+        logo: assets.oceanone,
+        type: "ecosystem.oceanone.type",
+        name: "ecosystem.oceanone.name",
+        description: "ecosystem.oceanone.description",
+      },
+      {
+        logo: assets.bigdex,
+        type: "ecosystem.bigdex.type",
+        name: "ecosystem.bigdex.name",
+        description: "ecosystem.bigdex.description",
+      },
+      {
+        logo: assets.coinview,
+        type: "ecosystem.coinview.type",
+        name: "ecosystem.coinview.name",
+        description: "ecosystem.coinview.description",
+      },
+    ];
+
+    let index = self.templateIndex({
+      slogan: 'ecosystem.slogan',
+      wallets: wallets,
+      defi: defi,
+      apps: apps,
+      ...header,
+      ...footer
+    });
+
+    $('#layout-container').html(index);
+    self.router.updatePageLinks();
+
+    $('.ic_down').click(function() {
+      $([document.documentElement, document.body]).animate({
+        scrollTop: $(".wallets").offset().top
+      }, 1000);
+    });
+  }
+
+};
+
+export default Ecosystem;

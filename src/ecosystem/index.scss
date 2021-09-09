@@ -1,0 +1,149 @@
+.ecosystem.layout {
+  h2 {
+    font-size: 58px;
+    text-align: center;
+    margin-bottom: 6.25rem;
+  }
+  .wallets {
+    padding: 7.5rem 0 3rem;
+    font-size: 1.25rem;
+
+    .wallet {
+      display: flex;
+      margin-bottom: 2rem;
+    }
+
+    .cover {
+      padding-right: 6.25rem;
+      img {
+        max-width: 375px;
+      }
+    }
+
+    .info {
+      padding-top: 3rem;
+      img {
+        width: 3rem;
+        height: 3rem;
+        margin-right: 1.25rem;
+      }
+      .name {
+        display: flex;
+        align-items: center;
+        font-size: 2.375rem;
+        margin-bottom: 2.5rem;
+      }
+      .description {
+        color: rgba(34, 34, 34, 1);
+        margin-bottom: 2.5rem;
+        line-height: 2rem;
+      }
+      .download {
+        border-radius: 5rem;
+        background: rgba(61, 117, 227, 1);
+        color: white;
+        font-size: 1.125rem;
+        padding: 1.25rem 5.2rem;
+      }
+    }
+
+    .wallet.revert {
+      flex-direction: row-reverse;
+      .cover {
+        padding: 0 0 0 6.25rem;
+      }
+    }
+  }
+
+  .defi {
+    padding: 7.5rem 0 3rem;
+    .list {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    img {
+      width: 60px;
+      height: 60px;
+      margin-bottom: 1.2rem;
+    }
+
+    .name {
+      font-size: 20px;
+      font-weight: 700;
+      margin-bottom: .8rem;
+    }
+
+    .description {
+      color: rgba(34, 34, 34, 0.7);
+    }
+
+    .item {
+      box-sizing: border-box;
+      padding: .5rem;
+      width: 33.3%;
+    }
+
+    .border {
+      box-shadow: 0px 6px 44px rgba(83, 92, 138, 0.1);
+      border-radius: 16px;
+      font-size: 18px;
+      padding: 30px;
+      min-height: 200px;
+    }
+  }
+
+  .apps {
+    padding: 7.5rem 0 6rem;
+    text-align: center;
+
+    .list {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    img {
+      width: 92px;
+      height: 92px;
+      margin-bottom: 1.2rem;
+    }
+
+    .name {
+      font-size: 30px;
+      font-weight: 500;
+      margin-bottom: 1rem;
+    }
+
+    .type {
+      font-size: 16px;
+      margin-bottom: 20px;
+      span {
+        display: inline-box;
+        border-radius: 20px;
+        background: #E1E5F1;
+        color: rgba(34, 34, 34, 0.4);
+        padding: 5px 16px;
+      }
+    }
+
+    .description {
+      color: rgba(34, 34, 34, 0.7);
+    }
+
+    .item {
+      box-sizing: border-box;
+      padding: .5rem;
+      width: 33.3%;
+    }
+
+    .border {
+      background: #F4F6FC;
+      border-radius: 16px;
+      font-size: 18px;
+      padding: 40px 30px;
+      min-height: 320px;
+    }
+  }
+}

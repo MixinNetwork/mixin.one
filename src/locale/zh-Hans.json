@@ -166,6 +166,87 @@
       }
     }
   },
+  "ecosystem": {
+    "ecosystem": "生态",
+    "slogan": "安全、隐私并易于使用的去中心化产品",
+    "wallet": "钱包",
+    "messenger": {
+      "name": "Mixin Messenger",
+      "description": "Mixin Messenger 是一个开源的端对端加密聊天软件，同时集成了 Mixin Network 多链钱包。"
+    },
+    "poolin": {
+      "name": "Poolin Wallet",
+      "description": "Poolin Wallet 支持多币种的虚拟货币钱包."
+    },
+    "partners": "合作伙伴",
+    "defi": "DeFi",
+    "4swap": {
+      "name": "4swap",
+      "description": "用于自动流动性提供的完全去中心化协议。"
+    },
+    "leaf": {
+      "name": "Pando Leaf",
+      "description": "一个去中心化的金融网络，实施衍生品流动性协议。"
+    },
+    "rings": {
+      "name": "Pand Rings",
+      "description": "一种算法自主的利率协议。"
+    },
+    "mixswap": {
+      "name": "MixSwap",
+      "description": "MixSwap 是 Exin 的 MiFi DEX 聚合交易平台。"
+    },
+    "exinlocal": {
+      "name": "ExinLocal",
+      "type": "Trade",
+      "description": "ExinLocal 是一个全球性的点对点市场，可以买卖加密货币。"
+    },
+    "optiondance": {
+      "name": "OptionDance",
+      "description": "比特币和以太坊期权交易所。"
+    },
+    "apps": "应用",
+    "links": {
+      "name": "Links",
+      "type": "Wallet",
+      "description": "基于 Signal 协议构建的端到端加密聊天软件。"
+    },
+    "exinearn": {
+      "name": "ExinEarn",
+      "type": "Trade",
+      "description": "一个可以通过吃喝玩乐获得比特币奖励的平台。"
+    },
+    "exinone": {
+      "name": "ExinOne",
+      "type": "Trade",
+      "description": "一分钟开始投资比特币等数字资产。"
+    },
+    "blockchair": {
+      "name": "BlockChair",
+      "type": "Explore",
+      "description": "区块链浏览器、分析和网络服务。"
+    },
+    "bwatch": {
+      "name": "B.Watch",
+      "type": "ETF",
+      "description": "BOX是完全公开透明的基金产品。 它由7个标准样本组成，分别是BTC、ETH、EOS、DOT、MOB、XIN和UNI。"
+    },
+    "oceanone": {
+      "name": "OceanONE",
+      "type": "Exchange",
+      "description": "Ocean ONE 是一个建立在 Mixin Network 上的去中心化交易所，这几乎是第一次去中心化交易所获得与中心化交易所相同的用户体验。"
+    },
+    "bigdex": {
+      "name": "BigDex",
+      "type": "Exchange",
+      "description": "BigDEX 推出了 PairLaunch 功能，为所有用户提供上币功能。"
+    },
+    "coinview": {
+      "name": "CoinView",
+      "type": "Exchange",
+      "description": "CoinView 是一款免费应用程序，结合了最佳的加密货币市场监控和投资组合管理工具。"
+    }
+  },
   "messenger": {
     "features.description": "最牛逼的去中心化钱包",
     "features": "优秀的特点",
