@@ -26,8 +26,17 @@ let socials = [
 
 let nodes = [
   {
+    title: "general.footer.general",
     class: "",
     list: [
+      {
+        name: "general.footer.contact",
+        address: "mailto:contact@mixin.one",
+      },
+      {
+        name: "general.footer.faq",
+        address: "https://mixinmessenger.zendesk.com/hc/en-us/categories/360001142932-FAQ-Guidebook",
+      },
       {
         name: "general.footer.term",
         address: "/pages/terms",
@@ -39,32 +48,38 @@ let nodes = [
     ],
   },
   {
+    title: "general.footer.technology",
     class: "divide",
     list: [
       {
-        name: "general.footer.document",
+        name: "general.footer.documentation",
         address: "https://developers.mixin.one/",
+      },
+      {
+        name: "general.footer.token",
+        address: "/xin",
       },
       {
         name: "general.footer.whitepaper",
         address: "/assets/Mixin-Draft-2018-07-01.pdf",
       },
+    ],
+  },
+  {
+    title: "general.footer.community",
+    class: "divide",
+    list: [
+      {
+        name: "general.footer.chat",
+        address: "https://en.mixin.group",
+      },
       {
         name: "general.footer.press",
         address: "/assets/Mixin-Logo.zip",
       },
-    ],
-  },
-  {
-    class: "divide",
-    list: [
       {
-        name: "general.footer.contact",
-        address: "mailto:contact@mixin.one",
-      },
-      {
-        name: "general.footer.token",
-        address: "/xin",
+        name: "general.footer.medium",
+        address: "https://medium.com/mixinnetwork",
       },
     ]
   }

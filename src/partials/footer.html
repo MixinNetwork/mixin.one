@@ -15,6 +15,9 @@
     <div class="sitemap">
       {{#each nodes }}
       <div class="list {{ this.class }}">
+        <div class="title">
+          {{ t this.title }}
+        </div>
         {{#each this.list }}
         <div class="item">
           <a href="{{ this.address }}">{{ t this.name }}</a>

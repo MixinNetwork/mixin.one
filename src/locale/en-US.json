@@ -19,18 +19,19 @@
     "footer": {
       "general": "General",
       "contact": "Contact Us",
+      "faq": "FAQ",
       "term": "Terms of Use",
       "privacy": "Privacy Policy",
-      "faq": "FAQ",
 
       "technology": "Technology",
-      "document": "Document",
+      "documentation": "Documentation",
       "token": "Token",
       "whitepaper": "Whitepaper",
 
       "community": "Community",
       "chat": "Chat on Mixin Messenger",
-      "press": "Press Kit"
+      "press": "Press Kit",
+      "medium": "Medium"
     }
   },
   "oauth": {
