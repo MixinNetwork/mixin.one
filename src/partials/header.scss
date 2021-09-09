@@ -49,6 +49,12 @@ header.renewal {
   }
 }
 
+.ecosystem.layout {
+  header.renewal {
+    background: url("./assets/ecosystem_bg.png") no-repeat top;
+  }
+}
+
 @media screen and (max-width: 60rem) {
   header.renewal {
     background: url("./assets/index_mobile_bg.png") no-repeat top;
