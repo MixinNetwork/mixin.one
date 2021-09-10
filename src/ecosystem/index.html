@@ -27,21 +27,18 @@
     <div class="partners">
       <h2> {{ t "ecosystem.partners" }} </h2>
       {{#each partners}}
-      <div class="brands">
+      <div class="scroller">
         <div class="list {{ this.class }}">
           {{#each this.data}}
           <div class="item">
-            <span class="partner">
-              <img src="{{ this.logo }}" alt="{{ this.name }}" />
-              <div class="name">
-                {{ this.name }}
-              </div>
+            <img src="{{ this.logo }}" alt="{{ this.name }}" />
+            <span class="name">
+              {{ this.name }}
             </span>
           </div>
           {{/each}}
         </div>
       </div>
-      <div></div>
       {{/each}}
     </div>
 

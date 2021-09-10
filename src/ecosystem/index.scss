@@ -16,7 +16,8 @@
     .cover {
       padding-right: 6.25rem;
       img {
-        max-width: 375px;
+        width: 375px;
+        min-width: 375px;
       }
     }
 
@@ -42,6 +43,7 @@
         border-radius: 5rem;
         background: rgba(61, 117, 227, 1);
         color: white;
+        display: inline-block;
         font-size: 1.125rem;
         padding: 1.25rem 5.2rem;
       }
@@ -80,15 +82,19 @@
       z-index: 42;
       background: linear-gradient(270deg , rgb(255, 255, 255) 2.52%, rgba(255, 255, 255, 0) 100%) 0% 0% repeat scroll rgba(255, 255, 255, 0);
     }
-    .brands {
+    .scroller {
       position: relative;
       height: 78px;
+      width: 100%;
+      overflow: hidden;
+      margin-bottom: 16px;
     }
     .list {
       position: absolute;
       display: flex;
-      margin-bottom: 16px;
-      width: 500%;
+      flex-direction: row;
+      align-items: center;
+      width: max-content;
     }
     .brands {
       animation: marquee 110s linear infinite;
@@ -104,18 +110,18 @@
       height: 60px;
     }
     .item {
-      display: inline-box;
-      padding: 8px;
-    }
-    .name {
-      padding: 0 32px 0 16px;
-    }
-    .partner {
-      background: #F4F7FF;
-      border-radius: 30px;
+      background: #f7f8fb;
+      border-radius: 32px;
       display: flex;
       align-items: center;
+      justify-content: center;
+      height: 60px;
+      margin: 0 .7rem;
+      padding: 0 1.2rem 0 0;
+    }
+    .name {
       font-size: 30px;
+      padding-left: 12px;
     }
   }
 
@@ -141,6 +147,7 @@
 
     .description {
       color: rgba(34, 34, 34, 0.7);
+      line-height: 22px;
     }
 
     .item {
@@ -184,7 +191,7 @@
       font-size: 16px;
       margin-bottom: 20px;
       span {
-        display: inline-box;
+        display: inline-block;
         border-radius: 20px;
         background: #E1E5F1;
         color: rgba(34, 34, 34, 0.4);
@@ -193,6 +200,7 @@
     }
 
     .description {
+      line-height: 28px;
       color: rgba(34, 34, 34, 0.7);
     }
 
@@ -214,5 +222,100 @@
   @keyframes marquee {
     0% { left: 0; }
     100% { left: -100%; }
+  }
+}
+
+@media screen and (max-width: 60rem) {
+  .ecosystem.layout {
+    h2 {
+      font-size: 34px;
+      margin-bottom: 5rem;
+    }
+
+    .wallets {
+      padding: 5rem 0 2rem;
+      .wallet {
+        flex-direction: column;
+      }
+      .cover {
+        text-align: center;
+        padding: 0 2rem;
+      }
+      .info {
+        text-align: center;
+        img {
+          margin: 0 0 .5rem 0;
+        }
+        .name {
+          flex-direction: column;
+          font-size: 26px;
+          margin-bottom: 10px;
+        }
+        .description {
+          font-size: 18px;
+          line-height: 26px;
+        }
+      }
+      .wallet {
+        margin-bottom: 4rem;
+      }
+      .wallet.revert {
+        flex-direction: column;
+        .cover {
+          padding: 0 2rem;
+        }
+      }
+    }
+
+    .partners {
+      img {
+        width: 38px;
+        height: 38px;
+      }
+      .partner {
+        font-size: 18px;
+      }
+      .item {
+        margin: 0 .2rem;
+        height: 38px;
+      }
+      .name {
+        font-size: 18px;
+      }
+      .brands {
+        animation: marquee 30s linear infinite;
+      }
+      .ecosystems {
+        animation: marquee 40s linear infinite;
+      }
+      .coins {
+        animation: marquee 35s linear infinite;
+      }
+    }
+
+    .defi {
+      .item {
+        width: 100%;
+        text-align: center;
+      }
+
+      .border {
+        padding: 20px;
+      }
+    }
+
+    .apps {
+      .item {
+        width: 100%;
+      }
+
+      .name {
+        font-size: 24px;
+      }
+
+      .description {
+        font-size: 16px;
+      }
+    }
   }
 }
