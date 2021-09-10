@@ -55,6 +55,70 @@
     }
   }
 
+  .partners {
+    overflow: hidden;
+    position: relative;
+    &:before {
+      content: "";
+      height: 100%;
+      pointer-events: none;
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 16%!important;
+      z-index: 42;
+      background: linear-gradient(90deg , rgb(255, 255, 255) 2.52%, rgba(255, 255, 255, 0) 100%) 0% 0% repeat scroll rgba(255, 255, 255, 0);
+    }
+    &:after {
+      content: "";
+      height: 100%;
+      pointer-events: none;
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 16%!important;
+      z-index: 42;
+      background: linear-gradient(270deg , rgb(255, 255, 255) 2.52%, rgba(255, 255, 255, 0) 100%) 0% 0% repeat scroll rgba(255, 255, 255, 0);
+    }
+    .brands {
+      position: relative;
+      height: 78px;
+    }
+    .list {
+      position: absolute;
+      display: flex;
+      margin-bottom: 16px;
+      width: 500%;
+    }
+    .brands {
+      animation: marquee 110s linear infinite;
+    }
+    .ecosystems {
+      animation: marquee 120s linear infinite;
+    }
+    .coins {
+      animation: marquee 100s linear infinite;
+    }
+    img {
+      width: 60px;
+      height: 60px;
+    }
+    .item {
+      display: inline-box;
+      padding: 8px;
+    }
+    .name {
+      padding: 0 32px 0 16px;
+    }
+    .partner {
+      background: #F4F7FF;
+      border-radius: 30px;
+      display: flex;
+      align-items: center;
+      font-size: 30px;
+    }
+  }
+
   .defi {
     padding: 7.5rem 0 3rem;
     .list {
@@ -145,5 +209,10 @@
       padding: 40px 30px;
       min-height: 320px;
     }
+  }
+
+  @keyframes marquee {
+    0% { left: 0; }
+    100% { left: -100%; }
   }
 }

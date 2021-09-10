@@ -12,7 +12,7 @@
         </div>
         <div class="info">
           <div class="name">
-            <img src="{{ this.logo }}" />
+            <img src="{{ this.logo }}" alt="{{ t this.name }}" />
             {{ t this.name }}
           </div>
           <div class="description">
@@ -21,6 +21,27 @@
           <a href="{{ this.address }}" class="download"> Download </a>
         </div>
       </div>
+      {{/each}}
+    </div>
+
+    <div class="partners">
+      <h2> {{ t "ecosystem.partners" }} </h2>
+      {{#each partners}}
+      <div class="brands">
+        <div class="list {{ this.class }}">
+          {{#each this.data}}
+          <div class="item">
+            <span class="partner">
+              <img src="{{ this.logo }}" alt="{{ this.name }}" />
+              <div class="name">
+                {{ this.name }}
+              </div>
+            </span>
+          </div>
+          {{/each}}
+        </div>
+      </div>
+      <div></div>
       {{/each}}
     </div>
 

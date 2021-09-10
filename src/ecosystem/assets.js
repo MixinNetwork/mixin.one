@@ -1,10 +1,10 @@
 const assets = {
   mixin: require('./assets/mixin_wallet.png'),
   mixin_logo: require('./assets/mixin_logo.svg'),
-  poolin: require('./assets/poolin_wallet.png'),
+  poolin_wallet: require('./assets/poolin_wallet.png'),
   poolin_logo: require('./assets/poolin_logo.svg'),
 
-  pl: require('./assets/poolin.svg'),
+  poolin: require('./assets/poolin.svg'),
   fox: require('./assets/fox.svg'),
   quorum: require('./assets/quorum.svg'),
   pando: require('./assets/pando.svg'),
@@ -28,6 +28,7 @@ const assets = {
   exinlocal: require('./assets/exinlocal.svg'),
   oceanone: require('./assets/oceanone.svg'),
   bigdex: require('./assets/bigone.svg'),
+  bigone: require('./assets/bigone.svg'),
   coinview: require('./assets/coinview.svg'),
 };
 

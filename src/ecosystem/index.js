@@ -28,7 +28,7 @@ Ecosystem.prototype = {
       {
         class: "revert",
         logo: assets.poolin_logo,
-        cover: assets.poolin,
+        cover: assets.poolin_wallet,
         name: "ecosystem.poolin.name",
         description: "ecosystem.poolin.description",
         address: "https://poolin.fi/",
@@ -67,6 +67,87 @@ Ecosystem.prototype = {
         description: "ecosystem.optiondance.description",
       },
     ];
+
+    let datas = [0, 0, 0 , 0, 0];
+    let partners = [
+      {
+        class: "brands",
+        data: datas.fill([
+          {
+            logo: assets.links,
+            name: "Links",
+          },
+          {
+            logo: assets.poolin,
+            name: "Poolin",
+          },
+          {
+            logo: assets.exinone,
+            name: "Exin",
+          },
+          {
+            logo: assets.fox,
+            name: "Fox",
+          },
+          {
+            logo: assets.quorum,
+            name: "Quorum",
+          },
+          {
+            logo: assets.bigone,
+            name: "BigONE",
+          },
+        ]).flat(),
+      },
+      {
+        class: "ecosystems",
+        data: datas.fill([
+          {
+            logo: assets.exinearn,
+            name: "ExinEarn",
+          },
+          {
+            logo: assets.coinview,
+            name: "CoinView",
+          },
+          {
+            logo: assets.pando,
+            name: "Pando",
+          },
+          {
+            logo: assets.blockchair,
+            name: "BlockChair",
+          },
+        ]).flat(),
+      },
+      {
+        class: "coins",
+        data: datas.fill([
+          {
+            logo: assets.tron,
+            name: "Tron",
+          },
+          {
+            logo: assets.hzn,
+            name: "Horizen",
+          },
+          {
+            logo: assets.dot,
+            name: "Polkadot",
+          },
+          {
+            logo: assets.mob,
+            name: "MobileCoin",
+          },
+          {
+            logo: assets.vcash,
+            name: "VCash",
+          },
+        ]).flat(),
+      }
+    ]
+
+    console.info(partners);
 
     let apps = [
       {
@@ -128,6 +209,7 @@ Ecosystem.prototype = {
     let index = self.templateIndex({
       slogan: 'ecosystem.slogan',
       wallets: wallets,
+      partners: partners,
       defi: defi,
       apps: apps,
       ...header,
@@ -143,7 +225,6 @@ Ecosystem.prototype = {
       }, 1000);
     });
   }
-
 };
 
 export default Ecosystem;
