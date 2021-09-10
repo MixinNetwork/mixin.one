@@ -97,13 +97,13 @@
       width: max-content;
     }
     .brands {
-      animation: marquee 110s linear infinite;
+      animation: marquee 60s linear infinite;
     }
     .ecosystems {
-      animation: marquee 120s linear infinite;
+      animation: marquee 80s linear infinite;
     }
     .coins {
-      animation: marquee 100s linear infinite;
+      animation: marquee 50s linear infinite;
     }
     img {
       width: 60px;
@@ -215,7 +215,7 @@
       border-radius: 16px;
       font-size: 18px;
       padding: 40px 30px;
-      min-height: 320px;
+      min-height: 360px;
     }
   }
 
