@@ -134,6 +134,17 @@ Homepage.prototype = {
         scrollTop: $(".product.mn").offset().top
       }, 1000);
     });
+
+    $('.bar', '.menu-mobile').on('click', function () {
+      $('.list', '.menu-mobile').toggle();
+    });
+
+    $('header.renewal').on('click', function (e) {
+      if ($(e.target).attr('class') === 'bar') {
+        return;
+      };
+      $('.list', '.menu-mobile').hide();
+    });
   },
 };
 

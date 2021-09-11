@@ -9,6 +9,47 @@ header.renewal {
     flex-direction: column;
   }
 
+  .menu-mobile {
+    display: none;
+    position: relative;
+    .list {
+      display: none;
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 2px 12px 0 rgb(47, 48, 50 / 30%);
+      position: absolute;
+      top: 32px;
+      right: -8px;
+      padding: 24px 32px;
+
+      &:before {
+        display: block;
+        content: "";
+        width: 0;
+        height: 0;
+        position: absolute;
+        top: -10px;
+        right: 16px;
+        border-width: 5px;
+        border-style: solid;
+        border-color: transparent transparent #fff transparent;
+      }
+
+      .list {
+        display: none;
+      }
+
+      .item {
+        font-size: 18px;
+        padding: 12px 0;
+      }
+      a {
+        color: rgba(34, 34, 34, 1);
+        margin-left: 0;
+      }
+    }
+  }
+
   .navi {
     font-size: 1.125rem;
     display: flex;
@@ -71,6 +112,14 @@ header.renewal {
 
     a {
       margin-left: 1.75rem;
+    }
+
+    .menu {
+      display: none;
+    }
+
+    .menu-mobile {
+      display: initial;
     }
   }
 
