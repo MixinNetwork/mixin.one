@@ -13,6 +13,7 @@
       "20113": "Invalid phone verification code."
     },
     "header": {
+      "stats": "Stats",
       "ecosystem": "Ecosystem",
       "messenger": "Messenger",
       "developer": "Developer"
