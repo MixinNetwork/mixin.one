@@ -1,5 +1,5 @@
 .ecosystem.layout {
-  font-family: Helvetica Neue;
+  font-family: Open Sans, sans-serif;
 
   h2 {
     font-size: 58px;
@@ -102,7 +102,7 @@
       animation: marquee 60s linear infinite;
     }
     .ecosystems {
-      animation: marquee 80s linear infinite;
+      animation: marquee 70s linear infinite;
     }
     .coins {
       animation: marquee 50s linear infinite;
@@ -138,7 +138,7 @@
     img {
       width: 60px;
       height: 60px;
-      margin-bottom: 1.2rem;
+      margin-bottom: 1rem;
     }
 
     .name {
@@ -242,6 +242,9 @@
       .cover {
         text-align: center;
         padding: 0 2rem;
+        img {
+          min-width: initial;
+        }
       }
       .info {
         text-align: center;
@@ -311,12 +314,21 @@
         width: 100%;
       }
 
+      img {
+        width: 70px;
+        height: 70px;
+      }
+
       .name {
         font-size: 24px;
       }
 
       .description {
         font-size: 16px;
+      }
+
+      .border {
+        min-height: initial;
       }
     }
   }
