@@ -1,5 +1,5 @@
 footer.renewal {
-  padding: 5rem 0 9.25rem;
+  padding: 5rem 0 5rem;
   background: #363C40;
 
   section.renewal {
@@ -44,6 +44,13 @@ footer.renewal {
     .item {
       margin-bottom: 1.25rem;
     }
+  }
+
+  .copyright {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 16px;
+    margin-top: 80px;
+    text-align: center;
   }
 }
 

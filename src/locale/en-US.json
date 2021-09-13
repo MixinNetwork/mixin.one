@@ -33,7 +33,8 @@
       "community": "Community",
       "chat": "Chat on Mixin Messenger",
       "press": "Press Kit",
-      "medium": "Medium"
+      "medium": "Medium",
+      "copyright": "Copyright © 2021 mixin.one. All rights reserved."
     }
   },
   "oauth": {
