@@ -57,7 +57,7 @@ Ecosystem.prototype = {
         description: "ecosystem.mixswap.description",
       },
       {
-        logo: assets.exinlocal,
+        logo: assets.exinlocal_defi,
         name: "ecosystem.exinlocal.name",
         description: "ecosystem.exinlocal.description",
       },

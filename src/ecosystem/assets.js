@@ -18,6 +18,7 @@ const assets = {
   leaf: require('./assets/leaf.svg'),
   rings: require('./assets/rings.svg'),
   mixswap: require('./assets/mixswap.svg'),
+  exinlocal_defi: require('./assets/exinlocal_defi.svg'),
   optiondance: require('./assets/optiondance.svg'),
 
   links: require('./assets/links.svg'),
