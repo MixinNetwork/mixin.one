@@ -4,23 +4,23 @@ import assets from './assets';
 let socials = [
   {
     cover: assets.ic_medium,
-    address: "https://medium.com/mixinnetwork"
+    address: "https://medium.com/mixinnetwork",
   },
   {
     cover: assets.ic_twitter,
-    address: "https://twitter.com/Mixin_Network"
+    address: "https://twitter.com/Mixin_Network",
   },
   {
     cover: assets.ic_reddit,
-    address: "https://www.reddit.com/r/mixin"
+    address: "https://www.reddit.com/r/mixin",
   },
   {
     cover: assets.ic_telgram,
-    address: "https://t.me/MixinCommunity"
+    address: "https://t.me/MixinCommunity",
   },
   {
     cover: assets.ic_youtube,
-    address: "https://www.youtube.com/channel/UCLWQ94gw7wRK-S5qy4LAVrA"
+    address: "https://www.youtube.com/channel/UCLWQ94gw7wRK-S5qy4LAVrA",
   },
 ];
 

@@ -147,8 +147,6 @@ Ecosystem.prototype = {
       }
     ]
 
-    console.info(partners);
-
     let apps = [
       {
         logo: assets.links,
