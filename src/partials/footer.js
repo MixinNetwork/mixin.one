@@ -53,7 +53,7 @@ let nodes = [
     list: [
       {
         name: "general.footer.documentation",
-        address: "https://developers.mixin.one/",
+        address: "https://developers.mixin.one/document",
       },
       {
         name: "general.footer.token",
