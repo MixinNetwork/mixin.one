@@ -10,7 +10,6 @@ function Ecosystem(router, api) {
 }
 
 Ecosystem.prototype = {
-
   index: function () {
     let self = this;
 
