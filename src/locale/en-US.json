@@ -165,7 +165,7 @@
       },
       "bot": {
         "title": "Bots",
-        "description": "Besides E2EE chat and wallet, Miin Messenger also supports bots, developers can easily implement the bots which are flexible than Telegram and Wechat."
+        "description": "Besides E2EE chat and wallet, Mixin Messenger also supports bots, developers can easily implement the bots which are flexible than Telegram and Wechat."
       }
     }
   },
