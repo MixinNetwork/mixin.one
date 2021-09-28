@@ -99,13 +99,13 @@
     "footer.right": "Copyright © 2021 mixin.one. All rights reserved."
   },
   "homepage": {
-    "slogan": "A secure, easy-to-use, and private decentralized digital asset network",
+    "slogan": "A secure, easy-to-use, and privacy decentralized digital asset network",
     "mn": {
       "title": "Mixin Network",
       "description": "A PoS + BFT + DAG decentralized multi-chain asset network",
       "pos": {
         "title": "PoS",
-        "description": "Mixin Network is a PoS Mainnet. By staking 2% of the XIN in circulation, anyone can run a common node, or pledge a small amount of XIN to join as a verification node. <p></p> The Mainnet focuses on transaction, and the performance can be more than one million TPS, the final irreversible confirmation is less than 1 second, and it's free."
+        "description": "Mixin Network is a PoS Mainnet. By staking 2% of the XIN in circulation, anyone can run a common node, or pledge a small amount of XIN to join as a verification node. <p></p> The Mainnet focuses on transactions, and the performance can be more than one million TPS, the final irreversible confirmation is less than 1 second, and it's free."
       },
       "layer2": {
         "title": "Layer 2",
@@ -148,7 +148,7 @@
         "description": "Provide user identity seed, usually through e-mail or phone."
       },
       "pin": {
-        "title": "Users' PIN Password",
+        "title": "Users' PIN Code",
         "description": "Through a PIN password and the identity seed of the account manager, with the response of different of signature nodes, finally derives the private key."
       }
     },
@@ -165,7 +165,7 @@
       },
       "bot": {
         "title": "Bots",
-        "description": "Besides E2EE chat and wallet, Mixin Messenger also supports bots. Developers can easily implement the bots with different programming languages which are more flexible than Telegram and Wechat."
+        "description": "Besides E2EE chat and wallet, Mixin Messenger also supports bots. Developers can easily implement the bots with different programming languages."
       }
     }
   },
