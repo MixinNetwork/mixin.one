@@ -105,15 +105,15 @@
       "description": "A PoS + BFT + DAG decentralized multi-chain asset network",
       "pos": {
         "title": "PoS",
-        "description": "Mixin Network is a PoS Mainnet. By staking 2% of the XIN in circulation, anyone can run a bookkeeping node, or pledge a small amount of XIN to join as a verification node. <p></p> The Mainnet focuses on transfer, and the performance can be more than one million TPS, the final irreversible confirmation is less than 1 second, and it's free."
+        "description": "Mixin Network is a PoS Mainnet. By staking 2% of the XIN in circulation, anyone can run a common node, or pledge a small amount of XIN to join as a verification node. <p></p> The Mainnet focuses on transaction, and the performance can be more than one million TPS, the final irreversible confirmation is less than 1 second, and it's free."
       },
       "layer2": {
         "title": "Layer 2",
-        "description": "Mixin Network is a Layer 2 multi-chain ledger without currency issuance function, All assets deposit from outside. Users manage multiple public chains by their own private key."
+        "description": "Mixin Network is a Layer 2 multi-chain ledger without currency issuance function, All assets are deposited from outside. Users manage their assets of multiple public blockchains by their own private keys."
       },
       "dag": {
         "title": "DAG",
-        "description": "Mixin uses DAG as the underlying data structure model, which is different from other DAG public chains (such as IOTA, Bytaball, etc.) is not have a central authority node, and the data does not require the final confirmation of the central authority node."
+        "description": "Mixin uses DAG as the underlying data structure model, but is different from other DAG public chains (such as IOTA, Bytaball, etc.). Mixin does not have a central authority node, and the data does not require the final confirmation from the central authority node."
       },
       "tee": {
         "title": "TEE",
@@ -154,18 +154,18 @@
     },
     "mm": {
       "title": "Mixin Messenger",
-      "description": "Mixin Messenger is an open-source E2EE chat APP and multi-chain wallet which supports Mixin Network.",
+      "description": "Mixin Messenger is an open-source E2EE chat APP and multi-chain wallet supported by Mixin Network.",
       "chat": {
         "title": "E2EE Chat",
-        "description": "Base on Signal E2EE protocol, all messages are encrypted, includes audio, images and files, and supports up to 256 encrypted group chat."
+        "description": "Base on Signal E2EE protocol, all messages are encrypted, includes audio, images and files, and supports up to 256 people encrypted group chat."
       },
       "wallet": {
         "title": "Multi Chain Wallet",
-        "description": "Combining the multi-chain wallet of Mixin Network and the decentralized 6-digit digital password solution provided by TIP, users can use digital wallets safely, simply and privately, while enjoying the experience of free transfer and fast account transfer."
+        "description": "Combining the multi-chain wallet of Mixin Network with the decentralized 6-digit digital password solution provided by TIP, users can use digital wallets safely, simply and privately, while enjoying the experience of free and lightning fast digital assets transfer."
       },
       "bot": {
         "title": "Bots",
-        "description": "Besides E2EE chat and wallet, Mixin Messenger also supports bots, developers can easily implement the bots which are flexible than Telegram and Wechat."
+        "description": "Besides E2EE chat and wallet, Mixin Messenger also supports bots. Developers can easily implement the bots with different programming languages which are more flexible than Telegram and Wechat."
       }
     }
   },
