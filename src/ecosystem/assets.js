@@ -4,6 +4,7 @@ const assets = {
   poolin_wallet: require('./assets/poolin_wallet.png'),
   poolin_logo: require('./assets/poolin_logo.svg'),
   fennec: require('./assets/fennec.png'),
+  fennec_log: require('./assets/fennec_logo.png'),
 
   poolin: require('./assets/poolin.svg'),
   fox: require('./assets/fox.svg'),

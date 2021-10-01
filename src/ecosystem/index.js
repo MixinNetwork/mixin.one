@@ -26,7 +26,7 @@ Ecosystem.prototype = {
       },
       {
         class: "revert",
-        logo: assets.mixin_logo,
+        logo: assets.fennec_log,
         cover: assets.fennec,
         name: "ecosystem.fennec.name",
         description: "ecosystem.fennec.description",
