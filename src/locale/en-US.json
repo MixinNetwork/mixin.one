@@ -181,6 +181,10 @@
       "name": "Poolin Wallet",
       "description": "Poolin Wallet guarantees security of cryptocurrency assets, which supports multifunctional operation of BTC, ETH, LTC, ZEC... More currencies are being optimized."
     },
+    "fennec": {
+      "name": "Fennec",
+      "description": "A web browser extension wallet for Mixin Network."
+    },
     "partners": "Partners",
     "defi": "DeFi",
     "4swap": {

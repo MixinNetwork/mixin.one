@@ -3,6 +3,7 @@ const assets = {
   mixin_logo: require('./assets/mixin_logo.svg'),
   poolin_wallet: require('./assets/poolin_wallet.png'),
   poolin_logo: require('./assets/poolin_logo.svg'),
+  fennec: require('./assets/fennec.png'),
 
   poolin: require('./assets/poolin.svg'),
   fox: require('./assets/fox.svg'),

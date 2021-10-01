@@ -26,11 +26,11 @@ Ecosystem.prototype = {
       },
       {
         class: "revert",
-        logo: assets.poolin_logo,
+        logo: assets.fennec,
         cover: assets.poolin_wallet,
-        name: "ecosystem.poolin.name",
-        description: "ecosystem.poolin.description",
-        address: "https://poolin.fi/",
+        name: "ecosystem.fennec.name",
+        description: "ecosystem.fennec.description",
+        address: "https://github.com/fox-one/fennec",
       },
     ];
 
