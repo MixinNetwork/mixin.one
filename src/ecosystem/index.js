@@ -26,8 +26,8 @@ Ecosystem.prototype = {
       },
       {
         class: "revert",
-        logo: assets.fennec,
-        cover: assets.poolin_wallet,
+        logo: assets.mixin_logo,
+        cover: assets.fennec,
         name: "ecosystem.fennec.name",
         description: "ecosystem.fennec.description",
         address: "https://github.com/fox-one/fennec",
