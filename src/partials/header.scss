@@ -132,3 +132,12 @@ header.renewal {
     }
   }
 }
+
+@media screen and (max-height: 50rem) {
+  .ecosystem.layout {
+    header.renewal {
+      background: url("./assets/ecosystem_13_bg.png") no-repeat center;
+      background-size: cover;
+    }
+  }
+}
