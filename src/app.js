@@ -6,6 +6,8 @@ import MixinUtils from './utils/mixin.js';
 import Locale from './locale';
 import API from './api';
 import Home from './home';
+import Homepage from './homepage';
+import Ecosystem from './ecosystem';
 import Code from './code';
 import OAuth from './oauth';
 import Page from './page';
@@ -94,8 +96,11 @@ router.on({
   '/mm': function () {
     router.replace('/messenger');
   },
+  '/ecosystem': function () {
+    new Ecosystem(router, api).index();
+  },
   '/': function () {
-    new Home(router, api).index();
+    new Homepage(router, api).index();
   }
 }).notFound(function () {
   $('#layout-container').html(Error404());

@@ -20,19 +20,19 @@ Home.prototype = {
     const self = this;
     $('body').attr('class', 'home layout');
     $('#layout-container').html(self.templateIndex({
-      new_bg_url: require('./assets/BG.jpg').default,
-      new_right_url: require('./assets/right.png').default,
-      new_logo_url: require('./assets/logo.png').default,
-      new_menus_url: require('./assets/menus.png').default,
-      new_home_1_url: require('./assets/home_1.png').default,
-      new_home_2_1_url: require('./assets/home_2_1.png').default,
-      new_home_2_2_url: require('./assets/home_2_2.png').default,
-      new_home_3_1_url: require('./assets/home_3_1.png').default,
-      new_home_3_2_url: require('./assets/home_3_2.png').default,
-      logoURL: require('./logo.png').default,
-      playURL: require('./google-play.png').default,
-      storeURL: require('./app-store.png').default,
-      messengerURL: require('./messenger.png').default
+      new_bg_url: require('./assets/BG.jpg'),
+      new_right_url: require('./assets/right.png'),
+      new_logo_url: require('./assets/logo.png'),
+      new_menus_url: require('./assets/menus.png'),
+      new_home_1_url: require('./assets/home_1.png'),
+      new_home_2_1_url: require('./assets/home_2_1.png'),
+      new_home_2_2_url: require('./assets/home_2_2.png'),
+      new_home_3_1_url: require('./assets/home_3_1.png'),
+      new_home_3_2_url: require('./assets/home_3_2.png'),
+      logoURL: require('./logo.png'),
+      playURL: require('./google-play.png'),
+      storeURL: require('./app-store.png'),
+      messengerURL: require('./messenger.png')
     }));
     var os = self.getMobileOperatingSystem();
     if (os === 'iOS') {
@@ -77,7 +77,7 @@ Home.prototype = {
     $('title').html('XIN Token Distribution - Mixin');
     $('body').attr('class', 'home layout');
     $('#layout-container').html(self.templateXIN({
-      logoURL: require('./logo.png').default
+      logoURL: require('./logo.png')
     }));
   },
 
@@ -85,14 +85,14 @@ Home.prototype = {
     const self = this;
     $('body').attr('class', 'messenger layout');
     $('#layout-container').html(self.templateMessenger({
-      logoURL: require('./logo.png').default,
-      playURL: require('./google-play.png').default,
-      storeURL: require('./app-store.png').default,
-      apkURL: require('./apk.png').default,
-      messengerURL: require('./messenger.png').default,
-      macURL: require('./mac.png').default,
-      windowsURL: require('./windows.png').default,
-      macDesktopURL: require('./mac-desktop.png').default
+      logoURL: require('./logo.png'),
+      playURL: require('./google-play.png'),
+      storeURL: require('./app-store.png'),
+      apkURL: require('./apk.png'),
+      messengerURL: require('./messenger.png'),
+      macURL: require('./mac.png'),
+      windowsURL: require('./windows.png'),
+      macDesktopURL: require('./mac-desktop.png')
     }));
     var os = self.getMobileOperatingSystem();
     if (navigator.language && navigator.language.includes('zh-CN')) {

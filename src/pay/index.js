@@ -20,7 +20,7 @@ Pay.prototype = {
     const self = this;
     const defaultIcon = "https://images.mixin.one/yH_I5b0GiV2zDmvrXRyr3bK5xusjfy5q7FX3lw3mM2Ryx4Dfuj6Xcw8SHNRnDKm7ZVE3_LvpKlLdcLrlFQUBhds=s128";
     let data = {
-      arrowURL: require('./arrow.svg').default
+      arrowURL: require('./arrow.svg')
     };
     self.api.account.check(function (user) {
       if (!user.data) {
@@ -120,7 +120,7 @@ Pay.prototype = {
       }
       var payment = resp.data;
       payment['params'] = window.location.search;
-      payment['logoURL'] = require('../home/logo.png').default;
+      payment['logoURL'] = require('../home/logo.png');
       payment['isPaid'] = payment.status === 'paid';
       $('body').attr('class', 'pay layout');
       $('#layout-container').html(self.template(payment));

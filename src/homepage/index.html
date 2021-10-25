@@ -1,0 +1,38 @@
+<div class="home container">
+  {{> ../partials/header}}
+
+  {{#each products}}
+  <div class="product {{ this.class }}">
+    <section class="renewal">
+      <div class="summary">
+        <div class="title">
+          {{ t this.title }}
+        </div>
+        <div class="description">
+          {{ t this.description }}
+        </div>
+      </div>
+      {{#each this.features}}
+      <div class="feature {{ this.class }}">
+        <h4>
+          {{ t this.title }}
+        </h4>
+        <div class="figure">
+          <img src="{{ this.cover }}" alt="{{ t this.title }}" />
+        </div>
+        <dl>
+          <dt>
+            {{ t this.title }}
+          </dt>
+          <dd>
+            {{{ t this.description }}}
+          </dd>
+        </dl>
+      </div>
+      {{/each}}
+    </section>
+  </div>
+  {{/each}}
+
+  {{> ../partials/footer}}
+</div>

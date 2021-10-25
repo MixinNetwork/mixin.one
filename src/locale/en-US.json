@@ -11,6 +11,30 @@
       "20110": "Invalid phone number.",
       "20112": "Invalid invitation code.",
       "20113": "Invalid phone verification code."
+    },
+    "header": {
+      "stats": "Stats",
+      "ecosystem": "Ecosystem",
+      "messenger": "Messenger",
+      "developer": "Developer"
+    },
+    "footer": {
+      "general": "General",
+      "contact": "Contact Us",
+      "faq": "FAQ",
+      "term": "Terms of Use",
+      "privacy": "Privacy Policy",
+
+      "technology": "Technology",
+      "documentation": "Documentation",
+      "token": "Token",
+      "whitepaper": "Whitepaper",
+
+      "community": "Community",
+      "chat": "Chat on Mixin Messenger",
+      "press": "Press Kit",
+      "medium": "Medium",
+      "copyright": "Copyright © 2021 mixin.one. All rights reserved."
     }
   },
   "oauth": {
@@ -73,6 +97,162 @@
     "footer.four": "Press Kit",
     "footer.five": "Jobs",
     "footer.right": "Copyright © 2021 mixin.one. All rights reserved."
+  },
+  "homepage": {
+    "slogan": "A secure, easy-to-use, and privacy decentralized digital asset network",
+    "mn": {
+      "title": "Mixin Network",
+      "description": "A PoS + BFT + DAG decentralized multi-chain asset network",
+      "pos": {
+        "title": "PoS",
+        "description": "Mixin Network is a PoS Mainnet. By staking 2% of the XIN in circulation, anyone can run a common node, or pledge a small amount of XIN to join as a verification node. <p></p> The Mainnet focuses on transactions, and the performance can be more than one million TPS, the final irreversible confirmation is less than 1 second, and it's free."
+      },
+      "layer2": {
+        "title": "Layer 2",
+        "description": "Mixin Network is a Layer 2 multi-chain ledger without currency issuance function, All assets are deposited from outside. Users manage their assets of multiple public blockchains by their own private keys."
+      },
+      "dag": {
+        "title": "DAG",
+        "description": "Mixin uses DAG as the underlying data structure model, but is different from other DAG public chains (such as IOTA, Bytaball, etc.). Mixin does not have a central authority node, and the data does not require the final confirmation from the central authority node."
+      },
+      "tee": {
+        "title": "TEE",
+        "description": "Mixin Network uses Intel SGX as the implementation of TEE to ensure security. All nodes must run in a trusted execution environment to ensure that no one can change the running code in the trusted execution environment without being noticed."
+      },
+      "crypto_note": {
+        "title": "CryptoNote",
+        "description": "Enhancing UTXO transaction privacy through CryptoNote, the transaction is known by participants only, even Mainnet cannot know the transaction party."
+      }
+    },
+    "mtg": {
+      "title": "MTG",
+      "description": "MTG（Mixin Trusted Group）is a solution that replaces smart contracts. Similar to the sharding technology of Ethereum, each MTG is composed of multiple independent nodes. And reach consensus through the multi-signature technology of the Mixin Mainnet.",
+      "security": {
+        "title": "Security",
+        "description": "In addition to the security mechanism of the MTG node itself, the multi-signature assets managed by MTG will also be protected by the Mixin Network mainnet."
+      },
+      "flexible": {
+        "title": "Flexible",
+        "description": "Developers can use any programing language (Go, Java, PHP, Rust, etc.) to implement MTG, and can flexibly form a decentralized parallel network that requires or does not require a license."
+      }
+    },
+    "tip": {
+      "title": "TIP",
+      "description": "TIP (Throttled Identity Protocol) is a decentralized key management protocol, that manages digital assets safely and simply through a 6-digit password.",
+      "network": {
+        "title": "Decentralized Signature Network",
+        "description": "Decentralized Signature Network is composed of many nodes. The nodes run a distributed key generation protocol to authenticate signature requests from users."
+      },
+      "manager": {
+        "title": "Trusted Account Management Service",
+        "description": "Provide user identity seed, usually through e-mail or phone."
+      },
+      "pin": {
+        "title": "Users' PIN Code",
+        "description": "Through a PIN password and the identity seed of the account manager, with the response of different of signature nodes, finally derives the private key."
+      }
+    },
+    "mm": {
+      "title": "Mixin Messenger",
+      "description": "Mixin Messenger is an open-source E2EE chat APP and multi-chain wallet supported by Mixin Network.",
+      "chat": {
+        "title": "E2EE Chat",
+        "description": "Base on Signal E2EE protocol, all messages are encrypted, includes audio, images and files, and supports up to 256 people encrypted group chat."
+      },
+      "wallet": {
+        "title": "Multi Chain Wallet",
+        "description": "Combining the multi-chain wallet of Mixin Network with the decentralized 6-digit digital password solution provided by TIP, users can use digital wallets safely, simply and privately, while enjoying the experience of free and lightning fast digital assets transfer."
+      },
+      "bot": {
+        "title": "Bots",
+        "description": "Besides E2EE chat and wallet, Mixin Messenger also supports bots. Developers can easily implement the bots with different programming languages."
+      }
+    }
+  },
+  "ecosystem": {
+    "ecosystem": "Ecosystem",
+    "slogan": "Decentralized products that are safe, private and used at the same time",
+    "wallet": "Wallet",
+    "messenger": {
+      "name": "Mixin Messenger",
+      "description": "Mixin is a messenger with end-to-end encryption built on the Signal protocol. Besides its messaging features, Mixin supports wallet and transfer functionality for Bitcoin, Ethereum, Bitcoin Cash, Ripple, Zcash, Dogocoin, Horizen, XEM, Dash, Litecoin and Sia."
+    },
+    "poolin": {
+      "name": "Poolin Wallet",
+      "description": "Poolin Wallet guarantees security of cryptocurrency assets, which supports multifunctional operation of BTC, ETH, LTC, ZEC... More currencies are being optimized."
+    },
+    "fennec": {
+      "name": "Fennec",
+      "description": "Fennec is an open source browser extension wallet for Mixin Network."
+    },
+    "partners": "Partners",
+    "defi": "DeFi",
+    "4swap": {
+      "name": "4swap",
+      "description": "A fully decentralized protocol for automated liquidity provision."
+    },
+    "leaf": {
+      "name": "Pando Leaf",
+      "description": "A decentralized financial network, implement a derivatives liquidity protocol."
+    },
+    "rings": {
+      "name": "Pand Rings",
+      "description": "An algorithmic, autonomous interest rate protocol."
+    },
+    "mixswap": {
+      "name": "MixSwap",
+      "description": "MixSwap is the MiFi DEX aggregation trading platform of Exin."
+    },
+    "exinlocal": {
+      "name": "ExinLocal",
+      "type": "Trade",
+      "description": "ExinLocal is a worldwide peer-to-peer marketplace where buy and sell cryptocurrencies."
+    },
+    "optiondance": {
+      "name": "OptionDance",
+      "description": "Bitcoin and Ethereum Options Exchange."
+    },
+    "apps": "Apps",
+    "links": {
+      "name": "Links",
+      "type": "Wallet",
+      "description": "An end-to-end encryption messenger built on the Signal protocol."
+    },
+    "exinearn": {
+      "name": "ExinEarn",
+      "type": "Trade",
+      "description": "A platform where you can get bitcoin rewards for eating, drinking and playing"
+    },
+    "exinone": {
+      "name": "ExinOne",
+      "type": "Trade",
+      "description": "Start investing in digital assets such as Bitcoin in one minute"
+    },
+    "blockchair": {
+      "name": "BlockChair",
+      "type": "Explore",
+      "description": "Blockchain explorer, analytics and web services"
+    },
+    "bwatch": {
+      "name": "B.Watch",
+      "type": "ETF",
+      "description": "BOX is a completely open and transparent fund product. It consists of 7 standard samples, which are BTC, ETH, EOS, DOT, MOB, XIN, and UNI."
+    },
+    "oceanone": {
+      "name": "OceanONE",
+      "type": "Exchange",
+      "description": "Ocean ONE is a decentralized exchange built on Mixin Network, it's almost the first time that a decentralized exchange gain the same user experience as a centralized one."
+    },
+    "bigdex": {
+      "name": "BigDex",
+      "type": "Exchange",
+      "description": "BigDEX has launched the PairLaunch function which provides all users to list the tokens."
+    },
+    "coinview": {
+      "name": "CoinView",
+      "type": "Exchange",
+      "description": "CoinView is a free app combining the best cryptocurrency market monitoring and portfolio management tools."
+    }
   },
   "messenger": {
     "features.description": "An open source cryptocurrency wallet, which supports almost all popular cryptocurrencies.",

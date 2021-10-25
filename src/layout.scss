@@ -34,6 +34,10 @@ input::-webkit-inner-spin-button {
     -webkit-appearance: none;
 }
 
+img {
+  max-width: 100%;
+}
+
 .loading.layout {
   height: 100%;
   cursor: wait;
@@ -160,4 +164,13 @@ input::-webkit-inner-spin-button {
 
 .animated.slideOutUp.noty {
   animation-duration: 0.2s;
+}
+
+section.renewal {
+  box-sizing: border-box;
+  width: 75rem;
+  max-width: 100%;
+  padding: 0 1.875rem;
+  margin: 0 auto;
+  overflow: hidden;
 }

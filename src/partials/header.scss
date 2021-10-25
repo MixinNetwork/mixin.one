@@ -1,0 +1,143 @@
+header.renewal {
+  background: url("./assets/index_bg.png") no-repeat center;
+  background-size: cover;
+  color: white;
+
+  section.renewal {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .menu-mobile {
+    display: none;
+    position: relative;
+    .list {
+      display: none;
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 2px 12px 0 rgb(47, 48, 50 / 30%);
+      position: absolute;
+      top: 32px;
+      right: -8px;
+      padding: 24px 32px;
+
+      &:before {
+        display: block;
+        content: "";
+        width: 0;
+        height: 0;
+        position: absolute;
+        top: -10px;
+        right: 16px;
+        border-width: 5px;
+        border-style: solid;
+        border-color: transparent transparent #fff transparent;
+      }
+
+      .list {
+        display: none;
+      }
+
+      .item {
+        font-size: 18px;
+        padding: 12px 0;
+      }
+      a {
+        color: rgba(34, 34, 34, 1);
+        margin-left: 0;
+      }
+    }
+  }
+
+  .navi {
+    font-size: 1.125rem;
+    display: flex;
+    align-items: center;
+    height: 6.25rem;
+  }
+
+  .menu {
+    a {
+      color: white;
+      margin-left: 3.75rem;
+    }
+  }
+
+  .brand {
+    flex-grow: 1;
+    img {
+      margin-right: .5rem;
+      width: 2.1rem;
+    }
+  }
+
+  .slogan {
+    flex-grow: 1;
+    font-size: 3.625rem;
+    font-weight: 500;
+    line-height: 5.125rem;
+    display: flex;
+    align-items: center;
+    width: 50%;
+  }
+
+  .down {
+    text-align: center;
+    padding-bottom: 1.25rem;
+  }
+
+  .ic_down {
+    cursor: pointer;
+  }
+}
+
+.ecosystem.layout {
+  header.renewal {
+    background: url("./assets/ecosystem_bg.png") no-repeat center;
+  }
+}
+
+@media screen and (max-width: 60rem) {
+  header.renewal {
+    background: url("./assets/index_mobile_bg.png") no-repeat top;
+    background-size: cover;
+
+    .slogan {
+      width: 100%;
+      font-size: 1.875rem;
+      line-height: 2.5rem;
+      align-items: flex-end;
+      text-align: center;
+      padding-bottom: 4rem;
+    }
+
+    a {
+      margin-left: 1.75rem;
+    }
+
+    .menu {
+      display: none;
+    }
+
+    .menu-mobile {
+      display: initial;
+    }
+  }
+
+  .ecosystem.layout {
+    header.renewal {
+      background: url("./assets/ecosystem_mobile_bg.png") no-repeat top;
+      background-size: cover;
+    }
+  }
+}
+
+@media screen and (max-height: 50rem) {
+  .ecosystem.layout {
+    header.renewal {
+      background: url("./assets/ecosystem_13_bg.png") no-repeat center;
+      background-size: cover;
+    }
+  }
+}

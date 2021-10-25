@@ -1,0 +1,90 @@
+<div class="ecosystem container">
+  {{> ../partials/header}}
+
+  <section class="renewal">
+    <div class="wallets">
+      <h2> {{ t "ecosystem.wallet" }} </h2>
+
+      {{#each wallets}}
+      <div class="wallet {{ this.class }}">
+        <div class="cover">
+          <img src="{{ this.cover }}" />
+        </div>
+        <div class="info">
+          <div class="name">
+            <img src="{{ this.logo }}" alt="{{ t this.name }}" />
+            {{ t this.name }}
+          </div>
+          <div class="description">
+            {{ t this.description }}
+          </div>
+          <a href="{{ this.address }}" class="download"> Download </a>
+        </div>
+      </div>
+      {{/each}}
+    </div>
+
+    <div class="partners">
+      <h2> {{ t "ecosystem.partners" }} </h2>
+      {{#each partners}}
+      <div class="scroller">
+        <div class="list {{ this.class }}">
+          {{#each this.data}}
+          <div class="item">
+            <img src="{{ this.logo }}" alt="{{ this.name }}" />
+            <span class="name">
+              {{ this.name }}
+            </span>
+          </div>
+          {{/each}}
+        </div>
+      </div>
+      {{/each}}
+    </div>
+
+    <div class="defi">
+      <h2> {{ t "ecosystem.defi" }} </h2>
+      <div class="list">
+        {{#each defi}}
+        <div class="item">
+          <div class="border">
+            <img src="{{this.logo}}"/>
+            <div class="name">
+              {{ t this.name }}
+            </div>
+            <div class="description">
+              {{ t this.description }}
+            </div>
+          </div>
+        </div>
+        {{/each}}
+      </div>
+    </div>
+
+    <div class="apps">
+      <h2> {{ t "ecosystem.apps" }} </h2>
+      <div class="list">
+        {{#each apps}}
+        <div class="item">
+          <div class="border">
+            <img src="{{this.logo}}"/>
+            <div class="name">
+              {{ t this.name }}
+            </div>
+            <div class="type">
+              <span>
+                {{ t this.type }}
+              </span>
+            </div>
+            <div class="description">
+              {{ t this.description }}
+            </div>
+          </div>
+        </div>
+        {{/each}}
+      </div>
+    </div>
+  </section>
+
+  {{> ../partials/footer}}
+</div>

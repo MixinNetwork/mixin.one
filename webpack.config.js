@@ -43,15 +43,22 @@ module.exports = {
 
   module: {
     rules: [{
-      test: /\.html$/,
-      use: ["handlebars-loader?helperDirs[]=" + __dirname + "/src/helpers"]
+      test: /\.(html|handlebars)$/,
+      use: [{
+        loader: 'handlebars-loader',
+        options: {
+          helperDirs: [__dirname + "/src/helpers"],
+          extensions: ['.html'],
+          partialDirs: [path.join(__dirname, '/src/partials')]
+        },
+      }]
     }, {
       test: /\.(scss|css)$/,
       use: [
         {
           loader: MiniCssExtractPlugin.loader,
           options: {
-            esModule: true
+            esModule: true,
           },
         },
         'css-loader',
@@ -59,9 +66,7 @@ module.exports = {
       ]
     }, {
       test: /\.(woff|woff2|eot|ttf|otf|svg|png|jpg|gif)$/,
-      use: [
-        'file-loader'
-      ]
+      type: 'asset/resource'
     }]
   },
 
