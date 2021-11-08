@@ -22,7 +22,7 @@
     "uuid-validate": "0.0.3"
   },
   "devDependencies": {
-    "css-loader": "^5.2.6",
+    "css-loader": "^6.5.1",
     "favicons-webpack-plugin": "^5.0.2",
     "file-loader": "^6.2.0",
     "handlebars-loader": "^1.7.1",
