@@ -32,7 +32,8 @@ Home.prototype = {
       logoURL: require('./logo.png').default,
       playURL: require('./google-play.png').default,
       storeURL: require('./app-store.png').default,
-      messengerURL: require('./messenger.png').default
+      messengerURL: require('./messenger.png').default,
+      zeromesh: window.location.href.includes("zeromesh")
     }));
     var os = self.getMobileOperatingSystem();
     if (os === 'iOS') {
