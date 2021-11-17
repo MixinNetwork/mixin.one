@@ -72,7 +72,8 @@
     "footer.three": "Open Source",
     "footer.four": "Press Kit",
     "footer.five": "Jobs",
-    "footer.right": "Copyright © 2021 mixin.one. All rights reserved."
+    "footer.right": "Copyright © 2021 mixin.one. All rights reserved.",
+    "footer.record": "京ICP备17003614号-1"
   },
   "messenger": {
     "features.description": "An open source cryptocurrency wallet, which supports almost all popular cryptocurrencies.",
