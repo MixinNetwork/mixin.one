@@ -232,9 +232,6 @@
       .display {
         flex-direction: column;
         margin: 0;
-        &.pc {
-          display: none;
-        }
         main {
           width: 100%;
           .intro {
@@ -287,6 +284,21 @@
         }
         aside {
           display: none;
+          &.desktop {
+            display: block;
+            width: 100%;
+            padding: 0;
+            margin-bottom: 6rem;
+            h1 {
+              text-align: center;
+            }
+            .description {
+              text-align: center;
+            }
+            .download.pc {
+              justify-content: center;
+            }
+          }
         }
       }
     }
