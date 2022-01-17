@@ -5,7 +5,7 @@ function Payment(api) {
 Payment.prototype = {
   validate: function (callback, recipientId, assetId, amount, traceId) {
     var params = {
-      counter_user_id: recipientId,
+      opponent_id: recipientId,
       asset_id: assetId,
       amount: amount,
       trace_id: traceId
