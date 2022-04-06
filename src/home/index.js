@@ -96,15 +96,18 @@ Home.prototype = {
       macDesktopURL: require('./mac-desktop.png').default
     }));
     var os = self.getMobileOperatingSystem();
-    if (navigator.language && navigator.language.includes('zh-CN')) {
+    if (os === 'iOS' && navigator.language && navigator.language.includes('zh-CN')) {
       $('.special.version').removeClass('hidden');
-    }
-    if (os === 'iOS') {
       $('.android.button').hide();
-      $('.android.bar').hide();
+      $('.ios.bar').show();
     } else if (os === 'Android') {
+      $('.special.version').removeClass('hidden');
       $('.ios.button').hide();
-      $('.ios.bar').hide();
+      if (navigator.language && navigator.language.includes('zh-CN')) {
+        $('.android.bar.zh').show();
+      } else {
+        $('.android.bar.en').show();
+      }
     }
     $('.close', '.special.version').on('click', () => {
       $('.special.version').hide();

@@ -35,8 +35,11 @@
     &.hidden {
       display: none;
     }
-    .bar {
+    .box {
       flex-grow: 1;
+    }
+    .bar {
+      display: none;
     }
     a {
       color: #729fe8;
