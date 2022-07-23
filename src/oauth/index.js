@@ -20,7 +20,7 @@ OAuth.prototype = {
     scope = scope.replace(/\+/g, ' ');
     const codeChallenge = params.code_challenge || "";
     let state = params.state || "";
-    stateBase64 = base64.encode(base64.decode(state));
+    const stateBase64 = base64.encode(base64.decode(state));
     // TODO deprecated
     if (state === stateBase64) {
       state = stateBase64;
