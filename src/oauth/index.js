@@ -3,6 +3,7 @@ import $ from 'jquery';
 import QRious from 'qrious';
 import URLUtils from '../utils/url.js';
 import MixinUtils from '../utils/mixin.js';
+import base64 from '../utils/base64.js';
 
 function OAuth(router, api) {
   this.router = router;
@@ -19,7 +20,7 @@ OAuth.prototype = {
     scope = scope.replace(/\+/g, ' ');
     const codeChallenge = params.code_challenge || "";
     let state = params.state || "";
-    state = btoa(atob(state));
+    state = base64.encode(base64.decode(state));
     const returnTo = params.return_to || "";
     self.api.authorization.connect(function (resp) {
       if (resp.error) {
