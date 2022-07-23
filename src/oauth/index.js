@@ -20,7 +20,11 @@ OAuth.prototype = {
     scope = scope.replace(/\+/g, ' ');
     const codeChallenge = params.code_challenge || "";
     let state = params.state || "";
-    state = base64.encode(base64.decode(state));
+    stateBase64 = base64.encode(base64.decode(state));
+    // TODO deprecated
+    if (state === stateBase64) {
+      state = stateBase64;
+    };
     const returnTo = params.return_to || "";
     self.api.authorization.connect(function (resp) {
       if (resp.error) {
