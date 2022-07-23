@@ -18,7 +18,8 @@ OAuth.prototype = {
     let scope = params.scope || "";
     scope = scope.replace(/\+/g, ' ');
     const codeChallenge = params.code_challenge || "";
-    const state = params.state || "";
+    let state = params.state || "";
+    state = btoa(atob(state));
     const returnTo = params.return_to || "";
     self.api.authorization.connect(function (resp) {
       if (resp.error) {
