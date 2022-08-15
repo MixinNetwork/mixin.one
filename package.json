@@ -5,7 +5,7 @@
   "main": "app.js",
   "dependencies": {
     "buffer": "^6.0.3",
-    "decimal.js": "^10.3.1",
+    "decimal.js": "^10.4.0",
     "favicons": "^6.2.2",
     "handlebars": "^4.7.7",
     "jquery": "^3.6.0",
