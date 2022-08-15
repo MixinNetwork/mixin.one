@@ -34,7 +34,7 @@ Home.prototype = {
       storeURL: require('./app-store.png').default,
       messengerURL: require('./messenger.png').default,
       zeromesh: window.location.href.includes("zeromesh"),
-      copyright: (new Date()).getFullYear(),
+      copyright: (new Date()).getFullYear()
     }));
     var os = self.getMobileOperatingSystem();
     if (os === 'iOS') {
