@@ -34,5 +34,20 @@
       <div class="meta name">{{t 'snapshots.transaction.asset'}}</div>
       <div class="meta value"><a href="/snapshots/{{asset.asset_id}}" data-navigo>{{asset.name}}</a></div>
     </li>
+    <li class="meta link">
+      <div class="meta name">{{t 'snapshots.transaction.link'}}</div>
+      <div class="meta value">
+        <div class="icon">
+          <a href="{{viewblockLink}}">
+            <img src="{{viewblockIcon}}" alt="tx-viewblock-link" title="viewblock"/>
+          </a>
+        </div>
+        <div class="icon">
+          <a href="{{blockchairLink}}">
+            <img src="{{blockchairIcon}}" alt="tx-blockchair-link" title="blockchair"/>
+          </a>
+        </div>
+      </div>
+    </li>
   </ul>
 </div>
