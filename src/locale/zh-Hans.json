@@ -32,7 +32,8 @@
       "time": "时间戳",
       "source": "类型",
       "amount": "数量",
-      "asset": "资产"
+      "asset": "资产",
+      "link": "链接"
     }
   },
   "receipt": {

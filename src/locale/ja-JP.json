@@ -32,7 +32,8 @@
       "time": "タイムスタンプ",
       "source": "タイプ",
       "amount": "数量",
-      "asset": "資産"
+      "asset": "資産",
+      "link": "リンク"
     }
   },
   "receipt": {

@@ -362,6 +362,29 @@
       a {
         color: $color-main-highlight;
       }
+
+      .icon {
+        display: inline-block;
+        height: 40px;
+        width: 40px;
+        overflow: hidden;
+        cursor: pointer;
+
+        a {
+          display: inline-block;
+          width: 100%;
+          height: 100%;
+        }
+
+        img {
+          width: 100%;
+          height: 100%;
+        }
+
+        #viewblock {
+          transform: scale(1.3);
+        }
+      }
     }
 
     &.out li.id {

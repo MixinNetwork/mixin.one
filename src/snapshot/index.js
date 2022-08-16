@@ -92,6 +92,10 @@ Snapshot.prototype = {
       s.peakTPS = parseInt(network.peak_throughput).toLocaleString(undefined, { maximumFractionDigits: 0 });
       s.snapshotsCount = parseInt(network.snapshots_count).toLocaleString(undefined, { maximumFractionDigits: 0 });
       s.assetsCount = parseInt(network.assets_count).toLocaleString(undefined, { maximumFractionDigits: 0 });
+      s.viewblockLink = 'https://v2.viewblock.io/mixin/snapshot/' + s.snapshot_hash;
+      s.viewblockIcon = require('./viewblock-logo.png').default;
+      s.blockchairLink = 'https://blockchair.com/mixin/snapshot/' + s.snapshot_hash;
+      s.blockchairIcon = require('./blockchair-logo.png').default;
       $('body').attr('class', 'snapshot layout');
       $('title').html('Mixin Network');
       $('#layout-container').html(self.templateShow(s));

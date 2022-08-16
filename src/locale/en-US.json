@@ -32,7 +32,8 @@
       "time": "Timestamp",
       "source": "Type",
       "amount": "Amount",
-      "asset": "Asset"
+      "asset": "Asset",
+      "link": "link"
     }
   },
   "receipt": {
