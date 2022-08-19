@@ -98,7 +98,7 @@ Home.prototype = {
     }));
     var os = self.getMobileOperatingSystem();
     if (os === 'iOS' && navigator.language && navigator.language.includes('zh-CN')) {
-      $('.special.version').removeClass('hidden');
+      $('.special.version').addClass('hidden');
       $('.android.button').hide();
     } else if (os === 'Android') {
       $('.special.version').removeClass('hidden');
