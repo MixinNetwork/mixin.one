@@ -100,7 +100,6 @@ Home.prototype = {
     if (os === 'iOS' && navigator.language && navigator.language.includes('zh-CN')) {
       $('.special.version').removeClass('hidden');
       $('.android.button').hide();
-      $('.ios.bar').show();
     } else if (os === 'Android') {
       $('.special.version').removeClass('hidden');
       $('.ios.button').hide();
