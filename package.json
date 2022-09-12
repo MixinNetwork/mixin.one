@@ -18,7 +18,7 @@
     "simple-line-icons": "^2.5.5",
     "slick-carousel": "^1.8.1",
     "three": "^0.143.0",
-    "uuid": "^8.3.2",
+    "uuid": "^9.0.0",
     "uuid-validate": "0.0.3"
   },
   "devDependencies": {
