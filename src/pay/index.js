@@ -152,7 +152,7 @@ Pay.prototype = {
     if (!validate(traceId)) {
       return false;
     }
-    if (memo && memo.length > 140) {
+    if (memo && memo.length > 200) {
       return false;
     }
     return parseFloat(amount) > 0;
