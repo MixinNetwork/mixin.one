@@ -79,7 +79,7 @@
     "features.description": "An open source cryptocurrency wallet, which supports almost all popular cryptocurrencies.",
     "features": "Features",
     "features.1": "Login with mobile phone number, never lose your account",
-    "features.2": "Secured by 6 digit <a href='https://github.com/MixinNetwork/tip'>TIP</a>",
+    "features.2": "Secured by 6 digit <a href='https://tip.id'>Throttled Identity Protocol (TIP)</a>",
     "features.3": "All assets are stored in PoS-BFT-DAG distributed network",
     "features.4": "Enormous bots to extend the chat and wallet capabilities",
     "features.5": "Send cryptocurrencies directly to phone contacts",
