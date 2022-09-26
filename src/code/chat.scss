@@ -50,6 +50,18 @@
           color: #FFFFFF;
         }
       }
+
+      @media (max-width: 768px) {
+        .btn {
+          display: none;
+        }
+      }
+    }
+
+    @media (max-width: 768px) {
+      header {
+        width: 84%;
+      }
     }
 
     .card-container {
@@ -150,6 +162,22 @@
         a {
           color: #3D75E3;
         }
+      }
+    }
+
+    .bottom-bar {
+      display: none;
+      position: fixed;
+      bottom: 9px;
+      width: 36%;
+      height: 5px;
+      background: #000000;
+      border-radius: 100px;
+    }
+
+    @media (max-width: 768px) {
+      .bottom-bar {
+        display: block;
       }
     }
   }
