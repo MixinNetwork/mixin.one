@@ -61,6 +61,7 @@ Code.prototype = {
           if (resp.error) return false;
           const receiver = resp.data[0];
           const full_name = receiver.full_name;
+          const complete = payment.status === 'paid'
           payment['hasAvatar'] = receiver.avatar_url !== '';
           payment['firstLetter'] = full_name.trim()[0] || '^_^';
           payment['logoURL'] = require('../home/logo.png').default;
@@ -69,7 +70,7 @@ Code.prototype = {
           payment['intro'] = receiver.biography;
           payment['mixinUrl'] = "mixin://codes/" + resp.code_id;
           payment['assetUrl'] = asset.data.icon_url;
-          payment['complete'] = payment.status === 'paid';
+          payment['complete'] = complete;
           payment['successURL'] = require('./payment_complete.svg').default;
           $('#layout-container').html(self.templatePayment(payment));
           new QRious({
@@ -80,6 +81,15 @@ Code.prototype = {
             size: 500
           });
           self.router.updatePageLinks();
+          let timer = !complete && setInterval(() => {
+            self.api.code.fetch((resp) => {
+              if (resp.data.status === 'paid') {
+                payment['complete'] = true;
+                $('#layout-container').html(self.templatePayment(payment));
+                clearInterval(timer);
+              }
+            }, payment.code_id);
+          }, 1000 * 3)
         })
       }, payment.asset_id)
     }
