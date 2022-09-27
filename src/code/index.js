@@ -5,11 +5,11 @@ import QRious from 'qrious';
 function Code(router, api) {
   this.router = router;
   this.api = api;
-  this.templateGroup = require('./group.html');
+  this.templatePayment = require('./payment.html');
   this.templateChat = require('./chat.html');
 
   this.chatType = ['user', 'conversation'];
-  this.paymenType = 'payment';
+  this.paymentType = 'payment';
 }
 
 Code.prototype = {
@@ -26,8 +26,8 @@ Code.prototype = {
         return;
       }
 
-      if (this.paymenType === resp.data.type) {
-        self.renderGroup(resp.data);
+      if (self.paymentType === resp.data.type) {
+        self.renderPayment(resp.data);
         return;
       }
 
@@ -52,22 +52,37 @@ Code.prototype = {
     self.router.updatePageLinks();
   },
 
-  renderGroup: function(group) {
+  renderPayment: function(payment) {
     const self = this;
-    $('body').attr('class', 'group code layout');
-    group['logoURL'] = require('../home/logo.png').default;
-    group['name'] = group.name.trim().length > 0 ? group.name.trim() : '^_^';
-    group['participantsCount'] = group.participants.length;
-    $('#layout-container').html(self.templateGroup(group));
-    new QRious({
-      element: document.getElementById('mixin-code'),
-      backgroundAlpha: 0,
-      foreground: '#00B0E9',
-      value: 'https://mixin.one/codes/' + group.code_id,
-      level: 'H',
-      size: 500
-    });
-    self.router.updatePageLinks();
+    $('body').attr('class', 'payment code layout');
+    if (payment.receivers.length > 0) {
+      self.api.network.assetsShow((asset) => {
+        self.api.account.fetch(payment.receivers, (resp) => {
+          if (resp.error) return false;
+          const receiver = resp.data[0];
+          const full_name = receiver.full_name;
+          payment['hasAvatar'] = receiver.avatar_url !== '';
+          payment['firstLetter'] = full_name.trim()[0] || '^_^';
+          payment['logoURL'] = require('../home/logo.png').default;
+          payment['full_name'] = full_name.trim().length > 0 ? full_name.trim() : '^_^';
+          payment['info'] = receiver.identity_number;
+          payment['intro'] = receiver.biography;
+          payment['mixinUrl'] = "mixin://codes/" + resp.code_id;
+          payment['assetUrl'] = asset.data.icon_url;
+          payment['complete'] = payment.status === 'paid';
+          payment['successURL'] = require('./payment_complete.svg').default;
+          $('#layout-container').html(self.templatePayment(payment));
+          new QRious({
+            element: document.getElementById('qrcode'),
+            backgroundAlpha: 0,
+            value: 'https://mixin.one/codes/' + payment.code_id,
+            level: 'H',
+            size: 500
+          });
+          self.router.updatePageLinks();
+        })
+      }, payment.asset_id)
+    }
   }
 };
 

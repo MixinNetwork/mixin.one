@@ -11,6 +11,14 @@ Account.prototype = {
     });
   },
 
+  fetch: function (ids, callback) {
+    this.api.request('POST', `/users/fetch`, ids, function(resp) {
+      if (typeof callback === 'function') {
+        return callback(resp);
+      }
+    });
+  },
+
   assets: function (callback) {
     this.api.request('GET', '/assets', undefined, function(resp) {
       if (!!resp.error && resp.error.code === 403) {
