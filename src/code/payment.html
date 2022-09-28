@@ -9,12 +9,28 @@
 
     <div class="card-container">
         <div class="avatar-container">
-            {{#if hasAvatar}}
-            <img src="{{avatar_url}}" alt="{{full_name}}"/>
-            {{else}}
-            <p>{{firstLetter}}</p>
+            <div class="avatar">
+                {{#if hasFirstAvatar}}
+                <img  src="{{firstAvatar.avatarUrl}}" alt="{{firstAvatar.fullName}}"/>
+                {{else}}
+                <span>{{firstAvatar.firstLetter}}</span>
+                {{/if}}
+            </div>
+
+            <div class="avatar">
+                {{#if hasSecondAvatar}}
+                <img src="{{secondAvatar.avatarUrl}}" alt="{{secondAvatar.fullName}}"/>
+                {{else}}
+                <span>{{secondAvatar.firstLetter}}</span>
+                {{/if}}
+            </div>
+            {{#if hasThirdAvatar}}
+            <div class="avatar">
+                <span class="multisig-more">{{thirdAvatar}}</span>
+            </div>
             {{/if}}
         </div>
+
         <div class="name">{{full_name}}</div>
         <div class="info">{{info}}</div>
         {{#if hasMemo}}

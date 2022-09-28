@@ -39,12 +39,13 @@ Code.prototype = {
     const self = this;
     $('body').attr('class', 'chat code layout');
     chatInfo['chatType'] = chatInfo.type === 'conversation' ? 'conversation' : chatInfo.app ? 'bot' : 'user';
-    chatInfo['hasAvatar'] = chatInfo.avatar_url !== '';
+    chatInfo['hasAvatar'] = !!chatInfo.avatar_url;
     const full_name = chatInfo.type === 'conversation' ? chatInfo.name : chatInfo.full_name;
     chatInfo['firstLetter'] = full_name.trim()[0] || '^_^';
     chatInfo['logoURL'] = require('../home/logo.png').default;
     chatInfo['full_name'] = full_name.trim().length > 0 ? full_name.trim() : '^_^';
     chatInfo['info'] = chatInfo.type === 'conversation' ? `${chatInfo.participants.length} members` : chatInfo.identity_number;
+    chatInfo['hasIntro'] = chatInfo.type === 'conversation' ? !!chatInfo.announcement : !!chatInfo.biography;
     chatInfo['intro'] = chatInfo.type === 'conversation' ? chatInfo.announcement : chatInfo.biography;
     chatInfo['actionText'] = chatInfo.type === 'conversation' ? 'Join Group' : 'Chat';
     chatInfo['mixinUrl'] = "mixin://codes/" + chatInfo.code_id;
@@ -59,16 +60,28 @@ Code.prototype = {
       self.api.network.assetsShow((asset) => {
         self.api.account.fetch(payment.receivers, (resp) => {
           if (resp.error) return false;
-          const receiver = resp.data[0];
-          const full_name = receiver.full_name;
-          const complete = payment.status === 'paid'
-          payment['hasAvatar'] = receiver.avatar_url !== '';
-          payment['firstLetter'] = full_name.trim()[0] || '^_^';
+          const users = resp.data;
+          const totalNumber = resp.data.length;
+          const complete = payment.status === 'paid';
           payment['logoURL'] = require('../home/logo.png').default;
-          payment['full_name'] = full_name.trim().length > 0 ? full_name.trim() : '^_^';
-          payment['info'] = receiver.identity_number;
-          payment['intro'] = receiver.biography;
-          payment['mixinUrl'] = "mixin://codes/" + resp.code_id;
+          payment['hasFirstAvatar'] = !!users[0].avatar_url;
+          payment['firstAvatar'] = {
+            fullName: users[0].full_name,
+            avatarUrl: users[0].avatar_url,
+            firstLetter: users[0].full_name.trim()[0] || '^_^'
+          };
+          payment['hasSecondAvatar'] = !!users[1].avatar_url;
+          payment['secondAvatar'] = {
+            fullName: users[1].full_name,
+            avatarUrl: users[1].avatar_url,
+            firstLetter: users[1].full_name.trim()[0] || '^_^'
+          };
+          payment['hasThirdAvatar'] = totalNumber > 2;
+          payment['thirdAvatar'] = `+${totalNumber - 2}`;
+
+          payment['info'] = payment['multisig'] ? `${payment.threshold}/${totalNumber}` : resp.data[0].identity_number;
+          payment['hasMemo'] = !!payment.memo;
+          payment['memo'] = payment.memo;
           payment['assetUrl'] = asset.data.icon_url;
           payment['complete'] = complete;
           payment['successURL'] = require('./payment_complete.svg').default;
