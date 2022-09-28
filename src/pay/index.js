@@ -11,7 +11,7 @@ function Pay(router, api) {
   this.router = router;
   this.api = api;
   this.ErrorGeneral = require('../error.html');
-  this.template = require('./payment.html');
+  this.template = require('./index.html');
   this.templateNew = require('./new.html');
 }
 

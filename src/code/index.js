@@ -44,10 +44,10 @@ Code.prototype = {
     chatInfo['firstLetter'] = full_name.trim()[0] || '^_^';
     chatInfo['logoURL'] = require('../home/logo.png').default;
     chatInfo['full_name'] = full_name.trim().length > 0 ? full_name.trim() : '^_^';
-    chatInfo['info'] = chatInfo.type === 'conversation' ? `${chatInfo.participants.length} members` : chatInfo.identity_number;
+    chatInfo['info'] = chatInfo.type === 'conversation' ? `${chatInfo.participants.length} ${i18n.t('code.group.members')}` : chatInfo.identity_number;
     chatInfo['hasIntro'] = chatInfo.type === 'conversation' ? !!chatInfo.announcement : !!chatInfo.biography;
     chatInfo['intro'] = chatInfo.type === 'conversation' ? chatInfo.announcement : chatInfo.biography;
-    chatInfo['actionText'] = chatInfo.type === 'conversation' ? 'Join Group' : 'Chat';
+    chatInfo['actionText'] = chatInfo.type === 'conversation' ? i18n.t('code.group.join') : i18n.t('code.user.chat');
     chatInfo['mixinUrl'] = "mixin://codes/" + chatInfo.code_id;
     $('#layout-container').html(self.templateChat(chatInfo));
     self.router.updatePageLinks();
