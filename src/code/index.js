@@ -56,39 +56,35 @@ Code.prototype = {
   renderPayment: function(payment) {
     const self = this;
     $('body').attr('class', 'payment code layout');
-    if (payment.receivers.length > 0) {
+    const totalNumber = payment.receivers.length;
+    if (totalNumber > 1) {
       self.api.network.assetsShow((asset) => {
-        self.api.account.fetch(payment.receivers, (resp) => {
-          if (resp.error) return false;
-          const users = resp.data;
-          const totalNumber = resp.data.length;
-          const complete = payment.status === 'paid';
-          payment['logoURL'] = require('../home/logo.png').default;
-          payment['info'] = `${payment.threshold}/${totalNumber}`;
-          payment['hasMemo'] = !!payment.memo;
-          payment['memo'] = payment.memo;
-          payment['assetUrl'] = asset.data.icon_url;
-          payment['complete'] = complete;
-          payment['successURL'] = require('../home/payment_complete.svg').default;
-          $('#layout-container').html(self.templatePayment(payment));
-          new QRious({
-            element: document.getElementById('qrcode'),
-            backgroundAlpha: 0,
-            value: 'https://mixin.one/codes/' + payment.code_id,
-            level: 'H',
-            size: 500
-          });
-          self.router.updatePageLinks();
-          let timer = !complete && setInterval(() => {
-            self.api.code.fetch((resp) => {
-              if (resp.data.status === 'paid') {
-                payment['complete'] = true;
-                $('#layout-container').html(self.templatePayment(payment));
-                clearInterval(timer);
-              }
-            }, payment.code_id);
-          }, 1000 * 3)
-        })
+        const complete = payment.status === 'paid';
+        payment['logoURL'] = require('../home/logo.png').default;
+        payment['info'] = `${payment.threshold}/${totalNumber}`;
+        payment['hasMemo'] = !!payment.memo;
+        payment['memo'] = payment.memo;
+        payment['assetUrl'] = asset.data.icon_url;
+        payment['complete'] = complete;
+        payment['successURL'] = require('../home/payment_complete.svg').default;
+        $('#layout-container').html(self.templatePayment(payment));
+        new QRious({
+          element: document.getElementById('qrcode'),
+          backgroundAlpha: 0,
+          value: 'https://mixin.one/codes/' + payment.code_id,
+          level: 'H',
+          size: 500
+        });
+        self.router.updatePageLinks();
+        let timer = !complete && setInterval(() => {
+          self.api.code.fetch((resp) => {
+            if (resp.data.status === 'paid') {
+              payment['complete'] = true;
+              $('#layout-container').html(self.templatePayment(payment));
+              clearInterval(timer);
+            }
+          }, payment.code_id);
+        }, 1000 * 3)
       }, payment.asset_id)
     }
   }

@@ -94,9 +94,6 @@ OAuth.prototype = {
       if (resp.error) {
         return false;
       }
-      console.log(window.location);
-      const last = window.localStorage.getItem('last-url');
-      if (last) self.router.replace(last);
       self.router.replace('/receipts/new');
     }, authorizationCode);
   }

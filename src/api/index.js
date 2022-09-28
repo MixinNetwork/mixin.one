@@ -75,7 +75,6 @@ API.prototype = {
       switch (resp.error.code) {
         case 401:
           this.account.clear();
-          window.localStorage.setItem('last-url', window.location.pathname)
           this.router.replace('/oauth/authorize?client_id=5aa9ae63-9370-4ca7-ac64-87cabf6f2339&scope=PROFILE:READ+ASSETS:READ&response_type=code&redirect_uri=https://mixin.one/oauth/callback');
           break;
         case 404:
