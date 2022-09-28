@@ -75,56 +75,8 @@
       box-shadow: 0 8px 34px rgba(0, 0, 0, 0.04);
       border-radius: 20px;
 
-      .avatar-container {
-        display: flex;
-        justify-content: center;
-        margin-top: 80px;
-        width: 100%;
-
-        .avatar {
-          display: inline-block;
-          width: 64px;
-          height: 64px;
-          background: #F5F7FA;
-          border: 2px solid #FFFFFF;
-          border-radius: 81px;
-          text-align: center;
-          line-height: 64px;
-          overflow: hidden;
-
-          img {
-            width: 100%;
-          }
-
-          span {
-            font-size: 32px;
-            font-weight: 400;
-            color: #00B0E9;
-          }
-
-          .multisig-more {
-            text-align: center;
-            font-weight: 400;
-            font-size: 24px;
-            color: #B8BDC7;
-          }
-        }
-
-        .avatar:nth-child(1) {
-          z-index: 3;
-          margin-right: -22px;
-        }
-        .avatar:nth-child(2) {
-          z-index: 2;
-        }
-        .avatar:nth-child(3) {
-          z-index: 1;
-          margin-left: -22px;
-        }
-      }
-
       .name {
-        margin-top: 10px;
+        margin-top: 80px;
         text-align: center;
         font-size: 18px;
         font-weight: 600;

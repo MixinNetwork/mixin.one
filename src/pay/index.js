@@ -122,10 +122,7 @@ Pay.prototype = {
       payment['params'] = window.location.search;
       payment['logoURL'] = require('../home/logo.png').default;
       payment['complete'] = payment.status === 'paid';
-      payment['hasAvatar'] = !!payment.recipient.avatar_url;
-      payment['avatarUrl'] = payment.recipient.avatar_url;
-      payment['firstLetter'] = payment.recipient.full_name.trim()[0] || '^_^';
-      payment['fullName'] = payment.recipient.full_name.trim();
+      payment['fullName'] = `Transfer to ${payment.recipient.full_name.trim()}`;
       payment['info'] = payment.recipient.identity_number;
       payment['hasMemo'] = !!memo;
       payment['memo'] = memo;

@@ -64,20 +64,6 @@ Code.prototype = {
           const totalNumber = resp.data.length;
           const complete = payment.status === 'paid';
           payment['logoURL'] = require('../home/logo.png').default;
-          payment['hasFirstAvatar'] = !!users[0].avatar_url;
-          payment['firstAvatar'] = {
-            fullName: users[0].full_name,
-            avatarUrl: users[0].avatar_url,
-            firstLetter: users[0].full_name.trim()[0] || '^_^'
-          };
-          payment['hasSecondAvatar'] = !!users[1].avatar_url;
-          payment['secondAvatar'] = {
-            fullName: users[1].full_name,
-            avatarUrl: users[1].avatar_url,
-            firstLetter: users[1].full_name.trim()[0] || '^_^'
-          };
-          payment['hasThirdAvatar'] = totalNumber > 2;
-          payment['thirdAvatar'] = `+${totalNumber - 2}`;
           payment['info'] = `${payment.threshold}/${totalNumber}`;
           payment['hasMemo'] = !!payment.memo;
           payment['memo'] = payment.memo;

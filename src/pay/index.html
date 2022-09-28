@@ -8,17 +8,7 @@
   </header>
 
   <div class="card-container">
-    <div class="avatar-container">
-      <div class="avatar">
-        {{#if hasAvatar}}
-        <img  src="{{avatarUrl}}" alt="{{fullName}}"/>
-        {{else}}
-        <span>{{firstLetter}}</span>
-        {{/if}}
-      </div>
-    </div>
-
-    <div class="name">{{full_name}}</div>
+    <div class="name">{{fullName}}</div>
     <div class="info">{{info}}</div>
     {{#if hasMemo}}
     <div class="memo">{{memo}}</div>
