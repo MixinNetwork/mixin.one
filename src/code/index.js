@@ -78,8 +78,7 @@ Code.prototype = {
           };
           payment['hasThirdAvatar'] = totalNumber > 2;
           payment['thirdAvatar'] = `+${totalNumber - 2}`;
-
-          payment['info'] = payment['multisig'] ? `${payment.threshold}/${totalNumber}` : resp.data[0].identity_number;
+          payment['info'] = `${payment.threshold}/${totalNumber}`;
           payment['hasMemo'] = !!payment.memo;
           payment['memo'] = payment.memo;
           payment['assetUrl'] = asset.data.icon_url;
