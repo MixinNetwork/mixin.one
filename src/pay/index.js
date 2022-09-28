@@ -11,7 +11,7 @@ function Pay(router, api) {
   this.router = router;
   this.api = api;
   this.ErrorGeneral = require('../error.html');
-  this.template = require('./index.html');
+  this.template = require('./payment.html');
   this.templateNew = require('./new.html');
 }
 
@@ -121,19 +121,27 @@ Pay.prototype = {
       var payment = resp.data;
       payment['params'] = window.location.search;
       payment['logoURL'] = require('../home/logo.png').default;
-      payment['isPaid'] = payment.status === 'paid';
+      payment['complete'] = payment.status === 'paid';
+      payment['hasAvatar'] = !!payment.recipient.avatar_url;
+      payment['avatarUrl'] = payment.recipient.avatar_url;
+      payment['firstLetter'] = payment.recipient.full_name.trim()[0] || '^_^';
+      payment['fullName'] = payment.recipient.full_name.trim();
+      payment['info'] = payment.recipient.identity_number;
+      payment['hasMemo'] = !!memo;
+      payment['memo'] = memo;
+      payment['successURL'] = require('../home/payment_complete.svg').default;
+      payment['assetUrl'] = payment.asset.icon_url;
       $('body').attr('class', 'pay layout');
       $('#layout-container').html(self.template(payment));
       new QRious({
-        element: document.getElementById('mixin-code'),
+        element: document.getElementById('qrcode'),
         backgroundAlpha: 0,
-        foreground: '#00B0E9',
         value: window.location.toString().replace(window.location.host, "mixin.one"),
         level: 'H',
         size: 500
       });
       self.router.updatePageLinks();
-      if (payment.isPaid) {
+      if (payment.complete) {
         return true;
       }
       setTimeout(function() {

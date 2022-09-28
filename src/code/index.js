@@ -83,7 +83,7 @@ Code.prototype = {
           payment['memo'] = payment.memo;
           payment['assetUrl'] = asset.data.icon_url;
           payment['complete'] = complete;
-          payment['successURL'] = require('./payment_complete.svg').default;
+          payment['successURL'] = require('../home/payment_complete.svg').default;
           $('#layout-container').html(self.templatePayment(payment));
           new QRious({
             element: document.getElementById('qrcode'),

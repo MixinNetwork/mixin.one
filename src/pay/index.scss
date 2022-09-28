@@ -2,114 +2,232 @@
 
 .pay.layout {
   .pay.container {
-    width: 100%;
-    max-width: 600px;
-    box-sizing: border-box;
-    padding: 0 32px;
-    margin: 128px auto;
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
-    h1 {
-      font-size: 32px;
-      font-weight: 400;
-      color: $color-main-foreground-light;
-      margin: 32px 0 0;
-    }
+    header {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      width: 93.75%;
+      height: 40px;
+      padding: 10px 0;
 
-    h2 {
-      font-family: $font-main-title;
-      font-weight: 300;
-      font-size: 16px;
-      color: $color-main-foreground-light;
-      opacity: 0.7;
-      margin: 8px;
-    }
-
-    .mixin.paid.status i {
-      font-size: 64px;
-      color: $color-main-highlight;
-      display: inline-block;
-      margin: 64px auto;
-    }
-
-    .mixin.code.container {
-      position: relative;
-      margin: 64px auto;
-      width: 256px;
-      height: 256px;
-
-      canvas {
-        width: 100%;
-        height: 100%;
-      }
-
-      img {
-        position: absolute;
-        width: 64px;
-        height: 64px;
-        border-radius: 32px;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-      }
-    }
-
-    .instruction.install {
-      opacity: 0.5;
-      font-size: 12px;
-    }
-
-    .actions {
-      margin: 32px auto;
-      width: 256px;
-
-      .action {
-        width: 128px;
-        display: inline-block;
-        color: $color-main-foreground-dark;
-        padding: 12px 16px;
-        font-size: 16px;
-        margin: 16px 0;
-      }
-
-      .open.action {
-        background: $color-main-highlight;
-        color: $color-main-background;
-        border-radius: 2px;
-      }
-    }
-
-    .logo img {
-      width: 32px;
-      height: 32px;
-      margin-top: 16px;
-      opacity: 0.3;
-
-      &:hover {
-        opacity: 1;
-      }
-    }
-  }
-
-  @media (max-width: 768px) {
-    .pay.container {
-      margin: 64px auto;
-      padding: 0 24px;
-    }
-  }
-
-  @media (max-width: 520px) {
-    .pay.container {
-      .mixin.code.container {
-        margin: 32px auto;
-        width: 196px;
-        height: 196px;
+      .logo-container {
+        display: flex;
+        align-items: center;
 
         img {
-          width: 48px;
-          height: 48px;
-          border-radius: 24px;
+          width: 28px;
+          height: 26px;
         }
+
+        span {
+          margin-left: 10px;
+          font-weight: 600;
+          line-height: 16px;
+          letter-spacing: 0.02em;
+          color: #223355;
+        }
+      }
+
+      .btn {
+        display: flex;
+        justify-content: center;
+        width: 116px;
+        height: 40px;
+        background: #3D75E3;
+        border-radius: 20px;
+
+        a {
+          line-height: 40px;
+          text-align: center;
+          font-weight: 600;
+          font-size: 14px;
+          color: #FFFFFF;
+        }
+      }
+
+      @media (max-width: 768px) {
+        .btn {
+          display: none;
+        }
+      }
+    }
+
+    @media (max-width: 768px) {
+      header {
+        width: 84%;
+      }
+    }
+
+    .card-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 35px;
+      width: 315px;
+      background: #F9FAFC;
+      border: 1px solid rgba(0, 0, 0, 0.04);
+      box-shadow: 0 8px 34px rgba(0, 0, 0, 0.04);
+      border-radius: 20px;
+
+      .avatar-container {
+        display: flex;
+        justify-content: center;
+        margin-top: 80px;
+        width: 100%;
+
+        .avatar {
+          display: inline-block;
+          width: 64px;
+          height: 64px;
+          background: #F5F7FA;
+          border: 2px solid #FFFFFF;
+          border-radius: 81px;
+          text-align: center;
+          line-height: 64px;
+          overflow: hidden;
+
+          img {
+            width: 100%;
+          }
+
+          span {
+            font-size: 32px;
+            font-weight: 400;
+            color: #00B0E9;
+          }
+        }
+      }
+
+      .name {
+        margin-top: 10px;
+        text-align: center;
+        font-size: 18px;
+        font-weight: 600;
+      }
+
+      .info {
+        margin-top: 8px;
+        text-align: center;
+        font-size: 14px;
+        font-weight: 400;
+        color: #B8BDC7;
+      }
+
+      .memo {
+        margin-top: 10px;
+        width: 80%;
+        overflow-wrap: break-word;
+        word-break: keep-all;
+        text-align: center;
+        line-height: 22px;
+        font-size: 16px;
+        font-weight: 400;
+        color: #333333;
+      }
+
+      .qrcode-container {
+        margin-top: 20px;
+        margin-bottom: 40px;
+        width: 100%;
+
+        .payment-qrcode {
+          position: relative;
+          margin: 0 auto;
+          width: 168px;
+
+          #qrcode {
+            width: 100%;
+          }
+
+          .asset-container {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 36px;
+            height: 36px;
+            transform: translate(-50%, -50%);
+            border: 3px solid #FFFFFF;
+            border-radius: 50%;
+
+            img {
+              width: 100%;
+            }
+          }
+        }
+
+        .tip {
+          margin-top: 8px;
+          text-align: center;
+          font-weight: 400;
+          font-size: 14px;
+          color: rgba(34, 34, 34, 0.4);
+        }
+      }
+
+      .status-container {
+        margin-top: 40px;
+        margin-bottom: 98px;
+
+        .icon-container {
+          width: 90px;
+          height: 90px;
+
+          img {
+            width: 100%;
+          }
+        }
+
+        .status {
+          margin-top: 16px;
+          text-align: center;
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 14px;
+          color: #B8BDC7;
+        }
+      }
+    }
+
+    .footer {
+      margin-top: 24px;
+
+      .tip {
+        line-height: 22px;
+        text-align: center;
+        font-weight: 400;
+        font-size: 14px;
+      }
+
+      .download {
+        margin: 2px 0;
+        text-align: center;
+        line-height: 22px;
+        font-weight: 400;
+        font-size: 14px;
+
+        a {
+          color: #3D75E3;
+        }
+      }
+    }
+
+    .bottom-bar {
+      display: none;
+      position: fixed;
+      bottom: 9px;
+      width: 36%;
+      height: 5px;
+      background: #000000;
+      border-radius: 100px;
+    }
+
+    @media (max-width: 768px) {
+      .bottom-bar {
+        display: block;
       }
     }
   }
