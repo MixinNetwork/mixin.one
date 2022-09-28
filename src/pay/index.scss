@@ -1,6 +1,8 @@
 @import "../constant.scss";
 
 .pay.layout {
+  box-sizing: border-box;
+
   .pay.container {
     display: flex;
     flex-direction: column;
@@ -73,35 +75,6 @@
       box-shadow: 0 8px 34px rgba(0, 0, 0, 0.04);
       border-radius: 20px;
 
-      .avatar-container {
-        display: flex;
-        justify-content: center;
-        margin-top: 80px;
-        width: 100%;
-
-        .avatar {
-          display: inline-block;
-          width: 64px;
-          height: 64px;
-          background: #F5F7FA;
-          border: 2px solid #FFFFFF;
-          border-radius: 81px;
-          text-align: center;
-          line-height: 64px;
-          overflow: hidden;
-
-          img {
-            width: 100%;
-          }
-
-          span {
-            font-size: 32px;
-            font-weight: 400;
-            color: #00B0E9;
-          }
-        }
-      }
-
       .name {
         margin-top: 80px;
         text-align: center;
@@ -137,7 +110,8 @@
         .payment-qrcode {
           position: relative;
           margin: 0 auto;
-          width: 168px;
+          width: 192px;
+          height: 192px;
 
           #qrcode {
             width: 100%;
