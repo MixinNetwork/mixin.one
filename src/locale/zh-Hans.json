@@ -18,7 +18,7 @@
     "instruction.install": "在 Google Play 或 App Store 中搜索 Mixin"
   },
   "pay": {
-    "recipient.title": "转账给 %{name}"
+    "recipient.title": "向 %{name} 转账"
   },
   "code": {
     "user.chat": "添加",
