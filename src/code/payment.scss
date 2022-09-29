@@ -1,7 +1,14 @@
 @import "../constant.scss";
 
 .payment.code.layout {
+  width: 100%;
+  height: 100%;
   box-sizing: border-box;
+
+  #layout-container {
+    height: 100%;
+    position: relative;
+  }
 
   .code.container {
     display: flex;
@@ -94,7 +101,7 @@
         margin-top: 10px;
         width: 80%;
         overflow-wrap: break-word;
-        word-break: keep-all;
+        word-break: break-all;
         text-align: center;
         line-height: 22px;
         font-size: 16px;
