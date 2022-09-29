@@ -38,7 +38,6 @@ Code.prototype = {
   renderChat: function(chatInfo) {
     const self = this;
     $('body').attr('class', 'chat code layout');
-    chatInfo['chatType'] = chatInfo.type === 'conversation' ? 'conversation' : chatInfo.app ? 'bot' : 'user';
     chatInfo['hasAvatar'] = !!chatInfo.avatar_url;
     const full_name = chatInfo.type === 'conversation' ? chatInfo.name : chatInfo.full_name;
     chatInfo['firstLetter'] = full_name.trim()[0] || '^_^';
@@ -57,6 +56,7 @@ Code.prototype = {
     const self = this;
     $('body').attr('class', 'payment code layout');
     const totalNumber = payment.receivers.length;
+
     if (totalNumber > 1) {
       self.api.network.assetsShow((asset) => {
         const complete = payment.status === 'paid';
@@ -84,9 +84,12 @@ Code.prototype = {
               clearInterval(timer);
             }
           }, payment.code_id);
-        }, 1000 * 3)
-      }, payment.asset_id)
+        }, 1000 * 3);
+      }, payment.asset_id);
+      return;
     }
+
+    self.api.error({error: {code: 10002}});
   }
 };
 
