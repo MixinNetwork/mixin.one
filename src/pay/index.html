@@ -8,7 +8,7 @@
   </header>
 
   <div class="card-container">
-    <div class="name">{{t 'pay.recipient.title' name=fullName}}</div>
+    <div class="title">{{t 'pay.recipient.title' name=fullName}}</div>
     <div class="info">{{info}}</div>
     {{#if hasMemo}}
     <div class="memo">{{memo}}</div>
@@ -23,7 +23,7 @@
     </div>
     {{else}}
     <div class="qrcode-container">
-      <div class="payment-qrcode">
+      <div class="scale payment-qrcode">
         <canvas id="qrcode">
         </canvas>
         <div class="asset-container">
