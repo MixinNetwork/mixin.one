@@ -57,11 +57,16 @@
         height: 100%;
 
         &>nav {
-          margin: 0 auto;
-          font-size: 14px;
           display: flex;
-          align-items: stretch;
           justify-content: space-between;
+          align-items: center;
+          margin: 0 auto;
+          height: 24px;
+          font-size: 14px;
+
+          .nav-logo {
+            height: 100%;
+          }
 
           .nav-list-menus {
             display: none;
@@ -78,6 +83,7 @@
               display: inline-block;
               cursor: pointer;
               line-height: 20px;
+              border-bottom: 2px solid transparent;
 
               &:first-child {
                 margin-left: 0;
@@ -210,11 +216,6 @@
       &>div {
         .nav-list-menus-btn {
           display: none;
-        }
-
-        .nav-logo {
-          width: 34px;
-          height: 24px;
         }
 
         nav {
@@ -416,11 +417,6 @@
           display: none;
         }
 
-        .nav-logo {
-          width: 34px;
-          height: 24px;
-        }
-
         nav {
           width: 880px;
           margin: 0 auto;
@@ -583,11 +579,6 @@
       &>div {
         .nav-list-menus-btn {
           display: none;
-        }
-
-        .nav-logo {
-          width: 34px;
-          height: 24px;
         }
 
         nav {
@@ -769,28 +760,19 @@
         font-size: initial;
 
         nav {
-          padding: 28px 20px 0 20px;
-
-          .nav-logo {
-            width: 22px;
-            height: 16px;
-          }
+          margin-top: 28px;
+          padding: 0 20px;
+          height: 16px;
 
           .nav-list {
             position: relative;
+            height: 100%;
             text-align: center;
 
             .nav-list-menus-btn {
-              position: absolute;
-              right: 0;
               display: block;
+              height: 100%;
               cursor: pointer;
-              width: 18px;
-              height: 11px;
-              box-sizing: initial;
-              padding: 5px;
-              margin-top: -5px;
-              margin-right: -5px;
             }
 
             .nav-list-menus-list {
