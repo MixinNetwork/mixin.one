@@ -3,9 +3,10 @@ import './solo.scss';
 import $ from 'jquery';
 import jQueryColor from '../jquery-color-plus-names.js';
 import TimeUtils from '../utils/time.js';
-import URLUtils from '../utils/url.js';
 import Animator from './animator.js';
 import validate from 'uuid-validate';
+
+const PartialLoading = require('../loading.html');
 
 function Snapshot(router, api) {
   this.router = router;
@@ -82,9 +83,7 @@ Snapshot.prototype = {
   show: function(network, id) {
     const self = this;
     self.api.network.snapshotsShow(function (resp) {
-      if (resp.error) {
-        return;
-      }
+      if (resp.error) return;
       var s = resp.data;
       s.flow = parseFloat(s.amount) > 0 ? 'in' : 'out';
       s.amount = parseFloat(s.amount) < 0 ? s.amount : '+' + s.amount;
@@ -92,6 +91,7 @@ Snapshot.prototype = {
       s.peakTPS = parseInt(network.peak_throughput).toLocaleString(undefined, { maximumFractionDigits: 0 });
       s.snapshotsCount = parseInt(network.snapshots_count).toLocaleString(undefined, { maximumFractionDigits: 0 });
       s.assetsCount = parseInt(network.assets_count).toLocaleString(undefined, { maximumFractionDigits: 0 });
+      s.hasHash = !!s.snapshot_hash;
       s.viewblockLink = 'https://v2.viewblock.io/mixin/snapshot/' + s.snapshot_hash;
       s.viewblockIcon = require('./viewblock-logo.svg').default;
       s.blockchairLink = 'https://blockchair.com/mixin/snapshot/' + s.snapshot_hash;
@@ -99,6 +99,21 @@ Snapshot.prototype = {
       $('body').attr('class', 'snapshot layout');
       $('title').html('Mixin Network');
       $('#layout-container').html(self.templateShow(s));
+      if (!s.hasHash) {
+        $('#spinner-container').html(PartialLoading());
+        const timer = setInterval(() => {
+          self.api.network.snapshotsShow((resp) => {
+            if (resp.error) return;
+            if (!!resp.data.snapshot_hash) {
+              s.hasHash = true;
+              s.viewblockLink = 'https://v2.viewblock.io/mixin/snapshot/' + resp.data.snapshot_hash;
+              s.blockchairLink = 'https://blockchair.com/mixin/snapshot/' + resp.data.snapshot_hash;
+              $('#layout-container').html(self.templateShow(s));
+              clearInterval(timer);
+            }
+          }, id);
+        }, 3000);
+      }
       self.animator.init($('.particles.container')[0]);
       self.animator.animate();
       self.router.updatePageLinks();

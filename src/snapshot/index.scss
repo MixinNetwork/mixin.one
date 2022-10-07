@@ -362,7 +362,9 @@
       a {
         color: $color-main-highlight;
       }
+    }
 
+    .meta.link {
       .icon {
         display: inline-block;
         margin-right: 16px;
@@ -380,6 +382,20 @@
         img {
           width: 100%;
           height: 100%;
+        }
+      }
+
+      #spinner-container {
+        width: 30px;
+        height: 20px;
+
+        .spinner {
+          width: 30px;
+          height: 20px;
+
+          div {
+            background-color: rgba(0, 0, 0, 0.2);
+          }
         }
       }
     }

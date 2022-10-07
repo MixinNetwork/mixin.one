@@ -37,6 +37,7 @@
     <li class="meta link">
       <div class="meta name">{{t 'snapshots.transaction.link'}}</div>
       <div class="meta value">
+        {{#if hasHash}}
         <div class="icon">
           <a href="{{viewblockLink}}">
             <img src="{{viewblockIcon}}" alt="tx-viewblock-link" title="viewblock"/>
@@ -47,6 +48,9 @@
             <img src="{{blockchairIcon}}" alt="tx-blockchair-link" title="blockchair"/>
           </a>
         </div>
+        {{else}}
+        <div id="spinner-container"></div>
+        {{/if}}
       </div>
     </li>
   </ul>
