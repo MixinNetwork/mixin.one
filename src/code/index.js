@@ -47,8 +47,10 @@ Code.prototype = {
     chatInfo['hasIntro'] = chatInfo.type === 'conversation' ? !!chatInfo.announcement : !!chatInfo.biography;
     chatInfo['intro'] = chatInfo.type === 'conversation' ? chatInfo.announcement : chatInfo.biography;
     chatInfo['actionText'] = chatInfo.type === 'conversation' ? i18n.t('code.group.join') : i18n.t('code.user.chat');
-    chatInfo['mixinUrl'] = "mixin://codes/" + chatInfo.code_id;
     $('#layout-container').html(self.templateChat(chatInfo));
+    $('#action-btn').click(() => {
+      window.location.href = "mixin://codes/" + chatInfo.code_id;
+    })
     self.router.updatePageLinks();
   },
 

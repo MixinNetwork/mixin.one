@@ -150,7 +150,7 @@
         color: #333333;
       }
 
-      .action-btn {
+      #action-btn {
         display: flex;
         justify-content: center;
         margin-top: 40px;
@@ -158,14 +158,13 @@
         width: 116px;
         height: 50px;
         background: #3D75E3;
+        border: none;
         border-radius: 28px;
-
-        a {
-          text-align: center;
-          line-height: 50px;
-          font-weight: 500;
-          color: #ffffff;
-        }
+        text-align: center;
+        line-height: 50px;
+        font-weight: 500;
+        color: #ffffff;
+        cursor: pointer;
       }
 
       .qrcode-container {
