@@ -121,19 +121,24 @@ Pay.prototype = {
       var payment = resp.data;
       payment['params'] = window.location.search;
       payment['logoURL'] = require('../home/logo.png').default;
-      payment['isPaid'] = payment.status === 'paid';
+      payment['complete'] = payment.status === 'paid';
+      payment['fullName'] = payment.recipient.full_name.trim();
+      payment['info'] = payment.recipient.identity_number;
+      payment['hasMemo'] = !!memo;
+      payment['memo'] = memo;
+      payment['successURL'] = require('../home/payment_complete.svg').default;
+      payment['assetUrl'] = payment.asset.icon_url;
       $('body').attr('class', 'pay layout');
       $('#layout-container').html(self.template(payment));
       new QRious({
-        element: document.getElementById('mixin-code'),
+        element: document.getElementById('qrcode'),
         backgroundAlpha: 0,
-        foreground: '#00B0E9',
         value: window.location.toString().replace(window.location.host, "mixin.one"),
         level: 'H',
         size: 500
       });
       self.router.updatePageLinks();
-      if (payment.isPaid) {
+      if (payment.complete) {
         return true;
       }
       setTimeout(function() {

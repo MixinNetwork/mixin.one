@@ -1,0 +1,44 @@
+<div class="code container">
+    <header>
+        <div class="logo-container">
+            <img src="{{logoURL}}" alt="mixin-messenger"/>
+            <span>Mixin Messenger</span>
+        </div>
+        <div class="btn"><a href="https://mixin.one/messenger">{{t 'code.messenger.download'}}</a></div>
+    </header>
+
+    <div class="card-container">
+        <div class="title">{{t 'code.multisig.title'}}</div>
+        <div class="info">{{info}}</div>
+        {{#if hasMemo}}
+        <div class="memo">{{memo}}</div>
+        {{/if}}
+
+        {{#if complete}}
+        <div class="status-container">
+            <div class="icon-container">
+                <img src="{{successURL}}" alt="success-icon"/>
+            </div>
+            <div class="status">{{t 'code.payment.complete'}}</div>
+        </div>
+        {{else}}
+        <div class="qrcode-container">
+            <div class="payment-qrcode">
+                <canvas id="qrcode">
+                </canvas>
+                <div class="asset-container">
+                    <img src="{{assetUrl}}" alt="asset-icon"/>
+                </div>
+            </div>
+            <div class="tip">{{t 'code.payment.scan'}}</div>
+        </div>
+        {{/if}}
+    </div>
+
+    <div class="footer">
+        <div class="tip">{{t 'code.messenger.tip'}}</div>
+        <div class="download"><a href="https://mixin.one/messenger">{{t 'code.messenger.download'}}</a></div>
+    </div>
+
+    <div class="bottom-bar"></div>
+</div>

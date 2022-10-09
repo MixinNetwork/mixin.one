@@ -21,9 +21,14 @@
     "recipient.title": "Transfer to %{name}"
   },
   "code": {
-    "open.action": "Open In Mixin",
-    "install.action": "Get Mixin App",
-    "group.participants": "%{count} members"
+    "user.chat": "Chat",
+    "group.join": "Join Group",
+    "group.members": "members",
+    "multisig.title": "Multisig Transfer",
+    "messenger.tip": "Don't have Mixin Messenger?",
+    "messenger.download": "Download",
+    "payment.scan": "Use Mixin Messenger to scan the code",
+    "payment.complete": "Done"
   },
   "snapshots": {
     "search.placeholder": "Search transactions",

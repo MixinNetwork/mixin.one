@@ -18,12 +18,17 @@
     "instruction.install": "在 Google Play 或 App Store 中搜索 Mixin"
   },
   "pay": {
-    "recipient.title": "转账给 %{name}"
+    "recipient.title": "向 %{name} 转账"
   },
   "code": {
-    "open.action": "在 Mixin 中打开",
-    "install.action": "获取 Mixin App",
-    "group.participants": "%{count} 成员"
+    "user.chat": "添加",
+    "group.join": "加入群组",
+    "group.members": "位群成员",
+    "multisig.title": "多签转账",
+    "messenger.tip": "没有 Mixin Messenger 客户端？",
+    "messenger.download": "下 载",
+    "payment.scan": "使用 Mixin Messenger 扫码支付",
+    "payment.complete": "完成"
   },
   "snapshots": {
     "search.placeholder": "搜索交易",

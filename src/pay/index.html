@@ -1,26 +1,44 @@
 <div class="pay container">
-  <h1>{{ t 'pay.recipient.title' name=recipient.full_name }}</h1>
-  <h2>{{ amount }} {{ asset.symbol }}</h2>
+  <header>
+    <div class="logo-container">
+      <img src="{{logoURL}}" alt="mixin-messenger"/>
+      <span>Mixin Messenger</span>
+    </div>
+    <div class="btn"><a href="https://mixin.one/messenger">{{t 'code.messenger.download'}}</a></div>
+  </header>
 
-  {{#if isPaid}}
-  <div class="mixin paid status">
-    <i class="icon-check"></i>
-  </div>
-  {{else}}
-  <div class="mixin code container">
-    <canvas id="mixin-code"></canvas>
-    <img src="{{ recipient.avatar_url }}" alt="app logo" />
+  <div class="card-container">
+    <div class="title">{{t 'pay.recipient.title' name=fullName}}</div>
+    <div class="info">{{info}}</div>
+    {{#if hasMemo}}
+    <div class="memo">{{memo}}</div>
+    {{/if}}
+
+    {{#if complete}}
+    <div class="status-container">
+      <div class="icon-container">
+        <img src="{{successURL}}" alt="success-icon"/>
+      </div>
+      <div class="status">{{t 'code.payment.complete'}}</div>
+    </div>
+    {{else}}
+    <div class="qrcode-container">
+      <div class="scale payment-qrcode">
+        <canvas id="qrcode">
+        </canvas>
+        <div class="asset-container">
+          <img src="{{assetUrl}}" alt="asset-icon"/>
+        </div>
+      </div>
+      <div class="tip">{{t 'code.payment.scan'}}</div>
+    </div>
+    {{/if}}
   </div>
 
-  <p class="instruction title">{{ t 'oauth.instruction.title' }}</p>
-  <p class="instruction install">{{ t 'oauth.instruction.install' }}</p>
-
-  <div class="actions">
-    <a href="mixin://pay{{params}}" class="open action">{{t 'code.open.action'}}</a>
+  <div class="footer">
+    <div class="tip">{{t 'code.messenger.tip'}}</div>
+    <div class="download"><a href="https://mixin.one/messenger">{{t 'code.messenger.download'}}</a></div>
   </div>
-  {{/if}}
 
-  <div class="logo footer">
-    <img src="{{logoURL}}" alt="Mixin Logo" />
-  </div>
+  <div class="bottom-bar"></div>
 </div>
