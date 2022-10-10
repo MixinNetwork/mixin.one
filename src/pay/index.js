@@ -128,9 +128,9 @@ Pay.prototype = {
       payment['memo'] = memo;
       payment['successURL'] = require('../home/payment_complete.svg').default;
       payment['assetUrl'] = payment.asset.icon_url;
-      payment['tokenAmount'] = `${payment.amount} ${payment.asset.symbol}`
+      payment['tokenAmount'] = `${payment.amount} ${payment.asset.symbol}`;
       const useAmount = new Decimal(payment.asset.price_usd).times(payment.amount);
-      payment['usdAmount'] = `${useAmount.toNumber().toFixed(2).toString()} USD`
+      payment['usdAmount'] = `${useAmount.toNumber().toFixed(2).toString()} USD`;
       $('body').attr('class', 'pay layout');
       $('#layout-container').html(self.template(payment));
       new QRious({

@@ -256,7 +256,6 @@
 
     .footer {
       margin-top: 24px;
-      margin-bottom: 78px;
 
       .tip {
         line-height: 22px;
@@ -275,6 +274,24 @@
         a {
           color: #3D75E3;
         }
+      }
+    }
+
+    .mixin-button {
+      margin-top: 20px;
+      margin-bottom: 80px;
+      width: 129px;
+      height: 42px;
+      background: #4B7CDD;
+      box-shadow: 0 6px 10px rgba(75, 124, 221, 0.15);
+      border-radius: 40px;
+      text-align: center;
+      line-height: 40px;
+
+      a {
+        font-weight: 400;
+        font-size: 15px;
+        color: #ffffff;
       }
     }
 
