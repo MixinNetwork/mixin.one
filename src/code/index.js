@@ -1,6 +1,7 @@
 import './index.scss';
 import $ from 'jquery';
 import QRious from 'qrious';
+import { Decimal } from "decimal.js";
 
 function Code(router, api) {
   this.router = router;
@@ -67,6 +68,9 @@ Code.prototype = {
         payment['hasMemo'] = !!payment.memo;
         payment['memo'] = payment.memo;
         payment['assetUrl'] = asset.data.icon_url;
+        payment['tokenAmount'] = `${payment.amount} ${asset.data.symbol}`
+        const useAmount = new Decimal(asset.data.price_usd).times(payment.amount);
+        payment['usdAmount'] = `${useAmount.toNumber().toFixed(2).toString()} USD`
         payment['complete'] = complete;
         payment['successURL'] = require('../home/payment_complete.svg').default;
         $('#layout-container').html(self.templatePayment(payment));

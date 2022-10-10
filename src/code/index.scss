@@ -139,7 +139,7 @@
       }
 
       .memo {
-        margin-top: 10px;
+        margin-top: 8px;
         width: 80%;
         overflow-wrap: break-word;
         word-break: break-all;
@@ -148,6 +148,39 @@
         font-size: 16px;
         font-weight: 400;
         color: #333333;
+      }
+
+      .asset-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 16px;
+        width: 100%;
+
+        .icon-container {
+          width: 56px;
+          height: 56px;
+          border-radius: 50%;
+          overflow: hidden;
+
+          img {
+            width: 100%;
+          }
+        }
+
+        .token {
+          margin-top: 12px;
+          font-weight: 600;
+        }
+
+        .usd {
+          margin-top: 4px;
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 14px;
+          text-align: center;
+          color: #B8BDC7;
+        }
       }
 
       #action-btn {
@@ -180,21 +213,6 @@
 
           #qrcode {
             width: 100%;
-          }
-
-          .asset-container {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            width: 36px;
-            height: 36px;
-            transform: translate(-50%, -50%);
-            border: 3px solid #FFFFFF;
-            border-radius: 50%;
-
-            img {
-              width: 100%;
-            }
           }
         }
 
@@ -238,6 +256,7 @@
 
     .footer {
       margin-top: 24px;
+      margin-bottom: 78px;
 
       .tip {
         line-height: 22px;

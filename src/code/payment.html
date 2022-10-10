@@ -14,6 +14,14 @@
         <div class="memo">{{memo}}</div>
         {{/if}}
 
+        <div class="asset-container">
+            <div class="icon-container">
+                <img src="{{assetUrl}}" alt="asset-icon"/>
+            </div>
+            <div class="token">{{tokenAmount}}</div>
+            <div class="usd">{{usdAmount}}</div>
+        </div>
+
         {{#if complete}}
         <div class="status-container">
             <div class="icon-container">
@@ -26,9 +34,6 @@
             <div class="payment-qrcode">
                 <canvas id="qrcode">
                 </canvas>
-                <div class="asset-container">
-                    <img src="{{assetUrl}}" alt="asset-icon"/>
-                </div>
             </div>
             <div class="tip">{{t 'code.payment.scan'}}</div>
         </div>
