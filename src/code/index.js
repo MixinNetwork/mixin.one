@@ -63,7 +63,7 @@ Code.prototype = {
     if (totalNumber > 1) {
       self.api.network.assetsShow((asset) => {
         const complete = payment.status === 'paid';
-        payment['code_id'] = chatInfo.code_id;
+        payment['code_id'] = payment.code_id;
         payment['logoURL'] = require('../home/logo.png').default;
         payment['info'] = `${payment.threshold}/${totalNumber}`;
         payment['hasMemo'] = !!payment.memo;
