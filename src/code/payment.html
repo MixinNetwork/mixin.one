@@ -14,6 +14,14 @@
         <div class="memo">{{memo}}</div>
         {{/if}}
 
+        <div class="asset-container">
+            <div class="icon-container">
+                <img src="{{assetUrl}}" alt="asset-icon"/>
+            </div>
+            <div class="token">{{tokenAmount}}</div>
+            <div class="usd">{{usdAmount}}</div>
+        </div>
+
         {{#if complete}}
         <div class="status-container">
             <div class="icon-container">
@@ -26,9 +34,6 @@
             <div class="payment-qrcode">
                 <canvas id="qrcode">
                 </canvas>
-                <div class="asset-container">
-                    <img src="{{assetUrl}}" alt="asset-icon"/>
-                </div>
             </div>
             <div class="tip">{{t 'code.payment.scan'}}</div>
         </div>
@@ -38,6 +43,10 @@
     <div class="footer">
         <div class="tip">{{t 'code.messenger.tip'}}</div>
         <div class="download"><a href="https://mixin.one/messenger">{{t 'code.messenger.download'}}</a></div>
+    </div>
+
+    <div class="mixin-button">
+        <a href="mixin://codes/{{code_id}}" class="open action">{{t 'code.open.action'}}</a>
     </div>
 
     <div class="bottom-bar"></div>

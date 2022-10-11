@@ -139,7 +139,7 @@
       }
 
       .memo {
-        margin-top: 10px;
+        margin-top: 8px;
         width: 80%;
         overflow-wrap: break-word;
         word-break: break-all;
@@ -150,7 +150,40 @@
         color: #333333;
       }
 
-      .action-btn {
+      .asset-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 16px;
+        width: 100%;
+
+        .icon-container {
+          width: 56px;
+          height: 56px;
+          border-radius: 50%;
+          overflow: hidden;
+
+          img {
+            width: 100%;
+          }
+        }
+
+        .token {
+          margin-top: 12px;
+          font-weight: 600;
+        }
+
+        .usd {
+          margin-top: 4px;
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 14px;
+          text-align: center;
+          color: #B8BDC7;
+        }
+      }
+
+      #action-btn {
         display: flex;
         justify-content: center;
         margin-top: 40px;
@@ -158,14 +191,13 @@
         width: 116px;
         height: 50px;
         background: #3D75E3;
+        border: none;
         border-radius: 28px;
-
-        a {
-          text-align: center;
-          line-height: 50px;
-          font-weight: 500;
-          color: #ffffff;
-        }
+        text-align: center;
+        line-height: 50px;
+        font-weight: 500;
+        color: #ffffff;
+        cursor: pointer;
       }
 
       .qrcode-container {
@@ -181,21 +213,6 @@
 
           #qrcode {
             width: 100%;
-          }
-
-          .asset-container {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            width: 36px;
-            height: 36px;
-            transform: translate(-50%, -50%);
-            border: 3px solid #FFFFFF;
-            border-radius: 50%;
-
-            img {
-              width: 100%;
-            }
           }
         }
 
@@ -257,6 +274,24 @@
         a {
           color: #3D75E3;
         }
+      }
+    }
+
+    .mixin-button {
+      margin-top: 20px;
+      margin-bottom: 80px;
+      width: 129px;
+      height: 42px;
+      background: #4B7CDD;
+      box-shadow: 0 6px 10px rgba(75, 124, 221, 0.15);
+      border-radius: 40px;
+      text-align: center;
+      line-height: 40px;
+
+      a {
+        font-weight: 400;
+        font-size: 15px;
+        color: #ffffff;
       }
     }
 

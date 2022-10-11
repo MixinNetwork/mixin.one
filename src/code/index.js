@@ -1,6 +1,7 @@
 import './index.scss';
 import $ from 'jquery';
 import QRious from 'qrious';
+import { Decimal } from "decimal.js";
 
 function Code(router, api) {
   this.router = router;
@@ -47,8 +48,10 @@ Code.prototype = {
     chatInfo['hasIntro'] = chatInfo.type === 'conversation' ? !!chatInfo.announcement : !!chatInfo.biography;
     chatInfo['intro'] = chatInfo.type === 'conversation' ? chatInfo.announcement : chatInfo.biography;
     chatInfo['actionText'] = chatInfo.type === 'conversation' ? i18n.t('code.group.join') : i18n.t('code.user.chat');
-    chatInfo['mixinUrl'] = "mixin://codes/" + chatInfo.code_id;
     $('#layout-container').html(self.templateChat(chatInfo));
+    $('#action-btn').click(() => {
+      window.location.href = "mixin://codes/" + chatInfo.code_id;
+    });
     self.router.updatePageLinks();
   },
 
@@ -60,11 +63,15 @@ Code.prototype = {
     if (totalNumber > 1) {
       self.api.network.assetsShow((asset) => {
         const complete = payment.status === 'paid';
+        payment['code_id'] = chatInfo.code_id;
         payment['logoURL'] = require('../home/logo.png').default;
         payment['info'] = `${payment.threshold}/${totalNumber}`;
         payment['hasMemo'] = !!payment.memo;
         payment['memo'] = payment.memo;
         payment['assetUrl'] = asset.data.icon_url;
+        payment['tokenAmount'] = `${payment.amount} ${asset.data.symbol}`;
+        const useAmount = new Decimal(asset.data.price_usd).times(payment.amount);
+        payment['usdAmount'] = `${useAmount.toNumber().toFixed(2).toString()} USD`;
         payment['complete'] = complete;
         payment['successURL'] = require('../home/payment_complete.svg').default;
         $('#layout-container').html(self.templatePayment(payment));
