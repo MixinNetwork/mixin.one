@@ -48,10 +48,8 @@ Code.prototype = {
     chatInfo['hasIntro'] = chatInfo.type === 'conversation' ? !!chatInfo.announcement : !!chatInfo.biography;
     chatInfo['intro'] = chatInfo.type === 'conversation' ? chatInfo.announcement : chatInfo.biography;
     chatInfo['actionText'] = chatInfo.type === 'conversation' ? i18n.t('code.group.join') : i18n.t('code.user.chat');
+    chatInfo['mixinURL'] = "mixin://codes/" + chatInfo.code_id;
     $('#layout-container').html(self.templateChat(chatInfo));
-    $('#action-btn').click(() => {
-      window.location.href = "mixin://codes/" + chatInfo.code_id;
-    });
     self.router.updatePageLinks();
   },
 
@@ -63,7 +61,6 @@ Code.prototype = {
     if (totalNumber > 1) {
       self.api.network.assetsShow((asset) => {
         const complete = payment.status === 'paid';
-        payment['code_id'] = payment.code_id;
         payment['logoURL'] = require('../home/logo.png').default;
         payment['info'] = `${payment.threshold}/${totalNumber}`;
         payment['hasMemo'] = !!payment.memo;
@@ -74,6 +71,7 @@ Code.prototype = {
         payment['usdAmount'] = `${useAmount.toNumber().toFixed(2).toString()} USD`;
         payment['complete'] = complete;
         payment['successURL'] = require('../home/payment_complete.svg').default;
+        payment['mixinURL'] = "mixin://codes/" + payment.code_id;
         $('#layout-container').html(self.templatePayment(payment));
         new QRious({
           element: document.getElementById('qrcode'),

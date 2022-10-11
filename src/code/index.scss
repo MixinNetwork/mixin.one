@@ -1,5 +1,23 @@
 @import "../constant.scss";
 
+
+.btn {
+  background: #3D75E3;
+  border: none;
+  border-radius: 28px;
+  text-align: center;
+  line-height: 50px;
+  font-weight: 500;
+  cursor: pointer;
+
+  a {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    color: #ffffff;
+  }
+}
+
 .pay.layout,
 .payment.code.layout,
 .chat.code.layout {
@@ -44,21 +62,12 @@
         }
       }
 
-      .btn {
-        display: flex;
-        justify-content: center;
+      .download-btn {
         width: 116px;
         height: 40px;
-        background: #3D75E3;
-        border-radius: 20px;
-
-        a {
-          line-height: 40px;
-          text-align: center;
-          font-weight: 600;
-          font-size: 14px;
-          color: #FFFFFF;
-        }
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 40px;
       }
 
       @media (max-width: 768px) {
@@ -184,21 +193,14 @@
         }
       }
 
-      #action-btn {
-        display: flex;
-        justify-content: center;
+      .action-btn {
         margin-top: 40px;
         margin-bottom: 16px;
         width: 116px;
         height: 50px;
-        background: #3D75E3;
-        border: none;
-        border-radius: 28px;
-        text-align: center;
-        line-height: 50px;
         font-weight: 500;
-        color: #ffffff;
-        cursor: pointer;
+        font-size: 16px;
+        line-height: 50px;
       }
 
       .qrcode-container {
@@ -275,22 +277,15 @@
       }
     }
 
-    .mixin-button {
+    .mixin-btn {
       margin-top: 20px;
       margin-bottom: 30px;
       width: 129px;
       height: 42px;
-      background: #4B7CDD;
-      box-shadow: 0 6px 10px rgba(75, 124, 221, 0.15);
-      border-radius: 40px;
       text-align: center;
       line-height: 40px;
-
-      a {
-        font-weight: 400;
-        font-size: 15px;
-        color: #ffffff;
-      }
+      font-weight: 400;
+      font-size: 15px;
     }
 
     .bottom-bar {
@@ -330,10 +325,6 @@
   .payment.code.layout {
     .pay.container,
     .code.container {
-      header {
-        padding: 0;
-      }
-
       .card-container {
         margin-top: calc(#{$rate} * 20 + 10px);
         margin-bottom: calc(#{$rate} * 16 + 8px);
