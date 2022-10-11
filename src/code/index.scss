@@ -293,12 +293,16 @@
     .mixin-btn {
       margin-top: 18px;
       margin-bottom: 30px;
-      width: 129px;
       height: 42px;
       text-align: center;
       line-height: 40px;
       font-weight: 400;
       font-size: 15px;
+
+      a {
+        box-sizing: border-box;
+        padding: 0 16px;
+      }
     }
 
     .bottom-bar {
