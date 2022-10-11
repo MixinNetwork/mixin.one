@@ -69,8 +69,12 @@
         font-size: 14px;
         line-height: 40px;
       }
+    }
 
-      @media (max-width: 768px) {
+    @media (max-width: 768px) {
+      header {
+        padding: 0;
+
         .btn {
           display: none;
         }
@@ -287,7 +291,7 @@
     }
 
     .mixin-btn {
-      margin-top: 20px;
+      margin-top: 18px;
       margin-bottom: 30px;
       width: 129px;
       height: 42px;
@@ -327,8 +331,8 @@
   }
 }
 
-@media (min-height: 667px) and (max-height: 812px) {
-  $rate: calc((100vh - 667px) / 146);
+@media (min-height: 624px) and (max-height: 770px) {
+  $rate: calc((100vh - 624px) / 146);
 
   .pay.layout,
   .payment.code.layout {
