@@ -68,9 +68,9 @@
       }
     }
 
-    @media (max-width: 768px) {
+    @media (max-width: 414px) {
       header {
-        width: 84%;
+        width: 315px;
       }
     }
 
@@ -79,6 +79,9 @@
       flex-direction: column;
       align-items: center;
       margin-top: 35px;
+      margin-bottom: 24px;
+      padding-top: 48px;
+      padding-bottom: 40px;
       width: 315px;
       background: #F9FAFC;
       border: 1px solid rgba(0, 0, 0, 0.04);
@@ -86,7 +89,6 @@
       border-radius: 20px;
 
       .avatar-container {
-        margin-top: 80px;
         width: 90px;
         height: 90px;
         border: 2px solid #FFFFFF;
@@ -108,14 +110,13 @@
 
       .title,
       .name {
-        margin-top: 10px;
         text-align: center;
         font-size: 18px;
         font-weight: 600;
       }
 
-      .title {
-        margin-top: 80px;
+      .name {
+        margin-top: 10px;
       }
 
       .info {
@@ -187,7 +188,7 @@
         display: flex;
         justify-content: center;
         margin-top: 40px;
-        margin-bottom: 56px;
+        margin-bottom: 16px;
         width: 116px;
         height: 50px;
         background: #3D75E3;
@@ -202,7 +203,6 @@
 
       .qrcode-container {
         margin-top: 20px;
-        margin-bottom: 40px;
         width: 100%;
 
         .payment-qrcode {
@@ -231,8 +231,8 @@
       }
 
       .status-container {
-        margin-top: 40px;
-        margin-bottom: 98px;
+        margin-top: 30px;
+        margin-bottom: 68px;
 
         .icon-container {
           width: 90px;
@@ -255,8 +255,6 @@
     }
 
     .footer {
-      margin-top: 24px;
-
       .tip {
         line-height: 22px;
         text-align: center;
@@ -279,7 +277,7 @@
 
     .mixin-button {
       margin-top: 20px;
-      margin-bottom: 80px;
+      margin-bottom: 30px;
       width: 129px;
       height: 42px;
       background: #4B7CDD;
@@ -308,6 +306,39 @@
     @media (max-width: 768px) {
       .bottom-bar {
         display: block;
+      }
+    }
+  }
+
+  .pay.container {
+    .card-container {
+      .qrcode-container {
+        margin-top: 5px;
+
+        .tip {
+          margin-top: 0;
+        }
+      }
+    }
+  }
+}
+
+@media (min-height: 667px) and (max-height: 812px) {
+  $rate: calc((100vh - 667px) / 146);
+
+  .pay.layout,
+  .payment.code.layout {
+    .pay.container,
+    .code.container {
+      header {
+        padding: 0;
+      }
+
+      .card-container {
+        margin-top: calc(#{$rate} * 20 + 10px);
+        margin-bottom: calc(#{$rate} * 16 + 8px);
+        padding-top: calc(#{$rate} * 24 + 24px);
+        padding-bottom: calc(#{$rate} * 16 + 24px);
       }
     }
   }
