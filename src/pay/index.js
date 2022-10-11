@@ -145,7 +145,7 @@ Pay.prototype = {
         return true;
       }
       setTimeout(function() {
-        // self.refreshPayment(recipientId, assetId, amount, traceId, memo);
+        self.refreshPayment(recipientId, assetId, amount, traceId, memo);
       }, 1500);
     }, recipientId, assetId, amount, traceId);
   },
