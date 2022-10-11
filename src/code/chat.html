@@ -15,7 +15,12 @@
             <p>{{firstLetter}}</p>
             {{/if}}
         </div>
-        <div class="name">{{full_name}}</div>
+        <div class="name">
+            <span>{{full_name}}</span>
+            {{#if isBot}}
+            <img src="{{botIcon}}"/>
+            {{/if}}
+        </div>
         <div class="info">{{info}}</div>
         {{#if hasIntro}}
         <div class="intro">{{intro}}</div>

@@ -119,9 +119,18 @@
 
       .title,
       .name {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
         text-align: center;
         font-size: 18px;
         font-weight: 600;
+
+        img {
+          display: inline-block;
+          margin-left: 4px;
+          height: 100%;
+        }
       }
 
       .name {
