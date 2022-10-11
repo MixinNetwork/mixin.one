@@ -231,11 +231,6 @@
           }
         }
 
-        .scale.payment-qrcode {
-          width: 148px;
-          height: 148px;
-        }
-
         .tip {
           margin-top: 12px;
           text-align: center;
@@ -318,18 +313,6 @@
     @media (max-width: 768px) {
       .bottom-bar {
         display: block;
-      }
-    }
-  }
-
-  .pay.container {
-    .card-container {
-      .qrcode-container {
-        margin-top: 14px;
-
-        .tip {
-          margin-top: 2px;
-        }
       }
     }
   }
