@@ -217,14 +217,14 @@
       }
 
       .qrcode-container {
-        margin-top: 20px;
+        margin-top: 24px;
         width: 100%;
 
         .payment-qrcode {
           position: relative;
           margin: 0 auto;
-          width: 168px;
-          height: 168px;
+          width: 130px;
+          height: 130px;
 
           #qrcode {
             width: 100%;
@@ -232,12 +232,12 @@
         }
 
         .scale.payment-qrcode {
-          width: 192px;
-          height: 192px;
+          width: 148px;
+          height: 148px;
         }
 
         .tip {
-          margin-top: 14px;
+          margin-top: 12px;
           text-align: center;
           font-weight: 400;
           font-size: 14px;
@@ -321,10 +321,10 @@
   .pay.container {
     .card-container {
       .qrcode-container {
-        margin-top: 5px;
+        margin-top: 14px;
 
         .tip {
-          margin-top: 0;
+          margin-top: 2px;
         }
       }
     }
