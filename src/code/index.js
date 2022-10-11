@@ -44,6 +44,8 @@ Code.prototype = {
     chatInfo['firstLetter'] = full_name.trim()[0] || '^_^';
     chatInfo['logoURL'] = require('../home/logo.png').default;
     chatInfo['full_name'] = full_name.trim().length > 0 ? full_name.trim() : '^_^';
+    chatInfo['isBot'] = !!chatInfo.app;
+    chatInfo['botIcon'] = require('./robot.svg').default;
     chatInfo['info'] = chatInfo.type === 'conversation' ? `${chatInfo.participants.length} ${i18n.t('code.group.members')}` : chatInfo.identity_number;
     chatInfo['hasIntro'] = chatInfo.type === 'conversation' ? !!chatInfo.announcement : !!chatInfo.biography;
     chatInfo['intro'] = chatInfo.type === 'conversation' ? chatInfo.announcement : chatInfo.biography;
