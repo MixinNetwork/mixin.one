@@ -31,6 +31,7 @@ Home.prototype = {
       new_home_3_2_url: require('./assets/home_3_2.png').default,
       home_mvm_url: require('./assets/home_mvm.png').default,
       home_tip_url: require('./assets/home_tip.png').default,
+      home_mtg_url: require('./assets/home_mtg.png').default,
       logoURL: require('./logo.png').default,
       playURL: require('./google-play.png').default,
       storeURL: require('./app-store.png').default,

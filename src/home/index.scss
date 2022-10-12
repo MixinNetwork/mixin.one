@@ -141,6 +141,7 @@
     text-align: center;
 
     &>div {
+      position: relative;
       width: 100%;
       height: 100%;
     }
@@ -148,11 +149,14 @@
     .section-container {
       display: flex;
       flex-direction: row;
-      justify-content: space-between;
       align-items: center;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
       margin: 0 auto;
-      width: 90%;
-      height: 100%;
+      width: 1280px;
+      height: 440px;
 
       .section-info {
         width: 54%;
@@ -214,17 +218,19 @@
   }
 
   .section-1 .section-container{
+    .section-info {
+      width: 668px;
+    }
+
     & > img {
-      position: absolute;
-      right: 0;
-      top: 240px;
-      width: 600px;
-      height: 393px;
+      width: 46%;
     }
   }
 
   .section-2 {
     .section-info {
+      margin-left: 100px;
+
       .logo {
         width: 142px;
         height: 142px;
@@ -255,6 +261,14 @@
     & > img {
       width: 470px;
       height: 375px;
+    }
+  }
+
+
+  .section-5 .section-container {
+    & > img {
+      width: 448px;
+      height: 440px;
     }
   }
 
