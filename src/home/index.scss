@@ -149,6 +149,7 @@
     .section-container {
       display: flex;
       flex-direction: row;
+      justify-content: space-between;
       align-items: center;
       position: absolute;
       top: 50%;
@@ -229,8 +230,6 @@
 
   .section-2 {
     .section-info {
-      margin-left: 100px;
-
       .logo {
         width: 142px;
         height: 142px;
@@ -258,6 +257,7 @@
     .section-info {
       width: 668px;
     }
+
     & > img {
       width: 470px;
       height: 375px;
@@ -331,7 +331,6 @@
       .nav-title h1 {
         width: 600px;
       }
-
 
     section {
 
