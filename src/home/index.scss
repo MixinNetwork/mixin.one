@@ -241,6 +241,23 @@
     }
   }
 
+  .section-3 .section-container {
+    & > img {
+      width: 600px;
+      height: 440px;
+    }
+  }
+
+  .section-4 .section-container {
+    .section-info {
+      width: 668px;
+    }
+    & > img {
+      width: 470px;
+      height: 375px;
+    }
+  }
+
   .bg-gray {
     background-color: #f5f7ff;
   }
