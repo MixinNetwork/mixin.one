@@ -148,6 +148,7 @@
     .section-container {
       display: flex;
       flex-direction: row;
+      justify-content: space-between;
       align-items: center;
       margin: 0 auto;
       width: 90%;
@@ -208,19 +209,35 @@
 
       img {
         display: block;
-        width: 46%;
       }
     }
   }
 
-  .section-1 {
-
-    &>div>img {
+  .section-1 .section-container{
+    & > img {
       position: absolute;
       right: 0;
       top: 240px;
       width: 600px;
       height: 393px;
+    }
+  }
+
+  .section-2 {
+    .section-info {
+      .logo {
+        width: 142px;
+        height: 142px;
+      }
+
+      .content {
+        width: 520px;
+      }
+    }
+
+    .section-container > img {
+      width: 454px;
+      height: 420px;
     }
   }
 
@@ -278,42 +295,6 @@
 
 
     section {
-
-      &.section-2 {
-        height: 978px;
-        width: 100%;
-
-        &>div {
-          width: 1200px;
-          margin: 0 auto;
-          position: relative;
-
-          .section-info {
-            text-align: left;
-            position: absolute;
-            top: 234px;
-            right: 0;
-
-            .logo {
-              width: 142px;
-              height: 142px;
-            }
-
-            .content {
-              width: 520px;
-            }
-          }
-
-          &>img {
-            position: absolute;
-            top: 254px;
-            left: 0;
-            margin-top: 40px;
-            width: 481px;
-            height: 444px;
-          }
-        }
-      }
 
       &.section-3 {
         height: 862px;
