@@ -326,55 +326,6 @@
     }
   }
 
-  @media screen and (min-width: 1280px) {
-    &.home-language-ch {
-      .nav-title h1 {
-        width: 600px;
-      }
-
-    section {
-
-      &.section-3 {
-        height: 862px;
-        margin-top: 240px;
-
-        .section-info {
-          position: absolute;
-          top: 0;
-          left: 0;
-          padding-top: 120px;
-          text-align: left;
-
-          .logo {
-            margin-left: -5px;
-          }
-        }
-
-        &>div>img {
-          position: absolute;
-          right: 0;
-          top: 170px;
-          width: 610px;
-          height: 388px;
-        }
-      }
-    }
-
-    footer {
-      height: 186px;
-      font-size: initial;
-
-      .footer-link-list {
-        padding-top: 68px;
-      }
-
-      .copyright {
-        margin-top: 14px;
-      }
-    }
-  }
-  }
-
   @media screen and (max-width: 1279px) and (min-width: 960px) {
     header {
       min-height: 500px;
