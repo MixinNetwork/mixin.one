@@ -28,7 +28,8 @@
     "messenger.tip": "Don't have Mixin Messenger?",
     "messenger.download": "Download",
     "payment.scan": "Use Mixin Messenger to scan the code",
-    "payment.complete": "Done"
+    "payment.complete": "Done",
+    "open.action": "Open In Mixin"
   },
   "snapshots": {
     "search.placeholder": "Search transactions",
