@@ -195,8 +195,9 @@
 
           .link {
             display: flex;
+            justify-content: left;
             align-items: center;
-            flex: 0 0 30%;
+            flex: 0 0 25%;
             margin-bottom: 28px;
             width: 30%;
             height: 32px;
@@ -207,6 +208,7 @@
               display: inline-block;
               margin-left: 10px;
               height: 36%;
+              cursor: pointer;
             }
           }
 
@@ -322,9 +324,11 @@
           text-align: center;
 
           .link-container {
-            justify-content: space-around;
+            justify-content: center;
+            width: 100%;
 
             .link {
+              flex: 0 0 20%;
               justify-content: center;
             }
           }
@@ -337,12 +341,8 @@
       }
     }
 
-    .section-2 {
-      .section-container {
-        .section-info{
-          padding: 0;
-        }
-      }
+    .section-2 .section-container .section-info{
+      padding: 0;
     }
   }
 
@@ -413,29 +413,12 @@
 
           .link-container {
             margin: 0 auto;
-            width: 720px;
             font-size: 26px;
             color: #3d75e3;
             line-height: 30px;
 
-            img {
-              display: inline-block;
-              margin-left: 22px;
-              color: #3d75e3;
-              height: 16px;
-              cursor: pointer;
-            }
-          }
-        }
-      }
-
-      &.section-1,
-      &.section-2 {
-        .section-container {
-          .section-info {
-            .content,
-            .link-container {
-              width: 694px;
+            .link {
+              flex: 0 0 20%;
             }
           }
         }
@@ -510,37 +493,17 @@
 
           .link-container {
             margin: 0 auto;
-            width: 500px;
             height: 30px;
             font-size: 18px;
             color: #3d75e3;
             line-height: 22px;
 
             .link {
+              flex: 0 0 17%;
               height: 20px;
 
               img {
-                display: inline-block;
-                margin-left: 14px;
                 height: 50%;
-                color: #3d75e3;
-                cursor: pointer;
-              }
-            }
-          }
-        }
-      }
-
-      &.section-1,
-      &.section-2 {
-        .section-container {
-          .section-info {
-            .content,
-            .link-container {
-              width: 400px;
-
-              .link {
-                margin-bottom: 10px;
               }
             }
           }
@@ -681,7 +644,6 @@
 
           .link-container {
             margin: 0 auto;
-            width: 350px;
             height: 20px;
             font-size: 14px;
             color: #3d75e3;
@@ -692,22 +654,6 @@
 
               img {
                 height: 50%;
-              }
-            }
-          }
-        }
-      }
-
-      &.section-1{
-        .section-container {
-          .section-info {
-            .content,
-            .link-container {
-              width: 285px;
-
-              .link {
-                flex: 0 0 33%;
-                margin-bottom: 5px;
               }
             }
           }
