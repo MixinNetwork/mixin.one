@@ -5,6 +5,24 @@ import 'slick-carousel/slick/slick-theme.scss';
 import 'slick-carousel';
 import $ from 'jquery';
 import Animator from '../snapshot/animator.js';
+import background from './assets/BG.jpg';
+import logo from './assets/home_2_1.png';
+import rightIcon from './assets/right.png';
+import whiteLogo from './assets/logo.svg';
+import blueLogo from './logo.png';
+import menuIcon from './assets/menus.png';
+import network from './assets/home_1.png';
+import messenger from './assets/home_2_2.png';
+import mvm from './assets/home_mvm.png';
+import tip from './assets/home_tip.png';
+import mtg from './assets/home_mtg.png';
+import googleStore from './google-play.png';
+import appStore from './app-store.png';
+import apk from './apk.png';
+import messengerExample from './messenger.png';
+import macExample from './mac.png';
+import windows from './windows.png';
+import mac from './mac-desktop.png';
 
 function Home(router, api) {
   this.router = router;
@@ -20,22 +38,16 @@ Home.prototype = {
     const self = this;
     $('body').attr('class', 'home layout');
     $('#layout-container').html(self.templateIndex({
-      new_bg_url: require('./assets/BG.jpg').default,
-      new_right_url: require('./assets/right.png').default,
-      new_logo_url: require('./assets/logo.svg').default,
-      new_menus_url: require('./assets/menus.png').default,
-      new_home_1_url: require('./assets/home_1.png').default,
-      new_home_2_1_url: require('./assets/home_2_1.png').default,
-      new_home_2_2_url: require('./assets/home_2_2.png').default,
-      new_home_3_1_url: require('./assets/home_3_1.png').default,
-      new_home_3_2_url: require('./assets/home_3_2.png').default,
-      home_mvm_url: require('./assets/home_mvm.png').default,
-      home_tip_url: require('./assets/home_tip.png').default,
-      home_mtg_url: require('./assets/home_mtg.png').default,
-      logoURL: require('./logo.png').default,
-      playURL: require('./google-play.png').default,
-      storeURL: require('./app-store.png').default,
-      messengerURL: require('./messenger.png').default,
+      new_bg_url: background,
+      new_right_url: rightIcon,
+      new_logo_url: whiteLogo,
+      new_menus_url: menuIcon,
+      new_home_1_url: network,
+      new_home_2_1_url: logo,
+      new_home_2_2_url: messenger,
+      home_mvm_url: mvm,
+      home_tip_url: tip,
+      home_mtg_url: mtg,
       zeromesh: window.location.href.includes("zeromesh"),
       copyright: (new Date()).getFullYear()
     }));
@@ -82,7 +94,7 @@ Home.prototype = {
     $('title').html('XIN Token Distribution - Mixin');
     $('body').attr('class', 'home layout');
     $('#layout-container').html(self.templateXIN({
-      logoURL: require('./logo.png').default
+      logoURL: blueLogo
     }));
   },
 
@@ -90,14 +102,14 @@ Home.prototype = {
     const self = this;
     $('body').attr('class', 'messenger layout');
     $('#layout-container').html(self.templateMessenger({
-      logoURL: require('./logo.png').default,
-      playURL: require('./google-play.png').default,
-      storeURL: require('./app-store.png').default,
-      apkURL: require('./apk.png').default,
-      messengerURL: require('./messenger.png').default,
-      macURL: require('./mac.png').default,
-      windowsURL: require('./windows.png').default,
-      macDesktopURL: require('./mac-desktop.png').default
+      logoURL: blueLogo,
+      playURL: googleStore,
+      storeURL: appStore,
+      apkURL: apk,
+      messengerURL: messengerExample,
+      macURL: macExample,
+      windowsURL: windows,
+      macDesktopURL: mac
     }));
     var os = self.getMobileOperatingSystem();
     if (os === 'iOS' && navigator.language && navigator.language.includes('zh-CN')) {
