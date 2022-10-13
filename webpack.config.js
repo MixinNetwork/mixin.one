@@ -59,6 +59,7 @@ module.exports = {
       ]
     }, {
       test: /\.(woff|woff2|eot|ttf|otf|svg|png|jpg|gif)$/,
+      dependency: { not: ['url'] },
       use: [
         'file-loader'
       ]
