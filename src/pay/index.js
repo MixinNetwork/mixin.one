@@ -5,6 +5,10 @@ import { Decimal } from 'decimal.js';
 import { v4 as uuidv4 } from 'uuid';
 import MixinUtils from '../utils/mixin.js';
 import URLUtils from '../utils/url.js';
+import arrow from './arrow.svg';
+import blueLogo from './logo.png';
+import complete from '../home/payment_complete.svg';
+
 var validate = require('uuid-validate');
 
 function Pay(router, api) {
@@ -20,7 +24,7 @@ Pay.prototype = {
     const self = this;
     const defaultIcon = "https://images.mixin.one/yH_I5b0GiV2zDmvrXRyr3bK5xusjfy5q7FX3lw3mM2Ryx4Dfuj6Xcw8SHNRnDKm7ZVE3_LvpKlLdcLrlFQUBhds=s128";
     let data = {
-      arrowURL: require('./arrow.svg').default
+      arrowURL: arrow
     };
     self.api.account.check(function (user) {
       if (!user.data) {
@@ -120,13 +124,13 @@ Pay.prototype = {
       }
       var payment = resp.data;
       payment['params'] = window.location.search;
-      payment['logoURL'] = require('../home/logo.png').default;
+      payment['logoURL'] = blueLogo;
       payment['complete'] = payment.status === 'paid';
       payment['fullName'] = payment.recipient.full_name.trim();
       payment['info'] = payment.recipient.identity_number;
       payment['hasMemo'] = !!memo;
       payment['memo'] = memo;
-      payment['successURL'] = require('../home/payment_complete.svg').default;
+      payment['successURL'] = complete;
       payment['assetUrl'] = payment.asset.icon_url;
       payment['tokenAmount'] = `${payment.amount} ${payment.asset.symbol}`;
       const useAmount = new Decimal(payment.asset.price_usd).times(payment.amount);
