@@ -30,7 +30,7 @@
 
   .home-language-ch .header-container .nav-title {
     h1 {
-      width: 850px;
+      width: 600px;
     }
 
     p {
@@ -305,6 +305,10 @@
       }
     }
 
+    header .header-container .nav-title p span {
+      display: inline-block;
+    }
+
     section {
       .section-container {
         flex-direction: column;
@@ -348,8 +352,8 @@
       min-height: 500px;
       max-height: 720px;
 
-      &.home-language-ch {
-        .nav-title h1 {
+      &.home-language-ch .header-container .nav-title{
+         h1 {
           width: 450px;
         }
 
