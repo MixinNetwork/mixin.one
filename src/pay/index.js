@@ -6,7 +6,7 @@ import { v4 as uuidv4 } from 'uuid';
 import MixinUtils from '../utils/mixin.js';
 import URLUtils from '../utils/url.js';
 import arrow from './arrow.svg';
-import blueLogo from './logo.png';
+import blueLogo from '../home/logo.png';
 import complete from '../home/payment_complete.svg';
 
 var validate = require('uuid-validate');
