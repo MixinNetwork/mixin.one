@@ -1,5 +1,6 @@
 import './index.scss';
 import $ from 'jquery';
+import blueLogo from '../home/logo.png';
 
 function Page(router) {
   this.router = router;
@@ -23,7 +24,7 @@ Page.prototype = {
       var layout = require('./' + id + '.' + i18n.locale + '.html');
       $('body').attr('class', 'page layout');
       $('#layout-container').html(layout({
-        logoURL: require('../home/logo.png').default
+        logoURL: blueLogo
       }));
       self.router.updatePageLinks();
     } catch (e) {
@@ -40,7 +41,7 @@ Page.prototype = {
     const self = this;
     $('body').attr('class', 'page layout');
     $('#layout-container').html(self.templateTerms({
-      logoURL: require('../home/logo.png').default
+      logoURL: blueLogo
     }));
     self.router.updatePageLinks();
   },
@@ -49,7 +50,7 @@ Page.prototype = {
     const self = this;
     $('body').attr('class', 'page layout');
     $('#layout-container').html(self.templatePrivacy({
-      logoURL: require('../home/logo.png').default
+      logoURL: blueLogo
     }));
     self.router.updatePageLinks();
   },
