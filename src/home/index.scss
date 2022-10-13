@@ -28,11 +28,15 @@
     }
   }
 
-  .home-language-ch .nav-title p {
-    display: flex;
-    justify-content: center;
-    font-family: "Maven Pro", sans-serif;
-    font-weight: 300;
+  .home-language-ch .header-container .nav-title {
+    h1 {
+      width: 850px;
+    }
+
+    p {
+      font-family: "Maven Pro", sans-serif;
+      font-weight: 300;
+    }
   }
 
   header {
@@ -186,8 +190,7 @@
 
         .link-container {
           display: flex;
-          align-content: flex-start;
-          flex-flow: row wrap;
+          flex-direction: row;
           width: 100%;
           font-size: 26px;
           font-weight: 400;
@@ -195,19 +198,17 @@
 
           .link {
             display: flex;
-            justify-content: left;
             align-items: center;
-            flex: 0 0 25%;
             margin-bottom: 28px;
-            width: 30%;
+            margin-right: 50px;
             height: 32px;
             color: #3D75E3;
             cursor: pointer;
 
             img {
               display: inline-block;
-              margin-left: 10px;
-              height: 36%;
+              margin-left: 15px;
+              height: 50%;
               cursor: pointer;
             }
           }
@@ -233,10 +234,6 @@
         .logo {
           width: 142px;
           height: 142px;
-        }
-
-        .content {
-          width: 520px;
         }
       }
     }
@@ -324,11 +321,11 @@
           text-align: center;
 
           .link-container {
+            display: flex;
             justify-content: center;
             width: 100%;
 
             .link {
-              flex: 0 0 20%;
               justify-content: center;
             }
           }
@@ -416,10 +413,6 @@
             font-size: 26px;
             color: #3d75e3;
             line-height: 30px;
-
-            .link {
-              flex: 0 0 20%;
-            }
           }
         }
       }
@@ -499,11 +492,11 @@
             line-height: 22px;
 
             .link {
-              flex: 0 0 17%;
+              margin-right: 25px;
               height: 20px;
 
               img {
-                height: 50%;
+                margin-left: 5px;
               }
             }
           }
@@ -650,10 +643,11 @@
             line-height: 17px;
 
             .link {
+              margin-right: 20px;
               height: 16px;
 
               img {
-                height: 50%;
+                margin-left: 5px;
               }
             }
           }
