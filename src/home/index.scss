@@ -393,7 +393,7 @@
     }
   }
 
-  @media screen and (max-width: 959px) and(min-width: 720px) {
+  @media screen and (max-width: 959px) and (min-width: 720px) {
     header {
       max-height: 400px;
       min-height: 500px;
@@ -615,7 +615,6 @@
           }
         }
       }
-
     }
 
     .section-1 .section-container > img{
@@ -636,10 +635,6 @@
         width: 330px;
         height: 238px;
       }
-    }
-
-    section.section-has-logo {
-      height: 577px;
     }
 
     .logo {
