@@ -2,10 +2,10 @@
 
 .mixin-one-home-container {
   font-family: "Mulish", sans-serif;
-  min-width: 380px;
-  overflow: hidden;
   width: 100%;
   height: 100%;
+  min-width: 375px;
+  overflow: hidden;
 
   * {
     cursor: default;
@@ -25,17 +25,6 @@
       opacity: 1;
       -webkit-transform: translate3d(0, 0, 0);
       transform: translate3d(0, 0, 0);
-    }
-  }
-
-  .home-language-ch .header-container .nav-title {
-    h1 {
-      width: 600px;
-    }
-
-    p {
-      font-family: "Maven Pro", sans-serif;
-      font-weight: 300;
     }
   }
 
@@ -59,9 +48,9 @@
     .header-container {
       z-index: 1;
       margin: 0 auto;
-      padding: 24px 40px 0px 40px;
-      color: #fff;
+      padding: 24px 40px 0 40px;
       height: 100%;
+      color: #fff;
 
       .nav-list-menus-btn {
         display: none;
@@ -137,15 +126,26 @@
     }
   }
 
+  .home-language-ch .header-container .nav-title {
+    h1 {
+      width: 600px;
+    }
+
+    p {
+      font-family: "Maven Pro", sans-serif;
+      font-weight: 300;
+    }
+  }
+
   section {
-    position: relative;
-    margin: 0 auto;
     width: 100%;
     height: 880px;
     text-align: center;
 
     &>div {
-      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
       width: 100%;
       height: 100%;
     }
@@ -155,23 +155,12 @@
       flex-direction: row;
       justify-content: space-between;
       align-items: center;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      margin: 0 auto;
       width: 1280px;
-      height: 440px;
+      height: 410px;
 
       .section-info {
-        width: 55%;
+        width: 668px;
         text-align: left;
-
-        .logo {
-          width: 110px;
-          height: 110px;
-          margin-bottom: 14px;
-        }
 
         .title {
           line-height: 65.26px;
@@ -191,6 +180,7 @@
         .link-container {
           display: flex;
           flex-direction: row;
+          margin-bottom: 28px;
           width: 100%;
           font-size: 26px;
           font-weight: 400;
@@ -199,7 +189,6 @@
           .link {
             display: flex;
             align-items: center;
-            margin-bottom: 28px;
             margin-right: 50px;
             height: 32px;
             color: #3D75E3;
@@ -221,22 +210,15 @@
 
       & > img {
         display: block;
-        height: 80%;
+        height: 90%;
       }
     }
   }
 
-  .section-2 {
-    .section-container {
-      .section-info {
-        padding-left: 158px;
-
-        .logo {
-          width: 142px;
-          height: 142px;
-        }
-      }
-    }
+  .logo {
+    margin-bottom: 32px;
+    width: 142px;
+    height: 142px;
   }
 
   .bg-gray {
@@ -255,13 +237,12 @@
     width: 100%;
     height: 186px;
     text-align: center;
-    font-family: "Maven Pro";
     font-size: 16px;
     font-weight: 400;
 
     .footer-link-list {
       a {
-        padding-left: 10px;
+        padding-left: 6px;
         line-height: 19px;
         cursor: pointer;
         color: rgba(47, 48, 50, 1);
@@ -299,18 +280,11 @@
   }
 
   @media screen and (max-width: 1279px) {
-    .bg-gray {
-      .section-container {
-        flex-direction: column;
-      }
-    }
-
     header .header-container .nav-title p span {
       display: inline-block;
     }
 
-    section {
-      .section-container {
+    section .section-container {
         flex-direction: column;
         justify-content: center;
         width: 100%;
@@ -336,14 +310,12 @@
         }
 
         & > img {
-          margin-top: 10px;
           height: 40%
         }
       }
-    }
 
-    .section-2 .section-container .section-info{
-      padding: 0;
+    .bg-gray .section-container {
+      flex-direction: column;
     }
   }
 
@@ -392,38 +364,32 @@
     section {
       height: 945px;
 
-      .section-container {
-        .section-info {
-          .logo {
-            width: 142px;
-            height: 142px;
-            margin-bottom: 20px;
-          }
+      .section-container .section-info {
+        .title {
+          font-size: 50px;
+          line-height: 72px;
+        }
 
-          .title {
-            font-size: 50px;
-            line-height: 72px;
-          }
+        .content {
+          margin: 20px auto 28px auto;
+          width: 720px;
+          line-height: 38px;
+          font-size: 28px;
+        }
 
-          .content {
-            margin: 20px auto 28px auto;
-            width: 720px;
-            line-height: 38px;
-            font-size: 28px;
-          }
-
-          .link-container {
-            margin: 0 auto;
-            font-size: 26px;
-            color: #3d75e3;
-            line-height: 30px;
-          }
+        .link-container {
+          margin-bottom: 28px;
+          line-height: 30px;
+          font-size: 26px;
+          color: #3d75e3;
         }
       }
     }
 
-    section.section-has-logo {
-      height: 1066px;
+    .logo {
+      width: 142px;
+      height: 142px;
+      margin-bottom: 20px;
     }
   }
 
@@ -473,51 +439,41 @@
     section {
       height: 623px;
 
-      .section-container {
-        .section-info {
+      .section-container .section-info {
+        .title {
+          font-size: 32px;
+          line-height: 38px;
+        }
 
-          .title {
-            font-size: 32px;
-            line-height: 38px;
-          }
+        .content {
+          margin: 12px auto 20px auto;
+          width: 500px;
+          line-height: 26px;
+          font-size: 18px;
+        }
 
-          .content {
-            margin: 12px auto 20px auto;
-            width: 500px;
-            line-height: 26px;
-            font-size: 18px;
-          }
+        .link-container {
+          margin-bottom: 20px;
+          height: 30px;
+          line-height: 22px;
+          font-size: 18px;
 
-          .link-container {
-            margin: 0 auto;
-            height: 30px;
-            font-size: 18px;
-            color: #3d75e3;
-            line-height: 22px;
+          .link {
+            margin-right: 25px;
+            height: 20px;
 
-            .link {
-              margin-right: 25px;
-              height: 20px;
-
-              img {
-                margin-left: 5px;
-              }
+            img {
+              margin-left: 5px;
             }
           }
         }
       }
-
-      &.section-2 {
-        .section-container .section-info .logo {
-              width: 100px;
-              height: 100px;
-              margin-bottom: 24px;
-            }
-      }
     }
 
-    section.section-has-logo {
-      height: 765px;
+    .logo {
+     width: 100px;
+     height: 100px;
+     margin-bottom: 10px;
     }
   }
 
@@ -623,32 +579,34 @@
     }
 
     section {
-      height: 442px;
+      height: 500px;
 
       .section-container {
+        width: 375px;
+
         .section-info {
+          width: 100%;
+
           .title {
+            font-weight: 700;
             font-size: 24px;
-            line-height: 29px;
+            line-height: 30px;
           }
 
           .content {
-            margin: 12px auto 15px auto;
-            width: 350px;
-            line-height: 20px;
+            margin: 10px auto 16px auto;
+            padding: 0 24px;
+            line-height: 16px;
             font-size: 14px;
           }
 
           .link-container {
-            margin: 0 auto;
-            height: 20px;
-            font-size: 14px;
-            color: #3d75e3;
-            line-height: 17px;
+            margin-bottom: 40px;
 
             .link {
               margin-right: 20px;
-              height: 16px;
+              height: 18px;
+              font-size: 14px;
 
               img {
                 margin-left: 5px;
@@ -658,111 +616,49 @@
         }
       }
 
-      &.section-2 {
-        .section-container .section-info .logo {
-          width: 80px;
-          height: 80px;
-          margin-bottom: 16px;
-        }
+    }
+
+    .section-1 .section-container > img{
+      width: 290px;
+      height: 204px;
+    }
+    .section-2 .section-container > img{
+      width: 198px;
+      height: 179px;
+    }
+    .section-4 .section-container > img {
+      width: 220px;
+      height: 184px;
+    }
+    .section-3,
+    .section-5 {
+      .section-container > img{
+        width: 330px;
+        height: 238px;
       }
     }
 
     section.section-has-logo {
       height: 577px;
     }
-  }
-}
 
-.home-xin {
-  &.content {
-    width: 100%;
-    max-width: 960px;
-    box-sizing: border-box;
-    padding: 0 32px 32px;
-    margin: 128px auto 0;
-    text-align: center;
-  }
-
-  &p {
-    margin: 16px 0;
-  }
-
-  &.token.distribution {
-    margin: 64px auto 0;
-    padding: 0 24px 24px;
-    max-width: 640px;
-
-    .distribution.container {
-      text-align: left;
-      padding: 16px 0;
-
-      .distribution.block {
-        margin-bottom: 32px;
-
-        h3 {
-          font-family: $font-main-title;
-          font-size: 24px;
-        }
-
-        p {
-          line-height: 1.5em;
-          font-size: 16px;
-          color: $color-main-foreground-light;
-        }
-
-        a {
-          color: $color-main-foreground-light;
-
-          &:hover {
-            color: $color-main-highlight;
-          }
-        }
-
-        .mixin.meta,
-        .distribution.quota {
-          padding: 0;
-          margin: 0;
-          list-style: circle;
-          line-height: 1.5em;
-          font-size: 16px;
-
-          li {
-            margin: 4px 0 8px 8px;
-          }
-        }
-
-        .distribution.meta {
-          padding: 0;
-          margin: 0;
-          list-style: none;
-          line-height: 1.7em;
-          font-size: 16px;
-
-          i {
-            margin-right: 12px;
-          }
-
-          span {
-            margin-right: 8px;
-
-            &.name {
-              font-family: $font-main-title;
-              font-weight: 300;
-              font-size: 12px;
-              color: $color-main-foreground-light;
-            }
-          }
-        }
-      }
+    .logo {
+      width: 48px;
+      height: 48px;
+      margin-bottom: 8px;
     }
 
-    .distribution.footer {
-      margin-bottom: 64px;
-      text-align: left;
-      font-family: $font-main-title;
-      font-weight: 300;
-      font-size: 12px;
-      color: $color-main-foreground-light;
+    footer {
+      line-height: 12px;
+      font-size: 10px;
+
+      .footer-link-list a {
+        padding-left: 5px;
+
+        &:after {
+          padding-left: 7px;
+        }
+      }
     }
   }
 }
