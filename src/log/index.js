@@ -1,5 +1,6 @@
 import './index.scss';
 import $ from 'jquery';
+import blueLogo from '../home/logo.png';
 
 function Log(router, api) {
   this.router = router;
@@ -18,7 +19,7 @@ Log.prototype = {
       success: function(resp) {
         $('body').attr('class', 'log layout');
         $('#layout-container').html(self.templateIndex({
-          logoURL: require('../home/logo.png').default
+          logoURL: blueLogo
         }));
         for (var i in resp.data) {
           var item = resp.data[i];
