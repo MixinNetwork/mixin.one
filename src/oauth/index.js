@@ -3,6 +3,7 @@ import $ from 'jquery';
 import QRious from 'qrious';
 import URLUtils from '../utils/url.js';
 import MixinUtils from '../utils/mixin.js';
+import blueLogo from '../home/logo.png';
 
 function OAuth(router, api) {
   this.router = router;
@@ -62,7 +63,7 @@ OAuth.prototype = {
         window.location.replace('mixin://codes/' + auth.code_id);
         return false;
       }
-      auth['logoURL'] = require('../home/logo.png').default;
+      auth['logoURL'] = blueLogo;
       $('.oauth.code.layout #layout-container').html(self.templateCode(auth));
       new QRious({
         element: document.getElementById('mixin-code'),

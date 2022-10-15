@@ -1,5 +1,6 @@
 import './index.scss';
 import $ from 'jquery';
+import blueLogo from '../home/logo.png';
 
 function Log(router, api) {
   this.router = router;
@@ -13,7 +14,7 @@ Log.prototype = {
     $('title').html('Work on Mixin');
     $('body').attr('class', 'job layout');
     $('#layout-container').html(self.templateIndex({
-      logoURL: require('../home/logo.png').default
+      logoURL: blueLogo
     }));
   },
 

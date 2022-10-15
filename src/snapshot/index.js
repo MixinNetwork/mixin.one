@@ -5,6 +5,9 @@ import jQueryColor from '../jquery-color-plus-names.js';
 import TimeUtils from '../utils/time.js';
 import Animator from './animator.js';
 import validate from 'uuid-validate';
+import blueLogo from '../home/logo.png';
+import viewblock from './viewblock-logo.svg';
+import blockchair from './blockchair-logo.svg';
 
 const PartialLoading = require('../loading.html');
 
@@ -87,15 +90,15 @@ Snapshot.prototype = {
       var s = resp.data;
       s.flow = parseFloat(s.amount) > 0 ? 'in' : 'out';
       s.amount = parseFloat(s.amount) < 0 ? s.amount : '+' + s.amount;
-      s.logoURL = require('../home/logo.png').default;
+      s.logoURL = blueLogo;
       s.peakTPS = parseInt(network.peak_throughput).toLocaleString(undefined, { maximumFractionDigits: 0 });
       s.snapshotsCount = parseInt(network.snapshots_count).toLocaleString(undefined, { maximumFractionDigits: 0 });
       s.assetsCount = parseInt(network.assets_count).toLocaleString(undefined, { maximumFractionDigits: 0 });
       s.hasHash = !!s.snapshot_hash;
       s.viewblockLink = 'https://v2.viewblock.io/mixin/snapshot/' + s.snapshot_hash;
-      s.viewblockIcon = require('./viewblock-logo.svg').default;
+      s.viewblockIcon = viewblock;
       s.blockchairLink = 'https://blockchair.com/mixin/snapshot/' + s.snapshot_hash;
-      s.blockchairIcon = require('./blockchair-logo.svg').default;
+      s.blockchairIcon = blockchair;
       $('body').attr('class', 'snapshot layout');
       $('title').html('Mixin Network');
       $('#layout-container').html(self.templateShow(s));
@@ -213,7 +216,7 @@ Snapshot.prototype = {
             });
           };
 
-          asset.logoURL = require('../home/logo.png').default;
+          asset.logoURL = blueLogo;
           asset.chainLogoURL = chainSet[asset.chain_id];
           asset.snapshotsCount = parseInt(asset.snapshots_count).toLocaleString(undefined, { maximumFractionDigits: 0 });
           asset.amount = Math.round(parseFloat(asset.amount)).toLocaleString(undefined, { maximumFractionDigits: 0 });
@@ -245,7 +248,7 @@ Snapshot.prototype = {
           }
         } else {
           $('.header.container').html(self.partialHeader({
-            logoURL: require('../home/logo.png').default,
+            logoURL: blueLogo,
             assetsCount: parseInt(network.assets_count).toLocaleString(undefined, { maximumFractionDigits: 0 }),
             snapshotsCount: parseInt(network.snapshots_count).toLocaleString(undefined, { maximumFractionDigits: 0 }),
             peakTPS: parseInt(network.peak_throughput).toLocaleString(undefined, { maximumFractionDigits: 0 }),

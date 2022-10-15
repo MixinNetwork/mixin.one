@@ -2,6 +2,8 @@ import './index.scss';
 import $ from 'jquery';
 import QRious from 'qrious';
 import { Decimal } from "decimal.js";
+import blueLogo from '../home/logo.png';
+import completeIcon from '../home/payment_complete.svg';
 
 function Code(router, api) {
   this.router = router;
@@ -42,7 +44,7 @@ Code.prototype = {
     chatInfo['hasAvatar'] = !!chatInfo.avatar_url;
     const full_name = chatInfo.type === 'conversation' ? chatInfo.name : chatInfo.full_name;
     chatInfo['firstLetter'] = full_name.trim()[0] || '^_^';
-    chatInfo['logoURL'] = require('../home/logo.png').default;
+    chatInfo['logoURL'] = blueLogo;
     chatInfo['full_name'] = full_name.trim().length > 0 ? full_name.trim() : '^_^';
     chatInfo['isBot'] = !!chatInfo.app;
     chatInfo['botIcon'] = require('./robot.svg').default;
@@ -63,7 +65,7 @@ Code.prototype = {
     if (totalNumber > 1) {
       self.api.network.assetsShow((asset) => {
         const complete = payment.status === 'paid';
-        payment['logoURL'] = require('../home/logo.png').default;
+        payment['logoURL'] = blueLogo;
         payment['info'] = `${payment.threshold}/${totalNumber}`;
         payment['hasMemo'] = !!payment.memo;
         payment['memo'] = payment.memo;
@@ -72,7 +74,7 @@ Code.prototype = {
         const useAmount = new Decimal(asset.data.price_usd).times(payment.amount);
         payment['usdAmount'] = `${useAmount.toNumber().toFixed(2).toString()} USD`;
         payment['complete'] = complete;
-        payment['successURL'] = require('../home/payment_complete.svg').default;
+        payment['successURL'] = completeIcon;
         payment['mixinURL'] = "mixin://codes/" + payment.code_id;
         $('#layout-container').html(self.templatePayment(payment));
         new QRious({
