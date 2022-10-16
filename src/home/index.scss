@@ -496,7 +496,8 @@
         nav {
           margin-top: 28px;
           padding: 0 20px;
-          width: 375px;
+          width: 100%;
+          max-width: 600px;
           height: 16px;
 
           .nav-list {
@@ -568,7 +569,7 @@
             width: 300px;
             font-size: 14px;
             color: rgba(255, 255, 255, 1);
-            line-height: 16px;
+            line-height: 20px;
           }
 
           br {
@@ -582,7 +583,8 @@
       height: 500px;
 
       .section-container {
-        width: 375px;
+        width: 100%;
+        max-width: 600px;
 
         .section-info {
           width: 100%;
@@ -596,7 +598,7 @@
           .content {
             margin: 10px auto 16px auto;
             padding: 0 24px;
-            line-height: 16px;
+            line-height: 20px;
             font-size: 14px;
           }
 
