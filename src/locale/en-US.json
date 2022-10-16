@@ -73,7 +73,7 @@
     "nav.description3": "",
     "section.network": "A free and lightning fast peer-to-peer transactional network for digital assets, with more than $1B total value secured.",
     "section.explorer": "Explorer",
-    "section.code": "Code",
+    "section.code": "Open source",
     "section.docs": "Docs",
     "section.assets": "Total assets",
     "section.messenger": "An open source cryptocurrency wallet with Signal messaging.",
@@ -85,7 +85,7 @@
     "footer.two": "Privacy Policy",
     "footer.three": "Open Source",
     "footer.four": "Press Kit",
-    "footer.right": "Copyright © %{copyright} Mixin Ltd. All rights reserved.",
+    "footer.right": "Copyright © %{copyright} Mixin Ltd",
     "footer.record": "京ICP备17003614号-1"
   },
   "messenger": {
