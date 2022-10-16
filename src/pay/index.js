@@ -135,6 +135,8 @@ Pay.prototype = {
       payment['tokenAmount'] = `${payment.amount} ${payment.asset.symbol}`;
       const useAmount = new Decimal(payment.asset.price_usd).times(payment.amount);
       payment['usdAmount'] = `${useAmount.toNumber().toFixed(2).toString()} USD`;
+      let st = 'Pay ' + payment['tokenAmount']  + ' to ' + payment['fullName'];
+      $('title').html(st + ' | Mixin - Secure Digital Assets and Messages on Mixin');
       $('body').attr('class', 'pay layout');
       $('#layout-container').html(self.template(payment));
       new QRious({

@@ -218,7 +218,7 @@ Snapshot.prototype = {
             });
           };
 
-          let name = chainSet[asset.chain_id].name + ' (' + chainSet[asset.chain_id].symbol + ')';
+          let name = asset.name + ' (' + asset.symbol + ')';
           $('title').html(name + ' | Mixin - Secure Digital Assets and Messages on Mixin');
           asset.logoURL = blueLogo;
           asset.chainLogoURL = chainSet[asset.chain_id];
