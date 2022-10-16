@@ -31,7 +31,7 @@ router.hooks({
     $('body').attr('class', 'loading layout');
     $('#layout-container').html(PartialLoading());
     setTimeout(function () {
-      $('title').html(APP_NAME);
+      $('title').html('Mixin - Secure Digital Assets and Messages on Mixin');
       done(true);
     }, 100);
   },
