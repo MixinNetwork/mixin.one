@@ -36,6 +36,7 @@ function Home(router, api) {
 Home.prototype = {
   index: function () {
     const self = this;
+    $('title').html('Mixin - Secure Digital Assets and Messages on Mixin');
     $('body').attr('class', 'home layout');
     $('#layout-container').html(self.templateIndex({
       new_bg_url: background,
@@ -91,7 +92,7 @@ Home.prototype = {
 
   xin: function () {
     var self = this;
-    $('title').html('XIN Token Distribution - Mixin');
+    $('title').html('XIN Token | Mixin - Secure Digital Assets and Messages on Mixin');
     $('body').attr('class', 'home layout');
     $('#layout-container').html(self.templateXIN({
       logoURL: blueLogo
@@ -100,6 +101,7 @@ Home.prototype = {
 
   messenger: function () {
     const self = this;
+    $('title').html('Mixin Messenger | Mixin - Secure Digital Assets and Messages on Mixin');
     $('body').attr('class', 'messenger layout');
     $('#layout-container').html(self.templateMessenger({
       logoURL: blueLogo,

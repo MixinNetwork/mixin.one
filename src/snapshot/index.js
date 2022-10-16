@@ -100,7 +100,7 @@ Snapshot.prototype = {
       s.blockchairLink = 'https://blockchair.com/mixin/snapshot/' + s.snapshot_hash;
       s.blockchairIcon = blockchair;
       $('body').attr('class', 'snapshot layout');
-      $('title').html('Mixin Network');
+      $('title').html('Snapshot ' + id + ' | Mixin - Secure Digital Assets and Messages on Mixin');
       $('#layout-container').html(self.templateShow(s));
       if (!s.hasHash) {
         $('#spinner-container').html(PartialLoading());
@@ -125,6 +125,7 @@ Snapshot.prototype = {
 
   assets: function () {
     const self = this;
+    $('title').html('Top Assets | Mixin - Secure Digital Assets and Messages on Mixin');
     self.api.network.index(function (resp) {
       if (resp.error) {
         return;
@@ -154,6 +155,7 @@ Snapshot.prototype = {
 
   chains: function () {
     const self = this;
+    $('title').html('All Blockchains | Mixin - Secure Digital Assets and Messages on Mixin');
     self.api.network.index(function (resp) {
       if (resp.error) {
         return;
@@ -199,8 +201,8 @@ Snapshot.prototype = {
       if (!$('body').hasClass('snapshot')) {
         $('body').addClass('snapshot');
         $('body').removeClass('loading');
-        $('title').html('Mixin Network');
         if ($('body').hasClass('undefined')) {
+          $('title').html('Snapshots Explorer | Mixin - Secure Digital Assets and Messages on Mixin');
           $('#layout-container').html(self.templateIndex());
         } else {
           let chains = window.localStorage.getItem('chains') || '{}';
@@ -216,6 +218,8 @@ Snapshot.prototype = {
             });
           };
 
+          let name = chainSet[asset.chain_id].name + ' (' + chainSet[asset.chain_id].symbol + ')';
+          $('title').html(name + ' | Mixin - Secure Digital Assets and Messages on Mixin');
           asset.logoURL = blueLogo;
           asset.chainLogoURL = chainSet[asset.chain_id];
           asset.snapshotsCount = parseInt(asset.snapshots_count).toLocaleString(undefined, { maximumFractionDigits: 0 });
