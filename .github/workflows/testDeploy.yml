@@ -1,0 +1,37 @@
+# This is a basic workflow to help you get started with Actions
+
+name: mixin.zone deployment
+
+on:
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Install dependencies
+        run: yarn install
+
+      - name: Build APP
+        run: npm run build
+
+      - name: Add robots.txt
+        run: wget -P dist/ https://mixin.zone/robots.txt
+
+      - name: Add ssh key
+        uses: shimataro/ssh-key-action@v2.3.1
+        with:
+          key: ${{ secrets.SERVER_ACCESS_TOKEN }}
+          known_hosts: unnecessary
+          name: id_rsa # optional
+          if_key_exists: replace 
+          
+      - name: Adding Known Hosts
+        run: ssh-keyscan -H 35.201.161.46 >> ~/.ssh/known_hosts
+          
+      - name: Deploy
+        run: rsync -azvP dist/* one@35.201.161.46:mixin.zone/html/
