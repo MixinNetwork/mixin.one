@@ -14,20 +14,6 @@
     padding: 0;
   }
 
-  @keyframes fadeInUp {
-    from {
-      opacity: 0;
-      -webkit-transform: translate3d(0, 2rem, 0);
-      transform: translate3d(0, 2rem, 0);
-    }
-
-    to {
-      opacity: 1;
-      -webkit-transform: translate3d(0, 0, 0);
-      transform: translate3d(0, 0, 0);
-    }
-  }
-
   header {
     min-height: 780px;
     max-height: 1080px;
@@ -138,17 +124,12 @@
   }
 
   section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 100%;
     height: 880px;
     text-align: center;
-
-    &>div {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      width: 100%;
-      height: 100%;
-    }
 
     .section-container {
       display: flex;
@@ -490,12 +471,11 @@
       }
 
       .header-container {
-        margin: 0 auto;
-        padding: 0;
+        padding: 24px 0 0 0;
         font-size: initial;
 
         nav {
-          margin-top: 28px;
+          margin: 0 auto;
           padding: 0 20px;
           width: 100%;
           max-width: 600px;
@@ -556,8 +536,6 @@
         }
 
         .nav-title {
-          top: 50%;
-
           h1 {
             font-size: 22px;
             line-height: 26px;
@@ -567,7 +545,7 @@
 
           p {
             margin: 12px auto 0 auto !important;
-            width: 300px;
+            width: 320px;
             font-size: 14px;
             color: rgba(255, 255, 255, 1);
             line-height: 20px;

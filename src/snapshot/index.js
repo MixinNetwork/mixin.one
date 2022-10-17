@@ -6,8 +6,8 @@ import TimeUtils from '../utils/time.js';
 import Animator from './animator.js';
 import validate from 'uuid-validate';
 import blueLogo from '../home/logo.png';
-import viewblock from './viewblock-logo.svg';
-import blockchair from './blockchair-logo.svg';
+import viewblockLogo from './viewblock-logo.svg';
+import blockchairLogo from './blockchair-logo.svg';
 
 const PartialLoading = require('../loading.html');
 
@@ -96,9 +96,9 @@ Snapshot.prototype = {
       s.assetsCount = parseInt(network.assets_count).toLocaleString(undefined, { maximumFractionDigits: 0 });
       s.hasHash = !!s.snapshot_hash;
       s.viewblockLink = 'https://v2.viewblock.io/mixin/snapshot/' + s.snapshot_hash;
-      s.viewblockIcon = viewblock;
+      s.viewblockIcon = viewblockLogo;
       s.blockchairLink = 'https://blockchair.com/mixin/snapshot/' + s.snapshot_hash;
-      s.blockchairIcon = blockchair;
+      s.blockchairIcon = blockchairLogo;
       $('body').attr('class', 'snapshot layout');
       $('title').html('Snapshot ' + id + ' | Mixin - Secure Digital Assets and Messages on Mixin');
       $('#layout-container').html(self.templateShow(s));
