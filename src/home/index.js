@@ -87,7 +87,6 @@ Home.prototype = {
       $('.video-container iframe').attr('src', src);
     });
     require('./js/index');
-    require('./js/animate-up');
   },
 
   xin: function () {
