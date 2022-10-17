@@ -490,12 +490,11 @@
       }
 
       .header-container {
-        margin: 0 auto;
-        padding: 0;
+        padding: 24px 0 0 0;
         font-size: initial;
 
         nav {
-          margin-top: 28px;
+          margin: 0 auto;
           padding: 0 20px;
           width: 100%;
           max-width: 600px;
@@ -556,8 +555,6 @@
         }
 
         .nav-title {
-          top: 50%;
-
           h1 {
             font-size: 22px;
             line-height: 26px;
@@ -567,7 +564,7 @@
 
           p {
             margin: 12px auto 0 auto !important;
-            width: 300px;
+            width: 320px;
             font-size: 14px;
             color: rgba(255, 255, 255, 1);
             line-height: 20px;
