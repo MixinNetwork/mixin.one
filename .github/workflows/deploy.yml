@@ -1,0 +1,34 @@
+# This is a basic workflow to help you get started with Actions
+
+name: CD
+
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Install dependencies
+        run: yarn install
+
+      - name: Build APP
+        run: npm run build
+
+      - name: Add robots.txt
+        run: wget -P dist/ https://mixin.zone/robots.txt
+
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        if: ${{ github.ref == 'refs/heads/master' }}
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./dist/
+          force_orphan: true
