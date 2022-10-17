@@ -6,7 +6,7 @@ import 'slick-carousel';
 import $ from 'jquery';
 import Animator from '../snapshot/animator.js';
 import background from './assets/BG.jpg';
-import logo from './assets/home_2_1.png';
+import messengerLogo from './assets/home_2_1.png';
 import rightIcon from './assets/right.png';
 import whiteLogo from './assets/logo.svg';
 import blueLogo from './logo.png';
@@ -18,11 +18,11 @@ import tip from './assets/home_tip.png';
 import mtg from './assets/home_mtg.png';
 import googleStore from './google-play.png';
 import appStore from './app-store.png';
-import apk from './apk.png';
+import apkDownload from './apk.png';
 import messengerExample from './messenger.png';
 import macExample from './mac.png';
-import windows from './windows.png';
-import mac from './mac-desktop.png';
+import windowsDownload from './windows.png';
+import macDownload from './mac-desktop.png';
 
 function Home(router, api) {
   this.router = router;
@@ -44,7 +44,7 @@ Home.prototype = {
       new_logo_url: whiteLogo,
       new_menus_url: menuIcon,
       new_home_1_url: network,
-      new_home_2_1_url: logo,
+      new_home_2_1_url: messengerLogo,
       new_home_2_2_url: messenger,
       home_mvm_url: mvm,
       home_tip_url: tip,
@@ -107,11 +107,11 @@ Home.prototype = {
       logoURL: blueLogo,
       playURL: googleStore,
       storeURL: appStore,
-      apkURL: apk,
+      apkURL: apkDownload,
       messengerURL: messengerExample,
       macURL: macExample,
-      windowsURL: windows,
-      macDesktopURL: mac
+      windowsURL: windowsDownload,
+      macDesktopURL: macDownload
     }));
     var os = self.getMobileOperatingSystem();
     if (os === 'iOS' && navigator.language && navigator.language.includes('zh-CN')) {

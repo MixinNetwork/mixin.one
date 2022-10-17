@@ -3,6 +3,7 @@ import $ from 'jquery';
 import QRious from 'qrious';
 import { Decimal } from "decimal.js";
 import blueLogo from '../home/logo.png';
+import botIcon from './robot.svg';
 import completeIcon from '../home/payment_complete.svg';
 
 function Code(router, api) {
@@ -47,7 +48,7 @@ Code.prototype = {
     chatInfo['logoURL'] = blueLogo;
     chatInfo['full_name'] = full_name.trim().length > 0 ? full_name.trim() : '^_^';
     chatInfo['isBot'] = !!chatInfo.app;
-    chatInfo['botIcon'] = require('./robot.svg').default;
+    chatInfo['botIcon'] = botIcon;
     chatInfo['info'] = chatInfo.type === 'conversation' ? `${chatInfo.participants.length} ${i18n.t('code.group.members')}` : chatInfo.identity_number;
     chatInfo['hasIntro'] = chatInfo.type === 'conversation' ? !!chatInfo.announcement : !!chatInfo.biography;
     chatInfo['intro'] = chatInfo.type === 'conversation' ? chatInfo.announcement : chatInfo.biography;

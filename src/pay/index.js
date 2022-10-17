@@ -7,7 +7,7 @@ import MixinUtils from '../utils/mixin.js';
 import URLUtils from '../utils/url.js';
 import arrow from './arrow.svg';
 import blueLogo from '../home/logo.png';
-import complete from '../home/payment_complete.svg';
+import completeIcon from '../home/payment_complete.svg';
 
 var validate = require('uuid-validate');
 
@@ -130,7 +130,7 @@ Pay.prototype = {
       payment['info'] = payment.recipient.identity_number;
       payment['hasMemo'] = !!memo;
       payment['memo'] = memo;
-      payment['successURL'] = complete;
+      payment['successURL'] = completeIcon;
       payment['assetUrl'] = payment.asset.icon_url;
       payment['tokenAmount'] = `${payment.amount} ${payment.asset.symbol}`;
       const useAmount = new Decimal(payment.asset.price_usd).times(payment.amount);
