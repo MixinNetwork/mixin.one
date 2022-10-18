@@ -4,7 +4,6 @@ import 'slick-carousel/slick/slick.scss';
 import 'slick-carousel/slick/slick-theme.scss';
 import 'slick-carousel';
 import $ from 'jquery';
-import Animator from '../snapshot/animator.js';
 import background from './assets/BG.jpg';
 import messengerLogo from './assets/home_2_1.png';
 import rightIcon from './assets/right.png';
@@ -27,7 +26,6 @@ import macDownload from './mac-desktop.png';
 function Home(router, api) {
   this.router = router;
   this.api = api;
-  this.animator = new Animator();
   this.templateIndex = require('./index.html');
   this.templateXIN = require('./xin.html');
   this.templateMessenger = require('./messenger.html');
@@ -58,8 +56,6 @@ Home.prototype = {
     } else if (os === 'Android') {
       $('.ios.button').hide();
     }
-    self.animator.init($('.particles.container')[0]);
-    self.animator.animate();
     self.router.updatePageLinks();
 
     $('.blockchains.list').slick({
@@ -128,8 +124,6 @@ Home.prototype = {
     $('.close', '.special.version').on('click', () => {
       $('.special.version').hide();
     });
-    self.animator.init($('.particles.container')[0]);
-    self.animator.animate();
     self.router.updatePageLinks();
   },
 

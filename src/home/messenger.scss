@@ -6,17 +6,6 @@
     max-width: 100%;
   }
 
-  .particles.container,
-  .particles.overlay {
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    background: rgba(255, 255, 255, 0.92);
-    z-index: 0;
-    top: 0;
-    left: 0;
-  }
-
   #layout-container {
     position: relative;
   }

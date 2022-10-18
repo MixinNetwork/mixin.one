@@ -17,7 +17,6 @@
     "reconnecting-websocket": "^4.4.0",
     "simple-line-icons": "^2.5.5",
     "slick-carousel": "^1.8.1",
-    "three": "^0.145.0",
     "uuid": "^9.0.0",
     "uuid-validate": "0.0.3"
   },

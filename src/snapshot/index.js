@@ -3,7 +3,6 @@ import './solo.scss';
 import $ from 'jquery';
 import jQueryColor from '../jquery-color-plus-names.js';
 import TimeUtils from '../utils/time.js';
-import Animator from './animator.js';
 import validate from 'uuid-validate';
 import blueLogo from '../home/logo.png';
 import viewblockLogo from './viewblock-logo.svg';
@@ -22,7 +21,6 @@ function Snapshot(router, api) {
   this.partialHeader = require('./header.html');
   this.partialChains = require('./chains.html');
   this.partialItem = require('./item.html');
-  this.animator = new Animator();
   jQueryColor($);
 }
 
@@ -117,8 +115,6 @@ Snapshot.prototype = {
           }, id);
         }, 3000);
       }
-      self.animator.init($('.particles.container')[0]);
-      self.animator.animate();
       self.router.updatePageLinks();
     }, id);
   },
@@ -233,8 +229,6 @@ Snapshot.prototype = {
             self.router.navigate('/snapshots/' + id);
           }
         });
-        self.animator.init($('.particles.container')[0]);
-        self.animator.animate();
       }
 
       if ($('body').hasClass('undefined')) {
