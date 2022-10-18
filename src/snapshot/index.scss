@@ -413,7 +413,8 @@
 
   @media (max-width: 960px) {
     .flex.content {
-      flex-wrap: wrap;
+      display: flex;
+      flex-direction: column;
     }
 
     .header.container {
