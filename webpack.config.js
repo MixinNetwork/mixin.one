@@ -2,7 +2,6 @@ const path = require('path');
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const ScriptExtHtmlWebpackPlugin = require("script-ext-html-webpack-plugin");
 const WebappWebpackPlugin = require('favicons-webpack-plugin');
 
 const devMode = process.env.NODE_ENV !== 'production';
@@ -71,14 +70,21 @@ module.exports = {
       APP_NAME: JSON.stringify('Mixin')
     }),
     new HtmlWebpackPlugin({
-      template: './src/layout.html'
+      template: './src/layout.html',
+      templateParameters: (compilation, assets, tags, options) => {
+        tags.headTags.forEach((tag) => {
+          if (tag.tagName === 'script') {
+            tag.attributes.async = true;
+          }
+        });
+        return {
+          htmlWebpackPlugin: { options }
+        }
+      },
     }),
     new WebappWebpackPlugin({
       logo: './src/launcher.png',
       prefix: 'icons/'
-    }),
-    new ScriptExtHtmlWebpackPlugin({
-      defaultAttribute: 'async'
     }),
     new MiniCssExtractPlugin({
       filename: devMode ? '[name].css' : '[name]-[hash].css',
