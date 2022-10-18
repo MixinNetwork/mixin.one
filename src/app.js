@@ -28,6 +28,7 @@ router.replace = function (url) {
 
 router.hooks({
   before: function (done, params) {
+    $('head').append(`<link rel="canonical" href="${window.location.toString().replace(window.location.host, "mixin.one")}" />`);
     $('body').attr('class', 'loading layout');
     $('#layout-container').html(PartialLoading());
     setTimeout(function () {
