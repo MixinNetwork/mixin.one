@@ -37,7 +37,12 @@ router.hooks({
   },
   after: function (params) {
     router.updatePageLinks();
-    $('link[rel=canonical]').attr('href', `https://mixin.one/${params.url}`)
+    var canonical = `https://mixin.one/${params.url}`;
+    if ($('link[rel=canonical]').length === 0) {
+      $('head').append(`<link rel="canonical" href="${canonical}" />`);
+    } else {
+      $('link[rel=canonical]').attr('href', canonical);
+    }
   }
 });
 
