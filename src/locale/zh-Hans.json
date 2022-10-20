@@ -15,7 +15,8 @@
   },
   "oauth": {
     "instruction.title": "在手机上使用 Mixin 來扫描二维码",
-    "instruction.install": "在 Google Play 或 App Store 中搜索 Mixin"
+    "instruction.install": "在 Google Play 或 App Store 中搜索 Mixin",
+    "title": "应用请求授权"
   },
   "pay": {
     "recipient.title": "向 %{name} 转账"
