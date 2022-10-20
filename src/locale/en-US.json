@@ -15,7 +15,8 @@
   },
   "oauth": {
     "instruction.title": "Use Mixin on your phone to scan the code",
-    "instruction.install": "Search Mixin in Google Play or App Store"
+    "instruction.install": "Search Mixin in Google Play or App Store",
+    "title": "Request Authorization"
   },
   "pay": {
     "recipient.title": "Transfer to %{name}"

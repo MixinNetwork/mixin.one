@@ -19,6 +19,7 @@
 }
 
 .pay.layout,
+.oauth.code.layout,
 .payment.code.layout,
 .chat.code.layout {
   width: 100%;
@@ -192,6 +193,8 @@
         }
 
         .token {
+          display: flex;
+          align-items: center;
           margin-top: 12px;
           font-weight: 500;
         }
@@ -223,8 +226,8 @@
         .payment-qrcode {
           position: relative;
           margin: 0 auto;
-          width: 130px;
-          height: 130px;
+          width: 140px;
+          height: 140px;
 
           #qrcode {
             width: 100%;
@@ -314,6 +317,17 @@
       .bottom-bar {
         display: block;
       }
+    }
+  }
+}
+
+
+.oauth.code.layout .pay.container .card-container {
+  .asset-container {
+    margin-top: 24px;
+
+    .token img {
+      margin-left: 4px;
     }
   }
 }
