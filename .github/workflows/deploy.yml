@@ -9,6 +9,9 @@ on:
   pull_request:
     branches: [ master ]
 
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -24,6 +27,9 @@ jobs:
 
       - name: Add robots.txt
         run: wget -P dist/ https://mixin.zone/robots.txt
+
+      - name: Prepare snap build
+        run: ./ci.sh
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
