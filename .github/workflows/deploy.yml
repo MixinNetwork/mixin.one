@@ -23,7 +23,7 @@ jobs:
         run: yarn install
 
       - name: Build APP
-        run: npm run build
+        run: npm run build:github-page
 
       - name: Add robots.txt
         run: wget -P dist/ https://mixin.zone/robots.txt

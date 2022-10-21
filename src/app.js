@@ -17,7 +17,7 @@ import Snapshot from './snapshot';
 const WEB_ROOT = location.protocol + '//' + location.host;
 const PartialLoading = require('./loading.html');
 const Error404 = require('./404.html');
-const router = new Navigo('/');
+const router = new Navigo(window.location.host.includes('github') ? 'mixin.one' : '/');
 const api = new API(router, API_ROOT, BLAZE_ROOT);
 
 window.i18n = new Locale(navigator.language);
