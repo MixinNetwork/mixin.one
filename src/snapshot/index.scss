@@ -380,6 +380,12 @@
         width: 30px;
         height: 20px;
 
+        .spinner-container {
+          position: relative;
+          width: 100%;
+          height: 100%;
+        }
+
         .spinner {
           width: 30px;
           height: 20px;

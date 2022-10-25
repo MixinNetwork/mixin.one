@@ -71,9 +71,9 @@ input::-webkit-inner-spin-button {
 }
 
 .spinner-container {
-  position: relative;
-  width: 100%;
-  height: 100%;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
 
   .spinner {
     position: relative;
