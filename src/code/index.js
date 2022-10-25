@@ -79,24 +79,28 @@ Code.prototype = {
         payment['complete'] = complete;
         payment['successURL'] = completeIcon;
         payment['mixinURL'] = "mixin://codes/" + payment.code_id;
-        $('#layout-container').html(self.templatePayment(payment));
-        new QRious({
-          element: document.getElementById('qrcode'),
-          backgroundAlpha: 0,
-          value: 'https://mixin.one/codes/' + payment.code_id,
-          level: 'H',
-          size: 500
-        });
-        self.router.updatePageLinks();
-        let timer = !complete && setInterval(() => {
-          self.api.code.fetch((resp) => {
-            if (resp.data.status === 'paid') {
-              payment['complete'] = true;
-              $('#layout-container').html(self.templatePayment(payment));
-              clearInterval(timer);
-            }
-          }, payment.code_id);
-        }, 1000 * 3);
+        var preloadImage = new Image();
+        preloadImage.src = asset.data.icon_url;
+        preloadImage.onload = () => {
+          $('#layout-container').html(self.templatePayment(payment));
+          new QRious({
+            element: document.getElementById('qrcode'),
+            backgroundAlpha: 0,
+            value: 'https://mixin.one/codes/' + payment.code_id,
+            level: 'H',
+            size: 500
+          });
+          self.router.updatePageLinks();
+          let timer = !complete && setInterval(() => {
+            self.api.code.fetch((resp) => {
+              if (resp.data.status === 'paid') {
+                payment['complete'] = true;
+                $('#layout-container').html(self.templatePayment(payment));
+                clearInterval(timer);
+              }
+            }, payment.code_id);
+          }, 1000 * 3);
+        };
       }, payment.asset_id);
       return;
     }
