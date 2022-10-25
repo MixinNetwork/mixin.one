@@ -6,7 +6,6 @@ import 'slick-carousel';
 import $ from 'jquery';
 import background from './assets/BG.jpg';
 import messengerLogo from './assets/home_2_1.png';
-import rightIcon from './assets/right.png';
 import whiteLogo from './assets/logo.svg';
 import blueLogo from './logo.png';
 import menuIcon from './assets/menus.png';
@@ -38,7 +37,6 @@ Home.prototype = {
     $('body').attr('class', 'home layout');
     $('#layout-container').html(self.templateIndex({
       new_bg_url: background,
-      new_right_url: rightIcon,
       new_logo_url: whiteLogo,
       new_menus_url: menuIcon,
       new_home_1_url: network,
