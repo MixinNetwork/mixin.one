@@ -31,6 +31,7 @@
     position: relative;
   }
 
+  .oauth.container,
   .pay.container,
   .code.container {
     display: flex;
@@ -302,25 +303,8 @@
         padding: 0 16px;
       }
     }
-
-    .bottom-bar {
-      display: none;
-      position: fixed;
-      bottom: 9px;
-      width: 36%;
-      height: 5px;
-      background: #000000;
-      border-radius: 100px;
-    }
-
-    @media (max-width: 768px) {
-      .bottom-bar {
-        display: block;
-      }
-    }
   }
 }
-
 
 .oauth.code.layout .pay.container .card-container {
   .asset-container {
@@ -332,6 +316,19 @@
   }
 }
 
+@media (max-height: 623px) {
+  .pay.layout,
+  .payment.code.layout {
+    .pay.container,
+    .code.container {
+      .card-container {
+        margin-top: 10px;
+        margin-bottom: 8px;
+        padding: 24px 0;
+      }
+    }
+  }
+}
 @media (min-height: 624px) and (max-height: 770px) {
   $rate: calc((100vh - 624px) / 146);
 
@@ -346,5 +343,23 @@
         padding-bottom: calc(#{$rate} * 16 + 24px);
       }
     }
+  }
+}
+
+@media (min-height: 584px) and (max-height: 660px) {
+  $rate: calc((100vh - 584px) / 76);
+
+  .oauth.code.layout .oauth.container .card-container {
+     margin-top: calc(#{$rate} * 20 + 10px);
+     margin-bottom: calc(#{$rate} * 16 + 8px);
+     padding-top: calc(#{$rate} * 24 + 24px);
+     padding-bottom: calc(#{$rate} * 16 + 24px);
+  }
+}
+@media (max-height: 584px) {
+  .oauth.code.layout .oauth.container .card-container {
+    margin-top: 10px;
+    margin-bottom: 8px;
+    padding: 24px 0;
   }
 }
