@@ -1,8 +1,5 @@
 import './index.scss';
 import './messenger.scss';
-import 'slick-carousel/slick/slick.scss';
-import 'slick-carousel/slick/slick-theme.scss';
-import 'slick-carousel';
 import $ from 'jquery';
 import background from './assets/BG.jpg';
 import messengerLogo from './assets/home_2_1.png';
@@ -56,21 +53,6 @@ Home.prototype = {
     }
     self.router.updatePageLinks();
 
-    $('.blockchains.list').slick({
-      "slidesToShow": 6,
-      "slidesToScroll": 2,
-      'speed': 500,
-      "prevArrow": "<span class='icon-arrow-left arrow-left'></span>",
-      "nextArrow": "<span class='icon-arrow-right arrow-right'></span>",
-      responsive: [{
-        breakpoint: 768,
-        settings: {
-          slidesToShow: 5,
-          slidesToScroll: 2,
-          infinite: true
-        }
-      }]
-    });
     var src = $('.video-container iframe').attr('src');
     $('.video.button').click(function () {
       $('.modal-dialog').css('display', 'table');
