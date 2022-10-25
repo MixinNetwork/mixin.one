@@ -108,7 +108,12 @@ Pay.prototype = {
       self.router.updatePageLinks();
       return true;
     }
-    self.refreshPayment(recipientId, assetId, amount, traceId, memo);
+
+    self.api.network.assetsShow((resp) => {
+      var preloadImage = new Image();
+      preloadImage.src = resp.data.icon_url;
+      self.refreshPayment(recipientId, assetId, amount, traceId, memo);
+    }, assetId)
   },
 
   refreshPayment: function (recipientId, assetId, amount, traceId, memo) {
