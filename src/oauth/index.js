@@ -68,6 +68,7 @@ OAuth.prototype = {
       auth['avatar_url'] = auth.app.icon_url;
       auth['logoURL'] = blueLogo;
       auth['botIcon'] = botIcon;
+      auth['mixinURL'] = 'mixin://codes/' + auth.code_id;
       $('.oauth.code.layout #layout-container').html(self.templateCode(auth));
       new QRious({
         element: document.getElementById('qrcode'),
