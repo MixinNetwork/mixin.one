@@ -30,7 +30,7 @@
     "messenger.download": "Download",
     "payment.scan": "Use Mixin Messenger to scan the code",
     "payment.complete": "Done",
-    "open.action": "Open In Mixin"
+    "open.action": "Open in Mixin"
   },
   "snapshots": {
     "search.placeholder": "Search transactions",
