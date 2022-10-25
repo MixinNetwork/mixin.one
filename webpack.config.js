@@ -28,7 +28,7 @@ module.exports = {
   },
 
   output: {
-    publicPath: '/assets/',
+    publicPath: process.env.NODE_ENV === 'github' ? '/mixin.one/assets/' : '/assets/',
     path: path.resolve(__dirname, 'dist'),
     filename: '[name]-[hash].js'
   },
