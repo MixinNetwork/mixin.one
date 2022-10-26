@@ -1,21 +1,21 @@
 import './index.scss';
 import './messenger.scss';
 import $ from 'jquery';
-import background from './assets/BG.jpg';
+import background from './assets/BG.webp';
 import messengerLogo from './assets/home_2_1.png';
 import whiteLogo from './assets/logo.svg';
 import blueLogo from './logo.png';
 import menuIcon from './assets/menus.png';
 import network from './assets/home_1.png';
-import messenger from './assets/home_2_2.png';
+import messenger from './assets/home_2_2.webp';
 import mvm from './assets/home_mvm.png';
-import tip from './assets/home_tip.png';
+import tip from './assets/home_tip.webp';
 import mtg from './assets/home_mtg.png';
 import googleStore from './google-play.png';
 import appStore from './app-store.png';
 import apkDownload from './apk.png';
-import messengerExample from './messenger.png';
-import macExample from './mac.png';
+import messengerExample from './messenger.webp';
+import macExample from './mac.webp';
 import windowsDownload from './windows.png';
 import macDownload from './mac-desktop.png';
 

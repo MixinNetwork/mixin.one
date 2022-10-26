@@ -57,7 +57,7 @@ module.exports = {
         'sass-loader',
       ]
     }, {
-      test: /\.(woff|woff2|eot|ttf|otf|svg|png|jpg|gif)$/,
+      test: /\.(woff|woff2|eot|ttf|otf|svg|png|jpg|gif|webp)$/,
       type: 'asset/resource',
     }]
   },
@@ -83,7 +83,7 @@ module.exports = {
       },
     }),
     new WebappWebpackPlugin({
-      logo: './src/launcher.png',
+      logo: './src/launcher.webp',
       prefix: 'icons/'
     }),
     new MiniCssExtractPlugin({
