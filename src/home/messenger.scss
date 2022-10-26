@@ -1,7 +1,8 @@
 @import '../constant.scss';
 
 .messenger.layout {
-  color: #333;
+  color: #728a96;
+
   img {
     max-width: 100%;
   }
@@ -118,6 +119,7 @@
       .features {
         margin: 0 0 48px;
         h2 {
+          color: #333333;
           font-size: 18px;
           font-weight: normal;
         }
@@ -158,6 +160,7 @@
         width: 100%;
       }
       .title {
+        color: #333333;
         margin: 8px 0 24px;
         font-size: 24px;
       }
