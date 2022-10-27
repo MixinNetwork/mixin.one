@@ -5,6 +5,7 @@ import URLUtils from '../utils/url.js';
 import MixinUtils from '../utils/mixin.js';
 import blueLogo from '../home/logo.png';
 import botIcon from '../code/robot.svg';
+import verifiedBotIcon from '../code/verifiedBot.svg';
 
 function OAuth(router, api) {
   this.router = router;
@@ -67,7 +68,7 @@ OAuth.prototype = {
       auth['hasAvatar'] = !!auth.app.icon_url;
       auth['avatar_url'] = auth.app.icon_url;
       auth['logoURL'] = blueLogo;
-      auth['botIcon'] = botIcon;
+      auth['botIcon'] = auth.app.is_verified ? verifiedBotIcon : botIcon;
       auth['mixinURL'] = 'mixin://codes/' + auth.code_id;
       $('.oauth.code.layout #layout-container').html(self.templateCode(auth));
       new QRious({
