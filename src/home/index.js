@@ -45,23 +45,8 @@ Home.prototype = {
       zeromesh: window.location.href.includes("zeromesh"),
       copyright: (new Date()).getFullYear()
     }));
-    var os = self.getMobileOperatingSystem();
-    if (os === 'iOS') {
-      $('.android.button').hide();
-    } else if (os === 'Android') {
-      $('.ios.button').hide();
-    }
     self.router.updatePageLinks();
 
-    var src = $('.video-container iframe').attr('src');
-    $('.video.button').click(function () {
-      $('.modal-dialog').css('display', 'table');
-      $('.video-container iframe').attr('src', src + '&autoplay=1');
-    });
-    $('.close').click(function () {
-      $('.modal-dialog').hide();
-      $('.video-container iframe').attr('src', src);
-    });
     require('./js/index');
   },
 
