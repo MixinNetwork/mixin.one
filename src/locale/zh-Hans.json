@@ -79,7 +79,7 @@
     "section.download": "下载",
     "section.messenger": "开源的端对端加密聊天软件，并且集成了基于 Mixin Network 的非托管多链钱包，可通过手机号码与 TIP 协议恢复私钥。",
     "section.more": "了解更多",
-    "section.mvm": "MVM是一个快速的跨链智能合约平台，采用Mixin Trusted Group技术构建，连接所有区块链和去中心化应用程序。",
+    "section.mvm": "MVM 是一个快速的跨链智能合约平台，采用 Mixin Trusted Group 技术构建，连接所有区块链和去中心化应用程序。",
     "section.tip": "TIP 是一种去中心化的密钥管理协议，通过节流的 MPC 协议，它可以让人们使用 6 位 PIN 安全简单地保护数字资产。",
     "section.mtg": "MTG 是一种在 Mixin Network 上使用任何编程语言开发高性能去中心化应用程序的解决方案，每个 MTG 由多个独立的节点组成。",
     "footer.one": "使用条款",
