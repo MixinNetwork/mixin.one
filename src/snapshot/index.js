@@ -93,7 +93,7 @@ Snapshot.prototype = {
       s.snapshotsCount = parseInt(network.snapshots_count).toLocaleString(undefined, { maximumFractionDigits: 0 });
       s.assetsCount = parseInt(network.assets_count).toLocaleString(undefined, { maximumFractionDigits: 0 });
       s.hasHash = !!s.snapshot_hash;
-      s.viewblockLink = 'https://v2.viewblock.io/mixin/snapshot/' + s.snapshot_hash;
+      s.viewblockLink = 'https://viewblock.io/mixin/snapshot/' + s.snapshot_hash;
       s.viewblockIcon = viewblockLogo;
       s.blockchairLink = 'https://blockchair.com/mixin/snapshot/' + s.snapshot_hash;
       s.blockchairIcon = blockchairLogo;
@@ -107,7 +107,7 @@ Snapshot.prototype = {
             if (resp.error) return;
             if (!!resp.data.snapshot_hash) {
               s.hasHash = true;
-              s.viewblockLink = 'https://v2.viewblock.io/mixin/snapshot/' + resp.data.snapshot_hash;
+              s.viewblockLink = 'https://viewblock.io/mixin/snapshot/' + resp.data.snapshot_hash;
               s.blockchairLink = 'https://blockchair.com/mixin/snapshot/' + resp.data.snapshot_hash;
               $('#layout-container').html(self.templateShow(s));
               clearInterval(timer);
