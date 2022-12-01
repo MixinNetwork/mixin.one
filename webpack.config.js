@@ -1,14 +1,10 @@
 const path = require('path');
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const ExtractTextPlugin = require("extract-text-webpack-plugin");
-const CompressionPlugin = require("compression-webpack-plugin");
-const ScriptExtHtmlWebpackPlugin = require("script-ext-html-webpack-plugin");
-const WebappWebpackPlugin = require('webapp-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const WebappWebpackPlugin = require('favicons-webpack-plugin');
 
-const extractSass = new ExtractTextPlugin({
-    filename: "[name]-[hash].css"
-});
+const devMode = process.env.NODE_ENV !== 'production';
 
 const apiRoot = function (env) {
   if (env === 'production') {
@@ -32,9 +28,9 @@ module.exports = {
   },
 
   output: {
-    publicPath: '/assets/',
+    publicPath: process.env.NODE_ENV === 'github' ? '/mixin.one/assets/' : '/assets/',
     path: path.resolve(__dirname, 'dist'),
-    filename: '[name]-[chunkHash].js'
+    filename: '[name]-[hash].js'
   },
 
   resolve: {
@@ -46,22 +42,23 @@ module.exports = {
 
   module: {
     rules: [{
-      test: /\.html$/, loader: "handlebars-loader?helperDirs[]=" + __dirname + "/src/helpers"
+      test: /\.html$/,
+      use: ["handlebars-loader?helperDirs[]=" + __dirname + "/src/helpers"]
     }, {
       test: /\.(scss|css)$/,
-      use: extractSass.extract({
-        use: [{
-          loader: "css-loader"
-        }, {
-          loader: "sass-loader"
-        }],
-        fallback: "style-loader"
-      })
-    }, {
-      test: /\.(woff|woff2|eot|ttf|otf|svg|png|jpg|gif)$/,
       use: [
-        'file-loader'
+        {
+          loader: MiniCssExtractPlugin.loader,
+          options: {
+            esModule: true
+          },
+        },
+        'css-loader',
+        'sass-loader',
       ]
+    }, {
+      test: /\.(woff|woff2|eot|ttf|otf|svg|png|jpg|gif|webp)$/,
+      type: 'asset/resource',
     }]
   },
 
@@ -72,25 +69,29 @@ module.exports = {
       BLAZE_ROOT: JSON.stringify(blazeRoot(process.env.NODE_ENV)),
       APP_NAME: JSON.stringify('Mixin')
     }),
-    new CompressionPlugin({
-      filename: "[path]",
-      algorithm: "gzip",
-      test: /\.(js|css)$/,
-      threshold: process.env.NODE_ENV === 'production' ? 0 : 100000000000000,
-      minRatio: 1,
-      deleteOriginalAssets: false
-    }),
     new HtmlWebpackPlugin({
-      template: './src/layout.html'
+      template: './src/layout.html',
+      templateParameters: (compilation, assets, tags, options) => {
+        tags.headTags.forEach((tag) => {
+          if (tag.tagName === 'script') {
+            tag.attributes.async = true;
+          }
+        });
+        return {
+          htmlWebpackPlugin: { options }
+        }
+      },
     }),
     new WebappWebpackPlugin({
-      logo: './src/launcher.png',
-      prefix: 'icons-[hash]-',
-      background: '#FFFFFF'
+      logo: './src/launcher.webp',
+      prefix: 'icons/'
     }),
-    new ScriptExtHtmlWebpackPlugin({
-      defaultAttribute: 'async'
+    new MiniCssExtractPlugin({
+      filename: devMode ? '[name].css' : '[name]-[hash].css',
+      chunkFilename: devMode ? '[id].css' : '[id]-[hash].css',
     }),
-    extractSass
+    new webpack.ProvidePlugin({
+      Buffer: ["buffer", "Buffer"]
+    })
   ]
 };

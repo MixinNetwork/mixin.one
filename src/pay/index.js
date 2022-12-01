@@ -2,9 +2,13 @@ import './index.scss';
 import $ from 'jquery';
 import QRious from 'qrious';
 import { Decimal } from 'decimal.js';
-import uuidv4 from 'uuid/v4';
+import { v4 as uuidv4 } from 'uuid';
 import MixinUtils from '../utils/mixin.js';
 import URLUtils from '../utils/url.js';
+import arrow from './arrow.svg';
+import blueLogo from '../home/logo.png';
+import completeIcon from '../home/payment_complete.svg';
+
 var validate = require('uuid-validate');
 
 function Pay(router, api) {
@@ -20,7 +24,7 @@ Pay.prototype = {
     const self = this;
     const defaultIcon = "https://images.mixin.one/yH_I5b0GiV2zDmvrXRyr3bK5xusjfy5q7FX3lw3mM2Ryx4Dfuj6Xcw8SHNRnDKm7ZVE3_LvpKlLdcLrlFQUBhds=s128";
     let data = {
-      arrowURL: require('./arrow.svg').default
+      arrowURL: arrow
     };
     self.api.account.check(function (user) {
       if (!user.data) {
@@ -78,7 +82,8 @@ Pay.prototype = {
           let amount = $('.amount').val();
           let memo = $('.memo').val().trim();
           let path = `/pay?recipient=${data.user.user_id}&asset=${data.asset.asset_id}&amount=${amount}&memo=${encodeURI(memo)}&trace=${uuidv4()}`;
-          if (MixinUtils.environment()) {
+          let platform = MixinUtils.environment();
+          if (platform == 'Android' || platform == 'iOS') {
             let route = `https://${window.location.host}${path}`;
             window.location = `mixin://send?text=${encodeURIComponent(route)}`;
           } else {
@@ -103,7 +108,12 @@ Pay.prototype = {
       self.router.updatePageLinks();
       return true;
     }
-    self.refreshPayment(recipientId, assetId, amount, traceId, memo);
+
+    self.api.network.assetsShow((resp) => {
+      var preloadImage = new Image();
+      preloadImage.src = resp.data.icon_url;
+      self.refreshPayment(recipientId, assetId, amount, traceId, memo);
+    }, assetId)
   },
 
   refreshPayment: function (recipientId, assetId, amount, traceId, memo) {
@@ -119,25 +129,42 @@ Pay.prototype = {
       }
       var payment = resp.data;
       payment['params'] = window.location.search;
-      payment['logoURL'] = require('../home/logo.png').default;
-      payment['isPaid'] = payment.status === 'paid';
+      payment['logoURL'] = blueLogo;
+      payment['complete'] = payment.status === 'paid';
+      payment['fullName'] = payment.recipient.full_name.trim();
+      payment['info'] = payment.recipient.identity_number;
+      payment['hasMemo'] = !!memo;
+      payment['memo'] = memo;
+      payment['successURL'] = completeIcon;
+      payment['assetUrl'] = payment.asset.icon_url;
+      payment['tokenAmount'] = `${payment.amount} ${payment.asset.symbol}`;
+      const useAmount = new Decimal(payment.asset.price_usd).times(payment.amount);
+      payment['usdAmount'] = `${useAmount.toNumber().toFixed(2).toString()} USD`;
+      let st = 'Pay ' + payment['tokenAmount']  + ' to ' + payment['fullName'];
+      $('title').html(st + ' | Mixin - Secure Digital Assets and Messages on Mixin');
       $('body').attr('class', 'pay layout');
       $('#layout-container').html(self.template(payment));
       new QRious({
-        element: document.getElementById('mixin-code'),
+        element: document.getElementById('qrcode'),
         backgroundAlpha: 0,
-        foreground: '#00B0E9',
-        value: window.location.toString(),
+        value: window.location.toString().replace(window.location.host, "mixin.one"),
         level: 'H',
         size: 500
       });
       self.router.updatePageLinks();
-      if (payment.isPaid) {
+      if (payment.complete) {
         const returnTo = URLUtils.getUrlParameter("return_to");
-        if (returnTo && returnTo.indexOf('http') === 0) {
-          setTimeout(function() {
-            window.location.replace(returnTo);
-          }, 2000)
+        if (returnTo) {
+          try {
+            const uri = new URL(returnTo);
+            if (uri.protocol === "http:" || uri.protocol === "https:") {
+              setTimeout(() => {
+                window.location.replace(returnTo);
+              }, 3000);
+            }
+          } catch (err) {
+            console.log("invalid return_to", err);
+          }
         }
         return true;
       }
@@ -157,7 +184,7 @@ Pay.prototype = {
     if (!validate(traceId)) {
       return false;
     }
-    if (memo && memo.length > 140) {
+    if (memo && memo.length > 200) {
       return false;
     }
     return parseFloat(amount) > 0;

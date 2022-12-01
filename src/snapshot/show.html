@@ -1,7 +1,3 @@
-<div class="particles container">
-</div>
-<div class="particles overlay">
-</div>
 <div class="flex content">
   <div class="header container">
     <div class="wrapper">
@@ -33,6 +29,25 @@
     <li class="meta asset">
       <div class="meta name">{{t 'snapshots.transaction.asset'}}</div>
       <div class="meta value"><a href="/snapshots/{{asset.asset_id}}" data-navigo>{{asset.name}}</a></div>
+    </li>
+    <li class="meta link">
+      <div class="meta name">{{t 'snapshots.transaction.link'}}</div>
+      <div class="meta value">
+        {{#if hasHash}}
+        <div class="icon">
+          <a href="{{viewblockLink}}">
+            <img src="{{viewblockIcon}}" alt="tx-viewblock-link" title="viewblock"/>
+          </a>
+        </div>
+        <div class="icon">
+          <a href="{{blockchairLink}}">
+            <img src="{{blockchairIcon}}" alt="tx-blockchair-link" title="blockchair"/>
+          </a>
+        </div>
+        {{else}}
+        <div id="spinner-container"></div>
+        {{/if}}
+      </div>
     </li>
   </ul>
 </div>

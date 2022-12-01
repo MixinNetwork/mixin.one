@@ -6,8 +6,9 @@ MixinUtils.prototype = {
     if (window.webkit && window.webkit.messageHandlers && window.webkit.messageHandlers.MixinContext) {
       return 'iOS';
     }
-    if (window.MixinContext && window.MixinContext.getContext) {
-      return 'Android';
+    if (window.MixinContext && (typeof window.MixinContext.getContext === 'function')) {
+      var ctx = JSON.parse(window.MixinContext.getContext());
+      return ctx.platform || 'Android';
     }
     return undefined;
   },
@@ -18,6 +19,9 @@ MixinUtils.prototype = {
         var ctx = prompt('MixinContext.getContext()');
         return JSON.parse(ctx).conversation_id;
       case 'Android':
+        var ctx = window.MixinContext.getContext();
+        return JSON.parse(ctx).conversation_id;
+      case 'Desktop':
         var ctx = window.MixinContext.getContext();
         return JSON.parse(ctx).conversation_id;
       default:

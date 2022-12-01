@@ -1,20 +1,10 @@
 @import '../constant.scss';
 
 .messenger.layout {
-  color: #333;
+  color: #728a96;
+
   img {
     max-width: 100%;
-  }
-
-  .particles.container,
-  .particles.overlay {
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    background: rgba(255, 255, 255, 0.92);
-    z-index: 0;
-    top: 0;
-    left: 0;
   }
 
   #layout-container {
@@ -29,14 +19,18 @@
 
   .special.version {
     background-color: #FDF585;
+    color: #333333;
     line-height: 1.6rem;
     padding: .8rem 1.6rem;
     display: flex;
     &.hidden {
       display: none;
     }
-    .bar {
+    .box {
       flex-grow: 1;
+    }
+    .bar {
+      display: none;
     }
     a {
       color: #729fe8;
@@ -126,6 +120,7 @@
       .features {
         margin: 0 0 48px;
         h2 {
+          color: #333333;
           font-size: 18px;
           font-weight: normal;
         }
@@ -166,6 +161,7 @@
         width: 100%;
       }
       .title {
+        color: #333333;
         margin: 8px 0 24px;
         font-size: 24px;
       }
@@ -232,15 +228,13 @@
       .display {
         flex-direction: column;
         margin: 0;
-        &.pc {
-          display: none;
-        }
         main {
           width: 100%;
           .intro {
             text-align: center;
           }
           .mobile.title {
+            color: #333333;
             display: block;
             font-size: 32px;
             margin: 0 0 24px;
@@ -287,6 +281,21 @@
         }
         aside {
           display: none;
+          &.desktop {
+            display: block;
+            width: 100%;
+            padding: 0;
+            margin-bottom: 6rem;
+            h1 {
+              text-align: center;
+            }
+            .description {
+              text-align: center;
+            }
+            .download.pc {
+              justify-content: center;
+            }
+          }
         }
       }
     }

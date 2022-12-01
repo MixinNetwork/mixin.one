@@ -3,10 +3,12 @@ import './solo.scss';
 import $ from 'jquery';
 import jQueryColor from '../jquery-color-plus-names.js';
 import TimeUtils from '../utils/time.js';
-import URLUtils from '../utils/url.js';
-import Chains from '../utils/chains.js';
-import Animator from './animator.js';
 import validate from 'uuid-validate';
+import blueLogo from '../home/logo.png';
+import viewblockLogo from './viewblock-logo.svg';
+import blockchairLogo from './blockchair-logo.svg';
+
+const PartialLoading = require('../loading.html');
 
 function Snapshot(router, api) {
   this.router = router;
@@ -19,7 +21,6 @@ function Snapshot(router, api) {
   this.partialHeader = require('./header.html');
   this.partialChains = require('./chains.html');
   this.partialItem = require('./item.html');
-  this.animator = new Animator();
   jQueryColor($);
 }
 
@@ -83,27 +84,44 @@ Snapshot.prototype = {
   show: function(network, id) {
     const self = this;
     self.api.network.snapshotsShow(function (resp) {
-      if (resp.error) {
-        return;
-      }
+      if (resp.error) return;
       var s = resp.data;
       s.flow = parseFloat(s.amount) > 0 ? 'in' : 'out';
       s.amount = parseFloat(s.amount) < 0 ? s.amount : '+' + s.amount;
-      s.logoURL = require('../home/logo.png').default;
+      s.logoURL = blueLogo;
       s.peakTPS = parseInt(network.peak_throughput).toLocaleString(undefined, { maximumFractionDigits: 0 });
       s.snapshotsCount = parseInt(network.snapshots_count).toLocaleString(undefined, { maximumFractionDigits: 0 });
       s.assetsCount = parseInt(network.assets_count).toLocaleString(undefined, { maximumFractionDigits: 0 });
+      s.hasHash = !!s.snapshot_hash;
+      s.viewblockLink = 'https://viewblock.io/mixin/snapshot/' + s.snapshot_hash;
+      s.viewblockIcon = viewblockLogo;
+      s.blockchairLink = 'https://blockchair.com/mixin/snapshot/' + s.snapshot_hash;
+      s.blockchairIcon = blockchairLogo;
       $('body').attr('class', 'snapshot layout');
-      $('title').html('Mixin Network');
+      $('title').html('Snapshot ' + id + ' | Mixin - Secure Digital Assets and Messages on Mixin');
       $('#layout-container').html(self.templateShow(s));
-      self.animator.init($('.particles.container')[0]);
-      self.animator.animate();
+      if (!s.hasHash) {
+        $('#spinner-container').html(PartialLoading());
+        const timer = setInterval(() => {
+          self.api.network.snapshotsShow((resp) => {
+            if (resp.error) return;
+            if (!!resp.data.snapshot_hash) {
+              s.hasHash = true;
+              s.viewblockLink = 'https://viewblock.io/mixin/snapshot/' + resp.data.snapshot_hash;
+              s.blockchairLink = 'https://blockchair.com/mixin/snapshot/' + resp.data.snapshot_hash;
+              $('#layout-container').html(self.templateShow(s));
+              clearInterval(timer);
+            }
+          }, id);
+        }, 3000);
+      }
       self.router.updatePageLinks();
     }, id);
   },
 
   assets: function () {
     const self = this;
+    $('title').html('Top Assets | Mixin - Secure Digital Assets and Messages on Mixin');
     self.api.network.index(function (resp) {
       if (resp.error) {
         return;
@@ -133,6 +151,7 @@ Snapshot.prototype = {
 
   chains: function () {
     const self = this;
+    $('title').html('All Blockchains | Mixin - Secure Digital Assets and Messages on Mixin');
     self.api.network.index(function (resp) {
       if (resp.error) {
         return;
@@ -178,12 +197,27 @@ Snapshot.prototype = {
       if (!$('body').hasClass('snapshot')) {
         $('body').addClass('snapshot');
         $('body').removeClass('loading');
-        $('title').html('Mixin Network');
         if ($('body').hasClass('undefined')) {
+          $('title').html('Snapshots Explorer | Mixin - Secure Digital Assets and Messages on Mixin');
           $('#layout-container').html(self.templateIndex());
         } else {
-          asset.logoURL = require('../home/logo.png').default;
-          asset.chainLogoURL = Chains.getLogo(asset.chain_id);
+          let chains = window.localStorage.getItem('chains') || '{}';
+          let chainSet = JSON.parse(chains);
+          if (!chainSet[asset.chain_id] || (asset.chain_id === asset.asset_id && chainSet[asset.chain_id]) !== asset.icon_url) {
+            self.api.network.index(function (resp) {
+              if (resp.data) {
+                resp.data.chains.forEach((chain) => {
+                  chainSet[chain.chain_id] = chain.icon_url;
+                });
+              };
+              window.localStorage.setItem('chains', JSON.stringify(chainSet));
+            });
+          };
+
+          let name = asset.name + ' (' + asset.symbol + ')';
+          $('title').html(name + ' | Mixin - Secure Digital Assets and Messages on Mixin');
+          asset.logoURL = blueLogo;
+          asset.chainLogoURL = chainSet[asset.chain_id];
           asset.snapshotsCount = parseInt(asset.snapshots_count).toLocaleString(undefined, { maximumFractionDigits: 0 });
           asset.amount = Math.round(parseFloat(asset.amount)).toLocaleString(undefined, { maximumFractionDigits: 0 });
           $('#layout-container').html(self.templateAsset(asset));
@@ -195,8 +229,6 @@ Snapshot.prototype = {
             self.router.navigate('/snapshots/' + id);
           }
         });
-        self.animator.init($('.particles.container')[0]);
-        self.animator.animate();
       }
 
       if ($('body').hasClass('undefined')) {
@@ -214,7 +246,7 @@ Snapshot.prototype = {
           }
         } else {
           $('.header.container').html(self.partialHeader({
-            logoURL: require('../home/logo.png').default,
+            logoURL: blueLogo,
             assetsCount: parseInt(network.assets_count).toLocaleString(undefined, { maximumFractionDigits: 0 }),
             snapshotsCount: parseInt(network.snapshots_count).toLocaleString(undefined, { maximumFractionDigits: 0 }),
             peakTPS: parseInt(network.peak_throughput).toLocaleString(undefined, { maximumFractionDigits: 0 }),

@@ -10,22 +10,20 @@ import Code from './code';
 import OAuth from './oauth';
 import Page from './page';
 import Log from './log';
+import Job from './job';
 import Pay from './pay';
 import Snapshot from './snapshot';
 
 const WEB_ROOT = location.protocol + '//' + location.host;
 const PartialLoading = require('./loading.html');
 const Error404 = require('./404.html');
-const router = new Navigo(WEB_ROOT);
+const router = new Navigo(window.location.host.includes('github') ? 'mixin.one' : '/');
 const api = new API(router, API_ROOT, BLAZE_ROOT);
 
 window.i18n = new Locale(navigator.language);
 
 router.replace = function (url) {
-  this.resolve(url);
-  this.pause(true);
   this.navigate(url);
-  this.pause(false);
 };
 
 router.hooks({
@@ -33,12 +31,18 @@ router.hooks({
     $('body').attr('class', 'loading layout');
     $('#layout-container').html(PartialLoading());
     setTimeout(function () {
-      $('title').html(APP_NAME);
+      $('title').html('Mixin - Secure Digital Assets and Messages on Mixin');
       done(true);
     }, 100);
   },
   after: function (params) {
     router.updatePageLinks();
+    var canonical = `https://mixin.one/${params.url}`;
+    if ($('link[rel=canonical]').length === 0) {
+      $('head').append(`<link rel="canonical" href="${canonical}" />`);
+    } else {
+      $('link[rel=canonical]').attr('href', canonical);
+    }
   }
 });
 
@@ -54,8 +58,8 @@ router.on({
   '/snapshots': function () {
     new Snapshot(router, api).index(undefined, 'after', false);
   },
-  '/snapshots/:id': function (params) {
-    new Snapshot(router, api).index(params['id'], 'after', false);
+  '/snapshots/:id': function (match) {
+    new Snapshot(router, api).index(match.data['id'], 'after', false);
   },
   '/network/assets': function () {
     new Snapshot(router, api).assets();
@@ -63,14 +67,17 @@ router.on({
   '/network/chains': function () {
     new Snapshot(router, api).chains();
   },
-  '/logs': function (params) {
+  '/logs': function () {
     new Log(router, api).render();
   },
-  '/pages/:id': function (params) {
-    new Page(router).show(params['id']);
+  '/jobs': function () {
+    new Job(router, api).render();
   },
-  '/oauth/authorize': function () {
-    new OAuth(router, api).authorize();
+  '/pages/:id': function (match) {
+    new Page(router).show(match.data['id']);
+  },
+  '/oauth/authorize': function ({ data, params }) {
+    new OAuth(router, api).authorize(data, params);
   },
   '/oauth/callback': function () {
     new OAuth(router, api).callback();
@@ -81,14 +88,17 @@ router.on({
   '/pay': function () {
     new Pay(router, api).render();
   },
-  '/codes/:id': function (params) {
-    new Code(router, api).render(params['id']);
+  '/codes/:id': function (match) {
+    new Code(router, api).render(match.data['id']);
   },
   '/xin': function () {
     new Home(router, api).xin();
   },
   '/messenger': function () {
     new Home(router, api).messenger();
+  },
+  '/mm': function () {
+    router.replace('/messenger');
   },
   '/': function () {
     new Home(router, api).index();

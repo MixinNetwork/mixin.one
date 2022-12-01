@@ -1,6 +1,6 @@
 import ReconnectingWebSocket from 'reconnecting-websocket';
 import pako from 'pako';
-import uuidv4 from 'uuid/v4';
+import { v4 as uuidv4 } from 'uuid';
 
 function Authorization(api, endpoint) {
   this.api = api;
@@ -16,7 +16,7 @@ Authorization.prototype = {
       maxReconnectionDelay: 5000,
       minReconnectionDelay: 1000,
       reconnectionDelayGrowFactor: 1.2,
-      connectionTimeout: 4000,
+      connectionTimeout: 8000,
       maxRetries: Infinity,
       debug: false
     });

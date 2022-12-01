@@ -5,6 +5,9 @@ npm run dist || exit
 
 gsutil defacl ch -u AllUsers:R gs://mixin-one
 
+gzip -k dist/*.js && mv dist/*.js.gz dist/*.js
+gzip -k dist/*.css && mv dist/*.css.gz dist/*.css
+
 gsutil -h "Cache-Control:public, max-age=31536000" -h "Content-Encoding:gzip" -m cp dist/*.css gs://mixin-one/assets
 gsutil -h "Cache-Control:public, max-age=31536000" -h "Content-Encoding:gzip" -m cp dist/*.js gs://mixin-one/assets
 rm dist/*.css dist/*.js

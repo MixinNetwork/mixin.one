@@ -15,15 +15,22 @@
   },
   "oauth": {
     "instruction.title": "Use Mixin on your phone to scan the code",
-    "instruction.install": "Search Mixin in Google Play or App Store"
+    "instruction.install": "Search Mixin in Google Play or App Store",
+    "title": "Request Authorization"
   },
   "pay": {
     "recipient.title": "Transfer to %{name}"
   },
   "code": {
-    "open.action": "Open In Mixin",
-    "install.action": "Get Mixin App",
-    "group.participants": "%{count} members"
+    "user.chat": "Chat",
+    "group.join": "Join Group",
+    "group.members": "members",
+    "multisig.title": "Multisig Transfer",
+    "messenger.tip": "Don't have Mixin Messenger?",
+    "messenger.download": "Download",
+    "payment.scan": "Use Mixin Messenger to scan the code",
+    "payment.complete": "Done",
+    "open.action": "Open in Mixin"
   },
   "snapshots": {
     "search.placeholder": "Search transactions",
@@ -32,7 +39,8 @@
       "time": "Timestamp",
       "source": "Type",
       "amount": "Amount",
-      "asset": "Asset"
+      "asset": "Asset",
+      "link": "Links"
     }
   },
   "receipt": {
@@ -60,30 +68,38 @@
     "nav.network": "Mixin Network",
     "nav.messenger": "Mixin Messenger",
     "nav.developers": "Developers",
-    "nav.title": "Secure digital assets and messages on Mixin",
-    "nav.description1": "We build open source softwares",
-    "nav.description2": "that always put security, privacy and",
-    "nav.description3": " decentralization at first.",
-    "section.network": "A free and lightning fast peer-to-peer transactional network for digital assets.",
-    "section.messenger": "An open source cryptocurrency wallet with Signal messaging.",
+    "nav.title": "Secure Digital Assets and Messages on Mixin",
+    "nav.description1": "We build open source software that always puts security, privacy and decentralization first.",
+    "nav.description2": "",
+    "nav.description3": "",
+    "section.network": "A free and lightning fast peer-to-peer transactional network for digital assets. Launched in 2017, with more than $1B total value secured.",
+    "section.explorer": "Explorer",
+    "section.code": "Open source",
+    "section.docs": "Docs",
+    "section.download": "Download",
+    "section.messenger": "An open source cryptocurrency wallet with Signal messaging. Fully non-custodial and recoverable with phone number and TIP.",
     "section.more": "Learn more",
+    "section.mvm": "MVM is a fast cross-chain smart contract platform built with the Mixin Trusted Group technology to connect all blockchains and decentralized apps.",
+    "section.tip": "TIP is a decentralized key management protocol, through a throttled MPC protocol, it lets people secure digital assets safely and simply with 6-digit PIN.",
+    "section.mtg": "MTG is a solution to develop high performance decentralized app with any programming language on Mixin Network, each MTG is composed of multiple independent nodes.",
     "footer.one": "Terms of Use",
     "footer.two": "Privacy Policy",
     "footer.three": "Open Source",
     "footer.four": "Press Kit",
-    "footer.right": "Copyright © 2019 mixin.one. All rights reserved."
+    "footer.right": "Mixin Ltd © 2017-%{copyright}",
+    "footer.record": "京ICP备17003614号-1"
   },
   "messenger": {
     "features.description": "An open source cryptocurrency wallet, which supports almost all popular cryptocurrencies.",
     "features": "Features",
-    "features.1": "Login with mobile phone number, never lose your account",
-    "features.2": "Secured by 6 digit D3M-PIN [<a href='https://vec.io/posts/mixin-messenger-d3m-pin'>security proof</a>]",
-    "features.3": "All assets are stored in PoS-BFT-DAG distributed network",
-    "features.4": "Enormous bots to extend the chat and wallet capabilities",
-    "features.5": "Send cryptocurrencies directly to phone contacts",
-    "features.6": "Send encrypted messages with Signal protocol",
+    "features.1": "Recoverable with phone number, never lose your account.",
+    "features.2": "Fully non-custodial by 6 digit <a href='https://tip.id'>Throttled Identity Protocol (TIP)</a>.",
+    "features.3": "All assets are secured by the PoS-BFT-DAG decentralized network.",
+    "features.4": "Enormous apps to extend the chat and wallet capabilities.",
+    "features.5": "Send cryptocurrencies directly to phone contacts.",
+    "features.6": "Send end-to-end encrypted messages with Signal protocol.",
     "desktop.title": "Mixin Messenger Desktop",
-    "desktop.description1": "macOS 10.9 and higher or Windows 64-bit, Linux download from ",
+    "desktop.description1": "macOS 10.14 and higher or Windows 64-bit, Linux download from ",
     "desktop.description2": "here. ",
     "desktop.description3": "Mixin Messenger must be installed on your phone.",
     "footer.1": "EXPLORER",
