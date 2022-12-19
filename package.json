@@ -8,7 +8,7 @@
     "decimal.js": "^10.4.3",
     "favicons": "^7.0.2",
     "handlebars": "^4.7.7",
-    "jquery": "^3.6.1",
+    "jquery": "^3.6.2",
     "navigo": "^8.11.1",
     "node-polyglot": "^2.4.2",
     "noty": "^3.2.0-beta",
