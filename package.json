@@ -22,7 +22,7 @@
   "devDependencies": {
     "css-loader": "^6.7.2",
     "favicons-webpack-plugin": "^6.0.0",
-    "handlebars-loader": "^1.7.2",
+    "handlebars-loader": "^1.7.3",
     "html-webpack-plugin": "^5.5.0",
     "mini-css-extract-plugin": "^2.7.1",
     "node-sass": "^8.0.0",
