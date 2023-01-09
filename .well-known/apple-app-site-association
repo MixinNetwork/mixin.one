@@ -19,12 +19,12 @@
                  "comment": "Invoke transfer page"
                },
                {
-                 "/": "/snapshots",
-                 "?": "*",
+                 "/": "/snapshots/*",
                  "comment": "Popup deposit, withdrawal, or transaction detail page"
                },
                {
-                 "/": "/snapshots/*",
+                 "/": "/snapshots",
+                 "?": "*",
                  "comment": "Popup deposit, withdrawal, or transaction detail page"
                },
                {
