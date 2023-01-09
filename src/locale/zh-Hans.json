@@ -22,7 +22,8 @@
     "recipient.title": "向 %{name} 转账"
   },
   "code": {
-    "user.chat": "添加",
+    "bot.open": "打开机器人主页",
+    "user.chat": "聊天",
     "group.join": "加入群组",
     "group.members": "位群成员",
     "multisig.title": "多签转账",

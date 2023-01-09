@@ -54,8 +54,16 @@ Code.prototype = {
     chatInfo['info'] = chatInfo.type === 'conversation' ? `${chatInfo.participants.length} ${i18n.t('code.group.members')}` : chatInfo.identity_number;
     chatInfo['hasIntro'] = chatInfo.type === 'conversation' ? !!chatInfo.announcement : !!chatInfo.biography;
     chatInfo['intro'] = chatInfo.type === 'conversation' ? chatInfo.announcement : chatInfo.biography;
-    chatInfo['actionText'] = chatInfo.type === 'conversation' ? i18n.t('code.group.join') : i18n.t('code.user.chat');
-    chatInfo['mixinURL'] = "mixin://codes/" + chatInfo.code_id;
+    chatInfo['showExtraButton'] = chatInfo.type === 'user' && !!chatInfo.app && !chatInfo.app.home_uri.split("://")[1].split("/")[0].includes("mixin.one");
+    chatInfo['actionText'] = 
+      chatInfo.type === 'conversation' 
+        ? i18n.t('code.group.join') 
+        : chatInfo['showExtraButton']
+          ? i18n.t('code.bot.open')
+          : i18n.t('code.user.chat');
+    chatInfo['buttonURL'] = chatInfo['showExtraButton'] ? chatInfo.app.home_uri : "mixin://codes/" + chatInfo.code_id;
+    chatInfo['extraURL'] = "mixin://codes/" + chatInfo.code_id;
+    chatInfo['extraText'] = i18n.t('code.user.chat');
     $('#layout-container').html(self.templateChat(chatInfo));
     self.router.updatePageLinks();
   },
