@@ -26,8 +26,11 @@
         <div class="intro">{{intro}}</div>
         {{/if}}
         <div class="btn action-btn">
-            <a href="{{mixinURL}}">{{actionText}}</a>
+            <a href="{{buttonURL}}">{{actionText}}</a>
         </div>
+        {{#if showExtraButton}}
+        <div><a class="extra-btn" href="{{extraURL}}">{{extraText}}</a></div>
+        {{/if}}
     </div>
 
     <div class="footer">
