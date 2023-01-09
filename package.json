@@ -20,7 +20,7 @@
     "uuid-validate": "0.0.3"
   },
   "devDependencies": {
-    "css-loader": "^6.7.2",
+    "css-loader": "^6.7.3",
     "favicons-webpack-plugin": "^6.0.0",
     "handlebars-loader": "^1.7.3",
     "html-webpack-plugin": "^5.5.0",
