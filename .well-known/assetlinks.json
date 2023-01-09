@@ -1,0 +1,9 @@
+[{
+  "relation": ["delegate_permission/common.handle_all_urls"],
+  "target": {
+    "namespace": "android_app",
+    "package_name": "one.mixin.messenger",
+    "sha256_cert_fingerprints":
+    ["DA:9F:17:AA:E1:5F:61:96:61:59:2D:D6:95:80:5F:1A:D6:0B:24:A4:F7:A1:24:BF:06:9F:B8:40:29:03:DE:81"]
+  }
+}]
