@@ -1,0 +1,62 @@
+{
+  "applinks": {
+      "details": [
+           {
+             "appIDs": [ "5EL4S7LCG6.one.mixin.messenger" ],
+             "components": [
+               {
+                 "/": "/send",
+                 "?": "*",
+                 "comment": "sharing text, image, contract, card, live and post messages"
+               },
+               {
+                 "/": "/pay",
+                 "?": "*",
+                 "comment": "Invoke payment page"
+               },
+               {
+                 "/": "/transfer/*",
+                 "comment": "Invoke transfer page"
+               },
+               {
+                 "/": "/snapshots/*",
+                 "comment": "Popup deposit, withdrawal, or transaction detail page"
+               },
+               {
+                 "/": "/snapshots",
+                 "?": "*",
+                 "comment": "Popup deposit, withdrawal, or transaction detail page"
+               },
+               {
+                 "/": "/address",
+                 "?": "*",
+                 "comment": "Add or delete withdrawal address"
+               },
+               {
+                 "/": "/withdrawal",
+                 "?": "*",
+                 "comment": "Invoke withdrawal page"
+               },
+               {
+                 "/": "/users/*",
+                 "comment": "Popup user profile"
+               },
+               {
+                 "/": "/apps/*",
+                 "?": "*",
+                 "comment": "Popup app profile"
+               },
+               {
+                 "/": "/codes/*",
+                 "comment": "Popup code infomation"
+               },
+               {
+                 "/": "/conversations/*",
+                 "?": "*",
+                 "comment": "Open a conversation"
+               }
+             ]
+           }
+       ]
+   }
+}
