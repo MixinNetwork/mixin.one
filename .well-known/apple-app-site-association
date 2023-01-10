@@ -7,48 +7,48 @@
                {
                  "/": "/send",
                  "?": "*",
-                 "comment": "sharing text, image, contract, card, live and post messages"
+                 "comment": "Share a message"
                },
                {
                  "/": "/pay",
                  "?": "*",
-                 "comment": "Invoke payment page"
+                 "comment": "Request payment"
                },
                {
                  "/": "/transfer/*",
-                 "comment": "Invoke transfer page"
+                 "comment": "Transfer to a user"
                },
                {
                  "/": "/snapshots/*",
-                 "comment": "Popup deposit, withdrawal, or transaction detail page"
+                 "comment": "Show snapshot"
                },
                {
                  "/": "/snapshots",
                  "?": "*",
-                 "comment": "Popup deposit, withdrawal, or transaction detail page"
+                 "comment": "Show snapshot"
                },
                {
                  "/": "/address",
                  "?": "*",
-                 "comment": "Add or delete withdrawal address"
+                 "comment": "Manage withdrawal address"
                },
                {
                  "/": "/withdrawal",
                  "?": "*",
-                 "comment": "Invoke withdrawal page"
+                 "comment": "Request withdrawal"
                },
                {
                  "/": "/users/*",
-                 "comment": "Popup user profile"
+                 "comment": "Show user profile"
                },
                {
                  "/": "/apps/*",
                  "?": "*",
-                 "comment": "Popup app profile"
+                 "comment": "Show app profile"
                },
                {
                  "/": "/codes/*",
-                 "comment": "Popup code infomation"
+                 "comment": "Process QR code"
                },
                {
                  "/": "/conversations/*",
