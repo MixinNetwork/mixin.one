@@ -211,18 +211,16 @@
     }
 
     .qrcode-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
       margin-top: 24px;
       width: 100%;
 
-      .payment-qrcode {
-        position: relative;
-        margin: 0 auto;
-        width: 140px;
+      #qrcode {
+        display: block;
         height: 140px;
-
-        #qrcode {
-          width: 100%;
-        }
       }
 
       .tip {
@@ -318,12 +316,28 @@
       margin-top: 20px;
       margin-bottom: 8px;
       padding: 24px 0;
-      height: 64%;
-      min-height: 378px;
+      height: 66%;
+      min-height: 450px;
       box-sizing: border-box;
+
+      .memo {
+        flex-shrink: 0;
+        display: -webkit-box;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        white-space: normal;
+      }
 
       .qrcode-container {
         margin-top: 16px;
+    
+        #qrcode {
+          height: 20vh;
+          min-height: 120px;
+          max-height: 140px;
+        }
       }
 
       .status-container {
@@ -335,6 +349,14 @@
     .mixin-btn {
       margin-top: 5px;
       margin-bottom: 0;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .oauth.code.layout {
+    .card-container {
+      min-height: 380px;
     }
   }
 }
