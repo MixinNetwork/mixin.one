@@ -2,6 +2,7 @@ import './index.scss';
 import $ from 'jquery';
 import QRious from 'qrious';
 import { Decimal } from "decimal.js";
+import MixinUtils from '../utils/mixin.js';
 import blueLogo from '../home/logo.png';
 import botIcon from './robot.svg';
 import groupDefaultAvatar from './group.png';
@@ -41,6 +42,7 @@ Code.prototype = {
   },
 
   renderChat: function(chatInfo) {
+    const platform = MixinUtils.environment();
     const self = this;
     $('body').attr('class', 'chat code layout');
     chatInfo['hasAvatar'] = chatInfo.type === 'conversation' || (chatInfo.type === 'user' && !!chatInfo.avatar_url);
@@ -65,6 +67,7 @@ Code.prototype = {
     chatInfo['extraURL'] = "mixin://codes/" + chatInfo.code_id;
     chatInfo['extraText'] = i18n.t('code.user.chat');
     $('#layout-container').html(self.templateChat(chatInfo));
+    if (!platform) $('.main').attr('class', 'main browser');
     self.router.updatePageLinks();
   },
 
@@ -75,6 +78,7 @@ Code.prototype = {
 
     if (totalNumber > 1) {
       self.api.network.assetsShow((asset) => {
+        const platform = MixinUtils.environment();
         const complete = payment.status === 'paid';
         payment['logoURL'] = blueLogo;
         payment['info'] = `${payment.threshold}/${totalNumber}`;
@@ -91,6 +95,7 @@ Code.prototype = {
         preloadImage.src = asset.data.icon_url;
         preloadImage.onload = () => {
           $('#layout-container').html(self.templatePayment(payment));
+          if (!platform) $('.main').attr('class', 'main browser');
           new QRious({
             element: document.getElementById('qrcode'),
             backgroundAlpha: 0,

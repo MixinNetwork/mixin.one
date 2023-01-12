@@ -144,6 +144,8 @@ Pay.prototype = {
       $('title').html(st + ' | Mixin - Secure Digital Assets and Messages on Mixin');
       $('body').attr('class', 'pay layout');
       $('#layout-container').html(self.template(payment));
+      const platform = MixinUtils.environment();
+      if (!platform) $('.main').attr('class', 'main browser');
       new QRious({
         element: document.getElementById('qrcode'),
         backgroundAlpha: 0,
