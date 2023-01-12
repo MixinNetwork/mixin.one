@@ -362,6 +362,39 @@
 }
 
 @media (max-width: 768px) {
+  .chat.code.layout {
+    height: auto;
+    overflow: scroll;
+
+    #layout-container {
+      height: auto;
+    }
+  
+    .container {
+      height: auto;
+    }
+
+    .main {
+      justify-content: start;
+    }
+
+    .card-container {
+      justify-content: start;
+      margin-bottom: 0px;
+      padding-top: 48px;
+      height: auto;
+      min-height: auto;
+
+      .action-btn {
+        margin-bottom: 32px;
+      }
+    }
+
+    .footer {
+      margin-top: 24px;
+    }
+  }
+
   .oauth.code.layout {
     .card-container {
       min-height: 380px;
