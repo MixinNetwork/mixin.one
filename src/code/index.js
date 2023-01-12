@@ -61,7 +61,7 @@ Code.prototype = {
         : chatInfo['showExtraButton']
           ? i18n.t('code.bot.open')
           : i18n.t('code.user.chat');
-    chatInfo['buttonURL'] = chatInfo['showExtraButton'] ? chatInfo.app.home_uri : "mixin://codes/" + chatInfo.code_id;
+    chatInfo['buttonURL'] = chatInfo['showExtraButton'] ? `mixin://apps/${chatInfo.app.app_id}?action=open` : "mixin://codes/" + chatInfo.code_id;
     chatInfo['extraURL'] = "mixin://codes/" + chatInfo.code_id;
     chatInfo['extraText'] = i18n.t('code.user.chat');
     $('#layout-container').html(self.templateChat(chatInfo));
