@@ -28,8 +28,8 @@
     "group.members": "位群成员",
     "multisig.title": "多签转账",
     "messenger.tip": "没有 Mixin Messenger 客户端？",
-    "messenger.download": "下 载",
-    "payment.scan": "使用 Mixin Messenger 扫码支付",
+    "messenger.download": "下载",
+    "payment.scan": "使用 Mixin Messenger 扫码",
     "payment.complete": "完成",
     "open.action": "在 Mixin 中打开"
   },

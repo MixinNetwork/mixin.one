@@ -7,34 +7,36 @@
         <div class="btn download-btn"><a href="https://mixin.one/messenger">{{t 'code.messenger.download'}}</a></div>
     </header>
 
-    <div class="card-container">
-        <div class="avatar-container">
-            {{#if hasAvatar}}
-            <img src="{{avatar_url}}" alt="{{full_name}}"/>
-            {{else}}
-            <p>{{firstLetter}}</p>
+    <div class="main">
+        <div class="card-container">
+            <div class="avatar-container">
+                {{#if hasAvatar}}
+                <img src="{{avatar_url}}" alt="{{full_name}}"/>
+                {{else}}
+                <p>{{firstLetter}}</p>
+                {{/if}}
+            </div>
+            <div class="name">
+                <span>{{full_name}}</span>
+                {{#if isBot}}
+                <img src="{{botIcon}}"/>
+                {{/if}}
+            </div>
+            <div class="info">{{info}}</div>
+            {{#if hasIntro}}
+            <div class="intro">{{intro}}</div>
+            {{/if}}
+            <div class="btn action-btn">
+                <a href="{{buttonURL}}">{{actionText}}</a>
+            </div>
+            {{#if showExtraButton}}
+            <div><a class="extra-btn" href="{{extraURL}}">{{extraText}}</a></div>
             {{/if}}
         </div>
-        <div class="name">
-            <span>{{full_name}}</span>
-            {{#if isBot}}
-            <img src="{{botIcon}}"/>
-            {{/if}}
-        </div>
-        <div class="info">{{info}}</div>
-        {{#if hasIntro}}
-        <div class="intro">{{intro}}</div>
-        {{/if}}
-        <div class="btn action-btn">
-            <a href="{{buttonURL}}">{{actionText}}</a>
-        </div>
-        {{#if showExtraButton}}
-        <div><a class="extra-btn" href="{{extraURL}}">{{extraText}}</a></div>
-        {{/if}}
-    </div>
 
-    <div class="footer">
-        <div class="tip">{{t 'code.messenger.tip'}}</div>
-        <div class="download"><a href="https://mixin.one/messenger">{{t 'code.messenger.download'}}</a></div>
+        <div class="footer">
+            <div class="tip">{{t 'code.messenger.tip'}}</div>
+            <div class="download"><a href="https://mixin.one/messenger">{{t 'code.messenger.download'}}</a></div>
+        </div>
     </div>
 </div>

@@ -71,6 +71,7 @@ OAuth.prototype = {
       auth['botIcon'] = auth.app.is_verified ? verifiedBotIcon : botIcon;
       auth['mixinURL'] = 'mixin://codes/' + auth.code_id;
       $('.oauth.code.layout #layout-container').html(self.templateCode(auth));
+      if (!platform) $('.main').attr('class', 'main browser');
       new QRious({
         element: document.getElementById('qrcode'),
         backgroundAlpha: 0,
