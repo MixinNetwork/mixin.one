@@ -36,10 +36,14 @@
     "group.btn.intro": "Click the button above to chat in this group in Mixin Messenger."
   },
   "schema": {
-    "bot.btn.chat": "Chat",
-    "bot.btn.intro.chat": "Click the button above to chat with this bot in Mixin Messenger.",
     "bot.btn.open": "Open",
     "bot.btn.intro.open": "Click the button above to open this bot’s web page in Mixin Messenger.",
+    "btn.view": "View",
+    "bot.btn.intro.view": "Click the button above to view this bot’s profile in Mixin Messenger.",
+    "user.btn.intro.view": "Click the button above to view this user’s profile in Mixin Messenger.",
+    "snapshot.btn.intro.view": "Click the button above to view this snapshot in Mixin Messenger.",
+    "conversation.btn.chat": "Chat",
+    "conversation.btn.intro.chat": "Click the button above to chat with this conversation in Mixin Messenger.",
     "send.btn.share": "Share",
     "send.btn.intro.share": "Click the button above to share message with your friend in Mixin Messenger."
   },

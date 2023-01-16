@@ -52,8 +52,8 @@ Schema.prototype = {
       appInfo['buttonIntro'] = i18n.t("schema.bot.btn.intro.open");
       appInfo['buttonURL'] = `mixin://apps/${id}${location.search}`;
     } else {
-      appInfo['actionText'] = i18n.t("schema.bot.btn.chat");
-      appInfo['buttonIntro'] = i18n.t("schema.bot.btn.intro.chat");
+      appInfo['actionText'] = i18n.t("schema.btn.view");
+      appInfo['buttonIntro'] = i18n.t("schema.bot.btn.intro.view");
       appInfo['buttonURL'] = `mixin://apps/${id}`;
     }
     $('#layout-container').html(self.template(appInfo));
@@ -69,8 +69,8 @@ Schema.prototype = {
       title: "User",
       info: id.slice(0, 6) + '...' + id.slice(-4),
       buttonURL: `mixin://users/${id}`,
-      actionText: i18n.t('code.user.chat'),
-      buttonIntro: i18n.t('code.user.btn.intro')
+      actionText: i18n.t('schema.btn.view'),
+      buttonIntro: i18n.t('schema.user.btn.intro.view')
     }
     $('#layout-container').html(self.template(userInfo));
     $('.info').attr('class', 'info new-margin');
