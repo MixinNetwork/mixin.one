@@ -5,6 +5,7 @@ import Navigo from 'navigo';
 import MixinUtils from './utils/mixin.js';
 import Locale from './locale';
 import API from './api';
+import Apps from './app/index.js';
 import Home from './home';
 import Code from './code';
 import OAuth from './oauth';
@@ -90,6 +91,9 @@ router.on({
   },
   '/codes/:id': function (match) {
     new Code(router, api).render(match.data['id']);
+  },
+  '/apps/:id': function (match) {
+    new Apps(router, api).render(match.data['id']);
   },
   '/xin': function () {
     new Home(router, api).xin();

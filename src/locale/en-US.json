@@ -35,6 +35,12 @@
     "user.btn.intro": "Click the button above to chat with this user in Mixin Messenger.",
     "group.btn.intro": "Click the button above to chat in this group in Mixin Messenger."
   },
+  "app": {
+    "btn.chat": "Chat",
+    "btn.open": "Open",
+    "btn.intro.chat": "Click the button above to chat with this bot in Mixin Messenger.",
+    "btn.intro.open": "Click the button above to open this bot’s web page in Mixin Messenger."
+  },
   "snapshots": {
     "search.placeholder": "Search transactions",
     "transaction": {

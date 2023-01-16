@@ -17,6 +17,7 @@
   }
 }
 
+.app.layout,
 .pay.layout,
 .oauth.code.layout,
 .payment.code.layout,
@@ -388,6 +389,7 @@
 }
 
 @media (max-width: 768px) {
+  .app.layout,
   .chat.code.layout {
     height: auto;
     overflow: scroll;
@@ -406,6 +408,7 @@
 
     .card-container {
       justify-content: start;
+      margin-top: 30px;
       margin-bottom: 0px;
       padding-top: 48px;
       padding-bottom: 30px;
