@@ -1,14 +1,17 @@
 import $ from 'jquery';
+import QRious from 'qrious';
 import URLUtils from '../utils/url.js';
 import blueLogo from '../home/logo.png';
 import userdefaultAvatar from './userAvatar.svg';
 import appDefaultAvatar from './appAvatar.svg';
-import shareDefaultAvatar from './sendAvatar.svg';
+import shareAvatar from './sendAvatar.svg';
+import addressAvatar from './addressAvatar.svg';
 
 function Schema(router, api) {
   this.router = router;
   this.api = api;
   this.template = require('./basic.html');
+  this.scanTemplate = require('./scan.html');
 }
 
 Schema.prototype = {
@@ -23,6 +26,9 @@ Schema.prototype = {
         break;
       case "send":
         this.renderSend();
+        break;
+      case "address":
+        this.renderAddress();
         break;
       default:
         this.api.error({error: {code: 10002}});
@@ -77,7 +83,7 @@ Schema.prototype = {
     $('body').attr('class', 'schema layout');
     const shareInfo = {
       logoURL: blueLogo,
-      avatarUrl: shareDefaultAvatar,
+      avatarUrl: shareAvatar,
       title: "Share Message",
       info: category,
       buttonURL: `mixin://apps/send${location.search}`,
@@ -86,6 +92,32 @@ Schema.prototype = {
     };
     $('#layout-container').html(self.template(shareInfo));
     $('.info').attr('class', 'info new-margin');
+    self.router.updatePageLinks();
+  },
+  renderAddress: function () {
+    const self = this;
+    const action = URLUtils.getUrlParameter("action");
+    const destination = URLUtils.getUrlParameter("destination");
+    const address = URLUtils.getUrlParameter("address");
+    if (!!action && action !== 'delete') self.api.error({error: {code: 10002}});
+
+    $('body').attr('class', 'schema layout');
+    const info = action ? address : destination;
+    const addressInfo = {
+      logoURL: blueLogo,
+      avatarUrl: addressAvatar,
+      title: `${action ? 'Delete Address' : "Add Address"}`,
+      info: info.slice(0, 6) + '...' + info.slice(-4),
+      mixinURL: `mixin://address${location.search}`,
+    };
+    $('#layout-container').html(self.scanTemplate(addressInfo));
+    new QRious({
+      element: document.getElementById('qrcode'),
+      backgroundAlpha: 0,
+      value: addressInfo['mixinURL'],
+      level: 'H',
+      size: 500
+    });
     self.router.updatePageLinks();
   }
 };
