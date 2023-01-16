@@ -98,6 +98,9 @@ router.on({
   '/users/:id': function (match) {
     new Schema(router, api).render(match.data['id']);
   },
+  '/send': function () {
+    new Schema(router, api).render();
+  },
   '/xin': function () {
     new Home(router, api).xin();
   },

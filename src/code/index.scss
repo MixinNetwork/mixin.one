@@ -17,8 +17,7 @@
   }
 }
 
-.user.layout,
-.app.layout,
+.schema.layout,
 .pay.layout,
 .oauth.code.layout,
 .payment.code.layout,
@@ -137,7 +136,7 @@
     }
 
     .name {
-      margin-top: 10px;
+      margin-top: 12px;
     }
 
     .info {
@@ -389,8 +388,7 @@
   }
 }
 
-.user.layout,
-.app.layout {
+.schema.layout {
   .card-container {
     .avatar-container {
       border: none;
@@ -399,8 +397,7 @@
 }
 
 @media (max-width: 768px) {
-  .user.layout,
-  .app.layout,
+  .schema.layout,
   .chat.code.layout {
     height: auto;
     overflow: scroll;
