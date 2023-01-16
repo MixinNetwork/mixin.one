@@ -5,7 +5,6 @@ import Navigo from 'navigo';
 import MixinUtils from './utils/mixin.js';
 import Locale from './locale';
 import API from './api';
-import Apps from './app/index.js';
 import Home from './home';
 import Code from './code';
 import OAuth from './oauth';
@@ -13,8 +12,8 @@ import Page from './page';
 import Log from './log';
 import Job from './job';
 import Pay from './pay';
+import Schema from './schema';
 import Snapshot from './snapshot';
-import User from './user';
 
 const WEB_ROOT = location.protocol + '//' + location.host;
 const PartialLoading = require('./loading.html');
@@ -94,10 +93,10 @@ router.on({
     new Code(router, api).render(match.data['id']);
   },
   '/apps/:id': function (match) {
-    new Apps(router, api).render(match.data['id']);
+    new Schema(router, api).render(match.data['id']);
   },
   '/users/:id': function (match) {
-    new User(router, api).render(match.data['id']);
+    new Schema(router, api).render(match.data['id']);
   },
   '/xin': function () {
     new Home(router, api).xin();
