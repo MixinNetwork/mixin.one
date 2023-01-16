@@ -24,6 +24,9 @@ Schema.prototype = {
       case "users": 
         this.renderUser(id);
         break;
+      case "conversations": 
+        this.renderConversation(id);
+        break;
       case "send":
         this.renderSend();
         break;
@@ -73,6 +76,22 @@ Schema.prototype = {
       buttonIntro: i18n.t('schema.user.btn.intro.view')
     }
     $('#layout-container').html(self.template(userInfo));
+    $('.info').attr('class', 'info new-margin');
+    self.router.updatePageLinks();
+  },
+  renderConversation: function (id) {
+    const self = this;
+    $('body').attr('class', 'schema layout');
+    const conversationInfo = {
+      logoURL: blueLogo,
+      avatarUrl: userdefaultAvatar,
+      title: "Conversation",
+      info: id.slice(0, 6) + '...' + id.slice(-4),
+      buttonURL: `mixin://conversations/${id}`,
+      actionText: i18n.t('schema.conversation.btn.chat'),
+      buttonIntro: i18n.t('schema.conversation.btn.intro.chat')
+    }
+    $('#layout-container').html(self.template(conversationInfo));
     $('.info').attr('class', 'info new-margin');
     self.router.updatePageLinks();
   },
