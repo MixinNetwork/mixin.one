@@ -18,14 +18,15 @@ App.prototype = {
       logoURL: blueLogo,
       avatarUrl: defaultAvatar,
       info: id.slice(0, 6) + '...' + id.slice(-4),
-      buttonURL: `mixin://apps/${id}` + location.search
     }
     if (action === 'open') {
       appInfo['actionText'] = i18n.t("app.btn.open");
       appInfo['buttonIntro'] = i18n.t("app.btn.intro.open");
+      appInfo['buttonURL'] = `mixin://apps/${id}` + location.search;
     } else {
       appInfo['actionText'] = i18n.t("app.btn.chat");
       appInfo['buttonIntro'] = i18n.t("app.btn.intro.chat");
+      appInfo['buttonURL'] = `mixin://apps/${id}`;
     }
     $('#layout-container').html(self.template(appInfo));
     $('.info').attr('class', 'info new-margin');
