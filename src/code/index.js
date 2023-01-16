@@ -69,9 +69,10 @@ Code.prototype = {
     chatInfo['showButtonIntro'] = !(chatInfo.type === 'user' && !!chatInfo.app);
     chatInfo['buttonIntro'] = chatInfo.type === 'user' ? i18n.t('code.user.btn.intro') : i18n.t('code.group.btn.intro');
     $('#layout-container').html(self.templateChat(chatInfo));
+    if (!chatInfo['hasIntro']) $('.info').attr('class', 'info new-margin');
     if (chatInfo['showExtraButton']) $('.action-btn').attr('class', 'btn action-btn new-margin');
-    if (!platform) $('.main').attr('class', 'main browser');
     if (i18n.locale.includes('zh')) $('.extra-btn-container').attr('class', 'zh extra-btn-container');
+    if (!platform) $('.main').attr('class', 'main browser');
     self.router.updatePageLinks();
   },
 

@@ -118,7 +118,7 @@
     .title,
     .name {
       display: flex;
-      justify-content: space-between;
+      justify-content: center;
       align-items: center;
       width: 80%;
       text-align: center;
@@ -144,6 +144,9 @@
       font-size: 14px;
       font-weight: 400;
       color: #B8BDC7;
+    }
+    .info.new-margin {
+      margin-bottom: 37px;
     }
 
     .intro {
