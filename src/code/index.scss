@@ -293,8 +293,19 @@
     }
   }
 
-  .extra-btn {
-    color: #3D75E3;
+  .extra-btn-container {
+    display: block;
+    width: 120px;
+    height: 50px;
+
+    .extra-btn {
+      line-height: 50px;
+      text-align: center;
+      color: #3D75E3;
+    }
+  }
+  .extra-btn-container.zh {
+    width: 150px;
   }
 
   @media (max-width: 768px) {
@@ -382,11 +393,16 @@
       justify-content: start;
       margin-bottom: 0px;
       padding-top: 48px;
+      padding-bottom: 30px;
       height: auto;
       min-height: auto;
 
       .action-btn {
-        margin-bottom: 32px;
+        margin-bottom: 16px;
+      }
+
+      .action-btn.new-margin {
+        margin-bottom: 8px;
       }
     }
 

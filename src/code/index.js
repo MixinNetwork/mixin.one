@@ -67,7 +67,9 @@ Code.prototype = {
     chatInfo['extraURL'] = "mixin://codes/" + chatInfo.code_id;
     chatInfo['extraText'] = i18n.t('code.user.chat');
     $('#layout-container').html(self.templateChat(chatInfo));
+    if (chatInfo['showExtraButton']) $('.action-btn').attr('class', 'btn action-btn new-margin');
     if (!platform) $('.main').attr('class', 'main browser');
+    if (i18n.locale.includes('zh')) $('.extra-btn-container').attr('class', 'zh extra-btn-container');
     self.router.updatePageLinks();
   },
 
