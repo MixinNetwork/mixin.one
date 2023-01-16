@@ -31,7 +31,9 @@
     "messenger.download": "Download",
     "payment.scan": "Use Mixin Messenger to scan the code",
     "payment.complete": "Done",
-    "open.action": "Open in Mixin"
+    "open.action": "Open in Mixin",
+    "user.btn.intro": "Click the button above to chat with this user in Mixin Messenger.",
+    "group.btn.intro": "Click the button above to chat in this group in Mixin Messenger."
   },
   "snapshots": {
     "search.placeholder": "Search transactions",

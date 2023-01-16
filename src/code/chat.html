@@ -29,6 +29,9 @@
             <div class="btn action-btn">
                 <a href="{{buttonURL}}">{{actionText}}</a>
             </div>
+            {{#if showButtonIntro}}
+            <div class="btn-intro">{{buttonIntro}}</div>
+            {{/if}}
             {{#if showExtraButton}}
             <a class="extra-btn-container" href="{{extraURL}}"><div class="extra-btn">{{extraText}}</div></a>
             {{/if}}

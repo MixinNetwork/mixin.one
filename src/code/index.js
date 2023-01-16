@@ -66,6 +66,8 @@ Code.prototype = {
     chatInfo['buttonURL'] = chatInfo['showExtraButton'] ? `mixin://apps/${chatInfo.app.app_id}?action=open` : "mixin://codes/" + chatInfo.code_id;
     chatInfo['extraURL'] = "mixin://codes/" + chatInfo.code_id;
     chatInfo['extraText'] = i18n.t('code.user.chat');
+    chatInfo['showButtonIntro'] = !(chatInfo.type === 'user' && !!chatInfo.app);
+    chatInfo['buttonIntro'] = chatInfo.type === 'user' ? i18n.t('code.user.btn.intro') : i18n.t('code.group.btn.intro');
     $('#layout-container').html(self.templateChat(chatInfo));
     if (chatInfo['showExtraButton']) $('.action-btn').attr('class', 'btn action-btn new-margin');
     if (!platform) $('.main').attr('class', 'main browser');

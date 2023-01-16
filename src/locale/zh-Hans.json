@@ -31,7 +31,9 @@
     "messenger.download": "下载",
     "payment.scan": "使用 Mixin Messenger 扫码",
     "payment.complete": "完成",
-    "open.action": "在 Mixin 中打开"
+    "open.action": "在 Mixin 中打开",
+    "user.btn.intro": "点击上方按钮以在 Mixin Messenger 与该用户聊天",
+    "group.btn.intro": "点击上方按钮以在 Mixin Messenger 加入群聊"
   },
   "snapshots": {
     "search.placeholder": "搜索交易",
