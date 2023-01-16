@@ -120,9 +120,12 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
+      width: 80%;
       text-align: center;
       font-size: 18px;
       font-weight: 500;
+      word-wrap: break-word;
+      word-break: normal;
 
       img {
         display: inline-block;
