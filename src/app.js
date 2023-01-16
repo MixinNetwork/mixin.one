@@ -104,6 +104,9 @@ router.on({
   '/address': function () {
     new Schema(router, api).render();
   },
+  '/withdrawal': function () {
+    new Schema(router, api).render();
+  },
   '/xin': function () {
     new Home(router, api).xin();
   },

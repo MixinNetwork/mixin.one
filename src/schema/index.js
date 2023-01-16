@@ -30,6 +30,9 @@ Schema.prototype = {
       case "address":
         this.renderAddress();
         break;
+      case "withdrawal":
+        this.renderWithdrawal();
+        break;
       default:
         this.api.error({error: {code: 10002}});
     }
@@ -119,6 +122,28 @@ Schema.prototype = {
       size: 500
     });
     self.router.updatePageLinks();
+  },
+  renderWithdrawal: function () {
+    const self = this;
+    const address = URLUtils.getUrlParameter("address");
+    $('body').attr('class', 'schema layout');
+    const withdrawalInfo = {
+      logoURL: blueLogo,
+      avatarUrl: shareAvatar,
+      title: `Send to `, // todo: fix this
+      info: address.slice(0, 6) + '...' + address.slice(-4),
+      mixinURL: `mixin://withdrawal${location.search}`,
+    };
+    $('#layout-container').html(self.template(shareInfo));
+    new QRious({
+      element: document.getElementById('qrcode'),
+      backgroundAlpha: 0,
+      value: withdrawalInfo['mixinURL'],
+      level: 'H',
+      size: 500
+    });
+    self.router.updatePageLinks();
+
   }
 };
 
