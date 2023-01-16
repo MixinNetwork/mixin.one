@@ -14,6 +14,7 @@ import Log from './log';
 import Job from './job';
 import Pay from './pay';
 import Snapshot from './snapshot';
+import User from './user';
 
 const WEB_ROOT = location.protocol + '//' + location.host;
 const PartialLoading = require('./loading.html');
@@ -94,6 +95,9 @@ router.on({
   },
   '/apps/:id': function (match) {
     new Apps(router, api).render(match.data['id']);
+  },
+  '/users/:id': function (match) {
+    new User(router, api).render(match.data['id']);
   },
   '/xin': function () {
     new Home(router, api).xin();

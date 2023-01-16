@@ -17,6 +17,7 @@
   }
 }
 
+.user.layout,
 .app.layout,
 .pay.layout,
 .oauth.code.layout,
@@ -388,7 +389,17 @@
   }
 }
 
+.user.layout,
+.app.layout {
+  .card-container {
+    .avatar-container {
+      border: none;
+    }
+  }
+}
+
 @media (max-width: 768px) {
+  .user.layout,
   .app.layout,
   .chat.code.layout {
     height: auto;
