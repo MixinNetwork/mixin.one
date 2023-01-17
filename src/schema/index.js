@@ -1,6 +1,8 @@
 import $ from 'jquery';
 import QRious from 'qrious';
+import { Decimal } from "decimal.js";
 import URLUtils from '../utils/url.js';
+import MixinUtils from '../utils/mixin.js';
 import blueLogo from '../home/logo.png';
 import userdefaultAvatar from './userAvatar.svg';
 import appDefaultAvatar from './appAvatar.svg';
@@ -13,6 +15,7 @@ function Schema(router, api) {
   this.api = api;
   this.template = require('./basic.html');
   this.scanTemplate = require('./scan.html');
+  this.withdrawalTemplate = require('./withdrawal.html');
 }
 
 Schema.prototype = {
@@ -144,26 +147,35 @@ Schema.prototype = {
   },
   renderWithdrawal: function () {
     const self = this;
+    const platform = MixinUtils.environment();
     const address = URLUtils.getUrlParameter("address");
     const asset_id = URLUtils.getUrlParameter("asset");
     const amount = URLUtils.getUrlParameter("amount");
     $('body').attr('class', 'schema layout');
-    const withdrawalInfo = {
-      logoURL: blueLogo,
-      avatarUrl: shareAvatar,
-      title: `Withdrawal`,
-      info: address.slice(0, 6) + '...' + address.slice(-4),
-      mixinURL: `mixin://withdrawal${location.search}`,
-    };
-    $('#layout-container').html(self.scanTemplate(withdrawalInfo));
-    new QRious({
-      element: document.getElementById('qrcode'),
-      backgroundAlpha: 0,
-      value: withdrawalInfo['mixinURL'],
-      level: 'H',
-      size: 500
-    });
-    self.router.updatePageLinks();
+    self.api.network.assetsShow(function(resp) {
+      if (resp.error) {
+        return;
+      }
+      const asset = resp.data;
+      const withdrawalInfo = {
+        logoURL: blueLogo,
+        info: address.slice(0, 6) + '...' + address.slice(-4),
+        assetUrl: asset.icon_url,
+        tokenAmount: amount,
+        usdAmount: `${new Decimal(asset.price_usd).times(amount).toNumber().toFixed(2).toString()} USD`,
+        mixinURL: `mixin://withdrawal${location.search}`,
+      };
+      $('#layout-container').html(self.withdrawalTemplate(withdrawalInfo));
+      if (!platform) $('.main').attr('class', 'main browser');
+      new QRious({
+        element: document.getElementById('qrcode'),
+        backgroundAlpha: 0,
+        value: withdrawalInfo['mixinURL'],
+        level: 'H',
+        size: 500
+      });
+      self.router.updatePageLinks();
+    }, asset_id)
 
   }
 };
