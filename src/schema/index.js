@@ -4,6 +4,7 @@ import URLUtils from '../utils/url.js';
 import blueLogo from '../home/logo.png';
 import userdefaultAvatar from './userAvatar.svg';
 import appDefaultAvatar from './appAvatar.svg';
+import conversationAvatar from './conversationAvatar.svg';
 import shareAvatar from './sendAvatar.svg';
 import addressAvatar from './addressAvatar.svg';
 
@@ -84,7 +85,7 @@ Schema.prototype = {
     $('body').attr('class', 'schema layout');
     const conversationInfo = {
       logoURL: blueLogo,
-      avatarUrl: userdefaultAvatar,
+      avatarUrl: conversationAvatar,
       title: "Conversation",
       info: id.slice(0, 6) + '...' + id.slice(-4),
       buttonURL: `mixin://conversations/${id}`,
@@ -96,7 +97,6 @@ Schema.prototype = {
     self.router.updatePageLinks();
   },
   renderSend: function () {
-    // todo: snapshot
     const self = this;
     const categories = ['text', 'image', 'contact', 'app_card', 'live', 'post']
     const category = URLUtils.getUrlParameter("category");
@@ -108,7 +108,7 @@ Schema.prototype = {
       avatarUrl: shareAvatar,
       title: "Share Message",
       info: category,
-      buttonURL: `mixin://apps/send${location.search}`,
+      buttonURL: `mixin://send${location.search}`,
       actionText: i18n.t('schema.send.btn.share'),
       buttonIntro: i18n.t('schema.send.btn.intro.share')
     };
@@ -145,15 +145,17 @@ Schema.prototype = {
   renderWithdrawal: function () {
     const self = this;
     const address = URLUtils.getUrlParameter("address");
+    const asset_id = URLUtils.getUrlParameter("asset");
+    const amount = URLUtils.getUrlParameter("amount");
     $('body').attr('class', 'schema layout');
     const withdrawalInfo = {
       logoURL: blueLogo,
       avatarUrl: shareAvatar,
-      title: `Send to `, // todo: fix this
+      title: `Withdrawal`,
       info: address.slice(0, 6) + '...' + address.slice(-4),
       mixinURL: `mixin://withdrawal${location.search}`,
     };
-    $('#layout-container').html(self.template(shareInfo));
+    $('#layout-container').html(self.scanTemplate(withdrawalInfo));
     new QRious({
       element: document.getElementById('qrcode'),
       backgroundAlpha: 0,
