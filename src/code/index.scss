@@ -397,7 +397,14 @@
 }
 
 @media (max-width: 768px) {
-  .schema.layout,
+  .schema.layout {
+    .card-container {
+      height: 60%;
+      min-height: 410px;
+    }
+  }
+
+  .schema.static.layout,
   .chat.code.layout {
     height: auto;
     overflow: scroll;

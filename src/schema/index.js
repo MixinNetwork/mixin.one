@@ -47,7 +47,7 @@ Schema.prototype = {
   renderApp: function (id) {
     const self = this;
     const action = URLUtils.getUrlParameter("action");
-    $('body').attr('class', 'schema layout');
+    $('body').attr('class', 'schema static layout');
     const appInfo = {
       logoURL: blueLogo,
       avatarUrl: appDefaultAvatar,
@@ -69,7 +69,7 @@ Schema.prototype = {
   },
   renderUser: function (id) {
     const self = this;
-    $('body').attr('class', 'schema layout');
+    $('body').attr('class', 'schema static layout');
     const userInfo = {
       logoURL: blueLogo,
       avatarUrl: userdefaultAvatar,
@@ -85,7 +85,7 @@ Schema.prototype = {
   },
   renderConversation: function (id) {
     const self = this;
-    $('body').attr('class', 'schema layout');
+    $('body').attr('class', 'schema static layout');
     const conversationInfo = {
       logoURL: blueLogo,
       avatarUrl: conversationAvatar,
@@ -105,7 +105,7 @@ Schema.prototype = {
     const category = URLUtils.getUrlParameter("category");
     if (!categories.includes(category)) self.api.error({error: {code: 10002}});
 
-    $('body').attr('class', 'schema layout');
+    $('body').attr('class', 'schema static layout');
     const shareInfo = {
       logoURL: blueLogo,
       avatarUrl: shareAvatar,
