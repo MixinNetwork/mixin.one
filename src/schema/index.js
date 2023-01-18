@@ -99,7 +99,7 @@ Schema.prototype = {
       avatarUrl: conversationAvatar,
       title: "Conversation",
       info: id.slice(0, 6) + '...' + id.slice(-4),
-      buttonURL: `mixin://conversations/${id}`,
+      buttonURL: `mixin://conversations/${id}${location.search}`,
       actionText: i18n.t('schema.conversation.btn.chat'),
       buttonIntro: i18n.t('schema.conversation.btn.intro.chat')
     }
