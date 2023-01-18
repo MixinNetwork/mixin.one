@@ -401,6 +401,12 @@
   .schema.layout {
     .card-container {
       height: 60%;
+      min-height: 360px;
+    }
+  }
+
+  .withdrawal.schema.layout {
+    .card-container {
       min-height: 410px;
     }
   }

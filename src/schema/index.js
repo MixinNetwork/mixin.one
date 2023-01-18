@@ -179,7 +179,7 @@ Schema.prototype = {
     const address = URLUtils.getUrlParameter("address");
     const asset_id = URLUtils.getUrlParameter("asset");
     const amount = URLUtils.getUrlParameter("amount");
-    $('body').attr('class', 'schema layout');
+    $('body').attr('class', 'schema layout withdrawal');
     self.api.network.assetsShow(function(resp) {
       if (resp.error) {
         return;
