@@ -101,6 +101,9 @@ router.on({
   '/conversations/:id': function (match) {
     new Schema(router, api).render(match.data['id']);
   },
+  '/transfer/:id': function (match) {
+    new Schema(router, api).render(match.data['id']);
+  },
   '/send': function () {
     new Schema(router, api).render();
   },

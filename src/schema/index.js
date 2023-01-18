@@ -9,6 +9,7 @@ import appDefaultAvatar from './appAvatar.svg';
 import conversationAvatar from './conversationAvatar.svg';
 import shareAvatar from './sendAvatar.svg';
 import addressAvatar from './addressAvatar.svg';
+import transferAvatar from './transferAvatar.svg';
 
 function Schema(router, api) {
   this.router = router;
@@ -30,6 +31,9 @@ Schema.prototype = {
         break;
       case "conversations": 
         this.renderConversation(id);
+        break;
+      case "transfer": 
+        this.renderTransfer(id);
         break;
       case "send":
         this.renderSend();
@@ -99,6 +103,28 @@ Schema.prototype = {
     $('.info').attr('class', 'info new-margin');
     self.router.updatePageLinks();
   },
+  renderTransfer: function (id) {
+    const self = this;
+    const platform = MixinUtils.environment();
+    $('body').attr('class', 'schema layout');
+    const transferInfo = {
+      logoURL: blueLogo,
+      avatarUrl: transferAvatar,
+      title: "Transfer",
+      info: "Transfer",
+      mixinURL: `mixin://transfer/${id}`,
+    }
+    $('#layout-container').html(self.scanTemplate(transferInfo));
+    if (!platform) $('.main').attr('class', 'main browser');
+    new QRious({
+      element: document.getElementById('qrcode'),
+      backgroundAlpha: 0,
+      value: transferInfo['mixinURL'],
+      level: 'H',
+      size: 500
+    });
+    self.router.updatePageLinks();
+  },
   renderSend: function () {
     const self = this;
     const categories = ['text', 'image', 'contact', 'app_card', 'live', 'post']
@@ -121,6 +147,7 @@ Schema.prototype = {
   },
   renderAddress: function () {
     const self = this;
+    const platform = MixinUtils.environment();
     const action = URLUtils.getUrlParameter("action");
     const destination = URLUtils.getUrlParameter("destination");
     const address = URLUtils.getUrlParameter("address");
@@ -135,7 +162,8 @@ Schema.prototype = {
       info: info.slice(0, 6) + '...' + info.slice(-4),
       mixinURL: `mixin://address${location.search}`,
     };
-    $('#layout-container').html(self.scanTemplate(addressInfo));
+    $('#layout-container').html(self.scanTemplate(addressInfo));      
+    if (!platform) $('.main').attr('class', 'main browser');
     new QRious({
       element: document.getElementById('qrcode'),
       backgroundAlpha: 0,
