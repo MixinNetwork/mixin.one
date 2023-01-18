@@ -1,6 +1,7 @@
 import $ from 'jquery';
 import QRious from 'qrious';
 import { Decimal } from "decimal.js";
+import validate from 'uuid-validate';
 import URLUtils from '../utils/url.js';
 import MixinUtils from '../utils/mixin.js';
 import blueLogo from '../home/logo.png';
@@ -17,6 +18,7 @@ function Schema(router, api) {
   this.template = require('./basic.html');
   this.scanTemplate = require('./scan.html');
   this.withdrawalTemplate = require('./withdrawal.html');
+  this.ErrorGeneral = require('../error.html');
 }
 
 Schema.prototype = {
@@ -51,21 +53,21 @@ Schema.prototype = {
   renderApp: function (id) {
     const self = this;
     const action = URLUtils.getUrlParameter("action");
+    if ((!!action && action !== 'open') || !validate(id)) return this.renderError();
     $('body').attr('class', 'schema static layout');
     const appInfo = {
       logoURL: blueLogo,
       avatarUrl: appDefaultAvatar,
       title: "Bot",
       info: id.slice(0, 6) + '...' + id.slice(-4),
+      buttonURL: `mixin://apps/${id}${location.search}`
     }
     if (action === 'open') {
       appInfo['actionText'] = i18n.t("schema.bot.btn.open");
       appInfo['buttonIntro'] = i18n.t("schema.bot.btn.intro.open");
-      appInfo['buttonURL'] = `mixin://apps/${id}${location.search}`;
     } else {
       appInfo['actionText'] = i18n.t("schema.btn.view");
       appInfo['buttonIntro'] = i18n.t("schema.bot.btn.intro.view");
-      appInfo['buttonURL'] = `mixin://apps/${id}`;
     }
     $('#layout-container').html(self.template(appInfo));
     $('.info').attr('class', 'info new-margin');
@@ -74,6 +76,7 @@ Schema.prototype = {
   renderUser: function (id) {
     const self = this;
     $('body').attr('class', 'schema static layout');
+    if (!validate(id)) return this.renderError();
     const userInfo = {
       logoURL: blueLogo,
       avatarUrl: userdefaultAvatar,
@@ -89,6 +92,7 @@ Schema.prototype = {
   },
   renderConversation: function (id) {
     const self = this;
+    if (!validate(id)) return this.renderError();
     $('body').attr('class', 'schema static layout');
     const conversationInfo = {
       logoURL: blueLogo,
@@ -106,6 +110,7 @@ Schema.prototype = {
   renderTransfer: function (id) {
     const self = this;
     const platform = MixinUtils.environment();
+    if (!validate(id)) return this.renderError();
     $('body').attr('class', 'schema layout');
     const transferInfo = {
       logoURL: blueLogo,
@@ -129,7 +134,8 @@ Schema.prototype = {
     const self = this;
     const categories = ['text', 'image', 'contact', 'app_card', 'live', 'post']
     const category = URLUtils.getUrlParameter("category");
-    if (!categories.includes(category)) self.api.error({error: {code: 10002}});
+    const data = URLUtils.getUrlParameter("data");
+    if (!categories.includes(category) || !data) return this.renderError();
 
     $('body').attr('class', 'schema static layout');
     const shareInfo = {
@@ -148,13 +154,19 @@ Schema.prototype = {
   renderAddress: function () {
     const self = this;
     const platform = MixinUtils.environment();
+    const asset = URLUtils.getUrlParameter("asset");
+    const label = URLUtils.getUrlParameter("label");
     const action = URLUtils.getUrlParameter("action");
     const destination = URLUtils.getUrlParameter("destination");
     const address = URLUtils.getUrlParameter("address");
-    if (!!action && action !== 'delete') self.api.error({error: {code: 10002}});
-
-    $('body').attr('class', 'schema layout');
     const info = action ? address : destination;
+    if (
+      !info
+      || !asset || !validate(asset)
+      || (!action && !label) 
+      || (!!action && (action !== 'delete' || !validate(address))) 
+    ) return this.renderError();
+    $('body').attr('class', 'schema layout');
     const addressInfo = {
       logoURL: blueLogo,
       avatarUrl: addressAvatar,
@@ -179,6 +191,9 @@ Schema.prototype = {
     const address = URLUtils.getUrlParameter("address");
     const asset_id = URLUtils.getUrlParameter("asset");
     const amount = URLUtils.getUrlParameter("amount");
+    const trace_id = URLUtils.getUrlParameter("trace");
+    if (!address || !asset_id || !amount || !trace_id || !validate(address) || !validate(asset_id) || !validate(trace_id)) 
+      return this.renderError();
     $('body').attr('class', 'schema layout withdrawal');
     self.api.network.assetsShow(function(resp) {
       if (resp.error) {
@@ -204,7 +219,13 @@ Schema.prototype = {
       });
       self.router.updatePageLinks();
     }, asset_id)
-
+  },
+  renderError: function () {
+    this.api.notify('error', i18n.t('general.errors.10002'));
+    $('#layout-container').html(this.ErrorGeneral());
+    $('body').attr('class', 'error layout');
+    this.router.updatePageLinks();
+    return true;
   }
 };
 
