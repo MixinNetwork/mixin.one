@@ -116,7 +116,7 @@ Schema.prototype = {
       logoURL: blueLogo,
       avatarUrl: transferAvatar,
       title: "Transfer",
-      info: "Transfer",
+      info: id.slice(0, 6) + '...' + id.slice(-4),
       mixinURL: `mixin://transfer/${id}`,
     }
     $('#layout-container').html(self.scanTemplate(transferInfo));
