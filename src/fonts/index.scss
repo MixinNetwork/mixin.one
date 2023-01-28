@@ -184,3 +184,102 @@
   url('fonts/mulish/Mulish-Black.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
   url('fonts/mulish/Mulish-Black.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
+
+/* SF-Pro-Text-100 - latin */
+@font-face {
+  font-family: 'SF-Pro-Text';
+  font-style: normal;
+  font-weight: 100;
+  font-display: swap;
+  src: local('SF-Pro-Text Thin'), local('SF-Pro-Text-Thin'),
+  url('fonts/sf-pro-text/SF-Pro-Text-Thin.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+  url('fonts/sf-pro-text/SF-Pro-Text-Thin.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* SF-Pro-Text-200 - latin */
+@font-face {
+  font-family: 'SF-Pro-Text';
+  font-style: normal;
+  font-weight: 200;
+  font-display: swap;
+  src: local('SF-Pro-Text Ultralight'), local('SF-Pro-Text-Ultralight'),
+  url('fonts/sf-pro-text/SF-Pro-Text-Ultralight.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+  url('fonts/sf-pro-text/SF-Pro-Text-Ultralight.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* SF-Pro-Text-300 - latin */
+@font-face {
+  font-family: 'SF-Pro-Text';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: local('SF-Pro-Text Light'), local('SF-Pro-Text-Light'),
+  url('fonts/sf-pro-text/SF-Pro-Text-Light.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+  url('fonts/sf-pro-text/SF-Pro-Text-Light.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* SF-Pro-Text-400 - latin */
+@font-face {
+  font-family: 'SF-Pro-Text';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('SF-Pro-Text Regular'), local('SF-Pro-Text-Regular'),
+  url('fonts/sf-pro-text/SF-Pro-Text-Regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+  url('fonts/sf-pro-text/SF-Pro-Text-Regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* SF-Pro-Text-500 - latin */
+@font-face {
+  font-family: 'SF-Pro-Text';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: local('SF-Pro-Text Medium'), local('SF-Pro-Text-Medium'),
+  url('fonts/sf-pro-text/SF-Pro-Text-Medium.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+  url('fonts/sf-pro-text/SF-Pro-Text-Medium.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* SF-Pro-Text-600 - latin */
+@font-face {
+  font-family: 'SF-Pro-Text';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: local('SF-Pro-Text Semibold'), local('SF-Pro-Text-Semibold'),
+  url('fonts/sf-pro-text/SF-Pro-Text-Semibold.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+  url('fonts/sf-pro-text/SF-Pro-Text-Semibold.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* SF-Pro-Text-700 - latin */
+@font-face {
+  font-family: 'SF-Pro-Text';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: local('SF-Pro-Text Bold'), local('SF-Pro-Text-Bold'),
+  url('fonts/sf-pro-text/SF-Pro-Text-Bold.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+  url('fonts/sf-pro-text/SF-Pro-Text-Bold.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* SF-Pro-Text-800 - latin */
+@font-face {
+  font-family: 'SF-Pro-Text';
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src: local('SF-Pro-Text Heavy'), local('SF-Pro-Text-Heavy'),
+  url('fonts/sf-pro-text/SF-Pro-Text-Heavy.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+  url('fonts/sf-pro-text/SF-Pro-Text-Heavy.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* SF-Pro-Text-900 - latin */
+@font-face {
+  font-family: 'SF-Pro-Text';
+  font-style: normal;
+  font-weight: 900;
+  font-display: swap;
+  src: local('SF-Pro-Text Black'), local('SF-Pro-Text-Black'),
+  url('fonts/sf-pro-text/SF-Pro-Text-Black.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+  url('fonts/sf-pro-text/SF-Pro-Text-Black.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
