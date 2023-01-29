@@ -54,7 +54,7 @@ Schema.prototype = {
     const self = this;
     const action = URLUtils.getUrlParameter("action");
     if ((!!action && action !== 'open') || !validate(id)) return this.renderError();
-    $('body').attr('class', 'schema static layout');
+    $('body').attr('class', 'schema static code layout');
     const appInfo = {
       logoURL: blueLogo,
       avatarUrl: appDefaultAvatar,
@@ -75,7 +75,7 @@ Schema.prototype = {
   },
   renderUser: function (id) {
     const self = this;
-    $('body').attr('class', 'schema static layout');
+    $('body').attr('class', 'schema static code layout');
     if (!validate(id)) return this.renderError();
     const userInfo = {
       logoURL: blueLogo,
@@ -93,7 +93,7 @@ Schema.prototype = {
   renderConversation: function (id) {
     const self = this;
     if (!validate(id)) return this.renderError();
-    $('body').attr('class', 'schema static layout');
+    $('body').attr('class', 'schema static code layout');
     const conversationInfo = {
       logoURL: blueLogo,
       avatarUrl: conversationAvatar,
@@ -111,7 +111,7 @@ Schema.prototype = {
     const self = this;
     const platform = MixinUtils.environment();
     if (!validate(id)) return this.renderError();
-    $('body').attr('class', 'schema layout');
+    $('body').attr('class', 'schema code layout');
     const transferInfo = {
       logoURL: blueLogo,
       avatarUrl: transferAvatar,
@@ -137,7 +137,7 @@ Schema.prototype = {
     const data = URLUtils.getUrlParameter("data");
     if (!categories.includes(category) || !data) return this.renderError();
 
-    $('body').attr('class', 'schema static layout');
+    $('body').attr('class', 'schema static code layout');
     const shareInfo = {
       logoURL: blueLogo,
       avatarUrl: shareAvatar,
@@ -166,7 +166,7 @@ Schema.prototype = {
       || (!action && !label) 
       || (!!action && (action !== 'delete' || !validate(address))) 
     ) return this.renderError();
-    $('body').attr('class', 'schema layout');
+    $('body').attr('class', 'schema code layout');
     const addressInfo = {
       logoURL: blueLogo,
       avatarUrl: addressAvatar,
@@ -194,7 +194,7 @@ Schema.prototype = {
     const trace_id = URLUtils.getUrlParameter("trace");
     if (!address || !asset_id || !amount || !trace_id || !validate(address) || !validate(asset_id) || !validate(trace_id)) 
       return this.renderError();
-    $('body').attr('class', 'schema layout withdrawal');
+    $('body').attr('class', 'schema code layout withdrawal');
     self.api.network.assetsShow(function(resp) {
       if (resp.error) {
         return;

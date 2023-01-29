@@ -6,13 +6,13 @@ import MixinUtils from '../utils/mixin.js';
 import blueLogo from '../home/logo.png';
 import botIcon from './robot.svg';
 import groupDefaultAvatar from './group.png';
+import qrCodeIcon from './qrcode.svg';
 import completeIcon from '../home/payment_complete.svg';
 
 function Code(router, api) {
   this.router = router;
   this.api = api;
   this.template = require('./index.html');
-  this.templatePayment = require('./payment.html');
 
   this.chatType = ['user', 'conversation'];
   this.paymentType = 'payment';
@@ -94,36 +94,61 @@ Code.prototype = {
     if (totalNumber > 1) {
       self.api.network.assetsShow((asset) => {
         const platform = MixinUtils.environment();
-        const complete = payment.status === 'paid';
-        payment['logoURL'] = blueLogo;
-        payment['info'] = `${payment.threshold}/${totalNumber}`;
-        payment['hasMemo'] = !!payment.memo;
-        payment['memo'] = payment.memo;
-        payment['assetUrl'] = asset.data.icon_url;
-        payment['tokenAmount'] = `${payment.amount} ${asset.data.symbol}`;
+        const complete = payment.status === 'paid';        
         const usdAmount = new Decimal(asset.data.price_usd).times(payment.amount);
-        payment['usdAmount'] = `${usdAmount.toNumber().toFixed(2).toString()} USD`;
-        payment['complete'] = complete;
-        payment['successURL'] = completeIcon;
-        payment['mixinURL'] = "mixin://codes/" + payment.code_id;
+        const mixinURL = "mixin://codes/" + payment.code_id;
+        const data = {
+          logoURL: blueLogo,
+          basic: false,
+          title: i18n.t('code.multisig.title'),
+          hasSubTitle: true,
+          subTitle: `${payment.threshold}/${totalNumber}`,
+          hasMemo: !!payment.memo,
+          memo: payment.memo,
+          iconUrl: asset.data.icon_url,
+          iconTitle: `${payment.amount} ${asset.data.symbol}`,
+          iconSubTitle: `${usdAmount.toNumber().toFixed(2).toString()} USD`,
+          isBot: false,
+          botIcon: undefined,
+          showActionButton: false,
+          showQRCode: true,
+          qrCodeIcon,
+          tip: i18n.t('code.payment.mobile.scan'),
+          complete,
+          successURL: completeIcon,
+          mixinURL
+        };
         var preloadImage = new Image();
         preloadImage.src = asset.data.icon_url;
         preloadImage.onload = () => {
-          $('#layout-container').html(self.templatePayment(payment));
+          $('#layout-container').html(self.template(data));
           if (!platform) $('.main').attr('class', 'main browser');
+          if (data.hasMemo) $('.scan-container').attr('class', 'scan-container new-margin');
           new QRious({
             element: document.getElementById('qrcode'),
             backgroundAlpha: 0,
-            value: 'https://mixin.one/codes/' + payment.code_id,
+            value: mixinURL,
             level: 'H',
-            size: 500
+            size: 140
+          });new QRious({
+            element: document.getElementById('qrcode-modal'),
+            backgroundAlpha: 0,
+            value: mixinURL,
+            level: 'H',
+            size: 188
           });
+          $('#qrcode-modal-btn').on('click', function() {
+            $('.qrcode-modal').toggleClass('active', 'true');
+          })
+          $('.qrcode-modal').on('click', function(e) {
+            $(this).toggleClass('active', 'false');
+          })
           self.router.updatePageLinks();
           let timer = !complete && setInterval(() => {
             self.api.code.fetch((resp) => {
               if (resp.data.status === 'paid') {
-                payment['complete'] = true;
-                $('#layout-container').html(self.templatePayment(payment));
+                data.complete = true;
+                $('#layout-container').html(self.template(data));
                 clearInterval(timer);
               }
             }, payment.code_id);

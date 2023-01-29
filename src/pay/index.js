@@ -65,7 +65,7 @@ Pay.prototype = {
             });
           }
         }
-        $('body').attr('class', 'pay layout');
+        $('body').attr('class', 'pay code layout');
         $('#layout-container').html(self.templateNew(data));
         $('.asset.selected').on('click', () => {
           $('.modal').show();

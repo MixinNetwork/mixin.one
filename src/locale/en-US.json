@@ -30,6 +30,8 @@
     "messenger.tip": "Don't have Mixin Messenger?",
     "messenger.download": "Download",
     "payment.scan": "Use Mixin Messenger to scan the code",
+    "payment.mobile.scan": "Click the button above or scan the QR code to transfer in Mixin Messenger.",
+    "oauth.mobile.scan": "Click the button above or scan the QR code to authorize in Mixin Messenger.",
     "payment.complete": "Done",
     "open.action": "Open in Mixin",
     "user.btn.intro": "Click the button above to chat with this user in Mixin Messenger.",

@@ -31,6 +31,31 @@
         <div class="content">{{content}}</div>
         {{/if}}
       </div>
+      {{else}}
+      <div class="scan-info-container">
+        <div class="info-container">
+          <div class="title">{{title}}</div>
+          {{#if hasSubTitle}}
+          <div class="subTitle">{{subTitle}}</div>
+          {{/if}}
+          {{#if hasMemo}}
+          <div class="memo">{{memo}}</div>
+          {{/if}}
+        </div>
+
+        <div class="icon-container">
+          <div class="icon">
+            <img src="{{iconUrl}}" alt="icon" />
+          </div>
+          <div class="title-container">
+            <span class="title">{{iconTitle}}</span>
+            {{#if isBot}}
+            <img class="bot-icon" src="{{botIcon}}" alt="bot icon" />
+            {{/if}}
+          </div>
+          <div class="subTitle">{{iconSubTitle}}</div>
+        </div>
+      </div>
       {{/if}}
 
       {{#if showActionButton}}
@@ -49,11 +74,49 @@
         {{/if}}
       </div>
       {{/if}}
+
+      {{#if showQRCode}}
+      <div class="scan-container">
+        {{#if complete}}
+        <div class="status-container">
+          <div class="icon-container">
+            <img src="{{successURL}}" alt="success-icon" />
+          </div>
+          <div class="status">{{t 'code.payment.complete'}}</div>
+        </div>
+        {{else}}
+        <div class="qrcode-container">
+          <canvas id="qrcode"></canvas>
+          <div class="action-btn-container">
+            <div class="action-btn btn">
+              <a>{{t 'code.open.action'}}</a>
+              <img id="qrcode-modal-btn" src="{{qrCodeIcon}}" alt="qrcode button"/>
+            </div>
+          </div>
+          <div class="tip">{{t 'code.payment.scan'}}</div>
+          <div class="mobile-tip tip">{{tip}}</div>
+        </div>
+        {{/if}}
+      </div>
+      {{/if}}
     </div>
 
     <div class="footer">
       <div class="tip">{{t 'code.messenger.tip'}}</div>
       <div class="download"><a href="https://mixin.one/messenger">{{t 'code.messenger.download'}}</a></div>
+    </div>
+    
+    <div class="btn mixin-btn">
+      <a href="{{mixinURL}}">{{t 'code.open.action'}}</a>
+    </div>
+  </div>
+
+  <div class="qrcode-modal">
+    <div class="modal-content">
+      <div class="qrcode-container">
+        <canvas id="qrcode-modal"></canvas>
+      </div>
+      <div class="tip">{{t 'code.payment.scan'}}</div>
     </div>
   </div>
 </div>
