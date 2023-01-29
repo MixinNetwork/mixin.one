@@ -151,6 +151,8 @@ Code.prototype = {
               if (resp.data.status === 'paid') {
                 data.complete = true;
                 $('#layout-container').html(self.template(data));
+                if (!platform) $('.main').attr('class', 'main browser'); 
+                if (data.hasMemo) $('.scan-container').attr('class', 'scan-container new-margin');
                 clearInterval(timer);
               }
             }, payment.code_id);
