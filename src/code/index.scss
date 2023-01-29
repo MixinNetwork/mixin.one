@@ -24,28 +24,16 @@
 .chat.code.layout {
   font-family: "SF-Pro-Text", sans-serif;
   width: 100%;
+  height: 100%;
   min-width: 315px;
-  height: 100vh;
-
-  #layout-container {
-    width: 100%;
-    height: 100%;
-  }
-
-  .container {
-    display: inline-block;
-    width: 100%;
-    height: 100%;
-  }
 
   header {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    margin: 10px 0;
-    padding: 0 40px;
+    padding: 10px 40px;
     width: 100%;
-    height: 40px;
+    height: 60px;
     box-sizing: border-box;
 
     .logo-container {
@@ -53,8 +41,7 @@
       align-items: center;
 
       img {
-        width: 28px;
-        height: 26px;
+        width: 26px;
       }
 
       span {
@@ -80,44 +67,22 @@
     flex-direction: column;
     align-items: center;
     width: 100%;
-    box-sizing: border-box;
   }
 
   .card-container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 35px;
-    margin-bottom: 24px;
+    margin-top: 25px;
+    margin-bottom: 40px;
     padding-top: 48px;
-    padding-bottom: 40px;
+    padding-bottom: 30px;
     width: 315px;
     background: #F9FAFC;
     border: 1px solid rgba(0, 0, 0, 0.04);
     box-shadow: 0 8px 34px rgba(0, 0, 0, 0.04);
     border-radius: 20px;
 
-    .avatar-container {
-      width: 90px;
-      height: 90px;
-      border: 2px solid #FFFFFF;
-      border-radius: 81px;
-      overflow: hidden;
-
-      img {
-        width: 100%;
-      }
-
-      p {
-        line-height: 36px;
-        text-align: center;
-        font-size: 32px;
-        font-weight: 400;
-        color: #00B0E9;
-      }
-    }
-
-    .title,
     .name {
       display: flex;
       justify-content: center;
@@ -139,30 +104,6 @@
     .name {
       margin-top: 12px;
     }
-
-    .info {
-      margin-top: 8px;
-      text-align: center;
-      font-size: 14px;
-      font-weight: 400;
-      color: #B8BDC7;
-    }
-    .info.new-margin {
-      margin-bottom: 37px;
-    }
-
-    .intro {
-      margin-top: 12px;
-      width: 80%;
-      overflow-wrap: break-word;
-      word-break: keep-all;
-      text-align: center;
-      line-height: 22px;
-      font-size: 16px;
-      font-weight: 400;
-      color: #333333;
-    }
-
     .memo {
       margin-top: 8px;
       width: 80%;
@@ -208,25 +149,6 @@
         text-align: center;
         color: #B8BDC7;
       }
-    }
-
-    .action-btn {
-      margin-top: 40px;
-      margin-bottom: 16px;
-      height: 50px;
-      font-weight: 500;
-      font-size: 16px;
-      line-height: 50px;
-      user-select: none;
-    }
-
-    .btn-intro {
-      padding: 0 20px;
-      font-weight: 400;
-      font-size: 14px;
-      line-height: 22px;
-      text-align: center;
-      color: rgba(34, 34, 34, 0.4);
     }
 
     .qrcode-container {
@@ -275,6 +197,133 @@
     }
   }
 
+  .basic-info-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+
+    .avatar-container {
+      width: 90px;
+      height: 90px;
+      border-radius: 81px;
+      overflow: hidden;
+
+      img {
+        width: 100%;
+      }
+
+      p {
+        line-height: 36px;
+        text-align: center;
+        font-size: 32px;
+        font-weight: 400;
+        color: #00B0E9;
+      }
+    }
+
+    .title-container {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      margin-top: 12px;
+      width: 80%;
+
+      .title{
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 21px;
+        text-align: center;
+        letter-spacing: -0.4px;
+        color: #333333;
+        word-wrap: break-word;
+        word-break: normal;
+      }
+
+      .bot-icon {
+        display: inline-block;
+        margin-left: 4px;
+        height: 100%;
+      }
+    }
+
+    .subTitle {
+      margin-top: 6px;
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 14px;
+      text-align: center;
+      color: #B8BDC7;
+    }
+    .subTitle.new-margin {
+      margin-bottom: 37px;
+    }
+
+    .content {
+      margin-top: 12px;
+      width: 80%;
+      text-align: center;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 18px;
+      color: #333333;
+      overflow-wrap: break-word;
+      word-break: keep-all;
+    }
+  }
+  
+  .btn-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 40px;
+    height: 110px;
+    
+    .action-btn {
+      margin-bottom: 8px;
+      width: fit-content;
+
+      a {
+        height: 50px;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 50px;
+        text-align: center;
+        letter-spacing: 0.4px;
+        user-select: none;
+      }
+    }
+
+    .btn-intro {
+      margin-top: 8px;
+      padding: 0 20px;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 22px;
+      text-align: center;
+      color: rgba(34, 34, 34, 0.4);
+    }
+
+    .extra-btn-container {
+      display: flex;
+      width: 120px;
+      height: 50px;
+
+      .extra-btn {
+        display: block;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        line-height: 50px;
+        color: #3D75E3;
+      }
+    }
+    .extra-btn-container.zh {
+      width: 150px;
+    }
+  }
+
   .footer {
     .tip {
       line-height: 22px;
@@ -311,24 +360,7 @@
     }
   }
 
-  .extra-btn-container {
-    display: block;
-    width: 120px;
-    height: 50px;
-
-    .extra-btn {
-      line-height: 50px;
-      text-align: center;
-      color: #3D75E3;
-    }
-  }
-  .extra-btn-container.zh {
-    width: 150px;
-  }
-
   @media (max-width: 768px) {
-    height: 100%;
-
     header {
       display: none;
 
@@ -337,25 +369,17 @@
       }
     }
 
-    .main {
-      justify-content: space-around;
-      height: 100%;
-    }
-
     .main.browser {
+      overflow-y: auto;
       height: -moz-available;
       height: -webkit-fill-available;
       height: fill-available;
     }
 
     .card-container {
-      justify-content: space-evenly;
       margin-top: 20px;
-      margin-bottom: 8px;
+      margin-bottom: 24px;
       padding: 24px 0;
-      height: 66%;
-      min-height: 450px;
-      box-sizing: border-box;
 
       .memo {
         flex-shrink: 0;
@@ -390,71 +414,55 @@
   }
 }
 
-.schema.layout {
-  .card-container {
-    .avatar-container {
-      border: none;
-    }
-  }
-}
+// @media (max-width: 768px) {
+//   .schema.layout {
+//     .card-container {
+//       height: 60%;
+//       min-height: 360px;
+//     }
+//   }
 
-@media (max-width: 768px) {
-  .schema.layout {
-    .card-container {
-      height: 60%;
-      min-height: 360px;
-    }
-  }
+//   .withdrawal.schema.layout {
+//     .card-container {
+//       min-height: 410px;
+//     }
+//   }
 
-  .withdrawal.schema.layout {
-    .card-container {
-      min-height: 410px;
-    }
-  }
+//   .schema.static.layout,
+//   .chat.code.layout {
+//     height: auto;
+//     overflow: scroll;
 
-  .schema.static.layout,
-  .chat.code.layout {
-    height: auto;
-    overflow: scroll;
-
-    #layout-container {
-      height: auto;
-    }
+//     #layout-container {
+//       height: auto;
+//     }
   
-    .container {
-      height: auto;
-    }
+//     .container {
+//       height: auto;
+//     }
 
-    .main {
-      justify-content: start;
-    }
+//     .main {
+//       justify-content: start;
+//     }
 
-    .card-container {
-      justify-content: start;
-      margin-top: 30px;
-      margin-bottom: 0px;
-      padding-top: 48px;
-      padding-bottom: 30px;
-      height: auto;
-      min-height: auto;
+//     .card-container {
+//       justify-content: start;
+//       margin-top: 30px;
+//       margin-bottom: 0px;
+//       padding-top: 48px;
+//       padding-bottom: 30px;
+//       height: auto;
+//       min-height: auto;
+//     }
 
-      .action-btn {
-        margin-bottom: 16px;
-      }
+//     .footer {
+//       margin-top: 24px;
+//     }
+//   }
 
-      .action-btn.new-margin {
-        margin-bottom: 8px;
-      }
-    }
-
-    .footer {
-      margin-top: 24px;
-    }
-  }
-
-  .oauth.code.layout {
-    .card-container {
-      min-height: 380px;
-    }
-  }
-}
+//   .oauth.code.layout {
+//     .card-container {
+//       min-height: 380px;
+//     }
+//   }
+// }

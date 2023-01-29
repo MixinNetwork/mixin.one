@@ -11,8 +11,8 @@ import completeIcon from '../home/payment_complete.svg';
 function Code(router, api) {
   this.router = router;
   this.api = api;
+  this.template = require('./index.html');
   this.templatePayment = require('./payment.html');
-  this.templateChat = require('./chat.html');
 
   this.chatType = ['user', 'conversation'];
   this.paymentType = 'payment';
@@ -45,32 +45,42 @@ Code.prototype = {
     const platform = MixinUtils.environment();
     const self = this;
     $('body').attr('class', 'chat code layout');
-    chatInfo['hasAvatar'] = chatInfo.type === 'conversation' || (chatInfo.type === 'user' && !!chatInfo.avatar_url);
-    if (chatInfo.type === 'conversation') chatInfo['avatar_url'] = groupDefaultAvatar;
+    const hasAvatar = chatInfo.type === 'user' && !chatInfo.avatar_url ? false : true;
     const full_name = chatInfo.type === 'conversation' ? chatInfo.name : chatInfo.full_name;
-    chatInfo['firstLetter'] = full_name.trim()[0] || '^_^';
-    chatInfo['logoURL'] = blueLogo;
-    chatInfo['full_name'] = full_name.trim().length > 0 ? full_name.trim() : '^_^';
-    chatInfo['isBot'] = !!chatInfo.app;
-    chatInfo['botIcon'] = botIcon;
-    chatInfo['info'] = chatInfo.type === 'conversation' ? `${chatInfo.participants.length} ${i18n.t('code.group.members')}` : chatInfo.identity_number;
-    chatInfo['hasIntro'] = chatInfo.type === 'conversation' ? !!chatInfo.announcement : !!chatInfo.biography;
-    chatInfo['intro'] = chatInfo.type === 'conversation' ? chatInfo.announcement : chatInfo.biography;
-    chatInfo['showExtraButton'] = chatInfo.type === 'user' && !!chatInfo.app && !chatInfo.app.home_uri.split("://")[1].split("/")[0].includes("mixin.one");
-    chatInfo['actionText'] = 
-      chatInfo.type === 'conversation' 
-        ? i18n.t('code.group.join') 
-        : chatInfo['showExtraButton']
-          ? i18n.t('code.bot.open')
-          : i18n.t('code.user.chat');
-    chatInfo['buttonURL'] = chatInfo['showExtraButton'] ? `mixin://apps/${chatInfo.app.app_id}?action=open` : "mixin://codes/" + chatInfo.code_id;
-    chatInfo['extraURL'] = "mixin://codes/" + chatInfo.code_id;
-    chatInfo['extraText'] = i18n.t('code.user.chat');
+    const showExtraButton = chatInfo.type === 'user' && !!chatInfo.app && !chatInfo.app.home_uri.split("://")[1].split("/")[0].includes("mixin.one");
+    const data = {
+      logoURL: blueLogo,
+      basic: true,
+      hasAvatar,
+      avatarUrl: hasAvatar && chatInfo.type === 'conversation' ? groupDefaultAvatar : chatInfo.avatar_url,
+      firstLetter: full_name.trim()[0] || '^_^',
+      title: full_name.trim().length > 0 ? full_name.trim() : '^_^',
+      isBot: !!chatInfo.app,
+      botIcon: !!chatInfo.app && chatInfo.app.is_verified ? verifiedBotIcon : botIcon,
+      subTitle: chatInfo.type === 'conversation' ? `${chatInfo.participants.length} ${i18n.t('code.group.members')}` : chatInfo.identity_number,
+      hasContent: chatInfo.type === 'conversation' ? !!chatInfo.announcement : !!chatInfo.biography,
+      content: chatInfo.type === 'conversation' ? chatInfo.announcement : chatInfo.biography,
+      showActionButton: true,
+      buttonURL: showExtraButton ? `mixin://apps/${chatInfo.app.app_id}?action=open` : "mixin://codes/" + chatInfo.code_id,
+      actionText: 
+        chatInfo.type === 'conversation' 
+          ? i18n.t('code.group.join') 
+          : showExtraButton
+            ? i18n.t('code.bot.open')
+            : i18n.t('code.user.chat'),
+      showExtraButton,
+      extraURL: "mixin://codes/" + chatInfo.code_id,
+      extraText: i18n.t('code.user.chat'),
+      buttonIntro: 
+        chatInfo.type === 'conversation' 
+          ? i18n.t('code.group.btn.intro') 
+          : !!chatInfo.app 
+            ? i18n.t('schema.bot.btn.intro.view') 
+            : i18n.t('code.user.btn.intro') 
+    }
     chatInfo['showButtonIntro'] = !(chatInfo.type === 'user' && !!chatInfo.app);
-    chatInfo['buttonIntro'] = chatInfo.type === 'user' ? i18n.t('code.user.btn.intro') : i18n.t('code.group.btn.intro');
-    $('#layout-container').html(self.templateChat(chatInfo));
-    if (!chatInfo['hasIntro']) $('.info').attr('class', 'info new-margin');
-    if (chatInfo['showExtraButton']) $('.action-btn').attr('class', 'btn action-btn new-margin');
+    $('#layout-container').html(self.template(data));
+    if (!data.hasContent) $('.subTitle').attr('class', 'subTitle new-margin');
     if (i18n.locale.includes('zh')) $('.extra-btn-container').attr('class', 'zh extra-btn-container');
     if (!platform) $('.main').attr('class', 'main browser');
     self.router.updatePageLinks();
