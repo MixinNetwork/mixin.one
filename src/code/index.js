@@ -5,6 +5,7 @@ import { Decimal } from "decimal.js";
 import MixinUtils from '../utils/mixin.js';
 import blueLogo from '../home/logo.png';
 import botIcon from './robot.svg';
+import verifiedBotIcon from './verifiedBot.svg';
 import groupDefaultAvatar from './group.png';
 import qrCodeIcon from './qrcode.svg';
 import completeIcon from '../home/payment_complete.svg';
@@ -130,7 +131,8 @@ Code.prototype = {
             value: mixinURL,
             level: 'H',
             size: 140
-          });new QRious({
+          });
+          new QRious({
             element: document.getElementById('qrcode-modal'),
             backgroundAlpha: 0,
             value: mixinURL,
