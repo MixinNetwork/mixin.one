@@ -561,6 +561,19 @@
       margin-top: 54px;
     }
   }
+
+  .address.schema.layout,
+  .transfer.schema.layout {
+    .scan-container {
+      margin-top: 50px;
+    }
+  }
+
+  .withdrawal.schema.layout {
+    .scan-container {
+      margin-top: 40px;
+    }
+  }
 }
 
 // @media (max-width: 768px) {

@@ -117,6 +117,7 @@ Code.prototype = {
           tip: i18n.t('code.payment.mobile.scan'),
           complete,
           successURL: completeIcon,
+          showMixinButton: true,
           mixinURL
         };
         var preloadImage = new Image();

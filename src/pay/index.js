@@ -160,6 +160,7 @@ Pay.prototype = {
         tip: i18n.t('code.payment.mobile.scan'),
         complete: payment.status === 'paid',
         successURL: completeIcon,
+        showMixinButton: true,
         mixinURL
       };
       if (!isInitialized) {
