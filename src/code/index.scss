@@ -432,18 +432,6 @@
     .basic-info-container,
     .scan-info-container {
       margin-top: 24px;
-
-      .info-container {
-        .memo {
-          flex-shrink: 0;
-          display: -webkit-box;
-          overflow: hidden;
-          text-overflow: ellipsis;
-          -webkit-line-clamp: 3;
-          -webkit-box-orient: vertical;
-          white-space: normal;
-        }
-      }
     }
 
     .scan-container {
@@ -543,10 +531,21 @@
   }
 }
 
+.pay.layout,
 .payment.layout {
   .card-container {
     margin-bottom: 24px;
   }
+}
+
+.ellipsis {
+  flex-shrink: 0;
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  white-space: normal;
 }
 
 @media (max-width: 768px) {
