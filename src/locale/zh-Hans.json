@@ -30,6 +30,8 @@
     "messenger.tip": "没有 Mixin Messenger 客户端？",
     "messenger.download": "下载",
     "payment.scan": "使用 Mixin Messenger 扫码",
+    "payment.mobile.scan": "点击上方按钮或扫码以在 Mixin Messenger 中转账。",
+    "oauth.mobile.scan": "点击上方按钮或扫码以在 Mixin Messenger 中授权。",
     "payment.complete": "完成",
     "open.action": "在 Mixin 中打开",
     "user.btn.intro": "点击上方按钮以在 Mixin Messenger 中与该用户对话。",
