@@ -214,6 +214,8 @@ Schema.prototype = {
         return;
       }
       const asset = resp.data;
+      const preloadImage = new Image();
+      preloadImage.src = asset.icon_url;
       const withdrawalInfo = {
         logoURL: blueLogo,
         basic: window.innerWidth > 768,
