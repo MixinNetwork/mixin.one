@@ -1,6 +1,6 @@
 import './index.scss';
 import $ from 'jquery';
-import QRious from 'qrious';
+import QRCode from 'qrcode';
 import { Decimal } from "decimal.js";
 import MixinUtils from '../utils/mixin.js';
 import blueLogo from '../home/logo.png';
@@ -123,20 +123,24 @@ Code.prototype = {
           $('#layout-container').html(self.template(data));
           if (!platform) $('.main').attr('class', 'main browser');
           if (data.hasMemo) $('.scan-container').attr('class', 'scan-container new-margin');
-          new QRious({
-            element: document.getElementById('qrcode'),
-            backgroundAlpha: 0,
-            value: mixinURL,
-            level: 'H',
-            size: 140
-          });
-          new QRious({
-            element: document.getElementById('qrcode-modal'),
-            backgroundAlpha: 0,
-            value: mixinURL,
-            level: 'H',
-            size: 188
-          });
+          QRCode.toCanvas(
+            document.getElementById('qrcode'),
+            mixinURL,
+            {
+              errorCorrectionLevel: "H",
+              margin: 0,
+              width: 140
+            }
+          );
+          QRCode.toCanvas(
+            document.getElementById('qrcode-modal'),
+            mixinURL,
+            {
+              errorCorrectionLevel: "H",
+              margin: 0,
+              width: 188
+            }
+          );
           $('#qrcode-modal-btn').on('click', function() {
             $('.qrcode-modal').toggleClass('active', 'true');
           })

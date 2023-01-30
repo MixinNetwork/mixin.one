@@ -1,5 +1,5 @@
 import $ from 'jquery';
-import QRious from 'qrious';
+import QRCode from 'qrcode';
 import { Decimal } from "decimal.js";
 import validate from 'uuid-validate';
 import URLUtils from '../utils/url.js';
@@ -136,7 +136,7 @@ Schema.prototype = {
     }
     $('#layout-container').html(self.template(transferInfo));
     if (!platform) $('.main').attr('class', 'main browser');
-    self.initQRCode(transferInfo.mixinURL, 140)
+    self.initQRCode(transferInfo.mixinURL)
     self.router.updatePageLinks();
   },
   renderSend: function () {
@@ -196,7 +196,7 @@ Schema.prototype = {
     };
     $('#layout-container').html(self.template(addressInfo));      
     if (!platform) $('.main').attr('class', 'main browser');
-    self.initQRCode(addressInfo.mixinURL, 140)
+    self.initQRCode(addressInfo.mixinURL)
     self.router.updatePageLinks();
   },
   renderWithdrawal: function () {
@@ -233,13 +233,13 @@ Schema.prototype = {
         mixinURL: `mixin://withdrawal${location.search}`,
       };
       $('#layout-container').html(self.template(withdrawalInfo));
-      self.initQRCode(withdrawalInfo.mixinURL, 160)
+      self.initQRCode(withdrawalInfo.mixinURL)
       if (!platform) $('.main').attr('class', 'main browser');
       $(window).on('resize', function() {
         if (window.innerWidth <= 768) withdrawalInfo.basic = false;
         else withdrawalInfo.basic = true;
         $('#layout-container').html(self.template(withdrawalInfo));
-        self.initQRCode(withdrawalInfo.mixinURL, 160)
+        self.initQRCode(withdrawalInfo.mixinURL)
         if (!platform) $('.main').attr('class', 'main browser');
       })
       self.router.updatePageLinks();
@@ -252,21 +252,25 @@ Schema.prototype = {
     this.router.updatePageLinks();
     return true;
   },
-  initQRCode: function (mixinURL, modalCodeSize) {
-    new QRious({
-      element: document.getElementById('qrcode'),
-      backgroundAlpha: 0,
-      value: mixinURL,
-      level: 'H',
-      size: 140
-    });
-    new QRious({
-      element: document.getElementById('qrcode-modal'),
-      backgroundAlpha: 0,
-      value: mixinURL,
-      level: 'H',
-      size: modalCodeSize
-    });
+  initQRCode: function (mixinURL) {
+    QRCode.toCanvas(
+      document.getElementById('qrcode'),
+      mixinURL,
+      {
+        errorCorrectionLevel: "H",
+        margin: 0,
+        width: 140
+      }
+    );
+    QRCode.toCanvas(
+      document.getElementById('qrcode-modal'),
+      mixinURL,
+      {
+        errorCorrectionLevel: "H",
+        margin: 0,
+        width: 188
+      }
+    );
     $('#qrcode-modal-btn').on('click', function() {
       $('.qrcode-modal').toggleClass('active', 'true');
     })
