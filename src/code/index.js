@@ -63,10 +63,7 @@ Code.prototype = {
       content: chatInfo.type === 'conversation' ? chatInfo.announcement : chatInfo.biography,
       showActionButton: true,
       buttonURL: showExtraButton ? `mixin://apps/${chatInfo.app.app_id}?action=open` : "mixin://codes/" + chatInfo.code_id,
-      actionText: 
-        chatInfo.type === 'conversation' 
-          ? i18n.t('code.group.join') 
-          : showExtraButton
+      actionText: showExtraButton
             ? i18n.t('code.bot.open')
             : i18n.t('code.user.chat'),
       showExtraButton,
