@@ -81,6 +81,7 @@
     align-items: center;
     margin-top: 25px;
     margin-bottom: 40px;
+    padding-top: 38px;
     padding-bottom: 30px;
     width: 315px;
     background: #F9FAFC;
@@ -93,7 +94,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 48px;
+    margin-top: 10px;
     width: 100%;
 
     .avatar-container {
@@ -170,7 +171,6 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 38px;
     width: 100%;
 
     .info-container {
@@ -446,14 +446,8 @@
     }
 
     .card-container {
-      margin-top: 20px;
-      margin-bottom: 24px;
-      padding-bottom: 24px;
-    }
-
-    .basic-info-container,
-    .scan-info-container {
-      margin-top: 24px;
+      margin-top: 30px;
+      margin-bottom: 40px;
     }
 
     .scan-container {
@@ -574,6 +568,29 @@
   .withdrawal.schema.layout {
     .scan-container {
       margin-top: 40px;
+    }
+  }
+}
+
+@media (max-height: 626px) {
+  $add: calc((100vh - 580px) / 4);
+  .code.layout {
+    .card-container {
+      margin-top: calc(20px + #{$add});
+      margin-bottom: calc(24px + #{$add});
+      padding-top: calc(24px + #{$add});
+      padding-bottom: calc(24px + #{$add});
+    }
+  }
+}
+
+@media (max-height: 580px) {
+  .code.layout {
+    .card-container {
+      margin-top: 20px;
+      margin-bottom: 24px;
+      padding-top: 24px;
+      padding-bottom: 24px;
     }
   }
 }
