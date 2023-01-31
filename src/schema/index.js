@@ -191,7 +191,7 @@ Schema.prototype = {
       showQRCode: true,
       complete: false,
       qrCodeIcon,
-      tip: i18n.t("code.payment.mobile.scan"),
+      tip: action ? i18n.t("schema.address.btn.intro.delete") : i18n.t("schema.address.btn.intro.add"),
       mixinURL: `mixin://address${location.search}`,
     };
     $('#layout-container').html(self.template(addressInfo));      
@@ -229,7 +229,7 @@ Schema.prototype = {
         iconSubTitle: `${new Decimal(asset.price_usd).times(amount).toNumber().toFixed(2).toString()} USD`,
         showQRCode: true,
         qrCodeIcon,
-        tip: i18n.t("code.payment.mobile.scan"),
+        tip: i18n.t("schema.withdrawal.btn.intro"),
         mixinURL: `mixin://withdrawal${location.search}`,
       };
       $('#layout-container').html(self.template(withdrawalInfo));

@@ -47,7 +47,10 @@
     "conversation.btn.chat": "Chat",
     "conversation.btn.intro.chat": "Click the button above to chat with this conversation in Mixin Messenger.",
     "send.btn.share": "Share",
-    "send.btn.intro.share": "Click the button above to share message with your friend in Mixin Messenger."
+    "send.btn.intro.share": "Click the button above to share message with your friend in Mixin Messenger.",
+    "address.btn.intro.add": "Click the button above or scan the QR code to add withdrawal address in Mixin Messenger.",
+    "address.btn.intro.delete": "Click the button above or scan the QR code to delete withdrawal address in Mixin Messenger.",
+    "withdrawal.btn.intro": "Click the button above or scan the QR code to withdrawal in Mixin Messenger."
   },
   "snapshots": {
     "search.placeholder": "Search transactions",

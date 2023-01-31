@@ -47,7 +47,10 @@
     "conversation.btn.chat": "聊天",
     "conversation.btn.intro.chat": "点击上方按钮以在 Mixin Messenger 中进行该对话。",
     "send.btn.share": "分享",
-    "send.btn.intro.share": "点击上方按钮以在 Mixin Messenger 中和你的好友分享消息。"
+    "send.btn.intro.share": "点击上方按钮以在 Mixin Messenger 中和你的好友分享消息。",
+    "address.btn.intro.add": "点击上方按钮或扫码以在 Mixin Messenger 中添加提现地址。",
+    "address.btn.intro.delete": "点击上方按钮或扫码以在 Mixin Messenger 中删除提现地址。",
+    "withdrawal.btn.intro": "点击上方按钮或扫码以在 Mixin Messenger 中提现。"
   },
   "snapshots": {
     "search.placeholder": "搜索交易",
