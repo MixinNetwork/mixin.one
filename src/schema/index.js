@@ -130,7 +130,6 @@ Schema.prototype = {
       showQRCode: true,
       complete: false,
       qrCodeIcon,
-      showMixinButton: true,
       mixinURL: `mixin://transfer/${id}`,
       tip: i18n.t("code.payment.mobile.scan")
     }
