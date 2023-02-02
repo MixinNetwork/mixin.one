@@ -427,20 +427,34 @@
 
 @media (max-width: 768px) {
   .code.layout {
-    #layout-container,
+    #layout-container{
+      height: 100%;
+    }
+
     .container {
+      display: flex;
       position: relative;
       height: 100%;
     }
 
     header {
-      display: none;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      justify-content: start;
+      margin: 0 auto;
+      padding: 0;
+      width: 315px;
+      height: 44px;
 
       .btn {
         display: none;
       }
     }
 
+    .main {
+      margin-top: 44px;
+    }
     .main.browser {
       overflow-y: auto;
       height: -moz-available;
