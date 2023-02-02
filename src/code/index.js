@@ -62,19 +62,14 @@ Code.prototype = {
       hasContent: chatInfo.type === 'conversation' ? !!chatInfo.announcement : !!chatInfo.biography,
       content: chatInfo.type === 'conversation' ? chatInfo.announcement : chatInfo.biography,
       showActionButton: true,
-      buttonURL: showExtraButton ? `mixin://apps/${chatInfo.app.app_id}?action=open` : "mixin://codes/" + chatInfo.code_id,
-      actionText: showExtraButton
-            ? i18n.t('code.bot.open')
-            : i18n.t('code.user.chat'),
-      showExtraButton,
-      extraURL: "mixin://codes/" + chatInfo.code_id,
-      extraText: i18n.t('code.user.chat'),
+      buttonURL: "mixin://codes/" + chatInfo.code_id,
+      actionText: chatInfo.type === 'conversation' ? i18n.t('code.user.chat') :i18n.t('schema.btn.view'),
       buttonIntro: 
         chatInfo.type === 'conversation' 
           ? i18n.t('code.group.btn.intro') 
           : !!chatInfo.app 
             ? i18n.t('schema.bot.btn.intro.view') 
-            : i18n.t('code.user.btn.intro') 
+            : i18n.t('schema.user.btn.intro.view') 
     }
     chatInfo['showButtonIntro'] = !(chatInfo.type === 'user' && !!chatInfo.app);
     $('#layout-container').html(self.template(data));
