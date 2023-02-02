@@ -141,7 +141,7 @@ Schema.prototype = {
   renderSend: function () {
     const self = this;
     const platform = MixinUtils.environment();
-    const categories = ['text', 'image', 'contact', 'app_card', 'live', 'post']
+    const categories = ['text', 'image', 'contact', 'app_card', 'live', 'post', 'sticker']
     const category = URLUtils.getUrlParameter("category");
     const data = URLUtils.getUrlParameter("data");
     if (!categories.includes(category) || !data) return this.renderError();
