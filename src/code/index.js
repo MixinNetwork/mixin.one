@@ -74,6 +74,7 @@ Code.prototype = {
     chatInfo['showButtonIntro'] = !(chatInfo.type === 'user' && !!chatInfo.app);
     $('#layout-container').html(self.template(data));
     if (!data.hasContent) $('.subTitle').attr('class', 'subTitle new-margin');
+    if (!hasAvatar) $('.avatar-container').attr('class', 'avatar-container with-border');
     if (i18n.locale.includes('zh')) $('.extra-btn-container').attr('class', 'zh extra-btn-container');
     if (!platform) $('.main').attr('class', 'main browser');
     self.router.updatePageLinks();
