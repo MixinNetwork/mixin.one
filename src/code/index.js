@@ -3,6 +3,7 @@ import $ from 'jquery';
 import QRCode from 'qrcode';
 import { Decimal } from "decimal.js";
 import MixinUtils from '../utils/mixin.js';
+import URLUtils from '../utils/url.js';
 import blueLogo from '../home/logo.png';
 import botIcon from './robot.svg';
 import verifiedBotIcon from './verifiedBot.svg';
@@ -14,9 +15,6 @@ function Code(router, api) {
   this.router = router;
   this.api = api;
   this.template = require('./index.html');
-
-  this.chatType = ['user', 'conversation'];
-  this.paymentType = 'payment';
 }
 
 Code.prototype = {
@@ -28,17 +26,23 @@ Code.prototype = {
       }
       resp.data['code_id'] = id;
 
-      if (self.chatType.includes(resp.data.type)) {
-        self.renderChat(resp.data);
-        return;
-      }
-
-      if (self.paymentType === resp.data.type) {
-        self.renderPayment(resp.data);
-        return;
-      }
-
-      self.api.error({error: {code: 10002}});
+      switch(resp.data.type) {
+        case 'user':
+        case 'conversation':
+          self.renderChat(resp.data);
+          break;
+        case 'payment':
+          self.renderPayment(resp.data);
+          break;
+        case 'multisig_request':
+          self.renderMultiSig(resp.data);
+          break;
+        case 'authorization':
+          self.renderAuthorization(resp.data);
+          break;
+        default:
+          self.api.error({error: {code: 10002}});
+      };
     }, id);
   },
 
@@ -48,7 +52,6 @@ Code.prototype = {
     $('body').attr('class', 'chat code layout');
     const hasAvatar = chatInfo.type === 'user' && !chatInfo.avatar_url ? false : true;
     const full_name = chatInfo.type === 'conversation' ? chatInfo.name : chatInfo.full_name;
-    const showExtraButton = chatInfo.type === 'user' && !!chatInfo.app && !chatInfo.app.home_uri.split("://")[1].split("/")[0].includes("mixin.one");
     const data = {
       logoURL: blueLogo,
       basic: true,
@@ -114,52 +117,166 @@ Code.prototype = {
         };
         var preloadImage = new Image();
         preloadImage.src = asset.data.icon_url;
-        preloadImage.onload = () => {
-          $('#layout-container').html(self.template(data));
-          if (!platform) $('.main').attr('class', 'main browser');
-          if (data.hasMemo) $('.scan-container').attr('class', 'scan-container new-margin');
-          QRCode.toCanvas(
-            document.getElementById('qrcode'),
-            mixinURL,
-            {
-              errorCorrectionLevel: "H",
-              margin: 0,
-              width: 140
+        $('#layout-container').html(self.template(data));
+        if (!platform) $('.main').attr('class', 'main browser');
+        if (data.hasMemo) $('.scan-container').attr('class', 'scan-container new-margin');
+        self.initQRCode(mixinURL);
+        self.router.updatePageLinks();
+
+        const timer = !complete && setInterval(() => {
+          self.api.code.fetch((resp) => {
+            if (!resp.error && resp.data.status === 'paid') {
+              clearInterval(timer);
+              data.complete = true;
+              $('#layout-container').html(self.template(data));
+              if (!platform) $('.main').attr('class', 'main browser'); 
+              if (data.hasMemo) $('.scan-container').attr('class', 'scan-container new-margin');
             }
-          );
-          QRCode.toCanvas(
-            document.getElementById('qrcode-modal'),
-            mixinURL,
-            {
-              errorCorrectionLevel: "H",
-              margin: 0,
-              width: 188
-            }
-          );
-          $('#qrcode-modal-btn').on('click', function() {
-            $('.qrcode-modal').toggleClass('active', 'true');
-          })
-          $('.qrcode-modal').on('click', function(e) {
-            $(this).toggleClass('active', 'false');
-          })
-          self.router.updatePageLinks();
-          let timer = !complete && setInterval(() => {
-            self.api.code.fetch((resp) => {
-              if (resp.data.status === 'paid') {
-                data.complete = true;
-                $('#layout-container').html(self.template(data));
-                if (!platform) $('.main').attr('class', 'main browser'); 
-                if (data.hasMemo) $('.scan-container').attr('class', 'scan-container new-margin');
-                clearInterval(timer);
-              }
-            }, payment.code_id);
-          }, 1000 * 3);
-        };
+          }, payment.code_id);
+        }, 1000 * 3);
       }, payment.asset_id);
       return;
     }
 
     self.api.error({error: {code: 10002}});
+  },
+
+  renderMultiSig: function(multisig) {
+    const self = this;
+    $('body').attr('class', 'multisig code layout');
+    self.api.network.assetsShow((asset) => {
+      const platform = MixinUtils.environment();
+      const complete = multisig.state === 'signed';        
+      const usdAmount = new Decimal(asset.data.price_usd).times(multisig.amount);
+      const mixinURL = "mixin://codes/" + multisig.code_id;
+      const data = {
+        logoURL: blueLogo,
+        basic: false,
+        title: i18n.t('code.multisig.title'),
+        hasSubTitle: true,
+        subTitle: `${multisig.threshold}/${multisig.senders.length}`,
+        hasMemo: !!multisig.memo,
+        memo: multisig.memo,
+        iconUrl: asset.data.icon_url,
+        iconTitle: `${multisig.amount} ${asset.data.symbol}`,
+        iconSubTitle: `${usdAmount.toNumber().toFixed(2).toString()} USD`,
+        isBot: false,
+        botIcon: undefined,
+        showActionButton: false,
+        showQRCode: true,
+        qrCodeIcon,
+        tip: i18n.t('code.payment.mobile.scan'),
+        complete,
+        successURL: completeIcon,
+        mixinURL
+      };
+      var preloadImage = new Image();
+      preloadImage.src = asset.data.icon_url;
+      $('#layout-container').html(self.template(data));
+      if (!platform) $('.main').attr('class', 'main browser');
+      if (data.hasMemo) $('.scan-container').attr('class', 'scan-container new-margin');
+      self.initQRCode(mixinURL);
+      self.router.updatePageLinks();
+
+      const timer = !complete && setInterval(() => {
+        self.api.code.fetch((resp) => {
+          if (!resp.error && resp.data.state === 'signed') {
+            clearInterval(timer);
+            data.complete = true;
+            $('#layout-container').html(self.template(data));
+            if (!platform) $('.main').attr('class', 'main browser'); 
+            if (data.hasMemo) $('.scan-container').attr('class', 'scan-container new-margin');
+          }
+        }, multisig.code_id);
+      }, 1000 * 3);
+    }, multisig.asset_id);
+  },
+
+  renderAuthorization: function(auth) {
+    const self = this;
+    const state = URLUtils.getUrlParameter("state");
+    const returnTo = URLUtils.getUrlParameter("return_to");
+    if (auth.authorization_code.length > 16) {
+      var redirectUri = auth.app.redirect_uri + '?code=' + auth.authorization_code + '&state=' + state;
+      if (returnTo && returnTo.length > 0) {
+        redirectUri = redirectUri + '&return_to=' + encodeURIComponent(returnTo);
+      }
+      window.location.replace(redirectUri);
+      return true;
+    }
+    if (auth.scopes.length === 0) {
+      var redirectUri = auth.app.redirect_uri + '?error=access_denied&state=' + state;
+      if (returnTo && returnTo.length > 0) {
+        redirectUri = redirectUri + '&return_to=' + encodeURIComponent(returnTo);
+      }
+      window.location.replace(redirectUri);
+      return true;
+    }
+
+    if ($('.oauth.code.layout').data('code-id') !== auth.code_id) {
+      $('body').attr('class', 'oauth code layout');
+      $('body').attr('data-code-id', auth.code_id);
+      let platform = MixinUtils.environment();
+      const mixinURL = 'mixin://codes/' + auth.code_id;
+      if (platform == 'Android' || platform == 'iOS') {
+        window.location.replace(mixinURL);
+        return false;
+      }
+      const data = {
+        logoURL: blueLogo,
+        basic: false,
+        title: i18n.t('oauth.title'),
+        hasSubTitle: false,
+        hasMemo: false,
+        iconUrl: auth.app.icon_url,
+        iconTitle: auth.app.name,
+        isBot: !!auth.app,
+        botIcon: auth.app.is_verified ? verifiedBotIcon : botIcon,
+        iconSubTitle: auth.app.app_number,
+        showActionButton: false,
+        showQRCode: true,
+        complete: false,
+        qrCodeIcon,
+        tip: i18n.t('code.oauth.mobile.scan'),
+        mixinURL
+      };
+      $('.oauth.code.layout #layout-container').html(self.template(data));
+      if (!platform) $('.main').attr('class', 'main browser');
+      self.initQRCode(mixinURL);
+    }
+
+    setTimeout(() => {
+      self.api.code.fetch((resp) => {
+        if (!resp.error) self.renderAuthorization(resp.data);
+      }, auth.code_id);
+    }, 1000);
+  },
+
+  initQRCode: function (mixinURL) {
+    QRCode.toCanvas(
+      document.getElementById('qrcode'),
+      mixinURL,
+      {
+        errorCorrectionLevel: "H",
+        margin: 0,
+        width: 140
+      }
+    );
+    QRCode.toCanvas(
+      document.getElementById('qrcode-modal'),
+      mixinURL,
+      {
+        errorCorrectionLevel: "H",
+        margin: 0,
+        width: 188
+      }
+    );
+    $('#qrcode-modal-btn').on('click', function() {
+      $('.qrcode-modal').toggleClass('active', 'true');
+    });
+    $('.qrcode-modal').on('click', function() {
+      $(this).toggleClass('active', 'false');
+    });
   }
 };
 
