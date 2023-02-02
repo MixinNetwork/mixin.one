@@ -217,7 +217,6 @@ Schema.prototype = {
       preloadImage.src = asset.icon_url;
       const withdrawalInfo = {
         logoURL: blueLogo,
-        basic: window.innerWidth > 768,
         hasAvatar: true,
         avatarUrl: addressAvatar,
         title: "Withdraw",
@@ -234,13 +233,6 @@ Schema.prototype = {
       $('#layout-container').html(self.template(withdrawalInfo));
       self.initQRCode(withdrawalInfo.mixinURL);
       if (!platform) $('.main').attr('class', 'main browser');
-      $(window).on('resize', function() {
-        if (window.innerWidth <= 768) withdrawalInfo.basic = false;
-        else withdrawalInfo.basic = true;
-        $('#layout-container').html(self.template(withdrawalInfo));
-        self.initQRCode(withdrawalInfo.mixinURL);
-        if (!platform) $('.main').attr('class', 'main browser');
-      })
       self.router.updatePageLinks();
     }, asset_id)
   },
@@ -273,7 +265,7 @@ Schema.prototype = {
     $('#qrcode-modal-btn').on('click', function() {
       $('.qrcode-modal').toggleClass('active', 'true');
     });
-    $('.qrcode-modal').on('click', function(e) {
+    $('.qrcode-modal').on('click', function() {
       $(this).toggleClass('active', 'false');
     });
   }
