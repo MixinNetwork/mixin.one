@@ -63,7 +63,7 @@ Schema.prototype = {
       subTitle: id.slice(0, 6) + '...' + id.slice(-4),
       showActionButton: true,
       buttonURL: `mixin://apps/${id}${location.search}`
-    }
+    };
     if (action === 'open') {
       appInfo['actionText'] = i18n.t("schema.bot.btn.open");
       appInfo['buttonIntro'] = i18n.t("schema.bot.btn.intro.open");
@@ -90,7 +90,7 @@ Schema.prototype = {
       buttonURL: `mixin://users/${id}`,
       actionText: i18n.t('schema.btn.view'),
       buttonIntro: i18n.t('schema.user.btn.intro.view')
-    }
+    };
     $('#layout-container').html(self.template(userInfo));
     $('.subTitle').attr('class', 'subTitle new-margin');
     self.router.updatePageLinks();
@@ -110,7 +110,7 @@ Schema.prototype = {
       buttonURL: `mixin://conversations/${id}${location.search}`,
       actionText: i18n.t('schema.conversation.btn.chat'),
       buttonIntro: i18n.t('schema.conversation.btn.intro.chat')
-    }
+    };
     $('#layout-container').html(self.template(conversationInfo));
     $('.subTitle').attr('class', 'subTitle new-margin');
     self.router.updatePageLinks();
@@ -132,16 +132,16 @@ Schema.prototype = {
       qrCodeIcon,
       mixinURL: `mixin://transfer/${id}`,
       tip: i18n.t("code.payment.mobile.scan")
-    }
+    };
     $('#layout-container').html(self.template(transferInfo));
     if (!platform) $('.main').attr('class', 'main browser');
-    self.initQRCode(transferInfo.mixinURL)
+    self.initQRCode(transferInfo.mixinURL);
     self.router.updatePageLinks();
   },
   renderSend: function () {
     const self = this;
     const platform = MixinUtils.environment();
-    const categories = ['text', 'image', 'contact', 'app_card', 'live', 'post', 'sticker']
+    const categories = ['text', 'image', 'contact', 'app_card', 'live', 'post', 'sticker'];
     const category = URLUtils.getUrlParameter("category");
     const data = URLUtils.getUrlParameter("data");
     if (!categories.includes(category) || !data) return this.renderError();
@@ -195,7 +195,7 @@ Schema.prototype = {
     };
     $('#layout-container').html(self.template(addressInfo));      
     if (!platform) $('.main').attr('class', 'main browser');
-    self.initQRCode(addressInfo.mixinURL)
+    self.initQRCode(addressInfo.mixinURL);
     self.router.updatePageLinks();
   },
   renderWithdrawal: function () {
@@ -232,13 +232,13 @@ Schema.prototype = {
         mixinURL: `mixin://withdrawal${location.search}`,
       };
       $('#layout-container').html(self.template(withdrawalInfo));
-      self.initQRCode(withdrawalInfo.mixinURL)
+      self.initQRCode(withdrawalInfo.mixinURL);
       if (!platform) $('.main').attr('class', 'main browser');
       $(window).on('resize', function() {
         if (window.innerWidth <= 768) withdrawalInfo.basic = false;
         else withdrawalInfo.basic = true;
         $('#layout-container').html(self.template(withdrawalInfo));
-        self.initQRCode(withdrawalInfo.mixinURL)
+        self.initQRCode(withdrawalInfo.mixinURL);
         if (!platform) $('.main').attr('class', 'main browser');
       })
       self.router.updatePageLinks();
@@ -272,10 +272,10 @@ Schema.prototype = {
     );
     $('#qrcode-modal-btn').on('click', function() {
       $('.qrcode-modal').toggleClass('active', 'true');
-    })
+    });
     $('.qrcode-modal').on('click', function(e) {
       $(this).toggleClass('active', 'false');
-    })
+    });
   }
 };
 
