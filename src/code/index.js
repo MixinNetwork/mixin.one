@@ -6,7 +6,7 @@ import MixinUtils from '../utils/mixin.js';
 import blueLogo from '../home/logo.png';
 import botIcon from './robot.svg';
 import verifiedBotIcon from './verifiedBot.svg';
-import groupDefaultAvatar from './group.png';
+import groupDefaultAvatar from './group.svg';
 import qrCodeIcon from './qrcode.svg';
 import completeIcon from '../home/payment_complete.svg';
 
