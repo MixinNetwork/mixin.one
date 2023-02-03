@@ -37,9 +37,9 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    padding: 11px 40px 0;
+    padding: 12px 40px;
     width: 100%;
-    height: 51px;
+    height: 64px;
     box-sizing: border-box;
 
     .logo-container {
@@ -79,7 +79,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 25px;
+    margin-top: 20px;
     margin-bottom: 40px;
     padding-top: 38px;
     padding-bottom: 30px;
@@ -462,7 +462,6 @@
     }
 
     .card-container {
-      margin-top: 30px;
       margin-bottom: 40px;
     }
 
@@ -588,11 +587,10 @@
   }
 }
 
-@media (max-height: 626px) {
-  $add: calc((100vh - 580px) / 4);
+@media (max-height: 616px) {
+  $add: calc((100vh - 580px) / 3);
   .code.layout {
     .card-container {
-      margin-top: calc(20px + #{$add});
       margin-bottom: calc(24px + #{$add});
       padding-top: calc(24px + #{$add});
       padding-bottom: calc(24px + #{$add});
@@ -603,7 +601,6 @@
 @media (max-height: 580px) {
   .code.layout {
     .card-container {
-      margin-top: 20px;
       margin-bottom: 24px;
       padding-top: 24px;
       padding-bottom: 24px;
