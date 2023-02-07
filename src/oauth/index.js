@@ -4,6 +4,7 @@ import QRCode from 'qrcode';
 import URLUtils from '../utils/url.js';
 import MixinUtils from '../utils/mixin.js';
 import blueLogo from '../home/logo.png';
+import defaultAppAvatar from '../schema/appAvatar.svg';
 import botIcon from '../code/robot.svg';
 import verifiedBotIcon from '../code/verifiedBot.svg';
 import qrCodeIcon from '../code/qrcode.svg';
@@ -73,7 +74,7 @@ OAuth.prototype = {
         title: i18n.t('oauth.title'),
         hasSubTitle: false,
         hasMemo: false,
-        iconUrl: auth.app.icon_url,
+        iconUrl: auth.app.icon_url ? auth.app.icon_url : defaultAppAvatar,
         iconTitle: auth.app.name,
         isBot: !!auth.app,
         botIcon: auth.app.is_verified ? verifiedBotIcon : botIcon,

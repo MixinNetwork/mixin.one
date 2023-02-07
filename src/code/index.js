@@ -7,6 +7,7 @@ import URLUtils from '../utils/url.js';
 import blueLogo from '../home/logo.png';
 import botIcon from './robot.svg';
 import verifiedBotIcon from './verifiedBot.svg';
+import defaultAppAvatar from '../schema/appAvatar.svg';
 import groupDefaultAvatar from './group.svg';
 import qrCodeIcon from './qrcode.svg';
 import completeIcon from '../home/payment_complete.svg';
@@ -228,7 +229,7 @@ Code.prototype = {
         title: i18n.t('oauth.title'),
         hasSubTitle: false,
         hasMemo: false,
-        iconUrl: auth.app.icon_url,
+        iconUrl: auth.app.icon_url ? auth.app.icon_url : defaultAppAvatar,
         iconTitle: auth.app.name,
         isBot: !!auth.app,
         botIcon: auth.app.is_verified ? verifiedBotIcon : botIcon,
