@@ -8,7 +8,8 @@ import blueLogo from '../home/logo.png';
 import botIcon from './robot.svg';
 import verifiedBotIcon from './verifiedBot.svg';
 import defaultAppAvatar from '../schema/appAvatar.svg';
-import groupDefaultAvatar from './group.svg';
+import defaultUserAvatar from '../schema/userAvatar.svg';
+import defaultGroupAvatar from './groupAvatar.svg';
 import qrCodeIcon from './qrcode.svg';
 import completeIcon from '../home/payment_complete.svg';
 
@@ -51,13 +52,17 @@ Code.prototype = {
     const platform = MixinUtils.environment();
     const self = this;
     $('body').attr('class', 'chat code layout');
-    const hasAvatar = chatInfo.type === 'user' && !chatInfo.avatar_url ? false : true;
     const full_name = chatInfo.type === 'conversation' ? chatInfo.name : chatInfo.full_name;
+    const defaultAvatar = !!chatInfo.app ? defaultAppAvatar : defaultUserAvatar;
     const data = {
       logoURL: blueLogo,
       basic: true,
-      hasAvatar,
-      avatarUrl: hasAvatar && chatInfo.type === 'conversation' ? groupDefaultAvatar : chatInfo.avatar_url,
+      hasAvatar: true,
+      avatarUrl: chatInfo.type === 'conversation' 
+        ? defaultGroupAvatar
+        : !!chatInfo.avatar_url 
+          ? chatInfo.avatar_url
+          : defaultAvatar,
       firstLetter: full_name.trim()[0] || '^_^',
       title: full_name.trim().length > 0 ? full_name.trim() : '^_^',
       isBot: !!chatInfo.app,
@@ -78,7 +83,6 @@ Code.prototype = {
     chatInfo['showButtonIntro'] = !(chatInfo.type === 'user' && !!chatInfo.app);
     $('#layout-container').html(self.template(data));
     if (!data.hasContent) $('.subTitle').attr('class', 'subTitle new-margin');
-    if (!hasAvatar) $('.avatar-container').attr('class', 'avatar-container with-border');
     if (i18n.locale.includes('zh')) $('.extra-btn-container').attr('class', 'zh extra-btn-container');
     if (!platform) $('.main').attr('class', 'main browser');
     self.router.updatePageLinks();
