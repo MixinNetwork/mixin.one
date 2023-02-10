@@ -37,6 +37,7 @@ Schema.prototype = {
     if (!isValid) return this.renderError();
     $('body').attr('class', `${type} schema code layout`);
 
+    const platform = MixinUtils.environment();
     const action = URLUtils.getUrlParameter("action");
     const mixinURL = self.getMixinUrl(type, id);
     const data = {
@@ -70,43 +71,45 @@ Schema.prototype = {
     } else {
       self.initQRCode(mixinURL);
     }
+    if (!platform) $('.main').attr('class', 'main browser');
     self.router.updatePageLinks();
   },
   renderWithdrawal: function () {
     const self = this;
+    const isValid = self.checkParams('withdrawal');
+    if (!isValid) return this.renderError();
+    $('body').attr('class', 'withdrawal schema code layout');
+    
     const platform = MixinUtils.environment();
     const address = URLUtils.getUrlParameter("address");
     const asset_id = URLUtils.getUrlParameter("asset");
     const amount = URLUtils.getUrlParameter("amount");
-    const trace_id = URLUtils.getUrlParameter("trace");
-    if (!address || !asset_id || !amount || !trace_id || !validate(address) || !validate(asset_id) || !validate(trace_id))
-      return this.renderError();
-
-    $('body').attr('class', 'withdrawal schema code layout');
     self.api.network.assetsShow(function(resp) {
       if (resp.error) return;
       const asset = resp.data;
       const preloadImage = new Image();
       preloadImage.src = asset.icon_url;
-      const withdrawalInfo = {
-        logoURL: blueLogo,
-        hasAvatar: true,
-        avatarUrl: addressAvatar,
-        title: i18n.t(`schema.title.withdrawal`),
-        hasSubTitle: true,
-        subTitle: address.slice(0, 6) + '...' + address.slice(-4),
-        iconUrl: asset.icon_url,
-        iconTitle: `${amount} ${asset.symbol}`,
-        iconSubTitle: `${new Decimal(asset.price_usd).times(amount).toNumber().toFixed(2).toString()} USD`,
-        showQRCode: true,
-        qrCodeIcon,
-        tip: i18n.t("schema.withdrawal.btn.intro"),
-        mixinURL: `mixin://withdrawal${location.search}`,
+      preloadImage.onload = function() {
+        const withdrawalInfo = {
+          logoURL: blueLogo,
+          hasAvatar: true,
+          avatarUrl: addressAvatar,
+          title: i18n.t(`schema.title.withdrawal`),
+          hasSubTitle: true,
+          subTitle: address.slice(0, 6) + '...' + address.slice(-4),
+          iconUrl: asset.icon_url,
+          iconTitle: `${amount} ${asset.symbol}`,
+          iconSubTitle: `${new Decimal(asset.price_usd).times(amount).toNumber().toFixed(2).toString()} USD`,
+          showQRCode: true,
+          qrCodeIcon,
+          tip: i18n.t("schema.withdrawal.btn.intro"),
+          mixinURL: `mixin://withdrawal${location.search}`,
+        };
+        $('#layout-container').html(self.template(withdrawalInfo));
+        self.initQRCode(withdrawalInfo.mixinURL);
+        if (!platform) $('.main').attr('class', 'main browser');
+        self.router.updatePageLinks();
       };
-      $('#layout-container').html(self.template(withdrawalInfo));
-      self.initQRCode(withdrawalInfo.mixinURL);
-      if (!platform) $('.main').attr('class', 'main browser');
-      self.router.updatePageLinks();
     }, asset_id)
   },
   renderError: function () {
@@ -117,23 +120,27 @@ Schema.prototype = {
     return true;
   },
   checkParams: function (type, id) {
-    const action = URLUtils.getUrlParameter("action");
-    const address = URLUtils.getUrlParameter("address");
     switch (type) {
-      case "apps":
+      case "apps": {
+        const action = URLUtils.getUrlParameter("action");
         if ((!!action && action !== 'open') || !validate(id)) return false;
         break;
+      }
       case "users": 
       case "conversations": 
-      case "transfer": 
+      case "transfer": {
         return validate(id);
-      case "send":
+      }
+      case "send": {
         const categories = ['text', 'image', 'contact', 'app_card', 'live', 'post', 'sticker'];
         const category = URLUtils.getUrlParameter("category");
         const data = URLUtils.getUrlParameter("data");
         if (!categories.includes(category) || !data) return false;
         break;
-      case "address":
+      }
+      case "address": {
+        const action = URLUtils.getUrlParameter("action");
+        const address = URLUtils.getUrlParameter("address");
         const asset = URLUtils.getUrlParameter("asset");
         const label = URLUtils.getUrlParameter("label");
         const destination = URLUtils.getUrlParameter("destination");
@@ -145,6 +152,16 @@ Schema.prototype = {
           || (!!action && (action !== 'delete' || !validate(address))) 
         ) return false;
         break;
+      }
+      case 'withdrawal': {
+        const address = URLUtils.getUrlParameter("address");
+        const asset_id = URLUtils.getUrlParameter("asset");
+        const amount = URLUtils.getUrlParameter("amount");
+        const trace_id = URLUtils.getUrlParameter("trace");
+        if (!address || !asset_id || !amount || !trace_id || !validate(address) || !validate(asset_id) || !validate(trace_id))
+          return false;
+        break;
+      }
       default:
         return false;
     };
