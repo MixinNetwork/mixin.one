@@ -92,8 +92,8 @@ Code.prototype = {
     self.api.network.assetsShow((asset) => {
       const platform = MixinUtils.environment();
       const complete = type === 'payment' 
-        ? multisig.state === 'paid'
-        : multisig.state === 'signed';  
+        ? multisig.status === 'paid'
+        : multisig.state === 'signed';
       const totalNumber = type === 'payment' 
         ? multisig.receivers.length
         : multisig.senders.length;      
@@ -129,7 +129,7 @@ Code.prototype = {
       const timer = !complete && setInterval(() => {
         self.api.code.fetch((resp) => {
           const complete = type === 'payment' 
-            ? multisig.state === 'paid'
+            ? multisig.status === 'paid'
             : multisig.state === 'signed';  
           if (!resp.error && complete) {
             clearInterval(timer);
