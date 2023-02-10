@@ -23,179 +23,54 @@ function Schema(router, api) {
 Schema.prototype = {
   render: function (id) {
     const type = location.pathname.split('/')[1];
-    switch (type) {
-      case "apps":
-        this.renderApp(id);
-        break;
-      case "users": 
-        this.renderUser(id);
-        break;
-      case "conversations": 
-        this.renderConversation(id);
-        break;
-      case "transfer": 
-        this.renderTransfer(id);
-        break;
-      case "send":
-        this.renderSend();
-        break;
-      case "address":
-        this.renderAddress();
-        break;
-      case "withdrawal":
-        this.renderWithdrawal();
-        break;
-      default:
-        this.api.error({error: {code: 10002}});
-    }
-  },
-  renderApp: function (id) {
-    const self = this;
-    const action = URLUtils.getUrlParameter("action");
-    if ((!!action && action !== 'open') || !validate(id)) return this.renderError();
-    $('body').attr('class', 'schema code layout');
-    const appInfo = {
-      logoURL: blueLogo,
-      basic: true,
-      hasAvatar: true,
-      avatarUrl: appDefaultAvatar,
-      title: "Bot",
-      subTitle: id.slice(0, 6) + '...' + id.slice(-4),
-      showActionButton: true,
-      buttonURL: `mixin://apps/${id}${location.search}`
-    };
-    if (action === 'open') {
-      appInfo['actionText'] = i18n.t("schema.bot.btn.open");
-      appInfo['buttonIntro'] = i18n.t("schema.bot.btn.intro.open");
-    } else {
-      appInfo['actionText'] = i18n.t("schema.btn.view");
-      appInfo['buttonIntro'] = i18n.t("schema.bot.btn.intro.view");
-    }
-    $('#layout-container').html(self.template(appInfo));
-    $('.subTitle').attr('class', 'subTitle new-margin');
-    self.router.updatePageLinks();
-  },
-  renderUser: function (id) {
-    const self = this;
-    $('body').attr('class', 'schema code layout');
-    if (!validate(id)) return this.renderError();
-    const userInfo = {
-      logoURL: blueLogo,
-      basic: true,
-      hasAvatar: true,
-      avatarUrl: userdefaultAvatar,
-      title: "User",
-      subTitle: id.slice(0, 6) + '...' + id.slice(-4),
-      showActionButton: true,
-      buttonURL: `mixin://users/${id}`,
-      actionText: i18n.t('schema.btn.view'),
-      buttonIntro: i18n.t('schema.user.btn.intro.view')
-    };
-    $('#layout-container').html(self.template(userInfo));
-    $('.subTitle').attr('class', 'subTitle new-margin');
-    self.router.updatePageLinks();
-  },
-  renderConversation: function (id) {
-    const self = this;
-    if (!validate(id)) return this.renderError();
-    $('body').attr('class', 'schema code layout');
-    const conversationInfo = {
-      logoURL: blueLogo,
-      basic: true,
-      hasAvatar: true,
-      avatarUrl: conversationAvatar,
-      title: "Conversation",
-      subTitle: id.slice(0, 6) + '...' + id.slice(-4),
-      showActionButton: true,
-      buttonURL: `mixin://conversations/${id}${location.search}`,
-      actionText: i18n.t('schema.conversation.btn.chat'),
-      buttonIntro: i18n.t('schema.conversation.btn.intro.chat')
-    };
-    $('#layout-container').html(self.template(conversationInfo));
-    $('.subTitle').attr('class', 'subTitle new-margin');
-    self.router.updatePageLinks();
-  },
-  renderTransfer: function (id) {
-    const self = this;
-    const platform = MixinUtils.environment();
-    if (!validate(id)) return this.renderError();
-    $('body').attr('class', 'transfer schema code layout');
-    const transferInfo = {
-      logoURL: blueLogo,
-      basic: true,
-      hasAvatar: true,
-      avatarUrl: transferAvatar,
-      title: "Transfer",
-      subTitle: id.slice(0, 6) + '...' + id.slice(-4),
-      showQRCode: true,
-      complete: false,
-      qrCodeIcon,
-      mixinURL: `mixin://transfer/${id}`,
-      tip: i18n.t("code.payment.mobile.scan")
-    };
-    $('#layout-container').html(self.template(transferInfo));
-    if (!platform) $('.main').attr('class', 'main browser');
-    self.initQRCode(transferInfo.mixinURL);
-    self.router.updatePageLinks();
-  },
-  renderSend: function () {
-    const self = this;
-    const platform = MixinUtils.environment();
-    const categories = ['text', 'image', 'contact', 'app_card', 'live', 'post', 'sticker'];
-    const category = URLUtils.getUrlParameter("category");
-    const data = URLUtils.getUrlParameter("data");
-    if (!categories.includes(category) || !data) return this.renderError();
 
-    $('body').attr('class', 'schema code layout');
-    const shareInfo = {
-      logoURL: blueLogo,
-      basic: true,
-      hasAvatar: true,
-      avatarUrl: shareAvatar,
-      title: "Share Message",
-      subTitle: category,
-      showActionButton: true,
-      buttonURL: `mixin://send${location.search}`,
-      actionText: i18n.t('schema.send.btn.share'),
-      buttonIntro: i18n.t('schema.send.btn.intro.share')
-    };
-    $('#layout-container').html(self.template(shareInfo));
-    if (!platform) $('.main').attr('class', 'main browser');
-    $('.subTitle').attr('class', 'subTitle new-margin');
-    self.router.updatePageLinks();
+    if (type === 'withdrawal') return this.renderWithdrawal();
+
+    if (['apps', 'users', 'conversations', 'transfer', 'send', 'address'].includes(type))
+      return this.renderBasicSchema(type, id);
+
+    return this.api.error({error: {code: 10002}});
   },
-  renderAddress: function () {
+  renderBasicSchema: function (type, id) {
     const self = this;
-    const platform = MixinUtils.environment();
-    const asset = URLUtils.getUrlParameter("asset");
-    const label = URLUtils.getUrlParameter("label");
+    const isValid = self.checkParams(type, id);
+    if (!isValid) return this.renderError();
+    $('body').attr('class', `${type} schema code layout`);
+
     const action = URLUtils.getUrlParameter("action");
-    const destination = URLUtils.getUrlParameter("destination");
-    const address = URLUtils.getUrlParameter("address");
-    const info = action ? address : destination;
-    if (
-      !info
-      || !asset || !validate(asset)
-      || (!action && !label) 
-      || (!!action && (action !== 'delete' || !validate(address))) 
-    ) return this.renderError();
-    $('body').attr('class', 'address schema code layout');
-    const addressInfo = {
+    const mixinURL = self.getMixinUrl(type, id);
+    const data = {
       logoURL: blueLogo,
       basic: true,
       hasAvatar: true,
-      avatarUrl: addressAvatar,
-      title: `${action ? 'Delete Address' : "Add Address"}`,
-      subTitle: info.slice(0, 6) + '...' + info.slice(-4),
-      showQRCode: true,
+      avatarUrl: self.getAvatar(type),
+      title: type === 'address' 
+        ? i18n.t(`schema.title.${type}.${action ? 'delete' : "add"}`) 
+        : i18n.t(`schema.title.${type}`),
+      subTitle: self.getSubTitle(type, id),
       complete: false,
       qrCodeIcon,
-      tip: action ? i18n.t("schema.address.btn.intro.delete") : i18n.t("schema.address.btn.intro.add"),
-      mixinURL: `mixin://address${location.search}`,
+      buttonURL: mixinURL,
+      mixinURL
     };
-    $('#layout-container').html(self.template(addressInfo));      
-    if (!platform) $('.main').attr('class', 'main browser');
-    self.initQRCode(addressInfo.mixinURL);
+
+    if (['apps', 'users', 'conversations', 'send'].includes(type)) {
+      const btn = self.getButtonInfo(type);
+      data.showActionButton = true;
+      data.actionText = btn.actionText;
+      data.buttonIntro = btn.buttonIntro;
+    } else {
+      data.showQRCode = true;
+      data.tip = type === 'address' 
+        ? i18n.t(`schema.address.btn.intro.${action ? 'delete' : "add"}`) 
+        : i18n.t("code.payment.mobile.scan");
+    }
+    $('#layout-container').html(self.template(data));
+    if (['apps', 'users', 'conversations', 'send'].includes(type)) {
+      $('.subTitle').attr('class', 'subTitle new-margin');
+    } else {
+      self.initQRCode(mixinURL);
+    }
     self.router.updatePageLinks();
   },
   renderWithdrawal: function () {
@@ -205,13 +80,12 @@ Schema.prototype = {
     const asset_id = URLUtils.getUrlParameter("asset");
     const amount = URLUtils.getUrlParameter("amount");
     const trace_id = URLUtils.getUrlParameter("trace");
-    if (!address || !asset_id || !amount || !trace_id || !validate(address) || !validate(asset_id) || !validate(trace_id)) 
+    if (!address || !asset_id || !amount || !trace_id || !validate(address) || !validate(asset_id) || !validate(trace_id))
       return this.renderError();
+
     $('body').attr('class', 'withdrawal schema code layout');
     self.api.network.assetsShow(function(resp) {
-      if (resp.error) {
-        return;
-      }
+      if (resp.error) return;
       const asset = resp.data;
       const preloadImage = new Image();
       preloadImage.src = asset.icon_url;
@@ -219,7 +93,7 @@ Schema.prototype = {
         logoURL: blueLogo,
         hasAvatar: true,
         avatarUrl: addressAvatar,
-        title: "Withdraw",
+        title: i18n.t(`schema.title.withdrawal`),
         hasSubTitle: true,
         subTitle: address.slice(0, 6) + '...' + address.slice(-4),
         iconUrl: asset.icon_url,
@@ -242,6 +116,89 @@ Schema.prototype = {
     $('body').attr('class', 'error layout');
     this.router.updatePageLinks();
     return true;
+  },
+  checkParams: function (type, id) {
+    const action = URLUtils.getUrlParameter("action");
+    const address = URLUtils.getUrlParameter("address");
+    switch (type) {
+      case "apps":
+        if ((!!action && action !== 'open') || !validate(id)) return false;
+        break;
+      case "users": 
+      case "conversations": 
+      case "transfer": 
+        return validate(id);
+      case "send":
+        const categories = ['text', 'image', 'contact', 'app_card', 'live', 'post', 'sticker'];
+        const category = URLUtils.getUrlParameter("category");
+        const data = URLUtils.getUrlParameter("data");
+        if (!categories.includes(category) || !data) return false;
+        break;
+      case "address":
+        const asset = URLUtils.getUrlParameter("asset");
+        const label = URLUtils.getUrlParameter("label");
+        const destination = URLUtils.getUrlParameter("destination");
+        const info = action ? address : destination;
+        if (
+          !info
+          || !asset || !validate(asset)
+          || (!action && !label) 
+          || (!!action && (action !== 'delete' || !validate(address))) 
+        ) return false;
+        break;
+      default:
+        return false;
+    };
+    return true;
+  },
+  getAvatar: function (type) {
+    const map = {
+      'apps': appDefaultAvatar,
+      'users': userdefaultAvatar,
+      'conversations': conversationAvatar,
+      'send': shareAvatar,
+      'transfer': transferAvatar,
+      'address': addressAvatar,
+    };
+    return map[type];
+  },
+  getSubTitle: function (type, id) {
+    if (type === 'send') return URLUtils.getUrlParameter("category");
+
+    if (type === 'address') {
+      const action = URLUtils.getUrlParameter("action");
+      const destination = URLUtils.getUrlParameter("destination");
+      const address = URLUtils.getUrlParameter("address");
+      id = action ? address : destination;
+    }
+
+    return id.slice(0, 6) + '...' + id.slice(-4);
+  },
+  getMixinUrl: function (type, id) {
+    return id 
+      ? `mixin://${type}/${id}${location.search}` 
+      : `mixin://${type}${location.search}`;
+  },
+  getButtonInfo: function (type) {
+    const info = {};
+    if (type === 'apps') {
+        const action = URLUtils.getUrlParameter("action");
+        info['actionText'] = i18n.t(`schema.${action === 'open' ? 'bot.btn.open' : 'btn.view'}`);
+        info['buttonIntro'] = i18n.t(`schema.bot.btn.intro.${action === 'open' ? 'open' : 'view'}`);
+        return info;
+    } else if (type === 'users') {
+      info['actionText'] = i18n.t('schema.btn.view');
+      info['buttonIntro'] = i18n.t('schema.user.btn.intro.view');
+      return info;
+    } else if (type === 'conversations') {
+      info['actionText'] = i18n.t('schema.conversation.btn.chat');
+      info['buttonIntro'] = i18n.t('schema.conversation.btn.intro.chat');
+      return info;
+    } else {
+      info['actionText'] = i18n.t('schema.send.btn.share');
+      info['buttonIntro'] = i18n.t('schema.send.btn.intro.share');
+      return info;
+    }
   },
   initQRCode: function (mixinURL) {
     QRCode.toCanvas(

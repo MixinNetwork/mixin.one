@@ -38,6 +38,14 @@
     "group.btn.intro": "Click the button above to chat in this group in Mixin Messenger."
   },
   "schema": {
+    "title.apps": "Bot",
+    "title.users": "User",
+    "title.conversations": "Conversation",
+    "title.transfer": "Transfer",
+    "title.send": "Share Message",
+    "title.address.add": "Add Address",
+    "title.address.delete": "Delete Address",
+    "title.withdrawal": "Withdraw",
     "bot.btn.open": "Open",
     "bot.btn.intro.open": "Click the button above to open this bot’s web page in Mixin Messenger.",
     "btn.view": "View",

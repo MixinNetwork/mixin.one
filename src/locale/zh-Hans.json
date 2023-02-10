@@ -38,6 +38,14 @@
     "group.btn.intro": "点击上方按钮以在 Mixin Messenger 中加入群聊。"
   },
   "schema": {
+    "title.apps": "机器人",
+    "title.users": "用户",
+    "title.conversations": "会话",
+    "title.transfer": "转账",
+    "title.send": "分享",
+    "title.address.add": "添加提现地址",
+    "title.address.delete": "删除提现地址",
+    "title.Withdrawal": "提现",
     "bot.btn.open": "打开页面",
     "bot.btn.intro.open": "点击上方按钮以在 Mixin Messenger 中与打开该机器人页面。",
     "btn.view": "查看",
