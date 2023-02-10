@@ -5,10 +5,10 @@ import { Decimal } from 'decimal.js';
 import { v4 as uuidv4 } from 'uuid';
 import MixinUtils from '../utils/mixin.js';
 import URLUtils from '../utils/url.js';
-import arrow from './arrow.svg';
-import blueLogo from '../home/logo.png';
-import qrCodeIcon from '../code/qrcode.svg';
-import completeIcon from '../home/payment_complete.svg';
+import arrow from '../assets/icons/arrow.svg';
+import blueLogo from '../assets/icons/logo.png';
+import qrCodeIcon from '../assets/icons/qrcode.svg';
+import completeIcon from '../assets/icons/payment_complete.svg';
 
 var validate = require('uuid-validate');
 

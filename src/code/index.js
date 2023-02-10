@@ -4,14 +4,14 @@ import QRCode from 'qrcode';
 import { Decimal } from "decimal.js";
 import MixinUtils from '../utils/mixin.js';
 import URLUtils from '../utils/url.js';
-import blueLogo from '../home/logo.png';
-import botIcon from './robot.svg';
-import verifiedBotIcon from './verifiedBot.svg';
-import defaultAppAvatar from '../schema/appAvatar.svg';
-import defaultUserAvatar from '../schema/userAvatar.svg';
-import defaultGroupAvatar from './groupAvatar.svg';
-import qrCodeIcon from './qrcode.svg';
-import completeIcon from '../home/payment_complete.svg';
+import blueLogo from '../assets/icons/logo.png';
+import botIcon from '../assets/icons/robot.svg';
+import qrCodeIcon from '../assets/icons/qrcode.svg';
+import defaultGroupAvatar from '../assets/icons/groupAvatar.svg';
+import verifiedBotIcon from '../assets/icons/verifiedBot.svg';
+import defaultAppAvatar from '../assets/icons/appAvatar.svg';
+import defaultUserAvatar from '../assets/icons/userAvatar.svg';
+import completeIcon from '../assets/icons/payment_complete.svg';
 
 function Code(router, api) {
   this.router = router;

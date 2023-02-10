@@ -4,14 +4,14 @@ import { Decimal } from "decimal.js";
 import validate from 'uuid-validate';
 import URLUtils from '../utils/url.js';
 import MixinUtils from '../utils/mixin.js';
-import blueLogo from '../home/logo.png';
-import userdefaultAvatar from './userAvatar.svg';
-import appDefaultAvatar from './appAvatar.svg';
-import conversationAvatar from './conversationAvatar.svg';
-import shareAvatar from './sendAvatar.svg';
-import addressAvatar from './addressAvatar.svg';
-import transferAvatar from './transferAvatar.svg';
-import qrCodeIcon from '../code/qrcode.svg';
+import blueLogo from '../assets/icons/logo.png';
+import userdefaultAvatar from '../assets/icons/userAvatar.svg';
+import appDefaultAvatar from '../assets/icons/appAvatar.svg';
+import conversationAvatar from '../assets/icons/conversationAvatar.svg';
+import shareAvatar from '../assets/icons/sendAvatar.svg';
+import addressAvatar from '../assets/icons/addressAvatar.svg';
+import transferAvatar from '../assets/icons/transferAvatar.svg';
+import qrCodeIcon from '../assets/icons/qrcode.svg';
 
 function Schema(router, api) {
   this.router = router;

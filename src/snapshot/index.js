@@ -4,9 +4,9 @@ import $ from 'jquery';
 import jQueryColor from '../jquery-color-plus-names.js';
 import TimeUtils from '../utils/time.js';
 import validate from 'uuid-validate';
-import blueLogo from '../home/logo.png';
-import viewblockLogo from './viewblock-logo.svg';
-import blockchairLogo from './blockchair-logo.svg';
+import blueLogo from '../assets/icons/logo.png';
+import viewblockLogo from '../assets/icons/viewblock-logo.svg';
+import blockchairLogo from '../assets/icons/blockchair-logo.svg';
 
 const PartialLoading = require('../loading.html');
 

@@ -3,11 +3,11 @@ import $ from 'jquery';
 import QRCode from 'qrcode';
 import URLUtils from '../utils/url.js';
 import MixinUtils from '../utils/mixin.js';
-import blueLogo from '../home/logo.png';
-import defaultAppAvatar from '../schema/appAvatar.svg';
-import botIcon from '../code/robot.svg';
-import verifiedBotIcon from '../code/verifiedBot.svg';
-import qrCodeIcon from '../code/qrcode.svg';
+import blueLogo from '../assets/icons/logo.png';
+import defaultAppAvatar from '../assets/icons/appAvatar.svg';
+import botIcon from '../assets/icons/robot.svg';
+import verifiedBotIcon from '../assets/icons/verifiedBot.svg';
+import qrCodeIcon from '../assets/icons/qrcode.svg';
 
 function OAuth(router, api) {
   this.router = router;
@@ -63,6 +63,7 @@ OAuth.prototype = {
       $('body').attr('class', 'oauth code layout');
       $('body').attr('data-code-id', auth.code_id);
       let platform = MixinUtils.environment();
+      console.log(platform)
       const mixinURL = 'mixin://codes/' + auth.code_id;
       if (platform == 'Android' || platform == 'iOS') {
         window.location.replace(mixinURL);
