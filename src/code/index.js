@@ -71,7 +71,7 @@ Code.prototype = {
       hasContent: chatInfo.type === 'conversation' ? !!chatInfo.announcement : !!chatInfo.biography,
       content: chatInfo.type === 'conversation' ? chatInfo.announcement : chatInfo.biography,
       showActionButton: true,
-      buttonURL: "mixin://codes/" + chatInfo.code_id,
+      mixinURL: "mixin://codes/" + chatInfo.code_id,
       actionText: chatInfo.type === 'conversation' ? i18n.t('code.user.chat') :i18n.t('schema.btn.view'),
       buttonIntro: 
         chatInfo.type === 'conversation' 

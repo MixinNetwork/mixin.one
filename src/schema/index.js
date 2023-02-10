@@ -50,7 +50,6 @@ Schema.prototype = {
       subTitle: self.getSubTitle(type, id),
       complete: false,
       qrCodeIcon,
-      buttonURL: mixinURL,
       mixinURL
     };
 
