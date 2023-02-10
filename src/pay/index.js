@@ -1,10 +1,10 @@
 import './index.scss';
 import $ from 'jquery';
-import QRCode from 'qrcode';
 import { Decimal } from 'decimal.js';
 import { v4 as uuidv4 } from 'uuid';
 import MixinUtils from '../utils/mixin.js';
 import URLUtils from '../utils/url.js';
+import { initQRCode } from '../utils/modal.js';
 import arrow from '../assets/icons/arrow.svg';
 import blueLogo from '../assets/icons/logo.png';
 import qrCodeIcon from '../assets/icons/qrcode.svg';
@@ -143,7 +143,6 @@ Pay.prototype = {
       const mixinURL = `mixin://pay${window.location.search}`;
       const data = {
         logoURL: blueLogo,
-        basic: false,
         title: i18n.t('pay.recipient.title', { name: fullName }),
         hasSubTitle: true,
         subTitle: payment.recipient.identity_number,
@@ -152,9 +151,6 @@ Pay.prototype = {
         iconUrl: payment.asset.icon_url,
         iconTitle: `${payment.amount} ${payment.asset.symbol}`,
         iconSubTitle: `${useAmount.toNumber().toFixed(2).toString()} USD`,
-        isBot: false,
-        botIcon: undefined,
-        showActionButton: false,
         showQRCode: true,
         qrCodeIcon,
         tip: i18n.t('code.payment.mobile.scan'),
@@ -171,30 +167,7 @@ Pay.prototype = {
         const platform = MixinUtils.environment();
         if (!platform) $('.main').attr('class', 'main browser');          
         if (data.hasMemo) $('.scan-container').attr('class', 'scan-container new-margin');
-        QRCode.toCanvas(
-          document.getElementById('qrcode'),
-          mixinURL,
-          {
-            errorCorrectionLevel: "H",
-            margin: 0,
-            width: 140
-          }
-        );
-        QRCode.toCanvas(
-          document.getElementById('qrcode-modal'),
-          mixinURL,
-          {
-            errorCorrectionLevel: "H",
-            margin: 0,
-            width: 188
-          }
-        );
-        $('#qrcode-modal-btn').on('click', function() {
-          $('.qrcode-modal').toggleClass('active', 'true');
-        })
-        $('.qrcode-modal').on('click', function(e) {
-          $(this).toggleClass('active', 'false');
-        })
+        initQRCode(mixinURL)
       }
       self.router.updatePageLinks();
       if (payment.status === 'paid') {

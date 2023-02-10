@@ -1,9 +1,9 @@
 import './index.scss';
 import $ from 'jquery';
-import QRCode from 'qrcode';
 import { Decimal } from "decimal.js";
 import MixinUtils from '../utils/mixin.js';
 import URLUtils from '../utils/url.js';
+import { initQRCode } from '../utils/modal.js';
 import blueLogo from '../assets/icons/logo.png';
 import botIcon from '../assets/icons/robot.svg';
 import qrCodeIcon from '../assets/icons/qrcode.svg';
@@ -34,10 +34,8 @@ Code.prototype = {
           self.renderChat(resp.data);
           break;
         case 'payment':
-          self.renderPayment(resp.data);
-          break;
         case 'multisig_request':
-          self.renderMultiSig(resp.data);
+          self.renderMultiSig(resp.data.type, resp.data);
           break;
         case 'authorization':
           self.renderAuthorization(resp.data);
@@ -88,86 +86,29 @@ Code.prototype = {
     self.router.updatePageLinks();
   },
 
-  renderPayment: function(payment) {
+  renderMultiSig: function(type, multisig) {
     const self = this;
-    $('body').attr('class', 'payment code layout');
-    const totalNumber = payment.receivers.length;
-
-    if (totalNumber > 1) {
-      self.api.network.assetsShow((asset) => {
-        const platform = MixinUtils.environment();
-        const complete = payment.status === 'paid';        
-        const usdAmount = new Decimal(asset.data.price_usd).times(payment.amount);
-        const mixinURL = "mixin://codes/" + payment.code_id;
-        const data = {
-          logoURL: blueLogo,
-          basic: false,
-          title: i18n.t('code.multisig.title'),
-          hasSubTitle: true,
-          subTitle: `${payment.threshold}/${totalNumber}`,
-          hasMemo: !!payment.memo,
-          memo: payment.memo,
-          iconUrl: asset.data.icon_url,
-          iconTitle: `${payment.amount} ${asset.data.symbol}`,
-          iconSubTitle: `${usdAmount.toNumber().toFixed(2).toString()} USD`,
-          isBot: false,
-          botIcon: undefined,
-          showActionButton: false,
-          showQRCode: true,
-          qrCodeIcon,
-          tip: i18n.t('code.payment.mobile.scan'),
-          complete,
-          successURL: completeIcon,
-          mixinURL
-        };
-        var preloadImage = new Image();
-        preloadImage.src = asset.data.icon_url;
-        $('#layout-container').html(self.template(data));
-        if (!platform) $('.main').attr('class', 'main browser');
-        if (data.hasMemo) $('.scan-container').attr('class', 'scan-container new-margin');
-        self.initQRCode(mixinURL);
-        self.router.updatePageLinks();
-
-        const timer = !complete && setInterval(() => {
-          self.api.code.fetch((resp) => {
-            if (!resp.error && resp.data.status === 'paid') {
-              clearInterval(timer);
-              data.complete = true;
-              $('#layout-container').html(self.template(data));
-              if (!platform) $('.main').attr('class', 'main browser'); 
-              if (data.hasMemo) $('.scan-container').attr('class', 'scan-container new-margin');
-            }
-          }, payment.code_id);
-        }, 1000 * 3);
-      }, payment.asset_id);
-      return;
-    }
-
-    self.api.error({error: {code: 10002}});
-  },
-
-  renderMultiSig: function(multisig) {
-    const self = this;
-    $('body').attr('class', 'multisig code layout');
+    $('body').attr('class', `multisig code layout`);
     self.api.network.assetsShow((asset) => {
       const platform = MixinUtils.environment();
-      const complete = multisig.state === 'signed';        
+      const complete = type === 'payment' 
+        ? multisig.state === 'paid'
+        : multisig.state === 'signed';  
+      const totalNumber = type === 'payment' 
+        ? multisig.receivers.length
+        : multisig.senders.length;      
       const usdAmount = new Decimal(asset.data.price_usd).times(multisig.amount);
       const mixinURL = "mixin://codes/" + multisig.code_id;
       const data = {
         logoURL: blueLogo,
-        basic: false,
         title: i18n.t('code.multisig.title'),
         hasSubTitle: true,
-        subTitle: `${multisig.threshold}/${multisig.senders.length}`,
+        subTitle: `${multisig.threshold}/${totalNumber}`,
         hasMemo: !!multisig.memo,
         memo: multisig.memo,
         iconUrl: asset.data.icon_url,
         iconTitle: `${multisig.amount} ${asset.data.symbol}`,
         iconSubTitle: `${usdAmount.toNumber().toFixed(2).toString()} USD`,
-        isBot: false,
-        botIcon: undefined,
-        showActionButton: false,
         showQRCode: true,
         qrCodeIcon,
         tip: i18n.t('code.payment.mobile.scan'),
@@ -177,15 +118,20 @@ Code.prototype = {
       };
       var preloadImage = new Image();
       preloadImage.src = asset.data.icon_url;
-      $('#layout-container').html(self.template(data));
-      if (!platform) $('.main').attr('class', 'main browser');
-      if (data.hasMemo) $('.scan-container').attr('class', 'scan-container new-margin');
-      self.initQRCode(mixinURL);
-      self.router.updatePageLinks();
+      preloadImage.onload = () => {
+        $('#layout-container').html(self.template(data));
+        if (!platform) $('.main').attr('class', 'main browser');
+        if (data.hasMemo) $('.scan-container').attr('class', 'scan-container new-margin');
+        initQRCode(mixinURL);
+        self.router.updatePageLinks();
+      }
 
       const timer = !complete && setInterval(() => {
         self.api.code.fetch((resp) => {
-          if (!resp.error && resp.data.state === 'signed') {
+          const complete = type === 'payment' 
+            ? multisig.state === 'paid'
+            : multisig.state === 'signed';  
+          if (!resp.error && complete) {
             clearInterval(timer);
             data.complete = true;
             $('#layout-container').html(self.template(data));
@@ -229,25 +175,20 @@ Code.prototype = {
       }
       const data = {
         logoURL: blueLogo,
-        basic: false,
         title: i18n.t('oauth.title'),
-        hasSubTitle: false,
-        hasMemo: false,
         iconUrl: auth.app.icon_url ? auth.app.icon_url : defaultAppAvatar,
         iconTitle: auth.app.name,
         isBot: !!auth.app,
         botIcon: auth.app.is_verified ? verifiedBotIcon : botIcon,
         iconSubTitle: auth.app.app_number,
-        showActionButton: false,
         showQRCode: true,
-        complete: false,
         qrCodeIcon,
         tip: i18n.t('code.oauth.mobile.scan'),
         mixinURL
       };
       $('.oauth.code.layout #layout-container').html(self.template(data));
       if (!platform) $('.main').attr('class', 'main browser');
-      self.initQRCode(mixinURL);
+      initQRCode(mixinURL);
     }
 
     setTimeout(() => {
@@ -255,33 +196,6 @@ Code.prototype = {
         if (!resp.error) self.renderAuthorization(resp.data);
       }, auth.code_id);
     }, 1000);
-  },
-
-  initQRCode: function (mixinURL) {
-    QRCode.toCanvas(
-      document.getElementById('qrcode'),
-      mixinURL,
-      {
-        errorCorrectionLevel: "H",
-        margin: 0,
-        width: 140
-      }
-    );
-    QRCode.toCanvas(
-      document.getElementById('qrcode-modal'),
-      mixinURL,
-      {
-        errorCorrectionLevel: "H",
-        margin: 0,
-        width: 188
-      }
-    );
-    $('#qrcode-modal-btn').on('click', function() {
-      $('.qrcode-modal').toggleClass('active', 'true');
-    });
-    $('.qrcode-modal').on('click', function() {
-      $(this).toggleClass('active', 'false');
-    });
   }
 };
 

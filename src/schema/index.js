@@ -1,9 +1,9 @@
 import $ from 'jquery';
-import QRCode from 'qrcode';
 import { Decimal } from "decimal.js";
 import validate from 'uuid-validate';
 import URLUtils from '../utils/url.js';
 import MixinUtils from '../utils/mixin.js';
+import { initQRCode } from '../utils/modal.js';
 import blueLogo from '../assets/icons/logo.png';
 import userdefaultAvatar from '../assets/icons/userAvatar.svg';
 import appDefaultAvatar from '../assets/icons/appAvatar.svg';
@@ -49,7 +49,6 @@ Schema.prototype = {
         ? i18n.t(`schema.title.${type}.${action ? 'delete' : "add"}`) 
         : i18n.t(`schema.title.${type}`),
       subTitle: self.getSubTitle(type, id),
-      complete: false,
       qrCodeIcon,
       mixinURL
     };
@@ -69,7 +68,7 @@ Schema.prototype = {
     if (['apps', 'users', 'conversations', 'send'].includes(type)) {
       $('.subTitle').attr('class', 'subTitle new-margin');
     } else {
-      self.initQRCode(mixinURL);
+      initQRCode(mixinURL);
     }
     if (!platform) $('.main').attr('class', 'main browser');
     self.router.updatePageLinks();
@@ -106,7 +105,7 @@ Schema.prototype = {
           mixinURL: `mixin://withdrawal${location.search}`,
         };
         $('#layout-container').html(self.template(withdrawalInfo));
-        self.initQRCode(withdrawalInfo.mixinURL);
+        initQRCode(withdrawalInfo.mixinURL);
         if (!platform) $('.main').attr('class', 'main browser');
         self.router.updatePageLinks();
       };
@@ -215,32 +214,6 @@ Schema.prototype = {
       info['buttonIntro'] = i18n.t('schema.send.btn.intro.share');
       return info;
     }
-  },
-  initQRCode: function (mixinURL) {
-    QRCode.toCanvas(
-      document.getElementById('qrcode'),
-      mixinURL,
-      {
-        errorCorrectionLevel: "H",
-        margin: 0,
-        width: 140
-      }
-    );
-    QRCode.toCanvas(
-      document.getElementById('qrcode-modal'),
-      mixinURL,
-      {
-        errorCorrectionLevel: "H",
-        margin: 0,
-        width: 188
-      }
-    );
-    $('#qrcode-modal-btn').on('click', function() {
-      $('.qrcode-modal').toggleClass('active', 'true');
-    });
-    $('.qrcode-modal').on('click', function() {
-      $(this).toggleClass('active', 'false');
-    });
   }
 };
 

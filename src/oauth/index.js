@@ -1,8 +1,8 @@
 import '../code/index.scss';
 import $ from 'jquery';
-import QRCode from 'qrcode';
 import URLUtils from '../utils/url.js';
 import MixinUtils from '../utils/mixin.js';
+import { initQRCode } from '../utils/modal.js';
 import blueLogo from '../assets/icons/logo.png';
 import defaultAppAvatar from '../assets/icons/appAvatar.svg';
 import botIcon from '../assets/icons/robot.svg';
@@ -63,7 +63,6 @@ OAuth.prototype = {
       $('body').attr('class', 'oauth code layout');
       $('body').attr('data-code-id', auth.code_id);
       let platform = MixinUtils.environment();
-      console.log(platform)
       const mixinURL = 'mixin://codes/' + auth.code_id;
       if (platform == 'Android' || platform == 'iOS') {
         window.location.replace(mixinURL);
@@ -71,48 +70,20 @@ OAuth.prototype = {
       }
       const data = {
         logoURL: blueLogo,
-        basic: false,
         title: i18n.t('oauth.title'),
-        hasSubTitle: false,
-        hasMemo: false,
         iconUrl: auth.app.icon_url ? auth.app.icon_url : defaultAppAvatar,
         iconTitle: auth.app.name,
         isBot: !!auth.app,
         botIcon: auth.app.is_verified ? verifiedBotIcon : botIcon,
         iconSubTitle: auth.app.app_number,
-        showActionButton: false,
         showQRCode: true,
-        complete: false,
         qrCodeIcon,
         tip: i18n.t('code.oauth.mobile.scan'),
         mixinURL
       }
       $('.oauth.code.layout #layout-container').html(self.template(data));
+      initQRCode(data.mixinURL)
       if (!platform) $('.main').attr('class', 'main browser');
-      QRCode.toCanvas(
-        document.getElementById('qrcode'),
-        mixinURL,
-        {
-          errorCorrectionLevel: "H",
-          margin: 0,
-          width: 140
-        }
-      );
-      QRCode.toCanvas(
-        document.getElementById('qrcode-modal'),
-        mixinURL,
-        {
-          errorCorrectionLevel: "H",
-          margin: 0,
-          width: 188
-        }
-      );
-      $('#qrcode-modal-btn').on('click', function() {
-        $('.qrcode-modal').toggleClass('active', 'true');
-      })
-      $('.qrcode-modal').on('click', function(e) {
-        $(this).toggleClass('active', 'false');
-      })
       return false;
     }, clientId, scope, codeChallenge);
   },
