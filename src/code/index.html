@@ -1,0 +1,124 @@
+<div class="code container">
+  <header>
+    <div class="logo-container">
+      <img src="{{logoURL}}" alt="mixin-messenger" />
+      <span>Mixin Messenger</span>
+    </div>
+    <div class="btn download-btn"><a href="https://mixin.one/messenger">{{t 'code.messenger.download'}}</a></div>
+  </header>
+
+  <div class="main">
+    <div class="card-container">
+      {{#if basic}}
+      <div class="basic-info-container">
+        <div class="avatar-container">
+          {{#if hasAvatar}}
+          <img src="{{avatarUrl}}" alt="avatar" />
+          {{else}}
+          <p>{{firstLetter}}</p>
+          {{/if}}
+        </div>
+
+        <div class="title-container">
+          <span class="title">{{title}}</span>
+          {{#if isBot}}
+          <img class="bot-icon" src="{{botIcon}}" alt="bot icon" />
+          {{/if}}
+        </div>
+
+        <div class="subTitle">{{subTitle}}</div>
+        {{#if hasContent}}
+        <div class="content ellipsis">{{content}}</div>
+        {{/if}}
+      </div>
+      {{else}}
+      <div class="scan-info-container">
+        <div class="info-container">
+          <div class="title">{{title}}</div>
+          {{#if hasSubTitle}}
+          <div class="subTitle">{{subTitle}}</div>
+          {{/if}}
+          {{#if hasMemo}}
+          <div class="memo ellipsis">{{memo}}</div>
+          {{/if}}
+        </div>
+
+        <div class="icon-container">
+          <div class="icon">
+            <img src="{{iconUrl}}" alt="icon" />
+          </div>
+          <div class="title-container">
+            <span class="title">{{iconTitle}}</span>
+            {{#if isBot}}
+            <img class="bot-icon" src="{{botIcon}}" alt="bot icon" />
+            {{/if}}
+          </div>
+          <div class="subTitle">{{iconSubTitle}}</div>
+        </div>
+      </div>
+      {{/if}}
+
+      {{#if showActionButton}}
+      <div class="btn-container">
+        <div class="btn action-btn">
+          <a href="{{mixinURL}}">{{actionText}}</a>
+        </div>
+        {{#if showExtraButton}}
+        <div class="extra-btn-container">
+          <a class="extra-btn" href="{{extraURL}}">
+            {{extraText}}
+          </a>
+        </div>
+        {{else}}
+        <div class="btn-intro">{{buttonIntro}}</div>
+        {{/if}}
+      </div>
+      {{/if}}
+
+      {{#if showQRCode}}
+      <div class="scan-container">
+        {{#if complete}}
+        <div class="status-container">
+          <div class="icon-container">
+            <img src="{{successURL}}" alt="success-icon" />
+          </div>
+          <div class="status">{{t 'code.payment.complete'}}</div>
+        </div>
+        {{else}}
+        <div class="qrcode-container">
+          <canvas id="qrcode"></canvas>
+          <div class="action-btn-container">
+            <div class="action-btn btn">
+              <a href="{{mixinURL}}">{{t 'code.open.action'}}</a>
+              <img id="qrcode-modal-btn" src="{{qrCodeIcon}}" alt="qrcode button"/>
+            </div>
+          </div>
+          <div class="tip">{{t 'code.payment.scan'}}</div>
+          <div class="mobile-tip tip">{{tip}}</div>
+        </div>
+        {{/if}}
+      </div>
+      {{/if}}
+    </div>
+
+    <div class="footer">
+      <div class="tip">{{t 'code.messenger.tip'}}</div>
+      <div class="download"><a href="https://mixin.one/messenger">{{t 'code.messenger.download'}}</a></div>
+    </div>
+    
+    {{#if showMixinButton}}
+    <div class="btn mixin-btn">
+      <a href="{{mixinURL}}">{{t 'code.open.action'}}</a>
+    </div>
+    {{/if}}
+  </div>
+
+  <div class="qrcode-modal">
+    <div class="modal-content">
+      <div class="qrcode-container">
+        <canvas id="qrcode-modal"></canvas>
+      </div>
+      <div class="tip">{{t 'code.payment.scan'}}</div>
+    </div>
+  </div>
+</div>

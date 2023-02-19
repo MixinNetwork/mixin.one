@@ -12,6 +12,7 @@ import Page from './page';
 import Log from './log';
 import Job from './job';
 import Pay from './pay';
+import Schema from './schema';
 import Snapshot from './snapshot';
 
 const WEB_ROOT = location.protocol + '//' + location.host;
@@ -90,6 +91,27 @@ router.on({
   },
   '/codes/:id': function (match) {
     new Code(router, api).render(match.data['id']);
+  },
+  '/apps/:id': function (match) {
+    new Schema(router, api).render(match.data['id']);
+  },
+  '/users/:id': function (match) {
+    new Schema(router, api).render(match.data['id']);
+  },
+  '/conversations/:id': function (match) {
+    new Schema(router, api).render(match.data['id']);
+  },
+  '/transfer/:id': function (match) {
+    new Schema(router, api).render(match.data['id']);
+  },
+  '/send': function () {
+    new Schema(router, api).render();
+  },
+  '/address': function () {
+    new Schema(router, api).render();
+  },
+  '/withdrawal': function () {
+    new Schema(router, api).render();
   },
   '/xin': function () {
     new Home(router, api).xin();

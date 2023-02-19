@@ -184,3 +184,73 @@
   url('fonts/mulish/Mulish-Black.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
   url('fonts/mulish/Mulish-Black.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
+
+/* Manrope-200 */
+@font-face {
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 200;
+  src: local("Manrope"), local("Manrope-ExtraLight"),
+    url("fonts/Manrope/Manrope-ExtraLight.woff2") format("woff2"), 
+      url("fonts/Manrope/Manrope-ExtraLight.woff") format("woff"); 
+}
+
+/* Manrope-300 */
+@font-face {
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 300;
+  src: local("Manrope"), local("Manrope-Light"),
+    url("fonts/Manrope/Manrope-Light.woff2") format("woff2"), 
+      url("fonts/Manrope/Manrope-Light.woff") format("woff"); 
+}
+
+/* Manrope-400 */
+@font-face {
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Manrope"), local("Manrope-Regular"),
+    url("fonts/Manrope/Manrope-Regular.woff2") format("woff2"), 
+      url("fonts/Manrope/Manrope-Regular.woff") format("woff"); 
+}
+
+/* Manrope-500 */
+@font-face {
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 500;
+  src: local("Manrope"), local("Manrope-Medium"),
+    url("fonts/Manrope/Manrope-Medium.woff2") format("woff2"), 
+      url("fonts/Manrope/Manrope-Medium.woff") format("woff"); 
+}
+
+/* Manrope-600 */
+@font-face {
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 600;
+  src: local("Manrope"), local("Manrope-SemiBold"),
+    url("fonts/Manrope/Manrope-SemiBold.woff2") format("woff2"), 
+      url("fonts/Manrope/Manrope-SemiBold.woff") format("woff"); 
+}
+
+/* Manrope-700 */
+@font-face {
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 700;
+  src: local("Manrope"), local("Manrope-Bold"),
+    url("fonts/Manrope/Manrope-Bold.woff2") format("woff2"), 
+      url("fonts/Manrope/Manrope-Bold.woff") format("woff"); 
+}
+
+/* Manrope-800 */
+@font-face {
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 800;
+  src: local("Manrope"), local("Manrope-ExtraBold"),
+    url("fonts/Manrope/Manrope-ExtraBold.woff2") format("woff2"), 
+      url("fonts/Manrope/Manrope-ExtraBold.woff") format("woff"); 
+}

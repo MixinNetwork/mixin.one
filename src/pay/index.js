@@ -1,13 +1,14 @@
 import './index.scss';
 import $ from 'jquery';
-import QRious from 'qrious';
 import { Decimal } from 'decimal.js';
 import { v4 as uuidv4 } from 'uuid';
 import MixinUtils from '../utils/mixin.js';
 import URLUtils from '../utils/url.js';
-import arrow from './arrow.svg';
-import blueLogo from '../home/logo.png';
-import completeIcon from '../home/payment_complete.svg';
+import { initQRCode } from '../utils/modal.js';
+import arrow from '../assets/icons/arrow.svg';
+import blueLogo from '../assets/icons/logo.png';
+import qrCodeIcon from '../assets/icons/qrcode.svg';
+import completeIcon from '../assets/icons/payment_complete.svg';
 
 var validate = require('uuid-validate');
 
@@ -15,7 +16,7 @@ function Pay(router, api) {
   this.router = router;
   this.api = api;
   this.ErrorGeneral = require('../error.html');
-  this.template = require('./index.html');
+  this.template = require('../code/index.html');
   this.templateNew = require('./new.html');
 }
 
@@ -65,7 +66,7 @@ Pay.prototype = {
             });
           }
         }
-        $('body').attr('class', 'pay layout');
+        $('body').attr('class', 'pay code layout');
         $('#layout-container').html(self.templateNew(data));
         $('.asset.selected').on('click', () => {
           $('.modal').show();
@@ -94,7 +95,7 @@ Pay.prototype = {
     });
   },
 
-  render: function (id) {
+  render: function () {
     const self = this;
     const recipientId = URLUtils.getUrlParameter("recipient");
     const assetId = URLUtils.getUrlParameter("asset");
@@ -108,15 +109,19 @@ Pay.prototype = {
       self.router.updatePageLinks();
       return true;
     }
-
     self.api.network.assetsShow((resp) => {
       var preloadImage = new Image();
       preloadImage.src = resp.data.icon_url;
-      self.refreshPayment(recipientId, assetId, amount, traceId, memo);
+      const params = {
+        isInitialized: false,
+        recipientId, assetId, amount, traceId, memo
+      }
+      self.refreshPayment(params);
     }, assetId)
   },
 
-  refreshPayment: function (recipientId, assetId, amount, traceId, memo) {
+  refreshPayment: function (params) {
+    const { isInitialized, recipientId, assetId, amount, traceId, memo } = params;
     const self = this;
     self.api.payment.validate(function (resp) {
       if (resp.error) {
@@ -125,40 +130,55 @@ Pay.prototype = {
           $('body').attr('class', 'error layout');
           self.router.updatePageLinks();
         }
-        return false;
+        if (!isInitialized) {
+          return false;
+        }
+        setTimeout(function() {
+          self.refreshPayment(params);
+        }, 1500);
       }
-      var payment = resp.data;
-      payment['params'] = window.location.search;
-      payment['logoURL'] = blueLogo;
-      payment['complete'] = payment.status === 'paid';
-      payment['fullName'] = payment.recipient.full_name.trim();
-      payment['info'] = payment.recipient.identity_number;
-      payment['hasMemo'] = !!memo;
-      payment['memo'] = memo;
-      payment['successURL'] = completeIcon;
-      payment['assetUrl'] = payment.asset.icon_url;
-      payment['tokenAmount'] = `${payment.amount} ${payment.asset.symbol}`;
+      const payment = resp.data;
+      const fullName = payment.recipient.full_name.trim();
       const useAmount = new Decimal(payment.asset.price_usd).times(payment.amount);
-      payment['usdAmount'] = `${useAmount.toNumber().toFixed(2).toString()} USD`;
-      let st = 'Pay ' + payment['tokenAmount']  + ' to ' + payment['fullName'];
-      $('title').html(st + ' | Mixin - Secure Digital Assets and Messages on Mixin');
-      $('body').attr('class', 'pay layout');
-      $('#layout-container').html(self.template(payment));
-      const platform = MixinUtils.environment();
-      if (!platform) $('.main').attr('class', 'main browser');
-      new QRious({
-        element: document.getElementById('qrcode'),
-        backgroundAlpha: 0,
-        value: window.location.toString().replace(window.location.host, "mixin.one"),
-        level: 'H',
-        size: 500
-      });
-      self.router.updatePageLinks();
-      if (payment.complete) {
-        return true;
+      const mixinURL = `mixin://pay${window.location.search}`;
+      const data = {
+        logoURL: blueLogo,
+        title: i18n.t('pay.recipient.title', { name: fullName }),
+        hasSubTitle: true,
+        subTitle: payment.recipient.identity_number,
+        hasMemo: !!memo,
+        memo,
+        iconUrl: payment.asset.icon_url,
+        iconTitle: `${payment.amount} ${payment.asset.symbol}`,
+        iconSubTitle: `${useAmount.toNumber().toFixed(2).toString()} USD`,
+        showQRCode: true,
+        qrCodeIcon,
+        tip: i18n.t('code.payment.mobile.scan'),
+        complete: payment.status === 'paid',
+        successURL: completeIcon,
+        mixinURL
+      };
+      if (!isInitialized) {
+        params.isInitialized = true;
+        let st = 'Pay ' + data.iconTitle  + ' to ' + fullName;
+        $('title').html(st + ' | Mixin - Secure Digital Assets and Messages on Mixin');
+        $('body').attr('class', 'pay code layout');
+        $('#layout-container').html(self.template(data));
+        const platform = MixinUtils.environment();
+        if (!platform) $('.main').attr('class', 'main browser');          
+        if (data.hasMemo) $('.scan-container').attr('class', 'scan-container new-margin');
+        initQRCode(mixinURL)
       }
+      self.router.updatePageLinks();
+      if (payment.status === 'paid') {
+        data.complete = true;
+        $('#layout-container').html(self.template(data));
+        if (!platform) $('.main').attr('class', 'main browser'); 
+        if (data.hasMemo) $('.scan-container').attr('class', 'scan-container new-margin'); 
+        return true
+      };
       setTimeout(function() {
-        self.refreshPayment(recipientId, assetId, amount, traceId, memo);
+        self.refreshPayment(params);
       }, 1500);
     }, recipientId, assetId, amount, traceId);
   },

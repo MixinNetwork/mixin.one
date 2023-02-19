@@ -1,17 +1,19 @@
 import '../code/index.scss';
 import $ from 'jquery';
-import QRious from 'qrious';
 import URLUtils from '../utils/url.js';
 import MixinUtils from '../utils/mixin.js';
-import blueLogo from '../home/logo.png';
-import botIcon from '../code/robot.svg';
-import verifiedBotIcon from '../code/verifiedBot.svg';
+import { initQRCode } from '../utils/modal.js';
+import blueLogo from '../assets/icons/logo.png';
+import defaultAppAvatar from '../assets/icons/appAvatar.svg';
+import botIcon from '../assets/icons/robot.svg';
+import verifiedBotIcon from '../assets/icons/verifiedBot.svg';
+import qrCodeIcon from '../assets/icons/qrcode.svg';
 
 function OAuth(router, api) {
   this.router = router;
   this.api = api;
   this.ErrorGeneral = require('../error.html');
-  this.templateCode = require('./index.html');
+  this.template = require('../code/index.html');
 }
 
 OAuth.prototype = {
@@ -61,24 +63,27 @@ OAuth.prototype = {
       $('body').attr('class', 'oauth code layout');
       $('body').attr('data-code-id', auth.code_id);
       let platform = MixinUtils.environment();
+      const mixinURL = 'mixin://codes/' + auth.code_id;
       if (platform == 'Android' || platform == 'iOS') {
-        window.location.replace('mixin://codes/' + auth.code_id);
+        window.location.replace(mixinURL);
         return false;
       }
-      auth['hasAvatar'] = !!auth.app.icon_url;
-      auth['avatar_url'] = auth.app.icon_url;
-      auth['logoURL'] = blueLogo;
-      auth['botIcon'] = auth.app.is_verified ? verifiedBotIcon : botIcon;
-      auth['mixinURL'] = 'mixin://codes/' + auth.code_id;
-      $('.oauth.code.layout #layout-container').html(self.templateCode(auth));
+      const data = {
+        logoURL: blueLogo,
+        title: i18n.t('oauth.title'),
+        iconUrl: auth.app.icon_url ? auth.app.icon_url : defaultAppAvatar,
+        iconTitle: auth.app.name,
+        isBot: !!auth.app,
+        botIcon: auth.app.is_verified ? verifiedBotIcon : botIcon,
+        iconSubTitle: auth.app.app_number,
+        showQRCode: true,
+        qrCodeIcon,
+        tip: i18n.t('code.oauth.mobile.scan'),
+        mixinURL
+      }
+      $('.oauth.code.layout #layout-container').html(self.template(data));
+      initQRCode(data.mixinURL)
       if (!platform) $('.main').attr('class', 'main browser');
-      new QRious({
-        element: document.getElementById('qrcode'),
-        backgroundAlpha: 0,
-        value: 'https://mixin.one/codes/' + auth.code_id,
-        level: 'H',
-        size: 140
-      });
       return false;
     }, clientId, scope, codeChallenge);
   },

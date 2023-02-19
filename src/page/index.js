@@ -1,6 +1,6 @@
 import './index.scss';
 import $ from 'jquery';
-import blueLogo from '../home/logo.png';
+import blueLogo from '../assets/icons/logo.png';
 
 function Page(router) {
   this.router = router;

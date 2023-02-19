@@ -83,7 +83,7 @@ module.exports = {
       },
     }),
     new WebappWebpackPlugin({
-      logo: './src/launcher.webp',
+      logo: './src/assets/images/launcher.webp',
       prefix: 'icons/'
     }),
     new MiniCssExtractPlugin({
