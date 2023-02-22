@@ -415,6 +415,16 @@
   }
 }
 
+@media (min-width: 768px) {
+  $header-height: 64px;
+  $card-height: 560px;
+  $part-height: calc((100vh - #{$header-height} - #{$card-height}) / 5);
+
+  .code.layout .card-container {
+    margin-top: calc(#{$part-height} * 2);
+  }
+}
+
 @media (max-width: 768px) {
   .code.layout {
     #layout-container{
