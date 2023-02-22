@@ -415,16 +415,6 @@
   }
 }
 
-.address.layout,
-.withdrawal.layout,
-.transfer.layout,
-.pay.layout,
-.multisig.layout {
-  .card-container {
-    margin-bottom: 24px;
-  }
-}
-
 @media (max-width: 768px) {
   .code.layout {
     #layout-container{
