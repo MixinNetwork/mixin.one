@@ -577,7 +577,7 @@
   }
 }
 
-@media (max-height: 616px) {
+@media (max-width: 768px) and (max-height: 616px) {
   $add: calc((100vh - 580px) / 3);
   .code.layout {
     .card-container {
@@ -588,7 +588,7 @@
   }
 }
 
-@media (max-height: 580px) {
+@media (max-width: 768px) and (max-height: 580px) {
   .code.layout {
     .card-container {
       margin-bottom: 24px;
