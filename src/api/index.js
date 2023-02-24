@@ -1,4 +1,4 @@
-import $ from 'jquery';
+import $ from 'zepto-webpack';
 import Noty from 'noty';
 import MixinUtils from '../utils/mixin.js';
 import Account from './account.js';

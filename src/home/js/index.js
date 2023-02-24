@@ -1,4 +1,4 @@
-import $ from 'jquery';
+import $ from 'zepto-webpack';
 
 let btn = document.getElementsByClassName('nav-list-menus-btn')[0];
 let menus = document.getElementsByClassName('nav-list-menus-list')[0];
@@ -14,7 +14,6 @@ $(function () {
     resizeTopContent()
   })
 })
-
 
 btn.addEventListener('click', event => {
   event.stopPropagation();

@@ -1,4 +1,4 @@
-import $ from 'jquery';
+import $ from 'zepto-webpack';
 import { Decimal } from "decimal.js";
 import validate from 'uuid-validate';
 import URLUtils from '../utils/url.js';

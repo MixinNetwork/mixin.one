@@ -1,6 +1,6 @@
 import './index.scss';
 import './messenger.scss';
-import $ from 'jquery';
+import $ from 'zepto-webpack';
 import background from '../assets/images/BG.webp';
 import messengerLogo from '../assets/images/home_2_1.svg';
 import whiteLogo from '../assets/icons/logo.svg';

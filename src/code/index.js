@@ -1,5 +1,5 @@
 import './index.scss';
-import $ from 'jquery';
+import $ from 'zepto-webpack';
 import { Decimal } from "decimal.js";
 import MixinUtils from '../utils/mixin.js';
 import URLUtils from '../utils/url.js';
@@ -77,7 +77,7 @@ Code.prototype = {
           : !!chatInfo.app 
             ? i18n.t('schema.bot.btn.intro.view') 
             : i18n.t('schema.user.btn.intro.view') 
-    }
+    };
     chatInfo['showButtonIntro'] = !(chatInfo.type === 'user' && !!chatInfo.app);
     $('#layout-container').html(self.template(data));
     if (!data.hasContent) $('.subTitle').attr('class', 'subTitle new-margin');

@@ -1,5 +1,5 @@
 import './index.scss';
-import $ from 'jquery';
+import $ from 'zepto-webpack';
 import { Decimal } from 'decimal.js';
 import { v4 as uuidv4 } from 'uuid';
 import MixinUtils from '../utils/mixin.js';
@@ -84,11 +84,11 @@ Pay.prototype = {
           let memo = $('.memo').val().trim();
           let path = `/pay?recipient=${data.user.user_id}&asset=${data.asset.asset_id}&amount=${amount}&memo=${encodeURI(memo)}&trace=${uuidv4()}`;
           let platform = MixinUtils.environment();
+          let route = `https://${window.location.host}${path}`;
           if (platform == 'Android' || platform == 'iOS') {
-            let route = `https://${window.location.host}${path}`;
             window.location = `mixin://send?text=${encodeURIComponent(route)}`;
           } else {
-            self.router.replace(path);
+            window.location = route;
           }
         });
       });

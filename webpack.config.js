@@ -35,7 +35,6 @@ module.exports = {
 
   resolve: {
     alias: {
-      jquery: "jquery/dist/jquery",
       handlebars: "handlebars/dist/handlebars.runtime"
     }
   },

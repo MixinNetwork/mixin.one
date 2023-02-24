@@ -1,7 +1,6 @@
 import './index.scss';
 import './solo.scss';
-import $ from 'jquery';
-import jQueryColor from '../jquery-color-plus-names.js';
+import $ from 'zepto-webpack';
 import TimeUtils from '../utils/time.js';
 import validate from 'uuid-validate';
 import blueLogo from '../assets/icons/logo.png';
@@ -21,7 +20,6 @@ function Snapshot(router, api) {
   this.partialHeader = require('./header.html');
   this.partialChains = require('./chains.html');
   this.partialItem = require('./item.html');
-  jQueryColor($);
 }
 
 Snapshot.prototype = {
@@ -142,7 +140,7 @@ Snapshot.prototype = {
         $('.snapshots.count').html(s.snapshotsCount);
         $('.peak').html(s.peakTPS);
         for (let i = 0; i < s.assets.length; i++) {
-          $('.amount.'+s.assets[i].asset_id).html(s.assets[i].amount);
+          $(`[data-id="${s.assets[i].asset_id}"] .amount`).html(s.assets[i].amount);
         }
       }
       setTimeout(function() { self.assets(); }, 2100);
@@ -166,12 +164,12 @@ Snapshot.prototype = {
         $('body').attr('class', 'chains layout');
       } else {
         for (let i = 0; i < resp.data.chains.length; i++) {
-          let chain = resp.data.chains[i];
-          $('.sync.'+chain.chain_id).removeClass('true false').addClass(`${chain.is_synchronized}`);
-          $('.height.'+chain.chain_id).html(chain.deposit_block_height);
-          $('.timestamp.'+chain.chain_id).html(chain.withdrawal_timestamp);
-          $('.pending.count.'+chain.chain_id).html('['+chain.withdrawal_pending_count+']');
-          $('.chain-fee.'+chain.chain_id).html(chain.withdrawal_fee);
+          const chain = resp.data.chains[i];
+          $(`[data-id="${chain.chain_id}"] .sync`).removeClass('true false').addClass(`${chain.is_synchronized}`);
+          $(`[data-id="${chain.chain_id}"] .height`).html(chain.deposit_block_height);
+          $(`[data-id="${chain.chain_id}"] .timestamp`).html(chain.withdrawal_timestamp);
+          $(`[data-id="${chain.chain_id}"] .pending.count`).html('['+chain.withdrawal_pending_count+']');
+          $(`[data-id="${chain.chain_id}"] .chain-fee`).html(chain.withdrawal_fee);
         }
       }
       setTimeout(function() { self.chains(); }, 2100);
@@ -259,8 +257,7 @@ Snapshot.prototype = {
             var c = network.chains[i];
             c.deposit_block_height = c.deposit_block_height.toLocaleString(undefined, { maximumFractionDigits: 0 });
             c.withdrawal_timestamp = TimeUtils.format(c.withdrawal_timestamp);
-            $(`.${c.chain_id}-sync`).removeClass('true false');
-            $(`.${c.chain_id}-sync`).addClass(`${c.is_synchronized}`);
+            $(`.${c.chain_id}-sync`).removeClass('true false').addClass(`${c.is_synchronized}`);
             $(`.${c.chain_id}-height`, '.chains.container').html(c.deposit_block_height);
             $(`.${c.chain_id}-timestamp`, '.chains.container').html(c.withdrawal_timestamp);
             $(`.${c.chain_id}-pending`, '.chains.container').html(`[${c.withdrawal_pending_count}]`);
@@ -282,7 +279,7 @@ Snapshot.prototype = {
       }
       for (var i in resp.data) {
         var s = resp.data[i];
-        if ($('.snapshot[data-id=' + s.snapshot_id + ']').length > 0) {
+        if ($(`.snapshot[data-id="${s.snapshot_id}"]`).length > 0) {
           continue;
         }
 
@@ -307,8 +304,7 @@ Snapshot.prototype = {
         s.amount = parseFloat(s.amount) < 0 ? s.amount : '+' + s.amount;
         var items = $('.snapshot.item');
         if (order != 'before' || items.length == 0 || parseInt($(items[0]).attr('data-time')) <= s.created_at_unix) {
-          var item = $(self.partialItem(s)).css('background-color', 'rgba(0,176,233,0.3)');
-          item = $(item).animate({ backgroundColor: 'transparent' }, 500);
+          var item = $(self.partialItem(s));
           if (order === 'before') {
             $('.snapshots.list').prepend(item);
           } else {

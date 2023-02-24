@@ -259,6 +259,7 @@
     padding: 0;
     font-weight: 300;
     border-left: 4px solid rgba(20,204,112,0.3);
+    animation: bg-transition 0.5s ease-in-out;
 
     .info {
       font-size: 16px;
@@ -322,6 +323,16 @@
       .meta {
         opacity: 1;
       }
+    }
+  }
+
+  @keyframes bg-transition {
+    from {
+      background-color: rgba(0,176,233,0.3);
+    }
+  
+    to {
+      background-color: transparent;
     }
   }
 

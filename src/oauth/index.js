@@ -1,5 +1,5 @@
 import '../code/index.scss';
-import $ from 'jquery';
+import $ from 'zepto-webpack';
 import URLUtils from '../utils/url.js';
 import MixinUtils from '../utils/mixin.js';
 import { initQRCode } from '../utils/modal.js';
