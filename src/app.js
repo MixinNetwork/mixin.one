@@ -1,6 +1,6 @@
 import 'simple-line-icons/scss/simple-line-icons.scss';
 import './layout.scss';
-import $ from 'jquery';
+import $ from 'zepto-webpack';
 import Navigo from 'navigo';
 import MixinUtils from './utils/mixin.js';
 import Locale from './locale';
@@ -15,7 +15,6 @@ import Pay from './pay';
 import Schema from './schema';
 import Snapshot from './snapshot';
 
-const WEB_ROOT = location.protocol + '//' + location.host;
 const PartialLoading = require('./loading.html');
 const Error404 = require('./404.html');
 const router = new Navigo(window.location.host.includes('github') ? 'mixin.one' : '/');

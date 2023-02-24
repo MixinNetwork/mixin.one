@@ -1,5 +1,5 @@
 import './index.scss';
-import $ from 'jquery';
+import $ from 'zepto-webpack';
 import blueLogo from '../assets/icons/logo.png';
 
 function Page(router) {

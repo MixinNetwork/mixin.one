@@ -1,6 +1,5 @@
-
 import QRCode from 'qrcode';
-import $ from 'jquery';
+import $ from 'zepto-webpack';
 
 export const initQRCode = (mixinURL) => {
   QRCode.toCanvas(
@@ -22,9 +21,9 @@ export const initQRCode = (mixinURL) => {
     }
   );
   $('#qrcode-modal-btn').on('click', function() {
-    $('.qrcode-modal').toggleClass('active', 'true');
+    $('.qrcode-modal').toggleClass('active', true);
   });
   $('.qrcode-modal').on('click', function() {
-    $(this).toggleClass('active', 'false');
+    $(this).toggleClass('active', false);
   });
 }
