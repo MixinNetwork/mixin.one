@@ -128,15 +128,17 @@ Code.prototype = {
 
       const timer = !complete && setInterval(() => {
         self.api.code.fetch((resp) => {
-          const complete = type === 'payment' 
-            ? multisig.status === 'paid'
-            : multisig.state === 'signed';  
-          if (!resp.error && complete) {
-            clearInterval(timer);
-            data.complete = true;
-            $('#layout-container').html(self.template(data));
-            if (!platform) $('.main').attr('class', 'main browser'); 
-            if (data.hasMemo) $('.scan-container').attr('class', 'scan-container new-margin');
+          if (!resp.error) {
+            const complete = type === 'payment' 
+              ? resp.data.status === 'paid'
+              : resp.data.state === 'signed';  
+            if (complete) {
+              clearInterval(timer);
+              data.complete = true;
+              $('#layout-container').html(self.template(data));
+              if (!platform) $('.main').attr('class', 'main browser'); 
+              if (data.hasMemo) $('.scan-container').attr('class', 'scan-container new-margin');
+            }
           }
         }, multisig.code_id);
       }, 1000 * 3);
