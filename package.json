@@ -6,7 +6,7 @@
   "dependencies": {
     "buffer": "^6.0.3",
     "decimal.js": "^10.4.3",
-    "favicons": "^7.1.0",
+    "favicons": "^7.1.2",
     "handlebars": "^4.7.7",
     "navigo": "^8.11.1",
     "node-polyglot": "^2.5.0",
