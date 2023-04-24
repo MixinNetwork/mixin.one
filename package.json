@@ -12,7 +12,7 @@
     "node-polyglot": "^2.5.0",
     "noty": "^3.2.0-beta",
     "pako": "^2.1.0",
-    "qrcode": "^1.5.1",
+    "qrcode": "^1.5.3",
     "reconnecting-websocket": "^4.4.0",
     "simple-line-icons": "^2.5.5",
     "uuid": "^9.0.0",
