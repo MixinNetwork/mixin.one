@@ -20,7 +20,7 @@
     "zepto-webpack": "^1.2.1"
   },
   "devDependencies": {
-    "css-loader": "^6.7.3",
+    "css-loader": "^6.8.1",
     "favicons-webpack-plugin": "^6.0.0",
     "handlebars-loader": "^1.7.3",
     "html-webpack-plugin": "^5.5.0",
