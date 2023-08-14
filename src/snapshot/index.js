@@ -86,7 +86,13 @@ Snapshot.prototype = {
       if (resp.error) return;
       var s = resp.data;
       s.flow = parseFloat(s.amount) > 0 ? 'in' : 'out';
-      s.amount = parseFloat(s.amount) < 0 ? s.amount : '+' + s.amount;
+      let amount = new Decimal(s.amount);
+      if (amount.gt(new Decimal('100000000000'))) {
+        s.amount_hum = amount.toExponential(12);
+      } else {
+        s.amount_hum = s.amount;
+      }
+      s.amount_hum = parseFloat(s.amount) < 0 ? s.amount_hum : '+' + s.amount_hum;
       s.logoURL = blueLogo;
       s.peakTPS = parseInt(network.peak_throughput).toLocaleString(undefined, { maximumFractionDigits: 0 });
       s.snapshotsCount = parseInt(network.snapshots_count).toLocaleString(undefined, { maximumFractionDigits: 0 });
@@ -308,7 +314,13 @@ Snapshot.prototype = {
             break;
         }
         s.flow = parseFloat(s.amount) > 0 ? 'in' : 'out';
-        s.amount = parseFloat(s.amount) < 0 ? s.amount : '+' + s.amount;
+        let amount = new Decimal(s.amount);
+        if (amount.gt(new Decimal('100000000000'))) {
+          s.amount_hum = amount.toExponential(12);
+        } else {
+          s.amount_hum = s.amount;
+        }
+        s.amount_hum = parseFloat(s.amount) < 0 ? s.amount_hum : '+' + s.amount_hum;
         var items = $('.snapshot.item');
         if (order != 'before' || items.length == 0 || parseInt($(items[0]).attr('data-time')) <= s.created_at_unix) {
           var item = $(self.partialItem(s));
