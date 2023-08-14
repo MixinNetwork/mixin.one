@@ -1,5 +1,6 @@
 import './index.scss';
 import './solo.scss';
+import Decimal from 'decimal.js';
 import $ from 'zepto-webpack';
 import TimeUtils from '../utils/time.js';
 import validate from 'uuid-validate';
@@ -85,7 +86,13 @@ Snapshot.prototype = {
       if (resp.error) return;
       var s = resp.data;
       s.flow = parseFloat(s.amount) > 0 ? 'in' : 'out';
-      s.amount = parseFloat(s.amount) < 0 ? s.amount : '+' + s.amount;
+      let amount = new Decimal(s.amount);
+      if (amount.gt(new Decimal('100000000000'))) {
+        s.amount_hum = amount.toExponential(12);
+      } else {
+        s.amount_hum = s.amount;
+      }
+      s.amount_hum = parseFloat(s.amount) < 0 ? s.amount_hum : '+' + s.amount_hum;
       s.logoURL = blueLogo;
       s.peakTPS = parseInt(network.peak_throughput).toLocaleString(undefined, { maximumFractionDigits: 0 });
       s.snapshotsCount = parseInt(network.snapshots_count).toLocaleString(undefined, { maximumFractionDigits: 0 });
@@ -217,7 +224,13 @@ Snapshot.prototype = {
           asset.logoURL = blueLogo;
           asset.chainLogoURL = chainSet[asset.chain_id];
           asset.snapshotsCount = parseInt(asset.snapshots_count).toLocaleString(undefined, { maximumFractionDigits: 0 });
-          asset.amount = Math.round(parseFloat(asset.amount)).toLocaleString(undefined, { maximumFractionDigits: 0 });
+          let amount = new Decimal(asset.amount);
+          asset.amount_hum = amount.toFixed(2);
+          if (amount.gt(new Decimal('100000000000'))) {
+            asset.amount_hum = amount.toExponential(12);
+          } else {
+            asset.amount_hum = parseFloat(asset.amount_hum);
+          }
           $('#layout-container').html(self.templateAsset(asset));
         }
         $('form.search').on('submit', function (event) {
@@ -301,7 +314,13 @@ Snapshot.prototype = {
             break;
         }
         s.flow = parseFloat(s.amount) > 0 ? 'in' : 'out';
-        s.amount = parseFloat(s.amount) < 0 ? s.amount : '+' + s.amount;
+        let amount = new Decimal(s.amount);
+        if (amount.gt(new Decimal('100000000000'))) {
+          s.amount_hum = amount.toExponential(12);
+        } else {
+          s.amount_hum = s.amount;
+        }
+        s.amount_hum = parseFloat(s.amount) < 0 ? s.amount_hum : '+' + s.amount_hum;
         var items = $('.snapshot.item');
         if (order != 'before' || items.length == 0 || parseInt($(items[0]).attr('data-time')) <= s.created_at_unix) {
           var item = $(self.partialItem(s));
