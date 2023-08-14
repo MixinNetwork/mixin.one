@@ -1,5 +1,6 @@
 import './index.scss';
 import './solo.scss';
+import Decimal from 'decimal.js';
 import $ from 'zepto-webpack';
 import TimeUtils from '../utils/time.js';
 import validate from 'uuid-validate';
@@ -217,7 +218,13 @@ Snapshot.prototype = {
           asset.logoURL = blueLogo;
           asset.chainLogoURL = chainSet[asset.chain_id];
           asset.snapshotsCount = parseInt(asset.snapshots_count).toLocaleString(undefined, { maximumFractionDigits: 0 });
-          asset.amount = Math.round(parseFloat(asset.amount)).toLocaleString(undefined, { maximumFractionDigits: 0 });
+          let amount = new Decimal(asset.amount);
+          asset.amount_hum = amount.toFixed(2);
+          if (amount.gt(new Decimal('100000000000'))) {
+            asset.amount_hum = amount.toExponential(12);
+          } else {
+            asset.amount_hum = parseFloat(asset.amount_hum);
+          }
           $('#layout-container').html(self.templateAsset(asset));
         }
         $('form.search').on('submit', function (event) {
