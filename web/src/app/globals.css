@@ -1,0 +1,21 @@
+@import "@unocss/reset/tailwind.css";
+@unocss all;
+
+a,
+button {
+  @apply hover:opacity-90 hover:active:focus:opacity-80 disabled:opacity-20;
+}
+
+button {
+  @apply select-none bg-transparent;
+}
+
+* {
+  @apply outline-none font-default;
+}
+
+[class*="sm:"],
+[class*="md:"],
+[class*="lg:"] {
+  @apply transition-all;
+}
