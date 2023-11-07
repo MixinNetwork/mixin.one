@@ -4,6 +4,7 @@ import { LLProps } from "@/i18n/custom"
 import Image from "next/image"
 import Mixin from "@/svg/mixin.svg"
 import { TrySafeSection } from "./TrySafeSection"
+import DropArrow from "@/svg/dropArrow.svg"
 
 const LinkList = ({ title, children, className }: { title: string; children: React.ReactNode; className?: string }) => (
   <div className={clsx("space-y-4", className)}>
@@ -55,10 +56,13 @@ const Footer = ({ LL }: LLProps) => {
               <div className="mt-4 text-white text-opacity-60 text-sm font-normal leading-tight">Copyright 2023, Mixin.All rights reserved.</div>
             </div>
 
-            <select className="col-span-2 sm:col-span-1 order-2 sm:order-4 md:order-5 h-fit mt-auto w-fit bg-white bg-opacity-20 rounded-sm px-5 py-2 appearance-none text-white text-opacity-70 text-base font-medium">
-              <option>English</option>
-              <option>中文</option>
-            </select>
+            <div className="relative w-fit">
+              <DropArrow className="absolute-vertical-center right-2 stroke-white stroke-op-70 z-10" />
+              <select className="col-span-2 sm:col-span-1 order-2 sm:order-4 md:order-5 h-fit mt-auto w-fit bg-white bg-opacity-20 rounded-sm pl-5 pr-7 py-2 appearance-none text-white text-opacity-70 text-base font-medium">
+                <option>English</option>
+                <option>中文</option>
+              </select>
+            </div>
 
             <LinkList title={"Products"} className="order-3 sm:order-2">
               <a>Mixin Messenger</a>
