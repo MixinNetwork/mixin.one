@@ -1,4 +1,4 @@
-import { defineConfig, presetUno, transformerVariantGroup, transformerDirectives, presetWebFonts } from "unocss"
+import { defineConfig, presetUno, transformerVariantGroup, transformerDirectives, presetWebFonts, toEscapedSelector } from "unocss"
 
 export default defineConfig({
   presets: [
@@ -28,25 +28,23 @@ export default defineConfig({
   ],
   transformers: [transformerDirectives(), transformerVariantGroup()],
   rules: [
-    [/^rw-(\d+)$/, (match) => ({ width: `calc(100% - ${+match[1] / 4}rem)` })],
     [
-      /^marquee-(\d+(\.\d+)?)$/,
-      (match) => ({
-        animation: `marquee 15s linear infinite`,
-        "@keyframes marquee": `{
-          from {
-            transform: translate3d(0, 0, 0);
-          }
-          to {
-            transform: translate3d(calc(-51% - ${+match[1] / 8}rem), 0, 0)
-          }
-      }`,
-      }),
+      /^rw-(\d+)$/,
+      ([, num]) => ({ width: `calc(100% - ${+num / 4}rem)` }),
+      {
+        autocomplete: ["rw-<num>"],
+      },
     ],
   ],
-  shortcuts: {
-    "flex-center": "flex items-center justify-center",
-  },
+  shortcuts: [
+    {
+      "flex-center": "flex items-center justify-center",
+      "absolute-center": "absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 transform",
+      "absolute-vertical-center": "absolute top-1/2 -translate-y-1/2 transform",
+      "absolute-horizontal-center": "absolute left-1/2 -translate-x-1/2 transform",
+    },
+    [/^click-area-(\d+)$/, ([, num]) => `relative before:content-[''] before:absolute before:-inset-${num}`, { autocomplete: ["click-area-<num>"] }],
+  ],
   theme: {
     animation: {
       keyframes: {
