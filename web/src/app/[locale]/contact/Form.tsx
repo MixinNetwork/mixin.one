@@ -32,11 +32,13 @@ export const Form = () => {
           <div className="relative">
             <DropArrow className="absolute-vertical-center right-4 stroke-black z-10" />
             <select ref={businessTypeRef} className="p-4 w-full rounded-sm border border-zinc-800 appearance-none relative">
-              <option value="volvo">Volvo</option>
-              <option value="volvo">Volvo</option>
-              <option value="volvo">Volvo</option>
-              <option value="volvo">Volvo</option>
-              <option value="volvo">Volvo</option>
+              <option value="exchange">Exchange</option>
+              <option value="fund">Fund</option>
+              <option value="project">DAO</option>
+              <option value="otc">OTC</option>
+              <option value="payment">Payment</option>
+              <option value="mining">Mining Pool</option>
+              <option value="other">Other</option>
             </select>
           </div>
         </Item>

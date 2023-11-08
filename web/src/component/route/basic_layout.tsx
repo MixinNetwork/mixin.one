@@ -9,7 +9,7 @@ export default function BasicLayout({ children, LL, locale }: LLProps & { childr
       <body>
         <Toaster />
         <div>{children}</div>
-        <Footer LL={LL} />
+        <Footer LL={LL} locale={locale} />
       </body>
     </html>
   )

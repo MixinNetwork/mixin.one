@@ -12,7 +12,7 @@ const EasyManageItem = ({ title, description, icon }: { title: string; descripti
   </div>
 )
 
-export const EasyManageSection = ({ LL, locale }: LLProps & { locale: Locales }) => (
+export const EasyManageSection = ({ LL, locale }: LLProps) => (
   <div className="py-20 px-5 sm:pt-25 sm:pb-30 container mx-auto">
     <div className="text-center text-zinc-800 text-3xl font-medium leading-10">We Make Managing Digital Assets Easy</div>
     <div className="mt-5 text-center text-zinc-800 text-opacity-60 text-base sm:text-sm font-normal leading-normal">6 key features to allow hassle-free day-to-day management</div>

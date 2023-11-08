@@ -18,7 +18,7 @@ export default function Licenses({
 
   return (
     <>
-      <NavBar LL={LL} />
+      <NavBar LL={LL} locale={locale} />
       <Header />
       <HearFromOurCustomers />
       <MoreFeatures omit={"Compliant"} />

@@ -26,7 +26,7 @@ export default function Licenses({
 
   return (
     <>
-      <NavBar LL={LL} />
+      <NavBar LL={LL} locale={locale} />
       <Header />
       <Form />
     </>

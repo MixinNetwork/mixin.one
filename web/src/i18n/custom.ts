@@ -1,9 +1,10 @@
-import { TranslationFunctions } from "./i18n-types"
+import { Locales, TranslationFunctions } from "./i18n-types"
 import { i18nObject, locales } from "./i18n-util"
 import { loadLocale } from "./i18n-util.sync"
 
 export interface LLProps {
   LL: TranslationFunctions
+  locale: Locales
 }
 
 export const loadI18nObject = (args: IArguments) => {
