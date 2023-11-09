@@ -8,13 +8,13 @@ import { Form } from "./Form"
 const Header = () => (
   <div className="pt-15 space-y-10">
     <div className="text-center text-zinc-800 text-3xl font-medium">Contact Us</div>
-    <div className=" relative aspect-ratio-375/426">
+    <div className=" relative aspect-375/426">
       <Image src={"/contact/bg.png"} alt={"contact"} fill />
     </div>
   </div>
 )
 
-export default function Licenses({
+export default function Root({
   params: { locale },
 }: {
   params: {

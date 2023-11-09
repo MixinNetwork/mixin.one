@@ -2,7 +2,7 @@ import Image from "next/image"
 
 const Item = ({ title, description, cover }: { title: string; description: string; cover: string }) => (
   <div className="bg-white rounded-sm shadow space-y-5 pb-12">
-    <div className=" relative aspect-ratio-335/223">
+    <div className=" relative aspect-335/225">
       <Image className="object-cover" fill src={"/feature/" + cover} alt={title} />
     </div>
     <div className="text-zinc-800 text-xl font-medium leading-snug px-5">{title}</div>

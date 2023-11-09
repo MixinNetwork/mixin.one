@@ -1,10 +1,11 @@
-import { NavBar } from "@/component/NavBar"
-import { Locales } from "@/i18n/i18n-types"
 import { i18nObject } from "@/i18n/i18n-util"
 import { loadLocale } from "@/i18n/i18n-util.sync"
+import { Locales } from "../../../../i18n/i18n-types"
+import { NavBar } from "../../../../component/NavBar"
 import { Header } from "./Header"
-import { HearFromOurCustomers } from "./HearFromOurCustomers"
-import { MoreFeatures } from "./MoreFeatures"
+import { CentralizationSection } from "./CentralizationSection"
+import { HearFromOurCustomers } from "../../license/HearFromOurCustomers"
+import { DecentralizationSection } from "./DecentralizationSection"
 
 export default function Root({
   params: { locale },
@@ -20,8 +21,9 @@ export default function Root({
     <>
       <NavBar LL={LL} locale={locale} />
       <Header />
+      <CentralizationSection />
+      <DecentralizationSection />
       <HearFromOurCustomers />
-      <MoreFeatures omit={"Compliant"} />
     </>
   )
 }

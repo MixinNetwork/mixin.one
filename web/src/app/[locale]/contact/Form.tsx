@@ -7,7 +7,7 @@ import { toast } from "sonner"
 import tw from "tailwind-styled-components"
 
 const Item = ({ children, isError }: { children: React.ReactNode; isError: boolean }) => (
-  <p className={clsx("text-sm font-normal space-y-2.5 transition-all", isError ? "text-red" : "text-zinc-800 text-opacity-80 ")}>{children}</p>
+  <div className={clsx("text-sm font-normal space-y-2.5 transition-all", isError ? "text-red" : "text-zinc-800 text-opacity-80 ")}>{children}</div>
 )
 const Input = tw.input`p-4 w-full rounded-sm border border-zinc-800`
 

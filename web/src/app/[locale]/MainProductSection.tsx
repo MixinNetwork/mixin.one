@@ -2,7 +2,7 @@ import Image from "next/image"
 
 const ProductCard = ({ title, description, cover }: { title: string; description: string; cover: string }) => (
   <div className="bg-white rounded-lg shadow-lg overflow-hidden">
-    <div className="aspect-335/224 relative">
+    <div className="aspect-335/225 relative">
       <Image fill src={cover} alt={title} />
     </div>
 

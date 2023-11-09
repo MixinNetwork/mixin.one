@@ -5,7 +5,7 @@ import Image from "next/image"
 import Mixin from "@/svg/mixin.svg"
 import { TrySafeSection } from "./TrySafeSection"
 import DropArrow from "@/svg/dropArrow.svg"
-import Link from "next/link"
+import Link from "./Link"
 
 const LinkList = ({ title, children, className }: { title: string; children: React.ReactNode; className?: string }) => (
   <div className={clsx("space-y-4", className)}>
@@ -92,7 +92,9 @@ const Footer = ({ LL, locale }: LLProps) => (
           <LinkList title={"Company"} className="order-6 md:order-4 md:row-span-2">
             <a>Our Mission</a>
             <a>Our Customers</a>
-            <a>Contact Us</a>
+            <Link locale={locale} href={"/contact"}>
+              Contact Us
+            </Link>
             <a>Media Kit</a>
             <a>Join us</a>
             <Link locale={locale} href={"/license"}>
