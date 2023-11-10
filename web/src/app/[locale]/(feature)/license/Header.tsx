@@ -1,5 +1,5 @@
 import Image from "next/image"
-import PageHeader from "../../../component/route/PageHeader"
+import PageHeader from "../../../../component/route/PageHeader"
 
 const Item = ({ cover, title, description }: { cover: string; title: string; description: string }) => (
   <div className="bg-white rounded-sm shadow pt-5 px-5 pb-10">

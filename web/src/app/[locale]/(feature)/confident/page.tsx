@@ -2,10 +2,11 @@ import { NavBar } from "../../../../component/NavBar"
 import { Locales } from "../../../../i18n/i18n-types"
 import { i18nObject } from "../../../../i18n/i18n-util"
 import { loadLocale } from "../../../../i18n/i18n-util.sync"
-import { HearFromOurCustomers } from "../../license/HearFromOurCustomers"
+import { HearFromOurCustomers } from "../../../../component/HearFromOurCustomers"
 import { Header } from "./Header"
 import { TechnologySection } from "./TechnologySection"
 import { ConfidentSection } from "./ConfidentSection"
+import { MoreFeatures } from "../../../../component/MoreFeatures"
 
 export default function Root({
   params: { locale },
@@ -24,6 +25,7 @@ export default function Root({
       <TechnologySection />
       <ConfidentSection />
       <HearFromOurCustomers />
+      <MoreFeatures omit={"Confident"} />
     </>
   )
 }

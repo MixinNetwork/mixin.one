@@ -4,11 +4,12 @@ import PageHeader from "../../../../component/route/PageHeader"
 import { Locales } from "../../../../i18n/i18n-types"
 import { i18nObject } from "../../../../i18n/i18n-util"
 import { loadLocale } from "../../../../i18n/i18n-util.sync"
-import { HearFromOurCustomers } from "../../license/HearFromOurCustomers"
+import { HearFromOurCustomers } from "../../../../component/HearFromOurCustomers"
 import { Section1 } from "./Section1"
 import { Section2 } from "./Section2"
 import { ReliableServiceSection } from "./ReliableServiceSection"
 import { ReliableSingerSection } from "./ReliableSingerSection"
+import { MoreFeatures } from "../../../../component/MoreFeatures"
 
 export default function Root({
   params: { locale },
@@ -29,6 +30,7 @@ export default function Root({
       <ReliableServiceSection />
       <ReliableSingerSection />
       <HearFromOurCustomers />
+      <MoreFeatures omit={"Reliable"} />
     </>
   )
 }
