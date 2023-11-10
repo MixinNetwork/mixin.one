@@ -1,4 +1,5 @@
 import Image from "next/image"
+import PageHeader from "../../../../component/route/PageHeader"
 
 const Item = ({ cover, title, description }: { cover: string; title: string; description: string }) => (
   <div className="bg-white rounded-sm shadow pb-20">
@@ -12,10 +13,7 @@ const Item = ({ cover, title, description }: { cover: string; title: string; des
 
 export const Header = () => (
   <>
-    <div className="py-15  space-y-10 container mx-auto space-y-5 px-5">
-      <div className="text-center text-zinc-800 text-3xl font-medium">Confident Bitcoin Custody</div>
-      <div className="text-center text-zinc-800 text-opacity-70 text-base font-normal leading-normal">Never worry about losing your keys or centralized evil custody</div>
-    </div>
+    <PageHeader title={"Confident Bitcoin Custody"} description={"Never worry about losing your keys or centralized evil custody"} />
     <div className="space-y-5 container mx-auto px-5 pb-15">
       <Item cover={"1.png"} title="私钥自持" description={"如果您不真正拥有自己的私钥，就永远无法对自己持有的比特币充满信心。使用 Mixin Safe，您对自己的钱包私钥拥有完整的掌控。"} />
       <Item cover={"2.png"} title="技术成熟" description={"我们的解决方案基于智能合约、多重签名、安全时间锁、MPC - TSS 和硬件钱包等成熟的技术和产品构建，确保您的资产安全。"} />

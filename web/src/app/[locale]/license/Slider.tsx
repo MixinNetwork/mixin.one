@@ -27,8 +27,6 @@ const Slider = () => {
     },
   })
 
-  console.log("currentSlide", currentSlide)
-
   return (
     <>
       <div ref={sliderRef} className="keen-slider">

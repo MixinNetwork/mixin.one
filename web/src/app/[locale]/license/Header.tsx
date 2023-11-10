@@ -1,4 +1,5 @@
 import Image from "next/image"
+import PageHeader from "../../../component/route/PageHeader"
 
 const Item = ({ cover, title, description }: { cover: string; title: string; description: string }) => (
   <div className="bg-white rounded-sm shadow pt-5 px-5 pb-10">
@@ -11,10 +12,7 @@ const Item = ({ cover, title, description }: { cover: string; title: string; des
 )
 export const Header = () => (
   <>
-    <div className="container mx-auto px-5 py-15 space-y-5">
-      <div className="text-center text-zinc-800 text-3xl font-medium">Licenses and registrations</div>
-      <div className="text-center text-zinc-800 text-opacity-70 text-base font-normal leading-normal">We go out of our way to ensure that you have the utmost privacy.</div>
-    </div>
+    <PageHeader title={"Licenses and registrations"} description={"We go out of our way to ensure that you have the utmost privacy."} />
     <div>
       <div className="container mx-auto px-5 py-15 space-y-5">
         <Item cover="ministerstwoZdrowia.png" title="Ministry of Finance" description="Registration of Activities in the Field of Virtual Currencies" />

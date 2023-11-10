@@ -1,11 +1,14 @@
+import clsx from "clsx"
 import { NavBar } from "../../../../component/NavBar"
+import PageHeader from "../../../../component/route/PageHeader"
 import { Locales } from "../../../../i18n/i18n-types"
 import { i18nObject } from "../../../../i18n/i18n-util"
 import { loadLocale } from "../../../../i18n/i18n-util.sync"
 import { HearFromOurCustomers } from "../../license/HearFromOurCustomers"
-import { Header } from "./Header"
-import { TechnologySection } from "./TechnologySection"
-import { ConfidentSection } from "./ConfidentSection"
+import { Section1 } from "./Section1"
+import { Section2 } from "./Section2"
+import { ReliableServiceSection } from "./ReliableServiceSection"
+import { ReliableSingerSection } from "./ReliableSingerSection"
 
 export default function Root({
   params: { locale },
@@ -20,9 +23,11 @@ export default function Root({
   return (
     <>
       <NavBar LL={LL} locale={locale} />
-      <Header />
-      <TechnologySection />
-      <ConfidentSection />
+      <PageHeader title="Reliable Technical Service" description="We never invent our own cryptographic techniques" />
+      <Section1 />
+      <Section2 />
+      <ReliableServiceSection />
+      <ReliableSingerSection />
       <HearFromOurCustomers />
     </>
   )
