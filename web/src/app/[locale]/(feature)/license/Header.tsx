@@ -3,7 +3,7 @@ import PageHeader from "../../../../component/route/PageHeader"
 
 const Item = ({ cover, title, description }: { cover: string; title: string; description: string }) => (
   <div className="bg-white rounded-sm shadow pt-5 px-5 pb-10">
-    <div className="aspect-335/218 relative">
+    <div className="aspect-335/220 relative">
       <Image src={"/license/" + cover} alt={title} fill className="object-contain" />
     </div>
     <div className="mt-10 text-zinc-800 text-xl font-medium leading-snug">{title}</div>

@@ -3,9 +3,11 @@ import { LLProps } from "../../i18n/custom"
 import MixinIcon from "@/svg/mixin.svg"
 import clsx from "clsx"
 import Hamburger from "./hamburger.svg"
+import Link from "../route/Link"
 
 export const NavBar = ({
   LL,
+  locale,
   type,
 }: LLProps & {
   type?: "white"
@@ -17,7 +19,9 @@ export const NavBar = ({
       <Hamburger className={clsx(type && "fill-white fill-op-90")} />
     </button>
     <div className={clsx("hidden sm:flex shrink-0 flex-row items-center space-x-4.5 text-sm font-normal", type && "text-white")}>
-      <a>Technology</a>
+      <Link locale={locale} href="/tecnology">
+        Technology
+      </Link>
       <a>Pricing</a>
       <a>Company</a>
       <a className="px-6 py-3 bg-white rounded text-zinc-800 text-sm font-medium leading-none ml-10!">Get Started</a>

@@ -2,7 +2,7 @@ import Image from "next/image"
 import { replace } from "@/helper/replace"
 import { LLProps } from "@/i18n/custom"
 import { i18nObject, locales } from "@/i18n/i18n-util"
-import { FAQ } from "./FAQ"
+import { FAQ } from "../../component/FAQ"
 import { AuditReportSection } from "./AuditReportSection"
 import { TrustedSection } from "./TrustedSection"
 import { SupportedAssetSection } from "./SupportedAssetSection"
@@ -49,14 +49,15 @@ export default function Home({
 }) {
   loadLocale(locale)
   const LL = i18nObject(locale)
+  const llProps: LLProps = { LL, locale }
   return (
     <>
-      <Header LL={LL} locale={locale} />
+      <Header {...llProps} />
       <StatisticGridSection />
-      <SolutionSection />
-      <FeatureCardSection LL={LL} locale={locale} />
+      <SolutionSection {...llProps} />
+      <FeatureCardSection {...llProps} />
       <MainProductSection />
-      <EasyManageSection LL={LL} locale={locale} />
+      <EasyManageSection {...llProps} />
       <SupportedAssetSection />
       <TrustedSection />
       <AuditReportSection />
