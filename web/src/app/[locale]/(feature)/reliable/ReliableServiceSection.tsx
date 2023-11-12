@@ -15,7 +15,7 @@ const Item = ({ icon, title, description, theme }: { title: string; description:
 
 export const ReliableServiceSection = () => (
   <div className="container mx-auto pt-15 px-5 pb-40">
-    <PageHeader title={"Reliable Service"} description="The Harrowing Tales of Losses in the Era of Centralized Exchanges, Wallets, and Custodial Services" />
+    <PageHeader description="The Harrowing Tales of Losses in the Era of Centralized Exchanges, Wallets, and Custodial Services">Reliable Service</PageHeader>
     <div className="grid gap-5 auto-rows-fr">
       <Item
         title={"Recovery Service"}

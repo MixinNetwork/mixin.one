@@ -22,7 +22,7 @@ export default function Root({
   return (
     <>
       <NavBar LL={LL} locale={locale} />
-      <PageHeader title={"How it Secures"} description="We never invent our own cryptographic techniques" />
+      <PageHeader description="We never invent our own cryptographic techniques">How it Secures</PageHeader>
       <Section1 />
       <Section2 />
       <Section3 />

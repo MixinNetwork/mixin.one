@@ -22,7 +22,7 @@ const Item = ({ icon, titleIcon, description }: { icon: React.ReactNode; titleIc
 
 export const ReliableSingerSection = () => (
   <div className="bg-slate-100 bg-opacity-40 pt-2.5 pb-37.5">
-    <PageHeader title="Reliable Singer" description="We are working on getting support of Mixin Safe in more wallet signers" />
+    <PageHeader description="We are working on getting support of Mixin Safe in more wallet signers">Reliable Singer</PageHeader>
     <div className="grid gap-5 auto-rows-fr container mx-auto px-5">
       <Item icon={<Icon1 />} titleIcon={<TitleIcon1 />} description={"Bitcoin Core connects to the Bitcoin peer-to-peer network to download and fully validate blocks and transactions."} />
       <Item icon={<Icon2 />} titleIcon={<TitleIcon2 />} description={"Mornin Key is an open source decentralized key manager that helps users truly control and protect their data."} />

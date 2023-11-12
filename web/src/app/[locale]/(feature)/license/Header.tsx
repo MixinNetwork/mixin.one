@@ -12,7 +12,7 @@ const Item = ({ cover, title, description }: { cover: string; title: string; des
 )
 export const Header = () => (
   <>
-    <PageHeader title={"Licenses and registrations"} description={"We go out of our way to ensure that you have the utmost privacy."} />
+    <PageHeader description={"We go out of our way to ensure that you have the utmost privacy."}>Licenses and registrations</PageHeader>
     <div>
       <div className="container mx-auto px-5 py-15 space-y-5">
         <Item cover="ministerstwoZdrowia.png" title="Ministry of Finance" description="Registration of Activities in the Field of Virtual Currencies" />

@@ -8,7 +8,7 @@ import PageHeader from "../../../component/route/PageHeader"
 
 const Header = () => (
   <>
-    <PageHeader title="Contact Us" />
+    <PageHeader>Contact Us</PageHeader>
     <div className="relative aspect-375/426">
       <Image src={"/contact/bg.png"} alt={"contact"} fill />
     </div>

@@ -21,7 +21,7 @@ export default function Root({
   return (
     <>
       <NavBar LL={LL} locale={locale} />
-      <PageHeader title={"Privacy by Design"} description="We go out of our way to ensure that you have the utmost privacy." />
+      <PageHeader description="We go out of our way to ensure that you have the utmost privacy.">Privacy by Design</PageHeader>
       <Section1 />
       <GDPR />
       <HearFromOurCustomers />
