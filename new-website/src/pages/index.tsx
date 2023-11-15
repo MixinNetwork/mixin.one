@@ -1,0 +1,73 @@
+import Translate, { translate } from "@docusaurus/Translate"
+import { AuditReportSection } from "../components/page/home/AuditReportSection"
+import { EasyManageSection } from "../components/page/home/EasyManageSection"
+import { FeatureCardSection } from "../components/page/home/FeatureCardSection"
+import { MainProductSection } from "../components/page/home/MainProductSection"
+import { SolutionSection } from "../components/page/home/SolutionSection"
+import { StatisticGridSection } from "../components/page/home/StatisticGridSection"
+import { TrustedSection } from "../components/page/home/TrustedSection"
+import replace from "../helper/replace"
+import Navbar from "../theme/Navbar"
+
+import Layout from "../theme/Layout"
+import { FAQSection } from "../components/common/FAQSection"
+import { SupportedAssetSection } from "../components/page/home/SupportedAssetSection"
+
+const Header = () => {
+  const title = replace(
+    translate({
+      message: "Grow and secure your crypto wealth with Confidence",
+    }),
+    [
+      {
+        match: translate({
+          message: "Confidence",
+        }),
+        replace: (match) => (
+          <span key={match} className="text-blue-500">
+            {match}
+          </span>
+        ),
+      },
+    ]
+  )
+
+  return (
+    <div className="bg-gradient-to-b from-[#171924] to-[#222C3F] sm:bg-none sm:relative">
+      <img src={require("@site/static/img/page/home/bgHeader.webp").default} className="object-cover -z-10 hidden sm:block absolute inset-0 h-full w-full" />
+      <Navbar dark />
+      <div className="px-10 pt-15 pb-19 sm:pt-12.5 md:pt-20 lg:pt-54 sm:pb-16.5 sm:pb-32.5 lg:pb-79 sm:text-center container mx-auto">
+        <div className="text-white text-4xl sm:text-5xl font-normal leading-[48px]">{title}</div>
+        <div className="mt-7.5 sm:mt-6 md:mt-8 lg:mt-12 text-white text-opacity-80 text-sm font-normal leading-snug">
+          <Translate>Protect your crypto with MPC-TSS that you control and get access to trading, inheritance, and loans—all backed by the best support in the industry.</Translate>
+        </div>
+
+        <div className="mt-24.5 sm:mt-12.5 md:mt-18.5 lg:mt-21.5 grid gap-y-5 gap-x-7.5 sm:grid-cols-2 sm:w-fit mx-auto">
+          <a className="order-last sm:order-none sm:w-57.5 h-12 bg-neutral-100 rounded-sm text-black text-sm font-medium uppercase flex-center">
+            <Translate>Get started</Translate>
+          </a>
+          <a className="sm:w-57.5 h-12 rounded-sm border border-neutral-100 text-white text-sm font-medium w-full uppercase flex-center">
+            <Translate>Book a consultation</Translate>
+          </a>
+        </div>
+      </div>
+    </div>
+  )
+}
+
+export default function Root() {
+  return (
+    <Layout hiddenNavBar>
+      <Header />
+      <StatisticGridSection />
+      <SolutionSection />
+      <FeatureCardSection />
+      <MainProductSection />
+      <EasyManageSection />
+      <SupportedAssetSection />
+      <TrustedSection />
+      <AuditReportSection />
+      <FAQSection />
+    </Layout>
+  )
+}

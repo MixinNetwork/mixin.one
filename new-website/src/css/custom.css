@@ -1,0 +1,29 @@
+/* @import "@unocss/reset/normalize.css"; */
+@import "@unocss/reset/tailwind-compat.css";
+@unocss all;
+
+:root {
+  --ifm-global-spacing: 0;
+}
+a,
+button {
+  @apply hover:opacity-90 hover:active:focus:opacity-80 disabled:opacity-20;
+}
+
+button {
+  @apply select-none bg-transparent leading-none;
+}
+
+* {
+  @apply outline-none font-default;
+}
+
+[class*="sm:"],
+[class*="md:"],
+[class*="lg:"] {
+  @apply transition-all;
+}
+
+svg {
+  @apply inline align-base;
+}

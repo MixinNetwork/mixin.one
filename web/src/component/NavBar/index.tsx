@@ -1,4 +1,3 @@
-import Image from "next/image"
 import { LLProps } from "../../i18n/custom"
 import MixinIcon from "@/svg/mixin.svg"
 import clsx from "clsx"
