@@ -1,4 +1,5 @@
 import Translate from "@docusaurus/Translate"
+import LocalLink from "../../common/LocaleLink"
 
 // Audit Report
 export const AuditReportSection = () => (
@@ -14,9 +15,9 @@ export const AuditReportSection = () => (
           </div>
         </div>
 
-        <a className="md:block hidden w-fit px-7 py-4 flex-center bg-zinc-700 rounded-sm text-white text-sm font-medium leading-snug">
+        <LocalLink href="https://github.com/MixinNetwork/audits" className="md:block hidden w-fit px-7 py-4 flex-center bg-zinc-700 rounded-sm text-white text-sm font-medium leading-snug">
           <Translate>View security audits</Translate>
-        </a>
+        </LocalLink>
       </div>
 
       <div className="container mx-auto grid grid-cols-2 gap-4">
@@ -27,7 +28,12 @@ export const AuditReportSection = () => (
           ))}
       </div>
 
-      <a className="md:hidden mt-10 sm:mt-12.5 rw-10 sm:w-fit sm:px-7 mx-auto py-4 flex-center bg-zinc-700 rounded-sm text-white text-sm font-medium leading-snug">View security audits</a>
+      <LocalLink
+        href="https://github.com/MixinNetwork/audits"
+        className="md:hidden mt-10 sm:mt-12.5 rw-10 sm:w-fit sm:px-7 mx-auto py-4 flex-center bg-zinc-700 rounded-sm text-white text-sm font-medium leading-snug"
+      >
+        View security audits
+      </LocalLink>
     </div>
   </div>
 )

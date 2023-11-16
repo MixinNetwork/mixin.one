@@ -1,5 +1,6 @@
 import Translate, { translate } from "@docusaurus/Translate"
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext"
+import LocalLink from "../../common/LocaleLink"
 
 const EasyManageItem = ({ title, description, icon }: { title: string; description: string; icon: string }) => (
   <div className="grid grid-cols-[auto_1fr] gap-y-4 gap-x-5">
@@ -79,9 +80,9 @@ export const EasyManageSection = () => {
         />
       </div>
 
-      <a className="mt-20 sm:mt-15 rw-10 sm:w-fit sm:px-7 mx-auto py-4 flex-center bg-zinc-700 rounded-sm text-white text-sm font-medium leading-snug">
+      <LocalLink to="/pricing" className="mt-20 sm:mt-15 rw-10 sm:w-fit sm:px-7 mx-auto py-4 flex-center bg-zinc-700 rounded-sm text-white text-sm font-medium leading-snug">
         <Translate>View our plans</Translate>
-      </a>
+      </LocalLink>
     </div>
   )
 }

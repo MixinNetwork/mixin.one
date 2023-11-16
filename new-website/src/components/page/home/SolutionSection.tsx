@@ -10,9 +10,9 @@ export const SolutionSection = () => (
       <LocalLink to="/technology" className="sm:px-10 h-12 flex-center bg-neutral-800 rounded-sm text-white text-base font-medium">
         <Translate>How it Secure</Translate>
       </LocalLink>
-      <a className="sm:px-10 h-12 rounded-sm border flex-center border-neutral-800 text-black text-base font-medium ">
+      <LocalLink to="/pricing" className="sm:px-10 h-12 rounded-sm border flex-center border-neutral-800 text-black text-base font-medium ">
         <Translate>Pricing & Plans</Translate>
-      </a>
+      </LocalLink>
     </div>
   </>
 )

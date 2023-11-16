@@ -1,7 +1,7 @@
 import Layout from "@theme/Layout"
 import { GetStartedSection } from "../../components/common/GetStartedSection"
 import { FAQSection } from "../../components/common/FAQSection"
-import { PlanSection } from "../../components/page/price/PlanSection"
+import { PlanSection } from "../../components/page/pricing/PlanSection"
 import { translate } from "@docusaurus/Translate"
 
 export default function Root() {

@@ -1,4 +1,5 @@
 import Translate, { translate } from "@docusaurus/Translate"
+import LocalLink from "../../common/LocaleLink"
 
 const ProductCard = ({ title, description, cover }: { title: string; description: string; cover: string }) => (
   <div className="bg-white rounded-lg shadow-lg overflow-hidden">
@@ -47,9 +48,9 @@ export const MainProductSection = () => {
         />
       </div>
 
-      <a className="mt-24.5 px-7 py-4 mx-auto bg-zinc-800 rounded-sm text-white text-base font-bold leading-none">
+      <LocalLink to="/pricing" className="mt-24.5 px-7 py-4 mx-auto bg-zinc-800 rounded-sm text-white text-base font-bold leading-none">
         <Translate>View our plans</Translate>
-      </a>
+      </LocalLink>
     </div>
   )
 }

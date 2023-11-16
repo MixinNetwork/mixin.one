@@ -48,7 +48,7 @@ export const Item = ({ name, description, price, features, cover }: { name: Reac
           </div>
         ))}
       </div>
-      <img src={require("@site/static/img/page/price/" + cover).default} className="mt-20 w-full" />
+      <img src={require("@site/static/img/page/pricing/" + cover).default} className="mt-20 w-full" />
     </div>
   )
 }

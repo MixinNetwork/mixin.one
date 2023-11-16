@@ -2,7 +2,7 @@ import Translate from "@docusaurus/Translate"
 
 const TrustedItem = ({ name, icon }: { name: string; icon: string }) => (
   <div className="space-y-3">
-    <img src={require("@site/static/img/page/home/trusted/" + icon).default} alt={name} className="mx-auto w-15 h-15" />
+    <img src={require("@site/static/img/page/home/trusted/" + icon).default} alt={name} className="mx-auto aspect-square w-15 object-cover" />
     <div className="text-center text-white text-xs font-medium leading-3">{name}</div>
   </div>
 )

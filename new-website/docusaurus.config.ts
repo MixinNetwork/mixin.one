@@ -75,8 +75,8 @@ const config: Config = {
           to: "/technology",
         },
         {
-          label: "Price",
-          to: "/price",
+          label: "Pricing",
+          to: "/pricing",
         },
         {
           label: "Company",
@@ -85,7 +85,7 @@ const config: Config = {
         },
         {
           label: "Get Started",
-          to: "/price",
+          to: "/pricing",
           position: "right",
           className: "px-6 py-3 dark:bg-white dark:text-zinc-800 bg-zinc-800 text-white rounded font-medium leading-none",
         },
