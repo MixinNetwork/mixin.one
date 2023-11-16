@@ -7,7 +7,11 @@
 }
 a,
 button {
-  @apply hover:opacity-90 hover:active:focus:opacity-80 disabled:opacity-20;
+  @apply hover:opacity-90 hover:active:focus:opacity-50 disabled:opacity-20;
+}
+
+a {
+  @apply hover:no-underline;
 }
 
 button {

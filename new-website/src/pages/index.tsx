@@ -67,7 +67,54 @@ export default function Root() {
       <SupportedAssetSection />
       <TrustedSection />
       <AuditReportSection />
-      <FAQSection />
+      <FAQSection
+        faqs={[
+          {
+            question: translate({
+              message: "Is Mixin Safe really completely decentralized?",
+            }),
+            answer: translate({
+              message:
+                "Yes, Mixin Safe combines the multi-signature and time lock scripts of the Bitcoin network, and adopts the decentralized mature multi-party computing MPC technology, and successfully realizes a complete decentralized asset custody solution. Through the Bitcoin native time lock technology, only you have complete control of the wallet, and no one else, including our team, can spend your coins.",
+            }),
+          },
+          {
+            question: translate({
+              message: "Is Mixin Safe safer than my hardware wallet?",
+            }),
+            answer: translate({
+              message:
+                "Mixin Safe's multi-signature and time lock technology effectively avoids single-point failures such as loss or damage of a single hardware wallet device while maintaining decentralization, thereby greatly improving the security of the wallet.",
+            }),
+          },
+          {
+            question: translate({
+              message: "Do I have to pay to use Mixin products?",
+            }),
+            answer: translate({
+              message: "No, you can use the free Mixin Messenger.",
+            }),
+          },
+
+          {
+            question: translate({
+              message: "What is the relationship between Mixin, Mixin Network and Mixin Messenger?",
+            }),
+            answer: translate({
+              message: "Mixin is the abbreviation of the Mixin Network ecosystem. Mixin Network is a public chain, and Mixin Messenger is the first open source Dapp on Mixin Network.",
+            }),
+          },
+          {
+            question: translate({
+              message: "Are Mixin Network, Mixin Messenger, Exin, and Pando developed by the same team?",
+            }),
+            answer: translate({
+              message:
+                "Mixin Team and Exin and Pando are independent teams of the same ecosystem, each providing different products and services. Mixin Team development team is a Hong Kong company, mainly responsible for the development and operation of Mixin Network, Mixin Messenger, Mixin Safe, Mixin Route and other products and projects.",
+            }),
+          },
+        ]}
+      />
     </Layout>
   )
 }
