@@ -99,15 +99,15 @@ const config: Config = {
           items: [
             {
               label: "Mixin Messenger",
-              to: "/",
+              to: "https://messenger.mixin.one/",
             },
             {
               label: "Mixin Safe",
-              href: "https://safe.mixin.zone/",
+              href: "https://safe.mixin.one/",
             },
             {
               label: "Mixin Wealth",
-              to: "/",
+              to: "https://wealth.mixin.one/",
             },
           ],
         },
@@ -149,19 +149,19 @@ const config: Config = {
             },
             {
               label: "Mixin Network",
-              href: "https://mixin.network/developers/",
+              href: "https://mixin.network/",
             },
             {
               label: "Mixin Trusted Group",
-              href: "https://mixin.network/developers/",
+              href: "https://developers.mixin.one/docs/mainnet/mtg/overview/",
             },
             {
               label: "Mixin Virtual Machine",
-              href: "https://mixin.network/developers/",
+              href: "https://mvm.app/",
             },
             {
               label: "Throttled Identity Protocol",
-              href: "https://mixin.network/developers/",
+              href: "https://tip.id/",
             },
           ],
         },
