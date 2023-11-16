@@ -5,7 +5,7 @@ import useBaseUrl from "@docusaurus/useBaseUrl"
 export const GetStartedSection = () => (
   <div className="relative">
     <img src={useBaseUrl("/img/common/getStarted.svg")} className="-z-10 object-cover fill" />
-    <div className="pt-20 pb-30 px-2.5 grid md:grid-cols-2 container mx-auto">
+    <div className="pt-20 pb-30 px-10 grid md:grid-cols-2 container mx-auto gap-x-30">
       <img src={require("@site/static/img/common/getStartedPerson.webp").default} alt={"try safe"} className="aspect-355/204 md:aspect-657/376 md:order-last" />
       <div className="md:flex md:flex-col md:justify-between px-10 md:px-0">
         <div className="mt-17.5 md:mt-0 md:w-fit text-white text-3xl font-medium leading-10">
