@@ -44,7 +44,7 @@ export const Item = ({ name, description, price, features, cover }: { name: Reac
         {features.map((feature) => (
           <div className="flex-center space-x-2.5 w-fit">
             <Checked />
-            <div className="text-zinc-800 text-base font-normal font-['Inter'] leading-none">{feature}</div>
+            <div className="text-zinc-800 text-base font-normal leading-none">{feature}</div>
           </div>
         ))}
       </div>

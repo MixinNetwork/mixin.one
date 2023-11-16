@@ -4,7 +4,7 @@ const Item = ({ index, title, description }: { index: number; title: string; des
   <div className="grid grid-cols-[auto_1fr] gap-4">
     <div className="w-5 h-5 leading-none bg-zinc-800 rounded-full text-sm text-white flex-center">{index}</div>
     <div className="text-zinc-800 text-xl font-medium leading-tight">{title}</div>
-    <div className="col-span-2 text-zinc-800 text-opacity-80 text-sm font-normal font-['Inter'] leading-snug">{description}</div>
+    <div className="col-span-2 text-zinc-800 text-opacity-80 text-sm font-normal leading-snug">{description}</div>
   </div>
 )
 export const Section1 = () => (

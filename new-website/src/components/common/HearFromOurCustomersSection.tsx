@@ -3,7 +3,6 @@ import Translate, { translate } from "@docusaurus/Translate"
 import QuotationMark from "@site/static/img/common/quotationMark.svg"
 import Carousel, { CarouselProps } from "react-multi-carousel"
 import React from "react"
-
 import NextArrow from "@site/static/img/common/nextArrow.svg"
 import clsx from "clsx"
 import prepareCarouselData, { CarouselButtonGroupProps } from "../../helper/carousel"

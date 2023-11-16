@@ -80,7 +80,7 @@ const config: Config = {
         },
         {
           label: "Company",
-          to: "/",
+          to: "/about",
           position: "left",
         },
         {
