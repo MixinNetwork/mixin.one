@@ -33,7 +33,7 @@ export const ConfidentBitcoinCustodySection = () => {
       </SectionTitle>
       <div className="container mx-auto px-5 grid gap-5 sm:grid-cols-2 pb-15">
         <Item
-          cover="1.1.png"
+          cover="1.1.webp"
           title={translate({
             message: "Self-custody",
           })}
@@ -42,7 +42,7 @@ export const ConfidentBitcoinCustodySection = () => {
           })}
         />
         <Item
-          cover="1.2.png"
+          cover="1.2.webp"
           title={translate({ message: "Mature technology" })}
           description={translate({
             message:
@@ -50,7 +50,7 @@ export const ConfidentBitcoinCustodySection = () => {
           })}
         />
         <Item
-          cover="1.3.png"
+          cover="1.3.webp"
           title={translate({ message: "Vault co-management" })}
           description={translate({
             message:
@@ -58,7 +58,7 @@ export const ConfidentBitcoinCustodySection = () => {
           })}
         />
         <Item
-          cover="1.4.png"
+          cover="1.4.webp"
           title={translate({ message: "Estate planning" })}
           description={translate({
             message: "Estate planning can help you safely pass on your crypto wealth to your descendants. Your heirs can easily inherit your wealth without any professional knowledge.",

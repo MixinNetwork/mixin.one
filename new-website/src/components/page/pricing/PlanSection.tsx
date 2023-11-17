@@ -101,7 +101,7 @@ export const PlanSection = () => {
                 <Translate>Social recovery</Translate>,
                 <Translate>Free email and chat support</Translate>,
               ]}
-              cover="phone.png"
+              cover="phone.webp"
             />
 
             <Item
@@ -118,7 +118,7 @@ export const PlanSection = () => {
                 <Translate>Paid recovery service</Translate>,
                 <Translate>Paid inheritance service</Translate>,
               ]}
-              cover="macAndPhone.png"
+              cover="macAndPhone.webp"
             />
           </Section>
 
@@ -137,7 +137,7 @@ export const PlanSection = () => {
                 <Translate>Paid recovery service</Translate>,
                 <Translate>Paid inheritance service</Translate>,
               ]}
-              cover="macAndPhone.png"
+              cover="macAndPhone.webp"
             />
             <Item
               name={<Translate>Elite</Translate>}
@@ -153,7 +153,7 @@ export const PlanSection = () => {
                 <Translate>Free recovery service</Translate>,
                 <Translate>Free inheritance service</Translate>,
               ]}
-              cover="macAndPhone.png"
+              cover="macAndPhone.webp"
             />
           </Section>
           <Section id="institution" selected={selected}>
@@ -173,7 +173,7 @@ export const PlanSection = () => {
                 <Translate>Free 24/7 phone support</Translate>,
                 <Translate>Customized DeFi service</Translate>,
               ]}
-              cover="macAndPhone.png"
+              cover="macAndPhone.webp"
             />
           </Section>
         </div>

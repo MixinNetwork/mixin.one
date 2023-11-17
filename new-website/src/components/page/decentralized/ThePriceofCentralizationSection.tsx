@@ -6,7 +6,7 @@ const SpecialItem = () => (
   <div className="sm:col-span-2 relative auto-rows-fr grid sm:grid-cols-2">
     <div className="absolute fill bg-gradient-to-t sm:bg-gradient-to-r from-slate-950 via-[#010F24] to-transparent z-0" />
 
-    <img src={require("@site/static/img/page/decentralized/2.1.png").default} alt={"centralization"} className="aspect-375/300 -z-1 w-full h-full object-cover sm:order-last" />
+    <img src={require("@site/static/img/page/decentralized/2.1.webp").default} alt={"centralization"} className="aspect-375/300 -z-1 w-full h-full object-cover sm:order-last" />
 
     <div className="p-5 pb-10 space-y-4 z-1 sm:pl-15 sm:pt-15">
       <div className="text-white text-xl font-medium">
@@ -28,7 +28,7 @@ const Item = ({ cover, title, description }: { cover: string; title: string; des
     <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black" />
     <div className="p-5 absolute inset-0 top-auto space-y-4">
       <div className="text-white text-xl font-medium">{title}</div>
-      <div className="text-white text-opacity-60 text-sm font-normal leading-snug">{description}</div>
+      <div className="text-white text-opacity-60 text-sm font-normal leading-relaxed">{description}</div>
     </div>
   </div>
 )
@@ -42,7 +42,7 @@ export const ThePriceofCentralizationSection = () => {
       <div className="container mx-auto px-5 gap-5 grid sm:grid-cols-2 pb-25">
         <SpecialItem />
         <Item
-          cover={"2.2.png"}
+          cover={"2.2.webp"}
           title={translate({
             message: "QuadrigaCX Founder's Death",
           })}
@@ -52,7 +52,7 @@ export const ThePriceofCentralizationSection = () => {
           })}
         />
         <Item
-          cover={"2.3.png"}
+          cover={"2.3.webp"}
           title={translate({
             message: "BitPay Phishing Attack",
           })}

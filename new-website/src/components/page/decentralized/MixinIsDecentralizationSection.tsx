@@ -3,8 +3,8 @@ import SectionTitle from "../../common/SectionTitle"
 import clsx from "clsx"
 
 const Item = ({ cover, title, description, points, className }: { cover: string; title: string; description?: string; points: string[]; className?: string }) => (
-  <div className={clsx("pt-15 pb-15 flex flex-col gap-15 items-center sm:flex-row", className)}>
-    <img src={require("@site/static/img/page/decentralized/" + cover).default} alt={title} className="aspect-335/225 w-full h-full grow" />
+  <div className={clsx("pt-15 pb-15 grid gap-15 items-center sm:grid-cols-2", className)}>
+    <img src={require("@site/static/img/page/decentralized/" + cover).default} alt={title} className="aspect-335/225 w-full" />
 
     <div className="shrink">
       <div className="text-zinc-800 text-xl font-medium leading-relaxed">{title}</div>
@@ -36,7 +36,7 @@ export const MixinIsDecentralizationSection = () => {
       </SectionTitle>
       <div className="container mx-auto px-5 pb-25">
         <Item
-          cover={"3.1.png"}
+          cover={"3.1.webp"}
           title={translate({ message: "Decentralized Network" })}
           description={translate({
             message:
@@ -51,7 +51,7 @@ export const MixinIsDecentralizationSection = () => {
           className="sm:flex-row-reverse!"
         />
         <Item
-          cover={"3.2.png"}
+          cover={"3.2.webp"}
           title={translate({ message: "Decentralized Technology" })}
           points={[
             translate({ message: "Multi-signature technology makes it easy for you to manage large assets with your family, friends and colleagues to avoid single point of failure." }),

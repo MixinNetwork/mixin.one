@@ -90,9 +90,9 @@ export const HearFromOurCustomersSection = () => {
       <SectionTitle>
         <Translate>Hear from our customers</Translate>
       </SectionTitle>
-      <div className="container mx-auto sm:flex flex-row-reverse overflow-hidden sm:pb-45 pb-25">
-        <img src={require("@site/static/img/common/hearFromOurCustomers.png").default} className="aspect-375/250 sm:aspect-430/500 object-cover w-full sm:w-fit" />
-        <div className="bg-zinc-800 pt-15 pb-13 basis-2/3 overflow-hidden">
+      <div className="container mx-auto grid sm:grid-cols-[3fr_1fr] overflow-hidden sm:pb-45 pb-25">
+        <img src={require("@site/static/img/common/hearFromOurCustomers.webp").default} className="aspect-375/250 sm:aspect-430/500 sm:order-last object-cover h-full" />
+        <div className="bg-zinc-800 pt-15 pb-13 flex-2/3 overflow-hidden">
           <QuotationMark className="ml-9.5" />
           <Carousel {...props} customButtonGroup={<ButtonGroup {...props} />} />
         </div>

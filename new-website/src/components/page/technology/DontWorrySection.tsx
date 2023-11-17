@@ -27,8 +27,8 @@ const Item = ({
   <div className="group">
     <div className="text-center text-zinc-800 text-3xl font-medium leading-10">{title}</div>
     <div className="mt-5 text-center text-zinc-800 text-opacity-70 text-base font-normal leading-normal">{description}</div>
-    <div className="mt-10 flex flex-col items-center gap-10 sm:flex-row sm:group-odd:flex-row-reverse">
-      <img src={require("@site/static/img/page/technology/" + cover).default} className="aspect-335/470 w-full h-full object-cover" />
+    <div className="mt-10 grid items-center gap-10 sm:grid-cols-2">
+      <img src={require("@site/static/img/page/technology/" + cover).default} className="aspect-335/470 w-full object-cover sm:group-odd:order-last" />
 
       <div className="space-y-16">
         {points.map(({ title, description, icon }) => (
@@ -54,7 +54,7 @@ export const DontWorrySection = () => {
             and wealth growth.
           </Translate>
         }
-        cover="3.1.1.png"
+        cover="3.1.1.webp"
         points={[
           {
             title: translate({
@@ -109,7 +109,7 @@ export const DontWorrySection = () => {
       <Item
         title={<Translate>Use with Confidence</Translate>}
         description={<Translate>We integrate advanced and reliable technologies to provide you with secure self-hosted wallets and decentralized asset recovery and inheritance services.</Translate>}
-        cover="3.2.1.png"
+        cover="3.2.1.webp"
         points={[
           {
             title: translate({

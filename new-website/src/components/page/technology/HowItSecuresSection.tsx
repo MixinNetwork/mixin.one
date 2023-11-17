@@ -2,9 +2,12 @@ import SectionTitle from "../../common/SectionTitle"
 import Translate from "@docusaurus/Translate"
 
 const Item = ({ cover, title, description }: { cover: string; title: React.ReactNode; description: React.ReactNode }) => (
-  <div className="bg-slate-100 rounded-sm pt-15 px-5 pb-30 flex flex-col items-center md:flex-row md:odd:flex-row-reverse gap-15">
-    <img src={require("@site/static/img/page/technology/" + cover).default} className="aspect-335/320 h-full object-cover " />
-    <div>
+  <div className="bg-slate-100 rounded-sm px-5 pb-30 md:pb-0 grid items-center md:grid-cols-2 md:px-30 md:gap-20 overflow-hidden group">
+    <div className="p-15 md:p-5 lg:p-15 md:group-odd:order-last">
+      <img src={require("@site/static/img/page/technology/" + cover).default} className="aspect-335/320 w-full object-cover " />
+    </div>
+
+    <div className="md:py-15">
       <div className="text-zinc-800 text-xl font-medium leading-snug">{title}</div>
       <div className="mt-6.5 text-zinc-800 text-opacity-80 text-base font-normal leading-relaxed">{description}</div>
     </div>
@@ -19,10 +22,10 @@ export const HowItSecuresSection = () => {
       </SectionTitle>
 
       <div className="container mx-auto px-5">
-        <img src={require("@site/static/img/page/technology/1.1.png").default} className="aspect-335/320 w-full" />
+        <img src={require("@site/static/img/page/technology/1.1.webp").default} className="aspect-335/320 w-full" />
         <div className="mt-20 md:mt-5 grid gap-y-5 auto-rows-fr pb-45">
           <Item
-            cover="1.2.png"
+            cover="1.2.webp"
             title={<Translate>Decentralized Network</Translate>}
             description={
               <Translate>
@@ -33,7 +36,7 @@ export const HowItSecuresSection = () => {
           />
 
           <Item
-            cover="1.3.png"
+            cover="1.3.webp"
             title={<Translate>Decentralized Wallet</Translate>}
             description={
               <Translate>
@@ -43,7 +46,7 @@ export const HowItSecuresSection = () => {
           />
 
           <Item
-            cover="1.4.png"
+            cover="1.4.webp"
             title={<Translate>Decentralized Services</Translate>}
             description={
               <Translate>
