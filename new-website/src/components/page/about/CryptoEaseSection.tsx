@@ -18,7 +18,7 @@ export const CryptoEaseSection = () => {
       <SectionTitle description={<Translate>We go out of our way to ensure that you have the utmost privacy.</Translate>}>
         <Translate>We believe hold crypto shouldn't be so hard and expensive</Translate>
       </SectionTitle>
-      <div className="mt-5 px-10 flex flex-col pb-30 sm:pb-40 sm:flex-row">
+      <div className="mt-5 px-10 grid pb-30 sm:pb-40 sm:grid-cols-[1fr_auto_1fr_auto_1fr]">
         <Item
           title={<Translate>2017</Translate>}
           description={

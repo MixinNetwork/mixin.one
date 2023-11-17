@@ -3,8 +3,8 @@ import SectionTitle from "../../common/SectionTitle"
 import clsx from "clsx"
 
 const Item = ({ cover, title, description, points, className }: { cover: string; title: string; description?: string; points: string[]; className?: string }) => (
-  <div className={clsx("pt-15 pb-15 grid gap-15 items-center sm:grid-cols-2", className)}>
-    <img src={require("@site/static/img/page/decentralized/" + cover).default} alt={title} className="aspect-335/225 w-full" />
+  <div className={clsx("pt-15 pb-15 grid gap-15 items-center sm:grid-cols-2 group", className)}>
+    <img src={require("@site/static/img/page/decentralized/" + cover).default} alt={title} className="aspect-335/225 w-full group-odd:order-last" />
 
     <div className="shrink">
       <div className="text-zinc-800 text-xl font-medium leading-relaxed">{title}</div>

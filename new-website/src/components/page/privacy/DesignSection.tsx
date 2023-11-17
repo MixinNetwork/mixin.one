@@ -4,8 +4,8 @@ import Translate from "@docusaurus/Translate"
 import Checked from "@site/static/img/common/checked.svg"
 
 const Item = ({ cover, title, points, description }: { cover: string; title: React.ReactNode; description?: React.ReactNode; points: React.ReactNode[] }) => (
-  <div className="flex flex-col items-center gap-15 sm:flex-row sm:odd:flex-row-reverse">
-    <img src={require("@site/static/img/page/privacy/" + cover).default} className="aspect-335/225 m-auto w-full sm:flex-1" />
+  <div className="grid items-center gap-15 sm:grid-cols-2 group">
+    <img src={require("@site/static/img/page/privacy/" + cover).default} className="aspect-335/225 m-auto w-full sm:flex-1 sm:group-odd:order-last" />
     <div className="sm:flex-1">
       <div className="text-zinc-800 text-xl font-medium leading-snug">{title}</div>
       {description && <div className="mt-5 text-zinc-800 text-base font-normal leading-relaxed">{description}</div>}
@@ -29,7 +29,7 @@ export const DesignSection = () => {
       </SectionTitle>
       <div className="mt-15 container mx-auto px-5 pb-40 gap-30 grid">
         <Item
-          cover="1.1.png"
+          cover="1.1.webp"
           title={<Translate>Information Privacy</Translate>}
           points={[
             <Translate>All messages are end-to-end encrypted, including text, photos, files and calls</Translate>,
@@ -39,7 +39,7 @@ export const DesignSection = () => {
         />
 
         <Item
-          cover="1.2.png"
+          cover="1.2.webp"
           title={<Translate>Asset Privacy</Translate>}
           points={[
             <Translate>If you lose the owner's private key of Mixin Safe vault, the types and quantities of your assets will not be leaked.</Translate>,
@@ -52,7 +52,7 @@ export const DesignSection = () => {
         />
 
         <Item
-          cover="1.3.png"
+          cover="1.3.webp"
           title={<Translate>Transfer Privacy</Translate>}
           points={[
             <Translate>Enhance UTXO transfer privacy through CryptoNote technology</Translate>,

@@ -2,7 +2,7 @@ import Translate from "@docusaurus/Translate"
 
 export const IntegratedSecuritySolutionSection = () => {
   return (
-    <div className="bg-slate-100 pt-25 pb-45">
+    <div className="bg-zinc-100 pt-25 pb-45">
       <div className="container mx-auto px-10 space-y-5">
         <div className="text-center text-zinc-800 text-2xl font-normal leading-9">
           <Translate>Integrated security solution to protect your assets</Translate>

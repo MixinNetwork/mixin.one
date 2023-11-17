@@ -11,7 +11,7 @@ button {
 }
 
 a {
-  @apply hover:no-underline;
+  @apply hover:no-underline hover:text-zinc-200 hover:text-op-100;
 }
 
 button {

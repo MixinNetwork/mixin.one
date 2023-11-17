@@ -9,7 +9,7 @@ const SpecialItem = () => (
     <img src={require("@site/static/img/page/decentralized/2.1.webp").default} alt={"centralization"} className="aspect-375/300 -z-1 w-full h-full object-cover sm:order-last" />
 
     <div className="p-5 pb-10 space-y-4 z-1 sm:pl-15 sm:pt-15">
-      <div className="text-white text-xl font-medium">
+      <div className="text-white text-xl font-medium sm:text-7 md:text-7.5 lg:text-8">
         <Translate>The Mt. Gox Debacle</Translate>
       </div>
       <div className="text-white text-opacity-60 text-sm font-normal leading-snug">
@@ -27,7 +27,7 @@ const Item = ({ cover, title, description }: { cover: string; title: string; des
     <img src={require("@site/static/img/page/decentralized/" + cover).default} alt={title} className="fill" />
     <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black" />
     <div className="p-5 absolute inset-0 top-auto space-y-4">
-      <div className="text-white text-xl font-medium">{title}</div>
+      <div className="text-white text-xl font-medium sm:text-7 md:text-7.5 lg:text-8">{title}</div>
       <div className="text-white text-opacity-60 text-sm font-normal leading-relaxed">{description}</div>
     </div>
   </div>

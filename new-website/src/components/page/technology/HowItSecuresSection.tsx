@@ -2,7 +2,7 @@ import SectionTitle from "../../common/SectionTitle"
 import Translate from "@docusaurus/Translate"
 
 const Item = ({ cover, title, description }: { cover: string; title: React.ReactNode; description: React.ReactNode }) => (
-  <div className="bg-slate-100 rounded-sm px-5 pb-30 md:pb-0 grid items-center md:grid-cols-2 md:px-30 md:gap-20 overflow-hidden group">
+  <div className="bg-zinc-100 rounded-sm px-5 pb-30 md:pb-0 grid items-center md:grid-cols-2 md:px-30 md:gap-20 overflow-hidden group">
     <div className="p-15 md:p-5 lg:p-15 md:group-odd:order-last">
       <img src={require("@site/static/img/page/technology/" + cover).default} className="aspect-335/320 w-full object-cover " />
     </div>

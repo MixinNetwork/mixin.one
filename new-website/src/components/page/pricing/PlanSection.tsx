@@ -14,7 +14,7 @@ export const Tab = ({ name, id, selected, onClick }: { name: string; id: string;
 }
 
 export const Section = ({ id, selected, children }: { id: string; selected: string; children: React.ReactNode }) => (
-  <div className={clsx("hidden col-span-full pt-8 gap-5 sm:grid-cols-2", id === selected && "grid!")}>{children}</div>
+  <div className={clsx("hidden col-span-full pt-8 gap-5", id === selected && "grid!")}>{children}</div>
 )
 
 export const Item = ({ name, description, price, features, cover }: { name: React.ReactNode; description: React.ReactNode; price: number; features: React.ReactNode[]; cover: string }) => {
@@ -37,18 +37,22 @@ export const Item = ({ name, description, price, features, cover }: { name: Reac
         {price <= 0 ? <Translate>Try for free</Translate> : <Translate>Get Started</Translate>}
       </button>
       <div className="mt-15 w-full h-px border border-zinc-300"></div>
-      <div className="space-y-5">
-        <div className="mt-10 text-zinc-800 text-xl font-medium leading-normal">
-          <Translate>Features</Translate>
-        </div>
-        {features.map((feature) => (
-          <div className="flex-center space-x-2.5 w-fit">
-            <Checked />
-            <div className="text-zinc-800 text-base font-normal leading-none">{feature}</div>
+      <div className="grid items-center sm:grid-cols-2 mt-20">
+        <div className="space-y-5">
+          <div className="text-zinc-800 text-xl font-medium leading-normal">
+            <Translate>Features</Translate>
           </div>
-        ))}
+          <div className="grid gap-5 grid-cols-2">
+            {features.map((feature) => (
+              <div className="flex-center space-x-2.5 w-fit">
+                <Checked className="shrink-0" />
+                <div className="text-zinc-800 text-base font-normal leading-none">{feature}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+        <img src={require("@site/static/img/page/pricing/" + cover).default} className="h-full" />
       </div>
-      <img src={require("@site/static/img/page/pricing/" + cover).default} className="mt-20 w-full" />
     </div>
   )
 }
