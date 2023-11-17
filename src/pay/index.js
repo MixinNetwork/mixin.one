@@ -3,6 +3,7 @@ import $ from 'zepto-webpack';
 import { Decimal } from 'decimal.js';
 import { v4 as uuidv4 } from 'uuid';
 import MixinUtils from '../utils/mixin.js';
+import AddressUtils from '../utils/address.js';
 import URLUtils from '../utils/url.js';
 import { initQRCode } from '../utils/modal.js';
 import arrow from '../assets/icons/arrow.svg';
@@ -120,6 +121,61 @@ Pay.prototype = {
     }, assetId)
   },
 
+  renderNew: function(address) {
+    const self = this;
+    const assetId = URLUtils.getUrlParameter("asset");
+    const amount = URLUtils.getUrlParameter("amount");
+    const traceId = URLUtils.getUrlParameter("trace");
+    const memo = URLUtils.getUrlParameter("memo");
+    if (!self.validateAddress(address) || !self.validateNewParams(assetId, amount, traceId, memo)) {
+      self.api.notify('error', i18n.t('general.errors.10002'));
+      $('#layout-container').html(self.ErrorGeneral());
+      $('body').attr('class', 'error layout');
+      self.router.updatePageLinks();
+      return true;
+    }
+    self.api.network.assetsShow((resp) => {
+      if (resp.error && (resp.error.code === 400 || resp.error.code === 10002)) {
+        $('#layout-container').html(self.ErrorGeneral());
+        $('body').attr('class', 'error layout');
+        self.router.updatePageLinks();
+        return false;
+      }
+      const asset = resp.data;
+      var preloadImage = new Image();
+      preloadImage.src = asset.icon_url;
+
+      const fullName = address;
+      const useAmount = new Decimal(asset.price_usd).times(amount);
+      const mixinURL = `mixin://mixin.one/pay${window.location.search}`;
+      const data = {
+        logoURL: blueLogo,
+        title: i18n.t('pay.recipient.title', { name: fullName }),
+        hasSubTitle: false,
+        hasMemo: !!memo,
+        memo,
+        iconUrl: asset.icon_url,
+        iconTitle: `${amount} ${asset.symbol}`,
+        iconSubTitle: `${useAmount.toNumber().toFixed(2).toString()} USD`,
+        showQRCode: true,
+        qrCodeIcon,
+        tip: i18n.t('code.payment.mobile.scan'),
+        successURL: completeIcon,
+        mixinURL
+      };
+
+      let st = 'Pay ' + data.iconTitle  + ' to ' + fullName;
+      $('title').html(st + ' | Mixin - Secure Digital Assets and Messages on Mixin');
+      $('body').attr('class', 'pay code layout');
+      $('#layout-container').html(self.template(data));
+      const platform = MixinUtils.environment();
+      if (!platform) $('.main').attr('class', 'main browser');          
+      if (data.hasMemo) $('.scan-container').attr('class', 'scan-container new-margin');
+      initQRCode(mixinURL)
+      self.router.updatePageLinks();
+    }, assetId)
+  },
+
   refreshPayment: function (params) {
     const { isInitialized, recipientId, assetId, amount, traceId, memo } = params;
     const self = this;
@@ -197,6 +253,31 @@ Pay.prototype = {
       return false;
     }
     return parseFloat(amount) > 0;
+  },
+
+  validateNewParams: function(assetId, amount, traceId, memo) {
+    if (assetId && !validate(assetId)) {
+      return false;
+    }
+    if (traceId && !validate(traceId)) {
+      return false;
+    }
+    if (memo && memo.length > 200) {
+      return false;
+    }
+    return parseFloat(amount) > 0;
+  },
+
+  validateAddress: function (address) {
+    const prefix = address.slice(0, 3);
+    switch (prefix) {
+      case "XIN": 
+        return AddressUtils.verifyMainnetAddress(address);
+      case "MIX": 
+        return AddressUtils.verifyMixAddress(address);
+      default:
+        return validate(address);
+    }
   }
 };
 

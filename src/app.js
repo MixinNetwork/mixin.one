@@ -85,6 +85,9 @@ router.on({
   '/receipts/new': function () {
     new Pay(router, api).new();
   },
+  '/pay/:address': function (match) {
+    new Pay(router, api).renderNew(match.data['address']);
+  },
   '/pay': function () {
     new Pay(router, api).render();
   },
