@@ -150,7 +150,7 @@ Pay.prototype = {
       preloadImage.src = asset.icon_url;
       const params = {
         isInitialized: false,
-        address, asset, amount, traceId, memo
+        address, asset, amount, traceId, memo, returnTo
       }
       self.refreshSafePayment(params);
     }, assetId)
@@ -222,7 +222,7 @@ Pay.prototype = {
 
   refreshSafePayment: function (params) {
     const self = this;
-    const { isInitialized, address, asset, amount, traceId, memo } = params;
+    const { isInitialized, address, asset, amount, traceId, memo, returnTo } = params;
     self.api.payment.fetchSafeTrace(function (resp) {
       if (resp.error) {
         if (resp.error.code === 404) {
@@ -276,7 +276,8 @@ Pay.prototype = {
         $('#layout-container').html(self.template(data));
         const platform = MixinUtils.environment();
         if (!platform) $('.main').attr('class', 'main browser'); 
-        if (data.hasMemo) $('.scan-container').attr('class', 'scan-container new-margin'); 
+        if (data.hasMemo) $('.scan-container').attr('class', 'scan-container new-margin');
+        if (returnTo) window.location.href = decodeURIComponent(returnTo);
         return true
       }
       setTimeout(function() {
