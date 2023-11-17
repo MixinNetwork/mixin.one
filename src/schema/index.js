@@ -191,8 +191,8 @@ Schema.prototype = {
   },
   getMixinUrl: function (type, id) {
     return id 
-      ? `mixin://${type}/${id}${location.search}` 
-      : `mixin://${type}${location.search}`;
+      ? `mixin://mixin.one/${type}/${id}${location.search}` 
+      : `mixin://mixin.one/${type}${location.search}`;
   },
   getButtonInfo: function (type) {
     const info = {};

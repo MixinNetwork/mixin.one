@@ -87,7 +87,7 @@ Pay.prototype = {
           let platform = MixinUtils.environment();
           let route = `https://${window.location.host}${path}`;
           if (platform == 'Android' || platform == 'iOS') {
-            window.location = `mixin://send?text=${encodeURIComponent(route)}`;
+            window.location = `mixin://mixin.one/send?text=${encodeURIComponent(route)}`;
           } else {
             window.location = route;
           }
