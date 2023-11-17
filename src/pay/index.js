@@ -151,7 +151,7 @@ Pay.prototype = {
       const params = {
         isInitialized: false,
         address, asset, amount, traceId, memo, returnTo
-      }
+      };
       self.refreshSafePayment(params);
     }, assetId)
   },
@@ -203,7 +203,7 @@ Pay.prototype = {
         const platform = MixinUtils.environment();
         if (!platform) $('.main').attr('class', 'main browser');          
         if (data.hasMemo) $('.scan-container').attr('class', 'scan-container new-margin');
-        initQRCode(mixinURL)
+        initQRCode(mixinURL);
       }
       self.router.updatePageLinks();
       if (payment.status === 'paid') {
@@ -212,7 +212,7 @@ Pay.prototype = {
         const platform = MixinUtils.environment();
         if (!platform) $('.main').attr('class', 'main browser'); 
         if (data.hasMemo) $('.scan-container').attr('class', 'scan-container new-margin'); 
-        return true
+        return true;
       };
       setTimeout(function() {
         self.refreshPayment(params);
@@ -239,7 +239,7 @@ Pay.prototype = {
         }
       }
 
-      const payment = resp.data
+      const payment = resp.data;
       const useAmount = new Decimal(asset.price_usd).times(amount);
       const mixinURL = `mixin://mixin.one/pay${window.location.search}`;
       const data = {
@@ -267,7 +267,7 @@ Pay.prototype = {
         const platform = MixinUtils.environment();
         if (!platform) $('.main').attr('class', 'main browser');          
         if (data.hasMemo) $('.scan-container').attr('class', 'scan-container new-margin');
-        initQRCode(mixinURL)
+        initQRCode(mixinURL);
       }
       self.router.updatePageLinks();
 
@@ -278,7 +278,7 @@ Pay.prototype = {
         if (!platform) $('.main').attr('class', 'main browser'); 
         if (data.hasMemo) $('.scan-container').attr('class', 'scan-container new-margin');
         if (returnTo) window.location.href = decodeURIComponent(returnTo);
-        return true
+        return true;
       }
       setTimeout(function() {
         self.refreshSafePayment(params);
