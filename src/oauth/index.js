@@ -63,7 +63,7 @@ OAuth.prototype = {
       $('body').attr('class', 'oauth code layout');
       $('body').attr('data-code-id', auth.code_id);
       let platform = MixinUtils.environment();
-      const mixinURL = 'mixin://mixin.one/codes/' + auth.code_id;
+      const mixinURL = 'https://mixin.one/codes/' + auth.code_id;
       if (platform == 'Android' || platform == 'iOS') {
         window.location.replace(mixinURL);
         return false;

@@ -34,7 +34,6 @@ Schema.prototype = {
 
     const platform = MixinUtils.environment();
     const action = URLUtils.getUrlParameter("action");
-    const mixinURL = self.getMixinUrl(type, id);
     const data = {
       logoURL: blueLogo,
       basic: true,
@@ -45,7 +44,6 @@ Schema.prototype = {
         : i18n.t(`schema.title.${type}`),
       subTitle: self.getSubTitle(type, id),
       qrCodeIcon,
-      mixinURL
     };
 
     if (['apps', 'users', 'conversations', 'send'].includes(type)) {
@@ -60,11 +58,7 @@ Schema.prototype = {
         : i18n.t("code.payment.mobile.scan");
     }
     $('#layout-container').html(self.template(data));
-    if (['apps', 'users', 'conversations', 'send'].includes(type)) {
-      $('.subTitle').attr('class', 'subTitle new-margin');
-    } else {
-      initQRCode(mixinURL);
-    }
+    $('.subTitle').attr('class', 'subTitle new-margin');
     if (!platform) $('.main').attr('class', 'main browser');
     self.router.updatePageLinks();
   },
@@ -113,12 +107,6 @@ Schema.prototype = {
     if (type === 'send') return URLUtils.getUrlParameter("category");
 
     return id.slice(0, 6) + '...' + id.slice(-4);
-  },
-
-  getMixinUrl: function (type, id) {
-    return id 
-      ? `mixin://mixin.one/${type}/${id}${location.search}` 
-      : `mixin://mixin.one/${type}${location.search}`;
   },
   
   getButtonInfo: function (type) {

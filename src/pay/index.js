@@ -87,7 +87,7 @@ Pay.prototype = {
           let platform = MixinUtils.environment();
           let route = `https://${window.location.host}${path}`;
           if (platform == 'Android' || platform == 'iOS') {
-            window.location = `mixin://mixin.one/send?text=${encodeURIComponent(route)}`;
+            window.location = `https://mixin.one/send?text=${encodeURIComponent(route)}`;
           } else {
             window.location = route;
           }
@@ -241,7 +241,7 @@ Pay.prototype = {
 
       const payment = resp.data;
       const useAmount = new Decimal(asset.price_usd).times(amount);
-      const mixinURL = `mixin://mixin.one/pay${window.location.search}`;
+      const mixinURL = `https://mixin.one${window.location.pathname}${window.location.search}`;
       const data = {
         logoURL: blueLogo,
         title: address,
