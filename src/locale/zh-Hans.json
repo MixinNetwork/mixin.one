@@ -35,7 +35,9 @@
     "payment.complete": "完成",
     "open.action": "在 Mixin 中打开",
     "user.btn.intro": "点击上方按钮以在 Mixin Messenger 中与该用户对话。",
-    "group.btn.intro": "点击上方按钮以在 Mixin Messenger 中加入群聊。"
+    "group.btn.intro": "点击上方按钮以在 Mixin Messenger 中加入群聊。",
+    "redirect.text": "正在返回商户页面",
+    "redirect.button": "取消"
   },
   "schema": {
     "title.apps": "机器人",

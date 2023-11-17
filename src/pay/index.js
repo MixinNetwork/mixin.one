@@ -10,6 +10,7 @@ import arrow from '../assets/icons/arrow.svg';
 import blueLogo from '../assets/icons/logo.png';
 import qrCodeIcon from '../assets/icons/qrcode.svg';
 import completeIcon from '../assets/icons/payment_complete.svg';
+import redirectingIcon from '../assets/icons/redirecting.svg';
 
 var validate = require('uuid-validate');
 
@@ -126,7 +127,6 @@ Pay.prototype = {
     const assetId = URLUtils.getUrlParameter("asset");
     const amount = URLUtils.getUrlParameter("amount");
     const memo = URLUtils.getUrlParameter("memo");
-    const returnTo = URLUtils.getUrlParameter("return_to");
     let traceId = URLUtils.getUrlParameter("trace");
     if (traceId == "") {
       traceId = uuidv4();
@@ -150,7 +150,7 @@ Pay.prototype = {
       preloadImage.src = asset.icon_url;
       const params = {
         isInitialized: false,
-        address, asset, amount, traceId, memo, returnTo
+        address, asset, amount, traceId, memo
       };
       self.refreshSafePayment(params);
     }, assetId)
@@ -192,7 +192,8 @@ Pay.prototype = {
         tip: i18n.t('code.payment.mobile.scan'),
         complete: payment.status === 'paid',
         successURL: completeIcon,
-        mixinURL
+        mixinURL,
+        redirectingIcon
       };
       if (!isInitialized) {
         params.isInitialized = true;
@@ -212,6 +213,7 @@ Pay.prototype = {
         const platform = MixinUtils.environment();
         if (!platform) $('.main').attr('class', 'main browser'); 
         if (data.hasMemo) $('.scan-container').attr('class', 'scan-container new-margin'); 
+        self.redirect();
         return true;
       };
       setTimeout(function() {
@@ -222,7 +224,7 @@ Pay.prototype = {
 
   refreshSafePayment: function (params) {
     const self = this;
-    const { isInitialized, address, asset, amount, traceId, memo, returnTo } = params;
+    const { isInitialized, address, asset, amount, traceId, memo } = params;
     self.api.payment.fetchSafeTrace(function (resp) {
       if (resp.error) {
         if (resp.error.code === 404) {
@@ -256,7 +258,8 @@ Pay.prototype = {
         qrCodeIcon,
         tip: i18n.t('code.payment.mobile.scan'),
         successURL: completeIcon,
-        mixinURL
+        mixinURL,
+        redirectingIcon
       };
       if (!isInitialized) {
         params.isInitialized = true;
@@ -277,13 +280,34 @@ Pay.prototype = {
         const platform = MixinUtils.environment();
         if (!platform) $('.main').attr('class', 'main browser'); 
         if (data.hasMemo) $('.scan-container').attr('class', 'scan-container new-margin');
-        if (returnTo) window.location.href = decodeURIComponent(returnTo);
+        self.redirect();
         return true;
       }
       setTimeout(function() {
         self.refreshSafePayment(params);
       }, 1500);
     }, traceId);
+  },
+
+  redirect: function () {
+    const returnTo = URLUtils.getUrlParameter("return_to");
+    if (returnTo) {
+      try {
+        const uri = new URL(decodeURIComponent(returnTo));
+        if (uri.protocol === "http:" || uri.protocol === "https:") {
+          $("#redirect-container").toggleClass('active', true);
+          const timer = setTimeout(() => {
+            window.location.replace(returnTo);
+          }, 1500);
+          $('#cancel-redirect-btn').on('click', function() {
+            clearTimeout(timer);
+            $("#redirect-container").toggleClass('active', false);
+          });
+        }
+      } catch (err) {
+        console.log("invalid return_to", err);
+      }
+    }
   },
 
   validateParams: function(recipientId, assetId, amount, traceId, memo) {
