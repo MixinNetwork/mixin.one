@@ -20,7 +20,7 @@ AddressUtils.prototype = {
       const payload = data.subarray(0, data.length - 4);
       const msg = Buffer.concat([Buffer.from(MainAddressPrefix), Buffer.from(payload)]);
       const checksum = new SHA3(256).update(msg).digest('binary');
-      if (!checksum.subarray(0, 4).equals(data.subarray(64))) return false;
+      if (!checksum.subarray(0, 4).equals(Buffer.from(data.subarray(64)))) return false;
       return true;
     } catch {
       return false;
@@ -37,7 +37,7 @@ AddressUtils.prototype = {
       const payload = data.subarray(0, data.length - 4);
       const msg = Buffer.concat([Buffer.from(MixAddressPrefix), Buffer.from(payload)]);
       const checksum = new SHA3(256).update(msg).digest('binary');
-      if (!checksum.subarray(0, 4).equals(data.subarray(data.length - 4))) return false;
+      if (!checksum.subarray(0, 4).equals(Buffer.from(data.subarray(data.length - 4)))) return false;
   
       const version = data.at(0);
       if (version !== MixAddressVersion) return false;

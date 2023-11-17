@@ -22,9 +22,10 @@
   display: -webkit-box;
   overflow: hidden;
   text-overflow: ellipsis;
-  -webkit-line-clamp: 2;
+  -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
   white-space: normal;
+  word-break: break-all;
 }
 
 .code.layout {
@@ -184,6 +185,7 @@
       width: 100%;
       
       .title {
+        padding: 0 20px;
         font-weight: 600;
         font-size: 18px;
         line-height: 25px;

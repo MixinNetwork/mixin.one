@@ -150,8 +150,9 @@ Pay.prototype = {
       const mixinURL = `mixin://mixin.one/pay${window.location.search}`;
       const data = {
         logoURL: blueLogo,
-        title: i18n.t('pay.recipient.title', { name: fullName }),
-        hasSubTitle: false,
+        title: address,
+        hasSubTitle: true,
+        subTitle: i18n.t('schema.title.transfer'),
         hasMemo: !!memo,
         memo,
         iconUrl: asset.icon_url,
