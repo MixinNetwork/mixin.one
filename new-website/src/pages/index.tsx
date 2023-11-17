@@ -12,6 +12,7 @@ import Navbar from "../theme/Navbar"
 import Layout from "../theme/Layout"
 import { FAQSection } from "../components/common/FAQSection"
 import { SupportedAssetSection } from "../components/page/home/SupportedAssetSection"
+import { TypeAnimation } from "react-type-animation"
 
 const Header = () => {
   const title = replace(
@@ -24,9 +25,37 @@ const Header = () => {
           message: "Confidence",
         }),
         replace: (match) => (
-          <span key={match} className="text-blue-500">
-            {match}
-          </span>
+          <TypeAnimation
+            sequence={[
+              translate({
+                message: "Decentralized",
+              }),
+              2000,
+              translate({
+                message: "Confident",
+              }),
+              2000,
+              translate({
+                message: "Reliable",
+              }),
+              2000,
+              translate({
+                message: "Privacy",
+              }),
+              2000,
+              translate({
+                message: "Compliant",
+              }),
+              2000,
+            ]}
+            wrapper="div"
+            cursor={true}
+            repeat={Infinity}
+            className="text-blue-500"
+          />
+          // <span key={match} className="text-blue-500">
+          //   {match}
+          // </span>
         ),
       },
     ]
