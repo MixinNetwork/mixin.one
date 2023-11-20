@@ -14,6 +14,7 @@ import { FAQSection } from "../components/common/FAQSection"
 import { SupportedAssetSection } from "../components/page/home/SupportedAssetSection"
 import { TypeAnimation } from "react-type-animation"
 import { GetStartedSection } from "../components/common/GetStartedSection"
+import LocalLink from "../components/common/LocaleLink"
 
 const Header = () => {
   const title = replace(
@@ -91,9 +92,9 @@ const Header = () => {
         </div>
 
         <div className="mt-24.5 sm:mt-12.5 md:mt-18.5 lg:mt-21.5 grid gap-y-5 gap-x-7.5 sm:grid-cols-2 sm:w-fit mx-auto">
-          <a className="order-last sm:order-none sm:w-57.5 h-12 bg-neutral-100 rounded-sm text-black! font-medium uppercase flex-center">
+          <LocalLink className="order-last sm:order-none sm:w-57.5 h-12 bg-neutral-100 rounded-sm text-black! font-medium uppercase flex-center" to="/pricing">
             <Translate>Get started</Translate>
-          </a>
+          </LocalLink>
           <a className="sm:w-57.5 h-12 rounded-sm border border-neutral-100 text-white! font-medium w-full uppercase flex-center">
             <Translate>Book a consultation</Translate>
           </a>
