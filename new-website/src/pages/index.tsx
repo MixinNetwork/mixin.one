@@ -26,27 +26,45 @@ const Header = () => {
         }),
         replace: (match) => (
           <TypeAnimation
+            speed={{
+              type: "keyStrokeDelayInMs",
+              value: 150,
+            }}
+            deletionSpeed={{
+              type: "keyStrokeDelayInMs",
+              value: 80,
+            }}
             sequence={[
               translate({
                 message: "Decentralized",
               }),
               2000,
+              "",
+              1000,
               translate({
                 message: "Confident",
               }),
               2000,
+              "",
+              1000,
               translate({
                 message: "Reliable",
               }),
               2000,
+              "",
+              1000,
               translate({
                 message: "Privacy",
               }),
               2000,
+              "",
+              1000,
               translate({
                 message: "Compliant",
               }),
               2000,
+              "",
+              1000,
             ]}
             wrapper="div"
             cursor={true}
@@ -66,8 +84,8 @@ const Header = () => {
       <img src={require("@site/static/img/page/home/bgHeader.webp").default} className="object-cover -z-10 hidden sm:block absolute inset-0 h-full w-full" />
       <Navbar dark />
       <div className="px-10 pt-15 pb-19 sm:pt-12.5 md:pt-20 lg:pt-54 sm:pb-16.5 sm:pb-32.5 lg:pb-79 sm:text-center container mx-auto">
-        <div className="text-white text-4xl sm:text-5xl font-normal leading-10 -tracking-0.1">{title}</div>
-        <div className="mt-7.5 sm:mt-6 md:mt-8 lg:mt-12 text-white text-opacity-80 text-sm font-normal leading-snug">
+        <div className="text-white text-4xl sm:text-5xl font-normal leading-10 -tracking-0.1 mx-auto">{title}</div>
+        <div className="mt-7.5 sm:mt-6 md:mt-8 lg:mt-12 mx-auto text-white text-opacity-80 text-sm font-normal leading-snug">
           <Translate>Protect your crypto with MPC-TSS that you control and get access to trading, inheritance, and loans—all backed by the best support in the industry.</Translate>
         </div>
 

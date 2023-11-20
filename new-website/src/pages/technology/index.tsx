@@ -67,32 +67,32 @@ export default function Root() {
                 "Mixin Safe combines MPC, hardware wallets, multi-signature and time-lock technologies, fully utilizing the advantages of each technology while discarding related disadvantages.",
             }),
           },
-          {
-            question: translate({
-              message: "What is MPC - TSS technology?",
-            }),
-            answer: translate({
-              message:
-                "MPC (Secure Multi-Party Computation) and TSS (Threshold Signature Scheme) ensure that the private key is not fully controlled by anyone, and a legal signature can be generated without all the fragments.",
-            }),
-          },
-          {
-            question: translate({
-              message: "What is PSBT?",
-            }),
-            answer: translate({
-              message:
-                "PSBT (Partially Signed Bitcoin Transactions) is a standard for passing Bitcoin transaction formats, which can carry metadata of a transaction, making it easier for signers to sign and verify the transaction.",
-            }),
-          },
-          {
-            question: translate({
-              message: "Can Safe Network nodes collude to transfer my assets?",
-            }),
-            answer: translate({
-              message: "No, the Safe Network only holds one of the multi-signature private keys, and transferring assets requires two keys.",
-            }),
-          },
+          // {
+          //   question: translate({
+          //     message: "What is MPC - TSS technology?",
+          //   }),
+          //   answer: translate({
+          //     message:
+          //       "MPC (Secure Multi-Party Computation) and TSS (Threshold Signature Scheme) ensure that the private key is not fully controlled by anyone, and a legal signature can be generated without all the fragments.",
+          //   }),
+          // },
+          // {
+          //   question: translate({
+          //     message: "What is PSBT?",
+          //   }),
+          //   answer: translate({
+          //     message:
+          //       "PSBT (Partially Signed Bitcoin Transactions) is a standard for passing Bitcoin transaction formats, which can carry metadata of a transaction, making it easier for signers to sign and verify the transaction.",
+          //   }),
+          // },
+          // {
+          //   question: translate({
+          //     message: "Can Safe Network nodes collude to transfer my assets?",
+          //   }),
+          //   answer: translate({
+          //     message: "No, the Safe Network only holds one of the multi-signature private keys, and transferring assets requires two keys.",
+          //   }),
+          // },
         ]}
       />
       <GetStartedSection />

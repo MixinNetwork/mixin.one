@@ -16,12 +16,15 @@ const Item = ({ index, title, description, left }: { index: number; title: strin
 
 const SecureAssetCustodySection = () => (
   <div className="container mx-auto">
-    <div className="relative bg-zinc-800 rounded-sm px-5 pt-10 pb-15 text-white text-opacity-90 text-center text-base font-normal leading-relaxed">
-      <Translate>
-        Mixin Safe is committed to providing users with safe and stable asset management services. We always use proven Bitcoin encryption technologies, such as multi-signature, time lock, MPC,
-        threshold signature, P2SH and hardware wallet technology. These mature and reliable technologies complement each other to ensure the safety of assets and ensure that customers can use our
-        products with confidence.
-      </Translate>
+    <div className="relative rounded-sm px-5 pt-10 pb-15">
+      <img src={require("@site/static/img/common/woodGrain.webp").default} className="object-cover absolute inset-0 h-full w-full -z-10" />
+      <div className="text-white text-opacity-90 text-center text-base font-normal leading-relaxed">
+        <Translate>
+          Mixin Safe is committed to providing users with safe and stable asset management services. We always use proven Bitcoin encryption technologies, such as multi-signature, time lock, MPC,
+          threshold signature, P2SH and hardware wallet technology. These mature and reliable technologies complement each other to ensure the safety of assets and ensure that customers can use our
+          products with confidence.
+        </Translate>
+      </div>
     </div>
   </div>
 )

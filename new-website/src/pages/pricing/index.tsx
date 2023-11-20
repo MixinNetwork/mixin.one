@@ -51,39 +51,39 @@ export default function Root() {
               message: "No, but we will send multiple notifications for you to pay the plan fee before the plan expires.",
             }),
           },
-          {
-            question: translate({
-              message: "Do I have to pay to use Mixin products?",
-            }),
-            answer: translate({
-              message: "Not necessarily, you can use the free Mixin Messenger.",
-            }),
-          },
-          {
-            question: translate({
-              message: "Why is Mixin's withdrawal fee more expensive than other wallets?",
-            }),
-            answer: translate({
-              message:
-                "In order for Mixin users to continue to enjoy free transfers and the fastest withdrawal experience, Mixin needs to offset the collection cost by charging a slightly higher withdrawal fee. The balance is used as a profit to motivate the team to continue to provide users with quality products and services.",
-            }),
-          },
-          {
-            question: translate({
-              message: "Is there a fee for recharging the wallet?",
-            }),
-            answer: translate({
-              message: "Recharge is free, but there is a minimum recharge amount.",
-            }),
-          },
-          {
-            question: translate({
-              message: "Will Mixin Messenger become a paid app?",
-            }),
-            answer: translate({
-              message: "Mixin Messenger will remain free, but will introduce paid membership features to provide more advanced features.",
-            }),
-          },
+          // {
+          //   question: translate({
+          //     message: "Do I have to pay to use Mixin products?",
+          //   }),
+          //   answer: translate({
+          //     message: "Not necessarily, you can use the free Mixin Messenger.",
+          //   }),
+          // },
+          // {
+          //   question: translate({
+          //     message: "Why is Mixin's withdrawal fee more expensive than other wallets?",
+          //   }),
+          //   answer: translate({
+          //     message:
+          //       "In order for Mixin users to continue to enjoy free transfers and the fastest withdrawal experience, Mixin needs to offset the collection cost by charging a slightly higher withdrawal fee. The balance is used as a profit to motivate the team to continue to provide users with quality products and services.",
+          //   }),
+          // },
+          // {
+          //   question: translate({
+          //     message: "Is there a fee for recharging the wallet?",
+          //   }),
+          //   answer: translate({
+          //     message: "Recharge is free, but there is a minimum recharge amount.",
+          //   }),
+          // },
+          // {
+          //   question: translate({
+          //     message: "Will Mixin Messenger become a paid app?",
+          //   }),
+          //   answer: translate({
+          //     message: "Mixin Messenger will remain free, but will introduce paid membership features to provide more advanced features.",
+          //   }),
+          // },
         ]}
       />
       <GetStartedSection />
