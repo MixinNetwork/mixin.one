@@ -2,7 +2,6 @@ import $ from 'zepto-webpack';
 import validate from 'uuid-validate';
 import URLUtils from '../utils/url.js';
 import MixinUtils from '../utils/mixin.js';
-import { initQRCode } from '../utils/modal.js';
 import blueLogo from '../assets/icons/logo.png';
 import userdefaultAvatar from '../assets/icons/userAvatar.svg';
 import appDefaultAvatar from '../assets/icons/appAvatar.svg';
@@ -51,6 +50,7 @@ Schema.prototype = {
       data.showActionButton = true;
       data.actionText = btn.actionText;
       data.buttonIntro = btn.buttonIntro;
+      data.mixinURL = `https://mixin.one${window.location.pathname}${window.location.search}`;
     } else {
       data.showQRCode = true;
       data.tip = type === 'address' 
@@ -78,8 +78,16 @@ Schema.prototype = {
         if ((!!action && action !== 'open') || !validate(id)) return false;
         break;
       }
-      case "users": 
-      case "conversations": 
+      case "users": {
+        return validate(id);
+      }
+      case "conversations": {
+        const isValid = validate(id);
+        if (!isValid) return false;
+        const userId = URLUtils.getUrlParameter("user");
+        if (userId) return validate(userId);
+        return true;
+      }
       case "send": {
         const categories = ['text', 'image', 'contact', 'app_card', 'live', 'post', 'sticker'];
         const category = URLUtils.getUrlParameter("category");
