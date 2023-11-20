@@ -4,7 +4,7 @@ import SectionTitle from "../../common/SectionTitle"
 const Item = ({ cover, description }: { cover: string; description: string }) => (
   <div className="bg-white rounded-sm shadow">
     <img src={require("@site/static/img/page/decentralized/" + cover).default} alt={description} className="aspect-335/250 w-full" />
-    <div className="p-5 text-zinc-800 text-base font-normal sm:px-10 sm:pt-6 sm:pb-32  leading-relaxed">{description}</div>
+    <div className="p-5 text-zinc-800 text-base font-normal sm:px-10 sm:pt-6 pb-8 sm:pb-12 md:pb-16 lg:pb-24 leading-relaxed">{description}</div>
   </div>
 )
 
