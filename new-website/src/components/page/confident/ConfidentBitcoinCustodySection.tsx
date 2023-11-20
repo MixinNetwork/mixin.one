@@ -7,7 +7,7 @@ const TechnologySection = () => (
   <div className="pt-15 pb-30 px-5 container mx-auto">
     <div className="relative rounded-sm">
       <img src={require("@site/static/img/common/woodGrain.webp").default} className="object-cover absolute inset-0 h-full w-full -z-10" />
-      <div className="flex flex-col justify-between pt-15 px-5 pb-10 space-y-33 ">
+      <div className="flex flex-col justify-between pt-15 px-5 pb-10 space-y-33 sm:space-y-14 sm:pb-20 sm:px-19 sm:pt-26 ">
         <div className="text-white text-opacity-90 text-center text-base font-normal leading-relaxed">
           <Translate>Decentralized bitcoin custody is challenging, which is why we made Mixin Safe to meet public demand. Never worry about losing your keys or centralized evil custody.</Translate>
         </div>
