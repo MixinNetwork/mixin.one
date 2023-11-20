@@ -80,7 +80,7 @@ export const EasyManageSection = () => {
         />
       </div>
 
-      <LocalLink to="/pricing" className="mt-20 sm:mt-15 rw-10 sm:w-fit sm:px-7 mx-auto py-4 flex-center bg-zinc-700 rounded-sm text-white text-sm font-medium leading-snug">
+      <LocalLink to="/pricing" className="mt-20 sm:mt-15 rw-10 sm:w-fit sm:px-7 mx-auto py-4 flex-center bg-zinc-700 rounded-sm text-white font-medium leading-snug">
         <Translate>View our plans</Translate>
       </LocalLink>
     </div>

@@ -15,7 +15,7 @@ export const AuditReportSection = () => (
           </div>
         </div>
 
-        <LocalLink href="https://github.com/MixinNetwork/audits" className="md:block hidden w-fit px-7 py-4 flex-center bg-zinc-700 rounded-sm text-white text-sm font-medium leading-snug">
+        <LocalLink href="https://github.com/MixinNetwork/audits" className="md:block hidden w-fit px-7 py-4 flex-center bg-zinc-700 rounded-sm text-white font-medium leading-snug">
           <Translate>View security audits</Translate>
         </LocalLink>
       </div>
@@ -30,7 +30,7 @@ export const AuditReportSection = () => (
 
       <LocalLink
         href="https://github.com/MixinNetwork/audits"
-        className="md:hidden mt-10 sm:mt-12.5 rw-10 sm:w-fit sm:px-7 mx-auto py-4 flex-center bg-zinc-700 rounded-sm text-white text-sm font-medium leading-snug"
+        className="md:hidden mt-10 sm:mt-12.5 rw-10 sm:w-fit sm:px-7 mx-auto py-4 flex-center bg-zinc-700 rounded-sm text-white font-medium leading-snug"
       >
         View security audits
       </LocalLink>

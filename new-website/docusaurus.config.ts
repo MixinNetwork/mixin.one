@@ -80,7 +80,20 @@ const config: Config = {
         },
         {
           label: "Company",
-          to: "/about",
+          items: [
+            {
+              label: "Contact Us",
+              to: "/contact",
+              description: "If you have any questions, please contact us",
+              icon: "/img/common/nav/contact.svg",
+            },
+            {
+              label: "About Us",
+              to: "/about",
+              description: "Mixin helps you secure and grow your wealth",
+              icon: "/img/common/nav/about.svg",
+            },
+          ],
           position: "left",
         },
         {

@@ -90,10 +90,10 @@ const Header = () => {
         </div>
 
         <div className="mt-24.5 sm:mt-12.5 md:mt-18.5 lg:mt-21.5 grid gap-y-5 gap-x-7.5 sm:grid-cols-2 sm:w-fit mx-auto">
-          <a className="order-last sm:order-none sm:w-57.5 h-12 bg-neutral-100 rounded-sm text-black text-sm font-medium uppercase flex-center">
+          <a className="order-last sm:order-none sm:w-57.5 h-12 bg-neutral-100 rounded-sm text-black! font-medium uppercase flex-center">
             <Translate>Get started</Translate>
           </a>
-          <a className="sm:w-57.5 h-12 rounded-sm border border-neutral-100 text-white text-sm font-medium w-full uppercase flex-center">
+          <a className="sm:w-57.5 h-12 rounded-sm border border-neutral-100 text-white! font-medium w-full uppercase flex-center">
             <Translate>Book a consultation</Translate>
           </a>
         </div>
