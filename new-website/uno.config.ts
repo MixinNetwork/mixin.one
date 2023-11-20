@@ -7,7 +7,7 @@ export default defineConfig({
   presets: [
     presetUno(),
     presetWebFonts({
-      provider: "bunny",
+      provider: "fontshare",
       fonts: {
         default: [
           "Inter",

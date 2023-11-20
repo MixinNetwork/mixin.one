@@ -7,7 +7,7 @@ const Item = ({ cover, title, description, points, className }: { cover: string;
     <img src={require("@site/static/img/page/decentralized/" + cover).default} alt={title} className="aspect-335/225 w-full sm:group-odd:order-last" />
 
     <div className="shrink">
-      <div className="text-zinc-800 text-xl font-medium leading-relaxed">{title}</div>
+      <div className="text-zinc-800 text-xl sm:text-8 font-medium leading-relaxed">{title}</div>
       {description && <div className="mt-5 text-zinc-800 text-sm font-normal leading-snug">{description}</div>}
       <ol className="mt-5 list-disc list-inside space-y-3">
         {points.map((point) => (
