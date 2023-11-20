@@ -15,7 +15,7 @@ export const AuditReportSection = () => (
           </div>
         </div>
 
-        <LocalLink href="https://github.com/MixinNetwork/audits" className="md:block hidden w-fit px-7 py-4 flex-center bg-zinc-700 rounded-sm text-white font-medium leading-snug">
+        <LocalLink href="https://github.com/MixinNetwork/audits" className="hidden w-fit px-7 py-4 md:block bg-zinc-700 rounded-sm text-white font-medium leading-snug">
           <Translate>View security audits</Translate>
         </LocalLink>
       </div>
