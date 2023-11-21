@@ -55,8 +55,8 @@ const MobileItem = (data: NavbarItem) => {
           <Arrow className="transition-all duration-300" />
         </label>
 
-        <div className="grid grid-rows-[0fr] transition-all duration-500 peer-checked:grid-rows-[1fr] peer-checked:children:border-t-1">
-          <div className="overflow-hidden">
+        <div className="grid grid-rows-[0fr] transition-all duration-300 peer-checked:grid-rows-[1fr] peer-checked:children:border-op-100">
+          <div className="overflow-hidden border-t-1 border-zinc-200 border-op-0 transition-all duration-300">
             <div className="text-zinc-800 text-opacity-70 text-xs font-normal uppercase pb-5 px-6 pt-8">{data.label}</div>
             <div>
               {data.items.map((item) => (
@@ -112,7 +112,7 @@ export default function Navbar({ dark }: { dark?: boolean }): JSX.Element {
       </label>
 
       <div className="absolute top-full inset-x-0 grid grid-rows-[0fr] transition-all duration-300 peer-checked:grid-rows-[1fr] z-100">
-        <div className="overflow-hidden bg-white divide-solid divide-y-1">
+        <div className="overflow-hidden bg-white divide-solid divide-zinc-200 divide-y-1">
           {leftItems.map((item) => (
             <MobileItem key={item.label} {...item} />
           ))}
