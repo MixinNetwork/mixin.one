@@ -31,7 +31,3 @@ button {
 svg {
   @apply inline align-base;
 }
-
-input:checked ~ label > svg {
-  @apply -rotate-180;
-}
