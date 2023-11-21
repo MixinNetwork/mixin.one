@@ -1,5 +1,6 @@
 deploy_staging:
 	npm run build;
-	scp -r build staging:~/bond/temp;
-	ssh staging "rm -rf ~/bond/web; mv ~/bond/temp ~/bond/web; exit";
-	rm -rf build;
+	tar -czf build.tar.gz build;
+	scp build.tar.gz staging:~/bond/temp.tar.gz;
+	ssh staging "tar -xzf ~/bond/temp.tar.gz -C ~/bond; rm -rf ~/bond/web; mv ~/bond/build ~/bond/web; rm ~/bond/temp.tar.gz; exit";
+	rm -rf build build.tar.gz;
