@@ -4,7 +4,7 @@ import LocalLink from "../../common/LocaleLink"
 // Audit Report
 export const AuditReportSection = () => (
   <div className="bg-zinc-100 bg-opacity-50">
-    <div className="pt-20 sm:pt-50 pb-40 sm:pb-20 px-5 md:py-27 text-center md:text-start container mx-auto grid gap-y-20 gap-x-27.5 md:grid-cols-2">
+    <div className="pt-20 sm:pt-50 pb-40 sm:pb-20 px-5 md:py-27 text-center md:text-start container mx-auto grid gap-y-20 gap-x-27.5 md:grid-cols-[474fr_356fr]">
       <div className="flex flex-col justify-between md:py-12.5">
         <div>
           <div className="text-zinc-800 text-3xl font-medium leading-10">
