@@ -1,34 +1,10 @@
-import { defineConfig, presetUno, transformerVariantGroup, transformerDirectives, presetWebFonts } from "unocss"
+import { defineConfig, presetUno, transformerVariantGroup, transformerDirectives } from "unocss"
 
 export default defineConfig({
   // content: {
   //   filesystem: ["**/*.{html,js,ts,jsx,tsx}"],
   // },
-  presets: [
-    presetUno(),
-    presetWebFonts({
-      provider: "fontshare",
-      fonts: {
-        default: [
-          "Inter",
-          "ui-sans-serif",
-          "system-ui",
-          "-apple-system",
-          "BlinkMacSystemFont",
-          "Segoe UI",
-          "Roboto",
-          "Helvetica Neue",
-          "Arial",
-          "Noto Sans",
-          "sans-serif",
-          "Apple Color Emoji",
-          "Segoe UI Emoji",
-          "Segoe UI Symbol",
-          "Noto Color Emoji",
-        ],
-      },
-    }),
-  ],
+  presets: [presetUno()],
   transformers: [transformerDirectives(), transformerVariantGroup()],
   rules: [
     [
