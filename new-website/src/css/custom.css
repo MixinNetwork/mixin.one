@@ -6,8 +6,9 @@
   --ifm-global-spacing: 0;
 }
 a,
-button {
-  @apply hover:opacity-80 hover:active:focus:opacity-40 disabled:opacity-20;
+button,
+label {
+  @apply hover:opacity-80 hover:active:focus:opacity-40 disabled:opacity-20 cursor-pointer;
 }
 
 a {
