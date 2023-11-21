@@ -7,7 +7,7 @@ import Checked from "@site/static/img/common/checked.svg"
 export const Tab = ({ name, id, selected, onClick }: { name: string; id: string; selected: string; onClick: () => void }) => {
   const checked = id === selected
   return (
-    <button className={clsx("text-center cursor-pointer w-full px-2 pb-5 border-b border-zinc-300", checked && "border-b-2 border-black!")} onClick={onClick}>
+    <button className={clsx("text-center cursor-pointer w-full px-2 pb-5 border-b border-zinc-300", checked && "border-black!")} onClick={onClick}>
       {name}
     </button>
   )
