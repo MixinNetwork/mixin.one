@@ -7,7 +7,7 @@ import Checked from "@site/static/img/common/checked.svg"
 export const Tab = ({ name, id, selected, onClick }: { name: string; id: string; selected: string; onClick: () => void }) => {
   const checked = id === selected
   return (
-    <button className={clsx("text-center cursor-pointer w-full px-2 pb-2 border-b border-zinc-300", checked && "border-b-2 border-black!")} onClick={onClick}>
+    <button className={clsx("text-center cursor-pointer w-full px-2 pb-5 border-b border-zinc-300", checked && "border-b-2 border-black!")} onClick={onClick}>
       {name}
     </button>
   )
@@ -19,7 +19,7 @@ export const Section = ({ id, selected, children }: { id: string; selected: stri
 
 export const Item = ({ name, description, price, features, cover }: { name: React.ReactNode; description: React.ReactNode; price: number; features: React.ReactNode[]; cover: string }) => {
   return (
-    <div className="bg-zinc-100 bg-opacity-50 rounded-sm border border-zinc-300 pt-10 pb-25 px-5">
+    <div className="bg-zinc-100 bg-opacity-50 rounded-sm border border-zinc-300 pt-10 pb-25 px-5 sm:px-10">
       <div className="grid gap-y-5 sm:grid-cols-2">
         <div className="text-zinc-800 text-3xl font-medium">{name}</div>
         <div className="sm:order-last text-zinc-800 text-opacity-70 text-base font-normal leading-normal">{description}</div>
