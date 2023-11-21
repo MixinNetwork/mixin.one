@@ -95,9 +95,9 @@ const Header = () => {
           <LocalLink className="order-last sm:order-none sm:w-57.5 h-12 bg-neutral-100 rounded-sm text-black! font-medium uppercase flex-center" to="/pricing">
             <Translate>Get started</Translate>
           </LocalLink>
-          <a className="sm:w-57.5 h-12 rounded-sm border border-neutral-100 text-white! font-medium w-full uppercase flex-center">
+          <LocalLink href="https://calendly.com/mixin-safe/30min" className="sm:w-57.5 h-12 rounded-sm border border-neutral-100 text-white! font-medium w-full uppercase flex-center">
             <Translate>Book a consultation</Translate>
-          </a>
+          </LocalLink>
         </div>
       </div>
     </div>

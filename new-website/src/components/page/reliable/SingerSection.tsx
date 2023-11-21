@@ -6,6 +6,10 @@ import TitleIcon2 from "@site/static/img/page/reliable/3.2.2.svg"
 import TitleIcon3 from "@site/static/img/page/reliable/3.3.2.svg"
 import TitleIcon4 from "@site/static/img/page/reliable/3.4.2.svg"
 import TitleIcon5 from "@site/static/img/page/reliable/3.5.2.svg"
+import TitleIcon6 from "@site/static/img/page/reliable/3.6.2.svg"
+import TitleIcon7 from "@site/static/img/page/reliable/3.7.2.svg"
+import TitleIcon8 from "@site/static/img/page/reliable/3.8.2.svg"
+import TitleIcon9 from "@site/static/img/page/reliable/3.9.2.svg"
 
 const Item = ({ icon, titleIcon, description }: { icon: string; titleIcon: React.ReactNode; description: string }) => {
   return (
@@ -68,7 +72,36 @@ export const SingerSection = () => {
         />
 
         <Item
-          icon="3.6.svg"
+          icon="3.6.1.svg"
+          titleIcon={<TitleIcon6 />}
+          description={translate({
+            message: "Blockstream Jade is an easy-to-use, purely open-source hardware wallet that offers advanced security for your Bitcoin and Liquid assets.",
+          })}
+        />
+        <Item
+          icon="3.7.1.svg"
+          titleIcon={<TitleIcon7 />}
+          description={translate({
+            message: "Blockstream Jade is an easy-to-use, purely open-source hardware wallet that offers advanced security for your Bitcoin and Liquid assets.",
+          })}
+        />
+        <Item
+          icon="3.8.1.svg"
+          titleIcon={<TitleIcon8 />}
+          description={translate({
+            message: "Blockstream Jade is an easy-to-use, purely open-source hardware wallet that offers advanced security for your Bitcoin and Liquid assets.",
+          })}
+        />
+        <Item
+          icon="3.9.1.svg"
+          titleIcon={<TitleIcon9 />}
+          description={translate({
+            message: "Blockstream Jade is an easy-to-use, purely open-source hardware wallet that offers advanced security for your Bitcoin and Liquid assets.",
+          })}
+        />
+
+        <Item
+          icon="3.10.svg"
           titleIcon={<Translate>More Coming Soon</Translate>}
           description={translate({
             message: "Soon we will support more software and hardware wallets to manage Holder Key signatures.",
