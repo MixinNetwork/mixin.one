@@ -15,7 +15,7 @@ const Item = ({ icon, titleIcon, description }: { icon: string; titleIcon: React
   return (
     <div className="bg-white rounded-sm shadow pt-3 pl-2 pr-5 pb-12 grid grid-cols-[auto_1fr] gap-x-4 gap-y-2.5">
       <img src={useBaseUrl("/img/page/reliable/" + icon)} className="row-span-2 aspect-square w-12 md:w-18 lg:24" />
-      {titleIcon}
+      <div className="my-auto">{titleIcon}</div>
       <div className="text-zinc-800 text-opacity-80 text-sm font-normal leading-normal">{description}</div>
     </div>
   )
@@ -75,28 +75,28 @@ export const SingerSection = () => {
           icon="3.6.1.svg"
           titleIcon={<TitleIcon6 />}
           description={translate({
-            message: "Blockstream Jade is an easy-to-use, purely open-source hardware wallet that offers advanced security for your Bitcoin and Liquid assets.",
+            message: "Ledger's hardware wallets are multicurrency wallets that are used to store private keys for cryptocurrencies offline.",
           })}
         />
         <Item
           icon="3.7.1.svg"
-          titleIcon={<TitleIcon7 />}
+          titleIcon={<img src={require("@site/static/img/page/reliable/3.7.2.webp").default} width={190} height={18} />}
           description={translate({
-            message: "Blockstream Jade is an easy-to-use, purely open-source hardware wallet that offers advanced security for your Bitcoin and Liquid assets.",
+            message: "DIY airgapped hardware wallet that uses QR codes for communication with the host.",
           })}
         />
         <Item
           icon="3.8.1.svg"
           titleIcon={<TitleIcon8 />}
           description={translate({
-            message: "Blockstream Jade is an easy-to-use, purely open-source hardware wallet that offers advanced security for your Bitcoin and Liquid assets.",
+            message: "The goal of SeedSigner is to lower the cost and complexity of Bitcoin multi-signature wallet use.",
           })}
         />
         <Item
           icon="3.9.1.svg"
           titleIcon={<TitleIcon9 />}
           description={translate({
-            message: "Blockstream Jade is an easy-to-use, purely open-source hardware wallet that offers advanced security for your Bitcoin and Liquid assets.",
+            message: "One of the simplest hardware wallet for beginners, BitBox02 boasts a fast setup, microSD backup, in-app guide, and intuitive touch sliders.",
           })}
         />
 
