@@ -1,5 +1,6 @@
 import Translate, { translate } from "@docusaurus/Translate"
 import LocalLink from "../../common/LocaleLink"
+import SectionTitle from "../../common/SectionTitle"
 
 const ProductCard = ({ title, description, cover }: { title: string; description: string; cover: string }) => (
   <div className="bg-white rounded-lg shadow-lg overflow-hidden">
@@ -14,14 +15,11 @@ const ProductCard = ({ title, description, cover }: { title: string; description
 
 export const MainProductSection = () => {
   return (
-    <div className="flex flex-col items-center bg-slate-100 bg-opacity-40 pt-25 pb-45 px-5 sm:pb-35">
-      <div className="text-zinc-800 text-[28px] font-medium">
+    <div className="flex flex-col items-center bg-slate-100 bg-opacity-40 pb-45 px-5 sm:pb-35">
+      <SectionTitle description={<Translate>Our product is decentralized, safer, stronger and cheaper</Translate>}>
         <Translate>Our Main Products</Translate>
-      </div>
-      <div className="mt-5 text-zinc-800 text-opacity-60 text-base font-normal leading-normal">
-        <Translate>Our product is decentralized, safer, stronger and cheaper</Translate>
-      </div>
-      <div className="mt-15 grid gap-y-5 gap-x-3 sm:grid-cols-3 container">
+      </SectionTitle>
+      <div className="grid gap-y-5 gap-x-3 sm:grid-cols-3 container">
         <ProductCard
           key="Mixin Messenger"
           title={"Mixin Messenger"}
