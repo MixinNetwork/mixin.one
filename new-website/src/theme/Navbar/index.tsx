@@ -14,8 +14,8 @@ const Item = (data: NavbarItem) => {
     return (
       <div className="group relative click-area-4">
         {data.label}
-        <div className={clsx("absolute -left-7.5 pt-6 w-98 rounded-sm transition-all group-hover:op-100 group-hover:pointer-events-auto shadow z-10", "opacity-0 pointer-events-none")}>
-          <div className="pt-7.5 pb-10 px-2.5 bg-white">
+        <div className={clsx("absolute -left-7.5 pt-6 w-98 rounded-sm transition-all group-hover:op-100 group-hover:pointer-events-auto z-10", "opacity-0 pointer-events-none")}>
+          <div className="pt-7.5 pb-10 px-2.5 bg-white shadow-xl">
             <div className="ms-5 text-zinc-800 text-opacity-70 text-xs font-normal uppercase">{data.label}</div>
             <div className="mt-4 space-y-1">
               {data.items.map((item) => {
