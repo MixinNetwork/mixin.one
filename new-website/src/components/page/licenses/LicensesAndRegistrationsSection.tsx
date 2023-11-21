@@ -4,7 +4,7 @@ import Translate from "@docusaurus/Translate"
 
 import clsx from "clsx"
 const Item = ({ cover, title, description }: { cover: string; title: string; description: string }) => (
-  <div className={clsx("bg-white rounded-sm shadow pt-5 px-5 pb-10 grid sm:grid-cols-2 group items-center gap-10")}>
+  <div className={clsx("bg-white rounded-sm shadow pt-5 px-5 pb-10 md:p-15 lg:px-32 grid sm:grid-cols-2 group items-center gap-10")}>
     <img src={require("@site/static/img/page/licenses/" + cover).default} alt={title} className="aspect-335/220 w-full object-contain px-6 sm:group-odd:order-last " />
 
     <div className="space-y-5 w-full">
