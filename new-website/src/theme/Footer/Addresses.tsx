@@ -1,7 +1,5 @@
 import React from "react"
 import { translate } from "@docusaurus/Translate"
-import GDPR from "@site/static/img/footer/GDPR.svg"
-import PCIDSS from "@site/static/img/footer/PCIDSS.svg"
 import clsx from "clsx"
 
 const AddressItem = ({ name, address, className }: { name: string; address: string; className?: string }) => (
@@ -33,8 +31,8 @@ export function Addresses({}) {
             "Mixin Route sp. z o.o., a subsidiary of Mixin Ltd, Mixin Route Sp. z o.o. is a company registered in Street BARTYCKA 22B, office 21A, city WARSZAWA, index 00-716, country POLAND(Registration No.0001030006).",
         })}
       />
-      <PCIDSS className="order-2 sm:order-1 my-auto" />
-      <GDPR className="order-3 my-auto" />
+      <img src={require("@site/static/img/footer/PCIDSS.webp").default} width={82} height={32} className="order-2 sm:order-1 my-auto" />
+      <img src={require("@site/static/img/footer/GDPR.webp").default} width={82} height={34} className="order-3 my-auto" />
     </div>
   )
 }
