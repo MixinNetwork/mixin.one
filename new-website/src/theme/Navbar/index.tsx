@@ -60,7 +60,7 @@ const MobileItem = (data: NavbarItem) => {
             <div className="text-zinc-800 text-opacity-70 text-xs font-normal uppercase pb-5 px-6 pt-8">{data.label}</div>
             <div>
               {data.items.map((item) => (
-                <Link key={item.label} {...item} className="block py-3.5 px-7 text-zinc-800 hover:text-blue-500 hover:bg-zinc-100 text-sm font-medium leading-tight">
+                <Link key={item.label} {...item} className="block py-3.5 px-7 text-zinc-800 hover:text-blue-500 hover:bg-zinc-100 text-sm leading-tight">
                   {item.label}
                 </Link>
               ))}
@@ -111,7 +111,7 @@ export default function Navbar({ dark }: { dark?: boolean }): JSX.Element {
         <Hamburger className="dark:fill-white dark:fill-op-90" />
       </label>
 
-      <div className="absolute top-full inset-x-0 grid grid-rows-[0fr] transition-all duration-300 peer-checked:grid-rows-[1fr] z-100">
+      <div className="absolute top-full inset-x-0 grid grid-rows-[0fr] sm:grid-rows-[0fr]! transition-all duration-300 peer-checked:grid-rows-[1fr] z-100">
         <div className="overflow-hidden bg-white divide-solid divide-zinc-200 divide-y-1">
           {leftItems.map((item) => (
             <MobileItem key={item.label} {...item} />
