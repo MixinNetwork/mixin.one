@@ -4,7 +4,7 @@ import Translate, { translate } from "@docusaurus/Translate"
 import LocalLink from "./LocaleLink"
 
 const Item = ({ title, description, cover, to }: { title: string; description: string; cover: string; to: string }) => (
-  <LocalLink to={to} className="bg-white rounded-sm shadow space-y-5 pb-12">
+  <LocalLink to={to} className="bg-white rounded-sm shadow-lg space-y-5 pb-12">
     <img className="object-cover aspect-335/225 w-full" src={require("@site/static/img/common/feature/" + cover).default} alt={title} />
     <div className="text-zinc-800 text-xl font-medium leading-snug px-5">{title}</div>
     <div className="text-zinc-800 text-opacity-80 text-sm font-normal leading-snug px-5">{description}</div>

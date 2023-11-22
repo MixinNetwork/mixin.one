@@ -28,7 +28,7 @@ const Item = ({
     <div className="text-center text-zinc-800 text-3xl font-medium leading-10">{title}</div>
     <div className="mt-5 text-center text-zinc-800 text-opacity-70 text-base font-normal leading-normal">{description}</div>
     <div className="mt-10 grid items-center gap-10 sm:gap-32 sm:grid-cols-2">
-      <img src={require("@site/static/img/page/technology/" + cover).default} className="aspect-335/470 w-full object-cover sm:group-odd:order-last" />
+      <img src={require("@site/static/img/page/technology/" + cover).default} className="aspect-335/470 w-full self-start object-cover sm:group-odd:order-last" />
 
       <div className="space-y-16">
         {points.map(({ title, description, icon }) => (

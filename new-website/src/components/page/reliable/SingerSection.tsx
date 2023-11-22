@@ -13,7 +13,7 @@ import TitleIcon9 from "@site/static/img/page/reliable/3.9.2.svg"
 
 const Item = ({ icon, titleIcon, description }: { icon: string; titleIcon: React.ReactNode; description: string }) => {
   return (
-    <div className="bg-white rounded-sm shadow pt-3 pl-2 pr-5 pb-12 grid grid-cols-[auto_1fr] gap-x-4 gap-y-2.5">
+    <div className="bg-white rounded-sm shadow p-4 lg:p-8 md:p-6 grid grid-cols-[auto_1fr] gap-x-4 gap-y-2.5">
       <img src={useBaseUrl("/img/page/reliable/" + icon)} className="row-span-2 aspect-square w-12 md:w-18 lg:24" />
       <div className="my-auto">{titleIcon}</div>
       <div className="text-zinc-800 text-opacity-80 text-sm font-normal leading-normal">{description}</div>
