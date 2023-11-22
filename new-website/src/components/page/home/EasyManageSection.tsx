@@ -4,7 +4,11 @@ import LocalLink from "../../common/LocaleLink"
 
 const EasyManageItem = ({ title, description, icon }: { title: string; description: string; icon: string }) => (
   <div className="grid grid-cols-[auto_1fr] gap-y-3 gap-x-5">
-    <img src={require("@site/static/img/page/home/easy/" + icon).default} alt={"icon"} className="w-6 h-6 bg-white p-3 lg:p-4.5 box-content shadow-lg rounded-lg flex-center row-span-2" />
+    <img
+      src={require("@site/static/img/page/home/easy/" + icon).default}
+      alt={"icon"}
+      className="w-6 h-6 bg-white p-3 lg:p-4.5 box-content shadow-lg shadow-blue-600 shadow-opacity-10 rounded-lg flex-center row-span-2"
+    />
     <div className="text-zinc-800 text-base font-medium leading-tight">{title}</div>
     <div className="text-zinc-800 text-opacity-70 text-sm font-normal leading-tight">{description}</div>
   </div>
