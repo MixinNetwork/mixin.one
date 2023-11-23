@@ -22,8 +22,8 @@ const TechnologySection = () => (
 const Item = ({ cover, title, description }: { cover: string; title: string; description: string }) => (
   <div className="bg-white rounded-sm shadow pb-20">
     <img src={require("@site/static/img/page/confident/" + cover).default} alt={description} className="aspect-335/250 w-full" />
-    <div className="mt-5 px-5 text-[#333] text-xl font-medium leading-snug">{title}</div>
-    <div className="mt-5 px-5 text-[#333] text-base font-normal  leading-relaxed">{description}</div>
+    <div className="mt-5 px-5 sm:mt-6.5 md:mt-8 lg:mt-10 sm:px-6.5 md:px-8 lg:px-10 text-[#333] text-xl font-medium leading-snug">{title}</div>
+    <div className="mt-5 px-5 sm:px-6.5 md:px-8 lg:px-10 text-[#333] text-base font-normal  leading-relaxed">{description}</div>
   </div>
 )
 

@@ -12,7 +12,7 @@ const SpecialItem = () => (
       <div className="text-white text-xl font-medium sm:text-7 md:text-7.5 lg:text-8">
         <Translate>The Mt. Gox Debacle</Translate>
       </div>
-      <div className="text-white text-opacity-60 text-sm font-normal leading-snug">
+      <div className="text-white text-opacity-90 text-sm font-normal leading-snug">
         <Translate>
           Mt. Gox was a bitcoin exchange based in Shibuya, Tokyo, Japan. Launched in 2010, it was handling over 70% of all bitcoin (BTC) transactions worldwide by early 2014, when it abruptly ceased
           operations amid revelations of its involvement in the loss/theft of hundreds of thousands of bitcoins, then worth hundreds of millions in US dollars.
@@ -28,7 +28,7 @@ const Item = ({ cover, title, description }: { cover: string; title: string; des
     <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black" />
     <div className="p-5 absolute inset-0 top-auto space-y-4">
       <div className="text-white text-xl font-medium sm:text-7 md:text-7.5 lg:text-8">{title}</div>
-      <div className="text-white text-opacity-60 text-sm font-normal leading-relaxed">{description}</div>
+      <div className="text-white text-opacity-90 text-sm font-normal leading-relaxed">{description}</div>
     </div>
   </div>
 )
