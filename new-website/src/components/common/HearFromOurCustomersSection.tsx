@@ -63,24 +63,13 @@ export const HearFromOurCustomersSection = () => {
       },
       {
         content: translate({
-          message: "Mixin Safe provides a complete suite of decentralized solutions to help custody my Bitcoin wealth, no sacrifice of the Bitcoin decentralized nature.",
+          message: "We need the contributions of everyone in this ecosystem - large and small - to bring out the full potential of the technology that Satoshi proposed.",
         }),
         name: translate({
-          message: "Thorb",
+          message: "Lyric",
         }),
         title: translate({
-          message: "Founder and CEO, MixPay",
-        }),
-      },
-      {
-        content: translate({
-          message: "Mixin Safe provides a complete suite of decentralized solutions to help custody my Bitcoin wealth, no sacrifice of the Bitcoin decentralized nature.",
-        }),
-        name: translate({
-          message: "Thorb",
-        }),
-        title: translate({
-          message: "Founder and CEO, MixPay",
+          message: "Founder and CEO, Pando",
         }),
       },
     ].map((item) => <Item key={item.content} {...item} />),
