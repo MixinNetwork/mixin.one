@@ -3,7 +3,7 @@ import useDocusaurusContext from "@docusaurus/useDocusaurusContext"
 import LocalLink from "../../common/LocaleLink"
 
 const EasyManageItem = ({ title, description, icon }: { title: string; description: string; icon: string }) => (
-  <div className="grid grid-cols-[auto_1fr] gap-y-3 gap-x-5">
+  <div className="grid grid-cols-[auto_1fr] grid-rows-[auto_1fr] gap-y-3 gap-x-5">
     <img
       src={require("@site/static/img/page/home/easy/" + icon).default}
       alt={"icon"}

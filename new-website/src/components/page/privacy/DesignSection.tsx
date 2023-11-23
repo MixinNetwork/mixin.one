@@ -10,7 +10,7 @@ const Item = ({ cover, title, points, description }: { cover: string; title: Rea
     <div className="sm:flex-1">
       <div className="text-[#333] text-xl font-medium leading-snug">{title}</div>
       {description && <div className="mt-5 text-[#333] text-base font-normal leading-relaxed">{description}</div>}
-      <div className="mt-7 grid grid-cols-[auto_1fr] gap-x-4 gap-y-7">
+      <div className="mt-7 grid grid-cols-[auto_1fr] grid-rows-[auto_1fr] gap-x-4 gap-y-7">
         {points.map((point) => (
           <>
             <Checked className="mt-1" />

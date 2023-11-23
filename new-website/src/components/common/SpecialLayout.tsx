@@ -25,7 +25,7 @@ export const SpecialLayoutItem = ({
 
       <div className="space-y-16">
         {points.map(({ title, description, icon }) => (
-          <div key={title} className="grid grid-cols-[auto_1fr] gap-x-4 gap-y-5">
+          <div key={title} className="grid grid-cols-[auto_1fr] grid-rows-[auto_1fr] gap-x-4 gap-y-5">
             {icon}
             <div className="text-[#333] text-xl font-medium leading-snug">{title}</div>
             <div className="col-span-2 text-[#333] text-opacity-80 text-base font-normal leading-relaxed">{description}</div>
