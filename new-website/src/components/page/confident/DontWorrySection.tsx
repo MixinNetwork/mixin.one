@@ -4,7 +4,7 @@ import SectionTitle from "../../common/SectionTitle"
 import useBaseUrl from "@docusaurus/useBaseUrl"
 
 const Item = ({ title, description, icon }: { title: string; description: string; icon: string }) => (
-  <div className="bg-white rounded-sm shadow py-3 pl-2.5 pr-5 sm:p-8 sm:pb-13.5 grid grid-cols-[auto_1fr] grid-rows-[auto_1fr] gap-x-4 gap-y-2">
+  <div className="bg-white rounded-sm shadow py-3 pl-2.5 pr-5 sm:p-8 sm:pb-13.5 grid grid-cols-[auto_1fr] gap-x-4 gap-y-2">
     <img src={useBaseUrl("/img/page/confident/" + icon)} className="row-span-2 aspect-square w-12 sm:w-18" />
 
     <div className=" text-[#333] text-base font-medium leading-tight h-fit">{title}</div>

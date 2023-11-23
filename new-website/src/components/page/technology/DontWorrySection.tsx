@@ -81,13 +81,11 @@ export const DontWorrySection = () => (
       points={[
         {
           title: translate({
-            message: "Enjoy to Use",
+            message: "Easy to Use",
           }),
+
           description: (
-            <Translate>
-              Thanks to asset read-only authorization, Dapp whitelist and approval process, you can safely consume or invest in cryptocurrencies without worrying about potential risks when using Dapp,
-              such as authorization vulnerabilities.
-            </Translate>
+            <Translate>The mobile phone number login is easy to use and will not lose the account. The 6-digit password manages the MPC wallet, which is safe, simple and easy to remember.</Translate>
           ),
           icon: <Section2Icon1 />,
         },
