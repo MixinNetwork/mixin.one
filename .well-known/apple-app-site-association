@@ -15,10 +15,6 @@
                  "comment": "Request payment"
                },
                {
-                 "/": "/transfer/*",
-                 "comment": "Transfer to a user"
-               },
-               {
                  "/": "/snapshots/*",
                  "comment": "Show snapshot"
                },
@@ -26,16 +22,6 @@
                  "/": "/snapshots",
                  "?": "*",
                  "comment": "Show snapshot"
-               },
-               {
-                 "/": "/address",
-                 "?": "*",
-                 "comment": "Manage withdrawal address"
-               },
-               {
-                 "/": "/withdrawal",
-                 "?": "*",
-                 "comment": "Request withdrawal"
                },
                {
                  "/": "/users/*",

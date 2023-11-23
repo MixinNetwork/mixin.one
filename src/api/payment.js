@@ -13,6 +13,12 @@ Payment.prototype = {
     this.api.request('POST', '/payments', params, function(resp) {
       return callback(resp);
     });
+  },
+
+  fetchSafeTrace: function(callback, traceId) {
+    this.api.request('GET', `/safe/transactions/${traceId}`, undefined, function(resp) {
+      return callback(resp);
+    })
   }
 };
 

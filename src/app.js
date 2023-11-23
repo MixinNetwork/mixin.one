@@ -85,6 +85,9 @@ router.on({
   '/receipts/new': function () {
     new Pay(router, api).new();
   },
+  '/pay/:address': function (match) {
+    new Pay(router, api).renderNew(match.data['address']);
+  },
   '/pay': function () {
     new Pay(router, api).render();
   },
@@ -100,16 +103,7 @@ router.on({
   '/conversations/:id': function (match) {
     new Schema(router, api).render(match.data['id']);
   },
-  '/transfer/:id': function (match) {
-    new Schema(router, api).render(match.data['id']);
-  },
   '/send': function () {
-    new Schema(router, api).render();
-  },
-  '/address': function () {
-    new Schema(router, api).render();
-  },
-  '/withdrawal': function () {
     new Schema(router, api).render();
   },
   '/xin': function () {

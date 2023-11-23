@@ -3,12 +3,14 @@ import $ from 'zepto-webpack';
 import { Decimal } from 'decimal.js';
 import { v4 as uuidv4 } from 'uuid';
 import MixinUtils from '../utils/mixin.js';
+import AddressUtils from '../utils/address.js';
 import URLUtils from '../utils/url.js';
 import { initQRCode } from '../utils/modal.js';
 import arrow from '../assets/icons/arrow.svg';
 import blueLogo from '../assets/icons/logo.png';
 import qrCodeIcon from '../assets/icons/qrcode.svg';
 import completeIcon from '../assets/icons/payment_complete.svg';
+import redirectingIcon from '../assets/icons/redirecting.svg';
 
 var validate = require('uuid-validate');
 
@@ -86,7 +88,7 @@ Pay.prototype = {
           let platform = MixinUtils.environment();
           let route = `https://${window.location.host}${path}`;
           if (platform == 'Android' || platform == 'iOS') {
-            window.location = `mixin://send?text=${encodeURIComponent(route)}`;
+            window.location = `https://mixin.one/send?text=${encodeURIComponent(route)}`;
           } else {
             window.location = route;
           }
@@ -117,6 +119,40 @@ Pay.prototype = {
         recipientId, assetId, amount, traceId, memo
       }
       self.refreshPayment(params);
+    }, assetId)
+  },
+
+  renderNew: function(address) {
+    const self = this;
+    const assetId = URLUtils.getUrlParameter("asset");
+    const amount = URLUtils.getUrlParameter("amount");
+    const memo = URLUtils.getUrlParameter("memo");
+    let traceId = URLUtils.getUrlParameter("trace");
+    if (traceId == "") {
+      traceId = uuidv4();
+    }
+    if (!self.validateAddress(address) || !self.validateNewParams(assetId, amount, traceId, memo)) {
+      self.api.notify('error', i18n.t('general.errors.10002'));
+      $('#layout-container').html(self.ErrorGeneral());
+      $('body').attr('class', 'error layout');
+      self.router.updatePageLinks();
+      return true;
+    }
+    self.api.network.assetsShow((resp) => {
+      if (resp.error && (resp.error.code === 400 || resp.error.code === 10002)) {
+        $('#layout-container').html(self.ErrorGeneral());
+        $('body').attr('class', 'error layout');
+        self.router.updatePageLinks();
+        return false;
+      }
+      const asset = resp.data;
+      var preloadImage = new Image();
+      preloadImage.src = asset.icon_url;
+      const params = {
+        isInitialized: false,
+        address, asset, amount, traceId, memo
+      };
+      self.refreshSafePayment(params);
     }, assetId)
   },
 
@@ -156,7 +192,8 @@ Pay.prototype = {
         tip: i18n.t('code.payment.mobile.scan'),
         complete: payment.status === 'paid',
         successURL: completeIcon,
-        mixinURL
+        mixinURL,
+        redirectingIcon
       };
       if (!isInitialized) {
         params.isInitialized = true;
@@ -167,20 +204,110 @@ Pay.prototype = {
         const platform = MixinUtils.environment();
         if (!platform) $('.main').attr('class', 'main browser');          
         if (data.hasMemo) $('.scan-container').attr('class', 'scan-container new-margin');
-        initQRCode(mixinURL)
+        initQRCode(mixinURL);
       }
       self.router.updatePageLinks();
       if (payment.status === 'paid') {
         data.complete = true;
         $('#layout-container').html(self.template(data));
+        const platform = MixinUtils.environment();
         if (!platform) $('.main').attr('class', 'main browser'); 
         if (data.hasMemo) $('.scan-container').attr('class', 'scan-container new-margin'); 
-        return true
+        self.redirect();
+        return true;
       };
       setTimeout(function() {
         self.refreshPayment(params);
       }, 1500);
     }, recipientId, assetId, amount, traceId);
+  },
+
+  refreshSafePayment: function (params) {
+    const self = this;
+    const { isInitialized, address, asset, amount, traceId, memo } = params;
+    self.api.payment.fetchSafeTrace(function (resp) {
+      if (resp.error) {
+        if (resp.error.code === 404) {
+          resp.error = undefined;
+        } else {
+          if (resp.error.code === 400 || resp.error.code === 10002) {
+            $('#layout-container').html(self.ErrorGeneral());
+            $('body').attr('class', 'error layout');
+            self.router.updatePageLinks();
+          } 
+          if (!isInitialized) {
+            return false;
+          }
+        }
+      }
+
+      const payment = resp.data;
+      const useAmount = new Decimal(asset.price_usd).times(amount);
+      const mixinURL = `https://mixin.one${window.location.pathname}${window.location.search}`;
+      const data = {
+        logoURL: blueLogo,
+        title: address,
+        hasSubTitle: true,
+        subTitle: i18n.t('schema.title.transfer'),
+        hasMemo: !!memo,
+        memo,
+        iconUrl: asset.icon_url,
+        iconTitle: `${amount} ${asset.symbol}`,
+        iconSubTitle: `${useAmount.toNumber().toFixed(2).toString()} USD`,
+        showQRCode: true,
+        qrCodeIcon,
+        tip: i18n.t('code.payment.mobile.scan'),
+        successURL: completeIcon,
+        mixinURL,
+        redirectingIcon
+      };
+      if (!isInitialized) {
+        params.isInitialized = true;
+        let st = 'Pay ' + data.iconTitle  + ' to ' + address;
+        $('title').html(st + ' | Mixin - Secure Digital Assets and Messages on Mixin');
+        $('body').attr('class', 'pay code layout');
+        $('#layout-container').html(self.template(data));
+        const platform = MixinUtils.environment();
+        if (!platform) $('.main').attr('class', 'main browser');          
+        if (data.hasMemo) $('.scan-container').attr('class', 'scan-container new-margin');
+        initQRCode(mixinURL);
+      }
+      self.router.updatePageLinks();
+
+      if (payment && payment.state !== 'unspent') {
+        data.complete = true;
+        $('#layout-container').html(self.template(data));
+        const platform = MixinUtils.environment();
+        if (!platform) $('.main').attr('class', 'main browser'); 
+        if (data.hasMemo) $('.scan-container').attr('class', 'scan-container new-margin');
+        self.redirect();
+        return true;
+      }
+      setTimeout(function() {
+        self.refreshSafePayment(params);
+      }, 1500);
+    }, traceId);
+  },
+
+  redirect: function () {
+    const returnTo = URLUtils.getUrlParameter("return_to");
+    if (returnTo) {
+      try {
+        const uri = new URL(decodeURIComponent(returnTo));
+        if (uri.protocol === "http:" || uri.protocol === "https:") {
+          $("#redirect-container").toggleClass('active', true);
+          const timer = setTimeout(() => {
+            window.location.replace(returnTo);
+          }, 1500);
+          $('#cancel-redirect-btn').on('click', function() {
+            clearTimeout(timer);
+            $("#redirect-container").toggleClass('active', false);
+          });
+        }
+      } catch (err) {
+        console.log("invalid return_to", err);
+      }
+    }
   },
 
   validateParams: function(recipientId, assetId, amount, traceId, memo) {
@@ -197,6 +324,34 @@ Pay.prototype = {
       return false;
     }
     return parseFloat(amount) > 0;
+  },
+
+  validateNewParams: function(assetId, amount, traceId, memo) {
+    if (assetId && !validate(assetId)) {
+      return false;
+    }
+    if (memo && memo.length > 200) {
+      return false;
+    }
+    if (amount && parseFloat(amount) <= 0) {
+      return false;
+    }
+    if (!validate(traceId)) {
+      return false;
+    }
+    return true;
+  },
+
+  validateAddress: function (address) {
+    const prefix = address.slice(0, 3);
+    switch (prefix) {
+      case "XIN": 
+        return AddressUtils.verifyMainnetAddress(address);
+      case "MIX": 
+        return AddressUtils.verifyMixAddress(address);
+      default:
+        return validate(address);
+    }
   }
 };
 
