@@ -12,7 +12,7 @@ const FAQItem = ({ question, answer }: { question: string; answer: string }) => 
     </label>
     <div className="grid grid-rows-[0fr] transition-all duration-300 peer-checked:grid-rows-[1fr]">
       <div className="overflow-hidden">
-        <div className="mb-3.5 text-[#333] text-opacity-75 text-sm font-normal leading-tight cursor-default">{answer}</div>
+        <div className="mb-3.5 text-[#333] text-opacity-75 text-sm font-normal leading-snug cursor-default pe-6">{answer}</div>
       </div>
     </div>
   </div>
