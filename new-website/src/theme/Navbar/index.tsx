@@ -49,7 +49,7 @@ const MobileItem = (data: NavbarItem) => {
     const id = "nav-" + data.label
     return (
       <div>
-        <input id={id} type="checkbox" className="hidden peer" />
+        <input id={id} type="checkbox" className="hidden! peer" />
         <label htmlFor={id} className={clsx("group py-8 px-6 flex flex-row justify-between peer-checked:svg:-rotate-180")}>
           <div className={clsx("group-hover:text-zinc-200", defaultClassName)}>{data.label}</div>
           <Arrow className="transition-all duration-300" />
@@ -106,7 +106,7 @@ export default function Navbar({ dark }: { dark?: boolean }): JSX.Element {
         })}
       </span>
 
-      <input id="nav" type="checkbox" className="hidden peer" />
+      <input id="nav" type="checkbox" className="hidden! peer" />
       <label htmlFor="nav" className="sm:hidden click-area-4">
         <Hamburger className="dark:fill-white dark:fill-op-90" />
       </label>
