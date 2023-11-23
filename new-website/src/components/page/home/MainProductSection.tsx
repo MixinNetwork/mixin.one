@@ -7,8 +7,8 @@ const ProductCard = ({ title, description, cover }: { title: string; description
     <img src={require("@site/static/img/page/home/product/" + cover).default} alt={title} className="aspect-335/225" />
 
     <div className="aspect-335/210 pt-6 px-5 space-y-3">
-      <div className="text-zinc-800 text-xl font-medium leading-tight">{title}</div>
-      <div className="text-zinc-800 text-opacity-80 text-sm font-normal leading-snug">{description}</div>
+      <div className="text-[#333] text-xl font-medium leading-tight">{title}</div>
+      <div className="text-[#333] text-opacity-80 text-sm font-normal leading-snug">{description}</div>
     </div>
   </div>
 )

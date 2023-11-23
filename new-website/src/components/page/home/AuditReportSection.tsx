@@ -7,10 +7,10 @@ export const AuditReportSection = () => (
     <div className="pt-20 sm:pt-50 pb-40 sm:pb-20 px-5 md:py-27 text-center md:text-start container mx-auto grid gap-y-20 gap-x-27.5 md:grid-cols-[474fr_356fr]">
       <div className="flex flex-col justify-between md:py-12.5">
         <div>
-          <div className="text-zinc-800 text-3xl font-medium leading-10">
+          <div className="text-[#333] text-3xl font-medium leading-10">
             <Translate>Audit Report</Translate>
           </div>
-          <div className="mt-5 text-zinc-800 text-opacity-60 text-base font-normal leading-normal">
+          <div className="mt-5 text-[#333] text-opacity-60 text-base font-normal leading-normal">
             <Translate>Mixin Safe powers leading organizations from Payment to DAOs, and beyond</Translate>
           </div>
         </div>

@@ -7,11 +7,11 @@ const Item = ({ cover, title, description, points, className }: { cover: string;
     <img src={require("@site/static/img/page/decentralized/" + cover).default} alt={title} className="aspect-335/225 w-full sm:p-2 sm:group-odd:order-last" />
 
     <div className="shrink">
-      <div className="text-zinc-800 text-xl sm:text-8 font-medium leading-relaxed">{title}</div>
-      {description && <div className="mt-5 text-zinc-800 text-sm font-normal leading-snug">{description}</div>}
+      <div className="text-[#333] text-xl sm:text-8 font-medium leading-relaxed">{title}</div>
+      {description && <div className="mt-5 text-[#333] text-sm font-normal leading-snug">{description}</div>}
       <ol className="mt-5 list-disc list-inside space-y-3">
         {points.map((point) => (
-          <li key={point} className="text-zinc-800 text-opacity-80 text-sm font-normal leading-snug flex space-x-2">
+          <li key={point} className="text-[#333] text-opacity-80 text-sm font-normal leading-snug flex space-x-2">
             <div className="w-2 h-4.5 flex-center shrink-0">
               <div className="w-2 h-2 bg-zinc-800 rounded-full" />
             </div>

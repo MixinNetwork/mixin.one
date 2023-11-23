@@ -3,7 +3,7 @@ import { translate } from "@docusaurus/Translate"
 const StatisticGridItem = ({ title, description }: { title: string; description: string }) => (
   <div className="aspect-square sm:aspect-auto flex-center flex-col space-y-2 bg-zinc-100">
     <div className="text-slate-900 text-3xl sm:text-4xl font-semibold">{title}</div>
-    <div className="text-zinc-800 px-2 text-center text-opacity-70 text-xs sm:text-sm font-normal">{description}</div>
+    <div className="text-[#333] px-2 text-center text-opacity-70 text-xs sm:text-sm font-normal">{description}</div>
   </div>
 )
 

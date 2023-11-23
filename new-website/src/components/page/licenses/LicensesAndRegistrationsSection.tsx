@@ -9,8 +9,8 @@ const Item = ({ cover, title, description }: { cover: string; title: string; des
     <img src={require("@site/static/img/page/licenses/" + cover).default} alt={title} className="aspect-335/220 w-full object-contain px-6 sm:group-odd:order-last " />
 
     <div className="space-y-5 w-full">
-      <div className="text-zinc-800 text-xl font-medium leading-snug sm:text-2xl">{title}</div>
-      <div className="text-zinc-800 text-opacity-80 text-base font-normal leading-relaxed">{description}</div>
+      <div className="text-[#333] text-xl font-medium leading-snug sm:text-2xl">{title}</div>
+      <div className="text-[#333] text-opacity-80 text-base font-normal leading-relaxed">{description}</div>
     </div>
   </div>
 )

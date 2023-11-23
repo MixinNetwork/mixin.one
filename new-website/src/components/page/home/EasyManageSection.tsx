@@ -9,8 +9,8 @@ const EasyManageItem = ({ title, description, icon }: { title: string; descripti
       alt={"icon"}
       className="w-6 h-6 bg-white p-3 lg:p-4.5 box-content shadow-lg shadow-blue-600 shadow-opacity-10 rounded-lg flex-center row-span-2"
     />
-    <div className="text-zinc-800 text-base font-medium leading-tight">{title}</div>
-    <div className="text-zinc-800 text-opacity-70 text-sm font-normal leading-tight">{description}</div>
+    <div className="text-[#333] text-base font-medium leading-tight">{title}</div>
+    <div className="text-[#333] text-opacity-70 text-sm font-normal leading-tight">{description}</div>
   </div>
 )
 
@@ -21,10 +21,10 @@ export const EasyManageSection = () => {
   console.log("currentLocale", currentLocale)
   return (
     <div className="py-20 px-5 sm:pt-25 sm:pb-30 container mx-auto">
-      <div className="text-center text-zinc-800 text-3xl font-medium leading-10">
+      <div className="text-center text-[#333] text-3xl font-medium leading-10">
         <Translate>We Make Managing Digital Assets Easy</Translate>
       </div>
-      <div className="mt-5 text-center text-zinc-800 text-opacity-60 text-base sm:text-sm font-normal leading-normal">
+      <div className="mt-5 text-center text-[#333] text-opacity-60 text-base sm:text-sm font-normal leading-normal">
         <Translate>6 key features to allow hassle-free day-to-day management</Translate>
       </div>
       <img src={require(`@site/static/img/page/home/assets_${currentLocale}.webp`).default} alt={""} className="mt-20 aspect-335/183 relative" />

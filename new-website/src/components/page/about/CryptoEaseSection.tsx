@@ -6,7 +6,7 @@ const Item = ({ title, description }: { title: React.ReactNode; description: Rea
   <>
     <div className="md:max-w-65">
       <div className="text-center text-neutral-800 text-3xl font-medium">{title}</div>
-      <div className="mt-4 text-center text-zinc-800 text-opacity-80 text-sm font-normal leading-snug">{description}</div>
+      <div className="mt-4 text-center text-[#333] text-opacity-80 text-sm font-normal leading-snug">{description}</div>
     </div>
     <div className="my-10 mx-auto w-28 h-px bg-zinc-800 bg-opacity-30 sm:my-0 sm:w-px sm:h-28 sm:my-auto sm:last:hidden sm:mx-10 md:mx-15"></div>
   </>

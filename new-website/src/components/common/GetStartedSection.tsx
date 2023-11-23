@@ -16,7 +16,7 @@ export const GetStartedSection = () => (
           <Translate>Experience the latest innovations in Bitcoin industry and secure your Bitcoin starting with just $10 per year!</Translate>
         </div>
         <LocalLink
-          className="mt-7 md:mt-auto w-fit py-4 px-7 bg-white bg-opacity-95 rounded-sm flex-center text-zinc-800 text-base font-medium leading-none"
+          className="mt-7 md:mt-auto w-fit py-4 px-7 bg-white bg-opacity-95 rounded-sm flex-center text-[#333] text-base font-medium leading-none"
           href="https://calendly.com/mixin-safe/30min?month=2023-11"
         >
           <Translate>Schedule a demo</Translate>

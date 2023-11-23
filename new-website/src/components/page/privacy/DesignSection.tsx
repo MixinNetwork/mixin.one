@@ -8,13 +8,13 @@ const Item = ({ cover, title, points, description }: { cover: string; title: Rea
   <div className="grid items-center gap-15 sm:grid-cols-2 group">
     <img src={require("@site/static/img/page/privacy/" + cover).default} className="aspect-335/225 m-auto w-full sm:flex-1 sm:group-odd:order-last" />
     <div className="sm:flex-1">
-      <div className="text-zinc-800 text-xl font-medium leading-snug">{title}</div>
-      {description && <div className="mt-5 text-zinc-800 text-base font-normal leading-relaxed">{description}</div>}
+      <div className="text-[#333] text-xl font-medium leading-snug">{title}</div>
+      {description && <div className="mt-5 text-[#333] text-base font-normal leading-relaxed">{description}</div>}
       <div className="mt-7 grid grid-cols-[auto_1fr] gap-x-4 gap-y-7">
         {points.map((point) => (
           <>
             <Checked className="mt-1" />
-            <div className="text-zinc-800 text-base font-normal leading-relaxed">{point}</div>
+            <div className="text-[#333] text-base font-normal leading-relaxed">{point}</div>
           </>
         ))}
       </div>

@@ -8,8 +8,8 @@ const Item = ({ cover, title, description }: { cover: string; title: React.React
     </div>
 
     <div className="md:py-15">
-      <div className="text-zinc-800 text-xl font-medium leading-snug">{title}</div>
-      <div className="mt-6.5 text-zinc-800 text-opacity-80 text-base font-normal leading-relaxed">{description}</div>
+      <div className="text-[#333] text-xl font-medium leading-snug">{title}</div>
+      <div className="mt-6.5 text-[#333] text-opacity-80 text-base font-normal leading-relaxed">{description}</div>
     </div>
   </div>
 )

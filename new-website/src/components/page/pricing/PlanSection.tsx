@@ -21,16 +21,16 @@ export const Item = ({ name, description, price, features, cover }: { name: Reac
   return (
     <div className="bg-zinc-100 bg-opacity-50 rounded-sm border border-zinc-300 pt-10 pb-25 px-5 sm:px-10">
       <div className="grid gap-y-5 sm:grid-cols-2">
-        <div className="text-zinc-800 text-3xl font-medium">{name}</div>
-        <div className="sm:order-last text-zinc-800 text-opacity-70 text-base font-normal leading-normal">{description}</div>
+        <div className="text-[#333] text-3xl font-medium">{name}</div>
+        <div className="sm:order-last text-[#333] text-opacity-70 text-base font-normal leading-normal">{description}</div>
         <div className="sm:row-span-2 sm:w-fit sm:ml-auto">
           <div className="mx-auto w-fit mt-15 sm:mt-0 ">
-            <sup className="text-zinc-800 text-3xl font-semibold leading-loose align-super">$</sup>
-            <span className="text-zinc-800 text-6xl font-semibold leading-10">{price}</span>
-            <span className="text-zinc-800 text-xl font-normal leading-normal">/year</span>
+            <sup className="text-[#333] text-3xl font-semibold leading-loose align-super">$</sup>
+            <span className="text-[#333] text-6xl font-semibold leading-10">{price}</span>
+            <span className="text-[#333] text-xl font-normal leading-normal">/year</span>
           </div>
           {price <= 0 && (
-            <div className="mx-auto w-fit text-zinc-800 text-opacity-70 text-sm font-normal leading-none">
+            <div className="mx-auto w-fit text-[#333] text-opacity-70 text-sm font-normal leading-none">
               <Translate>NO ANNUAL FEES</Translate>
             </div>
           )}
@@ -43,14 +43,14 @@ export const Item = ({ name, description, price, features, cover }: { name: Reac
       <div className="mt-15 w-full h-px border border-zinc-300"></div>
       <div className="grid items-center sm:grid-cols-2 mt-20 sm:mt-10">
         <div className="space-y-5">
-          <div className="text-zinc-800 text-xl font-medium leading-normal">
+          <div className="text-[#333] text-xl font-medium leading-normal">
             <Translate>Features</Translate>
           </div>
           <div className="grid gap-5 grid-cols-2">
             {features.map((feature) => (
               <div className="flex-center space-x-2.5 w-fit">
                 <Checked className="shrink-0" />
-                <div className="text-zinc-800 text-base font-normal leading-none">{feature}</div>
+                <div className="text-[#333] text-base font-normal leading-none">{feature}</div>
               </div>
             ))}
           </div>

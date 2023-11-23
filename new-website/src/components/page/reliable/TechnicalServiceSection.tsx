@@ -8,10 +8,10 @@ const Item = ({ index, title, description, left }: { index: number; title: strin
   <div className="flex flex-col gap-4">
     <div className={clsx("flex flex-row gap-4 items-center", left && "md:flex-row-reverse")}>
       <div className="w-5 h-5 leading-none bg-zinc-800 rounded-full text-sm text-white flex-center">{index}</div>
-      <div className="text-zinc-800 text-xl font-medium leading-tight">{title}</div>
+      <div className="text-[#333] text-xl font-medium leading-tight">{title}</div>
     </div>
 
-    <div className={clsx("col-span-2 text-zinc-800 text-opacity-80 text-sm font-normal leading-snug", left ? "md:text-end mr-9" : "md:ml-9")}>{description}</div>
+    <div className={clsx("col-span-2 text-[#333] text-opacity-80 text-sm font-normal leading-snug", left ? "md:text-end mr-9" : "md:ml-9")}>{description}</div>
   </div>
 )
 

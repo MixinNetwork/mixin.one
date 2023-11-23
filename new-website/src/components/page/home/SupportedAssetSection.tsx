@@ -10,10 +10,10 @@ export const SupportedAssetSection = () => {
 
   return (
     <div className="pt-20 pb-40">
-      <div className="rw-10 mx-auto container text-center text-zinc-800 text-3xl font-medium leading-10">
+      <div className="rw-10 mx-auto container text-center text-[#333] text-3xl font-medium leading-10">
         <Translate>Supported Assets and Protocols</Translate>
       </div>
-      <div className="mt-5 rw-10 mx-auto container text-center text-zinc-800 text-opacity-60 text-base font-normal leading-normal">
+      <div className="mt-5 rw-10 mx-auto container text-center text-[#333] text-opacity-60 text-base font-normal leading-normal">
         <Translate>We support over 3,400 tokens and 48 chains, including popular layer 1 and layer 2</Translate>
       </div>
       <div className="space-y-7 pt-15 sm:pt-20">
