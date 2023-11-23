@@ -18,8 +18,8 @@ export const SpecialLayoutItem = ({
   }[]
 }) => (
   <div className="group">
-    <div className="text-center text-[#333] text-3xl font-medium leading-10">{title}</div>
-    <div className="mt-5 text-center text-[#333] text-opacity-70 text-base font-normal leading-normal">{description}</div>
+    <div className="text-center text-[#333] max-w-2/3 mx-auto text-3xl font-medium leading-10">{title}</div>
+    <div className="mt-5 text-center text-[#333] max-w-2/3 mx-auto text-opacity-70 text-base font-normal leading-normal">{description}</div>
     <div className="mt-10 sm:mt-19 md:mt-27 lg:mt-35  grid items-center gap-10 sm:gap-32 sm:grid-cols-2">
       <img src={cover} className={clsx("w-full self-start object-cover sm:group-odd:order-last", coverClassName)} />
 
