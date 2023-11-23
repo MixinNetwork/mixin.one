@@ -38,11 +38,9 @@ Schema.prototype = {
       basic: true,
       hasAvatar: true,
       avatarUrl: self.getAvatar(type),
-      title: type === 'address' 
-        ? i18n.t(`schema.title.${type}.${action ? 'delete' : "add"}`) 
-        : i18n.t(`schema.title.${type}`),
+      title: i18n.t(`schema.title.${type}`),
       subTitle: self.getSubTitle(type, id),
-      qrCodeIcon,
+      qrCodeIcon
     };
 
     if (['apps', 'users', 'conversations', 'send'].includes(type)) {
@@ -53,16 +51,14 @@ Schema.prototype = {
       data.mixinURL = `https://mixin.one${window.location.pathname}${window.location.search}`;
     } else {
       data.showQRCode = true;
-      data.tip = type === 'address' 
-        ? i18n.t(`schema.address.btn.intro.${action ? 'delete' : "add"}`) 
-        : i18n.t("code.payment.mobile.scan");
+      data.tip = i18n.t("code.payment.mobile.scan");
     }
     $('#layout-container').html(self.template(data));
     $('.subTitle').attr('class', 'subTitle new-margin');
     if (!platform) $('.main').attr('class', 'main browser');
     self.router.updatePageLinks();
   },
-  
+
   renderError: function () {
     this.api.notify('error', i18n.t('general.errors.10002'));
     $('#layout-container').html(this.ErrorGeneral());
@@ -106,7 +102,7 @@ Schema.prototype = {
       'apps': appDefaultAvatar,
       'users': userdefaultAvatar,
       'conversations': conversationAvatar,
-      'send': shareAvatar,
+      'send': shareAvatar
     };
     return map[type];
   },
@@ -116,7 +112,7 @@ Schema.prototype = {
 
     return id.slice(0, 6) + '...' + id.slice(-4);
   },
-  
+
   getButtonInfo: function (type) {
     const info = {};
     if (type === 'apps') {

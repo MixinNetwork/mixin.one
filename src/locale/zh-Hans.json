@@ -45,9 +45,6 @@
     "title.conversations": "会话",
     "title.transfer": "转账",
     "title.send": "分享",
-    "title.address.add": "添加提现地址",
-    "title.address.delete": "删除提现地址",
-    "title.Withdrawal": "提现",
     "bot.btn.open": "打开页面",
     "bot.btn.intro.open": "点击上方按钮以在 Mixin Messenger 中与打开该机器人页面。",
     "btn.view": "查看",
@@ -57,10 +54,7 @@
     "conversation.btn.chat": "聊天",
     "conversation.btn.intro.chat": "点击上方按钮以在 Mixin Messenger 中进行该对话。",
     "send.btn.share": "分享",
-    "send.btn.intro.share": "点击上方按钮以在 Mixin Messenger 中和你的好友分享消息。",
-    "address.btn.intro.add": "点击上方按钮或扫码以在 Mixin Messenger 中添加提现地址。",
-    "address.btn.intro.delete": "点击上方按钮或扫码以在 Mixin Messenger 中删除提现地址。",
-    "withdrawal.btn.intro": "点击上方按钮或扫码以在 Mixin Messenger 中提现。"
+    "send.btn.intro.share": "点击上方按钮以在 Mixin Messenger 中和你的好友分享消息。"
   },
   "snapshots": {
     "search.placeholder": "搜索交易",
