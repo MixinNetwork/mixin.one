@@ -42,8 +42,8 @@ export const TechnicalServiceSection = () => {
       </SectionTitle>
       <GrayBackgroundWrapper>
         <div className="pb-15">
-          <div className="mt-10 container mx-auto px-10 grid gap-y-15 md:grid-cols-[1fr_auto_1fr] md:gap-x-22 pb-20 md:pb-45">
-            <img src={useBaseUrl("/img/page/reliable/1.1.svg")} className="m-auto md:order-1 aspect-268/517" />
+          <div className="mt-10 container mx-auto px-10 grid gap-y-15 md:grid-cols-[1fr_auto_1fr] md:gap-x-12 lg:gap-x-22 pb-20 md:pb-45">
+            <img src={useBaseUrl("/img/page/reliable/1.1.svg")} className="m-auto md:h-4/5 lg:h-full md:order-1 aspect-268/517" />
             <div className="space-y-15 md:order-0">
               <Item
                 index={1}
