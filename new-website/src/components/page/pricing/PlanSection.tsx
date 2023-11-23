@@ -19,7 +19,7 @@ export const Section = ({ id, selected, children }: { id: string; selected: stri
 
 export const Item = ({ name, description, price, features, cover }: { name: React.ReactNode; description: React.ReactNode; price: number; features: React.ReactNode[]; cover: string }) => {
   return (
-    <div className="bg-zinc-100 bg-opacity-50 rounded-sm border border-zinc-300 pt-10 pb-25 px-5 sm:px-10">
+    <div className="bg-zinc-100 bg-opacity-50 rounded-sm border-px border-zinc-300 pt-10 pb-25 px-5 sm:px-10">
       <div className="grid gap-y-5 sm:grid-cols-2">
         <div className="text-[#333] text-3xl font-medium">{name}</div>
         <div className="sm:order-last text-[#333] text-opacity-70 text-base font-normal leading-normal">{description}</div>
@@ -40,7 +40,7 @@ export const Item = ({ name, description, price, features, cover }: { name: Reac
       <button className="mt-17.5 sm:mt-5 py-4 px-13 w-full sm:w-fit bg-zinc-800 rounded-sm text-center text-white text-sm font-normal leading-none">
         {price <= 0 ? <Translate>Try for free</Translate> : <Translate>Get Started</Translate>}
       </button>
-      <div className="mt-15 w-full h-px border border-zinc-300"></div>
+      <div className="mt-15 w-full h-px border-b-px border-zinc-300"></div>
       <div className="grid items-center sm:grid-cols-2 mt-20 sm:mt-10">
         <div className="space-y-5">
           <div className="text-[#333] text-xl font-medium leading-normal">
