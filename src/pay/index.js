@@ -85,7 +85,7 @@ Pay.prototype = {
           e.preventDefault();
           let amount = $('.amount').val();
           let memo = $('.memo').val().trim();
-          let path = `/pay?recipient=${data.user.user_id}&asset=${data.asset.asset_id}&amount=${amount}&memo=${encodeURI(memo)}&trace=${uuidv4()}`;
+          let path = `/pay/${data.user.user_id}?asset=${data.asset.asset_id}&amount=${amount}&memo=${encodeURI(memo)}&trace=${uuidv4()}`;
           let platform = MixinUtils.environment();
           let route = `https://${window.location.host}${path}`;
           if (platform == 'Android' || platform == 'iOS') {
@@ -174,7 +174,7 @@ Pay.prototype = {
       const payment = resp.data;
       const fullName = payment.recipient.full_name.trim();
       const useAmount = new Decimal(payment.asset.price_usd).times(payment.amount);
-      const mixinURL = `mixin://pay${window.location.search}`;
+      const mixinURL = `https://mixin.one/pay${window.location.search}`;
       const data = {
         logoURL: blueLogo,
         title: i18n.t('pay.recipient.title', { name: fullName }),
@@ -200,7 +200,7 @@ Pay.prototype = {
         $('body').attr('class', 'pay code layout');
         $('#layout-container').html(self.template(data));
         const platform = MixinUtils.environment();
-        if (!platform) $('.main').attr('class', 'main browser');          
+        if (!platform) $('.main').attr('class', 'main browser');
         if (data.hasMemo) $('.scan-container').attr('class', 'scan-container new-margin');
         initQRCode(mixinURL);
       }
@@ -209,8 +209,8 @@ Pay.prototype = {
         data.complete = true;
         $('#layout-container').html(self.template(data));
         const platform = MixinUtils.environment();
-        if (!platform) $('.main').attr('class', 'main browser'); 
-        if (data.hasMemo) $('.scan-container').attr('class', 'scan-container new-margin'); 
+        if (!platform) $('.main').attr('class', 'main browser');
+        if (data.hasMemo) $('.scan-container').attr('class', 'scan-container new-margin');
         self.redirect();
         return true;
       };
@@ -232,7 +232,7 @@ Pay.prototype = {
             $('#layout-container').html(self.ErrorGeneral());
             $('body').attr('class', 'error layout');
             self.router.updatePageLinks();
-          } 
+          }
           if (!isInitialized) {
             return false;
           }
@@ -278,7 +278,7 @@ Pay.prototype = {
         $('body').attr('class', bodyClass);
         $('#layout-container').html(self.template(data));
         const platform = MixinUtils.environment();
-        if (!platform) $('.main').attr('class', 'main browser');          
+        if (!platform) $('.main').attr('class', 'main browser');
         if (data.hasMemo) $('.scan-container').attr('class', 'scan-container new-margin');
         initQRCode(mixinURL);
       }
@@ -288,7 +288,7 @@ Pay.prototype = {
         data.complete = true;
         $('#layout-container').html(self.template(data));
         const platform = MixinUtils.environment();
-        if (!platform) $('.main').attr('class', 'main browser'); 
+        if (!platform) $('.main').attr('class', 'main browser');
         if (data.hasMemo) $('.scan-container').attr('class', 'scan-container new-margin');
         self.redirect();
         return true;
@@ -355,9 +355,9 @@ Pay.prototype = {
   validateAddress: function (address) {
     const prefix = address.slice(0, 3);
     switch (prefix) {
-      case "XIN": 
+      case "XIN":
         return AddressUtils.verifyMainnetAddress(address);
-      case "MIX": 
+      case "MIX":
         return AddressUtils.verifyMixAddress(address);
       default:
         return validate(address);
