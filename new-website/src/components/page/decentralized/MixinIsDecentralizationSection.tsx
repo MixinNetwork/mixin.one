@@ -11,47 +11,14 @@ import Icon21 from "@site/static/img/page/decentralized/3.2.2.svg"
 import Icon22 from "@site/static/img/page/decentralized/3.2.3.svg"
 import Icon23 from "@site/static/img/page/decentralized/3.2.4.svg"
 import Icon24 from "@site/static/img/page/decentralized/3.2.5.svg"
-
-const Item = ({
-  cover,
-  points,
-  title,
-  description,
-  className,
-}: {
-  cover: string
-  title: React.ReactNode
-  description: React.ReactNode
-  points: {
-    icon: React.ReactNode
-    title: string
-    description: React.ReactNode
-  }[]
-  className?: string
-}) => (
-  <div>
-    <SectionTitle description={description}>{title}</SectionTitle>
-
-    <div className={clsx("pb-15 grid gap-y-15 sm:gap-x-24 md:gap-x-28 lg:gap-x-32 items-center sm:grid-cols-2 group", className)}>
-      <img src={require("@site/static/img/page/decentralized/" + cover).default} className="aspect-562/662 w-full object-cover self-start sm:group-odd:order-last" />
-      <div className="grid gap-y-4 sm:gap-y-8 md:gap-y-12 lg:gap-y-16 px-5 sm:px-0">
-        {points.map(({ icon, title, description }) => (
-          <div key={title} className="grid grid-cols-[auto_1fr] items-center gap-x-4 gap-y-2 sm:gap-y-3 md:gap-y-4 lg:gap-y-5">
-            {icon}
-            <div className="text-[#333] text-4 sm:text-5 md:text-6 lg:text-7 font-medium">{title}</div>
-            <div className="text-[#333] text-opacity-80 text-3.5 sm:text-4 font-normal col-span-2">{description}</div>
-          </div>
-        ))}
-      </div>
-    </div>
-  </div>
-)
+import { SpecialLayout, SpecialLayoutItem } from "../../common/SpecialLayout"
 
 export const MixinIsDecentralizationSection = () => {
   return (
-    <div className="container mx-auto pb-25">
-      <Item
-        cover={"3.1.1.webp"}
+    <SpecialLayout>
+      <SpecialLayoutItem
+        cover={require("@site/static/img/page/decentralized/3.1.1.webp").default}
+        coverClassName="aspect-562/662"
         title={<Translate>Mixin is Decentralization</Translate>}
         description={<Translate>We lead the development of multiple open-source decentralized networks</Translate>}
         points={[
@@ -84,12 +51,12 @@ export const MixinIsDecentralizationSection = () => {
             description: <Translate>Decentralized key network TIP Network helps users use private keys in an easy-to-remember way.</Translate>,
           },
         ]}
-        className="sm:flex-row-reverse!"
       />
-      <Item
+      <SpecialLayoutItem
         title={<Translate>Mixin adopts decentralized technology</Translate>}
         description={<Translate>We never invent our own cryptographic techniques</Translate>}
-        cover={"3.2.1.webp"}
+        cover={require("@site/static/img/page/decentralized/3.2.1.webp").default}
+        coverClassName="aspect-562/662"
         points={[
           {
             icon: <Icon21 />,
@@ -123,6 +90,6 @@ export const MixinIsDecentralizationSection = () => {
           },
         ]}
       />
-    </div>
+    </SpecialLayout>
   )
 }
