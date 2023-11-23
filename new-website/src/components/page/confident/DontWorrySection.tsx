@@ -8,7 +8,7 @@ const Item = ({ title, description, icon }: { title: string; description: string
     <img src={useBaseUrl("/img/page/confident/" + icon)} className="row-span-2 aspect-square w-12 sm:w-18" />
 
     <div className=" text-[#333] text-base font-medium leading-tight">{title}</div>
-    <div className=" text-[#333] text-opacity-80 text-sm font-normal leading-snug">{description}</div>
+    <div className=" text-[#333] text-opacity-66 text-sm font-normal leading-snug">{description}</div>
   </div>
 )
 
