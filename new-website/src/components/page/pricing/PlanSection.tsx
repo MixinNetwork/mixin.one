@@ -14,7 +14,7 @@ export const Tab = ({ name, id, selected, onClick }: { name: string; id: string;
 }
 
 export const Section = ({ id, selected, children }: { id: string; selected: string; children: React.ReactNode }) => (
-  <div className={clsx("hidden col-span-full pt-8 gap-5", id === selected && "grid!")}>{children}</div>
+  <div className={clsx("hidden! col-span-full pt-8 gap-5", id === selected && "grid!")}>{children}</div>
 )
 
 export const Item = ({ name, description, price, features, cover }: { name: React.ReactNode; description: React.ReactNode; price: number; features: React.ReactNode[]; cover: string }) => {
