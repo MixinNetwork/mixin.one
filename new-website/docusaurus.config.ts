@@ -183,7 +183,7 @@ const config: Config = {
           items: [
             {
               label: "Our Mission",
-              to: "https://bond.mixin.zone/about",
+              to: "/about",
             },
             {
               label: "Contact Us",
