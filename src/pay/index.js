@@ -174,7 +174,7 @@ Pay.prototype = {
       const payment = resp.data;
       const fullName = payment.recipient.full_name.trim();
       const useAmount = new Decimal(payment.asset.price_usd).times(payment.amount);
-      const mixinURL = `mixin://mixin.one/pay${window.location.search}`;
+      const mixinURL = `mixin://pay${window.location.search}`;
       const qrCodeURL = `https://mixin.one/pay${window.location.search}`;
       const data = {
         logoURL: blueLogo,
