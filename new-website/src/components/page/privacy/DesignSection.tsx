@@ -42,7 +42,7 @@ function GridSection({}) {
         <div className="text-[#333] text-7 text-center font-medium">
           <Translate>Information Privacy</Translate>
         </div>
-        <img src={require("@site/static/img/page/privacy/1.1.1.webp").default} className="aspect-290/250" />
+        <img src={require("@site/static/img/page/privacy/1.1.1.webp").default} className="aspect-290/250 w-full" />
       </div>
       <GridItem cover={<GridIcon1 />} className="order-1 md:order-0">
         <Translate>All messages, audios, photos, and files are end-to-end encrypted</Translate>
