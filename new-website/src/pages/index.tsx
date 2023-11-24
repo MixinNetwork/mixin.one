@@ -19,7 +19,7 @@ import LocalLink from "../components/common/LocaleLink"
 const Header = () => {
   const title = replace(
     translate({
-      message: "Grow and secure your crypto wealth with Confidence",
+      message: "Grow and secure\nyour crypto wealth with\nConfidence",
     }),
     [
       {
