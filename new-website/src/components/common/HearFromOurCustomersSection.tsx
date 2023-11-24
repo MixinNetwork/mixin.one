@@ -10,7 +10,7 @@ const ButtonGroup = (props: CarouselButtonGroupProps & CarouselProps) => {
   const { next, previous, dots } = prepareCarouselData(props)
 
   return (
-    <div className="flex mx-auto items-center w-fit h-fit mx-auto space-x-6.5 mt-6.5">
+    <div className="flex ml-16.5 sm:ml-24 items-center w-fit h-fit space-x-6.5 mt-6.5">
       <button className="click-area-4" onClick={previous}>
         <NextArrow className="rotate-180" />
       </button>
@@ -28,10 +28,12 @@ const ButtonGroup = (props: CarouselButtonGroupProps & CarouselProps) => {
   )
 }
 const Item = ({ content, name, title }: { content: string; name: string; title: string }) => (
-  <div className="pl-16.5 pr-8.5">
+  <div className="pl-16.5 pr-8.5 sm:pl-24 sm:pr-20 md:pr-16 lg:pr-30 h-full flex flex-col justify-between gap-y-20">
     <div className="text-white text-lg font-normal leading-9">{content}</div>
-    <div className="mt-20 text-white text-xl font-medium leading-tight">{name}</div>
-    <div className="mt-4 text-zinc-300 text-base font-normal leading-none">{title}</div>
+    <div>
+      <div className=" text-white text-xl font-medium leading-tight">{name}</div>
+      <div className="mt-4 text-zinc-300 text-base font-normal leading-none">{title}</div>
+    </div>
   </div>
 )
 
@@ -79,11 +81,15 @@ export const HearFromOurCustomersSection = () => {
       <SectionTitle>
         <Translate>Hear from our customers</Translate>
       </SectionTitle>
-      <div className="container mx-auto grid sm:grid-cols-[3fr_1fr] overflow-hidden sm:pb-45 pb-25">
-        <img loading="lazy" src={require("@site/static/img/common/hearFromOurCustomers.webp").default} className="aspect-375/250 sm:aspect-430/500 sm:order-last object-cover w-full h-full" />
-        <div className="bg-zinc-800 pt-15 pb-13 flex-2/3 overflow-hidden">
-          <QuotationMark className="ml-9.5" />
-          <Carousel {...props} customButtonGroup={<ButtonGroup {...props} />} />
+      <div className="container mx-auto grid md:grid-cols-[645fr_315fr] lg:grid-cols-[762fr_432fr] overflow-hidden md:mb-45 mb-25">
+        <img
+          loading="lazy"
+          src={require("@site/static/img/common/hearFromOurCustomers.webp").default}
+          className="aspect-375/250 sm:aspect-664/443 md:aspect-315/364 lg:aspect-432/500 md:order-last object-cover h-full"
+        />
+        <div className="bg-[#333] pt-15 sm:pt-10 lg:pt-15 pb-13 sm:pb-20 md:pb-10 lg:pb-20 flex flex-col overflow-hidden h-full">
+          <QuotationMark className="sm:w-12 sm:h-9 ml-9.5 lg:ml-12" />
+          <Carousel {...props} className="grow children:h-full" customButtonGroup={<ButtonGroup {...props} />} />
         </div>
       </div>
     </>
