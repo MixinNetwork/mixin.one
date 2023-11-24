@@ -1,0 +1,12 @@
+<svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M13.5 10C13.5 5.85786 16.8579 2.5 21 2.5H47C51.1421 2.5 54.5 5.85786 54.5 10V66C54.5 70.1421 51.1421 73.5 47 73.5H21C16.8579 73.5 13.5 70.1421 13.5 66V10Z" fill="#D9D9D9" stroke="black"/>
+<path d="M24.6582 5.5C24.9733 5.5 25.2975 5.79042 25.2975 6.23715C25.2975 8.1135 26.7074 9.70631 28.5316 9.70631H39.4684C41.2926 9.70631 42.7025 8.1135 42.7025 6.23715C42.7025 5.79042 43.0267 5.5 43.3418 5.5H47.8987C49.8496 5.5 51.5 7.23054 51.5 9.45374V66.5463C51.5 68.7695 49.8496 70.5 47.8987 70.5H20.1013C18.1504 70.5 16.5 68.7695 16.5 66.5463V9.45374C16.5 7.23054 18.1504 5.5 20.1013 5.5H24.6582Z" fill="white" stroke="black"/>
+<rect x="20" y="16" width="28" height="3" rx="1" fill="#D9D9D9" stroke="black" stroke-width="0.5"/>
+<rect x="20" y="50" width="28" height="3" rx="1" fill="#D9D9D9" stroke="black" stroke-width="0.5"/>
+<rect x="20" y="33" width="28" height="3" rx="1" fill="white" stroke="black" stroke-width="0.5"/>
+<rect x="20" y="22" width="23" height="3" rx="1" fill="#D9D9D9" stroke="black" stroke-width="0.5"/>
+<rect x="20" y="56" width="16" height="3" rx="1" fill="#D9D9D9" stroke="black" stroke-width="0.5"/>
+<rect x="29" y="39" width="19" height="3" rx="1" fill="white" stroke="black" stroke-width="0.5"/>
+<path d="M57 46C52.2555 46 47.5111 48.136 45.7332 49.3229C45.2649 49.6354 45 50.1833 45 50.7692L45 61.4C45 65.7521 52.6697 74 57 74C61.3303 74 69 65.7521 69 61.4V50.7692C69 50.1833 68.7351 49.6354 68.2668 49.3229C66.489 48.136 61.7445 46 57 46Z" fill="white" stroke="black"/>
+<path d="M52 59L55.6667 63L63 55" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
