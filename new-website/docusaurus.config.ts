@@ -195,7 +195,7 @@ const config: Config = {
             },
             {
               label: "Media Kit",
-              to: "/",
+              to: "https://mixin.one/assets/Mixin-Logo.zip",
             },
             {
               label: "Join us",
@@ -207,11 +207,11 @@ const config: Config = {
             },
             {
               label: "Privacy Police",
-              to: "/privacy",
+              to: "https://mixin.one/pages/privacy",
             },
             {
               label: "Terms of Use",
-              to: "/",
+              to: "https://mixin.one/pages/terms",
             },
           ],
         },
