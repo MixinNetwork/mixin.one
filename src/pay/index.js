@@ -174,7 +174,8 @@ Pay.prototype = {
       const payment = resp.data;
       const fullName = payment.recipient.full_name.trim();
       const useAmount = new Decimal(payment.asset.price_usd).times(payment.amount);
-      const mixinURL = `https://mixin.one/pay${window.location.search}`;
+      const mixinURL = `mixin://mixin.one/pay${window.location.search}`;
+      const qrCodeURL = `https://mixin.one/pay${window.location.search}`;
       const data = {
         logoURL: blueLogo,
         title: i18n.t('pay.recipient.title', { name: fullName }),
@@ -202,7 +203,7 @@ Pay.prototype = {
         const platform = MixinUtils.environment();
         if (!platform) $('.main').attr('class', 'main browser');
         if (data.hasMemo) $('.scan-container').attr('class', 'scan-container new-margin');
-        initQRCode(mixinURL);
+        initQRCode(qrCodeURL);
       }
       self.router.updatePageLinks();
       if (payment.status === 'paid') {
@@ -240,7 +241,8 @@ Pay.prototype = {
       }
 
       const payment = resp.data;
-      const mixinURL = `https://mixin.one${window.location.pathname}${window.location.search}`;
+      const mixinURL = `mixin://mixin.one${window.location.pathname}${window.location.search}`;
+      const qrCodeURL = `https://mixin.one${window.location.pathname}${window.location.search}`;
       const data = {
         logoURL: blueLogo,
         title: i18n.t('schema.title.transfer'),
@@ -280,7 +282,7 @@ Pay.prototype = {
         const platform = MixinUtils.environment();
         if (!platform) $('.main').attr('class', 'main browser');
         if (data.hasMemo) $('.scan-container').attr('class', 'scan-container new-margin');
-        initQRCode(mixinURL);
+        initQRCode(qrCodeURL);
       }
       self.router.updatePageLinks();
 
