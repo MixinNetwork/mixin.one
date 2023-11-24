@@ -10,6 +10,75 @@ import GridIcon2 from "@site/static/img/page/privacy/1.1.3.svg"
 import GridIcon3 from "@site/static/img/page/privacy/1.1.4.svg"
 import GridIcon4 from "@site/static/img/page/privacy/1.1.5.svg"
 
+const ListSection = () => {
+  return (
+    <div className="pb-25">
+      <Item
+        title={<Translate>Asset Privacy</Translate>}
+        description={<Translate>The types and quantities of assets in your wallet are only known to you</Translate>}
+        points={[
+          {
+            cover: "1.2.1.webp",
+            title: translate({
+              message: "Balance Privacy",
+            }),
+            content: translate({
+              message:
+                "When your crypto assets are recharged into the Mixin wallet, only you have the right to view the types and specific amounts of assets in the wallet. Because the recharge address and withdrawal address of the wallet are not the same address, other third parties cannot infer the actual types and quantities of assets in your wallet through the recharge address or withdrawal address on the chain.",
+            }),
+          },
+          {
+            cover: "1.2.2.webp",
+            title: translate({
+              message: "Loss Protection",
+            }),
+            content: translate({
+              message:
+                "If you lose the owner's private key of Mixin Safe vault, you can contact the Mixin team to recover the vault assets. At the same time, you don't have to worry about the leakage of asset information due to the leakage of private keys. The person who gets your private key cannot view the types and quantities of assets through the private key.",
+            }),
+          },
+          {
+            cover: "1.2.3.webp",
+            title: translate({
+              message: "Inheritance Privacy",
+            }),
+            content: translate({
+              message:
+                "Using Mixin Safe to host assets and using inheritance services can ensure that your wealth is successfully inherited to the next generation. Inheritance is solid privacy protection, and the heir and executor of the property cannot know in advance the types and quantities of assets to be inherited, nor can they infer all assets from the transfer records on the blockchain.",
+            }),
+          },
+        ]}
+      />
+      <Item
+        title={<Translate>Transfer Privacy</Translate>}
+        description={<Translate>Enhance UTXO transfer privacy through CryptoNote technology</Translate>}
+        points={[
+          {
+            cover: "1.3.1.webp",
+            title: translate({
+              message: "Privacy Transfer",
+            }),
+            content: translate({
+              message:
+                "Enhance UTXO transfer privacy through CryptoNote technology, only the two parties to the transaction know, and the Mixin Network full node cannot know the two parties to the transaction, and cannot infer the specific two parties to the transaction based on the transaction itself.",
+            }),
+          },
+          {
+            cover: "1.3.2.webp",
+            title: translate({
+              message: "Regulatory Compliance",
+            }),
+            content: translate({
+              message:
+                "The dual-key structure of the Mixin Network multi-chain ledger ensures asset anonymity while meeting compliance requirements. Users can actively provide their own viewkey for accountants to query, which can be used for tax reporting and accounting audits, etc., and assets will not be transferred.",
+            }),
+          },
+        ]}
+      />
+    </div>
+  )
+}
+
 const Item = ({
   title,
   description,
@@ -19,16 +88,20 @@ const Item = ({
   description?: React.ReactNode
   points: {
     cover: string
+    title: string
     content: string
   }[]
 }) => (
   <div className="pb-20 grid items-center gap-5">
     <SectionTitle description={description}>{title}</SectionTitle>
     <div className="px-5 sm:px-18.75 md:px-40 space-y-20 lg:space-y-25">
-      {points.map(({ cover, content }) => (
-        <div key={content} className="grid gap-y-5 gap-x-16.5 lg:gap-x-34.5 items-center md:grid-cols-2 group">
+      {points.map(({ cover, title, content }) => (
+        <div key={title} className="grid gap-y-10 gap-x-16.5 lg:gap-x-34.5 items-center md:grid-cols-2 group">
           <img src={require("@site/static/img/page/privacy/" + cover).default} className="aspect-335/225 w-full md:group-odd:order-last" />
-          <div className="text-[#333] text-sm sm:text-base font-normal">{content}</div>
+          <div className="space-y-5">
+            <div className="text-[#333] text-5.5 sm:text-7 lg:text-8 font-medium">{title}</div>
+            <div className="text-[#333] text-sm sm:text-base font-normal">{content}</div>
+          </div>
         </div>
       ))}
     </div>
@@ -76,55 +149,7 @@ export const DesignSection = () => {
       <GrayBackgroundWrapper>
         <div className="mt-15 container mx-auto">
           <GridSection />
-          <div className="pb-25">
-            <Item
-              title={<Translate>Asset Privacy</Translate>}
-              description={<Translate>The types and quantities of assets in your wallet are only known to you</Translate>}
-              points={[
-                {
-                  cover: "1.2.1.webp",
-                  content: translate({
-                    message:
-                      "When your crypto assets are recharged into the Mixin wallet, only you have the right to view the types and specific amounts of assets in the wallet. Because the recharge address and withdrawal address of the wallet are not the same address, other third parties cannot infer the actual types and quantities of assets in your wallet through the recharge address or withdrawal address on the chain.",
-                  }),
-                },
-                {
-                  cover: "1.2.2.webp",
-                  content: translate({
-                    message:
-                      "If you lose the owner's private key of Mixin Safe vault, you can contact the Mixin team to recover the vault assets. At the same time, you don't have to worry about the leakage of asset information due to the leakage of private keys. The person who gets your private key cannot view the types and quantities of assets through the private key.",
-                  }),
-                },
-                {
-                  cover: "1.2.3.webp",
-                  content: translate({
-                    message:
-                      "Using Mixin Safe to host assets and using inheritance services can ensure that your wealth is successfully inherited to the next generation. Inheritance is solid privacy protection, and the heir and executor of the property cannot know in advance the types and quantities of assets to be inherited, nor can they infer all assets from the transfer records on the blockchain.",
-                  }),
-                },
-              ]}
-            />
-            <Item
-              title={<Translate>Transfer Privacy</Translate>}
-              description={<Translate>Enhance UTXO transfer privacy through CryptoNote technology</Translate>}
-              points={[
-                {
-                  cover: "1.3.1.webp",
-                  content: translate({
-                    message:
-                      "Enhance UTXO transfer privacy through CryptoNote technology, only the two parties to the transaction know, and the Mixin Network full node cannot know the two parties to the transaction, and cannot infer the specific two parties to the transaction based on the transaction itself.",
-                  }),
-                },
-                {
-                  cover: "1.3.2.webp",
-                  content: translate({
-                    message:
-                      "The dual-key structure of the Mixin Network multi-chain ledger ensures asset anonymity while meeting compliance requirements. Users can actively provide their own viewkey for accountants to query, which can be used for tax reporting and accounting audits, etc., and assets will not be transferred.",
-                  }),
-                },
-              ]}
-            />
-          </div>
+          <ListSection />
         </div>
       </GrayBackgroundWrapper>
     </>
