@@ -26,6 +26,17 @@ export default defineConfig({
     [/^click-area-(\d+)$/, ([, num]) => `relative before:content-[''] before:absolute before:-inset-${num}`, { autocomplete: ["click-area-<num>"] }],
   ],
   theme: {
+    fontWeight: {
+      thin: "100",
+      extralight: "100",
+      light: "200",
+      normal: "300",
+      medium: "400",
+      semibold: "500",
+      bold: "600",
+      extrabold: "700",
+      black: "800",
+    },
     animation: {
       keyframes: {
         marquee: `{

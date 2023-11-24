@@ -23,7 +23,7 @@ button {
 }
 
 * {
-  @apply outline-none font-default;
+  @apply outline-none font-normal;
 }
 
 [class*="sm:"],
