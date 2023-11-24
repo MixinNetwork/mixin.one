@@ -32,7 +32,6 @@ Schema.prototype = {
     $('body').attr('class', `${type} schema code layout`);
 
     const platform = MixinUtils.environment();
-    const action = URLUtils.getUrlParameter("action");
     const data = {
       logoURL: blueLogo,
       basic: true,
@@ -48,10 +47,7 @@ Schema.prototype = {
       data.showActionButton = true;
       data.actionText = btn.actionText;
       data.buttonIntro = btn.buttonIntro;
-      data.mixinURL = `https://mixin.one${window.location.pathname}${window.location.search}`;
-    } else {
-      data.showQRCode = true;
-      data.tip = i18n.t("code.payment.mobile.scan");
+      data.mixinURL = `mixin://mixin.one${window.location.pathname}${window.location.search}`;
     }
     $('#layout-container').html(self.template(data));
     $('.subTitle').attr('class', 'subTitle new-margin');

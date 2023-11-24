@@ -63,7 +63,8 @@ OAuth.prototype = {
       $('body').attr('class', 'oauth code layout');
       $('body').attr('data-code-id', auth.code_id);
       let platform = MixinUtils.environment();
-      const mixinURL = 'https://mixin.one/codes/' + auth.code_id;
+      const mixinURL = 'mixin://mixin.one/codes/' + auth.code_id;
+      const qrCodeURL = "https://mixin.one/codes/" + auth.code_id;
       if (platform == 'Android' || platform == 'iOS') {
         window.location.replace(mixinURL);
         return false;
@@ -82,7 +83,7 @@ OAuth.prototype = {
         mixinURL
       }
       $('.oauth.code.layout #layout-container').html(self.template(data));
-      initQRCode(data.mixinURL)
+      initQRCode(qrCodeURL);
       if (!platform) $('.main').attr('class', 'main browser');
       return false;
     }, clientId, scope, codeChallenge);
