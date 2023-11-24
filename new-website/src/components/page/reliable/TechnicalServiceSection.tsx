@@ -18,7 +18,7 @@ const Item = ({ index, title, description, left }: { index: number; title: strin
 const SecureAssetCustodySection = () => (
   <div className="container mx-auto">
     <div className="relative rounded-sm px-5 pt-10 pb-15 lg:px-19 lg:py-27 md:py-20 md:px-15 sm:px-10">
-      <img src={require("@site/static/img/common/woodGrain.webp").default} className="object-cover absolute inset-0 h-full w-full -z-10" />
+      <img loading="lazy" src={require("@site/static/img/common/woodGrain.webp").default} className="object-cover absolute inset-0 h-full w-full -z-10" />
       <div className="text-white text-opacity-90 text-center text-base font-normal leading-relaxed">
         <Translate>
           Mixin Safe is committed to providing users with safe and stable asset management services. We always use proven Bitcoin encryption technologies, such as multi-signature, time lock, MPC,
@@ -43,7 +43,7 @@ export const TechnicalServiceSection = () => {
       <GrayBackgroundWrapper>
         <div className="pb-15">
           <div className="mt-10 container mx-auto px-10 grid gap-y-15 md:grid-cols-[1fr_auto_1fr] md:gap-x-12 lg:gap-x-22 pb-20 md:pb-45">
-            <img src={useBaseUrl("/img/page/reliable/1.1.svg")} className="m-auto md:h-4/5 lg:h-full md:order-1 aspect-268/517" />
+            <img loading="lazy" src={useBaseUrl("/img/page/reliable/1.1.svg")} className="m-auto md:h-4/5 lg:h-full md:order-1 aspect-268/517" />
             <div className="space-y-15 md:order-0">
               <Item
                 index={1}

@@ -83,7 +83,7 @@ const Header = () => {
 
   return (
     <div className="bg-gradient-to-b from-[#171924] to-[#222C3F] sm:bg-none sm:relative">
-      <img src={require("@site/static/img/page/home/bgHeader.webp").default} className="object-cover -z-10 hidden sm:block absolute inset-0 h-full w-full" />
+      <img loading="lazy" src={require("@site/static/img/page/home/bgHeader.webp").default} className="object-cover -z-10 hidden sm:block absolute inset-0 h-full w-full" />
       <Navbar dark />
       <div className="px-10 pt-15 pb-19 sm:pt-12.5 md:pt-20 lg:pt-54 sm:pb-16.5 sm:pb-32.5 lg:pb-79 sm:text-center container mx-auto">
         <div className="text-white text-4xl sm:text-5xl font-normal leading-10 -tracking-0.1 max-w-232 mx-auto">{title}</div>

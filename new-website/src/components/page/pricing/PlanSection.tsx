@@ -59,7 +59,7 @@ export const Item = ({ name, description, price, features, cover }: { name: Reac
             ))}
           </div>
         </div>
-        <img src={require("@site/static/img/page/pricing/" + cover).default} className="mt-20 sm:mt-0 sm:h-50 sm:ms-auto" />
+        <img loading="lazy" src={require("@site/static/img/page/pricing/" + cover).default} className="mt-20 sm:mt-0 sm:h-50 sm:ms-auto" />
       </div>
     </div>
   )

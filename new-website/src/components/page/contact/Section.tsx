@@ -25,7 +25,7 @@ export const Section = () => {
         <Translate>Contact Us</Translate>
       </SectionTitle>
       <div className="container mx-auto grid sm:grid-cols-2 gap-y-10 pb-45">
-        <img src={require("@site/static/img/page/contact/1.webp").default} className="aspect-375/425 sm:aspect-auto w-full h-full object-cover sm:flex-1" />
+        <img loading="lazy" src={require("@site/static/img/page/contact/1.webp").default} className="aspect-375/425 sm:aspect-auto w-full h-full object-cover sm:flex-1" />
         <div className="px-8 sm:flex-1 sm:shadow-lg">
           <div className="space-y-6">
             <Item isError={error === "name"}>

@@ -27,7 +27,7 @@ export const SupportedAssetSection = () => {
               )}
             >
               {[...chunk, ...chunk].map((asset, i) => (
-                <img key={i + "-" + asset.symbol} src={asset.icon_url} alt={asset.symbol} className="shrink-0 aspect-square h-full" />
+                <img loading="lazy" key={i + "-" + asset.symbol} src={asset.icon_url} alt={asset.symbol} className="shrink-0 aspect-square h-full" />
               ))}
             </div>
           </div>

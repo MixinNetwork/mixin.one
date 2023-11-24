@@ -5,6 +5,7 @@ import LocalLink from "../../common/LocaleLink"
 const EasyManageItem = ({ title, description, icon }: { title: string; description: string; icon: string }) => (
   <div className="grid grid-cols-[auto_1fr] grid-rows-[auto_1fr] gap-y-3 gap-x-5">
     <img
+      loading="lazy"
       src={require("@site/static/img/page/home/easy/" + icon).default}
       alt={"icon"}
       className="w-6 h-6 bg-white p-3 lg:p-4.5 box-content shadow-lg shadow-blue-600 shadow-opacity-10 rounded-lg flex-center row-span-2"
@@ -27,7 +28,7 @@ export const EasyManageSection = () => {
       <div className="mt-5 text-center text-[#333] text-opacity-60 text-base sm:text-sm font-normal leading-normal">
         <Translate>6 key features to allow hassle-free day-to-day management</Translate>
       </div>
-      <img src={require(`@site/static/img/page/home/assets_${currentLocale}.webp`).default} alt={""} className="mt-20 aspect-335/183 relative" />
+      <img loading="lazy" src={require(`@site/static/img/page/home/assets_${currentLocale}.webp`).default} alt={""} className="mt-20 aspect-335/183 relative" />
 
       <div className="mt-20 grid sm:grid-cols-2 md:grid-cols-3 sm:gap-x-11 md:gap-x-9 gap-y-13 px-5">
         <EasyManageItem

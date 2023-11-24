@@ -4,7 +4,7 @@ import LocalLink from "../../common/LocaleLink"
 const FeatureCard = ({ title, description, subDescription, background, to }: { title: string; description: string; subDescription: string; background: string; to: string }) => {
   return (
     <LocalLink to={to} className="aspect-335/255 relative py-4 px-5 first:sm:col-span-2 first:sm:aspect-664/261">
-      <img className="absolute -z-20 object-cover inset-0 w-full h-full" src={require("@site/static/img/common/feature/" + background).default} alt={title} />
+      <img loading="lazy" className="absolute -z-20 object-cover inset-0 w-full h-full" src={require("@site/static/img/common/feature/" + background).default} alt={title} />
       <div className="absolute inset-0 -z-10 bg-gradient-to-b from-black from-opacity-90 via-black via-opacity-17 to-transparent" />
       <div className="text-white text-lg font-medium leading-tight">{title}</div>
       <div className="mt-3 text-white text-opacity-80 text-sm font-normal leading-snug">{description}</div>

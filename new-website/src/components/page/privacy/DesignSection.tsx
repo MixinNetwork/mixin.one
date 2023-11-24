@@ -97,7 +97,7 @@ const Item = ({
     <div className="px-5 sm:px-18.75 md:px-40 space-y-20 lg:space-y-25">
       {points.map(({ cover, title, content }) => (
         <div key={title} className="grid gap-y-10 gap-x-16.5 lg:gap-x-34.5 items-center md:grid-cols-2 group">
-          <img src={require("@site/static/img/page/privacy/" + cover).default} className="aspect-335/225 w-full md:group-odd:order-last" />
+          <img loading="lazy" src={require("@site/static/img/page/privacy/" + cover).default} className="aspect-335/225 w-full md:group-odd:order-last" />
           <div className="space-y-5">
             <div className="text-[#333] text-5.5 sm:text-7 lg:text-8 font-medium">{title}</div>
             <div className="text-[#333] text-sm sm:text-base font-normal">{content}</div>
@@ -115,7 +115,7 @@ function GridSection({}) {
         <div className="text-[#333] text-7 text-center font-medium">
           <Translate>Information Privacy</Translate>
         </div>
-        <img src={require("@site/static/img/page/privacy/1.1.1.webp").default} className="aspect-290/250 w-full" />
+        <img loading="lazy" src={require("@site/static/img/page/privacy/1.1.1.webp").default} className="aspect-290/250 w-full" />
       </div>
       <GridItem cover={<GridIcon1 />} className="order-1 md:order-0">
         <Translate>All messages, audios, photos, and files are end-to-end encrypted</Translate>

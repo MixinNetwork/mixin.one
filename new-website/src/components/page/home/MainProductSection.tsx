@@ -4,7 +4,7 @@ import SectionTitle from "../../common/SectionTitle"
 
 const ProductCard = ({ title, description, cover }: { title: string; description: string; cover: string }) => (
   <div className="bg-white rounded-lg shadow-lg overflow-hidden">
-    <img src={require("@site/static/img/page/home/product/" + cover).default} alt={title} className="aspect-335/225" />
+    <img loading="lazy" src={require("@site/static/img/page/home/product/" + cover).default} alt={title} className="aspect-335/225" />
 
     <div className="aspect-335/210 pt-6 px-5 space-y-3">
       <div className="text-[#333] text-xl font-medium leading-tight">{title}</div>

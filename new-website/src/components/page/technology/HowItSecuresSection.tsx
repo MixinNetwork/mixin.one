@@ -4,7 +4,7 @@ import Translate from "@docusaurus/Translate"
 const Item = ({ cover, title, description }: { cover: string; title: React.ReactNode; description: React.ReactNode }) => (
   <div className="bg-zinc-100 rounded-sm px-5 pb-30 md:pb-0 grid items-center md:grid-cols-2 md:px-30 md:gap-20 overflow-hidden group">
     <div className="p-15 md:p-5 lg:p-15 md:group-odd:order-last">
-      <img src={require("@site/static/img/page/technology/" + cover).default} className="aspect-335/320 w-full object-cover " />
+      <img loading="lazy" src={require("@site/static/img/page/technology/" + cover).default} className="aspect-335/320 w-full object-cover " />
     </div>
 
     <div className="md:py-15">
@@ -22,7 +22,7 @@ export const HowItSecuresSection = () => {
       </SectionTitle>
 
       <div className="container mx-auto px-5">
-        <img src={require("@site/static/img/page/technology/1.1.webp").default} className="aspect-335/320 w-full" />
+        <img loading="lazy" src={require("@site/static/img/page/technology/1.1.webp").default} className="aspect-335/320 w-full" />
         <div className="mt-20 md:mt-5 grid gap-y-5 auto-rows-fr pb-45">
           <Item
             cover="1.2.webp"

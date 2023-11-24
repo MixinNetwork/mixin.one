@@ -6,7 +6,7 @@ const SpecialItem = () => (
   <div className="sm:col-span-2 relative auto-rows-fr grid sm:grid-cols-2">
     <div className="absolute fill bg-gradient-to-t sm:bg-gradient-to-r from-slate-950 via-[#010F24] to-transparent z-0" />
 
-    <img src={require("@site/static/img/page/decentralized/2.1.webp").default} alt={"centralization"} className="aspect-375/300 -z-1 w-full h-full object-cover sm:order-last" />
+    <img loading="lazy" src={require("@site/static/img/page/decentralized/2.1.webp").default} alt={"centralization"} className="aspect-375/300 -z-1 w-full h-full object-cover sm:order-last" />
 
     <div className="p-5 pb-10 space-y-4 z-1 sm:pl-15 sm:pt-15">
       <div className="text-white text-xl font-medium sm:text-7 md:text-7.5 lg:text-8">
@@ -24,7 +24,7 @@ const SpecialItem = () => (
 
 const Item = ({ cover, title, description }: { cover: string; title: string; description: string }) => (
   <div className="relative aspect-375/300">
-    <img src={require("@site/static/img/page/decentralized/" + cover).default} alt={title} className="fill" />
+    <img loading="lazy" src={require("@site/static/img/page/decentralized/" + cover).default} alt={title} className="fill" />
     <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black" />
     <div className="p-5 absolute inset-0 top-auto space-y-4">
       <div className="text-white text-xl font-medium sm:text-7 md:text-7.5 lg:text-8">{title}</div>

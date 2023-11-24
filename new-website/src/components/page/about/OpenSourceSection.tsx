@@ -4,7 +4,7 @@ import Translate from "@docusaurus/Translate"
 
 export const OpenSourceSection = () => (
   <div className="container mx-auto flex flex-col sm:flex-row-reverse ">
-    <img src={require("@site/static/img/page/about/1.webp").default} className="aspect-375/250 sm:aspect-432/380 object-cover w-full h-full sm:max-h-95 sm:h-auto sm:w-fit shrink-0" />
+    <img loading="lazy" src={require("@site/static/img/page/about/1.webp").default} className="aspect-375/250 sm:aspect-432/380 object-cover w-full h-full sm:max-h-95 sm:h-auto sm:w-fit shrink-0" />
     <div className="bg-zinc-800 p-10 pb-25 grow">
       <QuotationMark className="sm:w-12 sm:h-9" />
       <div className="sm:ms-19 text-white text-xl font-normal leading-10">

@@ -24,7 +24,7 @@ export const AuditReportSection = () => (
         {Array(4)
           .fill(undefined)
           .map((_, i) => (
-            <img key={i} src={require(`@site/static/img/page/home/audit/${i}.webp`).default} alt="audit" className="aspect-square relative bg-white rounded-lg shadow" />
+            <img loading="lazy" key={i} src={require(`@site/static/img/page/home/audit/${i}.webp`).default} alt="audit" className="aspect-square relative bg-white rounded-lg shadow" />
           ))}
       </div>
 
