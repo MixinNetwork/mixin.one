@@ -38,7 +38,7 @@ export function Links() {
           <div key={title} className={clsx("space-y-4", className)}>
             {title && <div className="text-white text-base font-normal mb-2">{title}</div>}
             {links.map((link) => (
-              <Link key={link.label} {...link} className="text-white text-opacity-70 text-sm font-normal leading-tight block hover:text-op-100">
+              <Link key={link.label} {...link} className="text-white text-opacity-70 text-sm font-normal leading-tight block hover:text-white hover:text-op-100">
                 {link.label}
               </Link>
             ))}
