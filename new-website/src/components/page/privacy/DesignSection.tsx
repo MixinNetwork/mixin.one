@@ -94,7 +94,7 @@ const Item = ({
 }) => (
   <div className="pb-20 grid items-center gap-5">
     <SectionTitle description={description}>{title}</SectionTitle>
-    <div className="px-5 sm:px-18.75 md:px-40 space-y-20 lg:space-y-25">
+    <div className="px-5 space-y-20 lg:space-y-25">
       {points.map(({ cover, title, content }) => (
         <div key={title} className="grid gap-y-10 gap-x-16.5 lg:gap-x-34.5 items-center md:grid-cols-2 group">
           <img loading="lazy" src={require("@site/static/img/page/privacy/" + cover).default} className="aspect-335/225 w-full md:group-odd:order-last" />
