@@ -27,7 +27,7 @@ const Item = (data: NavbarItem) => {
                 }
 
                 return (
-                  <Link key={label} to={to} className="px-5 pt-3.5 pb-2.5 hover:bg-zinc-100 rounded-lg group/item grid gap-x-5 gap-y-2.5 grid-cols-[auto_1fr] grid-rows-[auto_1fr]">
+                  <Link key={label} to={to} className="px-5 pt-3.5 pb-2.5 hover:bg-zinc-100 rounded-sm group/item grid gap-x-5 gap-y-2.5 grid-cols-[auto_1fr] grid-rows-[auto_1fr]">
                     <img loading="lazy" src={useBaseUrl(icon)} width={24} height={24} className="row-span-2" />
                     <div className="text-[#333] text-sm font-medium leading-tight group-hover/item:text-blue-500">{label}</div>
                     <div className="text-[#333] text-opacity-70 text-xs font-normal leading-none">{description}</div>
