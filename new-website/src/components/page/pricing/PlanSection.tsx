@@ -40,7 +40,7 @@ export const Item = ({ name, description, price, features, cover }: { name: Reac
 
       <LocalLink
         href={price <= 0 ? "https://messenger.mixin.one/download" : "https://safe.mixin.one/start"}
-        className="mt-17.5 sm:mt-5 py-4 px-13 w-full sm:w-fit bg-zinc-800 rounded-sm text-center text-white text-sm font-normal leading-none"
+        className="mt-17.5 sm:mt-5 py-4 px-13 w-full sm:w-fit bg-zinc-800 rounded-sm text-center text-white text-sm font-normal block"
       >
         {price <= 0 ? <Translate>Try for free</Translate> : <Translate>Get Started</Translate>}
       </LocalLink>
