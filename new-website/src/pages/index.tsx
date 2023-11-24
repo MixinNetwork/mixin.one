@@ -23,6 +23,10 @@ const Header = () => {
     }),
     [
       {
+        match: "\n",
+        replace: () => <br />,
+      },
+      {
         match: translate({
           message: "Confidence",
         }),
@@ -73,9 +77,6 @@ const Header = () => {
             repeat={Infinity}
             className="text-blue-500"
           />
-          // <span key={match} className="text-blue-500">
-          //   {match}
-          // </span>
         ),
       },
     ]
@@ -86,7 +87,7 @@ const Header = () => {
       <img loading="lazy" src={require("@site/static/img/page/home/bgHeader.webp").default} className="object-cover -z-10 hidden sm:block absolute inset-0 h-full w-full" />
       <Navbar dark />
       <div className="px-10 pt-15 pb-19 sm:pt-12.5 md:pt-20 lg:pt-54 sm:pb-16.5 sm:pb-32.5 lg:pb-79 sm:text-center container mx-auto">
-        <div className="text-white text-4xl sm:text-5xl font-normal leading-10 -tracking-0.1 max-w-232 mx-auto">{title}</div>
+        <div className="text-white text-4xl sm:text-5xl font-normal leading-18! -tracking-0.1 max-w-232 mx-auto">{title}</div>
         <div className="mt-7.5 sm:mt-6 md:mt-8 lg:mt-12 max-w-232 mx-auto text-white text-opacity-80 text-sm font-normal leading-snug">
           <Translate>Protect your crypto with MPC-TSS that you control and get access to trading, inheritance, and loans—all backed by the best support in the industry.</Translate>
         </div>
