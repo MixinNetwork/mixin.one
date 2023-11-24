@@ -3,6 +3,7 @@ import Translate, { translate } from "@docusaurus/Translate"
 import { useState } from "react"
 import clsx from "clsx"
 import Checked from "@site/static/img/common/checked.svg"
+import LocalLink from "../../common/LocaleLink"
 
 export const Tab = ({ name, id, selected, onClick }: { name: string; id: string; selected: string; onClick: () => void }) => {
   const checked = id === selected
@@ -37,9 +38,12 @@ export const Item = ({ name, description, price, features, cover }: { name: Reac
         </div>
       </div>
 
-      <button className="mt-17.5 sm:mt-5 py-4 px-13 w-full sm:w-fit bg-zinc-800 rounded-sm text-center text-white text-sm font-normal leading-none">
+      <LocalLink
+        href={price <= 0 ? "https://messenger.mixin.one/download" : "https://safe.mixin.one/start"}
+        className="mt-17.5 sm:mt-5 py-4 px-13 w-full sm:w-fit bg-zinc-800 rounded-sm text-center text-white text-sm font-normal leading-none"
+      >
         {price <= 0 ? <Translate>Try for free</Translate> : <Translate>Get Started</Translate>}
-      </button>
+      </LocalLink>
       <div className="mt-15 w-full h-px border-b-px border-zinc-300"></div>
       <div className="grid items-center sm:grid-cols-2 mt-20 sm:mt-10">
         <div className="space-y-5">
