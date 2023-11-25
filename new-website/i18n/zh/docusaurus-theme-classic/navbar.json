@@ -1,0 +1,30 @@
+{
+  "title": {
+    "message": "Mixin",
+    "description": "Mixin"
+  },
+  "item.label.Technology": {
+    "message": "技术方案",
+    "description": "技术方案"
+  },
+  "item.label.Pricing": {
+    "message": "价格",
+    "description": "价格"
+  },
+  "item.label.Company": {
+    "message": "公司",
+    "description": "公司"
+  },
+  "item.label.Get Started": {
+    "message": "开始上手",
+    "description": "开始上手"
+  },
+  "item.label.Contact Us": {
+    "message": "联系我们",
+    "description": "联系我们"
+  },
+  "item.label.About Us": {
+    "message": "关于我们",
+    "description": "关于我们"
+  }
+}

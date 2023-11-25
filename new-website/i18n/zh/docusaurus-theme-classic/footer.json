@@ -1,0 +1,102 @@
+{
+  "link.title.Products": {
+    "message": "产品",
+    "description": "The title of the footer links column with title=Products in the footer"
+  },
+  "link.title.Social": {
+    "message": "社交",
+    "description": "The title of the footer links column with title=Social in the footer"
+  },
+  "link.title.Developer": {
+    "message": "开发者",
+    "description": "The title of the footer links column with title=Developer in the footer"
+  },
+  "link.title.Company": {
+    "message": "公司",
+    "description": "The title of the footer links column with title=Company in the footer"
+  },
+  "link.item.label.Mixin Messenger": {
+    "message": "Mixin Messenger",
+    "description": "The label of footer link with label=Mixin Messenger linking to https://messenger.mixin.one/"
+  },
+  "link.item.label.Mixin Safe": {
+    "message": "Mixin Safe",
+    "description": "The label of footer link with label=Mixin Safe linking to https://safe.mixin.one/"
+  },
+  "link.item.label.Mixin Wealth": {
+    "message": "Mixin Wealth",
+    "description": "The label of footer link with label=Mixin Wealth linking to https://wealth.mixin.one/"
+  },
+  "link.item.label.Twitter": {
+    "message": "Twitter",
+    "description": "The label of footer link with label=Twitter linking to https://twitter.com/MixinKernel"
+  },
+  "link.item.label.Medium": {
+    "message": "Medium",
+    "description": "The label of footer link with label=Medium linking to https://medium.com/mixinnetwork"
+  },
+  "link.item.label.Reddit": {
+    "message": "Reddit",
+    "description": "The label of footer link with label=Reddit linking to https://www.reddit.com/r/mixin/"
+  },
+  "link.item.label.Developer Center": {
+    "message": "开发者中心",
+    "description": "The label of footer link with label=Developer Center linking to https://developers.mixin.one/"
+  },
+  "link.item.label.Open Source": {
+    "message": "开源代码",
+    "description": "The label of footer link with label=Open Source linking to https://github.com/MixinNetwork"
+  },
+  "link.item.label.Mixin Route": {
+    "message": "Mixin Route",
+    "description": "The label of footer link with label=Mixin Route linking to https://route.mixin.one/"
+  },
+  "link.item.label.Mixin Network": {
+    "message": "Mixin Network",
+    "description": "The label of footer link with label=Mixin Network linking to https://mixin.network/"
+  },
+  "link.item.label.Mixin Trusted Group": {
+    "message": "Mixin Trusted Group",
+    "description": "The label of footer link with label=Mixin Trusted Group linking to https://developers.mixin.one/docs/mainnet/mtg/overview/"
+  },
+  "link.item.label.Mixin Virtual Machine": {
+    "message": "Mixin Virtual Machine",
+    "description": "The label of footer link with label=Mixin Virtual Machine linking to https://mvm.app/"
+  },
+  "link.item.label.Throttled Identity Protocol": {
+    "message": "Throttled Identity Protocol",
+    "description": "The label of footer link with label=Throttled Identity Protocol linking to https://tip.id/"
+  },
+  "link.item.label.Our Mission": {
+    "message": "我们的愿景",
+    "description": "The label of footer link with label=Our Mission linking to /about"
+  },
+  "link.item.label.Contact Us": {
+    "message": "联系我们",
+    "description": "The label of footer link with label=Contact Us linking to /contact"
+  },
+  "link.item.label.Media Kit": {
+    "message": "媒体资源",
+    "description": "The label of footer link with label=Media Kit linking to https://mixin.one/assets/Mixin-Logo.zip"
+  },
+  "link.item.label.Join us": {
+    "message": "加入我们",
+    "description": "The label of footer link with label=Join us linking to https://mixin.one/jobs"
+  },
+  "link.item.label.Licenses": {
+    "message": "许可合规",
+    "description": "The label of footer link with label=Licenses linking to /licenses"
+  },
+  "link.item.label.Privacy Police": {
+    "message": "隐私政策",
+    "description": "The label of footer link with label=Privacy Police linking to https://mixin.one/pages/privacy"
+  },
+  "link.item.label.Terms of Use": {
+    "message": "使用条款",
+    "description": "The label of footer link with label=Terms of Use linking to https://mixin.one/pages/terms"
+  },
+  "copyright": {
+    "message": "Copyright © 2023, Mixin.All rights reserved.",
+    "description": "The footer copyright"
+  }
+}

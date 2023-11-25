@@ -1,0 +1,1192 @@
+{
+  "2017": {
+    "message": "2017"
+  },
+  "Grow and secure your crypto wealth with Confidence": {
+    "message": "安全的保管与增长您的加密资产财富，充分享受信心满满"
+  },
+  "Confidence": {
+    "message": "信心满满"
+  },
+  "Decentralized": {
+    "message": "去中心化"
+  },
+  "Confident": {
+    "message": "信心满满"
+  },
+  "Reliable": {
+    "message": "成熟可靠"
+  },
+  "Privacy": {
+    "message": "隐私保护"
+  },
+  "Compliant": {
+    "message": "许可合规"
+  },
+  "Protect your crypto with MPC-TSS that you control and get access to trading, inheritance, and loans—all backed by the best support in the industry.": {
+    "message": "使用由您完全控制的 MPC 钱包保护您的财富，并获得交易、继承和贷款等功能，所有这些都得到了行业内最出色的支持。"
+  },
+  "Get started": {
+    "message": "开始上手"
+  },
+  "Book a consultation": {
+    "message": "预约演示"
+  },
+  "Is Mixin Safe really completely decentralized?": {
+    "message": "Mixin Safe 真的是完全去中心化的吗？"
+  },
+  "Yes, Mixin Safe combines the multi-signature and time lock scripts of the Bitcoin network, and adopts the decentralized mature multi-party computing MPC technology, and successfully realizes a complete decentralized asset custody solution. Through the Bitcoin native time lock technology, only you have complete control of the wallet, and no one else, including our team, can spend your coins.": {
+    "message": "是的，Mixin Safe 通过组合比特币网络的多重签名与时间锁脚本，又采用去中心化的成熟的多方计算 MPC 技术，成功实现了一套完整的去中心化资产托管方案。通过比特币原生的时间锁技术，只有您完整拥有钱包的控制权，其他任何人包括我们团队都无法花费您的币。"
+  },
+  "Is Mixin Safe safer than my hardware wallet?": {
+    "message": "Mixin Safe 会比我的硬件钱包更安全吗？"
+  },
+  "Mixin Safe's multi-signature and time lock technology effectively avoids single-point failures such as loss or damage of a single hardware wallet device while maintaining decentralization, thereby greatly improving the security of the wallet.": {
+    "message": "Mixin Safe 的多重签名和时间锁技术在保持去中心化的同时，有效避免了单个硬件钱包设备丢失、损坏等单点故障问题，从而大大提高了钱包的安全性。"
+  },
+  "Do I have to pay to use Mixin products?": {
+    "message": "使用 Mixin 的产品必须花钱吗？"
+  },
+  "No, you can use the free Mixin Messenger.": {
+    "message": "不是必须的，您可以使用免费的 Mixin Messenger 。"
+  },
+  "What is the relationship between Mixin, Mixin Network and Mixin Messenger?": {
+    "message": "Mixin 、Mixin Network 与 Mixin Messenger 什么关系？"
+  },
+  "Mixin is the abbreviation of the Mixin Network ecosystem. Mixin Network is a public chain, and Mixin Messenger is the first open source Dapp on Mixin Network.": {
+    "message": "Mixin 是 Mixin Network 这个生态的简称，Mixin Network 是一个公链，Mixin Messenger 是 Mixin Network 上第一个开源的 Dapp。"
+  },
+  "Are Mixin Network, Mixin Messenger, Exin, and Pando developed by the same team?": {
+    "message": "Mixin Network 、Mixin Messenger、Exin、Pando 这些都是一个团队开发的吗？"
+  },
+  "Mixin Team and Exin and Pando are independent teams of the same ecosystem, each providing different products and services. Mixin Team development team is a Hong Kong company, mainly responsible for the development and operation of Mixin Network, Mixin Messenger, Mixin Safe, Mixin Route and other products and projects.": {
+    "message": "Mixin Team 与 Exin 和 Pando 是同一个生态的独立团队，各自提供不同的产品和服务。Mixin Team 开发团队是一家香港公司，主要负责 Mixin Network、Mixin Messenger、Mixin Safe、Mixin Route 等产品和项目开发和运营。"
+  },
+  "Don't hesitate to contact us if you can't find your answers here": {
+    "message": "如果无法找到您的问题，请随时通过任何途径联系我们或者您的客户经理。"
+  },
+  "Frequently Asked Questions": {
+    "message": "常见问题"
+  },
+  "Get Started": {
+    "message": "开始上手"
+  },
+  "Experience the latest innovations in Bitcoin industry and secure your Bitcoin starting with just $10 per year!": {
+    "message": "我们专业的比特币财富管理人员随时准备向您展示使用完全去中心化的托管套件来管理您的比特币。"
+  },
+  "Schedule a demo": {
+    "message": "预约演示"
+  },
+  "Mixin Safe provides a complete suite of decentralized solutions to help custody my Bitcoin wealth, no sacrifice of the Bitcoin decentralized nature.": {
+    "message": "将最先进的去中心化比特币托管方案带给公众，安全容易上手。"
+  },
+  "Thorb": {
+    "message": "Thorb"
+  },
+  "Founder and CEO, MixPay": {
+    "message": "Founder and CEO, MixPay"
+  },
+  "We need the contributions of everyone in this ecosystem - large and small - to bring out the full potential of the technology that Satoshi proposed.": {
+    "message": "We need the contributions of everyone in this ecosystem - large and small - to bring out the full potential of the technology that Satoshi proposed."
+  },
+  "Lyric": {
+    "message": "Lyric"
+  },
+  "Founder and CEO, Pando": {
+    "message": "Founder and CEO, Pando"
+  },
+  "Hear from our customers": {
+    "message": "来自客户的评价"
+  },
+  "More Features": {
+    "message": "更多亮点"
+  },
+  "Not your keys, not your coins. Though managing private keys may present a challenge, we should remain steadfast in avoiding centralized firms as custodians for Bitcoin holdings.": {
+    "message": "不是你的私钥，就不是你的币。虽然自己管理私钥充满挑战，并不是一件大众熟悉的事情，但我们要时刻牢记比特币诞生的初心。没有去中心化的比特币就一无是处，永远不能依靠中心化机构来托管资产。"
+  },
+  "Mixin Safe offers a comprehensive suite of solutions to help Bitcoin investors confidently hold.": {
+    "message": "管理比特币私钥非常复杂，要让这件事情变得简单需要一系列的去中心化的软件来确保流程顺畅。Mixin Safe 使用一整套成熟的技术方案让去中心化私钥管理变得触手可及。"
+  },
+  "Employing the latest innovations in the industry while still leveraging Bitcoin’s proven cryptography.": {
+    "message": "Mixin Safe 采用了比特币行业最先进的技术创新，但是同时这些技术方案又都是已经在比特币网络上经过实践检验的，十年以上的成熟的加密技术方案。"
+  },
+  "We ensure you have maximum privacy by integrating various advanced technologies.": {
+    "message": "我们通过集成各种先进技术确保您拥有最大的隐私。"
+  },
+  "Who developed Mixin Safe?": {
+    "message": "谁开发了 Mixin Safe?"
+  },
+  "Mixin Safe was developed by the team behind Mixin Network, our team members have over 10 years of experience in blockchain and Bitcoin technology. Mixin Network is a public decentralized ledger, launched in 2018 and has been running stably ever since, with assets exceeding 1 billion dollars and zero security incidents.": {
+    "message": "我们是开发 Mixin Network 的团队，我们的团队成员在区块链和比特币技术方面拥有超过 10 年的经验。Mixin Network 是一个公开的去中心化账本，于 2018 年推出，此后一直稳定运行，资产超过 10 亿美元，安全事件为零。"
+  },
+  "Where is the company of Mixin Safe located?": {
+    "message": "Mixin Safe 的公司在哪里？"
+  },
+  "Mixin Safe is a service provided by Mixin Limited, a company registered in Hong Kong.": {
+    "message": "Mixin Safe 是由香港注册公司 Mixin Limited 提供的一项服务。"
+  },
+  "What is the relationship between Mixin Safe and Mixin Network?": {
+    "message": "Mixin Safe 和 Mixin Network 是什么关系？"
+  },
+  "The developers behind Mixin Safe also developed Mixin Network. Mixin Safe uses the same Mixin Network validators to protect the MPC network.": {
+    "message": "Mixin Safe 背后的开发人员还开发了 Mixin Network。Mixin Safe 使用相同的 Mixin Network 验证器来保护 MPC 网络。"
+  },
+  "If the Mixin Safe team disbands, can I still withdraw my assets?": {
+    "message": "如果 Mixin Safe 团队解散，我还能提取资产吗？"
+  },
+  "Yes, your assets are still safe. You can withdraw your assets at any time through your wallet private key and the decentralized MPC network. Even if the Mixin Safe team disbands, your assets are safe in your hands.": {
+    "message": "是的，您的资产仍然安全。您可以随时通过您的钱包私钥和去中心化的 MPC 网络提取资产。即使 Mixin Safe 团队解散，您的资产在您手中也是安全的。"
+  },
+  "If I lose my private key and the safety time lock also expires, can the Mixin Safe team take away my assets?": {
+    "message": "如果我的私钥丢失，安全时间锁也到期，Mixin Safe 团队可以拿走我的资产吗？"
+  },
+  "No, the Mixin Safe team only has one key, which is not enough to transfer your assets unless you have already set up a recovery or inheritance plan.": {
+    "message": "不，Mixin Safe 团队只有一把钥匙，除非您已制定恢复或继承计划，否则不足以转移您的资产。"
+  },
+  "After the plan expires, if I don't renew, can I still withdraw my assets?": {
+    "message": "计划到期后，如果我不续费，我还能提取我的资产吗？"
+  },
+  "After the package expires, your Mixin Safe account will be frozen, the fee will no longer increase, and it will be unfrozen after renewal. During the freezing period, your own vault can only be viewed and not transferred, which does not affect the approval of other vaults.": {
+    "message": "套餐到期后，您的 Mixin Safe 账户将被冻结，费用不再增加，续费后解冻。冻结期间，您自己的金库只能查看不能转账，不影响其他金库的审批。"
+  },
+  "Can I pay for plans and service fees with other cryptocurrencies?": {
+    "message": "我可以用其他加密货币支付计划和服务费吗？"
+  },
+  "Yes, you can pay with BTC, ETH, and many other popular cryptocurrencies.": {
+    "message": "是的，您可以使用 BTC、ETH 和许多其他流行的加密货币进行支付。"
+  },
+  "The more assets I custody, the more expensive the service fee?": {
+    "message": "托管的资产越多，服务费越贵？"
+  },
+  "No, the service fee is not related to the amount of assets.": {
+    "message": "不，服务费与资产多少无关。"
+  },
+  "Can I pay for plans and service fees with fiat currency?": {
+    "message": "我可以用法定货币支付计划和服务费吗？"
+  },
+  "Not currently, but it will be supported soon.": {
+    "message": "- 目前没有，但很快就会得到支持。"
+  },
+  "Will my plan be automatically renewed after it expires?": {
+    "message": "我的计划到期后会自动续订吗？"
+  },
+  "No, but we will send multiple notifications for you to pay the plan fee before the plan expires.": {
+    "message": "不会，但我们会发送多个通知，让您在计划到期前支付计划费用。"
+  },
+  "Why is Mixin Safe more secure than a standalone hardware wallet?": {
+    "message": "Mixin Safe 为什么比单独的硬件钱包更安全？"
+  },
+  "Mixin Safe's multi-signature and time-lock technology effectively avoids single-point failure issues such as loss or damage of a single hardware wallet device while maintaining decentralization, thereby greatly improving the security of the wallet.": {
+    "message": "Mixin Safe 的多重签名和时间锁技术在保持去中心化的同时，有效避免了单个硬件钱包设备丢失、损坏等单点故障问题，从而大大提高了钱包的安全性。"
+  },
+  "What does the decentralized multi-party computation (MPC) network used by Mixin Safe specifically refer to?": {
+    "message": "Mixin Safe 使用的去中心化的多方计算 MPC 网络具体指什么？"
+  },
+  "The decentralized MPC network (Safe Network) in Mixin Safe shares validators and security with Mixin Network. Mixin Network is a PoS network composed of 25 pledged full nodes. It has been running stably for more than 5 years, with a total value of over 1 billion dollars.": {
+    "message": "Mixin Safe 中的去中心化 MPC 网络（Safe Network）与 Mixin Network 共享验证器和安全性。Mixin Network 是由 25 个质押的全节点组成的 PoS 网络。它已经稳定运行了 5 年多，总价值超过 10 亿美元。"
+  },
+  "Is Mixin Safe a custodial wallet?": {
+    "message": "Mixin Safe 是托管钱包吗？"
+  },
+  "No, Mixin Safe is a decentralized non-custodial multi-signature wallet solution.": {
+    "message": "不是，Mixin Safe 是一种去中心化的非托管多重签名钱包解决方案。"
+  },
+  "How is the traditional MPC wallet solution different from Mixin Safe?": {
+    "message": "传统的 MPC 钱包方案与 Mixin Safe 比有何不同？"
+  },
+  "Mixin Safe combines MPC, hardware wallets, multi-signature and time-lock technologies, fully utilizing the advantages of each technology while discarding related disadvantages.": {
+    "message": "Mixin Safe 结合了 MPC、硬件钱包、多重签名和时间锁技术，充分利用了每种技术的优点，同时摒弃了相关缺点。"
+  },
+  "🇭🇰 Mixin Ltd": {
+    "message": "🇭🇰 Mixin Ltd"
+  },
+  "Mixin Ltd, a Hong Kong-based company. Mixin Ltd's office address is 12th Floor, Santai Building, 137-139 Connaught Road, Hong Kong.": {
+    "message": "Mixin Ltd 是一家香港公司，公司地址在香港干诺道 137-139 号三泰大厦 12 楼。"
+  },
+  "🇵🇱 Mixin Route LLC": {
+    "message": "🇵🇱 Mixin Route LLC"
+  },
+  "Mixin Route sp. z o.o., a subsidiary of Mixin Ltd, Mixin Route Sp. z o.o. is a company registered in Street BARTYCKA 22B, office 21A, city WARSZAWA, index 00-716, country POLAND(Registration No.0001030006).": {
+    "message": "Mixin Route sp. z o.o. 是一家注册在波兰的公司（注册号 0001030006），公司地址在波兰 WARSZAWA 市 Bartycka 路 22B 办公室 21A 门牌号 00-716。Mixin Route 是 Mixin Ltd 的子公司。"
+  },
+  "We go out of our way to ensure that you have the utmost privacy.": {
+    "message": "我们竭尽全力确保您拥有最大的隐私。"
+  },
+  "We believe hold crypto shouldn't be so hard and expensive": {
+    "message": "我们相信持有加密货币不应该那么困难和昂贵"
+  },
+  "Founded in Christmas 2017 as a small team of less than 20 people, our mission is to provide convenience, security and privacy in digital assets and messages.": {
+    "message": "成立于2017年底，拥有多年区块链技术经验。我们的使命是为数字资产和消息提供便利、安全和隐私。"
+  },
+  "1M+": {
+    "message": "100 万+"
+  },
+  "More than 1 million users use Mixin Safe-driven social, wallet, DeFi, games and other products, which are deeply loved by users for their safety and ease of use.": {
+    "message": "我们以隐私为中心的产品，从端到端的加密信使到钱包，因其安全性和易用性而受到超过 100 万客户的喜爱。"
+  },
+  "$1B+": {
+    "message": "$10 亿+"
+  },
+  "The Mixin team assists users in managing more than US$1 billion in assets. The service is stable and there have been no security incidents, which is deeply trusted by users.": {
+    "message": "5 年多来，Mixin 一直在帮助客户保护超过 10 亿美元的加密资产，这项久经考验的技术已实现零安全事件。"
+  },
+  "We build open source software that always puts security, privacy and decentralization first.": {
+    "message": "我们构建的开源软件始终将安全、隐私和去中心化放在首位。"
+  },
+  "Decentralized bitcoin custody is challenging, which is why we made Mixin Safe to meet public demand. Never worry about losing your keys or centralized evil custody.": {
+    "message": "去中心化的比特币托管具有挑战性，这就是我们制作 Mixin Safe 以满足公众需求的原因。永远不必担心丢失钥匙或中心化邪恶保管。"
+  },
+  "Technology Detail": {
+    "message": "技术细节"
+  },
+  "Never worry about losing your keys or centralized evil custody": {
+    "message": "永远不必担心丢失钥匙或中心化邪恶保管。"
+  },
+  "Confident Bitcoin Custody": {
+    "message": "信心满满的资产托管方案"
+  },
+  "Self-custody": {
+    "message": "私钥自持"
+  },
+  "If you don't truly own your private key, you will never be confident in your bitcoin holdings. With Mixin Safe, you have full control over your wallet private key.": {
+    "message": "如果您不真正拥有自己的私钥，就永远无法对自己持有的比特币充满信心。使用 Mixin Safe，您对自己的钱包私钥拥有完整的掌控。"
+  },
+  "Mature technology": {
+    "message": "技术成熟"
+  },
+  "Our solution is built on mature technologies and products such as smart contracts, multi-signature, secure time lock, MPC-TSS and hardware wallets to ensure the security of your assets.": {
+    "message": "我们的解决方案基于智能合约、多重签名、安全时间锁、MPC - TSS 和硬件钱包等成熟的技术和产品构建，确保您的资产安全。"
+  },
+  "Vault co-management": {
+    "message": "金库共管"
+  },
+  "Co-manage large assets with family, friends or team members. Mixin Safe's dual multi-signature technology and key sharding technology can prevent co-managers from conspiring to transfer your assets.": {
+    "message": "与家人、朋友或团队成员协作管理大额资产，Mixin Safe 的双重多重签名技术和密钥分片技术能避免金库共管人合谋转移您托管的资产。"
+  },
+  "Estate planning": {
+    "message": "遗产规划"
+  },
+  "Estate planning can help you safely pass on your crypto wealth to your descendants. Your heirs can easily inherit your wealth without any professional knowledge.": {
+    "message": "遗产规划能帮助您家比特币等加密货币财富安全的传承给子孙后代，您的继承人无需任何专业知识即可轻松继承您的财富。"
+  },
+  "Mixin Safe powers leading organizations from Payment to DAOs, and beyond": {
+    "message": "Mixin Safe 为领先的组织提供支持，从支付到 DAO 等等。"
+  },
+  "Don't worry": {
+    "message": "放心用"
+  },
+  "Enjoy interaction": {
+    "message": "尽享交互"
+  },
+  "Thanks to asset read-only authorization, Dapp whitelist and approval process, you can safely consume or invest in cryptocurrencies without worrying about potential risks when using Dapp, such as authorization vulnerabilities.": {
+    "message": "得益于资产只读授权、Dapp 白名单和审批流程，您可以放心的消费或投资加密货币，不必担心使用 Dapp 遭遇潜在的风险，例如授权漏洞。"
+  },
+  "Co-management": {
+    "message": "协作共管"
+  },
+  "The perfect approval process ensures the security and transparency of funds. Unlike other multi-signature wallets, Mixin Safe's dual multi-signature technology and key sharding technology can avoid potential multi-signature collusion issues.": {
+    "message": "完善的审批流程确保资金安全、透明，区别于其他多重签名钱包，Mixin Safe 的双重多重签名技术和密钥分片技术能避免潜在的多签合谋问题。"
+  },
+  "Asset recovery": {
+    "message": "资产恢复"
+  },
+  "When your vault private key is lost or the MPC wallet cannot be logged in, you can regain control of your assets through the vault recovery service and emergency contact.": {
+    "message": "当您的金库私钥丢失或 MPC 钱包无法登录时，通过金库的恢复服务和紧急联系人来让您重新获得资产的掌握权。"
+  },
+  "Enhanced privacy": {
+    "message": "隐私加强"
+  },
+  "End-to-end encryption technology and CryptoNode technology protect the privacy of your chat and transfer information. The information is encrypted and ensures that only the two parties of the interaction can decrypt it. No third party can peep into your privacy data.": {
+    "message": "端对端加密技术和 CryptoNode 技术保护您的聊天和转账信息隐私，信息经过加密并确保只有交互双方才能解密，任何第三方都无法窥探您的隐私数据。"
+  },
+  "Fixed fee": {
+    "message": "费用固定"
+  },
+  "Whether the price of Bitcoin rises or you increase your Bitcoin holdings, Mixin Safe only charges a fixed service fee, which will not change with the number and price of assets you host or transfer.": {
+    "message": "无论比特币价格上涨，还是您增加比特币持有量，Mixin Safe 只收取固定的服务费，不会随着您托管或转账的数量和价格而变化。"
+  },
+  "Customer support": {
+    "message": "客服支持"
+  },
+  "Perfect documentation and intimate customer service are always ready to help you solve various problems. You can focus on wealth growth without being trapped in asset security issues.": {
+    "message": "完善的文档和贴心的客服随时帮助您解决面临的各种问题，您可以专注财富增长而不必受困于资产安全问题。"
+  },
+  "Contact Us": {
+    "message": "联系我们"
+  },
+  "Loading...": {
+    "message": "加载中..."
+  },
+  "Your message has been sent successfully.": {
+    "message": "你的消息已发送成功"
+  },
+  "Unknown error, please try again later.": {
+    "message": "未知错误，请稍后重试"
+  },
+  "Audit Report": {
+    "message": "审计报告"
+  },
+  "View security audits": {
+    "message": "查看审计报告"
+  },
+  "We Make Managing Digital Assets Easy": {
+    "message": "如此简单"
+  },
+  "6 key features to allow hassle-free day-to-day management": {
+    "message": "6 大关键功能让日常管理无忧无虑"
+  },
+  "Dashboard": {
+    "message": "账户一览"
+  },
+  "Easily view your assets distribution any where, anytime": {
+    "message": "随时随地的查看您的资产信息，方便快捷是 Mixin Safe 产品设计的信条。"
+  },
+  "Downloadable history": {
+    "message": "数据永远归您"
+  },
+  "Make account reconciliation easy and fiexible": {
+    "message": "因为完全去中心化的产品设计，您可以随时下载完整的账户与交易信息。"
+  },
+  "Joint": {
+    "message": "无忧协作"
+  },
+  "Manage assets with your family, friends and colleagues": {
+    "message": "与家人、朋友或者同事共同管理多重签名钱包，体验从未如此顺滑。"
+  },
+  "Batch transfer": {
+    "message": "批量转账"
+  },
+  "Send thousands of transaction in a few minitus": {
+    "message": "通过交易模板可以在几分钟内完成成百上千笔转账，省时省钱。"
+  },
+  "Whitelist": {
+    "message": "安全白名单"
+  },
+  "Cater to your internal risk control needs": {
+    "message": "通过多重签名管理的收款人白名单，可以避免将您的币发给不合适的人。"
+  },
+  "Notification": {
+    "message": "实时通知"
+  },
+  "Timely participation in funding approval": {
+    "message": "多种途径的实时通知让您随时掌握钱包动态，及时完成多重签名的交易流程审批。"
+  },
+  "View our plans": {
+    "message": "会员与价格"
+  },
+  "Learn Decentralization": {
+    "message": "如何去中心化"
+  },
+  "See the Solutions": {
+    "message": "查看解决方案"
+  },
+  "Bitcoin Technology": {
+    "message": "比特币技术"
+  },
+  "Privacy Technology": {
+    "message": "隐私技术"
+  },
+  "Our product is decentralized, safer, stronger and cheaper": {
+    "message": "我们的方案完全去中心化，并且更安全、方便又价格合理。"
+  },
+  "Our Main Products": {
+    "message": "主要产品"
+  },
+  "The open source decentralized MPC multi-currency wallet supports end-to-end encrypted chat, free transfers to contacts, legal currency deposits, social recovery and other functions.": {
+    "message": "The open source decentralized MPC multi-currency wallet supports end-to-end encrypted chat, free transfers to contacts, legal currency deposits, social recovery and other functions."
+  },
+  "Mixin Safe provides the general public with cutting-edge Bitcoin custody solutions. Bitcoin custody should never sacrifice decentralization, always be confident and reliable.": {
+    "message": "Mixin Safe provides the general public with cutting-edge Bitcoin custody solutions. Bitcoin custody should never sacrifice decentralization, always be confident and reliable."
+  },
+  "We strive to build the safest products to grow your crypto wealth, with the highest standard of decentralized custodian powered by Mixin Safe.": {
+    "message": "We strive to build the safest products to grow your crypto wealth, with the highest standard of decentralized custodian powered by Mixin Safe."
+  },
+  "Provide the general public with state-of-the-art crypto financial services solutions.": {
+    "message": "将最先进的去中心化比特币托管方案带给公众，安全容易上手"
+  },
+  "How it Secure": {
+    "message": "安全原理"
+  },
+  "Pricing & Plans": {
+    "message": "开始上手"
+  },
+  "Since": {
+    "message": "始于"
+  },
+  "Assets under management": {
+    "message": "资产管理规模"
+  },
+  "1B": {
+    "message": "$10 亿+"
+  },
+  "Per day transaction volume": {
+    "message": "每日转账金额"
+  },
+  "Customers": {
+    "message": "服务客户"
+  },
+  "Supported Assets and Protocols": {
+    "message": "Supported Assets and Protocols"
+  },
+  "We support over 3,400 tokens and 48 chains, including popular layer 1 and layer 2": {
+    "message": "我们支持超过 3,400 种币 48 条链，包括流行的一层网络和二层网络"
+  },
+  "Trusted by": {
+    "message": "值得信赖"
+  },
+  "Mixin is Decentralization": {
+    "message": "Mixin 是去中心化的"
+  },
+  "We lead the development of multiple open-source decentralized networks": {
+    "message": "我们领导开发了多个开源的去中心化网络"
+  },
+  "Based on decentralized networks": {
+    "message": "基于去中心化网络"
+  },
+  "Integrate assets and smart contracts of Layer 1 networks such as Bitcoin and Ethereum, as well as technologies such as time lock and PSBT.": {
+    "message": "整合 Bitcoin、Ethereum 等 Layer 1 的资产和智能合约、时间锁、PSBT 等技术。"
+  },
+  "Decentralized MPC network": {
+    "message": "去中心化 MPC 网络"
+  },
+  "Decentralized MPC network allows your family, friends or colleagues to participate in the management of the vault together.": {
+    "message": "去中心化 Safe Network 让您的家人、朋友或同事能一起共同参与金库的资金管理。"
+  },
+  "Decentralized multi-chain ledger": {
+    "message": "去中心化多链账本"
+  },
+  "Decentralized multi-chain ledger Mixin Network provides a free and fast cross-chain ledger to realize commercial applications.": {
+    "message": "去中心化账本 Mixin Network 提供了一个免费、快速的跨链账本，实现商业应用。"
+  },
+  "Decentralized key network": {
+    "message": "去中心化密钥网络"
+  },
+  "Decentralized key network TIP Network helps users use private keys in an easy-to-remember way.": {
+    "message": "去中心化密钥网络 TIP Network 帮助用户用易于记忆的方式更好的使用私钥。"
+  },
+  "Mixin adopts decentralized technology": {
+    "message": "Mixin 结合多种去中心化技术"
+  },
+  "We never invent our own cryptographic techniques": {
+    "message": "我们从不发明自己的密码技术"
+  },
+  "Multisig": {
+    "message": "多重签名"
+  },
+  "Multi-signature technology makes it easy for you and your family, friends and colleagues to jointly manage large assets to avoid single point of failure.": {
+    "message": "多重签名技术方便您与您的家人、朋友和同事共同管理大额资产避免单点故障。"
+  },
+  "MPC - TSS": {
+    "message": "MPC - TSS"
+  },
+  "Multi-party computing (MPC) threshold signature scheme (TSS) helps you to control your assets more securely and conveniently.": {
+    "message": "多方计算（MPC）的阈值签名方案（TSS）帮助您更安全、便捷的掌控您的资产。"
+  },
+  "MTG": {
+    "message": "MTG"
+  },
+  "Mixin Trust Group (MTG) technology allows you to interact with decentralized applications in a smoother and easier way.": {
+    "message": "Mixin Trust Group (MTG) 技术使您能以更加流畅和易用的方式与去中心应用进行交互。"
+  },
+  "More": {
+    "message": "更多"
+  },
+  "Smart contracts, PSBT technology and time lock technology ensure that the Mixin team cannot do evil and take away your assets.": {
+    "message": "智能合约、PSBT 技术和时间锁技术确保 Mixin 团队也无法作恶拿走您的资产。"
+  },
+  "Never Sacrifice Decentralization": {
+    "message": "永远不能牺牲去中心化"
+  },
+  "Born after the 2008 economy crisis originated from the centralized financial system, Bitcoin is believed to be the ultimate solution to the future of human finance. Decentralization is in the blood of nature of Bitcoin, it's not something can be a trade-off.": {
+    "message": "传统的不透明的中心化银行系统酝酿了 2008 年的经济危机，从此比特币横空出世，相信去中心化和比特币的人们都认为这是人类社会终极的银行系统解决方案。从诞生之初，去中心化就是比特币的血液，是永远不能被权衡不能被忽略不能被放弃的东西。"
+  },
+  "The saying \"Not your keys, not your coins\" is a cornerstone principle for Bitcoin enthusiasts who embrace its decentralized nature. Though managing private keys may present a challenge, we should remain steadfast in avoiding centralized firms as custodians for Bitcoin holdings.": {
+    "message": "不是你的私钥，就不是你的币。虽然自己管理私钥充满挑战，并不是一件大众熟悉的事情，但我们要时刻牢记比特币诞生的初心。没有去中心化的比特币就一无是处，永远不能依靠中心化机构来托管资产。当很多中心化的机构不断的在比特币世界涌现又不断破产跑路的过程中，人们越来越懂得去中心化的意义，不断回归比特币诞生的初心。"
+  },
+  "The Mt. Gox Debacle": {
+    "message": "Mt. Gox 事件"
+  },
+  "Mt. Gox was a bitcoin exchange based in Shibuya, Tokyo, Japan. Launched in 2010, it was handling over 70% of all bitcoin (BTC) transactions worldwide by early 2014, when it abruptly ceased operations amid revelations of its involvement in the loss/theft of hundreds of thousands of bitcoins, then worth hundreds of millions in US dollars.": {
+    "message": "Mt. Gox 是一家位于日本东京涩谷的比特币交易所。它于 2010 年启动，到 2014 年初，它处理了全球 70% 以上的比特币（BTC）交易。然而，当揭示其涉及数十万比特币的丢失/盗窃时，它突然停止运营。"
+  },
+  "The Price of Centralization": {
+    "message": "中心化的代价"
+  },
+  "QuadrigaCX Founder's Death": {
+    "message": "QuadrigaCX 创始人去世"
+  },
+  "The founder of Canada's largest cryptocurrency exchange, QuadrigaCX, died unexpectedly in 2019. He was the only person with access to the exchange's cold wallets, resulting in approximately $190 million in customer funds being inaccessible.": {
+    "message": "加拿大最大的加密货币交易所 QuadrigaCX 的创始人在 2019 年意外去世。他是唯一能够访问该交易所冷钱包的人，导致大约 1.9 亿美元的客户资金无法取回。"
+  },
+  "BitPay Phishing Attack": {
+    "message": "BitPay 钓鱼攻击"
+  },
+  "BitPay, a company that provides Bitcoin payment solutions for merchants, fell victim to a phishing attack in 2015. The attacker, posing as a partner company, tricked BitPay into sending 5000 Bitcoins, worth approximately $1.8 million at the time.": {
+    "message": "BitPay 是一家为商家提供比特币支付解决方案的公司，于 2015 年成为钓鱼攻击的受害者。攻击者冒充合作伙伴公司，成功诱使 BitPay 发送了 5000 个比特币，当时价值约 180 万美元。"
+  },
+  "Licenses and registrations": {
+    "message": "许可合规"
+  },
+  "NO ANNUAL FEES": {
+    "message": "没有年费"
+  },
+  "Try for free": {
+    "message": "免费尝试"
+  },
+  "Features": {
+    "message": "特点"
+  },
+  "Mixin One bundles up to three Mixin memberships for one lower yearly price.": {
+    "message": "Mixin One bundles up to three Mixin memberships for one lower yearly price."
+  },
+  "Taking control of your bitcoin is priceless": {
+    "message": "Taking control of your bitcoin is priceless"
+  },
+  "Personal": {
+    "message": "个人版"
+  },
+  "Family or small teams": {
+    "message": "家庭或小团队"
+  },
+  "Family houses or institutions": {
+    "message": "家办或机构"
+  },
+  "Free": {
+    "message": "免费"
+  },
+  "Secure and easy-to-use MPC hot wallet that meets the daily needs of small amounts of bitcoin storage": {
+    "message": "安全易用的 MPC 热钱包，满足日常小额比特币存储需求"
+  },
+  "MPC Wallet": {
+    "message": "MPC 钱包"
+  },
+  "Buy, sell and swap crypto": {
+    "message": "买、卖和交换加密货币"
+  },
+  "Supports 47 blockchains": {
+    "message": "支持 47 条链"
+  },
+  "Free transfer": {
+    "message": "免费转账"
+  },
+  "Social recovery": {
+    "message": "社交恢复"
+  },
+  "Free email and chat support": {
+    "message": "免费邮箱或者聊天客服"
+  },
+  "Advance": {
+    "message": "进阶版"
+  },
+  "Use multiple keys on multiple devices to avoid single point of failure, and match inheritance to pass on your bitcoin assets": {
+    "message": "安全、易用的 MPC 热钱包可满足小额日常存币需求"
+  },
+  "Everything in Free": {
+    "message": "包含所有免费版的功能"
+  },
+  "Free Mixin Anonymous Number": {
+    "message": "免费 Mixin 匿名号"
+  },
+  "Create 2 Safes": {
+    "message": "可创建 2 个金库"
+  },
+  "Get 2 Safe Credits": {
+    "message": "得到 2 个 Safe Credits"
+  },
+  "3 members per safe": {
+    "message": "每个金库最多 3 个共管人"
+  },
+  "3 members in total": {
+    "message": "所有金库最多 3 个共管人"
+  },
+  "Paid recovery service": {
+    "message": "收费的资产恢复服务"
+  },
+  "Paid inheritance service": {
+    "message": "收费的遗产传承服务"
+  },
+  "Manage large assets in the vault with family, friends or colleagues, so you can avoid theft, accidents and custody risks": {
+    "message": "与家人、朋友或同事共同管理金库大额资产，因此您可以免受盗窃、事故和托管风险"
+  },
+  "Elite": {
+    "message": "精英版"
+  },
+  "Everything in Advance": {
+    "message": "包含所有进阶版的功能"
+  },
+  "Create 5 Safes": {
+    "message": "可创建 5 个金库"
+  },
+  "Get 5 Safe Credits": {
+    "message": "得到 5 个 Safe Credits"
+  },
+  "1 free Ledger Nano X": {
+    "message": "1 个免费的 Ledger Nano X"
+  },
+  "5 members per safe": {
+    "message": "每个金库最多 5 个共管人"
+  },
+  "10 members in total": {
+    "message": "所有金库最多 10 个共管人"
+  },
+  "Free recovery service": {
+    "message": "免费的资产恢复服务"
+  },
+  "Free inheritance service": {
+    "message": "免费的遗产传承服务"
+  },
+  "Prosperity": {
+    "message": "传世版"
+  },
+  "Multi-responsible custody of large assets by group companies, family offices and financial institutions": {
+    "message": "集团公司、家族办公室和金融机构多负责人共同托管巨额资产"
+  },
+  "Everything in Elite": {
+    "message": "包含所有精英版的功能"
+  },
+  "Create 100 Safes": {
+    "message": "可创建 100 个金库"
+  },
+  "Create 20 Safes": {
+    "message": "得到 20 个 Safe Credits"
+  },
+  "1 free Ledger Stax": {
+    "message": "1 free Ledger Stax"
+  },
+  "2 free Ledger Nano X": {
+    "message": "2 free Ledger Nano X"
+  },
+  "10 members per safe": {
+    "message": "每个金库最多 10 个共管人"
+  },
+  "100 members in total": {
+    "message": "所有金库最多 100 个共管人"
+  },
+  "Free 24/7 phone support": {
+    "message": "免费 24x7 全天候电话服务"
+  },
+  "Customized DeFi service": {
+    "message": "定制的去中心化金融服务"
+  },
+  "The Harrowing Tales of Losses in the Era of Centralized Exchanges, Wallets, and Custodial Services": {
+    "message": "中心化交易所、钱包和托管服务时代的惨痛损失故事"
+  },
+  "Reliable Service": {
+    "message": "可靠的服务"
+  },
+  "Recovery Service": {
+    "message": "资产恢复"
+  },
+  "Combining reliable multi-signature technology and professional collaborative management services, we can provide reliable recovery services after users lose their private keys, helping users regain control of assets.": {
+    "message": "结合可靠的多重签名技术和专业的协同管理服务，我们可以在私钥丢失的情况下为客户提供去中心化的恢复服务。"
+  },
+  "Inheritance": {
+    "message": "财富传承"
+  },
+  "Notification Service": {
+    "message": "及时提醒"
+  },
+  "We use Mixin Messenger messages, SMS, Slack, Telegram and other channels to regularly notify asset co-managers to approve transactions as soon as possible to improve efficiency.": {
+    "message": "我们通过 Mixin Messenger、SMS、Slack、Telegram 等渠道定期通知钱包合作者尽快批准交易，提高效率。"
+  },
+  "Customer Service": {
+    "message": "财富经理"
+  },
+  "We provide Mixin Messenger, WhatsApp, email, video conference and 7x24 telephone advanced customer service support to help users solve problems in a timely manner.": {
+    "message": "我们提供 Mixin Messenger、WhatsApp、电子邮件、视频会议和 7x24 电话客户服务，以帮助我们的客户及时解决问题。"
+  },
+  "We are working on getting support of Mixin Safe in more wallet signers": {
+    "message": "我们正在努力让更多的硬件和软件钱包支持 Mixin Safe"
+  },
+  "Reliable Singer": {
+    "message": "可靠的钱包"
+  },
+  "Bitcoin Core connects to the Bitcoin peer-to-peer network to download and fully validate blocks and transactions.": {
+    "message": "Bitcoin Core 连接到比特币点对点网络，下载并完全验证区块和交易。"
+  },
+  "Mornin Key is an open source decentralized key manager that helps users truly control and protect their data.": {
+    "message": "Mornin Key 是一个开源的去中心化私钥管理器，帮助用户真正控制和保护他们的数据。"
+  },
+  "Mixin Messenger is an open-source cryptocurrency wallet and signal protocol messenger.": {
+    "message": "Mixin Messenger 是一个开源的加密货币钱包和信号协议通信应用。"
+  },
+  "Coldcard is an easy to use, ultra-secure, open-source and affordable hardware wallet that is easy to back up via an encrypted microSD card.": {
+    "message": "Coldcard 是一款易于使用、超安全、开源且价格实惠的硬件钱包，可以通过加密的微型 SD 卡进行备份。"
+  },
+  "Blockstream Jade is an easy-to-use, purely open-source hardware wallet that offers advanced security for your Bitcoin and Liquid assets.": {
+    "message": "Blockstream Jade 是一款易于使用、纯开源的硬件钱包，为您的比特币和 Liquid 资产提供高级安全性。"
+  },
+  "Ledger's hardware wallets are multicurrency wallets that are used to store private keys for cryptocurrencies offline.": {
+    "message": "Ledger 的硬件钱包是用于离线存储加密货币的私钥的多币种钱包。"
+  },
+  "DIY airgapped hardware wallet that uses QR codes for communication with the host.": {
+    "message": "DIY 空隔离硬件钱包，使用QR码与主机进行通信。"
+  },
+  "The goal of SeedSigner is to lower the cost and complexity of Bitcoin multi-signature wallet use.": {
+    "message": "SeedSigner 的目标是降低比特币多重签名钱包的成本和复杂性。"
+  },
+  "One of the simplest hardware wallet for beginners, BitBox02 boasts a fast setup, microSD backup, in-app guide, and intuitive touch sliders.": {
+    "message": "BitBox02 是一款适合初学者的最简单的硬件钱包，具有快速设置、微型 SD 卡备份、应用内指南和直观的触摸滑块。"
+  },
+  "More Coming Soon": {
+    "message": "更多即将推出"
+  },
+  "Soon we will support more software and hardware wallets to manage Holder Key signatures.": {
+    "message": "很快我们将支持更多的软件和硬件钱包来管理金库所有者的签名。"
+  },
+  "Mixin Safe is committed to providing users with safe and stable asset management services. We always use proven Bitcoin encryption technologies, such as multi-signature, time lock, MPC, threshold signature, P2SH and hardware wallet technology. These mature and reliable technologies complement each other to ensure the safety of assets and ensure that customers can use our products with confidence.": {
+    "message": "Mixin Safe致力于为我们的客户提供安全可靠的资产托管解决方案。我们始终使用经过验证的比特币密码技术，例如多重签名、时间锁、MPC、门限签名、隔离见证 P2WSH 和硬件钱包技术。这些成熟可靠的技术相辅相成，确保资产安全，确保客户放心使用我们的产品。"
+  },
+  "Reliable Technical Service": {
+    "message": "久经考验的技术"
+  },
+  "The bitcoin multi-signature feature is designed to require M signatures from a total of N keys, known as an M-of-N multisig, where M is equal to or less than N.": {
+    "message": "比特币多重签名脚本旨在要求来自总共 N 个私钥的 M 个签名，称为 M-of-N 多重签名，其中 M 等于或小于 N。"
+  },
+  "Timelock": {
+    "message": "安全时间锁"
+  },
+  "Timelocks are one of the most practical functionalities of Bitcoin, allowing you the ability to program actions according to a series of parameters.": {
+    "message": "时间锁脚本是比特币最实用的功能之一，让您能够根据一系列参数对操作进行编程。"
+  },
+  "P2SH": {
+    "message": "隔离见证 P2WSH"
+  },
+  "Pay-to-Script-Hash (P2SH) is a type of transaction which allows for the spending of bitcoin based on the satisfaction of any script provided by the sender.": {
+    "message": "Pay-to-Witness-Script-Hash (P2WSH) 是一种交易类型，允许根据发送方提供的任何脚本的满意度来花费比特币。"
+  },
+  "Asset Privacy": {
+    "message": "资产隐私"
+  },
+  "The types and quantities of assets in your wallet are only known to you": {
+    "message": "钱包的资产种类和具体金额只有你知道"
+  },
+  "Balance Privacy": {
+    "message": "余额隐私"
+  },
+  "When your crypto assets are recharged into the Mixin wallet, only you have the right to view the types and specific amounts of assets in the wallet. Because the recharge address and withdrawal address of the wallet are not the same address, other third parties cannot infer the actual types and quantities of assets in your wallet through the recharge address or withdrawal address on the chain.": {
+    "message": "当您的加密资产通过充值进入 Mixin 钱包后， 只有您有权查看钱包的资产种类和具体金额。由于钱包的充值地址和提现地址不是同一个地址，其他第三方无法通过链上的充值地址或提现地址推导出您钱包实际的资产种类和数量。"
+  },
+  "Loss Protection": {
+    "message": "丢失保护"
+  },
+  "If you lose the owner's private key of Mixin Safe vault, you can contact the Mixin team to recover the vault assets. At the same time, you don't have to worry about the leakage of asset information due to the leakage of private keys. The person who gets your private key cannot view the types and quantities of assets through the private key.": {
+    "message": "当您使用 Mixin Safe 产品托管资产不慎丢失所有者私钥时，您可以联系 Mixin 团队恢复金库资产，同时您也不必担心因为私钥泄漏而导致资产信息泄漏，拿到您私钥的人无法通过私钥查看资产种类和数量。"
+  },
+  "Inheritance Privacy": {
+    "message": "继承隐私"
+  },
+  "Using Mixin Safe to host assets and using inheritance services can ensure that your wealth is successfully inherited to the next generation. Inheritance is solid privacy protection, and the heir and executor of the property cannot know in advance the types and quantities of assets to be inherited, nor can they infer all assets from the transfer records on the blockchain.": {
+    "message": "使用 Mixin Safe 产品托管资产并使用遗产继承服务可以确保您的财富顺利传承给下一代，遗产继承坚固隐私保护，财产的继承人和执行人无法事先知道要继承的资产种类和数量，也无法通过区块链上的转移记录推断出所有资产。"
+  },
+  "Transfer Privacy": {
+    "message": "转账隐私"
+  },
+  "Enhance UTXO transfer privacy through CryptoNote technology": {
+    "message": "通过 CryptoNote 技术加强 UTXO 转账隐私"
+  },
+  "Privacy Transfer": {
+    "message": "隐私转账"
+  },
+  "Enhance UTXO transfer privacy through CryptoNote technology, only the two parties to the transaction know, and the Mixin Network full node cannot know the two parties to the transaction, and cannot infer the specific two parties to the transaction based on the transaction itself.": {
+    "message": "通过 CryptoNote 技术加强 UTXO 转账隐私，交易只有双方知道，Mixin Network 全节点也无法知道交易双方，无法根据交易本身推导出交易具体双方。"
+  },
+  "Regulatory Compliance": {
+    "message": "监管合规"
+  },
+  "The dual-key structure of the Mixin Network multi-chain ledger ensures asset anonymity while meeting compliance requirements. Users can actively provide their own viewkey for accountants to query, which can be used for tax reporting and accounting audits, etc., and assets will not be transferred.": {
+    "message": "Mixin Network 多链账本的双密钥结构确保资产匿名的同时满足合规需求，用户可以主动提供自己的 view key 供会计查询，可用于报税和会计审计等，而资产不会被转移。"
+  },
+  "Information Privacy": {
+    "message": "信息隐私"
+  },
+  "All messages, audios, photos, and files are end-to-end encrypted": {
+    "message": "所有消息都经过端到端加密，包括文字、照片、文件和通话"
+  },
+  "Stay connected to your family, friends, and coworker by group chat": {
+    "message": "群聊让您可以轻松、自在地与家人、朋友和同事保持联系"
+  },
+  "Enhance privacy by turning on the disappearing messages feature": {
+    "message": "通过打开聊天的限时消息功能，您可以获得更多隐私保护"
+  },
+  "We can't read your messages or listen to your calls, nor can anyone else.": {
+    "message": "我们无法读取您的信息或者窃听您的通话，其他人亦然"
+  },
+  "Privacy by Design": {
+    "message": "默认隐私"
+  },
+  "Our internal privacy program is built on the EU GDPR to ensure the privacy of our customers. We will continue to improve our privacy framework and continuously meet other compliancerequirements. For more information, please refer to our privacy statement.": {
+    "message": "我们的内部隐私程序是根据欧盟 GDPR 制定的，以确保我们客户的隐私。 我们将继续改进隐私框架并持续满足其他合规要求。 欲了解更多信息，请参阅我们的隐私声明。"
+  },
+  "Privacy Compliance": {
+    "message": "隐私合规"
+  },
+  "Don't worry about save": {
+    "message": "放心存"
+  },
+  "With our decentralized product, you can easily hold assets such as Bitcoin and other cryptocurrencies, say goodbye to the terrifying issues of asset loss and theft, and focus on holding and wealth growth.": {
+    "message": "我们整合先进并且可靠的技术为您提供安全的自托管钱包和去中心化的资产恢复和遗产继承服务"
+  },
+  "Custody Security": {
+    "message": "托管安全"
+  },
+  "Most cryptocurrency losses are due to poor private key management by users. If you want to store cryptocurrency assets such as Bitcoin for a long time, a multi-signature wallet is essential. The dual multi-signature we designed significantly improves this situation.": {
+    "message": "大多数加密货币丢失是由于用户的私钥管理不善，想要长期存储比特币等加密货币资产，多重签名钱包必不可少，我们设计的双重多次签名显著改善这一现状。"
+  },
+  "Asset Recovery": {
+    "message": "资产恢复"
+  },
+  "Legacy Inheritance": {
+    "message": "遗产继承"
+  },
+  "By combining the multi-signature and time lock scripts of the Bitcoin network and adopting a decentralized and mature multi-party computing MPC technology, Mixin Safe has successfully implemented a complete decentralized inheritance solution.": {
+    "message": "通过组合比特币网络的多重签名与时间锁脚本，并采用去中心化的成熟的多方计算 MPC 技术，Mixin Safe 成功实现了一套完整的去中心化遗产继承方案。"
+  },
+  "Asset Isolation": {
+    "message": "资产隔离"
+  },
+  "Our multi-vault design can help you isolate assets, establish multiple vaults according to usage, and set different co-managers for different vaults, which can effectively enhance the privacy and security of assets.": {
+    "message": "我们的多金库设计能帮助您进行资产隔离，按用途建立多个金库并为不同的金库设置不同的共管人，可有效的增强资产的私密性和安全性。"
+  },
+  "Use with Confidence": {
+    "message": "放心用"
+  },
+  "We integrate advanced and reliable technologies to provide you with secure self-hosted wallets and decentralized asset recovery and inheritance services.": {
+    "message": "通过我们去中心化的产品您可以轻松的持有比特币等加密货币资产，告别令人胆战心惊的资产丢失被盗的问题，专注持有和财富增长。"
+  },
+  "Easy to Use": {
+    "message": "简单易用"
+  },
+  "The mobile phone number login is easy to use and will not lose the account. The 6-digit password manages the MPC wallet, which is safe, simple and easy to remember.": {
+    "message": "手机号登录易用且不会丢失账号，6 位数字密码管理 MPC 钱包安全简单且易于记忆。"
+  },
+  "Less Prone to Errors": {
+    "message": "不易出错"
+  },
+  "The address whitelist and multi-person co-management vault review can effectively reduce the occurrence of wrong address and wrong chain transfers.": {
+    "message": "地址白名单和多人共同管理金库审核每笔转账可有效减少转错地址、转错链等情况。"
+  },
+  "Privacy Protection": {
+    "message": "隐私保护"
+  },
+  "Enjoy the Interaction": {
+    "message": "尽享交互"
+  },
+  "Complete documents and considerate customer service are always ready to help you solve various problems you are facing, so you can focus on wealth growth.": {
+    "message": "完善的文档和贴心的客服随时帮助您解决面临的各种问题，您可以专注财富增长。"
+  },
+  "How it Secures": {
+    "message": "工作原理"
+  },
+  "Decentralized Network": {
+    "message": "去中心化网络"
+  },
+  "We lead the development and construction of multiple decentralized networks and combine Bitcoin, Ethereum and other Layer 1 to provide multi-chain, high-speed free transfer, key sharding decentralized underlying network.": {
+    "message": "我们领导开发、组建了多个去中心化网络并结合 Bitcoin、Ethereum 等 Layer 1 提供了多链、高速免费转账、密钥分片的去中心化底层网络。"
+  },
+  "Decentralized Wallet": {
+    "message": "去中心钱包"
+  },
+  "Based on multiple decentralized networks, we build Mixin Safe multi-signature cold wallet and MPC hot wallet with social recovery, and your assets are always under your control.": {
+    "message": "基于多个去中心化网络我们构建了 Mixin Safe 多签冷钱包和具备社交恢复的 MPC 热钱包，你的资产始终受你控制。"
+  },
+  "Decentralized Services": {
+    "message": "去中心化服务"
+  },
+  "Based on a secure decentralized wallet service, I and our partners provide users with a series of decentralized products and services such as buying, trading, wealth management, inheritance, and recovery.": {
+    "message": "基于安全的去中心化钱包服务，我和我们的合作伙伴们为用户提供买入、交易、理财、继承、恢复等一系列去中心化产品和服务。"
+  },
+  "Integrated security solution to protect your assets": {
+    "message": "一体化安全解决方案全方位保护您的资产安全"
+  },
+  "Based on decentralized networks such as Bitcoin, Ethereum, and key sharding, combined with technologies such as multi-signature, smart contracts, time locks, MPC and end-to-end encryption, we provide you with a one-stop cryptocurrency service with security as the foundation.": {
+    "message": "基于比特币、以太坊、密钥分片等去中心化网络，结合多重签名、智能合约、时间锁、MPC和端对端加密等技术，以安全为基础为您提供一站式加密货币服务"
+  },
+  "theme.ErrorPageContent.title": {
+    "message": "This page crashed.",
+    "description": "The title of the fallback page when the page crashed"
+  },
+  "theme.blog.archive.title": {
+    "message": "Archive",
+    "description": "The page & hero title of the blog archive page"
+  },
+  "theme.blog.archive.description": {
+    "message": "Archive",
+    "description": "The page & hero description of the blog archive page"
+  },
+  "theme.BackToTopButton.buttonAriaLabel": {
+    "message": "Scroll back to top",
+    "description": "The ARIA label for the back to top button"
+  },
+  "theme.blog.paginator.navAriaLabel": {
+    "message": "Blog list page navigation",
+    "description": "The ARIA label for the blog pagination"
+  },
+  "theme.blog.paginator.newerEntries": {
+    "message": "Newer Entries",
+    "description": "The label used to navigate to the newer blog posts page (previous page)"
+  },
+  "theme.blog.paginator.olderEntries": {
+    "message": "Older Entries",
+    "description": "The label used to navigate to the older blog posts page (next page)"
+  },
+  "theme.blog.post.paginator.navAriaLabel": {
+    "message": "Blog post page navigation",
+    "description": "The ARIA label for the blog posts pagination"
+  },
+  "theme.blog.post.paginator.newerPost": {
+    "message": "Newer Post",
+    "description": "The blog post button label to navigate to the newer/previous post"
+  },
+  "theme.blog.post.paginator.olderPost": {
+    "message": "Older Post",
+    "description": "The blog post button label to navigate to the older/next post"
+  },
+  "theme.blog.post.plurals": {
+    "message": "One post|{count} posts",
+    "description": "Pluralized label for \"{count} posts\". Use as much plural forms (separated by \"|\") as your language support (see https://www.unicode.org/cldr/cldr-aux/charts/34/supplemental/language_plural_rules.html)"
+  },
+  "theme.blog.tagTitle": {
+    "message": "{nPosts} tagged with \"{tagName}\"",
+    "description": "The title of the page for a blog tag"
+  },
+  "theme.tags.tagsPageLink": {
+    "message": "View All Tags",
+    "description": "The label of the link targeting the tag list page"
+  },
+  "theme.colorToggle.ariaLabel": {
+    "message": "Switch between dark and light mode (currently {mode})",
+    "description": "The ARIA label for the navbar color mode toggle"
+  },
+  "theme.colorToggle.ariaLabel.mode.dark": {
+    "message": "dark mode",
+    "description": "The name for the dark color mode"
+  },
+  "theme.colorToggle.ariaLabel.mode.light": {
+    "message": "light mode",
+    "description": "The name for the light color mode"
+  },
+  "theme.docs.DocCard.categoryDescription": {
+    "message": "{count} items",
+    "description": "The default description for a category card in the generated index about how many items this category includes"
+  },
+  "theme.docs.breadcrumbs.navAriaLabel": {
+    "message": "Breadcrumbs",
+    "description": "The ARIA label for the breadcrumbs"
+  },
+  "theme.docs.paginator.navAriaLabel": {
+    "message": "Docs pages",
+    "description": "The ARIA label for the docs pagination"
+  },
+  "theme.docs.paginator.previous": {
+    "message": "Previous",
+    "description": "The label used to navigate to the previous doc"
+  },
+  "theme.docs.paginator.next": {
+    "message": "Next",
+    "description": "The label used to navigate to the next doc"
+  },
+  "theme.docs.tagDocListPageTitle.nDocsTagged": {
+    "message": "One doc tagged|{count} docs tagged",
+    "description": "Pluralized label for \"{count} docs tagged\". Use as much plural forms (separated by \"|\") as your language support (see https://www.unicode.org/cldr/cldr-aux/charts/34/supplemental/language_plural_rules.html)"
+  },
+  "theme.docs.tagDocListPageTitle": {
+    "message": "{nDocsTagged} with \"{tagName}\"",
+    "description": "The title of the page for a docs tag"
+  },
+  "theme.docs.versionBadge.label": {
+    "message": "Version: {versionLabel}"
+  },
+  "theme.docs.versions.unreleasedVersionLabel": {
+    "message": "This is unreleased documentation for {siteTitle} {versionLabel} version.",
+    "description": "The label used to tell the user that he's browsing an unreleased doc version"
+  },
+  "theme.docs.versions.unmaintainedVersionLabel": {
+    "message": "This is documentation for {siteTitle} {versionLabel}, which is no longer actively maintained.",
+    "description": "The label used to tell the user that he's browsing an unmaintained doc version"
+  },
+  "theme.docs.versions.latestVersionSuggestionLabel": {
+    "message": "For up-to-date documentation, see the {latestVersionLink} ({versionLabel}).",
+    "description": "The label used to tell the user to check the latest version"
+  },
+  "theme.docs.versions.latestVersionLinkLabel": {
+    "message": "latest version",
+    "description": "The label used for the latest version suggestion link label"
+  },
+  "theme.common.editThisPage": {
+    "message": "Edit this page",
+    "description": "The link label to edit the current page"
+  },
+  "theme.common.headingLinkTitle": {
+    "message": "Direct link to {heading}",
+    "description": "Title for link to heading"
+  },
+  "theme.lastUpdated.atDate": {
+    "message": " on {date}",
+    "description": "The words used to describe on which date a page has been last updated"
+  },
+  "theme.lastUpdated.byUser": {
+    "message": " by {user}",
+    "description": "The words used to describe by who the page has been last updated"
+  },
+  "theme.lastUpdated.lastUpdatedAtBy": {
+    "message": "Last updated{atDate}{byUser}",
+    "description": "The sentence used to display when a page has been last updated, and by who"
+  },
+  "theme.navbar.mobileVersionsDropdown.label": {
+    "message": "Versions",
+    "description": "The label for the navbar versions dropdown on mobile view"
+  },
+  "theme.NotFound.title": {
+    "message": "Page Not Found",
+    "description": "The title of the 404 page"
+  },
+  "theme.tags.tagsListLabel": {
+    "message": "Tags:",
+    "description": "The label alongside a tag list"
+  },
+  "theme.AnnouncementBar.closeButtonAriaLabel": {
+    "message": "Close",
+    "description": "The ARIA label for close button of announcement bar"
+  },
+  "theme.admonition.caution": {
+    "message": "caution",
+    "description": "The default label used for the Caution admonition (:::caution)"
+  },
+  "theme.admonition.danger": {
+    "message": "danger",
+    "description": "The default label used for the Danger admonition (:::danger)"
+  },
+  "theme.admonition.info": {
+    "message": "info",
+    "description": "The default label used for the Info admonition (:::info)"
+  },
+  "theme.admonition.note": {
+    "message": "note",
+    "description": "The default label used for the Note admonition (:::note)"
+  },
+  "theme.admonition.tip": {
+    "message": "tip",
+    "description": "The default label used for the Tip admonition (:::tip)"
+  },
+  "theme.admonition.warning": {
+    "message": "warning",
+    "description": "The default label used for the Warning admonition (:::warning)"
+  },
+  "theme.blog.sidebar.navAriaLabel": {
+    "message": "Blog recent posts navigation",
+    "description": "The ARIA label for recent posts in the blog sidebar"
+  },
+  "theme.CodeBlock.copied": {
+    "message": "Copied",
+    "description": "The copied button label on code blocks"
+  },
+  "theme.CodeBlock.copyButtonAriaLabel": {
+    "message": "Copy code to clipboard",
+    "description": "The ARIA label for copy code blocks button"
+  },
+  "theme.CodeBlock.copy": {
+    "message": "Copy",
+    "description": "The copy button label on code blocks"
+  },
+  "theme.CodeBlock.wordWrapToggle": {
+    "message": "Toggle word wrap",
+    "description": "The title attribute for toggle word wrapping button of code block lines"
+  },
+  "theme.DocSidebarItem.expandCategoryAriaLabel": {
+    "message": "Expand sidebar category '{label}'",
+    "description": "The ARIA label to expand the sidebar category"
+  },
+  "theme.DocSidebarItem.collapseCategoryAriaLabel": {
+    "message": "Collapse sidebar category '{label}'",
+    "description": "The ARIA label to collapse the sidebar category"
+  },
+  "theme.NavBar.navAriaLabel": {
+    "message": "Main",
+    "description": "The ARIA label for the main navigation"
+  },
+  "theme.NotFound.p1": {
+    "message": "We could not find what you were looking for.",
+    "description": "The first paragraph of the 404 page"
+  },
+  "theme.NotFound.p2": {
+    "message": "Please contact the owner of the site that linked you to the original URL and let them know their link is broken.",
+    "description": "The 2nd paragraph of the 404 page"
+  },
+  "theme.TOCCollapsible.toggleButtonLabel": {
+    "message": "On this page",
+    "description": "The label used by the button on the collapsible TOC component"
+  },
+  "theme.navbar.mobileLanguageDropdown.label": {
+    "message": "Languages",
+    "description": "The label for the mobile language switcher dropdown"
+  },
+  "theme.blog.post.readMore": {
+    "message": "Read More",
+    "description": "The label used in blog post item excerpts to link to full blog posts"
+  },
+  "theme.blog.post.readMoreLabel": {
+    "message": "Read more about {title}",
+    "description": "The ARIA label for the link to full blog posts from excerpts"
+  },
+  "theme.blog.post.readingTime.plurals": {
+    "message": "One min read|{readingTime} min read",
+    "description": "Pluralized label for \"{readingTime} min read\". Use as much plural forms (separated by \"|\") as your language support (see https://www.unicode.org/cldr/cldr-aux/charts/34/supplemental/language_plural_rules.html)"
+  },
+  "theme.docs.sidebar.collapseButtonTitle": {
+    "message": "Collapse sidebar",
+    "description": "The title attribute for collapse button of doc sidebar"
+  },
+  "theme.docs.sidebar.collapseButtonAriaLabel": {
+    "message": "Collapse sidebar",
+    "description": "The title attribute for collapse button of doc sidebar"
+  },
+  "theme.docs.sidebar.navAriaLabel": {
+    "message": "Docs sidebar",
+    "description": "The ARIA label for the sidebar navigation"
+  },
+  "theme.docs.breadcrumbs.home": {
+    "message": "Home page",
+    "description": "The ARIA label for the home page in the breadcrumbs"
+  },
+  "theme.docs.sidebar.closeSidebarButtonAriaLabel": {
+    "message": "Close navigation bar",
+    "description": "The ARIA label for close button of mobile sidebar"
+  },
+  "theme.navbar.mobileSidebarSecondaryMenu.backButtonLabel": {
+    "message": "← Back to main menu",
+    "description": "The label of the back button to return to main menu, inside the mobile navbar sidebar secondary menu (notably used to display the docs sidebar)"
+  },
+  "theme.docs.sidebar.toggleSidebarButtonAriaLabel": {
+    "message": "Toggle navigation bar",
+    "description": "The ARIA label for hamburger menu button of mobile navigation"
+  },
+  "theme.docs.sidebar.expandButtonTitle": {
+    "message": "Expand sidebar",
+    "description": "The ARIA label and title attribute for expand button of doc sidebar"
+  },
+  "theme.docs.sidebar.expandButtonAriaLabel": {
+    "message": "Expand sidebar",
+    "description": "The ARIA label and title attribute for expand button of doc sidebar"
+  },
+  "theme.ErrorPageContent.tryAgain": {
+    "message": "Try again",
+    "description": "The label of the button to try again rendering when the React error boundary captures an error"
+  },
+  "theme.common.skipToMainContent": {
+    "message": "Skip to main content",
+    "description": "The skip to content label used for accessibility, allowing to rapidly navigate to main content with keyboard tab/enter navigation"
+  },
+  "theme.tags.tagsPageTitle": {
+    "message": "Tags",
+    "description": "The title of the tag list page"
+  },
+  "theme.unlistedContent.title": {
+    "message": "Unlisted page",
+    "description": "The unlisted content banner title"
+  },
+  "theme.unlistedContent.message": {
+    "message": "This page is unlisted. Search engines will not index it, and only users having a direct link can access it.",
+    "description": "The unlisted content banner message"
+  }
+}
