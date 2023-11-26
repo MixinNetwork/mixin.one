@@ -1,96 +1,100 @@
-const path = require('path');
-const webpack = require('webpack');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const WebappWebpackPlugin = require('favicons-webpack-plugin');
+const path = require("path")
+const webpack = require("webpack")
+const HtmlWebpackPlugin = require("html-webpack-plugin")
+const MiniCssExtractPlugin = require("mini-css-extract-plugin")
+const WebappWebpackPlugin = require("favicons-webpack-plugin")
 
-const devMode = process.env.NODE_ENV !== 'production';
+const devMode = process.env.NODE_ENV !== "production"
 
 const apiRoot = function (env) {
-  if (env === 'production') {
-    return 'https://mixin-api.zeromesh.net';
+  if (env === "production") {
+    return "https://mixin-api.zeromesh.net"
   } else {
-    return 'https://mixin-api.zeromesh.net';
+    return "https://mixin-api.zeromesh.net"
   }
-};
+}
 
 const blazeRoot = function (env) {
-  if (env === 'production') {
-    return 'wss://mixin-blaze.zeromesh.net';
+  if (env === "production") {
+    return "wss://mixin-blaze.zeromesh.net"
   } else {
-    return 'wss://mixin-blaze.zeromesh.net';
+    return "wss://mixin-blaze.zeromesh.net"
   }
-};
+}
 
 module.exports = {
   entry: {
-    app: './src/app.js'
+    app: "./src/app.js",
   },
 
   output: {
-    publicPath: process.env.NODE_ENV === 'github' ? '/mixin.one/assets/' : '/assets/',
-    path: path.resolve(__dirname, 'dist'),
-    filename: '[name]-[hash].js'
+    // publicPath: process.env.NODE_ENV === "github" ? "/mixin.one/assets/" : "/assets/",
+    path: path.resolve(__dirname, "dist"),
+    filename: "[name]-[hash].js",
   },
 
   resolve: {
     alias: {
-      handlebars: "handlebars/dist/handlebars.runtime"
-    }
+      handlebars: "handlebars/dist/handlebars.runtime",
+    },
   },
 
   module: {
-    rules: [{
-      test: /\.html$/,
-      use: ["handlebars-loader?helperDirs[]=" + __dirname + "/src/helpers"]
-    }, {
-      test: /\.(scss|css)$/,
-      use: [
-        {
-          loader: MiniCssExtractPlugin.loader,
-          options: {
-            esModule: true
+    rules: [
+      {
+        test: /\.html$/,
+        use: ["handlebars-loader?helperDirs[]=" + __dirname + "/src/helpers"],
+      },
+      {
+        test: /\.(scss|css)$/,
+        use: [
+          {
+            loader: MiniCssExtractPlugin.loader,
+            options: {
+              esModule: true,
+            },
           },
-        },
-        'css-loader',
-        'sass-loader',
-      ]
-    }, {
-      test: /\.(woff|woff2|eot|ttf|otf|svg|png|jpg|gif|webp)$/,
-      type: 'asset/resource',
-    }]
+          "css-loader",
+          "sass-loader",
+        ],
+      },
+      {
+        test: /\.(woff|woff2|eot|ttf|otf|svg|png|jpg|gif|webp)$/,
+        type: "asset/resource",
+      },
+    ],
   },
 
   plugins: [
     new webpack.DefinePlugin({
-      PRODUCTION: (process.env.NODE_ENV === 'production'),
+      PRODUCTION: process.env.NODE_ENV === "production",
       API_ROOT: JSON.stringify(apiRoot(process.env.NODE_ENV)),
       BLAZE_ROOT: JSON.stringify(blazeRoot(process.env.NODE_ENV)),
-      APP_NAME: JSON.stringify('Mixin')
+      APP_NAME: JSON.stringify("Mixin"),
     }),
     new HtmlWebpackPlugin({
-      template: './src/layout.html',
+      template: "./src/layout.html",
       templateParameters: (compilation, assets, tags, options) => {
         tags.headTags.forEach((tag) => {
-          if (tag.tagName === 'script') {
-            tag.attributes.async = true;
+          if (tag.tagName === "script") {
+            tag.attributes.async = true
           }
-        });
+        })
         return {
-          htmlWebpackPlugin: { options }
+          htmlWebpackPlugin: { options },
         }
       },
     }),
     new WebappWebpackPlugin({
-      logo: './src/assets/images/launcher.webp',
-      prefix: 'icons/'
+      logo: "./src/assets/images/launcher.webp",
+      prefix: "icons/",
     }),
     new MiniCssExtractPlugin({
-      filename: devMode ? '[name].css' : '[name]-[hash].css',
-      chunkFilename: devMode ? '[id].css' : '[id]-[hash].css',
+      filename: devMode ? "[name].css" : "[name]-[hash].css",
+      chunkFilename: devMode ? "[id].css" : "[id]-[hash].css",
     }),
     new webpack.ProvidePlugin({
-      Buffer: ["buffer", "Buffer"]
-    })
-  ]
-};
+      Buffer: ["buffer", "Buffer"],
+    }),
+  ],
+}
