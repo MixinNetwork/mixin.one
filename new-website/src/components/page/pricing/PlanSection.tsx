@@ -85,7 +85,7 @@ export const PlanSection = () => {
           />
           <Tab
             name={translate({
-              message: "Family or small teams",
+              message: "Team",
             })}
             id="family"
             selected={selected}
@@ -93,7 +93,7 @@ export const PlanSection = () => {
           />
           <Tab
             name={translate({
-              message: "Family houses or institutions",
+              message: "Enterprise",
             })}
             id="institution"
             selected={selected}
@@ -171,7 +171,7 @@ export const PlanSection = () => {
           <Section id="institution" selected={selected}>
             <Item
               name={<Translate>Prosperity</Translate>}
-              description={<Translate>Multi-responsible custody of large assets by group companies, family offices and financial institutions</Translate>}
+              description={<Translate>Professional crypto solutions with 24/7 support, best for family offices, large corporations and financial institutions.</Translate>}
               price={1000}
               features={[
                 <Translate>Everything in Elite</Translate>,

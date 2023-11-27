@@ -29,8 +29,8 @@ export const HowItSecuresSection = () => {
             title={<Translate>Decentralized Network</Translate>}
             description={
               <Translate>
-                We lead the development and construction of multiple decentralized networks and combine Bitcoin, Ethereum and other Layer 1 to provide multi-chain, high-speed free transfer, key
-                sharding decentralized underlying network.
+                We are the core developers of Mixin Kernel, a developer friendly network with lightning speed and zero transaction fee, all powered by decentralized nodes. We build all our products on
+                Mixin Kernel, Bitcoin, Ethereum and other popular blockchains directly.
               </Translate>
             }
           />
@@ -40,18 +40,19 @@ export const HowItSecuresSection = () => {
             title={<Translate>Decentralized Wallet</Translate>}
             description={
               <Translate>
-                Based on multiple decentralized networks, we build Mixin Safe multi-signature cold wallet and MPC hot wallet with social recovery, and your assets are always under your control.
+                Mixin Safe and Mixin Messenger are self-custodial crypto wallets, with built-in multisig, MPC, time lock and other mature decentralized technologies. Your assets are always under your
+                control.
               </Translate>
             }
           />
 
           <Item
             cover="1.4.webp"
-            title={<Translate>Decentralized Services</Translate>}
+            title={<Translate>Decentralized Apps</Translate>}
             description={
               <Translate>
-                Based on a secure decentralized wallet service, I and our partners provide users with a series of decentralized products and services such as buying, trading, wealth management,
-                inheritance, and recovery.
+                Based on our decentralized network and wallets, developers have built many popular products and services. These decentralized apps can serve trading, lending, payment and many other
+                demands.
               </Translate>
             }
           />
