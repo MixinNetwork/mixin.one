@@ -611,7 +611,7 @@
     "message": "如此简单"
   },
   "6 key features to allow hassle-free day-to-day management.": {
-    "message": "6 大关键功能让日常管理无忧无虑"
+    "message": "六大关键功能让日常管理无忧无虑。"
   },
   "Dashboard": {
     "message": "账户一览"
@@ -818,19 +818,19 @@
     "message": "您的比特币是无价的"
   },
   "Personal": {
-    "message": "个人版"
+    "message": "个人"
   },
   "Team": {
-    "message": "团队版"
+    "message": "团队"
   },
   "Enterprise": {
-    "message": "企业版"
+    "message": "企业"
   },
   "Free": {
     "message": "免费"
   },
   "Secure and easy-to-use MPC hot wallet that meets the daily needs of small amounts of bitcoin storage.": {
-    "message": "安全易用的 MPC 热钱包，满足日常小额比特币存储需求"
+    "message": "安全易用的 MPC 热钱包，满足日常小额比特币存储需求。"
   },
   "MPC Wallet": {
     "message": "MPC 钱包"
@@ -881,7 +881,7 @@
     "message": "收费的遗产传承服务"
   },
   "Manage large fortune in Mixin Safe with family, friends or colleagues, so you can avoid thefts, accidents and custody risks.": {
-    "message": "与家人、朋友或同事共同管理金库大额资产，因此您可以免受盗窃、事故和托管风险"
+    "message": "与家人、朋友或同事共同管理金库大额资产，因此您可以免受盗窃、事故和托管风险。"
   },
   "Elite": {
     "message": "精英版"
@@ -1037,7 +1037,7 @@
     "message": "余额隐私"
   },
   "When your crypto assets are recharged into the Mixin wallet, only you have the right to view the types and specific amounts of assets in the wallet. Because the recharge address and withdrawal address of the wallet are not the same address, other third parties cannot infer the actual types and quantities of assets in your wallet through the recharge address or withdrawal address on the chain.": {
-    "message": "当您的加密资产通过充值进入 Mixin 钱包后， 只有您有权查看钱包的资产种类和具体金额。由于钱包的充值地址和提现地址不是同一个地址，其他第三方无法通过链上的充值地址或提现地址推导出您钱包实际的资产种类和数量。"
+    "message": "当您的加密货币通过充值进入 Mixin 钱包后， 只有您有权查看钱包的资产种类和具体金额。由于钱包的充值地址和提现地址不是同一个地址，其他第三方无法通过链上的充值地址或提现地址推导出您钱包实际的资产种类和数量。"
   },
   "Loss Protection": {
     "message": "丢失保护"
@@ -1151,7 +1151,7 @@
     "message": "工作原理"
   },
   "Secure and grow your crypto wealth with Decentralization": {
-    "message": "安全的保管与增长您的加密资产财富，充分享受去中心化"
+    "message": "安全的保管与增长您的加密货币财富，充分享受去中心化"
   },
   "Protect your crypto with mature multisig and MPC technology. Get access to trading, lending, decentralized recovery and inheritance.": {
     "message": "通过成熟的多重签名和 MPC 技术保护您的加密货币。获得交易、借贷、去中心化恢复和遗产继承的权限。"
@@ -1220,10 +1220,10 @@
     "message": "核心产品"
   },
   "The decentralized crypto wallet is powered by mature MPC technology. Mixin Messenger supports all popular cryptos, end-to-end encrypted chat, free transfers to contacts, fiat on-ramp, and social recovery.": {
-    "message": "去中心化的加密货币钱包由成熟的 MPC 技术提供支持。 Mixin Messenger 支持所有流行的加密货币，端到端加密聊天，免费转账给联系人，法币兑换，社交恢复。"
+    "message": "去中心化的加密货币钱包由成熟的 MPC 技术提供支持。Mixin Messenger 支持所有流行的加密货币，端到端加密聊天，免费转账给联系人，法币兑换，社交恢复。"
   },
   "Provide the general public with state-of-the-art open financial services.": {
-    "message": "为公众提供最先进的开放式金融服务。"
+    "message": "将最先进的开放式金融服务带给公众，安全容易上手。"
   },
   "Decentralized Network": {
     "message": "去中心化网络"
