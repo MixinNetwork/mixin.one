@@ -11,7 +11,7 @@ export const SupportedAssetSection = () => {
 
   return (
     <div className="pt-5 pb-40">
-      <SectionTitle description={<Translate>We support over 3,400 tokens and 48 chains, including popular layer 1 and layer 2.</Translate>}>
+      <SectionTitle description={<Translate>Mixin supports all popular blockchains, thousands of tokens and more integrations ongoing..</Translate>}>
         <Translate>Supported Assets and Protocols</Translate>
       </SectionTitle>
       <div className="space-y-7 sm:pt-20">

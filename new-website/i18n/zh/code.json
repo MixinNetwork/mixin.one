@@ -701,10 +701,10 @@
     "message": "服务客户"
   },
   "Supported Assets and Protocols": {
-    "message": "Supported Assets and Protocols"
+    "message": "支持的资产和协议"
   },
-  "We support over 3,400 tokens and 48 chains, including popular layer 1 and layer 2.": {
-    "message": "我们支持超过 3,400 种币 48 条链，包括流行的一层网络和二层网络"
+  "Mixin supports all popular blockchains, thousands of tokens and more integrations ongoing..": {
+    "message": "Mixin 支持所有流行的区块链，数千种代币和更多集成正在进行中。"
   },
   "Trusted by": {
     "message": "值得信赖"
