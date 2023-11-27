@@ -90,13 +90,13 @@ export default function Navbar({ dark }: { dark?: boolean }): JSX.Element {
         <Logo />
       </span>
 
-      <span className="hidden! sm:flex flex-row justify-end items-center space-x-14 text-sm grow md:basis-1/3 dark:text-white">
+      <span className="hidden! sm:flex! flex-row justify-end items-center space-x-14 text-sm grow md:basis-1/3 dark:text-white">
         {leftItems.map((item) => {
           return <Item key={item.label} {...item} />
         })}
       </span>
 
-      <span className="hidden! sm:flex flex-row justify-end items-center space-x-14 text-sm shrink-0 ml-10! md:ml-0 md:basis-1/3 dark:text-white">
+      <span className="hidden! sm:flex! flex-row justify-end items-center space-x-14 text-sm shrink-0 ml-10! md:ml-0 md:basis-1/3 dark:text-white">
         {rightItems.map((item) => {
           return (
             <Link key={item.label} {...item}>
