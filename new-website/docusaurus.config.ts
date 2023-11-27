@@ -20,7 +20,7 @@ const config: Config = {
     },
   ],
   // tagline: "Dinosaurs are cool",
-  favicon: "img/favicon.svg",
+  favicon: "img/favicon.png",
 
   // Set the production url of your site here
   url: "https://your-docusaurus-site.example.com",
