@@ -214,7 +214,7 @@ const config: Config = {
             },
             {
               label: "Licenses",
-              to: "/licenses",
+              to: "/features/compilance",
             },
             {
               label: "Privacy Police",
