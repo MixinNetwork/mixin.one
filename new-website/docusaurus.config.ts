@@ -4,7 +4,21 @@ import type * as Preset from "@docusaurus/preset-classic"
 
 const config: Config = {
   title: "Mixin - Grow and Secure Your Crypto Wealth with Decentralized Solutions",
-  headTags: [],
+  headTags: [
+    {
+      tagName: "meta",
+      attributes: {
+        keywords: "Mixin,Bitcoin,MPC,Timelock,Bitcoin Custody",
+      },
+    },
+    {
+      tagName: "meta",
+      attributes: {
+        description:
+          "Mixin Safe provides the general public with cutting-edge Bitcoin custody solutions. Bitcoin custody should never sacrifice decentralization, always be confident and reliable. Mixin Safe also makes decentralized recovery and inheritance possible.",
+      },
+    },
+  ],
   // tagline: "Dinosaurs are cool",
   favicon: "img/favicon.svg",
 
