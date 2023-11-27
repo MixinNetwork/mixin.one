@@ -54,11 +54,11 @@ export const EasyManageSection = () => {
           icon="joint.svg"
         />
         <EasyManageItem
-          key="Batch transfer"
+          key="Batch Transactions"
           title={translate({
-            message: "Batch transfer",
+            message: "Batch Transactions",
           })}
-          description={translate({ message: "Send thousands of transaction in a few minitus" })}
+          description={translate({ message: "Send thousands of transactions in a few minutes" })}
           icon="batchTransfer.svg"
         />
         <EasyManageItem

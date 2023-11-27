@@ -8,14 +8,16 @@ const config: Config = {
     {
       tagName: "meta",
       attributes: {
-        keywords: "Mixin,Bitcoin,MPC,Timelock,Bitcoin Custody",
+        name: "keywords",
+        content: "Mixin,Bitcoin,Ethereum,MobileCoin,Mixin Network,Mixin Messenger,Signal",
       },
     },
     {
       tagName: "meta",
       attributes: {
-        description:
-          "Mixin Safe provides the general public with cutting-edge Bitcoin custody solutions. Bitcoin custody should never sacrifice decentralization, always be confident and reliable. Mixin Safe also makes decentralized recovery and inheritance possible.",
+        name: "description",
+        content:
+          "Mixin Network is a free and lightning fast peer-to-peer transactional network for digital assets. Launched in 2017, the network is now securing more than $1B BTC, ETH and other popular cryptocurrencies.",
       },
     },
   ],

@@ -631,10 +631,10 @@
   "Manage assets with your family, friends and colleagues": {
     "message": "与家人、朋友或者同事共同管理多重签名钱包，体验从未如此顺滑。"
   },
-  "Batch transfer": {
+  "Batch Transactions": {
     "message": "批量转账"
   },
-  "Send thousands of transaction in a few minitus": {
+  "Send thousands of transactions in a few minutes": {
     "message": "通过交易模板可以在几分钟内完成成百上千笔转账，省时省钱。"
   },
   "Whitelist": {
@@ -1216,7 +1216,7 @@
   "Mature Technologies": {
     "message": "成熟的技术"
   },
-  "Our products are decentralization, privacy focused and reliability.": {
+  "Our products are decentralized, privacy focused and reliable.": {
     "message": "我们的产品是去中心化、隐私保护和可靠性。"
   },
   "Core Products": {

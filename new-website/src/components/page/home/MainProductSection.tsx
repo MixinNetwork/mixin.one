@@ -16,7 +16,7 @@ const ProductCard = ({ title, description, cover }: { title: string; description
 export const MainProductSection = () => {
   return (
     <div className="flex flex-col items-center bg-slate-100 bg-opacity-40 pb-45 px-5 sm:pb-35">
-      <SectionTitle description={<Translate>Our products are decentralization, privacy focused and reliability.</Translate>}>
+      <SectionTitle description={<Translate>Our products are decentralized, privacy focused and reliable.</Translate>}>
         <Translate>Core Products</Translate>
       </SectionTitle>
       <div className="grid gap-y-5 gap-x-3 sm:grid-cols-3 container">
