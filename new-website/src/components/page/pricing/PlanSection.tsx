@@ -5,7 +5,28 @@ import clsx from "clsx"
 import Checked from "@site/static/img/common/checked.svg"
 import LocalLink from "../../common/LocaleLink"
 
-export const Tab = ({ name, id, selected, onClick }: { name: string; id: string; selected: string; onClick: () => void }) => {
+const Advance = () => {
+  return (
+    <Item
+      name={<Translate>Advance</Translate>}
+      description={<Translate>Use multiple keys on multiple devices to avoid single point of failure, and get decentralized recovery service in case of key loss.</Translate>}
+      price={100}
+      features={[
+        <Translate>Everything in Free</Translate>,
+        <Translate>Free Mixin Anonymous Number</Translate>,
+        <Translate>Create 2 Safes</Translate>,
+        <Translate>Get 2 Safe Credits</Translate>,
+        <Translate>3 members per safe</Translate>,
+        <Translate>3 Safe members in total</Translate>,
+        <Translate>Paid recovery service</Translate>,
+        <Translate>Paid inheritance service</Translate>,
+      ]}
+      cover="macAndPhone.webp"
+    />
+  )
+}
+
+const Tab = ({ name, id, selected, onClick }: { name: string; id: string; selected: string; onClick: () => void }) => {
   const checked = id === selected
   return (
     <button className={clsx("text-center cursor-pointer w-full px-2 pb-5 border-b border-zinc-300", checked && "border-black!")} onClick={onClick}>
@@ -14,11 +35,11 @@ export const Tab = ({ name, id, selected, onClick }: { name: string; id: string;
   )
 }
 
-export const Section = ({ id, selected, children }: { id: string; selected: string; children: React.ReactNode }) => (
+const Section = ({ id, selected, children }: { id: string; selected: string; children: React.ReactNode }) => (
   <div className={clsx(" col-span-full pt-8 gap-5", id === selected ? "grid!" : "hidden!")}>{children}</div>
 )
 
-export const Item = ({ name, description, price, features, cover }: { name: React.ReactNode; description: React.ReactNode; price: number; features: React.ReactNode[]; cover: string }) => {
+const Item = ({ name, description, price, features, cover }: { name: React.ReactNode; description: React.ReactNode; price: number; features: React.ReactNode[]; cover: string }) => {
   return (
     <div className="bg-zinc-100 bg-opacity-50 rounded-sm border-px border-zinc-300 pt-10 pb-25 px-5 sm:px-10">
       <div className="grid gap-y-5 sm:grid-cols-2">
@@ -116,41 +137,11 @@ export const PlanSection = () => {
               cover="phone.webp"
             />
 
-            <Item
-              name={<Translate>Advance</Translate>}
-              description={<Translate>Use multiple keys on multiple devices to avoid single point of failure, and get decentralized recovery service in case of key loss.</Translate>}
-              price={100}
-              features={[
-                <Translate>Everything in Free</Translate>,
-                <Translate>Free Mixin Anonymous Number</Translate>,
-                <Translate>Create 2 Safes</Translate>,
-                <Translate>Get 2 Safe Credits</Translate>,
-                <Translate>3 members per safe</Translate>,
-                <Translate>3 Safe members in total</Translate>,
-                <Translate>Paid recovery service</Translate>,
-                <Translate>Paid inheritance service</Translate>,
-              ]}
-              cover="macAndPhone.webp"
-            />
+            <Advance />
           </Section>
 
           <Section id="family" selected={selected}>
-            <Item
-              name={<Translate>Advance</Translate>}
-              description={<Translate>Use multiple keys on multiple devices to avoid single point of failure, and get decentralized recovery service in case of key loss.</Translate>}
-              price={100}
-              features={[
-                <Translate>Everything in Free</Translate>,
-                <Translate>Free Mixin Anonymous Number</Translate>,
-                <Translate>Create 2 Safes</Translate>,
-                <Translate>Get 2 Safe Credits</Translate>,
-                <Translate>3 members per safe</Translate>,
-                <Translate>3 Safe members in total</Translate>,
-                <Translate>Paid recovery service</Translate>,
-                <Translate>Paid inheritance service</Translate>,
-              ]}
-              cover="macAndPhone.webp"
-            />
+            <Advance />
             <Item
               name={<Translate>Elite</Translate>}
               description={<Translate>Manage large assets in the vault with family, friends or colleagues, so you can avoid theft, accidents and custody risks</Translate>}
