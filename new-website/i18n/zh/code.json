@@ -1,4 +1,7 @@
 {
+  "2017": {
+    "message": "2017"
+  },
   "theme.ErrorPageContent.title": {
     "message": "页面已崩溃。",
     "description": "The title of the fallback page when the page crashed"
@@ -285,9 +288,6 @@
   "theme.unlistedContent.message": {
     "message": "此页面未列出。搜索引擎不会对其索引，只有拥有直接链接的用户才能访问。",
     "description": "The unlisted content banner message"
-  },
-  "2017": {
-    "message": "2017"
   },
   "Grow and secure your crypto wealth with Confidence": {
     "message": "安全的保管与增长您的加密资产财富，充分享受信心满满"
@@ -1287,5 +1287,17 @@
   },
   "Mixin Safe is compatible with all popular hardware wallets to let you hold your private key conveniently.": {
     "message": "Mixin Safe 兼容所有流行的硬件钱包，让您在不牺牲过去的钱包习惯的情况下轻松保管私钥。"
+  },
+  "Name (required)": {
+    "message": "姓名（必填）"
+  },
+  "Business Type (required)": {
+    "message": "业务类型（必填）"
+  },
+  "Email (required)": {
+    "message": "邮箱（必填）"
+  },
+  "Message (required)": {
+    "message": "信息（必填）"
   }
 }

@@ -29,12 +29,16 @@ export const Section = () => {
         <div className="px-8 sm:flex-1 sm:shadow-lg">
           <div className="space-y-6">
             <Item isError={error === "name"}>
-              <div>Name (required)</div>
+              <div>
+                <Translate>Name (required)</Translate>
+              </div>
               <Input ref={nameRef} type="text" inputMode="text" className={clsx(error === "name" && "border-red")} />
             </Item>
 
             <Item isError={false}>
-              <div>Business Type (required)</div>
+              <div>
+                <Translate>Business Type (required)</Translate>
+              </div>
               <div className="relative">
                 <DropdownIcon className="absolute-vertical-center right-4 stroke-black z-1" />
                 <select ref={businessTypeRef} className="p-4 w-full rounded-sm border border-zinc-800 appearance-none relative z-0">
@@ -49,11 +53,15 @@ export const Section = () => {
               </div>
             </Item>
             <Item isError={error === "email"}>
-              <div>Email (required)</div>
+              <div>
+                <Translate>Email (required)</Translate>
+              </div>
               <Input ref={emailRef} type="text" inputMode="email" className={clsx(error === "email" && "border-red")} />
             </Item>
             <Item isError={error === "message"}>
-              <div>Message(required)</div>
+              <div>
+                <Translate>Message (required)</Translate>
+              </div>
               <Input $as={"textarea"} ref={messageRef as any} placeholder="How can we help you?" type="text" inputMode="text" className={clsx("min-h-40", error === "message" && "border-red")} />
             </Item>
           </div>
