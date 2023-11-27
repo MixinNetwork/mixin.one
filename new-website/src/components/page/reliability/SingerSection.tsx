@@ -26,7 +26,7 @@ export const SingerSection = () => {
     <div className="bg-slate-100">
       <SectionTitle
         description={translate({
-          message: "We are working on getting support of Mixin Safe in more wallet signers",
+          message: "We are working on getting support of Mixin Safe in more software and hardware wallets.",
         })}
       >
         <Translate>Reliable Singer</Translate>

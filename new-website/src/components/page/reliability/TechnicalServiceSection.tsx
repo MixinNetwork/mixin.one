@@ -21,9 +21,9 @@ const SecureAssetCustodySection = () => (
       <img loading="lazy" src={require("@site/static/img/common/woodGrain.webp").default} className="object-cover absolute inset-0 h-full w-full -z-10" />
       <div className="text-white text-opacity-90 text-center text-base font-normal leading-relaxed">
         <Translate>
-          Mixin Safe is committed to providing users with safe and stable asset management services. We always use proven Bitcoin encryption technologies, such as multi-signature, time lock, MPC,
-          threshold signature, P2SH and hardware wallet technology. These mature and reliable technologies complement each other to ensure the safety of assets and ensure that customers can use our
-          products with confidence.
+          Mixin Safe is committed to providing our customers with safe and reliable asset custody solutions. We always use proven Bitcoin cryptographic technologies, such as multi-signature, timelock,
+          MPC, threshold signature, P2WSH and hardware wallet technology. These mature and reliable technologies complement each other to ensure the safety of assets and ensure that customers can use
+          our products with confidence.
         </Translate>
       </div>
     </div>
@@ -51,7 +51,7 @@ export const TechnicalServiceSection = () => {
                   message: "Multisig",
                 })}
                 description={translate({
-                  message: "The bitcoin multi-signature feature is designed to require M signatures from a total of N keys, known as an M-of-N multisig, where M is equal to or less than N.",
+                  message: "The Bitcoin multisig script is designed to require M signatures from a total of N keys, known as an M-of-N multisig, where M is equal to or less than N.",
                 })}
                 left
               />
@@ -60,16 +60,16 @@ export const TechnicalServiceSection = () => {
                 index={2}
                 title={translate({ message: "Timelock" })}
                 description={translate({
-                  message: "Timelocks are one of the most practical functionalities of Bitcoin, allowing you the ability to program actions according to a series of parameters.",
+                  message: "Timelock is one of the most practical functionalities of Bitcoin, giving you the ability to program actions according to a series of parameters.",
                 })}
                 left
               />
 
               <Item
                 index={3}
-                title={translate({ message: "P2SH" })}
+                title={translate({ message: "P2WSH" })}
                 description={translate({
-                  message: "Pay-to-Script-Hash (P2SH) is a type of transaction which allows for the spending of bitcoin based on the satisfaction of any script provided by the sender.",
+                  message: "Pay-to-Witness-Script-Hash (P2WSH) is a type of transaction which allows for the spending of Bitcoin based on the satisfaction of any script provided by the sender.",
                 })}
                 left
               />
@@ -77,17 +77,33 @@ export const TechnicalServiceSection = () => {
             <div className="space-y-15 md:order-2">
               <Item
                 index={4}
-                title={"MPC - TSS"}
-                description={"Safe Wallet use of Threshold Signature Scheme (TSS) technology based on Multi-Party Computation (MPC) offers users the complete control over their digital assets."}
+                title={translate({
+                  message: "MPC - TSS",
+                })}
+                description={translate({
+                  message: "Mixin Safe uses Threshold Signature Scheme (TSS) technology based on Multi-Party Computation (MPC), offers customers complete control over their digital assets.",
+                })}
               />
 
               <Item
                 index={5}
-                title={"PoS Network"}
-                description={"The bitcoin multi-signature feature is designed to require M signatures from a total of N keys, known as an M-of-N multisig, where M is equal to or less than N."}
+                title={translate({
+                  message: "PoS Network",
+                })}
+                description={translate({
+                  message: "Mixin Safe provides a decentralized MPC network by utilizing the same validator nodes from Mixin Network, a decentralized ledger launched in 2018.",
+                })}
               />
 
-              <Item index={6} title={"Hardware Wallet"} description={"A hardware wallet is a high-security bitcoin wallet that enables you to store your funds offline."} />
+              <Item
+                index={6}
+                title={translate({
+                  message: "Hardware Wallet",
+                })}
+                description={translate({
+                  message: "Mixin Safe is compatible with all popular hardware wallets to let you hold your private key conveniently.",
+                })}
+              />
             </div>
           </div>
           <SecureAssetCustodySection />

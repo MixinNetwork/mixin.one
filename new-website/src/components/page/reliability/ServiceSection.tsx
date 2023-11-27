@@ -18,7 +18,7 @@ export const ServiceSection = () => {
     <>
       <SectionTitle
         description={translate({
-          message: "The Harrowing Tales of Losses in the Era of Centralized Exchanges, Wallets, and Custodial Services",
+          message: "Mixin Safe powers leading organizations from Payment to DAOs, and beyond.",
         })}
       >
         <Translate>Reliable Service</Translate>
@@ -31,7 +31,7 @@ export const ServiceSection = () => {
           })}
           description={translate({
             message:
-              "Combining reliable multi-signature technology and professional collaborative management services, we can provide reliable recovery services after users lose their private keys, helping users regain control of assets.",
+              "Combining reliable multi-signature technology and professional collaborative management services, we can provide decentralized recovery services to our customers in the case of private key loss.",
           })}
         />
 
@@ -40,7 +40,7 @@ export const ServiceSection = () => {
           title={translate({ message: "Inheritance" })}
           description={translate({
             message:
-              "Combining reliable multi-signature technology and professional collaborative management services, we can provide reliable recovery services after users lose their private keys, helping users regain control of assets.",
+              "With the Bitcoin native multi-signature and timelock script, Mixin Safe can help our customers to better pass on Bitcoin assets to their descendants, in a decentralized and convenient way.",
           })}
         />
 
@@ -48,8 +48,7 @@ export const ServiceSection = () => {
           icon={<SvgIcon3 />}
           title={translate({ message: "Notification Service" })}
           description={translate({
-            message:
-              "We use Mixin Messenger messages, SMS, Slack, Telegram and other channels to regularly notify asset co-managers to approve transactions as soon as possible to improve efficiency.",
+            message: "We use Mixin Messenger, SMS, Slack, Telegram and other channels to regularly notify safe members to approve transactions as soon as possible to improve efficiency.",
           })}
         />
 
@@ -57,7 +56,7 @@ export const ServiceSection = () => {
           icon={<SvgIcon4 />}
           title={translate({ message: "Customer Service" })}
           description={translate({
-            message: "We provide Mixin Messenger, WhatsApp, email, video conference and 7x24 telephone advanced customer service support to help users solve problems in a timely manner.",
+            message: "We provide Mixin Messenger, WhatsApp, email, video conference and 7x24 telephone customer service to help our customers solve problems in a timely manner.",
           })}
         />
       </div>
