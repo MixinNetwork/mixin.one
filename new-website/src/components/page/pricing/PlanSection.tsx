@@ -48,7 +48,7 @@ const Item = ({ name, description, price, features, cover }: { name: React.React
         <div className="sm:row-span-2 sm:w-fit sm:ml-auto">
           <div className="mx-auto w-fit mt-15 sm:mt-0 ">
             <sup className="text-[#333] text-3xl font-semibold leading-loose align-super">$</sup>
-            <span className="text-[#333] text-6xl font-semibold leading-10">{price}</span>
+            <span className="text-[#333] text-6xl font-semibold leading-10">{price.toLocaleString()}</span>
             <span className="text-[#333] text-xl font-normal leading-normal">/year</span>
           </div>
           {price <= 0 && (
@@ -61,7 +61,7 @@ const Item = ({ name, description, price, features, cover }: { name: React.React
 
       <LocalLink
         href={price <= 0 ? "https://messenger.mixin.one/download" : "https://safe.mixin.one/start"}
-        className="mt-17.5 sm:mt-5 py-4 px-13 w-full sm:w-fit bg-zinc-800 rounded-sm text-center text-white text-sm font-normal block"
+        className="mt-17.5 sm:mt-5 py-4 px-13 w-full sm:w-fit bg-zinc-800 rounded-sm text-center text-white text-sm font-medium block"
       >
         {price <= 0 ? <Translate>Get Mixin</Translate> : <Translate>Get Started</Translate>}
       </LocalLink>
@@ -163,7 +163,7 @@ export const PlanSection = () => {
             <Item
               name={<Translate>Prosperity</Translate>}
               description={<Translate>Professional crypto solutions with 24/7 support, best for family offices, large corporations and financial institutions.</Translate>}
-              price={1000}
+              price={10000}
               features={[
                 <Translate>Everything in Elite</Translate>,
                 <Translate>10 members per Safe</Translate>,
