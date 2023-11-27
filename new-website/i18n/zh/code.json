@@ -494,14 +494,14 @@
   "Born after the 2008 economy crisis originated from the centralized financial system, Bitcoin is believed to be the ultimate solution to the future of human finance. Decentralization is in the blood of nature of Bitcoin, it's not something can be a trade-off.": {
     "message": "传统的不透明的中心化银行系统酝酿了 2008 年的经济危机，从此比特币横空出世，相信去中心化和比特币的人们都认为这是人类社会终极的银行系统解决方案。从诞生之初，去中心化就是比特币的血液，是永远不能被权衡不能被忽略不能被放弃的东西。"
   },
-  "The saying \"Not your keys, not your coins\" is a cornerstone principle for Bitcoin enthusiasts who embrace its decentralized nature. Though managing private keys may present a challenge, we should remain steadfast in avoiding centralized firms as custodians for Bitcoin holdings.": {
-    "message": "不是你的私钥，就不是你的币。虽然自己管理私钥充满挑战，并不是一件大众熟悉的事情，但我们要时刻牢记比特币诞生的初心。没有去中心化的比特币就一无是处，永远不能依靠中心化机构来托管资产。当很多中心化的机构不断的在比特币世界涌现又不断破产跑路的过程中，人们越来越懂得去中心化的意义，不断回归比特币诞生的初心。"
+  "The saying \"Not your keys, not your coins\" is a cornerstone principle for Bitcoin enthusiasts who embrace its decentralized nature. Though managing private keys may present a challenge, we should remain steadfast in avoiding centralized firms as custodians for Bitcoin holdings. Doing so would run counter to the very principles of Bitcoin and erode the trust and confidence that we've placed in this digital currency.": {
+    "message": "“不是你的私钥，就不是你的币”是比特币爱好者的基石原则，他们拥抱比特币的去中心化本质。虽然管理私钥可能会带来挑战，但我们应该坚定不移地避免中心化机构作为比特币持有人的托管人。这样做将违背比特币的原则，并破坏我们对这种数字货币的信任和信心。"
   },
   "The Mt. Gox Debacle": {
     "message": "Mt. Gox 事件"
   },
-  "Mt. Gox was a bitcoin exchange based in Shibuya, Tokyo, Japan. Launched in 2010, it was handling over 70% of all bitcoin (BTC) transactions worldwide by early 2014, when it abruptly ceased operations amid revelations of its involvement in the loss/theft of hundreds of thousands of bitcoins, then worth hundreds of millions in US dollars.": {
-    "message": "Mt. Gox 是一家位于日本东京涩谷的比特币交易所。它于 2010 年启动，到 2014 年初，它处理了全球 70% 以上的比特币（BTC）交易。然而，当揭示其涉及数十万比特币的丢失/盗窃时，它突然停止运营。"
+  "Mt. Gox was a bitcoin exchange based in Shibuya, Tokyo, Japan. Launched in 2010, it was handling over 70% of all bitcoin (BTC) transactions worldwide by early 2014, when it abruptly ceased operations amid revelations of its involvement in the loss/theft of hundreds of thousands of bitcoins, then worth hundreds of millions in US dollars. In February 2014, Mt. Gox suspended trading, closed its website and exchange service, and filed for bankruptcy protection from creditors. In April 2014, the company began liquidation proceedings. Although 200,000 bitcoins have since been \"found\", the reasons for the disappearance—theft, fraud, mismanagement, or a combination of these—were initially unclear. New evidence presented in April 2015 by Tokyo security company WizSec led them to conclude that \"most or all of the missing bitcoins were stolen straight out of the Mt. Gox hot cryptocurrency wallet over time, beginning in late 2011.\"": {
+    "message": "Mt. Gox 是一家位于日本东京涩谷的比特币交易所。它于 2010 年启动，到 2014 年初，它处理了全球 70% 以上的比特币（BTC）交易。然而，当揭示其涉及数十万比特币的丢失/盗窃时，它突然停止运营。2014 年 2 月，Mt. Gox 暂停交易，关闭其网站和交易服务，并向债权人申请破产保护。2014 年 4 月，该公司开始清算程序。尽管此后找到了 20 万比特币，但比特币消失的原因——盗窃、欺诈、管理不善或这些原因的组合——最初并不清楚。东京安全公司 WizSec 在 2015 年 4 月提出的新证据使他们得出结论：“大多数或所有丢失的比特币是从 2011 年底开始的一段时间里直接从 Mt. Gox 热加密货币钱包中盗窃的。”"
   },
   "The Price of Centralization": {
     "message": "中心化的代价"

@@ -85,7 +85,7 @@
   },
   "link.item.label.Licenses": {
     "message": "许可合规",
-    "description": "The label of footer link with label=Licenses linking to /licenses"
+    "description": "The label of footer link with label=Licenses linking to /features/compliance"
   },
   "link.item.label.Privacy Police": {
     "message": "隐私政策",

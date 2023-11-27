@@ -31,8 +31,7 @@ export const NeverSacrificeDecentralizationSection = () => (
         <Item
           cover={"1.2.webp"}
           description={translate({
-            message:
-              'The saying "Not your keys, not your coins" is a cornerstone principle for Bitcoin enthusiasts who embrace its decentralized nature. Though managing private keys may present a challenge, we should remain steadfast in avoiding centralized firms as custodians for Bitcoin holdings.',
+            message: `The saying "Not your keys, not your coins" is a cornerstone principle for Bitcoin enthusiasts who embrace its decentralized nature. Though managing private keys may present a challenge, we should remain steadfast in avoiding centralized firms as custodians for Bitcoin holdings. Doing so would run counter to the very principles of Bitcoin and erode the trust and confidence that we've placed in this digital currency.`,
           })}
         />
       </div>
