@@ -19,7 +19,7 @@ import LocalLink from "../components/common/LocaleLink"
 const Header = () => {
   const title = replace(
     translate({
-      message: "Grow and secure your crypto wealth with Confidence",
+      message: "Secure and grow your crypto wealth with Decentralization",
     }),
     [
       {
@@ -28,7 +28,7 @@ const Header = () => {
       },
       {
         match: translate({
-          message: "Confidence",
+          message: "Decentralization",
         }),
         replace: (match) => (
           <TypeAnimation
@@ -42,19 +42,19 @@ const Header = () => {
             }}
             sequence={[
               translate({
-                message: "Decentralized",
+                message: "Decentralization",
               }),
               2000,
               "",
               1000,
               translate({
-                message: "Confident",
+                message: "Confidence",
               }),
               2000,
               "",
               1000,
               translate({
-                message: "Reliable",
+                message: "Reliability",
               }),
               2000,
               "",
@@ -66,7 +66,7 @@ const Header = () => {
               "",
               1000,
               translate({
-                message: "Compliant",
+                message: "Compliance",
               }),
               2000,
               "",
@@ -89,7 +89,7 @@ const Header = () => {
       <div className="px-10 pt-15 pb-19 sm:pt-12.5 md:pt-20 lg:pt-54 sm:pb-16.5 sm:pb-32.5 lg:pb-79 sm:text-center container mx-auto">
         <div className="text-white text-10 leading-12 sm:text-11 sm:leading-13.5 md:text-15.5 md:leading-18 font-normal sm:font-medium -tracking-0.1 max-w-232 mx-auto">{title}</div>
         <div className="mt-7.5 sm:mt-6 md:mt-8 lg:mt-12 max-w-232 mx-auto text-white text-opacity-80 text-sm lg:text-base font-normal">
-          <Translate>Protect your crypto with MPC-TSS that you control and get access to trading, inheritance, and loans—all backed by the best support in the industry.</Translate>
+          <Translate>Protect your crypto with mature multisig and MPC technology. Get access to trading, lending, decentralized recovery and inheritance.</Translate>
         </div>
 
         <div className="mt-24.5 sm:mt-12.5 md:mt-18.5 lg:mt-21.5 grid gap-y-5 gap-x-7.5 sm:grid-cols-2 sm:w-fit mx-auto">
@@ -121,11 +121,11 @@ export default function Root() {
         faqs={[
           {
             question: translate({
-              message: "Is Mixin Safe really completely decentralized?",
+              message: "Is Mixin Safe really completely decentralization?",
             }),
             answer: translate({
               message:
-                "Yes, Mixin Safe combines the multi-signature and time lock scripts of the Bitcoin network, and adopts the decentralized mature multi-party computing MPC technology, and successfully realizes a complete decentralized asset custody solution. Through the Bitcoin native time lock technology, only you have complete control of the wallet, and no one else, including our team, can spend your coins.",
+                "Yes, Mixin Safe combines the multi-signature and time lock scripts of the Bitcoin network, and adopts the decentralization mature multi-party computing MPC technology, and successfully realizes a complete decentralization asset custody solution. Through the Bitcoin native time lock technology, only you have complete control of the wallet, and no one else, including our team, can spend your coins.",
             }),
           },
           {

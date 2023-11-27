@@ -11,42 +11,42 @@ const Item = ({ title, description, cover, to }: { title: string; description: s
   </LocalLink>
 )
 
-export const MoreFeaturesSection = ({ omit }: { omit: "Decentralized" | "Confident" | "Reliable" | "Privacy" | "Compliant" }) => (
+export const MoreFeaturesSection = ({ omit }: { omit: "Decentralization" | "Confidence" | "Reliability" | "Privacy" | "Compliance" }) => (
   <>
     <SectionTitle>
       <Translate>More Features</Translate>
     </SectionTitle>
     <div className="container mx-auto px-5 grid gap-5 grid-cols-2 lg:grid-cols-4 pb-35">
-      {omit !== "Decentralized" && (
+      {omit !== "Decentralization" && (
         <Item
-          key="Decentralized"
-          title={translate({ message: "Decentralized" })}
+          key="Decentralization"
+          title={translate({ message: "Decentralization" })}
           description={translate({
             message:
               "Not your keys, not your coins. Though managing private keys may present a challenge, we should remain steadfast in avoiding centralized firms as custodians for Bitcoin holdings.",
           })}
-          cover="decentralized.webp"
-          to="/decentralized"
+          cover="decentralization.webp"
+          to="/features/decentralization"
         />
       )}
 
-      {omit !== "Confident" && (
+      {omit !== "Confidence" && (
         <Item
-          key="Confident"
-          title={translate({ message: "Confident" })}
+          key="Confidence"
+          title={translate({ message: "Confidence" })}
           description={translate({ message: "Mixin Safe offers a comprehensive suite of solutions to help Bitcoin investors confidently hold." })}
-          cover="confident.webp"
-          to="/confident"
+          cover="confidence.webp"
+          to="/features/confidence"
         />
       )}
 
-      {omit !== "Reliable" && (
+      {omit !== "Reliability" && (
         <Item
-          key="Reliable"
-          title={translate({ message: "Reliable" })}
+          key="Reliability"
+          title={translate({ message: "Reliability" })}
           description={translate({ message: "Employing the latest innovations in the industry while still leveraging Bitcoin’s proven cryptography." })}
-          cover="reliable.webp"
-          to="/reliable"
+          cover="reliability.webp"
+          to="/features/reliability"
         />
       )}
 
@@ -56,17 +56,17 @@ export const MoreFeaturesSection = ({ omit }: { omit: "Decentralized" | "Confide
           title={translate({ message: "Privacy" })}
           description={translate({ message: "We ensure you have maximum privacy by integrating various advanced technologies." })}
           cover="privacy.webp"
-          to="/privacy"
+          to="/features/privacy"
         />
       )}
 
-      {omit !== "Compliant" && (
+      {omit !== "Compliance" && (
         <Item
-          key="Compliant"
-          title={translate({ message: "Compliant" })}
+          key="Compliance"
+          title={translate({ message: "Compliance" })}
           description={translate({ message: "Mixin Safe offers a comprehensive suite of solutions to help Bitcoin investors confidently hold." })}
-          cover="compliant.webp"
-          to="/licenses"
+          cover="compliance.webp"
+          to="/features/compilance"
         />
       )}
     </div>

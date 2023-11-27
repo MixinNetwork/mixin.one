@@ -4,7 +4,7 @@ import GrayBackgroundWrapper from "../../common/GrayBackground"
 
 const Item = ({ cover, description }: { cover: string; description: string }) => (
   <div className="bg-white rounded-sm shadow">
-    <img loading="lazy" src={require("@site/static/img/page/decentralized/" + cover).default} alt={description} className="aspect-335/250 w-full" />
+    <img loading="lazy" src={require("@site/static/img/page/decentralization/" + cover).default} alt={description} className="aspect-335/250 w-full" />
     <div className="p-5 text-[#333] text-base font-normal sm:px-10 sm:pt-6 pb-8 sm:pb-12 md:pb-16 lg:pb-24 leading-relaxed">{description}</div>
   </div>
 )
@@ -32,7 +32,7 @@ export const NeverSacrificeDecentralizationSection = () => (
           cover={"1.2.webp"}
           description={translate({
             message:
-              'The saying "Not your keys, not your coins" is a cornerstone principle for Bitcoin enthusiasts who embrace its decentralized nature. Though managing private keys may present a challenge, we should remain steadfast in avoiding centralized firms as custodians for Bitcoin holdings.',
+              'The saying "Not your keys, not your coins" is a cornerstone principle for Bitcoin enthusiasts who embrace its decentralization nature. Though managing private keys may present a challenge, we should remain steadfast in avoiding centralized firms as custodians for Bitcoin holdings.',
           })}
         />
       </div>

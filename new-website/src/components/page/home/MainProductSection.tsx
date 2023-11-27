@@ -16,8 +16,8 @@ const ProductCard = ({ title, description, cover }: { title: string; description
 export const MainProductSection = () => {
   return (
     <div className="flex flex-col items-center bg-slate-100 bg-opacity-40 pb-45 px-5 sm:pb-35">
-      <SectionTitle description={<Translate>Our product is decentralized, safer, stronger and cheaper</Translate>}>
-        <Translate>Our Main Products</Translate>
+      <SectionTitle description={<Translate>Our products are decentralization, privacy focused and reliability.</Translate>}>
+        <Translate>Core Products</Translate>
       </SectionTitle>
       <div className="grid gap-y-5 gap-x-3 sm:grid-cols-3 container">
         <ProductCard
@@ -25,7 +25,7 @@ export const MainProductSection = () => {
           title={"Mixin Messenger"}
           description={translate({
             message:
-              "The open source decentralized MPC multi-currency wallet supports end-to-end encrypted chat, free transfers to contacts, legal currency deposits, social recovery and other functions.",
+              "The decentralization crypto wallet is powered by mature MPC technology. Mixin Messenger supports all popular cryptos, end-to-end encrypted chat, free transfers to contacts, fiat on-ramp, and social recovery.",
           })}
           cover={"messenger.webp"}
         />
@@ -34,20 +34,21 @@ export const MainProductSection = () => {
           key="Mixin Safe"
           title={"Mixin Safe"}
           description={translate({
-            message: "Mixin Safe provides the general public with cutting-edge Bitcoin custody solutions. Bitcoin custody should never sacrifice decentralization, always be confident and reliable.",
+            message:
+              "Mixin Safe provides the general public with cutting-edge Bitcoin custody solutions. Bitcoin custody should never sacrifice decentralization, always be confidence and reliability.",
           })}
           cover={"safe.webp"}
         />
         <ProductCard
           key="Mixin Wealth"
           title={"Mixin Wealth"}
-          description={translate({ message: "We strive to build the safest products to grow your crypto wealth, with the highest standard of decentralized custodian powered by Mixin Safe." })}
+          description={translate({ message: "We strive to build the safest products to grow your crypto wealth, with the highest standard of decentralization custodian powered by Mixin Safe." })}
           cover={"wealth.webp"}
         />
       </div>
 
       <LocalLink to="/pricing" className="mt-24.5 px-7 py-4 mx-auto bg-zinc-800 rounded-sm text-white text-base font-medium leading-none">
-        <Translate>View our plans</Translate>
+        <Translate>Start for Free</Translate>
       </LocalLink>
     </div>
   )

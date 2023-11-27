@@ -10,10 +10,10 @@ export const GetStartedSection = () => (
       <img loading="lazy" src={require("@site/static/img/common/getStartedPerson.webp").default} alt={"try safe"} className="aspect-355/204 md:aspect-657/376 md:order-last" />
       <div className="md:flex md:flex-col px-10 md:px-0">
         <div className="mt-17.5 md:mt-0 md:w-fit text-white text-3xl font-medium leading-10">
-          <Translate>Get Started</Translate>
+          <Translate>Secure Your Bitcoin Wealth Without Effort</Translate>
         </div>
         <div className="mt-7 md:w-fit text-white text-sm font-normal leading-normal">
-          <Translate>Experience the latest innovations in Bitcoin industry and secure your Bitcoin starting with just $10 per year!</Translate>
+          <Translate>Our professional Bitcoin wealth managers are ready to show you how easy it is to use a completely decentralization custody suite to manage your Bitcoin.</Translate>
         </div>
         <LocalLink
           className="mt-7 md:mt-auto w-fit py-4 px-7 bg-white bg-opacity-95 rounded-sm flex-center text-[#333] text-base font-medium leading-none"

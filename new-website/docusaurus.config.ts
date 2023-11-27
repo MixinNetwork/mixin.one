@@ -3,7 +3,8 @@ import type { Config } from "@docusaurus/types"
 import type * as Preset from "@docusaurus/preset-classic"
 
 const config: Config = {
-  title: "Mixin",
+  title: "Mixin - Grow and Secure Your Crypto Wealth with Decentralized Solutions",
+  headTags: [],
   // tagline: "Dinosaurs are cool",
   favicon: "img/favicon.svg",
 
@@ -72,7 +73,7 @@ const config: Config = {
         // },
         {
           label: "Technology",
-          to: "/technology",
+          to: "/how-it-secures",
         },
         {
           label: "Pricing",
@@ -142,7 +143,7 @@ const config: Config = {
           ],
         },
         {
-          title: "Developer",
+          title: "Developers",
           items: [
             {
               label: "Developer Center",
@@ -212,7 +213,7 @@ const config: Config = {
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()}, Mixin.All rights reserved.`,
+      copyright: `Copyright © ${new Date().getFullYear()} Mixin`,
     },
     prism: {
       theme: prismThemes.github,

@@ -1,9 +1,9 @@
 import SectionTitle from "../../common/SectionTitle"
 import Translate, { translate } from "@docusaurus/Translate"
-import SvgIcon1 from "@site/static/img/page/reliable/2.1.svg"
-import SvgIcon2 from "@site/static/img/page/reliable/2.2.svg"
-import SvgIcon3 from "@site/static/img/page/reliable/2.3.svg"
-import SvgIcon4 from "@site/static/img/page/reliable/2.4.svg"
+import SvgIcon1 from "@site/static/img/page/reliability/2.1.svg"
+import SvgIcon2 from "@site/static/img/page/reliability/2.2.svg"
+import SvgIcon3 from "@site/static/img/page/reliability/2.3.svg"
+import SvgIcon4 from "@site/static/img/page/reliability/2.4.svg"
 
 const Item = ({ icon, title, description }: { title: string; description: string; icon: React.ReactNode }) => (
   <div className="pt-7 px-5 pb-26 rounded-sm bg-zinc-100 text-[#333] hover:bg-zinc-800 hover:text-white">
@@ -21,7 +21,7 @@ export const ServiceSection = () => {
           message: "The Harrowing Tales of Losses in the Era of Centralized Exchanges, Wallets, and Custodial Services",
         })}
       >
-        <Translate>Reliable Service</Translate>
+        <Translate>Reliability Service</Translate>
       </SectionTitle>
       <div className="container mx-auto px-5 grid gap-5 auto-rows-fr pb-45 sm:grid-cols-2 md:grid-cols-4">
         <Item
@@ -31,7 +31,7 @@ export const ServiceSection = () => {
           })}
           description={translate({
             message:
-              "Combining reliable multi-signature technology and professional collaborative management services, we can provide reliable recovery services after users lose their private keys, helping users regain control of assets.",
+              "Combining reliability multi-signature technology and professional collaborative management services, we can provide reliability recovery services after users lose their private keys, helping users regain control of assets.",
           })}
         />
 
@@ -40,7 +40,7 @@ export const ServiceSection = () => {
           title={translate({ message: "Inheritance" })}
           description={translate({
             message:
-              "Combining reliable multi-signature technology and professional collaborative management services, we can provide reliable recovery services after users lose their private keys, helping users regain control of assets.",
+              "Combining reliability multi-signature technology and professional collaborative management services, we can provide reliability recovery services after users lose their private keys, helping users regain control of assets.",
           })}
         />
 

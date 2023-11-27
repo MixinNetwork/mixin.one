@@ -1,22 +1,22 @@
 import Translate from "@docusaurus/Translate"
 import LocalLink from "../../common/LocaleLink"
 
-// Audit Report
+// Security Audits
 export const AuditReportSection = () => (
   <div className="bg-zinc-100 bg-opacity-50">
     <div className="pt-20 sm:pt-50 pb-40 sm:pb-20 px-5 md:py-27 text-center md:text-start container mx-auto grid gap-y-20 gap-x-27.5 md:grid-cols-[474fr_356fr]">
       <div className="flex flex-col justify-between md:py-12.5">
         <div>
           <div className="text-[#333] text-3xl font-medium leading-10">
-            <Translate>Audit Report</Translate>
+            <Translate>Security Audits</Translate>
           </div>
           <div className="mt-5 text-[#333] text-opacity-60 text-base font-normal leading-normal">
-            <Translate>Mixin Safe powers leading organizations from Payment to DAOs, and beyond</Translate>
+            <Translate>We have an ongoing security audit process that keeps all Mixin infrastructures secured.</Translate>
           </div>
         </div>
 
         <LocalLink href="https://github.com/MixinNetwork/audits" className="hidden w-fit px-7 py-4 md:block bg-zinc-700 rounded-sm text-white font-medium leading-snug">
-          <Translate>View security audits</Translate>
+          <Translate>View Audit Reports</Translate>
         </LocalLink>
       </div>
 
@@ -32,7 +32,7 @@ export const AuditReportSection = () => (
         href="https://github.com/MixinNetwork/audits"
         className="md:hidden mt-10 sm:mt-12.5 rw-10 sm:w-fit sm:px-7 mx-auto py-4 flex-center bg-zinc-700 rounded-sm text-white font-medium leading-snug"
       >
-        View security audits
+        View Audit Reports
       </LocalLink>
     </div>
   </div>

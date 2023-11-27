@@ -6,7 +6,11 @@ import { translate } from "@docusaurus/Translate"
 
 export default function Root() {
   return (
-    <Layout>
+    <Layout
+      title={translate({
+        message: "Pricing",
+      })}
+    >
       <PlanSection />
       <FAQSection
         faqs={[

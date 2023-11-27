@@ -23,7 +23,7 @@ export const EasyManageSection = () => {
   return (
     <div className="py-20 px-5 sm:pt-25 sm:pb-30 container mx-auto">
       <div className="text-center text-[#333] text-3xl font-medium leading-10">
-        <Translate>We Make Managing Digital Assets Easy</Translate>
+        <Translate>Easy Digital Assets Management</Translate>
       </div>
       <div className="mt-5 text-center text-[#333] text-opacity-60 text-base sm:text-sm font-normal leading-normal">
         <Translate>6 key features to allow hassle-free day-to-day management</Translate>
@@ -34,23 +34,23 @@ export const EasyManageSection = () => {
         <EasyManageItem
           key="Dashboard"
           title={translate({ message: "Dashboard" })}
-          description={translate({ message: "Easily view your assets distribution any where, anytime" })}
+          description={translate({ message: "Easily view your assets distribution anywhere and anytime." })}
           icon="dashboard.svg"
         />
         <EasyManageItem
-          key="Downloadable history"
+          key="Own Your Data"
           title={translate({
-            message: "Downloadable history",
+            message: "Own Your Data",
           })}
           description={translate({
-            message: "Make account reconciliation easy and fiexible",
+            message: "Download all your account and transaction history conveniently.",
           })}
           icon="downloadableHistory.svg"
         />
         <EasyManageItem
-          key="Joint"
+          key="Joint Accounts"
           title={translate({
-            message: "Joint",
+            message: "Joint Accounts",
           })}
           description={translate({ message: "Manage assets with your family, friends and colleagues" })}
           icon="joint.svg"
@@ -69,7 +69,7 @@ export const EasyManageSection = () => {
             message: "Whitelist",
           })}
           description={translate({
-            message: "Cater to your internal risk control needs",
+            message: "Cater to your internal risk control needs with receivers whitelist.",
           })}
           icon="whitelist.svg"
         />
@@ -79,14 +79,14 @@ export const EasyManageSection = () => {
             message: "Notification",
           })}
           description={translate({
-            message: "Timely participation in funding approval",
+            message: "Get notified whenever anything happens to your accounts.",
           })}
           icon={"notification.svg"}
         />
       </div>
 
       <LocalLink to="/pricing" className="mt-20 sm:mt-15 rw-10 sm:w-fit sm:px-7 mx-auto py-4 flex-center bg-zinc-700 rounded-sm text-white font-medium leading-snug">
-        <Translate>View our plans</Translate>
+        <Translate>Start for Free</Translate>
       </LocalLink>
     </div>
   )

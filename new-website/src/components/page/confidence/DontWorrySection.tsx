@@ -5,7 +5,7 @@ import useBaseUrl from "@docusaurus/useBaseUrl"
 
 const Item = ({ title, description, icon }: { title: string; description: string; icon: string }) => (
   <div className="bg-white rounded-sm shadow py-3 pl-2.5 pr-5 sm:p-8 sm:pb-13.5 grid grid-cols-[auto_1fr] grid-rows-[auto_1fr] gap-x-4 gap-y-2">
-    <img loading="lazy" src={useBaseUrl("/img/page/confident/" + icon)} className="row-span-2 aspect-square w-12 sm:w-18" />
+    <img loading="lazy" src={useBaseUrl("/img/page/confidence/" + icon)} className="row-span-2 aspect-square w-12 sm:w-18" />
 
     <div className=" text-[#333] text-base font-medium leading-tight h-fit">{title}</div>
     <div className=" text-[#333] text-opacity-66 text-sm font-normal leading-snug">{description}</div>
@@ -17,7 +17,7 @@ export const DontWorrySection = () => {
     <div className="bg-slate-100 pt-20 pb-40">
       <SectionTitle
         description={translate({
-          message: "Mixin Safe powers leading organizations from Payment to DAOs, and beyond",
+          message: "We have an ongoing security audit process that keeps all Mixin infrastructures secured.",
         })}
       >
         <Translate>Don't worry</Translate>

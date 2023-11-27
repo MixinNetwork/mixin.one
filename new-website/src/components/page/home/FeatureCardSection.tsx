@@ -19,34 +19,34 @@ export const FeatureCardSection = () => {
   return (
     <div className="grid gap-y-5 px-5 py-20 sm:grid-cols-2 sm:gap-3 sm:pt-22.5 sm:pb-45 container mx-auto">
       <FeatureCard
-        key="Decentralized"
-        title={translate({ message: "Decentralized" })}
+        key="Decentralization"
+        title={translate({ message: "Decentralization" })}
         description={translate({
           message: "Not your keys, not your coins. Though managing private keys may present a challenge, we should remain steadfast in avoiding centralized firms as custodians for Bitcoin holdings.",
         })}
         subDescription={translate({
           message: "Learn Decentralization",
         })}
-        background="decentralized.webp"
-        to="/decentralized"
+        background="decentralization.webp"
+        to="/features/decentralization"
       />
 
       <FeatureCard
-        key="Confident"
-        title={translate({ message: "Confident" })}
+        key="Confidence"
+        title={translate({ message: "Confidence" })}
         description={translate({ message: "Mixin Safe offers a comprehensive suite of solutions to help Bitcoin investors confidently hold." })}
-        subDescription={translate({ message: "See the Solutions" })}
-        background="confident.webp"
-        to="/confident"
+        subDescription={translate({ message: "Mature Technologies" })}
+        background="confidence.webp"
+        to="/features/confidence"
       />
 
       <FeatureCard
-        key="Reliable"
-        title={translate({ message: "Reliable" })}
+        key="Reliability"
+        title={translate({ message: "Reliability" })}
         description={translate({ message: "Employing the latest innovations in the industry while still leveraging Bitcoin’s proven cryptography." })}
         subDescription={translate({ message: "Bitcoin Technology" })}
-        background="reliable.webp"
-        to="/reliable"
+        background="reliability.webp"
+        to="/features/reliability"
       />
       <FeatureCard
         key="Privacy"
@@ -54,16 +54,16 @@ export const FeatureCardSection = () => {
         description={translate({ message: "We ensure you have maximum privacy by integrating various advanced technologies." })}
         subDescription={translate({ message: "Privacy Technology" })}
         background="privacy.webp"
-        to="/privacy"
+        to="/features/privacy"
       />
 
       <FeatureCard
-        key="Compliant"
-        title={translate({ message: "Compliant" })}
+        key="Compliance"
+        title={translate({ message: "Compliance" })}
         description={translate({ message: "Mixin Safe offers a comprehensive suite of solutions to help Bitcoin investors confidently hold." })}
-        subDescription={translate({ message: "See the Solutions" })}
-        background="compliant.webp"
-        to="/licenses"
+        subDescription={translate({ message: "Regulatory Compliance" })}
+        background="compliance.webp"
+        to="/features/compilance"
       />
     </div>
   )

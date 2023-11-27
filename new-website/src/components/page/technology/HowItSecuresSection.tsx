@@ -26,31 +26,31 @@ export const HowItSecuresSection = () => {
         <div className="mt-20 md:mt-5 grid gap-y-5 auto-rows-fr pb-45">
           <Item
             cover="1.2.webp"
-            title={<Translate>Decentralized Network</Translate>}
+            title={<Translate>Decentralization Network</Translate>}
             description={
               <Translate>
-                We lead the development and construction of multiple decentralized networks and combine Bitcoin, Ethereum and other Layer 1 to provide multi-chain, high-speed free transfer, key
-                sharding decentralized underlying network.
+                We lead the development and construction of multiple decentralization networks and combine Bitcoin, Ethereum and other Layer 1 to provide multi-chain, high-speed free transfer, key
+                sharding decentralization underlying network.
               </Translate>
             }
           />
 
           <Item
             cover="1.3.webp"
-            title={<Translate>Decentralized Wallet</Translate>}
+            title={<Translate>Decentralization Wallet</Translate>}
             description={
               <Translate>
-                Based on multiple decentralized networks, we build Mixin Safe multi-signature cold wallet and MPC hot wallet with social recovery, and your assets are always under your control.
+                Based on multiple decentralization networks, we build Mixin Safe multi-signature cold wallet and MPC hot wallet with social recovery, and your assets are always under your control.
               </Translate>
             }
           />
 
           <Item
             cover="1.4.webp"
-            title={<Translate>Decentralized Services</Translate>}
+            title={<Translate>Decentralization Services</Translate>}
             description={
               <Translate>
-                Based on a secure decentralized wallet service, I and our partners provide users with a series of decentralized products and services such as buying, trading, wealth management,
+                Based on a secure decentralization wallet service, I and our partners provide users with a series of decentralization products and services such as buying, trading, wealth management,
                 inheritance, and recovery.
               </Translate>
             }

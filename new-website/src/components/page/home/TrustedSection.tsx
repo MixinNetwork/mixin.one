@@ -13,7 +13,7 @@ export const TrustedSection = () => (
       <Translate>Trusted by</Translate>
     </div>
     <div className="mt-5 text-center text-white text-opacity-60 text-base sm:text-sm font-normal leading-normal">
-      <Translate>Mixin Safe powers leading organizations from Payment to DAOs, and beyond</Translate>
+      <Translate>We have an ongoing security audit process that keeps all Mixin infrastructures secured.</Translate>
     </div>
     <div className="max-w-230 mx-auto grid grid-cols-3 mt-20 sm:mt-15 sm:grid-cols-6 px-5 gap-y-15 gap-x-12.5 sm:gap-x-17">
       <TrustedItem name={"MixPay"} icon={"mixPay.webp"} />

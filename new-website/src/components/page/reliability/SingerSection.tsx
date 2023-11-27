@@ -1,20 +1,20 @@
 import SectionTitle from "../../common/SectionTitle"
 import Translate, { translate } from "@docusaurus/Translate"
 import useBaseUrl from "@docusaurus/useBaseUrl"
-import TitleIcon1 from "@site/static/img/page/reliable/3.1.2.svg"
-import TitleIcon2 from "@site/static/img/page/reliable/3.2.2.svg"
-import TitleIcon3 from "@site/static/img/page/reliable/3.3.2.svg"
-import TitleIcon4 from "@site/static/img/page/reliable/3.4.2.svg"
-import TitleIcon5 from "@site/static/img/page/reliable/3.5.2.svg"
-import TitleIcon6 from "@site/static/img/page/reliable/3.6.2.svg"
-import TitleIcon7 from "@site/static/img/page/reliable/3.7.2.svg"
-import TitleIcon8 from "@site/static/img/page/reliable/3.8.2.svg"
-import TitleIcon9 from "@site/static/img/page/reliable/3.9.2.svg"
+import TitleIcon1 from "@site/static/img/page/reliability/3.1.2.svg"
+import TitleIcon2 from "@site/static/img/page/reliability/3.2.2.svg"
+import TitleIcon3 from "@site/static/img/page/reliability/3.3.2.svg"
+import TitleIcon4 from "@site/static/img/page/reliability/3.4.2.svg"
+import TitleIcon5 from "@site/static/img/page/reliability/3.5.2.svg"
+import TitleIcon6 from "@site/static/img/page/reliability/3.6.2.svg"
+import TitleIcon7 from "@site/static/img/page/reliability/3.7.2.svg"
+import TitleIcon8 from "@site/static/img/page/reliability/3.8.2.svg"
+import TitleIcon9 from "@site/static/img/page/reliability/3.9.2.svg"
 
 const Item = ({ icon, titleIcon, description }: { icon: string; titleIcon: React.ReactNode; description: string }) => {
   return (
     <div className="bg-white rounded-sm shadow p-4 lg:p-8 md:p-6 grid grid-cols-[auto_1fr] grid-rows-[auto_1fr] gap-x-4 gap-y-2.5">
-      <img loading="lazy" src={useBaseUrl("/img/page/reliable/" + icon)} className="row-span-2 aspect-square w-12 md:w-18 lg:24" />
+      <img loading="lazy" src={useBaseUrl("/img/page/reliability/" + icon)} className="row-span-2 aspect-square w-12 md:w-18 lg:24" />
       {titleIcon}
       <div className="text-[#333] text-opacity-80 text-sm font-normal leading-normal">{description}</div>
     </div>
@@ -29,7 +29,7 @@ export const SingerSection = () => {
           message: "We are working on getting support of Mixin Safe in more wallet signers",
         })}
       >
-        <Translate>Reliable Singer</Translate>
+        <Translate>Reliability Singer</Translate>
       </SectionTitle>
 
       <div className="container mx-auto px-5 grid gap-5 auto-rows-fr sm:grid-cols-2 pb-45">
@@ -45,7 +45,7 @@ export const SingerSection = () => {
           icon="3.2.1.svg"
           titleIcon={<TitleIcon2 />}
           description={translate({
-            message: "Mornin Key is an open source decentralized key manager that helps users truly control and protect their data.",
+            message: "Mornin Key is an open source decentralization key manager that helps users truly control and protect their data.",
           })}
         />
 
@@ -80,7 +80,7 @@ export const SingerSection = () => {
         />
         <Item
           icon="3.7.1.svg"
-          titleIcon={<img loading="lazy" src={require("@site/static/img/page/reliable/3.7.2.webp").default} width={190} height={18} />}
+          titleIcon={<img loading="lazy" src={require("@site/static/img/page/reliability/3.7.2.webp").default} width={190} height={18} />}
           description={translate({
             message: "DIY airgapped hardware wallet that uses QR codes for communication with the host.",
           })}

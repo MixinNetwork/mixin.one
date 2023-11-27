@@ -9,9 +9,9 @@ const TechnologySection = () => (
       <img loading="lazy" src={require("@site/static/img/common/woodGrain.webp").default} className="object-cover absolute inset-0 h-full w-full -z-10" />
       <div className="flex flex-col justify-between pt-15 px-5 pb-10 space-y-33 sm:space-y-14 lg:pb-20 lg:px-20 lg:pt-26 md:pt-20 md:px-15 md:pb-15 ">
         <div className="text-white text-opacity-90 text-center text-base font-normal leading-relaxed">
-          <Translate>Decentralized bitcoin custody is challenging, which is why we made Mixin Safe to meet public demand. Never worry about losing your keys or centralized evil custody.</Translate>
+          <Translate>Decentralization bitcoin custody is challenging, which is why we made Mixin Safe to meet public demand. Never worry about losing your keys or centralized evil custody.</Translate>
         </div>
-        <LocalLink to="/technology" className="px-7 py-4 sm:w-fit sm:mx-auto bg-white rounded-sm flex-center text-base font-medium leading-none">
+        <LocalLink to="/how-it-secures" className="px-7 py-4 sm:w-fit sm:mx-auto bg-white rounded-sm flex-center text-base font-medium leading-none">
           <Translate>Technology Detail</Translate>
         </LocalLink>
       </div>
@@ -21,7 +21,7 @@ const TechnologySection = () => (
 
 const Item = ({ cover, title, description }: { cover: string; title: string; description: string }) => (
   <div className="bg-white rounded-sm shadow pb-20">
-    <img loading="lazy" src={require("@site/static/img/page/confident/" + cover).default} alt={description} className="aspect-335/250 w-full" />
+    <img loading="lazy" src={require("@site/static/img/page/confidence/" + cover).default} alt={description} className="aspect-335/250 w-full" />
     <div className="mt-5 px-5 sm:mt-6.5 md:mt-8 lg:mt-10 sm:px-6.5 md:px-8 lg:px-10 text-[#333] text-xl font-medium leading-snug">{title}</div>
     <div className="mt-5 px-5 sm:px-6.5 md:px-8 lg:px-10 text-[#333] text-op-80 text-base font-normal leading-relaxed">{description}</div>
   </div>
@@ -40,7 +40,7 @@ export const ConfidentBitcoinCustodySection = () => {
             message: "Self-custody",
           })}
           description={translate({
-            message: "If you don't truly own your private key, you will never be confident in your bitcoin holdings. With Mixin Safe, you have full control over your wallet private key.",
+            message: "If you don't truly own your private key, you will never be confidence in your bitcoin holdings. With Mixin Safe, you have full control over your wallet private key.",
           })}
         />
         <Item
