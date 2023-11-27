@@ -176,7 +176,7 @@ export const PlanSection = () => {
               features={[
                 <Translate>Everything in Elite</Translate>,
                 <Translate>Create 100 Safes</Translate>,
-                <Translate>Create 20 Safes</Translate>,
+                <Translate>Get 20 Safe Credits</Translate>,
                 <Translate>1 free Ledger Stax</Translate>,
                 <Translate>2 free Ledger Nano X</Translate>,
                 <Translate>10 members per safe</Translate>,
