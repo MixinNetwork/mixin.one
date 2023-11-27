@@ -1299,5 +1299,23 @@
   },
   "Message (required)": {
     "message": "信息（必填）"
+  },
+  "Ministry of Finance": {
+    "message": "Ministry of Finance"
+  },
+  "Registration of Activities in the Field of Virtual Currencies": {
+    "message": "虚拟货币领域活动登记"
+  },
+  "PCI/DSS": {
+    "message": "PCI/DSS"
+  },
+  "The Payment Card Industry Data Security Standard (PCI DSS) is an information security standard for organizations that handle branded credit cards from major card schemes. This certification confirms that Mixin Route is fully compliance with high standards for secure storage and processing of bank card data.": {
+    "message": "支付卡行业数据安全标准（PCI DSS）是一种信息安全标准，适用于处理主要卡方的品牌信用卡的组织。该认证证实了 Mixin Route 完全符合安全存储和处理银行卡数据的高标准。"
+  },
+  "EU GDPR compliance": {
+    "message": "欧盟 GDPR 合规"
+  },
+  "Mixin Route’s policies, procedures, and workflows regarding personal data processing of EU residents are fully compliance with the requirements of the EU GDPR. External and internal evaluations of Mixin Route's compliance with the EU GDPR are conducted annually.": {
+    "message": "Mixin Route 关于欧盟居民个人数据处理的政策、程序和工作流程完全符合欧盟 GDPR 的要求。对 Mixin Route 符合欧盟 GDPR 的外部和内部评估每年进行一次。"
   }
 }
