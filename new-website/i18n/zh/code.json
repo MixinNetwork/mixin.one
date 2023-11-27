@@ -1311,5 +1311,8 @@
   },
   "Mixin Route’s policies, procedures, and workflows regarding personal data processing of EU residents are fully compliance with the requirements of the EU GDPR. External and internal evaluations of Mixin Route's compliance with the EU GDPR are conducted annually.": {
     "message": "Mixin Route 关于欧盟居民个人数据处理的政策、程序和工作流程完全符合欧盟 GDPR 的要求。对 Mixin Route 符合欧盟 GDPR 的外部和内部评估每年进行一次。"
+  },
+  "Dedicated wealth manager": {
+    "message": "专属财富经理"
   }
 }
