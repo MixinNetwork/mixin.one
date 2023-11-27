@@ -13,12 +13,12 @@ const Advance = () => {
       price={100}
       features={[
         <Translate>Everything in Free</Translate>,
+        <Translate>3 members per Safe</Translate>,
         <Translate>Free Mixin Anonymous Number</Translate>,
-        <Translate>Create 2 Safes</Translate>,
-        <Translate>Get 2 Safe Credits</Translate>,
-        <Translate>3 members per safe</Translate>,
         <Translate>3 Safe members in total</Translate>,
+        <Translate>Create 2 Safes</Translate>,
         <Translate>Paid recovery service</Translate>,
+        <Translate>Get 2 Safe Credits</Translate>,
         <Translate>Paid inheritance service</Translate>,
       ]}
       cover="macAndPhone.webp"
@@ -148,12 +148,12 @@ export const PlanSection = () => {
               price={1000}
               features={[
                 <Translate>Everything in Advance</Translate>,
+                <Translate>5 members per Safe</Translate>,
                 <Translate>Create 5 Safes</Translate>,
+                <Translate>10 Safe members in total</Translate>,
                 <Translate>Get 5 Safe Credits</Translate>,
-                <Translate>1 free Ledger Nano X</Translate>,
-                <Translate>5 members per safe</Translate>,
-                <Translate>10 members in total</Translate>,
                 <Translate>Free recovery service</Translate>,
+                <Translate>1 free Ledger Nano X</Translate>,
                 <Translate>Free inheritance service</Translate>,
               ]}
               cover="macAndPhone.webp"
@@ -166,14 +166,14 @@ export const PlanSection = () => {
               price={1000}
               features={[
                 <Translate>Everything in Elite</Translate>,
+                <Translate>10 members per Safe</Translate>,
                 <Translate>Create 100 Safes</Translate>,
+                <Translate>100 Safe members in total</Translate>,
                 <Translate>Get 20 Safe Credits</Translate>,
-                <Translate>1 free Ledger Stax</Translate>,
-                <Translate>2 free Ledger Nano X</Translate>,
-                <Translate>10 members per safe</Translate>,
-                <Translate>100 members in total</Translate>,
-                <Translate>10 members in total</Translate>,
                 <Translate>Free 24/7 phone support</Translate>,
+                <Translate>1 free Ledger Stax</Translate>,
+                <Translate>Dedicated wealth manager</Translate>,
+                <Translate>2 free Ledger Nano X</Translate>,
                 <Translate>Customized DeFi service</Translate>,
               ]}
               cover="macAndPhone.webp"

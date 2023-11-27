@@ -868,7 +868,7 @@
   "Get 2 Safe Credits": {
     "message": "得到 2 个 Safe Credits"
   },
-  "3 members per safe": {
+  "3 members per Safe": {
     "message": "每个金库最多 3 个共管人"
   },
   "3 Safe members in total": {
@@ -898,10 +898,10 @@
   "1 free Ledger Nano X": {
     "message": "1 个免费的 Ledger Nano X"
   },
-  "5 members per safe": {
+  "5 members per Safe": {
     "message": "每个金库最多 5 个共管人"
   },
-  "10 members in total": {
+  "10 Safe members in total": {
     "message": "所有金库最多 10 个共管人"
   },
   "Free recovery service": {
@@ -931,10 +931,10 @@
   "2 free Ledger Nano X": {
     "message": "2 free Ledger Nano X"
   },
-  "10 members per safe": {
+  "10 members per Safe": {
     "message": "每个金库最多 10 个共管人"
   },
-  "100 members in total": {
+  "100 Safe members in total": {
     "message": "所有金库最多 100 个共管人"
   },
   "Free 24/7 phone support": {
