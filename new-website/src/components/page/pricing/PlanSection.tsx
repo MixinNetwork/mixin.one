@@ -119,7 +119,7 @@ export const PlanSection = () => {
             <Item
               name={<Translate>Advance</Translate>}
               description={<Translate>Use multiple keys on multiple devices to avoid single point of failure, and match inheritance to pass on your bitcoin assets</Translate>}
-              price={299}
+              price={100}
               features={[
                 <Translate>Everything in Free</Translate>,
                 <Translate>Free Mixin Anonymous Number</Translate>,
