@@ -13,7 +13,7 @@ export const AuditReportSection = () => (
           <Translate>We have an ongoing security audit process that keeps all Mixin infrastructures secured.</Translate>
         </div>
 
-        <LocalLink href="https://github.com/MixinNetwork/audits" className="hidden mt-24 w-fit px-7 py-4 md:block bg-zinc-700 rounded-sm text-white font-medium leading-snug">
+        <LocalLink href="https://github.com/MixinNetwork/audits" className="hidden! mt-24 w-fit px-7 py-4 md:block! bg-zinc-700 rounded-sm text-white font-medium leading-snug">
           <Translate>View Audit Reports</Translate>
         </LocalLink>
       </div>
