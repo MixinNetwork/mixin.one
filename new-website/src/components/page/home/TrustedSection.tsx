@@ -11,7 +11,7 @@ const TrustedItem = ({ name, icon }: { name: string; icon: string }) => (
 export const TrustedSection = () => (
   <div className="bg-zinc-800 pt-5 pb-40 sm:pb-20 px-5 text-white">
     <SectionTitle
-      className="text-white!"
+      titleClassName="text-white!"
       descriptionClassName="text-white! text-opacity-60!"
       description={<Translate>We have an ongoing security audit process that keeps all Mixin infrastructures secured.</Translate>}
     >
