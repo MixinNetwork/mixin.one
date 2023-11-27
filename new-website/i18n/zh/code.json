@@ -289,9 +289,6 @@
     "message": "此页面未列出。搜索引擎不会对其索引，只有拥有直接链接的用户才能访问。",
     "description": "The unlisted content banner message"
   },
-  "Grow and secure your crypto wealth with Confidence": {
-    "message": "安全的保管与增长您的加密资产财富，充分享受信心满满"
-  },
   "Confidence": {
     "message": "信心满满"
   },
@@ -1157,7 +1154,7 @@
     "message": "工作原理"
   },
   "Secure and grow your crypto wealth with Decentralization": {
-    "message": "通过去中心化保护和增长您的加密货币财富"
+    "message": "安全的保管与增长您的加密资产财富，充分享受信心满满"
   },
   "Protect your crypto with mature multisig and MPC technology. Get access to trading, lending, decentralized recovery and inheritance.": {
     "message": "通过成熟的多重签名和 MPC 技术保护您的加密货币。获得交易、借贷、去中心化恢复和遗产继承的权限。"
