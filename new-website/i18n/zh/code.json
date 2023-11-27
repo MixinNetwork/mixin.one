@@ -805,11 +805,11 @@
   "Licenses and registrations": {
     "message": "许可合规"
   },
-  "NO ANNUAL FEES": {
-    "message": "没有年费"
+  "FREE FOREVER": {
+    "message": "永久免费"
   },
-  "Try for free": {
-    "message": "免费尝试"
+  "Get Mixin": {
+    "message": "开始使用 Mixin"
   },
   "Features": {
     "message": "特点"
@@ -856,8 +856,8 @@
   "Advance": {
     "message": "进阶版"
   },
-  "Use multiple keys on multiple devices to avoid single point of failure, and match inheritance to pass on your bitcoin assets": {
-    "message": "安全、易用的 MPC 热钱包可满足小额日常存币需求"
+  "Use multiple keys on multiple devices to avoid single point of failure, and get decentralized recovery service in case of key loss.": {
+    "message": "使用多个设备上的多个密钥，避免单点故障，并在密钥丢失的情况下获得去中心化的恢复服务。"
   },
   "Everything in Free": {
     "message": "包含所有免费版的功能"
@@ -874,7 +874,7 @@
   "3 members per safe": {
     "message": "每个金库最多 3 个共管人"
   },
-  "3 members in total": {
+  "3 Safe members in total": {
     "message": "所有金库最多 3 个共管人"
   },
   "Paid recovery service": {

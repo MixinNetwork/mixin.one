@@ -32,7 +32,7 @@ export const Item = ({ name, description, price, features, cover }: { name: Reac
           </div>
           {price <= 0 && (
             <div className="mx-auto w-fit text-[#333] text-opacity-70 text-sm font-normal leading-none">
-              <Translate>NO ANNUAL FEES</Translate>
+              <Translate>FREE FOREVER</Translate>
             </div>
           )}
         </div>
@@ -42,7 +42,7 @@ export const Item = ({ name, description, price, features, cover }: { name: Reac
         href={price <= 0 ? "https://messenger.mixin.one/download" : "https://safe.mixin.one/start"}
         className="mt-17.5 sm:mt-5 py-4 px-13 w-full sm:w-fit bg-zinc-800 rounded-sm text-center text-white text-sm font-normal block"
       >
-        {price <= 0 ? <Translate>Try for free</Translate> : <Translate>Get Started</Translate>}
+        {price <= 0 ? <Translate>Get Mixin</Translate> : <Translate>Get Started</Translate>}
       </LocalLink>
       <div className="mt-15 w-full h-px border-b-px border-zinc-300"></div>
       <div className="grid items-center sm:grid-cols-2 mt-20 sm:mt-10">
@@ -118,7 +118,7 @@ export const PlanSection = () => {
 
             <Item
               name={<Translate>Advance</Translate>}
-              description={<Translate>Use multiple keys on multiple devices to avoid single point of failure, and match inheritance to pass on your bitcoin assets</Translate>}
+              description={<Translate>Use multiple keys on multiple devices to avoid single point of failure, and get decentralized recovery service in case of key loss.</Translate>}
               price={100}
               features={[
                 <Translate>Everything in Free</Translate>,
@@ -126,7 +126,7 @@ export const PlanSection = () => {
                 <Translate>Create 2 Safes</Translate>,
                 <Translate>Get 2 Safe Credits</Translate>,
                 <Translate>3 members per safe</Translate>,
-                <Translate>3 members in total</Translate>,
+                <Translate>3 Safe members in total</Translate>,
                 <Translate>Paid recovery service</Translate>,
                 <Translate>Paid inheritance service</Translate>,
               ]}
@@ -137,7 +137,7 @@ export const PlanSection = () => {
           <Section id="family" selected={selected}>
             <Item
               name={<Translate>Advance</Translate>}
-              description={<Translate>Manage large assets in the vault with family, friends or colleagues, so you can avoid theft, accidents and custody risks</Translate>}
+              description={<Translate>Use multiple keys on multiple devices to avoid single point of failure, and get decentralized recovery service in case of key loss.</Translate>}
               price={100}
               features={[
                 <Translate>Everything in Free</Translate>,
@@ -145,7 +145,7 @@ export const PlanSection = () => {
                 <Translate>Create 2 Safes</Translate>,
                 <Translate>Get 2 Safe Credits</Translate>,
                 <Translate>3 members per safe</Translate>,
-                <Translate>3 members in total</Translate>,
+                <Translate>3 Safe members in total</Translate>,
                 <Translate>Paid recovery service</Translate>,
                 <Translate>Paid inheritance service</Translate>,
               ]}
@@ -153,7 +153,7 @@ export const PlanSection = () => {
             />
             <Item
               name={<Translate>Elite</Translate>}
-              description={<Translate>Use multiple keys on multiple devices to avoid single point of failure, and match inheritance to pass on your bitcoin assets</Translate>}
+              description={<Translate>Manage large assets in the vault with family, friends or colleagues, so you can avoid theft, accidents and custody risks</Translate>}
               price={1000}
               features={[
                 <Translate>Everything in Advance</Translate>,
