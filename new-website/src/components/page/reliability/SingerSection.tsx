@@ -29,7 +29,7 @@ export const SingerSection = () => {
           message: "We are working on getting support of Mixin Safe in more wallet signers",
         })}
       >
-        <Translate>Reliability Singer</Translate>
+        <Translate>Reliable Singer</Translate>
       </SectionTitle>
 
       <div className="container mx-auto px-5 grid gap-5 auto-rows-fr sm:grid-cols-2 pb-45">
@@ -45,7 +45,7 @@ export const SingerSection = () => {
           icon="3.2.1.svg"
           titleIcon={<TitleIcon2 />}
           description={translate({
-            message: "Mornin Key is an open source decentralization key manager that helps users truly control and protect their data.",
+            message: "Mornin Key is an open source decentralized key manager that helps users truly control and protect their data.",
           })}
         />
 

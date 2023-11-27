@@ -21,7 +21,7 @@ export const ServiceSection = () => {
           message: "The Harrowing Tales of Losses in the Era of Centralized Exchanges, Wallets, and Custodial Services",
         })}
       >
-        <Translate>Reliability Service</Translate>
+        <Translate>Reliable Service</Translate>
       </SectionTitle>
       <div className="container mx-auto px-5 grid gap-5 auto-rows-fr pb-45 sm:grid-cols-2 md:grid-cols-4">
         <Item
@@ -31,7 +31,7 @@ export const ServiceSection = () => {
           })}
           description={translate({
             message:
-              "Combining reliability multi-signature technology and professional collaborative management services, we can provide reliability recovery services after users lose their private keys, helping users regain control of assets.",
+              "Combining reliable multi-signature technology and professional collaborative management services, we can provide reliable recovery services after users lose their private keys, helping users regain control of assets.",
           })}
         />
 
@@ -40,7 +40,7 @@ export const ServiceSection = () => {
           title={translate({ message: "Inheritance" })}
           description={translate({
             message:
-              "Combining reliability multi-signature technology and professional collaborative management services, we can provide reliability recovery services after users lose their private keys, helping users regain control of assets.",
+              "Combining reliable multi-signature technology and professional collaborative management services, we can provide reliable recovery services after users lose their private keys, helping users regain control of assets.",
           })}
         />
 

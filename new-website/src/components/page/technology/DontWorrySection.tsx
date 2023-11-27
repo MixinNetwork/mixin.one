@@ -16,8 +16,8 @@ export const DontWorrySection = () => (
       title={<Translate>Don't worry about save</Translate>}
       description={
         <Translate>
-          With our decentralization product, you can easily hold assets such as Bitcoin and other cryptocurrencies, say goodbye to the terrifying issues of asset loss and theft, and focus on holding
-          and wealth growth.
+          With our decentralized product, you can easily hold assets such as Bitcoin and other cryptocurrencies, say goodbye to the terrifying issues of asset loss and theft, and focus on holding and
+          wealth growth.
         </Translate>
       }
       cover={require("@site/static/img/page/technology/3.1.1.webp").default}
@@ -52,8 +52,8 @@ export const DontWorrySection = () => (
           }),
           description: (
             <Translate>
-              By combining the multi-signature and time lock scripts of the Bitcoin network and adopting a decentralization and mature multi-party computing MPC technology, Mixin Safe has successfully
-              implemented a complete decentralization inheritance solution.
+              By combining the multi-signature and time lock scripts of the Bitcoin network and adopting a decentralized and mature multi-party computing MPC technology, Mixin Safe has successfully
+              implemented a complete decentralized inheritance solution.
             </Translate>
           ),
           icon: <Section1Icon3 />,
@@ -75,9 +75,7 @@ export const DontWorrySection = () => (
 
     <SpecialLayoutItem
       title={<Translate>Use with Confidence</Translate>}
-      description={
-        <Translate>We integrate advanced and reliability technologies to provide you with secure self-hosted wallets and decentralization asset recovery and inheritance services.</Translate>
-      }
+      description={<Translate>We integrate advanced and reliable technologies to provide you with secure self-hosted wallets and decentralized asset recovery and inheritance services.</Translate>}
       cover={require("@site/static/img/page/technology/3.2.1.webp").default}
       coverClassName="aspect-335/470"
       points={[

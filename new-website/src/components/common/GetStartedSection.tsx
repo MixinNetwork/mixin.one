@@ -13,7 +13,7 @@ export const GetStartedSection = () => (
           <Translate>Secure Your Bitcoin Wealth Without Effort</Translate>
         </div>
         <div className="mt-7 md:w-fit text-white text-sm font-normal leading-normal">
-          <Translate>Our professional Bitcoin wealth managers are ready to show you how easy it is to use a completely decentralization custody suite to manage your Bitcoin.</Translate>
+          <Translate>Our professional Bitcoin wealth managers are ready to show you how easy it is to use a completely decentralized custody suite to manage your Bitcoin.</Translate>
         </div>
         <LocalLink
           className="mt-7 md:mt-auto w-fit py-4 px-7 bg-white bg-opacity-95 rounded-sm flex-center text-[#333] text-base font-medium leading-none"

@@ -22,7 +22,7 @@ const SecureAssetCustodySection = () => (
       <div className="text-white text-opacity-90 text-center text-base font-normal leading-relaxed">
         <Translate>
           Mixin Safe is committed to providing users with safe and stable asset management services. We always use proven Bitcoin encryption technologies, such as multi-signature, time lock, MPC,
-          threshold signature, P2SH and hardware wallet technology. These mature and reliability technologies complement each other to ensure the safety of assets and ensure that customers can use our
+          threshold signature, P2SH and hardware wallet technology. These mature and reliable technologies complement each other to ensure the safety of assets and ensure that customers can use our
           products with confidence.
         </Translate>
       </div>
@@ -38,7 +38,7 @@ export const TechnicalServiceSection = () => {
           message: "We never invent our own cryptographic techniques",
         })}
       >
-        <Translate>Reliability Technical Service</Translate>
+        <Translate>Reliable Technical Service</Translate>
       </SectionTitle>
       <GrayBackgroundWrapper>
         <div className="pb-15">

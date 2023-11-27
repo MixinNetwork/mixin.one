@@ -25,7 +25,7 @@ export const MainProductSection = () => {
           title={"Mixin Messenger"}
           description={translate({
             message:
-              "The decentralization crypto wallet is powered by mature MPC technology. Mixin Messenger supports all popular cryptos, end-to-end encrypted chat, free transfers to contacts, fiat on-ramp, and social recovery.",
+              "The decentralized crypto wallet is powered by mature MPC technology. Mixin Messenger supports all popular cryptos, end-to-end encrypted chat, free transfers to contacts, fiat on-ramp, and social recovery.",
           })}
           cover={"messenger.webp"}
         />
@@ -42,7 +42,7 @@ export const MainProductSection = () => {
         <ProductCard
           key="Mixin Wealth"
           title={"Mixin Wealth"}
-          description={translate({ message: "We strive to build the safest products to grow your crypto wealth, with the highest standard of decentralization custodian powered by Mixin Safe." })}
+          description={translate({ message: "We strive to build the safest products to grow your crypto wealth, with the highest standard of decentralized custodian powered by Mixin Safe." })}
           cover={"wealth.webp"}
         />
       </div>

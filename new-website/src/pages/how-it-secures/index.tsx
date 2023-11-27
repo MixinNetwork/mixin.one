@@ -30,11 +30,11 @@ export default function Root() {
           },
           {
             question: translate({
-              message: "What does the decentralization multi-party computation (MPC) network used by Mixin Safe specifically refer to?",
+              message: "What does the decentralized multi-party computation (MPC) network used by Mixin Safe specifically refer to?",
             }),
             answer: translate({
               message:
-                "The decentralization MPC network (Safe Network) in Mixin Safe shares validators and security with Mixin Network. Mixin Network is a PoS network composed of 25 pledged full nodes. It has been running stably for more than 5 years, with a total value of over 1 billion dollars.",
+                "The decentralized MPC network (Safe Network) in Mixin Safe shares validators and security with Mixin Network. Mixin Network is a PoS network composed of 25 pledged full nodes. It has been running stably for more than 5 years, with a total value of over 1 billion dollars.",
             }),
           },
           {
@@ -43,7 +43,7 @@ export default function Root() {
             }),
             answer: translate({
               message:
-                "Yes, your assets are still safe. You can withdraw your assets at any time through your wallet private key and the decentralization MPC network. Even if the Mixin Safe team disbands, your assets are safe in your hands.",
+                "Yes, your assets are still safe. You can withdraw your assets at any time through your wallet private key and the decentralized MPC network. Even if the Mixin Safe team disbands, your assets are safe in your hands.",
             }),
           },
           {
@@ -59,7 +59,7 @@ export default function Root() {
               message: "Is Mixin Safe a custodial wallet?",
             }),
             answer: translate({
-              message: "No, Mixin Safe is a decentralization non-custodial multi-signature wallet solution.",
+              message: "No, Mixin Safe is a decentralized non-custodial multi-signature wallet solution.",
             }),
           },
           {

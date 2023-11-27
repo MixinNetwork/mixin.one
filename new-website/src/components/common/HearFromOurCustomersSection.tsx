@@ -54,7 +54,7 @@ export const HearFromOurCustomersSection = () => {
     children: [
       {
         content: translate({
-          message: "Mixin Safe provides a complete suite of decentralization solutions to help custody my Bitcoin wealth, no sacrifice of the Bitcoin decentralization nature.",
+          message: "Mixin Safe provides a complete suite of decentralized solutions to help custody my Bitcoin wealth, no sacrifice of the Bitcoin decentralized nature.",
         }),
         name: translate({
           message: "Thorb",

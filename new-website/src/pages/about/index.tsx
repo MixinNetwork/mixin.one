@@ -23,7 +23,7 @@ export default function Root() {
             }),
             answer: translate({
               message:
-                "Mixin Safe was developed by the team behind Mixin Network, our team members have over 10 years of experience in blockchain and Bitcoin technology. Mixin Network is a public decentralization ledger, launched in 2018 and has been running stably ever since, with assets exceeding 1 billion dollars and zero security incidents.",
+                "Mixin Safe was developed by the team behind Mixin Network, our team members have over 10 years of experience in blockchain and Bitcoin technology. Mixin Network is a public decentralized ledger, launched in 2018 and has been running stably ever since, with assets exceeding 1 billion dollars and zero security incidents.",
             }),
           },
           {
@@ -48,7 +48,7 @@ export default function Root() {
             }),
             answer: translate({
               message:
-                "Yes, your assets are still safe. You can withdraw your assets at any time through your wallet private key and the decentralization MPC network. Even if the Mixin Safe team disbands, your assets are safe in your hands.",
+                "Yes, your assets are still safe. You can withdraw your assets at any time through your wallet private key and the decentralized MPC network. Even if the Mixin Safe team disbands, your assets are safe in your hands.",
             }),
           },
           {
