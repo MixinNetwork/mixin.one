@@ -31,7 +31,7 @@ export function LocalSwitcer({}) {
   })
 
   return (
-    <div className="[&>*]:block [&>*]:px-0! [&_ul]:bg-white [&_ul]:bg-opacity-20">
+    <div className="[&>*]:block! [&>*]:px-0! [&_ul]:bg-white [&_ul]:bg-opacity-20">
       <DropdownNavbarItem
         className="w-fit py-1.5 pl-5 pr-2 bg-white bg-opacity-20 text-white text-opacity-60 text-base font-medium rounded-sm space-x-3.5 after:hidden!"
         items={localeItems}
