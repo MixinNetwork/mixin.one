@@ -144,7 +144,7 @@ export const PlanSection = () => {
             <Advance />
             <Item
               name={<Translate>Elite</Translate>}
-              description={<Translate>Manage large assets in the vault with family, friends or colleagues, so you can avoid theft, accidents and custody risks.</Translate>}
+              description={<Translate>Manage large fortune in Mixin Safe with family, friends or colleagues, so you can avoid thefts, accidents and custody risks.</Translate>}
               price={1000}
               features={[
                 <Translate>Everything in Advance</Translate>,
