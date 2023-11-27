@@ -1,6 +1,7 @@
 import Translate, { translate } from "@docusaurus/Translate"
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext"
 import LocalLink from "../../common/LocaleLink"
+import SectionTitle from "../../common/SectionTitle"
 
 const EasyManageItem = ({ title, description, icon }: { title: string; description: string; icon: string }) => (
   <div className="grid grid-cols-[auto_1fr] grid-rows-[auto_1fr] gap-y-3 gap-x-5">
@@ -21,14 +22,11 @@ export const EasyManageSection = () => {
   } = useDocusaurusContext()
   console.log("currentLocale", currentLocale)
   return (
-    <div className="py-20 px-5 sm:pt-25 sm:pb-30 container mx-auto">
-      <div className="text-center text-[#333] text-3xl font-medium leading-10">
+    <div className="py-5 px-5 sm:pt-10 sm:pb-30 container mx-auto">
+      <SectionTitle description={<Translate>6 key features to allow hassle-free day-to-day management</Translate>}>
         <Translate>Easy Digital Assets Management</Translate>
-      </div>
-      <div className="mt-5 text-center text-[#333] text-opacity-60 text-base sm:text-sm font-normal leading-normal">
-        <Translate>6 key features to allow hassle-free day-to-day management</Translate>
-      </div>
-      <img loading="lazy" src={require(`@site/static/img/page/home/assets_${currentLocale}.webp`).default} alt={""} className="mt-20 aspect-335/183 relative" />
+      </SectionTitle>
+      <img loading="lazy" src={require(`@site/static/img/page/home/assets_${currentLocale}.webp`).default} alt={""} className="mt-5 aspect-335/183 relative" />
 
       <div className="mt-20 grid sm:grid-cols-2 md:grid-cols-3 sm:gap-x-11 md:gap-x-9 gap-y-13 px-5">
         <EasyManageItem
