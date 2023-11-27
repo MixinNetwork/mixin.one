@@ -56,9 +56,9 @@ Code.prototype = {
       logoURL: blueLogo,
       basic: true,
       hasAvatar: true,
-      avatarUrl: chatInfo.type === 'conversation' 
+      avatarUrl: chatInfo.type === 'conversation'
         ? defaultGroupAvatar
-        : !!chatInfo.avatar_url 
+        : !!chatInfo.avatar_url
           ? chatInfo.avatar_url
           : defaultAvatar,
       firstLetter: full_name.trim()[0] || '^_^',
@@ -71,12 +71,12 @@ Code.prototype = {
       showActionButton: true,
       mixinURL: "mixin://codes/" + chatInfo.code_id,
       actionText: chatInfo.type === 'conversation' ? i18n.t('code.user.chat') :i18n.t('schema.btn.view'),
-      buttonIntro: 
-        chatInfo.type === 'conversation' 
-          ? i18n.t('code.group.btn.intro') 
-          : !!chatInfo.app 
-            ? i18n.t('schema.bot.btn.intro.view') 
-            : i18n.t('schema.user.btn.intro.view') 
+      buttonIntro:
+        chatInfo.type === 'conversation'
+          ? i18n.t('code.group.btn.intro')
+          : !!chatInfo.app
+            ? i18n.t('schema.bot.btn.intro.view')
+            : i18n.t('schema.user.btn.intro.view')
     };
     chatInfo['showButtonIntro'] = !(chatInfo.type === 'user' && !!chatInfo.app);
     $('#layout-container').html(self.template(data));
@@ -91,14 +91,15 @@ Code.prototype = {
     $('body').attr('class', `multisig code layout`);
     self.api.network.assetsShow((asset) => {
       const platform = MixinUtils.environment();
-      const complete = type === 'payment' 
+      const complete = type === 'payment'
         ? multisig.status === 'paid'
         : multisig.state === 'signed';
-      const totalNumber = type === 'payment' 
+      const totalNumber = type === 'payment'
         ? multisig.receivers.length
-        : multisig.senders.length;      
+        : multisig.senders.length;
       const usdAmount = new Decimal(asset.data.price_usd).times(multisig.amount);
       const mixinURL = "mixin://codes/" + multisig.code_id;
+      const qrCodeURL = "https://mixin.one/codes/" + multisig.code_id;
       const data = {
         logoURL: blueLogo,
         title: i18n.t('code.multisig.title'),
@@ -122,21 +123,21 @@ Code.prototype = {
         $('#layout-container').html(self.template(data));
         if (!platform) $('.main').attr('class', 'main browser');
         if (data.hasMemo) $('.scan-container').attr('class', 'scan-container new-margin');
-        initQRCode(mixinURL);
+        initQRCode(qrCodeURL);
         self.router.updatePageLinks();
       }
 
       const timer = !complete && setInterval(() => {
         self.api.code.fetch((resp) => {
           if (!resp.error) {
-            const complete = type === 'payment' 
+            const complete = type === 'payment'
               ? resp.data.status === 'paid'
-              : resp.data.state === 'signed';  
+              : resp.data.state === 'signed';
             if (complete) {
               clearInterval(timer);
               data.complete = true;
               $('#layout-container').html(self.template(data));
-              if (!platform) $('.main').attr('class', 'main browser'); 
+              if (!platform) $('.main').attr('class', 'main browser');
               if (data.hasMemo) $('.scan-container').attr('class', 'scan-container new-margin');
             }
           }
@@ -171,6 +172,7 @@ Code.prototype = {
       $('body').attr('data-code-id', auth.code_id);
       let platform = MixinUtils.environment();
       const mixinURL = 'mixin://codes/' + auth.code_id;
+      const qrCodeURL = "https://mixin.one/codes/" + auth.code_id;
       if (platform == 'Android' || platform == 'iOS') {
         window.location.replace(mixinURL);
         return false;
@@ -190,7 +192,7 @@ Code.prototype = {
       };
       $('.oauth.code.layout #layout-container').html(self.template(data));
       if (!platform) $('.main').attr('class', 'main browser');
-      initQRCode(mixinURL);
+      initQRCode(qrCodeURL);
     }
 
     setTimeout(() => {

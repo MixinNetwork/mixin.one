@@ -34,7 +34,7 @@
       {{else}}
       <div class="scan-info-container">
         <div class="info-container">
-          <div class="title">{{title}}</div>
+          <div class="title ellipsis">{{title}}</div>
           {{#if hasSubTitle}}
           <div class="subTitle">{{subTitle}}</div>
           {{/if}}
@@ -119,6 +119,14 @@
         <canvas id="qrcode-modal"></canvas>
       </div>
       <div class="tip">{{t 'code.payment.scan'}}</div>
+    </div>
+  </div>
+
+  <div class="redirect-container" id="redirect-container">
+    <div class="redirect-content">
+      <img class="redirecting" src="{{redirectingIcon}}" alt="redirecting" />
+      <div class="text">{{t 'code.redirect.text'}}</div>
+      <button class="redirect-btn" id="cancel-redirect-btn">{{t 'code.redirect.button'}}</button>
     </div>
   </div>
 </div>
