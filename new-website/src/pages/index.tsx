@@ -90,7 +90,7 @@ const Header = () => {
       <Navbar dark />
       <div className="px-10 pt-15 pb-19 sm:pt-12.5 md:pt-20 lg:pt-54 sm:pb-16.5 sm:pb-32.5 lg:pb-79 sm:text-center container mx-auto">
         <div className="text-white text-10 sm:text-11 md:text-15.5 leading-12 sm:leading-13.5 md:leading-18 font-normal sm:font-medium -tracking-0.1 max-w-232 mx-auto">{title}</div>
-        <div className="mt-7.5 sm:mt-6 md:mt-8 lg:mt-12 max-w-232 mx-auto text-white text-opacity-80 text-sm lg:text-base font-normal">
+        <div className="mt-7.5 sm:mt-6 md:mt-8 lg:mt-12 max-w-232 mx-auto text-white text-opacity-80 text-base lg:text-lg font-normal">
           <Translate>Protect your crypto with mature multisig and MPC technology. Get access to trading, lending, decentralized recovery and inheritance.</Translate>
         </div>
 
