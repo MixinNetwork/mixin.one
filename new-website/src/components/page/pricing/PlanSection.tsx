@@ -124,7 +124,7 @@ export const PlanSection = () => {
           <Section id="personal" selected={selected}>
             <Item
               name={<Translate>Free</Translate>}
-              description={<Translate>Secure and easy-to-use MPC hot wallet that meets the daily needs of small amounts of bitcoin storage</Translate>}
+              description={<Translate>Secure and easy-to-use MPC hot wallet that meets the daily needs of small amounts of bitcoin storage.</Translate>}
               price={0}
               features={[
                 <Translate>MPC Wallet</Translate>,
@@ -144,7 +144,7 @@ export const PlanSection = () => {
             <Advance />
             <Item
               name={<Translate>Elite</Translate>}
-              description={<Translate>Manage large assets in the vault with family, friends or colleagues, so you can avoid theft, accidents and custody risks</Translate>}
+              description={<Translate>Manage large assets in the vault with family, friends or colleagues, so you can avoid theft, accidents and custody risks.</Translate>}
               price={1000}
               features={[
                 <Translate>Everything in Advance</Translate>,

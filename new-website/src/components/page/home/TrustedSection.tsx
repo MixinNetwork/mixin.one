@@ -13,7 +13,7 @@ export const TrustedSection = () => (
     <SectionTitle
       titleClassName="text-white!"
       descriptionClassName="text-white! text-opacity-60!"
-      description={<Translate>We have an ongoing security audit process that keeps all Mixin infrastructures secured.</Translate>}
+      description={<Translate>Mixin powers leading organizations from Payment to DAOs, and beyond.</Translate>}
     >
       <Translate>Trusted by</Translate>
     </SectionTitle>

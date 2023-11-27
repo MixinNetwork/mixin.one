@@ -23,7 +23,7 @@ export const EasyManageSection = () => {
   console.log("currentLocale", currentLocale)
   return (
     <div className="py-5 px-5 sm:pt-10 sm:pb-30 container mx-auto">
-      <SectionTitle description={<Translate>6 key features to allow hassle-free day-to-day management</Translate>}>
+      <SectionTitle description={<Translate>6 key features to allow hassle-free day-to-day management.</Translate>}>
         <Translate>Easy Digital Assets Management</Translate>
       </SectionTitle>
       <img loading="lazy" src={require(`@site/static/img/page/home/assets_${currentLocale}.webp`).default} alt={""} className="mt-5 aspect-335/183 relative" />

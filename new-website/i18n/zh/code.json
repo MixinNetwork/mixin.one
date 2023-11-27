@@ -343,7 +343,7 @@
   "Mixin Team and Exin and Pando are independent teams of the same ecosystem, each providing different products and services. Mixin Team development team is a Hong Kong company, mainly responsible for the development and operation of Mixin Network, Mixin Messenger, Mixin Safe, Mixin Route and other products and projects.": {
     "message": "Mixin Team 与 Exin 和 Pando 是同一个生态的独立团队，各自提供不同的产品和服务。Mixin Team 开发团队是一家香港公司，主要负责 Mixin Network、Mixin Messenger、Mixin Safe、Mixin Route 等产品和项目开发和运营。"
   },
-  "Don't hesitate to contact us if you can't find your answers here": {
+  "Don't hesitate to contact us if you can't find your answers here.": {
     "message": "如果无法找到您的问题，请随时通过任何途径联系我们或者您的客户经理。"
   },
   "Frequently Asked Questions": {
@@ -610,7 +610,7 @@
   "We Make Managing Digital Assets Easy": {
     "message": "如此简单"
   },
-  "6 key features to allow hassle-free day-to-day management": {
+  "6 key features to allow hassle-free day-to-day management.": {
     "message": "6 大关键功能让日常管理无忧无虑"
   },
   "Dashboard": {
@@ -703,7 +703,7 @@
   "Supported Assets and Protocols": {
     "message": "Supported Assets and Protocols"
   },
-  "We support over 3,400 tokens and 48 chains, including popular layer 1 and layer 2": {
+  "We support over 3,400 tokens and 48 chains, including popular layer 1 and layer 2.": {
     "message": "我们支持超过 3,400 种币 48 条链，包括流行的一层网络和二层网络"
   },
   "Trusted by": {
@@ -829,7 +829,7 @@
   "Free": {
     "message": "免费"
   },
-  "Secure and easy-to-use MPC hot wallet that meets the daily needs of small amounts of bitcoin storage": {
+  "Secure and easy-to-use MPC hot wallet that meets the daily needs of small amounts of bitcoin storage.": {
     "message": "安全易用的 MPC 热钱包，满足日常小额比特币存储需求"
   },
   "MPC Wallet": {
@@ -880,7 +880,7 @@
   "Paid inheritance service": {
     "message": "收费的遗产传承服务"
   },
-  "Manage large assets in the vault with family, friends or colleagues, so you can avoid theft, accidents and custody risks": {
+  "Manage large assets in the vault with family, friends or colleagues, so you can avoid theft, accidents and custody risks.": {
     "message": "与家人、朋友或同事共同管理金库大额资产，因此您可以免受盗窃、事故和托管风险"
   },
   "Elite": {
@@ -1222,7 +1222,7 @@
   "The decentralized crypto wallet is powered by mature MPC technology. Mixin Messenger supports all popular cryptos, end-to-end encrypted chat, free transfers to contacts, fiat on-ramp, and social recovery.": {
     "message": "去中心化的加密货币钱包由成熟的 MPC 技术提供支持。 Mixin Messenger 支持所有流行的加密货币，端到端加密聊天，免费转账给联系人，法币兑换，社交恢复。"
   },
-  "Provide the general public with state-of-the-art open financial services.": {
+  "Provide the general public with state-of-the-art open financial services": {
     "message": "为公众提供最先进的开放式金融服务。"
   },
   "Decentralized Network": {
@@ -1314,5 +1314,8 @@
   },
   "Dedicated wealth manager": {
     "message": "专属财富经理"
+  },
+  "Mixin powers leading organizations from Payment to DAOs, and beyond.": {
+    "message": "Mixin 为从支付到 DAO 等领先组织提供支持。"
   }
 }

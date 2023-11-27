@@ -26,7 +26,7 @@ export const FAQSection = (props: {
   }[]
 }) => (
   <div className={clsx("pt-20 sm:pt-30 pb-40 sm:pb-45 px-5", props.className)}>
-    <SectionTitle description={<Translate>Don't hesitate to contact us if you can't find your answers here</Translate>}>
+    <SectionTitle description={<Translate>Don't hesitate to contact us if you can't find your answers here.</Translate>}>
       <Translate>Frequently Asked Questions</Translate>
     </SectionTitle>
     {props.faqs?.map((faq) => (
