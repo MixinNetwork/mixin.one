@@ -31,52 +31,54 @@ const Header = () => {
           message: "Decentralization",
         }),
         replace: (match) => (
-          <TypeAnimation
-            speed={{
-              type: "keyStrokeDelayInMs",
-              value: 150,
-            }}
-            deletionSpeed={{
-              type: "keyStrokeDelayInMs",
-              value: 80,
-            }}
-            sequence={[
-              translate({
-                message: "Decentralization",
-              }),
-              2000,
-              "",
-              1000,
-              translate({
-                message: "Confidence",
-              }),
-              2000,
-              "",
-              1000,
-              translate({
-                message: "Reliability",
-              }),
-              2000,
-              "",
-              1000,
-              translate({
-                message: "Privacy",
-              }),
-              2000,
-              "",
-              1000,
-              translate({
-                message: "Compliance",
-              }),
-              2000,
-              "",
-              1000,
-            ]}
-            wrapper="div"
-            cursor={true}
-            repeat={Infinity}
-            className="text-blue-500"
-          />
+          <div className="min-h-12 sm:min-h-13.5 md:min-h-18">
+            <TypeAnimation
+              speed={{
+                type: "keyStrokeDelayInMs",
+                value: 150,
+              }}
+              deletionSpeed={{
+                type: "keyStrokeDelayInMs",
+                value: 80,
+              }}
+              sequence={[
+                translate({
+                  message: "Decentralization",
+                }),
+                2000,
+                "",
+                1000,
+                translate({
+                  message: "Confidence",
+                }),
+                2000,
+                "",
+                1000,
+                translate({
+                  message: "Reliability",
+                }),
+                2000,
+                "",
+                1000,
+                translate({
+                  message: "Privacy",
+                }),
+                2000,
+                "",
+                1000,
+                translate({
+                  message: "Compliance",
+                }),
+                2000,
+                "",
+                1000,
+              ]}
+              wrapper="div"
+              cursor={true}
+              repeat={Infinity}
+              className="text-blue-500"
+            />
+          </div>
         ),
       },
     ]
@@ -87,7 +89,7 @@ const Header = () => {
       <img loading="lazy" src={require("@site/static/img/page/home/bgHeader.webp").default} className="object-cover -z-10 hidden sm:block absolute inset-0 h-full w-full" />
       <Navbar dark />
       <div className="px-10 pt-15 pb-19 sm:pt-12.5 md:pt-20 lg:pt-54 sm:pb-16.5 sm:pb-32.5 lg:pb-79 sm:text-center container mx-auto">
-        <div className="text-white text-10 leading-12 sm:text-11 sm:leading-13.5 md:text-15.5 md:leading-18 font-normal sm:font-medium -tracking-0.1 max-w-232 mx-auto">{title}</div>
+        <div className="text-white text-10 sm:text-11 md:text-15.5 leading-12 sm:leading-13.5 md:leading-18 font-normal sm:font-medium -tracking-0.1 max-w-232 mx-auto">{title}</div>
         <div className="mt-7.5 sm:mt-6 md:mt-8 lg:mt-12 max-w-232 mx-auto text-white text-opacity-80 text-sm lg:text-base font-normal">
           <Translate>Protect your crypto with mature multisig and MPC technology. Get access to trading, lending, decentralized recovery and inheritance.</Translate>
         </div>
