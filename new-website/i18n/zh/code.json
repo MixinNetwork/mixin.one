@@ -973,5 +973,17 @@
   },
   "Based on decentralization networks such as Bitcoin, Ethereum, and key sharding, combined with technologies such as multi-signature, smart contracts, time locks, MPC and end-to-end encryption, we provide you with a one-stop cryptocurrency service with security as the foundation.": {
     "message": "基于比特币、以太坊等去中心化网络和密钥分片，结合多重签名、智能合约、时间锁、MPC 和端到端加密等技术，为您提供以安全为基础的一站式加密货币服务。"
+  },
+  "AUM": {
+    "message": "AUM"
+  },
+  "$1T+": {
+    "message": "$1T+"
+  },
+  "Transaction Volume": {
+    "message": "交易量"
+  },
+  "$1M+": {
+    "message": "$1M+"
   }
 }

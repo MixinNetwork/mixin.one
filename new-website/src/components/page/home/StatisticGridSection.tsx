@@ -11,7 +11,6 @@ export const StatisticGridSection = () => (
   <div className="bg-zinc-100">
     <div className="bg-opacity-50 grid grid-cols-2 sm:grid-cols-4 bg-zinc-300 sm:bg-opacity-100 sm:bg-zinc-100 sm:py-17.5 sm:divide-opacity-50 sm:divide-x-1 sm:divide-zinc-300 gap-[1px] container mx-auto">
       <StatisticGridItem
-        key="Since"
         title={translate({
           message: "2017",
         })}
@@ -20,27 +19,24 @@ export const StatisticGridSection = () => (
         })}
       />
       <StatisticGridItem
-        key={"Assets under management"}
         title={translate({
           message: "$1B+",
         })}
         description={translate({
-          message: "Assets under management",
+          message: "AUM",
         })}
       />
       <StatisticGridItem
-        key={"Per day transaction volume"}
         title={translate({
-          message: "1B",
+          message: "$1T+",
         })}
         description={translate({
-          message: "Per day transaction volume",
+          message: "Transaction Volume",
         })}
       />
       <StatisticGridItem
-        key={"Customers"}
         title={translate({
-          message: "1M+",
+          message: "$1M+",
         })}
         description={translate({
           message: "Customers",
