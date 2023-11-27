@@ -11,7 +11,7 @@ export default function Root() {
   return (
     <Layout
       title={translate({
-        message: "How it secures",
+        message: "How it Secures",
       })}
     >
       <HowItSecuresSection />
