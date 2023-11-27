@@ -22,6 +22,7 @@ export default defineConfig({
       "absolute-vertical-center": "absolute top-1/2 -translate-y-1/2 transform",
       "absolute-horizontal-center": "absolute left-1/2 -translate-x-1/2 transform",
       fill: "absolute inset-0 w-full h-full",
+      "title-container": "max-w-3/4 sm:max-w-2/3 mx-auto",
     },
     [/^click-area-(\d+)$/, ([, num]) => `relative before:content-[''] before:absolute before:-inset-${num}`, { autocomplete: ["click-area-<num>"] }],
   ],
