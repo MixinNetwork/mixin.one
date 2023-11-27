@@ -4,7 +4,7 @@ import React from "react"
 import { HearFromOurCustomersSection } from "../../../components/common/HearFromOurCustomersSection"
 import { GetStartedSection } from "../../../components/common/GetStartedSection"
 import { MoreFeaturesSection } from "../../../components/common/MoreFeaturesSection"
-import { LicensesAndRegistrationsSection } from "../../../components/page/compilance/LicensesAndRegistrationsSection"
+import { LicensesAndRegistrationsSection } from "../../../components/page/compliance/LicensesAndRegistrationsSection"
 import { translate } from "@docusaurus/Translate"
 
 export default function Root() {

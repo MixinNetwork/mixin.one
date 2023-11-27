@@ -66,7 +66,7 @@ export const MoreFeaturesSection = ({ omit }: { omit: "Decentralization" | "Conf
           title={translate({ message: "Compliance" })}
           description={translate({ message: "Mixin Safe offers a comprehensive suite of solutions to help Bitcoin investors confidently hold." })}
           cover="compliance.webp"
-          to="/features/compilance"
+          to="features/compliance"
         />
       )}
     </div>

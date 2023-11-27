@@ -6,7 +6,7 @@ import clsx from "clsx"
 import GrayBackgroundWrapper from "../../common/GrayBackground"
 const Item = ({ cover, title, description }: { cover: string; title: string; description: string }) => (
   <div className={clsx("bg-white rounded-sm shadow pt-5 px-5 pb-10 md:p-15 lg:px-32 grid sm:grid-cols-2 group items-center gap-10")}>
-    <img loading="lazy" src={require("@site/static/img/page/compilance/" + cover).default} alt={title} className="aspect-335/220 w-full object-contain px-6 sm:group-odd:order-last " />
+    <img loading="lazy" src={require("@site/static/img/page/compliance/" + cover).default} alt={title} className="aspect-335/220 w-full object-contain px-6 sm:group-odd:order-last " />
 
     <div className="space-y-5 w-full">
       <div className="text-[#333] text-xl font-medium leading-snug sm:text-2xl">{title}</div>

@@ -63,7 +63,7 @@ export const FeatureCardSection = () => {
         description={translate({ message: "Mixin Safe offers a comprehensive suite of solutions to help Bitcoin investors confidently hold." })}
         subDescription={translate({ message: "Regulatory Compliance" })}
         background="compliance.webp"
-        to="/features/compilance"
+        to="features/compliance"
       />
     </div>
   )
