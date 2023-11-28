@@ -389,7 +389,7 @@
     "message": "管理比特币私钥非常复杂，要让这件事情变得简单需要一系列的去中心化的软件来确保流程顺畅。Mixin Safe 使用一整套成熟的技术方案让去中心化私钥管理变得触手可及。"
   },
   "Employing the latest innovations in the industry while still leveraging Bitcoin’s proven cryptography.": {
-    "message": "Mixin Safe 采用了比特币行业最先进的技术创新，但是同时这些技术方案又都是已经在比特币网络上经过实践检验的，十年以上的成熟的加密技术方案。"
+    "message": "Mixin Safe 使用最新的技术，同时利用比特币的成熟密码学。"
   },
   "We ensure you have maximum privacy by integrating various advanced technologies.": {
     "message": "我们通过集成各种先进技术确保您拥有最大的隐私。"
