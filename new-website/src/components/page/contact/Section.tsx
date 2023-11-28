@@ -117,6 +117,9 @@ export const Section = () => {
               toast.promise(
                 fetch("https://safe-api.mixin.zone/customer_services", {
                   method: "POST",
+                  headers: {
+                    "Content-Type": "application/json"
+                  },
                   body: JSON.stringify({
                     full_name: name,
                     email,
