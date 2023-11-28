@@ -943,9 +943,6 @@
   "Customized DeFi service": {
     "message": "定制的去中心化金融服务"
   },
-  "Mixin Safe powers leading organizations from Payment to DAOs, and beyond.": {
-    "message": "中心化交易所、钱包和托管服务时代的惨痛损失故事。"
-  },
   "Reliable Service": {
     "message": "可靠的服务"
   },
@@ -1265,7 +1262,7 @@
     "message": "借助比特币原生多重签名和时间锁脚本，Mixin Safe 可以帮助我们的客户以去中心化和便捷的方式更好地将比特币资产传递给他们的后代。"
   },
   "Mixin Safe is committed to providing our customers with safe and reliable asset custody solutions. We always use proven Bitcoin cryptographic technologies, such as multi-signature, timelock, MPC, threshold signature, P2WSH and hardware wallet technology. These mature and reliable technologies complement each other to ensure the safety of assets and ensure that customers can use our products with confidence.": {
-    "message": "Mixin Safe致力于为我们的客户提供安全可靠的资产托管解决方案。我们始终使用经过验证的比特币密码技术，例如多重签名、时间锁、MPC、门限签名、隔离见证 P2WSH 和硬件钱包技术。这些成熟可靠的技术相辅相成，确保资产安全，确保客户放心使用我们的产品。"
+    "message": "Mixin Safe 致力于为我们的客户提供安全可靠的资产托管解决方案。我们始终使用经过验证的比特币密码技术，例如多重签名、时间锁、MPC、门限签名、隔离见证 P2WSH 和硬件钱包技术。这些成熟可靠的技术相辅相成，确保资产安全，确保客户放心使用我们的产品。"
   },
   "Mixin Safe uses Threshold Signature Scheme (TSS) technology based on Multi-Party Computation (MPC), offers customers complete control over their digital assets.": {
     "message": "Mixin Safe 使用基于多方计算（MPC）的阈值签名方案（TSS）技术，为客户提供对其数字资产的完全控制。"

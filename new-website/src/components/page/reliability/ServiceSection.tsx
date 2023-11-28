@@ -18,7 +18,7 @@ export const ServiceSection = () => {
     <>
       <SectionTitle
         description={translate({
-          message: "Mixin Safe powers leading organizations from Payment to DAOs, and beyond.",
+          message: "Mixin powers leading organizations from Payment to DAOs, and beyond.",
         })}
       >
         <Translate>Reliable Service</Translate>
