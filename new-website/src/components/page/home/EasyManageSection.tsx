@@ -20,7 +20,6 @@ export const EasyManageSection = () => {
   const {
     i18n: { currentLocale },
   } = useDocusaurusContext()
-  console.log("currentLocale", currentLocale)
   return (
     <div className="py-5 px-5 sm:pt-10 sm:pb-30 container mx-auto">
       <SectionTitle description={<Translate>6 key features to allow hassle-free day-to-day management.</Translate>}>
