@@ -21,7 +21,7 @@ export const LicensesAndRegistrationsSection = () => {
       <SectionTitle description={<Translate>We go out of our way to ensure that you have the utmost privacy.</Translate>}>
         <Translate>Licenses and registrations</Translate>
       </SectionTitle>
-      <GrayBackgroundWrapper>
+      <GrayBackgroundWrapper bgClassName="block!">
         <div className="py-15">
           <div className="container mx-auto px-5 grid gap-5 auto-rows-fr">
             <Item

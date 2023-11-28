@@ -71,11 +71,11 @@ const Item = ({ name, description, price, features, cover }: { name: React.React
           <div className="text-[#333] text-xl font-medium leading-normal">
             <Translate>Features</Translate>
           </div>
-          <div className="grid gap-5 grid-cols-2">
+          <div className="grid gap-5 sm:grid-cols-2">
             {features.map((feature) => (
               <div className="flex-center space-x-2.5 w-fit">
                 <Checked className="shrink-0" />
-                <div className="text-[#333] text-base font-normal leading-none">{feature}</div>
+                <div className="text-[#333] text-base font-normal leading-5">{feature}</div>
               </div>
             ))}
           </div>

@@ -40,7 +40,7 @@ export const TechnicalServiceSection = () => {
       >
         <Translate>Reliable Technical Service</Translate>
       </SectionTitle>
-      <GrayBackgroundWrapper>
+      <GrayBackgroundWrapper bgClassName="block!">
         <div className="pb-15">
           <div className="mt-10 container mx-auto px-10 grid gap-y-15 md:grid-cols-[1fr_auto_1fr] md:gap-x-12 lg:gap-x-22 pb-20 md:pb-45">
             <img loading="lazy" src={useBaseUrl("/img/page/reliability/1.1.svg")} className="m-auto md:h-4/5 lg:h-full md:order-1 aspect-268/517" />

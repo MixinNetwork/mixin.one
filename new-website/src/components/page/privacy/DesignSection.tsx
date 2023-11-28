@@ -146,7 +146,7 @@ export const DesignSection = () => {
       <SectionTitle description={<Translate>We go out of our way to ensure that you have the utmost privacy.</Translate>}>
         <Translate>Privacy by Design</Translate>
       </SectionTitle>
-      <GrayBackgroundWrapper>
+      <GrayBackgroundWrapper bgClassName="block!">
         <div className="mt-15 container mx-auto">
           <GridSection />
           <ListSection />

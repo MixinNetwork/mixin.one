@@ -20,7 +20,7 @@ export const SpecialLayoutItem = ({
   <div className="group">
     <div className="text-center text-[#333] title-container text-3xl font-medium leading-10">{title}</div>
     <div className="mt-5 text-center text-[#333] title-container text-opacity-70 text-base font-normal leading-normal">{description}</div>
-    <div className="mt-10 sm:mt-19 md:mt-27 lg:mt-35  grid items-center gap-10 sm:gap-32 sm:grid-cols-2">
+    <div className="mt-10 sm:mt-19 md:mt-27 lg:mt-35  grid items-center gap-10 sm:gap-18 md:gap-26 lg:gap-32 sm:grid-cols-2">
       <img loading="lazy" src={cover} className={clsx("w-full self-start object-cover sm:group-odd:order-last", coverClassName)} />
 
       <div className="space-y-16">
