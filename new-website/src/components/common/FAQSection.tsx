@@ -6,7 +6,7 @@ import SectionTitle from "./SectionTitle"
 const FAQItem = ({ question, answer }: { question: string; answer: string }) => (
   <div className="px-2.5 border-b border-neutral-200 container lg:max-w-240 mx-auto">
     <input id={question} type="radio" name="faq" className="hidden! peer" />
-    <label htmlFor={question} className="pt-9 pb-5.5 cursor-pointer flex flex-row justify-between items-start space-x-1 peer-checked:svg:-rotate-180">
+    <label htmlFor={question} className="pt-9 pb-5.5 cursor-pointer flex flex-row justify-between items-start space-x-1 peer-checked:svg:-rotate-180 not-default">
       <div className="text-[#333] text-base font-medium leading-normal">{question}</div>
       <Arrow className="mt-1 shrink-0 transition-all duration-300" />
     </label>

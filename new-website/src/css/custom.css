@@ -10,9 +10,9 @@ html {
   @apply overflow-x-hidden;
 }
 
-a,
-button,
-label {
+a:not(.not-default),
+button:not(.not-default),
+label:not(.not-default) {
   @apply hover:opacity-80 hover:active:focus:opacity-40 disabled:opacity-20 cursor-pointer;
 }
 
