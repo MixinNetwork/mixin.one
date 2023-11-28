@@ -20,7 +20,7 @@ export const MixinIsDecentralizationSection = () => {
         cover={require("@site/static/img/page/decentralization/3.1.1.webp").default}
         coverClassName="aspect-562/662"
         title={<Translate>Mixin is Decentralization</Translate>}
-        description={<Translate>We lead the development of multiple open-source decentralized networks</Translate>}
+        description={<Translate>We lead the development of multiple open-source decentralized networks.</Translate>}
         points={[
           {
             icon: <Icon11 />,
