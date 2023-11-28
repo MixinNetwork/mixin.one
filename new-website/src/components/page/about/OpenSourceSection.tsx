@@ -7,7 +7,7 @@ export const OpenSourceSection = () => (
     <img
       loading="lazy"
       src={require("@site/static/img/page/about/1.webp").default}
-      className="aspect-375/250 sm:aspect-664/443 md:aspect-315/364 lg:aspect-432/500 md:order-last object-cover h-full"
+      className="aspect-375/250 sm:aspect-664/443 md:aspect-315/364 lg:aspect-432/500 md:order-last object-cover w-full h-full"
     />
     <div className="bg-[#333] p-10 pb-25 md:p-15 grow">
       <QuotationMark className="sm:w-12 sm:h-9" />

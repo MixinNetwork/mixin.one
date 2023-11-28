@@ -85,7 +85,7 @@ export const HearFromOurCustomersSection = () => {
         <img
           loading="lazy"
           src={require("@site/static/img/common/hearFromOurCustomers.webp").default}
-          className="aspect-375/250 sm:aspect-664/443 md:aspect-315/364 lg:aspect-432/500 md:order-last object-cover h-full"
+          className="aspect-375/250 sm:aspect-664/443 md:aspect-315/364 lg:aspect-432/500 md:order-last object-cover w-full h-full"
         />
         <div className="bg-[#333] pt-15 sm:pt-10 lg:pt-15 pb-13 sm:pb-20 md:pb-10 lg:pb-20 flex flex-col overflow-hidden h-full">
           <QuotationMark className="sm:w-12 sm:h-9 ml-9.5 lg:ml-12" />
