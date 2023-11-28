@@ -81,11 +81,11 @@ export const HearFromOurCustomersSection = () => {
       <SectionTitle>
         <Translate>Hear from our customers</Translate>
       </SectionTitle>
-      <div className="container mx-auto grid md:grid-cols-[645fr_315fr] lg:grid-cols-[762fr_432fr] overflow-hidden md:mb-45 mb-25">
+      <div className="container mx-auto md:grid md:grid-cols-[645fr_315fr] lg:grid-cols-[762fr_432fr] overflow-hidden md:mb-45 mb-25">
         <img
           loading="lazy"
           src={require("@site/static/img/common/hearFromOurCustomers.webp").default}
-          className="aspect-375/250 sm:aspect-664/443 md:aspect-315/364 lg:aspect-432/500 md:order-last object-cover w-full md:h-full"
+          className="aspect-375/250 sm:aspect-664/443 md:aspect-315/364 lg:aspect-432/500 md:order-last object-cover w-full h-full"
         />
         <div className="bg-[#333] pt-15 sm:pt-10 lg:pt-15 pb-13 sm:pb-20 md:pb-10 lg:pb-20 flex flex-col overflow-hidden h-full">
           <QuotationMark className="sm:w-12 sm:h-9 ml-9.5 lg:ml-12" />
