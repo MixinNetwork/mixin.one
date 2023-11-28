@@ -926,10 +926,10 @@
     "message": "得到 20 个 Safe Credits"
   },
   "1 free Ledger Stax": {
-    "message": "1 free Ledger Stax"
+    "message": "1 个免费的 Ledger Stax"
   },
   "2 free Ledger Nano X": {
-    "message": "2 free Ledger Nano X"
+    "message": "2 个免费的 Ledger Nano X"
   },
   "10 members per Safe": {
     "message": "每个金库最多 10 个共管人"
@@ -1271,13 +1271,13 @@
     "message": "Mixin Safe 使用基于多方计算（MPC）的阈值签名方案（TSS）技术，为客户提供对其数字资产的完全控制。"
   },
   "PoS Network": {
-    "message": "PoS Network"
+    "message": "PoS 网络"
   },
   "Mixin Safe provides a decentralized MPC network by utilizing the same validator nodes from Mixin Network, a decentralized ledger launched in 2018.": {
     "message": "Mixin Safe 通过使用与 Mixin Network 相同的验证器节点来提供去中心化的 MPC 网络，Mixin Network 是一个于 2018 年推出的去中心化账本。"
   },
   "Hardware Wallet": {
-    "message": "Hardware Wallet"
+    "message": "硬件钱包"
   },
   "Mixin Safe is compatible with all popular hardware wallets to let you hold your private key conveniently.": {
     "message": "Mixin Safe 兼容所有流行的硬件钱包，让您在不牺牲过去的钱包习惯的情况下轻松保管私钥。"
