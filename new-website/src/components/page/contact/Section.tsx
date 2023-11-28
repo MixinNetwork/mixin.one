@@ -42,13 +42,27 @@ export const Section = () => {
               <div className="relative">
                 <DropdownIcon className="absolute-vertical-center right-4 stroke-black z-1" />
                 <select ref={businessTypeRef} className="p-4 w-full rounded-sm border border-zinc-800 appearance-none relative z-0">
-                  <option value="exchange">Exchange</option>
-                  <option value="fund">Fund</option>
-                  <option value="project">DAO</option>
-                  <option value="otc">OTC</option>
-                  <option value="payment">Payment</option>
-                  <option value="mining">Mining Pool</option>
-                  <option value="other">Other</option>
+                  <option value="exchange">
+                    <Translate>Exchange</Translate>
+                  </option>
+                  <option value="fund">
+                    <Translate>Fund</Translate>
+                  </option>
+                  <option value="project">
+                    <Translate>DAO</Translate>
+                  </option>
+                  <option value="otc">
+                    <Translate>OTC</Translate>
+                  </option>
+                  <option value="payment">
+                    <Translate>Payment</Translate>
+                  </option>
+                  <option value="mining">
+                    <Translate>Mining Pool</Translate>
+                  </option>
+                  <option value="other">
+                    <Translate>Other</Translate>
+                  </option>
                 </select>
               </div>
             </Item>
@@ -62,7 +76,16 @@ export const Section = () => {
               <div>
                 <Translate>Message (required)</Translate>
               </div>
-              <Input $as={"textarea"} ref={messageRef as any} placeholder="How can we help you?" type="text" inputMode="text" className={clsx("min-h-40", error === "message" && "border-red")} />
+              <Input
+                $as={"textarea"}
+                ref={messageRef as any}
+                placeholder={translate({
+                  message: "How can we help you?",
+                })}
+                type="text"
+                inputMode="text"
+                className={clsx("min-h-40", error === "message" && "border-red")}
+              />
             </Item>
           </div>
 

@@ -41,7 +41,7 @@ const Section = ({ id, selected, children }: { id: string; selected: string; chi
 
 const Item = ({ name, description, price, features, cover }: { name: React.ReactNode; description: React.ReactNode; price: number; features: React.ReactNode[]; cover: string }) => {
   return (
-    <div className="bg-zinc-100 bg-opacity-50 rounded-sm border-px border-zinc-300 pt-10 pb-25 px-5 sm:px-10">
+    <div className="bg-zinc-100 bg-opacity-50 rounded-sm border-px border-zinc-300 pt-10 pb-20 px-5 sm:px-10">
       <div className="grid gap-y-5 sm:grid-cols-2">
         <div className="text-[#333] text-3xl font-medium">{name}</div>
         <div className="sm:order-last text-[#333] text-opacity-70 text-base font-normal leading-normal">{description}</div>

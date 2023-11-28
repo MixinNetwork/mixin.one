@@ -8,6 +8,7 @@ import { NavbarItem, useThemeConfig } from "@docusaurus/theme-common"
 import { splitNavbarItems } from "@docusaurus/theme-common/internal"
 import useBaseUrl from "@docusaurus/useBaseUrl"
 import Arrow from "@site/static/img/common/nav/arrow.svg"
+import Translate from "@docusaurus/Translate"
 
 const Item = (data: NavbarItem) => {
   if (data.items?.length) {
@@ -30,7 +31,9 @@ const Item = (data: NavbarItem) => {
                   <Link key={label} to={to} className="px-5 pt-3.5 pb-2.5 hover:bg-zinc-100 rounded-sm group/item grid gap-x-5 gap-y-2.5 grid-cols-[auto_1fr] grid-rows-[auto_1fr]">
                     <img loading="lazy" src={useBaseUrl(icon)} width={24} height={24} className="row-span-2" />
                     <div className="text-[#333] text-sm font-medium leading-tight group-hover/item:text-blue-500">{label}</div>
-                    <div className="text-[#333] text-opacity-70 text-xs font-normal leading-none">{description}</div>
+                    <div className="text-[#333] text-opacity-70 text-xs font-normal leading-none">
+                      <Translate>{description}</Translate>
+                    </div>
                   </Link>
                 )
               })}

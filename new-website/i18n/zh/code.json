@@ -1323,5 +1323,35 @@
   },
   "Mixin is committed to working closely and collaboratively with regulators from around the world.": {
     "message": "Mixin 致力于与来自世界各地的监管机构密切合作。"
+  },
+  "If you have any questions, please contact us": {
+    "message": "如果您有任何疑问，请联系我们"
+  },
+  "Mixin helps you secure and grow your wealth": {
+    "message": "Mixin 帮助您保护和增长财富"
+  },
+  "Exchange": {
+    "message": "交易所"
+  },
+  "Fund": {
+    "message": "基金"
+  },
+  "DAO": {
+    "message": "DAO 组织"
+  },
+  "OTC": {
+    "message": "OTC 场外交易"
+  },
+  "Payment": {
+    "message": "支付"
+  },
+  "Mining Pool": {
+    "message": "矿池"
+  },
+  "Other": {
+    "message": "其他"
+  },
+  "How can we help you?": {
+    "message": "我们如何帮助您？"
   }
 }
