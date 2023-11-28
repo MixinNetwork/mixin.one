@@ -30,7 +30,7 @@ const Item = ({ cover, title, description }: { cover: string; title: string; des
 export const ConfidentBitcoinCustodySection = () => {
   return (
     <>
-      <SectionTitle description={<Translate>Never worry about losing your keys or centralized evil custody</Translate>}>
+      <SectionTitle description={<Translate>Never worry about losing your keys or centralized evil custody.</Translate>}>
         <Translate>Confident Bitcoin Custody</Translate>
       </SectionTitle>
       <div className="container mx-auto px-5 grid gap-5 sm:grid-cols-2 pb-15">

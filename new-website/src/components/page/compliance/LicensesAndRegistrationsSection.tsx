@@ -29,7 +29,7 @@ export const LicensesAndRegistrationsSection = () => {
               title={translate({
                 message: "Ministry of Finance",
               })}
-              description={<Translate>Registration of Activities in the Field of Virtual Currencies</Translate>}
+              description={<Translate>Registration of Activities in the Field of Virtual Currencies.</Translate>}
             />
             <Item
               cover="1.2.webp"

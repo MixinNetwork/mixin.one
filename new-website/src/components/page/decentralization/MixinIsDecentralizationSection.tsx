@@ -54,7 +54,7 @@ export const MixinIsDecentralizationSection = () => {
       />
       <SpecialLayoutItem
         title={<Translate>Mixin adopts decentralized technology</Translate>}
-        description={<Translate>We never invent our own cryptographic techniques</Translate>}
+        description={<Translate>We never invent our own cryptographic techniques.</Translate>}
         cover={require("@site/static/img/page/decentralization/3.2.1.webp").default}
         coverClassName="aspect-562/662"
         points={[

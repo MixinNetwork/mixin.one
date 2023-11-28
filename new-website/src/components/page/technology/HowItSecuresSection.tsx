@@ -17,7 +17,7 @@ const Item = ({ cover, title, description }: { cover: string; title: React.React
 export const HowItSecuresSection = () => {
   return (
     <>
-      <SectionTitle description={<Translate>We never invent our own cryptographic techniques</Translate>}>
+      <SectionTitle description={<Translate>We never invent our own cryptographic techniques.</Translate>}>
         <Translate>How it Secures</Translate>
       </SectionTitle>
 

@@ -35,7 +35,7 @@ export const TechnicalServiceSection = () => {
     <>
       <SectionTitle
         description={translate({
-          message: "We never invent our own cryptographic techniques",
+          message: "We never invent our own cryptographic techniques.",
         })}
       >
         <Translate>Reliable Technical Service</Translate>

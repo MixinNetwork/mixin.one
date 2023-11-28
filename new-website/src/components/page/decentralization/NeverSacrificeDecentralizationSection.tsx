@@ -13,7 +13,7 @@ export const NeverSacrificeDecentralizationSection = () => (
   <>
     <SectionTitle
       description={translate({
-        message: "Never worry about losing your keys or centralized evil custody",
+        message: "Never worry about losing your keys or centralized evil custody.",
       })}
     >
       <Translate>Never Sacrifice Decentralization</Translate>

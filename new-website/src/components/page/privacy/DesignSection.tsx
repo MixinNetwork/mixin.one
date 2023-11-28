@@ -15,7 +15,7 @@ const ListSection = () => {
     <div className="pb-25">
       <Item
         title={<Translate>Asset Privacy</Translate>}
-        description={<Translate>The types and quantities of assets in your wallet are only known to you</Translate>}
+        description={<Translate>The types and quantities of assets in your wallet are only known to you.</Translate>}
         points={[
           {
             cover: "1.2.1.webp",
@@ -51,7 +51,7 @@ const ListSection = () => {
       />
       <Item
         title={<Translate>Transfer Privacy</Translate>}
-        description={<Translate>Enhance UTXO transfer privacy through CryptoNote technology</Translate>}
+        description={<Translate>Enhance UTXO transfer privacy through CryptoNote technology.</Translate>}
         points={[
           {
             cover: "1.3.1.webp",

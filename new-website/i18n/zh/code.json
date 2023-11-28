@@ -368,7 +368,7 @@
     "message": "Founder and CEO, MixPay"
   },
   "We need the contributions of everyone in this ecosystem - large and small - to bring out the full potential of the technology that Satoshi proposed.": {
-    "message": "We need the contributions of everyone in this ecosystem - large and small - to bring out the full potential of the technology that Satoshi proposed."
+    "message": "我们需要这个生态系统中每个人的贡献，无论大小，才能充分发挥中本聪提出的技术的潜力。"
   },
   "Lyric": {
     "message": "Lyric"
@@ -520,7 +520,7 @@
   "Technology Detail": {
     "message": "技术细节"
   },
-  "Never worry about losing your keys or centralized evil custody": {
+  "Never worry about losing your keys or centralized evil custody.": {
     "message": "永远不必担心丢失钥匙或中心化邪恶保管。"
   },
   "Self-custody": {
@@ -596,10 +596,10 @@
     "message": "加载中..."
   },
   "Your message has been sent successfully.": {
-    "message": "你的消息已发送成功"
+    "message": "你的消息已发送成功。"
   },
   "Unknown error, please try again later.": {
-    "message": "未知错误，请稍后重试"
+    "message": "未知错误，请稍后重试。"
   },
   "Audit Report": {
     "message": "审计报告"
@@ -677,7 +677,7 @@
     "message": "我们努力构建最安全的产品来增长您的加密财富，由 Mixin Safe 提供的最高标准的去中心化托管。"
   },
   "Provide the general public with state-of-the-art crypto financial services solutions.": {
-    "message": "将最先进的去中心化比特币托管方案带给公众，安全容易上手"
+    "message": "将最先进的去中心化比特币托管方案带给公众，安全容易上手。"
   },
   "How it Secure": {
     "message": "安全原理"
@@ -742,8 +742,8 @@
   "Mixin adopts decentralized technology": {
     "message": "Mixin 结合多种去中心化技术"
   },
-  "We never invent our own cryptographic techniques": {
-    "message": "我们从不发明自己的密码技术"
+  "We never invent our own cryptographic techniques.": {
+    "message": "我们从不发明自己的密码技术。"
   },
   "Multisig": {
     "message": "多重签名"
@@ -944,7 +944,7 @@
     "message": "定制的去中心化金融服务"
   },
   "Mixin Safe powers leading organizations from Payment to DAOs, and beyond.": {
-    "message": "中心化交易所、钱包和托管服务时代的惨痛损失故事"
+    "message": "中心化交易所、钱包和托管服务时代的惨痛损失故事。"
   },
   "Reliable Service": {
     "message": "可靠的服务"
@@ -971,7 +971,7 @@
     "message": "我们提供 Mixin Messenger、WhatsApp、电子邮件、视频会议和 7x24 电话客户服务，以帮助我们的客户及时解决问题。"
   },
   "We are working on getting support of Mixin Safe in more software and hardware wallets.": {
-    "message": "我们正在努力让更多的硬件和软件钱包支持 Mixin Safe"
+    "message": "我们正在努力让更多的硬件和软件钱包支持 Mixin Safe。"
   },
   "Reliable Singer": {
     "message": "可靠的钱包"
@@ -1030,8 +1030,8 @@
   "Asset Privacy": {
     "message": "资产隐私"
   },
-  "The types and quantities of assets in your wallet are only known to you": {
-    "message": "钱包的资产种类和具体金额只有你知道"
+  "The types and quantities of assets in your wallet are only known to you.": {
+    "message": "钱包的资产种类和具体金额只有你知道。"
   },
   "Balance Privacy": {
     "message": "余额隐私"
@@ -1054,8 +1054,8 @@
   "Transfer Privacy": {
     "message": "转账隐私"
   },
-  "Enhance UTXO transfer privacy through CryptoNote technology": {
-    "message": "通过 CryptoNote 技术加强 UTXO 转账隐私"
+  "Enhance UTXO transfer privacy through CryptoNote technology.": {
+    "message": "通过 CryptoNote 技术加强 UTXO 转账隐私。"
   },
   "Privacy Transfer": {
     "message": "隐私转账"
@@ -1082,7 +1082,7 @@
     "message": "通过打开聊天的限时消息功能，您可以获得更多隐私保护"
   },
   "We can't read your messages or listen to your calls, nor can anyone else.": {
-    "message": "我们无法读取您的信息或者窃听您的通话，其他人亦然"
+    "message": "我们无法读取您的信息或者窃听您的通话，其他人亦然。"
   },
   "Privacy by Design": {
     "message": "默认隐私"
@@ -1097,7 +1097,7 @@
     "message": "放心存"
   },
   "With our decentralized product, you can easily hold assets such as Bitcoin and other cryptocurrencies, say goodbye to the terrifying issues of asset loss and theft, and focus on holding and wealth growth.": {
-    "message": "我们整合先进并且可靠的技术为您提供安全的自托管钱包和去中心化的资产恢复和遗产继承服务"
+    "message": "我们整合先进并且可靠的技术为您提供安全的自托管钱包和去中心化的资产恢复和遗产继承服务。"
   },
   "Custody Security": {
     "message": "托管安全"
@@ -1196,7 +1196,7 @@
     "message": "掌管你的数据"
   },
   "Download all your account and transaction history conveniently.": {
-    "message": "方便得下载您的所有账户和交易历史记录"
+    "message": "方便得下载您的所有账户和交易历史记录。"
   },
   "Joint Accounts": {
     "message": "协作账户"
@@ -1297,8 +1297,8 @@
   "Ministry of Finance": {
     "message": "Ministry of Finance"
   },
-  "Registration of Activities in the Field of Virtual Currencies": {
-    "message": "虚拟货币领域活动登记"
+  "Registration of Activities in the Field of Virtual Currencies.": {
+    "message": "虚拟货币领域活动登记。"
   },
   "PCI/DSS": {
     "message": "PCI/DSS"
