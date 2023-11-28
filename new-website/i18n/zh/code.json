@@ -1081,8 +1081,8 @@
   "Enhance privacy by turning on the disappearing messages feature": {
     "message": "通过打开聊天的限时消息功能，您可以获得更多隐私保护"
   },
-  "We can't read your messages or listen to your calls, nor can anyone else.": {
-    "message": "我们无法读取您的信息或者窃听您的通话，其他人亦然。"
+  "We can't read your messages or listen to your calls, nor can anyone else": {
+    "message": "我们无法读取您的信息或者窃听您的通话，其他人亦然"
   },
   "Privacy by Design": {
     "message": "默认隐私"

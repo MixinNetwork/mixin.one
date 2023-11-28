@@ -127,7 +127,7 @@ function GridSection({}) {
         <Translate>Enhance privacy by turning on the disappearing messages feature</Translate>
       </GridItem>
       <GridItem cover={<GridIcon4 />} className="order-4">
-        <Translate>We can't read your messages or listen to your calls, nor can anyone else.</Translate>
+        <Translate>We can't read your messages or listen to your calls, nor can anyone else</Translate>
       </GridItem>
     </div>
   )
