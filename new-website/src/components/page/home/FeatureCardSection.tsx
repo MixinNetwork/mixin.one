@@ -60,7 +60,7 @@ export const FeatureCardSection = () => {
       <FeatureCard
         key="Compliance"
         title={translate({ message: "Compliance" })}
-        description={translate({ message: "Mixin Safe offers a comprehensive suite of solutions to help Bitcoin investors confidently hold." })}
+        description={translate({ message: "Mixin is committed to working closely and collaboratively with regulators from around the world." })}
         subDescription={translate({ message: "Regulatory Compliance" })}
         background="compliance.webp"
         to="features/compliance"
