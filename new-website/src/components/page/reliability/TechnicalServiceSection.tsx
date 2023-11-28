@@ -3,6 +3,7 @@ import Translate, { translate } from "@docusaurus/Translate"
 import useBaseUrl from "@docusaurus/useBaseUrl"
 import clsx from "clsx"
 import GrayBackgroundWrapper from "../../common/GrayBackground"
+import { WoodGrainBackgroundTextSection } from "../../common/WoodGrainBackgroundTextSection"
 
 const Item = ({ index, title, description, left }: { index: number; title: string; description: string; left?: boolean }) => (
   <div className="flex flex-col gap-4">
@@ -16,18 +17,13 @@ const Item = ({ index, title, description, left }: { index: number; title: strin
 )
 
 const SecureAssetCustodySection = () => (
-  <div className="container mx-auto">
-    <div className="relative rounded-sm px-5 pt-10 pb-15 lg:px-19 lg:py-27 md:py-20 md:px-15 sm:px-10">
-      <img loading="lazy" src={require("@site/static/img/common/woodGrain.webp").default} className="object-cover absolute inset-0 h-full w-full -z-10" />
-      <div className="text-white text-opacity-90 text-center text-base font-normal leading-relaxed">
-        <Translate>
-          Mixin Safe is committed to providing our customers with safe and reliable asset custody solutions. We always use proven Bitcoin cryptographic technologies, such as multi-signature, timelock,
-          MPC, threshold signature, P2WSH and hardware wallet technology. These mature and reliable technologies complement each other to ensure the safety of assets and ensure that customers can use
-          our products with confidence.
-        </Translate>
-      </div>
-    </div>
-  </div>
+  <WoodGrainBackgroundTextSection>
+    <Translate>
+      Mixin Safe is committed to providing our customers with safe and reliable asset custody solutions. We always use proven Bitcoin cryptographic technologies, such as multi-signature, timelock,
+      MPC, threshold signature, P2WSH and hardware wallet technology. These mature and reliable technologies complement each other to ensure the safety of assets and ensure that customers can use our
+      products with confidence.
+    </Translate>
+  </WoodGrainBackgroundTextSection>
 )
 
 export const TechnicalServiceSection = () => {
