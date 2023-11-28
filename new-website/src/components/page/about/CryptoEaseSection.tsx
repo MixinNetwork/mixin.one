@@ -22,8 +22,8 @@ export const CryptoEaseSection = () => {
   const svgClassName = "w-9 h-9 p-3 lg:w-12 lg:h-12 lg:p-4 box-content row-span-full bg-white rounded-lg"
   return (
     <>
-      <SectionTitle description={<Translate>We go out of our way to ensure that you have the utmost privacy.</Translate>}>
-        <Translate>We believe hold crypto shouldn't be so hard and expensive</Translate>
+      <SectionTitle description={<Translate>Mixin team helps you better manage your wealth.</Translate>}>
+        <Translate>About Us</Translate>
       </SectionTitle>
       <GrayBackgroundWrapper bgClassName="block!">
         <div className="mt-15! md:mt-20! container mx-auto px-5 grid gap-y-10 gap-x-6 pb-30 md:grid-cols-3">
