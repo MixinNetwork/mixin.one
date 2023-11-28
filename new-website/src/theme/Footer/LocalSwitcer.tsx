@@ -4,6 +4,7 @@ import { useAlternatePageUtils } from "@docusaurus/theme-common/internal"
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext"
 import DropdownIcon from "@site/static/img/common/dropdown.svg"
 import DropdownNavbarItem from "@theme/NavbarItem/DropdownNavbarItem"
+import Cookies from "js-cookie"
 
 export function LocalSwitcer({}) {
   const {
@@ -19,14 +20,18 @@ export function LocalSwitcer({}) {
     })}`
     // preserve ?search#hash suffix on locale switches
     const to = `${baseTo}${search}${hash}`
+    const lang = localeConfigs[locale]!.htmlLang
     return {
       label: localeConfigs[locale]!.label,
-      lang: localeConfigs[locale]!.htmlLang,
+      lang: lang,
       to,
       target: "_self",
       autoAddBaseUrl: false,
       // selected: locale === currentLocale,
       className: "text-white! text-opacity-60 text-base font-medium",
+      onClick: () => {
+        Cookies.set("lang", lang)
+      },
     }
   })
 
