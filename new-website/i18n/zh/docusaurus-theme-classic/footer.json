@@ -96,7 +96,7 @@
     "description": "The label of footer link with label=Terms of Use linking to https://mixin.one/pages/terms"
   },
   "copyright": {
-    "message": "Copyright © 2023, Mixin.All rights reserved.",
+    "message": "Copyright © 2023 Mixin",
     "description": "The footer copyright"
   }
 }
