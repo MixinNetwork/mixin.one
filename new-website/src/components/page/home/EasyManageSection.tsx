@@ -49,7 +49,7 @@ export const EasyManageSection = () => {
           title={translate({
             message: "Joint Accounts",
           })}
-          description={translate({ message: "Manage assets with your family, friends and colleagues" })}
+          description={translate({ message: "Manage assets with your family, friends and colleagues." })}
           icon="joint.svg"
         />
         <EasyManageItem
