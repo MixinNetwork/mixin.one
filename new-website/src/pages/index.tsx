@@ -15,6 +15,7 @@ import { SupportedAssetSection } from "../components/page/home/SupportedAssetSec
 import { TypeAnimation } from "react-type-animation"
 import { GetStartedSection } from "../components/common/GetStartedSection"
 import LocalLink from "../components/common/LocaleLink"
+import useDocusaurusContext from "@docusaurus/useDocusaurusContext"
 
 const Header = () => {
   const title = replace(
@@ -108,8 +109,12 @@ const Header = () => {
 }
 
 export default function Root() {
+  const {
+    siteConfig: { title: siteTitle },
+  } = useDocusaurusContext()
+  const i18nSiteTitle = translate({ message: siteTitle })
   return (
-    <Layout hiddenNavBar>
+    <Layout title={i18nSiteTitle} hiddenNavBar>
       <Header />
       <StatisticGridSection />
       <SolutionSection />
