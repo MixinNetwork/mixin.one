@@ -22,7 +22,7 @@ export const HowItSecuresSection = () => {
       </SectionTitle>
 
       <div className="container mx-auto px-5">
-        <img loading="lazy" src={require("@site/static/img/page/technology/1.1.webp").default} className="aspect-335/320 w-full" />
+        <img loading="lazy" src={require("@site/static/img/page/technology/1.1.webp").default} className="aspect-3582/2517 w-full" />
         <div className="mt-20 md:mt-5 grid gap-y-5 auto-rows-fr pb-45">
           <Item
             cover="1.2.webp"
