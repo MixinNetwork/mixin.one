@@ -1,7 +1,7 @@
-import React from "react"
+import React, { ReactNode } from "react"
 import clsx from "clsx"
 import ErrorBoundary from "@docusaurus/ErrorBoundary"
-import { PageMetadata, SkipToContentFallbackId, ThemeClassNames } from "@docusaurus/theme-common"
+import { SkipToContentFallbackId, ThemeClassNames } from "@docusaurus/theme-common"
 import { useKeyboardNavigation } from "@docusaurus/theme-common/internal"
 import SkipToContent from "@theme/SkipToContent"
 import AnnouncementBar from "@theme/AnnouncementBar"
@@ -12,6 +12,7 @@ import ErrorPageContent from "@theme/ErrorPageContent"
 import type { Props } from "@theme/Layout"
 import styles from "./styles.module.css"
 import { translate } from "@docusaurus/Translate"
+import { PageMetadata } from "./PageMetadata"
 
 export default function Layout(
   props: Props & {
@@ -30,14 +31,10 @@ export default function Layout(
 
   useKeyboardNavigation()
 
-  const defaultTitle = translate({
-    message: "Mixin - Grow and Secure Your Crypto Wealth with Decentralized Solutions",
-  })
-
   return (
     <LayoutProvider>
       <PageMetadata
-        title={title ? title + " | " + defaultTitle : defaultTitle}
+        title={title}
         keywords={[
           translate({ message: "Mixin" }),
           translate({ message: "Bitcoin" }),

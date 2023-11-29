@@ -3,7 +3,7 @@ import type { Config } from "@docusaurus/types"
 import type * as Preset from "@docusaurus/preset-classic"
 
 const config: Config = {
-  title: "",
+  title: "Mixin - Grow and Secure Your Crypto Wealth with Decentralized Solutions",
 
   favicon: "img/favicon.png",
 
