@@ -304,9 +304,6 @@
   "Compliance": {
     "message": "许可合规"
   },
-  "Protect your crypto with MPC-TSS that you control and get access to trading, inheritance, and loans—all backed by the best support in the industry.": {
-    "message": "使用您控制的 MPC-TSS 保护您的加密货币，并获得交易、继承和贷款的权限，所有这些都由行业内最好的支持提供支持。"
-  },
   "Get started": {
     "message": "开始上手"
   },
@@ -352,9 +349,6 @@
   "Get Started": {
     "message": "开始上手"
   },
-  "Experience the latest innovations in Bitcoin industry and secure your Bitcoin starting with just $10 per year!": {
-    "message": "我们专业的比特币财富管理人员随时准备向您展示使用完全去中心化的托管套件来管理您的比特币。"
-  },
   "Schedule a demo": {
     "message": "预约演示"
   },
@@ -378,9 +372,6 @@
   },
   "Not your keys, not your coins. Though managing private keys may present a challenge, we should remain steadfast in avoiding centralized firms as custodians for Bitcoin holdings.": {
     "message": "不是你的私钥，就不是你的币。虽然自己管理私钥充满挑战，并不是一件大众熟悉的事情，但我们要时刻牢记比特币诞生的初心。没有去中心化的比特币就一无是处，永远不能依靠中心化机构来托管资产。"
-  },
-  "Mixin Safe offers a comprehensive suite of solutions to help Bitcoin investors confidencely hold.": {
-    "message": "管理比特币私钥非常复杂，要让这件事情变得简单需要一系列的去中心化的软件来确保流程顺畅。Mixin Safe 使用一整套成熟的技术方案让去中心化私钥管理变得触手可及。"
   },
   "Employing the latest innovations in the industry while still leveraging Bitcoin’s proven cryptography.": {
     "message": "Mixin Safe 使用最新的技术，同时利用比特币的成熟密码学。"
@@ -487,9 +478,6 @@
   "We go out of our way to ensure that you have the utmost privacy.": {
     "message": "我们竭尽全力确保您拥有最大的隐私。"
   },
-  "We believe hold crypto shouldn't be so hard and expensive": {
-    "message": "我们相信持有加密货币不应该那么困难和昂贵"
-  },
   "Founded in Christmas 2017 as a small team of less than 20 people, our mission is to provide convenience, security and privacy in digital assets and messages.": {
     "message": "成立于2017年底，拥有多年区块链技术经验。我们的使命是为数字资产和消息提供便利、安全和隐私。"
   },
@@ -540,9 +528,6 @@
   },
   "Estate planning can help you safely pass on your crypto wealth to your descendants. Your heirs can easily inherit your wealth without any professional knowledge.": {
     "message": "遗产规划能帮助您家比特币等加密货币财富安全的传承给子孙后代，您的继承人无需任何专业知识即可轻松继承您的财富。"
-  },
-  "Mixin Safe powers leading organizations from Payment to DAOs, and beyond": {
-    "message": "Mixin Safe 为领先的组织提供支持，从支付到 DAO 等等。"
   },
   "Don't worry": {
     "message": "放心用"
@@ -595,32 +580,11 @@
   "Unknown error, please try again later.": {
     "message": "未知错误，请稍后重试。"
   },
-  "Audit Report": {
-    "message": "审计报告"
-  },
-  "View security audits": {
-    "message": "查看审计报告"
-  },
-  "We Make Managing Digital Assets Easy": {
-    "message": "如此简单"
-  },
   "6 key features to allow hassle-free day-to-day management.": {
     "message": "六大关键功能让日常管理无忧无虑。"
   },
   "Dashboard": {
     "message": "账户一览"
-  },
-  "Easily view your assets distribution any where, anytime": {
-    "message": "随时随地的查看您的资产信息，方便快捷是 Mixin Safe 产品设计的信条。"
-  },
-  "Downloadable history": {
-    "message": "数据永远归您"
-  },
-  "Make account reconciliation easy and fiexible": {
-    "message": "因为完全去中心化的产品设计，您可以随时下载完整的账户与交易信息。"
-  },
-  "Joint": {
-    "message": "无忧协作"
   },
   "Manage assets with your family, friends and colleagues.": {
     "message": "与家人、朋友或者同事共同管理多重签名钱包，体验从未如此顺滑。"
@@ -634,23 +598,11 @@
   "Whitelist": {
     "message": "安全白名单"
   },
-  "Cater to your internal risk control needs": {
-    "message": "通过多重签名管理的收款人白名单，可以避免将您的币发给不合适的人。"
-  },
   "Notification": {
     "message": "实时通知"
   },
-  "Timely participation in funding approval": {
-    "message": "多种途径的实时通知让您随时掌握钱包动态，及时完成多重签名的交易流程审批。"
-  },
-  "View our plans": {
-    "message": "会员与价格"
-  },
   "Learn Decentralization": {
     "message": "如何去中心化"
-  },
-  "See the Solutions": {
-    "message": "查看解决方案"
   },
   "Bitcoin Technology": {
     "message": "比特币技术"
@@ -658,38 +610,17 @@
   "Privacy Technology": {
     "message": "隐私技术"
   },
-  "Our product is decentralization, safer, stronger and cheaper": {
-    "message": "我们的方案完全去中心化，并且更安全、方便又价格合理。"
-  },
-  "The open source decentralized MPC multi-currency wallet supports end-to-end encrypted chat, free transfers to contacts, legal currency deposits, social recovery and other functions.": {
-    "message": "开源的去中心化 MPC 多币种钱包，支持端对端加密聊天、免费转账给联系人、法币充值、社交恢复等功能。"
-  },
   "Mixin Safe provides the general public with cutting-edge Bitcoin custody solutions. Bitcoin custody should never sacrifice decentralization, always be confidence and reliability.": {
     "message": "Mixin Safe 提供给公众最先进的比特币托管方案，比特币托管绝不应该牺牲去中心化，始终要信心满满。"
   },
   "We strive to build the safest products to grow your crypto wealth, with the highest standard of decentralized custodian powered by Mixin Safe.": {
     "message": "我们努力构建最安全的产品来增长您的加密财富，由 Mixin Safe 提供的最高标准的去中心化托管。"
   },
-  "Provide the general public with state-of-the-art crypto financial services solutions.": {
-    "message": "将最先进的去中心化比特币托管方案带给公众，安全容易上手。"
-  },
-  "How it Secure": {
-    "message": "安全原理"
-  },
   "Pricing & Plans": {
     "message": "开始上手"
   },
   "Since": {
     "message": "始于"
-  },
-  "Assets under management": {
-    "message": "资产管理规模"
-  },
-  "1B": {
-    "message": "$10 亿+"
-  },
-  "Per day transaction volume": {
-    "message": "每日转账金额"
   },
   "Customers": {
     "message": "服务客户"
