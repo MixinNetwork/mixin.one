@@ -11,6 +11,7 @@ import LayoutProvider from "@theme/Layout/Provider"
 import ErrorPageContent from "@theme/ErrorPageContent"
 import type { Props } from "@theme/Layout"
 import styles from "./styles.module.css"
+import { translate } from "@docusaurus/Translate"
 
 export default function Layout(
   props: Props & {
@@ -29,9 +30,31 @@ export default function Layout(
 
   useKeyboardNavigation()
 
+  const defaultTitle = translate({
+    message: "Mixin - Grow and Secure Your Crypto Wealth with Decentralized Solutions",
+  })
+
   return (
     <LayoutProvider>
-      <PageMetadata title={title} description={description} />
+      <PageMetadata
+        title={title ? title + " | " + defaultTitle : defaultTitle}
+        keywords={[
+          translate({ message: "Mixin" }),
+          translate({ message: "Bitcoin" }),
+          translate({ message: "Ethereum" }),
+          translate({ message: "MobileCoin" }),
+          translate({ message: "Mixin Network" }),
+          translate({ message: "Mixin Messenger" }),
+          translate({ message: "Signal" }),
+        ]}
+        description={
+          description ||
+          translate({
+            message:
+              "Mixin Network is a free and lightning fast peer-to-peer transactional network for digital assets. Launched in 2017, the network is now securing more than $1B BTC, ETH and other popular cryptocurrencies.",
+          })
+        }
+      />
 
       <SkipToContent />
 

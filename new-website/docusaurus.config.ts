@@ -4,23 +4,7 @@ import type * as Preset from "@docusaurus/preset-classic"
 
 const config: Config = {
   title: "Mixin - Grow and Secure Your Crypto Wealth with Decentralized Solutions",
-  headTags: [
-    {
-      tagName: "meta",
-      attributes: {
-        name: "keywords",
-        content: "Mixin,Bitcoin,Ethereum,MobileCoin,Mixin Network,Mixin Messenger,Signal",
-      },
-    },
-    {
-      tagName: "meta",
-      attributes: {
-        name: "description",
-        content:
-          "Mixin Network is a free and lightning fast peer-to-peer transactional network for digital assets. Launched in 2017, the network is now securing more than $1B BTC, ETH and other popular cryptocurrencies.",
-      },
-    },
-  ],
+
   // tagline: "Dinosaurs are cool",
   favicon: "img/favicon.png",
 
