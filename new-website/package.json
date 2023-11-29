@@ -1,6 +1,6 @@
 {
-  "name": "new-website",
-  "version": "0.0.0",
+  "name": "mixin",
+  "version": "0.0.2",
   "private": true,
   "scripts": {
     "docusaurus": "docusaurus",
