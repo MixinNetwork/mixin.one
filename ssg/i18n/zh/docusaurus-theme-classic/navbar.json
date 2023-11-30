@@ -1,0 +1,30 @@
+{
+  "title": {
+    "message": "Mixin",
+    "description": "The title in the navbar"
+  },
+  "item.label.Technology": {
+    "message": "技术方案",
+    "description": "Navbar item with label Technology"
+  },
+  "item.label.Pricing": {
+    "message": "价格",
+    "description": "Navbar item with label Pricing"
+  },
+  "item.label.Company": {
+    "message": "公司",
+    "description": "Navbar item with label Company"
+  },
+  "item.label.Get Started": {
+    "message": "开始上手",
+    "description": "Navbar item with label Get Started"
+  },
+  "item.label.Contact Us": {
+    "message": "联系我们",
+    "description": "Navbar item with label Contact Us"
+  },
+  "item.label.About Us": {
+    "message": "关于我们",
+    "description": "Navbar item with label About Us"
+  }
+}
