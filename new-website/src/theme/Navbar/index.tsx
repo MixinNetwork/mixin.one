@@ -53,7 +53,7 @@ const MobileItem = (data: NavbarItem) => {
     return (
       <div>
         <input id={id} type="checkbox" className="hidden! peer" />
-        <label htmlFor={id} className={clsx("group py-8 px-6 flex flex-row justify-between peer-checked:svg:-rotate-180")}>
+        <label htmlFor={id} className={clsx("group py-8 px-6 flex flex-row justify-between peer-checked:svg:-rotate-180 not-default")}>
           <div className={clsx("group-hover:text-zinc-200", defaultClassName)}>{data.label}</div>
           <Arrow className="transition-all duration-300" />
         </label>
