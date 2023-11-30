@@ -16,10 +16,6 @@ label:not(.not-default) {
   @apply hover:opacity-80 hover:active:focus:opacity-40 disabled:opacity-20 cursor-pointer;
 }
 
-a {
-  @apply hover:no-underline hover:text-zinc-200 hover:text-op-100;
-}
-
 button {
   @apply select-none bg-transparent leading-none;
 }

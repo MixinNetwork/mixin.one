@@ -6,10 +6,10 @@ import SvgIcon3 from "@site/static/img/page/reliability/2.3.svg"
 import SvgIcon4 from "@site/static/img/page/reliability/2.4.svg"
 
 const Item = ({ icon, title, description }: { title: string; description: string; icon: React.ReactNode }) => (
-  <div className="pt-7 px-5 pb-26 rounded-sm bg-zinc-100 text-[#333] hover:bg-zinc-800 hover:text-white">
+  <div className="pt-7 px-5 pb-26 rounded-sm bg-zinc-100 text-[#333]">
     {icon}
     <div className="mt-10.5 text-xl font-medium leading-snug">{title}</div>
-    <div className="mt-5 text-base font-normal leading-7 parent-hover:text-[#333] parent-hover:text-op-80">{description}</div>
+    <div className="mt-5 text-base font-normal leading-7">{description}</div>
   </div>
 )
 

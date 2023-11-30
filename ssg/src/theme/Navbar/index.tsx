@@ -28,9 +28,9 @@ const Item = (data: NavbarItem) => {
                 }
 
                 return (
-                  <Link key={label} to={to} className="px-5 pt-3.5 pb-2.5 hover:bg-zinc-100 rounded-sm group/item grid gap-x-5 gap-y-2.5 grid-cols-[auto_1fr] grid-rows-[auto_1fr]">
+                  <Link key={label} to={to} className="px-5 pt-3.5 pb-2.5 rounded-sm grid gap-x-5 gap-y-2.5 grid-cols-[auto_1fr] grid-rows-[auto_1fr]">
                     <img loading="lazy" src={useBaseUrl(icon)} width={24} height={24} className="row-span-2" />
-                    <div className="text-[#333] text-sm font-medium leading-tight group-hover/item:text-blue-500">{label}</div>
+                    <div className="text-[#333] text-sm font-medium leading-tight">{label}</div>
                     <div className="text-[#333] text-opacity-70 text-xs font-normal leading-none">
                       <Translate>{description}</Translate>
                     </div>
@@ -54,7 +54,7 @@ const MobileItem = (data: NavbarItem) => {
       <div>
         <input id={id} type="checkbox" className="hidden! peer" />
         <label htmlFor={id} className={clsx("group py-8 px-6 flex flex-row justify-between peer-checked:svg:-rotate-180 not-default")}>
-          <div className={clsx("group-hover:text-zinc-200", defaultClassName)}>{data.label}</div>
+          <div className={clsx(defaultClassName)}>{data.label}</div>
           <Arrow className="transition-all duration-300" />
         </label>
 
@@ -63,7 +63,7 @@ const MobileItem = (data: NavbarItem) => {
             <div className="text-[#333] text-opacity-70 text-xs font-normal uppercase pb-5 px-6 pt-8">{data.label}</div>
             <div>
               {data.items.map((item) => (
-                <Link key={item.label} {...item} className="block py-3.5 px-7 text-[#333] hover:text-blue-500 hover:bg-zinc-100 text-sm leading-tight">
+                <Link key={item.label} {...item} className="block py-3.5 px-7 text-[#333] text-sm leading-tight">
                   {item.label}
                 </Link>
               ))}
