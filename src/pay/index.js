@@ -257,7 +257,7 @@ Pay.prototype = {
         mixinURL,
         redirectingIcon
       };
-      if (asset) {
+      if (asset && amount) {
         const useAmount = new Decimal(asset.price_usd).times(amount);
         data.iconUrl = asset.icon_url;
         data.iconTitle = `${amount} ${asset.symbol}`;
