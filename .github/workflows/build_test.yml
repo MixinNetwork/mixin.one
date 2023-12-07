@@ -1,4 +1,4 @@
-name: Build test
+name: Publish Release
 
 on:
   push:
@@ -35,3 +35,18 @@ jobs:
       - name: Build SSG
         working-directory: ssg/
         run: pnpm run build
+
+      - name: Create release directory
+        run: mkdir release
+
+      - name: Move files to release directory
+        run: |
+          mv dist release/spa
+          mv ssg/build release/ssg
+
+      - uses: montudor/action-zip@v1
+        with:
+          args: zip -qq -r release.zip release
+
+      - name: Show files
+        run: ls
