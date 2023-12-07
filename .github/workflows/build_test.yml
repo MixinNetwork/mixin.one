@@ -1,9 +1,7 @@
-name: Publish Release
+name: Build test
 
 on:
   push:
-    tags:
-      - "v*.*.*"
 
 jobs:
   build-and-publish:
@@ -37,17 +35,3 @@ jobs:
       - name: Build SSG
         working-directory: ssg/
         run: pnpm run build
-
-      - name: Create release directory
-        run: mkdir release
-
-      - name: Move files to release directory
-        run: |
-          mv dist release/spa
-          mv ssg/build release/ssg
-
-      - name: Create release
-        uses: softprops/action-gh-release@v1
-        if: startsWith(github.ref, 'refs/tags/')
-        with:
-          files: release/
