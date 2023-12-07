@@ -38,7 +38,7 @@ export const CryptoEaseSection = () => {
             icon={<Icon2 className={svgClassName} />}
             title={<Translate>1M+</Translate>}
             description={
-              <Translate>More than 1 million users use Mixin Safe-driven social, wallet, DeFi, games and other products, which are deeply loved by users for their safety and ease of use.</Translate>
+              <Translate>More than 1,000,000 customers use Mixin products and services to manage and grow their wealth. Mixin is deeply loved by our customers for its safety and ease of use.</Translate>
             }
           />
           <Item
@@ -46,7 +46,7 @@ export const CryptoEaseSection = () => {
             title={<Translate>$1B+</Translate>}
             description={
               <Translate>
-                The Mixin team assists users in managing more than US$1 billion in assets. The service is stable and there have been no security incidents, which is deeply trusted by users.
+                The Mixin team assists customers in managing more than US$1 billion in crypto assets. The service is reliable and battle-tested, which is deeply trusted by our customers.
               </Translate>
             }
           />

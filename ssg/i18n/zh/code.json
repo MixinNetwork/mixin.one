@@ -382,8 +382,8 @@
   "Who developed Mixin Safe?": {
     "message": "谁开发了 Mixin Safe?"
   },
-  "Mixin Safe was developed by the team behind Mixin Network, our team members have over 10 years of experience in blockchain and Bitcoin technology. Mixin Network is a public decentralized ledger, launched in 2018 and has been running stably ever since, with assets exceeding 1 billion dollars and zero security incidents.": {
-    "message": "我们是开发 Mixin Network 的团队，我们的团队成员在区块链和比特币技术方面拥有超过 10 年的经验。Mixin Network 是一个公开的去中心化账本，于 2018 年推出，此后一直稳定运行，资产超过 10 亿美元，安全事件为零。"
+  "Mixin Safe was developed by the team behind Mixin Network, our team members have over 10 years of experience in blockchain and Bitcoin technology. Mixin Network is a public decentralized ledger, launched in 2018 and has been running stably ever since, with assets exceeding 1 billion dollars.": {
+    "message": "我们是开发 Mixin Network 的团队，我们的团队成员在区块链和比特币技术方面拥有超过 10 年的经验。Mixin Network 是一个公开的去中心化账本，于 2018 年推出，此后一直稳定运行，资产超过 10 亿美元。"
   },
   "Where is the company of Mixin Safe located?": {
     "message": "Mixin Safe 的公司在哪里？"
@@ -484,14 +484,14 @@
   "1M+": {
     "message": "100 万+"
   },
-  "More than 1 million users use Mixin Safe-driven social, wallet, DeFi, games and other products, which are deeply loved by users for their safety and ease of use.": {
+  "More than 1,000,000 customers use Mixin products and services to manage and grow their wealth. Mixin is deeply loved by our customers for its safety and ease of use.": {
     "message": "我们以隐私为中心的产品，从端到端的加密信使到钱包，因其安全性和易用性而受到超过 100 万客户的喜爱。"
   },
   "$1B+": {
     "message": "$10 亿+"
   },
-  "The Mixin team assists users in managing more than US$1 billion in assets. The service is stable and there have been no security incidents, which is deeply trusted by users.": {
-    "message": "5 年多来，Mixin 一直在帮助客户保护超过 10 亿美元的加密资产，这项久经考验的技术已实现零安全事件。"
+  "The Mixin team assists customers in managing more than US$1 billion in crypto assets. The service is reliable and battle-tested, which is deeply trusted by our customers.": {
+    "message": "六年多来，Mixin 一直在帮助客户保护超过 10 亿美元的加密资产，技术久经考验，客户遍布全球。"
   },
   "We build open source software that always puts security, privacy and decentralization first.": {
     "message": "我们构建的开源软件始终将安全、隐私和去中心化放在首位。"
