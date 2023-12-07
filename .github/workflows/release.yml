@@ -46,8 +46,12 @@ jobs:
           mv dist release/spa
           mv ssg/build release/ssg
 
+      - uses: montudor/action-zip@v1
+        with:
+          args: zip -qq -r release.zip release
+
       - name: Create release
         uses: softprops/action-gh-release@v1
         if: startsWith(github.ref, 'refs/tags/')
         with:
-          files: release/
+          files: release.zip
