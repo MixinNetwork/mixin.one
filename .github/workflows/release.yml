@@ -1,0 +1,48 @@
+name: Publish Release
+
+on:
+  push:
+    tags:
+      - "v*.*.*"
+
+jobs:
+  build-and-publish:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "lts"
+
+      - name: Install dependencies
+        run: npm i
+
+      - name: Install dependencies for SSG
+        working-directory: ssg/
+        run: npm i
+
+      - name: Build SPA
+        working-directory: .
+        run: npm run build
+
+      - name: Build SSG
+        working-directory: ssg/
+        run: npm run build
+
+      - name: Create release directory
+        run: mkdir release
+
+      - name: Move files to release directory
+        run: |
+          mv dist release/spa
+          mv ssg/build release/ssg
+
+      - name: Create release
+        uses: softprops/action-gh-release@v1
+        if: startsWith(github.ref, 'refs/tags/')
+        with:
+          files: release/
