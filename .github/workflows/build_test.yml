@@ -1,10 +1,8 @@
-name: Build test
-
 on:
   push:
 
 jobs:
-  build:
+  build-test:
     runs-on: ubuntu-latest
 
     steps:
