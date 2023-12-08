@@ -36,7 +36,7 @@ export const StatisticGridSection = () => (
       />
       <StatisticGridItem
         title={translate({
-          message: "$1M+",
+          message: "1M+",
         })}
         description={translate({
           message: "Customers",
