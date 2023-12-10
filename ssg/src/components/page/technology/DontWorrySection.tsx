@@ -102,7 +102,7 @@ export const DontWorrySection = () => (
           }),
           description: (
             <Translate>
-              End-to-end encryption technology and CryptoNode technology protect the privacy of your chat and transfer information. The information is encrypted and ensures that only the two parties
+              End-to-end encryption technology and CryptoNote technology protect the privacy of your chat and transfer information. The information is encrypted and ensures that only the two parties
               of the interaction can decrypt it. No third party can peep into your privacy data.
             </Translate>
           ),

@@ -553,8 +553,8 @@
   "Enhanced privacy": {
     "message": "隐私加强"
   },
-  "End-to-end encryption technology and CryptoNode technology protect the privacy of your chat and transfer information. The information is encrypted and ensures that only the two parties of the interaction can decrypt it. No third party can peep into your privacy data.": {
-    "message": "端对端加密技术和 CryptoNode 技术保护您的聊天和转账信息隐私，信息经过加密并确保只有交互双方才能解密，任何第三方都无法窥探您的隐私数据。"
+  "End-to-end encryption technology and CryptoNote technology protect the privacy of your chat and transfer information. The information is encrypted and ensures that only the two parties of the interaction can decrypt it. No third party can peep into your privacy data.": {
+    "message": "端对端加密技术和 CryptoNote 技术保护您的聊天和转账信息隐私，信息经过加密并确保只有交互双方才能解密，任何第三方都无法窥探您的隐私数据。"
   },
   "Fixed fee": {
     "message": "费用固定"
