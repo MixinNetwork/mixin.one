@@ -39,9 +39,9 @@
     "message": "Reddit",
     "description": "The label of footer link with label=Reddit linking to https://www.reddit.com/r/mixin/"
   },
-  "link.item.label.Developer Center": {
+  "link.item.label.Developer Portal": {
     "message": "开发者中心",
-    "description": "The label of footer link with label=Developer Center linking to https://developers.mixin.one/"
+    "description": "The label of footer link with label=Developer Portal linking to https://developers.mixin.one/"
   },
   "link.item.label.Open Source": {
     "message": "开源代码",

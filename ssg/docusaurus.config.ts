@@ -145,7 +145,7 @@ const config: Config = {
           title: "Developers",
           items: [
             {
-              label: "Developer Center",
+              label: "Developer Portal",
               href: "https://developers.mixin.one/",
             },
             {
@@ -155,10 +155,6 @@ const config: Config = {
             {
               label: "Mixin Route",
               href: "https://route.mixin.one/",
-            },
-            {
-              label: "Mixin Messenger",
-              href: "https://messenger.mixin.one/",
             },
             {
               label: "Mixin Network",
