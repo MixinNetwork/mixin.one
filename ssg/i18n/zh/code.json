@@ -754,19 +754,19 @@
   "Free": {
     "message": "免费"
   },
-  "Secure and easy-to-use MPC hot wallet that meets the daily needs of small amounts of bitcoin storage.": {
-    "message": "安全易用的 MPC 热钱包，满足日常小额比特币存储需求。"
+  "Mixin Messenger provides a secure and easy-to-use wallet, that meets the daily needs of small amounts of bitcoin storage.": {
+    "message": "Mixin Messenger 提供安全易用的 MPC 热钱包，满足日常小额比特币存储需求。"
   },
-  "MPC Wallet": {
-    "message": "MPC 钱包"
+  "Self-custodial MPC wallet": {
+    "message": "自托管 MPC 钱包"
   },
-  "Buy, sell and swap crypto": {
+  "Buy, sell and swap cryptos": {
     "message": "买、卖和交换加密货币"
   },
-  "Supports 47 blockchains": {
-    "message": "支持 47 条链"
+  "Supports thousands of cryptos": {
+    "message": "支持数千种加密货币"
   },
-  "Free transfer": {
+  "Free transactions": {
     "message": "免费转账"
   },
   "Social recovery": {
@@ -784,7 +784,7 @@
   "Everything in Free": {
     "message": "包含所有免费版的功能"
   },
-  "Free Mixin Anonymous Number": {
+  "Mixin Anonymous Number": {
     "message": "免费 Mixin 匿名号"
   },
   "Create 2 Safes": {

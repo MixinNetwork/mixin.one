@@ -14,7 +14,7 @@ const Advance = () => {
       features={[
         <Translate>Everything in Free</Translate>,
         <Translate>3 members per Safe</Translate>,
-        <Translate>Free Mixin Anonymous Number</Translate>,
+        <Translate>Mixin Anonymous Number</Translate>,
         <Translate>3 Safe members in total</Translate>,
         <Translate>Create 2 Safes</Translate>,
         <Translate>Paid recovery service</Translate>,
@@ -124,13 +124,13 @@ export const PlanSection = () => {
           <Section id="personal" selected={selected}>
             <Item
               name={<Translate>Free</Translate>}
-              description={<Translate>Secure and easy-to-use MPC hot wallet that meets the daily needs of small amounts of bitcoin storage.</Translate>}
+              description={<Translate>Mixin Messenger provides a secure and easy-to-use wallet, that meets the daily needs of small amounts of bitcoin storage.</Translate>}
               price={0}
               features={[
-                <Translate>MPC Wallet</Translate>,
-                <Translate>Buy, sell and swap crypto</Translate>,
-                <Translate>Supports 47 blockchains</Translate>,
-                <Translate>Free transfer</Translate>,
+                <Translate>Self-custodial MPC wallet</Translate>,
+                <Translate>Buy, sell and swap cryptos</Translate>,
+                <Translate>Supports thousands of cryptos</Translate>,
+                <Translate>Free transactions</Translate>,
                 <Translate>Social recovery</Translate>,
                 <Translate>Free email and chat support</Translate>,
               ]}
