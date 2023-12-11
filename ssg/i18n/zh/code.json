@@ -706,8 +706,8 @@
   "The Mt. Gox Debacle": {
     "message": "Mt. Gox 事件"
   },
-  "Mt. Gox was a bitcoin exchange based in Shibuya, Tokyo, Japan. Launched in 2010, it was handling over 70% of all bitcoin (BTC) transactions worldwide by early 2014, when it abruptly ceased operations amid revelations of its involvement in the loss/theft of hundreds of thousands of bitcoins, then worth hundreds of millions in US dollars. Although 200,000 bitcoins have since been found, the reasons for the disappearance—theft, fraud, mismanagement, or a combination of these—were initially unclear.": {
-    "message": "Mt. Gox 是一家位于日本东京涩谷的比特币交易所。它于 2010 年启动，到 2014 年初，它处理了全球 70% 以上的比特币（BTC）交易。然而，当揭示其涉及数十万比特币的丢失/盗窃时，它突然停止运营。2014 年 2 月，Mt. Gox 暂停交易，关闭其网站和交易服务，并向债权人申请破产保护。尽管此后找到了 20 万比特币，但比特币消失的原因——盗窃、欺诈、管理不善或这些原因的组合——最初并不清楚。"
+  "Mt. Gox was a bitcoin exchange based in Shibuya, Tokyo, Japan. Launched in 2010, it was handling over 70% of all bitcoin (BTC) transactions worldwide by early 2014, when it abruptly ceased operations amid revelations of its involvement in the loss/theft of hundreds of thousands of bitcoins, then worth hundreds of millions in US dollars. Although 200,000 bitcoins have since been \"found\", the reasons for the disappearance—theft, fraud, mismanagement, or a combination of these—were initially unclear.": {
+    "message": "Mt. Gox 是一家总部位于日本东京涩谷的比特币交易所。2010 年推出，到 2014 年初，它处理了全球 70% 以上的比特币（BTC）交易，当时它突然停止运营，因涉嫌参与数十万比特币的丢失/盗窃而被曝光，当时价值数亿美元。尽管后来找回了 20 万比特币，但最初丢失的原因——盗窃、欺诈、管理不善或以上原因的组合——仍不清楚。"
   },
   "The Price of Centralization": {
     "message": "中心化的代价"
@@ -1176,9 +1176,6 @@
   },
   "Transaction Volume": {
     "message": "交易量"
-  },
-  "$1M+": {
-    "message": "$1M+"
   },
   "With the Bitcoin native multi-signature and timelock script, Mixin Safe can help our customers to better pass on Bitcoin assets to their descendants, in a decentralized and convenient way.": {
     "message": "借助比特币原生多重签名和时间锁脚本，Mixin Safe 可以帮助我们的客户以去中心化和便捷的方式更好地将比特币资产传递给他们的后代。"
