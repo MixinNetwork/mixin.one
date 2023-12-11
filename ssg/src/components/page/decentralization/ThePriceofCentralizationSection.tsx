@@ -14,11 +14,7 @@ const SpecialItem = () => (
       </div>
       <div className="text-white text-opacity-90 text-sm font-normal leading-snug">
         <Translate>
-          Mt. Gox was a bitcoin exchange based in Shibuya, Tokyo, Japan. Launched in 2010, it was handling over 70% of all bitcoin (BTC) transactions worldwide by early 2014, when it abruptly ceased
-          operations amid revelations of its involvement in the loss/theft of hundreds of thousands of bitcoins, then worth hundreds of millions in US dollars. In February 2014, Mt. Gox suspended
-          trading, closed its website and exchange service, and filed for bankruptcy protection from creditors. In April 2014, the company began liquidation proceedings. Although 200,000 bitcoins have
-          since been "found", the reasons for the disappearance—theft, fraud, mismanagement, or a combination of these—were initially unclear. New evidence presented in April 2015 by Tokyo security
-          company WizSec led them to conclude that "most or all of the missing bitcoins were stolen straight out of the Mt. Gox hot cryptocurrency wallet over time, beginning in late 2011."
+          Mt. Gox was a bitcoin exchange based in Shibuya, Tokyo, Japan. Launched in 2010, it was handling over 70% of all bitcoin (BTC) transactions worldwide by early 2014, when it abruptly ceased operations amid revelations of its involvement in the loss/theft of hundreds of thousands of bitcoins, then worth hundreds of millions in US dollars. Although 200,000 bitcoins have since been "found", the reasons for the disappearance—theft, fraud, mismanagement, or a combination of these—were initially unclear.
         </Translate>
       </div>
     </div>
