@@ -367,6 +367,7 @@ Pay.prototype = {
   },
 
   queryFilter: function() {
+    if (!window.location.search) return '';
     const query = window.location.search.slice(1);
     const items = query.split("&").filter(item => item.split("=")[0] !== 'return_to');
     return `?${items.join('&')}`;
