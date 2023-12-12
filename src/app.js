@@ -5,7 +5,6 @@ import Navigo from 'navigo';
 import MixinUtils from './utils/mixin.js';
 import Locale from './locale';
 import API from './api';
-import Home from './home';
 import Code from './code';
 import OAuth from './oauth';
 import Page from './page';
@@ -106,17 +105,11 @@ router.on({
   '/send': function () {
     new Schema(router, api).render();
   },
-  '/xin': function () {
-    new Home(router, api).xin();
-  },
   '/messenger': function () {
-    new Home(router, api).messenger();
+    window.location = 'https://messenger.mixin.one';
   },
   '/mm': function () {
-    router.replace('/messenger');
-  },
-  '/': function () {
-    new Home(router, api).index();
+    window.location = 'https://messenger.mixin.one';
   }
 }).notFound(function () {
   $('#layout-container').html(Error404());

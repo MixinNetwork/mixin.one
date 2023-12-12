@@ -55,42 +55,5 @@
     },
     "back.title": "Mixinネットワークに戻る",
     "chains.title": "チェーン"
-  },
-  "home": {
-    "classname": "home-language-ja",
-    "nav.network": "Mixinネットワーク",
-    "nav.messenger": "Mixinメッセンジャー",
-    "nav.developers": "開発者向け",
-    "nav.title": "Mixinで、デジタル資産とメッセージを安全に",
-    "nav.description1": "セキュリティ、プライバシー、分散性を最優先に考えて開発しているオープンソースソフトウェアです",
-    "nav.description2": "",
-    "nav.description3": "",
-    "section.network": "個人間のデジタル資産移転のための、無料で使える高速で分散化されたネットワーク",
-    "section.messenger": "メッセージ機能がついた、オープンソースの暗号資産ウォレット",
-    "section.more": "もっとみる",
-    "footer.one": "利用規約",
-    "footer.two": "プライバシーポリシー",
-    "footer.three": "オープンソース",
-    "footer.four": "プレスキット",
-    "footer.right": "Copyright © %{copyright} mixin.one. All rights reserved."
-  },
-  "messenger": {
-    "features.description": "オープンソースの暗号資産ウォレット。主要な通貨のほぼすべてに対応しています。",
-    "features": "特徴",
-    "features.1": "電話番号を利用したウォレットログインで、アカウント消失の心配なし",
-    "features.2": "6桁の <a href='https://github.com/MixinNetwork/tip'>TIP</a> コードにより安全に資産を管理",
-    "features.3": "すべての資産はPoS-BFT-DAGネットワーク上で保管",
-    "features.4": "チャットやウォレット機能を最大限に活かすボットを数多くご用意",
-    "features.5": "連絡先をもとに暗号資産を送金することが可能",
-    "features.6": "信号プロトコルを用いた暗号化メッセージでのやり取りが可能",
-    "desktop.title": "Mixinメッセンジャー デスクトップ版",
-    "desktop.description1": "macOS 10.9以上、Windows 64-bit、Linuxの方は次のリンクからダウンロード",
-    "desktop.description2": "ダウンロードリンク",
-    "desktop.description3": "Mixinメッセンジャーがお使いのスマートフォンにインストールされている必要があります。",
-    "footer.1": "エクスプローラー",
-    "footer.2": "ログ",
-    "footer.3": "ホワイトペーパー",
-    "footer.4": "プレスキット",
-    "footer.5": "XINについて"
   }
 }
