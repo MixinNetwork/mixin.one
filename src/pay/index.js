@@ -175,7 +175,7 @@ Pay.prototype = {
       const fullName = payment.recipient.full_name.trim();
       const useAmount = new Decimal(payment.asset.price_usd).times(payment.amount);
       const mixinURL = `mixin://pay${window.location.search}`;
-      const qrCodeURL = `https://mixin.one/pay${window.location.search}`;
+      const qrCodeURL = `https://mixin.one/pay${self.queryFilter()}`;
       const data = {
         logoURL: blueLogo,
         title: i18n.t('pay.recipient.title', { name: fullName }),
@@ -242,7 +242,7 @@ Pay.prototype = {
 
       const payment = resp.data;
       const mixinURL = `mixin://mixin.one${window.location.pathname}${window.location.search}`;
-      const qrCodeURL = `https://mixin.one${window.location.pathname}${window.location.search}`;
+      const qrCodeURL = `https://mixin.one${window.location.pathname}${self.queryFilter()}`;
       const data = {
         logoURL: blueLogo,
         title: i18n.t('schema.title.transfer'),
@@ -364,6 +364,12 @@ Pay.prototype = {
       default:
         return validate(address);
     }
+  },
+
+  queryFilter: function() {
+    const query = window.location.search.slice(1);
+    const items = query.split("&").filter(item => item.split("=")[0] !== 'return_to');
+    return `?${items.join('&')}`;
   }
 };
 
