@@ -4,14 +4,25 @@ import Translate, { translate } from "@docusaurus/Translate"
 import LocalLink from "../../common/LocaleLink"
 
 const TechnologySection = () => (
-  <div className="pt-15 pb-30 px-5 container mx-auto">
+  <div className="pt-15 pb-30 container mx-auto px-5">
     <div className="relative rounded-sm">
-      <img loading="lazy" src={require("@site/static/img/common/woodGrain.webp").default} className="object-cover absolute inset-0 h-full w-full -z-10" />
-      <div className="flex flex-col justify-between pt-15 px-5 pb-10 space-y-33 sm:space-y-14 lg:pb-20 lg:px-20 lg:pt-26 md:pt-20 md:px-15 md:pb-15 ">
-        <div className="text-white text-opacity-90 text-center text-base font-normal leading-relaxed">
-          <Translate>Decentralized bitcoin custody is challenging, which is why we made Mixin Safe to meet public demand. Never worry about losing your keys or centralized evil custody.</Translate>
+      <img
+        loading="lazy"
+        src={require("@site/static/img/common/woodGrain.webp").default}
+        className="absolute inset-0 -z-10 h-full w-full object-cover"
+      />
+      <div className="pt-15 space-y-33 lg:pt-26 md:px-15 md:pb-15 flex flex-col justify-between px-5 pb-10 sm:space-y-14 md:pt-20 lg:px-20 lg:pb-20 ">
+        <div className="text-center text-base font-normal leading-relaxed text-white text-opacity-90">
+          <Translate>
+            Decentralized bitcoin custody is challenging, which is why we made
+            Mixin Safe to meet public demand. Never worry about losing your keys
+            or centralized evil custody.
+          </Translate>
         </div>
-        <LocalLink to="/how-it-secures" className="px-7 py-4 sm:w-fit sm:mx-auto bg-white rounded-sm flex-center text-base font-medium leading-none">
+        <LocalLink
+          to="/how-it-secures"
+          className="flex-center rounded-sm bg-white px-7 py-4 text-base font-medium leading-none sm:mx-auto sm:w-fit"
+        >
           <Translate>Technology Detail</Translate>
         </LocalLink>
       </div>
@@ -19,28 +30,52 @@ const TechnologySection = () => (
   </div>
 )
 
-const Item = ({ cover, title, description }: { cover: string; title: string; description: string }) => (
-  <div className="bg-white rounded-sm shadow pb-20">
-    <img loading="lazy" src={require("@site/static/img/page/confidence/" + cover).default} alt={description} className="aspect-335/250 w-full" />
-    <div className="mt-5 px-5 sm:mt-6.5 md:mt-8 lg:mt-10 sm:px-6.5 md:px-8 lg:px-10 text-[#333] text-xl font-medium leading-snug">{title}</div>
-    <div className="mt-5 px-5 sm:px-6.5 md:px-8 lg:px-10 text-[#333] text-op-80 text-base font-normal leading-relaxed">{description}</div>
+const Item = ({
+  cover,
+  title,
+  description,
+}: {
+  cover: string
+  title: string
+  description: string
+}) => (
+  <div className="rounded-sm bg-white pb-20 shadow">
+    <img
+      loading="lazy"
+      src={require("@site/static/img/page/confidence/" + cover).default}
+      alt={description}
+      className="aspect-335/250 w-full"
+    />
+    <div className="sm:mt-6.5 sm:px-6.5 mt-5 px-5 text-xl font-medium leading-snug text-[#333] md:mt-8 md:px-8 lg:mt-10 lg:px-10">
+      {title}
+    </div>
+    <div className="sm:px-6.5 text-op-80 mt-5 px-5 text-base font-normal leading-relaxed text-[#333] md:px-8 lg:px-10">
+      {description}
+    </div>
   </div>
 )
 
 export const ConfidentBitcoinCustodySection = () => {
   return (
     <>
-      <SectionTitle description={<Translate>Never worry about losing your keys or centralized evil custody.</Translate>}>
+      <SectionTitle
+        description={
+          <Translate>
+            Never worry about losing your keys or centralized evil custody.
+          </Translate>
+        }
+      >
         <Translate>Confident Bitcoin Custody</Translate>
       </SectionTitle>
-      <div className="container mx-auto px-5 grid gap-5 sm:grid-cols-2 pb-15">
+      <div className="pb-15 container mx-auto grid gap-5 px-5 sm:grid-cols-2">
         <Item
           cover="1.1.webp"
           title={translate({
             message: "Self-custody",
           })}
           description={translate({
-            message: "If you don't truly own your private key, you will never be confidence in your bitcoin holdings. With Mixin Safe, you have full control over your wallet private key.",
+            message:
+              "If you don't truly own your private key, you will never be confidence in your bitcoin holdings. With Mixin Safe, you have full control over your wallet private key.",
           })}
         />
         <Item
@@ -63,7 +98,8 @@ export const ConfidentBitcoinCustodySection = () => {
           cover="1.4.webp"
           title={translate({ message: "Estate planning" })}
           description={translate({
-            message: "Estate planning can help you safely pass on your crypto wealth to your descendants. Your heirs can easily inherit your wealth without any professional knowledge.",
+            message:
+              "Estate planning can help you safely pass on your crypto wealth to your descendants. Your heirs can easily inherit your wealth without any professional knowledge.",
           })}
         />
       </div>

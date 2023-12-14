@@ -3,7 +3,8 @@ import type { Config } from "@docusaurus/types"
 import type * as Preset from "@docusaurus/preset-classic"
 
 const config: Config = {
-  title: "Mixin - Secure and Grow Your Crypto Wealth with Decentralized Solutions",
+  title:
+    "Mixin - Secure and Grow Your Crypto Wealth with Decentralized Solutions",
 
   favicon: "img/favicon.png",
 
@@ -100,7 +101,8 @@ const config: Config = {
           label: "Get Started",
           to: "/pricing",
           position: "right",
-          className: "px-6 py-3 dark:bg-white dark:text-zinc-800 bg-zinc-800 text-white rounded-sm font-medium leading-none",
+          className:
+            "px-6 py-3 dark:bg-white dark:text-zinc-800 bg-zinc-800 text-white rounded-sm font-medium leading-none",
         },
       ],
     },
@@ -236,13 +238,20 @@ const config: Config = {
             icon_url: string
             chain_id: string
           }[]
-        } = await (await fetch("https://api.mixin.one/network/assets/top")).json()
+        } = await (
+          await fetch("https://api.mixin.one/network/assets/top")
+        ).json()
 
         const array = Array.from(
           assets
-            .filter((asset) => !/(Pando Rings|4swap |ExinSwap |Pando Innovation ETF|LP Token)/i.test(asset.name) && asset.chain_id !== "17f78d7c-ed96-40ff-980c-5dc62fecbc85")
+            .filter(
+              (asset) =>
+                !/(Pando Rings|4swap |ExinSwap |Pando Innovation ETF|LP Token)/i.test(
+                  asset.name,
+                ) && asset.chain_id !== "17f78d7c-ed96-40ff-980c-5dc62fecbc85",
+            )
             .reduce((acc, cur) => acc.set(cur.icon_url, cur), new Map())
-            .values()
+            .values(),
         )
         const chunkSize = Math.ceil(array.length / 3)
 
@@ -255,7 +264,9 @@ const config: Config = {
           result.push(chunk)
         }
 
-        const length = result.map((item) => item.length).reduce((acc, cur) => Math.min(acc, cur), Infinity)
+        const length = result
+          .map((item) => item.length)
+          .reduce((acc, cur) => Math.min(acc, cur), Infinity)
         result.forEach((item) => (item.length = length))
         return result
       },

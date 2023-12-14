@@ -16,7 +16,8 @@ export default function Root() {
         faqs={[
           {
             question: translate({
-              message: "After the plan expires, if I don't renew, can I still withdraw my assets?",
+              message:
+                "After the plan expires, if I don't renew, can I still withdraw my assets?",
             }),
             answer: translate({
               message:
@@ -25,23 +26,28 @@ export default function Root() {
           },
           {
             question: translate({
-              message: "Can I pay for plans and service fees with other cryptocurrencies?",
+              message:
+                "Can I pay for plans and service fees with other cryptocurrencies?",
             }),
             answer: translate({
-              message: "Yes, you can pay with BTC, ETH, and many other popular cryptocurrencies.",
+              message:
+                "Yes, you can pay with BTC, ETH, and many other popular cryptocurrencies.",
             }),
           },
           {
             question: translate({
-              message: "The more assets I custody, the more expensive the service fee?",
+              message:
+                "The more assets I custody, the more expensive the service fee?",
             }),
             answer: translate({
-              message: "No, the service fee is not related to the amount of assets.",
+              message:
+                "No, the service fee is not related to the amount of assets.",
             }),
           },
           {
             question: translate({
-              message: "Can I pay for plans and service fees with fiat currency?",
+              message:
+                "Can I pay for plans and service fees with fiat currency?",
             }),
             answer: translate({
               message: "Not currently, but it will be supported soon.",
@@ -49,10 +55,12 @@ export default function Root() {
           },
           {
             question: translate({
-              message: "Will my plan be automatically renewed after it expires?",
+              message:
+                "Will my plan be automatically renewed after it expires?",
             }),
             answer: translate({
-              message: "No, but we will send multiple notifications for you to pay the plan fee before the plan expires.",
+              message:
+                "No, but we will send multiple notifications for you to pay the plan fee before the plan expires.",
             }),
           },
           // {

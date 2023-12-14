@@ -3,31 +3,60 @@ import SectionTitle from "../../common/SectionTitle"
 import Translate, { translate } from "@docusaurus/Translate"
 
 const SpecialItem = () => (
-  <div className="sm:col-span-2 relative auto-rows-fr grid sm:grid-cols-2">
-    <div className="absolute fill bg-gradient-to-t sm:bg-gradient-to-r from-slate-950 via-[#010F24] to-transparent z-0" />
+  <div className="relative grid auto-rows-fr sm:col-span-2 sm:grid-cols-2">
+    <div className="fill absolute z-0 bg-gradient-to-t from-slate-950 via-[#010F24] to-transparent sm:bg-gradient-to-r" />
 
-    <img loading="lazy" src={require("@site/static/img/page/decentralization/2.1.webp").default} alt={"centralization"} className="aspect-375/300 -z-1 w-full h-full object-cover sm:order-last" />
+    <img
+      loading="lazy"
+      src={require("@site/static/img/page/decentralization/2.1.webp").default}
+      alt={"centralization"}
+      className="aspect-375/300 -z-1 h-full w-full object-cover sm:order-last"
+    />
 
-    <div className="p-5 pb-10 space-y-4 z-1 sm:pl-15 sm:pt-15">
-      <div className="text-white text-xl font-medium sm:text-7 md:text-7.5 lg:text-8">
+    <div className="z-1 sm:pl-15 sm:pt-15 space-y-4 p-5 pb-10">
+      <div className="sm:text-7 md:text-7.5 lg:text-8 text-xl font-medium text-white">
         <Translate>The Mt. Gox Debacle</Translate>
       </div>
-      <div className="text-white text-opacity-90 text-sm font-normal leading-snug">
+      <div className="text-sm font-normal leading-snug text-white text-opacity-90">
         <Translate>
-          Mt. Gox was a bitcoin exchange based in Shibuya, Tokyo, Japan. Launched in 2010, it was handling over 70% of all bitcoin (BTC) transactions worldwide by early 2014, when it abruptly ceased operations amid revelations of its involvement in the loss/theft of hundreds of thousands of bitcoins, then worth hundreds of millions in US dollars. Although 200,000 bitcoins have since been "found", the reasons for the disappearance—theft, fraud, mismanagement, or a combination of these—were initially unclear.
+          Mt. Gox was a bitcoin exchange based in Shibuya, Tokyo, Japan.
+          Launched in 2010, it was handling over 70% of all bitcoin (BTC)
+          transactions worldwide by early 2014, when it abruptly ceased
+          operations amid revelations of its involvement in the loss/theft of
+          hundreds of thousands of bitcoins, then worth hundreds of millions in
+          US dollars. Although 200,000 bitcoins have since been "found", the
+          reasons for the disappearance—theft, fraud, mismanagement, or a
+          combination of these—were initially unclear.
         </Translate>
       </div>
     </div>
   </div>
 )
 
-const Item = ({ cover, title, description }: { cover: string; title: string; description: string }) => (
-  <div className="relative aspect-375/300">
-    <img loading="lazy" src={require("@site/static/img/page/decentralization/" + cover).default} alt={title} className="fill" />
+const Item = ({
+  cover,
+  title,
+  description,
+}: {
+  cover: string
+  title: string
+  description: string
+}) => (
+  <div className="aspect-375/300 relative">
+    <img
+      loading="lazy"
+      src={require("@site/static/img/page/decentralization/" + cover).default}
+      alt={title}
+      className="fill"
+    />
     <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black" />
-    <div className="p-5 absolute inset-0 top-auto space-y-4">
-      <div className="text-white text-xl font-medium sm:text-7 md:text-7.5 lg:text-8">{title}</div>
-      <div className="text-white text-opacity-90 text-sm font-normal leading-relaxed">{description}</div>
+    <div className="absolute inset-0 top-auto space-y-4 p-5">
+      <div className="sm:text-7 md:text-7.5 lg:text-8 text-xl font-medium text-white">
+        {title}
+      </div>
+      <div className="text-sm font-normal leading-relaxed text-white text-opacity-90">
+        {description}
+      </div>
     </div>
   </div>
 )
@@ -38,7 +67,7 @@ export const ThePriceofCentralizationSection = () => {
       <SectionTitle>
         <Translate>The Price of Centralization</Translate>
       </SectionTitle>
-      <div className="container mx-auto px-5 gap-5 grid sm:grid-cols-2 pb-25">
+      <div className="pb-25 container mx-auto grid gap-5 px-5 sm:grid-cols-2">
         <SpecialItem />
         <Item
           cover={"2.2.webp"}

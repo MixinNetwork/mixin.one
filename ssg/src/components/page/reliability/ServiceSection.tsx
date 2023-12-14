@@ -5,8 +5,16 @@ import SvgIcon2 from "@site/static/img/page/reliability/2.2.svg"
 import SvgIcon3 from "@site/static/img/page/reliability/2.3.svg"
 import SvgIcon4 from "@site/static/img/page/reliability/2.4.svg"
 
-const Item = ({ icon, title, description }: { title: string; description: string; icon: React.ReactNode }) => (
-  <div className="pt-7 px-5 pb-26 rounded-sm bg-zinc-100 text-[#333]">
+const Item = ({
+  icon,
+  title,
+  description,
+}: {
+  title: string
+  description: string
+  icon: React.ReactNode
+}) => (
+  <div className="pb-26 rounded-sm bg-zinc-100 px-5 pt-7 text-[#333]">
     {icon}
     <div className="mt-10.5 text-xl font-medium leading-snug">{title}</div>
     <div className="mt-5 text-base font-normal leading-7">{description}</div>
@@ -18,12 +26,13 @@ export const ServiceSection = () => {
     <>
       <SectionTitle
         description={translate({
-          message: "Mixin powers leading organizations from Payment to DAOs, and beyond.",
+          message:
+            "Mixin powers leading organizations from Payment to DAOs, and beyond.",
         })}
       >
         <Translate>Reliable Service</Translate>
       </SectionTitle>
-      <div className="container mx-auto px-5 grid gap-5 auto-rows-fr pb-45 sm:grid-cols-2 md:grid-cols-4">
+      <div className="pb-45 container mx-auto grid auto-rows-fr gap-5 px-5 sm:grid-cols-2 md:grid-cols-4">
         <Item
           icon={<SvgIcon1 />}
           title={translate({
@@ -48,7 +57,8 @@ export const ServiceSection = () => {
           icon={<SvgIcon3 />}
           title={translate({ message: "Notification Service" })}
           description={translate({
-            message: "We use Mixin Messenger, SMS, Slack, Telegram and other channels to regularly notify safe members to approve transactions as soon as possible to improve efficiency.",
+            message:
+              "We use Mixin Messenger, SMS, Slack, Telegram and other channels to regularly notify safe members to approve transactions as soon as possible to improve efficiency.",
           })}
         />
 
@@ -56,7 +66,8 @@ export const ServiceSection = () => {
           icon={<SvgIcon4 />}
           title={translate({ message: "Customer Service" })}
           description={translate({
-            message: "We provide Mixin Messenger, WhatsApp, email, video conference and 7x24 telephone customer service to help our customers solve problems in a timely manner.",
+            message:
+              "We provide Mixin Messenger, WhatsApp, email, video conference and 7x24 telephone customer service to help our customers solve problems in a timely manner.",
           })}
         />
       </div>

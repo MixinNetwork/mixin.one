@@ -2,24 +2,47 @@ import Translate, { translate } from "@docusaurus/Translate"
 import LocalLink from "../../common/LocaleLink"
 import SectionTitle from "../../common/SectionTitle"
 
-const ProductCard = ({ title, description, cover }: { title: string; description: string; cover: string }) => (
-  <div className="bg-white rounded-lg shadow-lg overflow-hidden">
-    <img loading="lazy" src={require("@site/static/img/page/home/product/" + cover).default} alt={title} className="aspect-335/225" />
+const ProductCard = ({
+  title,
+  description,
+  cover,
+}: {
+  title: string
+  description: string
+  cover: string
+}) => (
+  <div className="overflow-hidden rounded-lg bg-white shadow-lg">
+    <img
+      loading="lazy"
+      src={require("@site/static/img/page/home/product/" + cover).default}
+      alt={title}
+      className="aspect-335/225"
+    />
 
-    <div className="pb-11 sm:pb-6 py-6 px-5 space-y-3">
-      <div className="text-[#333] text-xl font-medium leading-tight">{title}</div>
-      <div className="text-[#333] text-opacity-80 text-sm font-normal leading-snug">{description}</div>
+    <div className="space-y-3 px-5 py-6 pb-11 sm:pb-6">
+      <div className="text-xl font-medium leading-tight text-[#333]">
+        {title}
+      </div>
+      <div className="text-sm font-normal leading-snug text-[#333] text-opacity-80">
+        {description}
+      </div>
     </div>
   </div>
 )
 
 export const MainProductSection = () => {
   return (
-    <div className="flex flex-col items-center bg-slate-100 bg-opacity-40 pb-45 px-5 sm:pb-35">
-      <SectionTitle description={<Translate>Our products are decentralized, privacy focused and reliable.</Translate>}>
+    <div className="pb-45 sm:pb-35 flex flex-col items-center bg-slate-100 bg-opacity-40 px-5">
+      <SectionTitle
+        description={
+          <Translate>
+            Our products are decentralized, privacy focused and reliable.
+          </Translate>
+        }
+      >
         <Translate>Core Products</Translate>
       </SectionTitle>
-      <div className="grid gap-y-5 gap-x-3 sm:grid-cols-3 container">
+      <div className="container grid gap-x-3 gap-y-5 sm:grid-cols-3">
         <ProductCard
           key="Mixin Messenger"
           title={"Mixin Messenger"}
@@ -42,12 +65,18 @@ export const MainProductSection = () => {
         <ProductCard
           key="Mixin Wealth"
           title={"Mixin Wealth"}
-          description={translate({ message: "We strive to build the safest products to grow your crypto wealth, with the highest standard of decentralized custodian powered by Mixin Safe." })}
+          description={translate({
+            message:
+              "We strive to build the safest products to grow your crypto wealth, with the highest standard of decentralized custodian powered by Mixin Safe.",
+          })}
           cover={"wealth.webp"}
         />
       </div>
 
-      <LocalLink to="/pricing" className="mt-24.5 px-7 py-4 mx-auto bg-zinc-800 rounded-sm text-white text-base font-medium leading-none">
+      <LocalLink
+        to="/pricing"
+        className="mt-24.5 mx-auto rounded-sm bg-zinc-800 px-7 py-4 text-base font-medium leading-none text-white"
+      >
         <Translate>Start for Free</Translate>
       </LocalLink>
     </div>

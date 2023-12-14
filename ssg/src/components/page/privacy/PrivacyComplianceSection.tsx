@@ -9,14 +9,16 @@ export const PrivacyComplianceSection = () => {
       <SectionTitle
         description={
           <Translate>
-            Our internal privacy program is built on the EU GDPR to ensure the privacy of our customers. We will continue to improve our privacy framework and continuously meet other
-            compliancerequirements. For more information, please refer to our privacy statement.
+            Our internal privacy program is built on the EU GDPR to ensure the
+            privacy of our customers. We will continue to improve our privacy
+            framework and continuously meet other compliancerequirements. For
+            more information, please refer to our privacy statement.
           </Translate>
         }
       >
         <Translate>Privacy Compliance</Translate>
       </SectionTitle>
-      <GDPR className="mt-5 container block mx-auto px-5 h-fit" />
+      <GDPR className="container mx-auto mt-5 block h-fit px-5" />
     </div>
   )
 }

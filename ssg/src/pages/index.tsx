@@ -82,24 +82,39 @@ const Header = () => {
           </div>
         ),
       },
-    ]
+    ],
   )
 
   return (
-    <div className="bg-gradient-to-b from-[#171924] to-[#222C3F] sm:bg-none sm:relative">
-      <img loading="lazy" src={require("@site/static/img/page/home/bgHeader.webp").default} className="object-cover -z-10 hidden sm:block absolute inset-0 h-full w-full" />
+    <div className="bg-gradient-to-b from-[#171924] to-[#222C3F] sm:relative sm:bg-none">
+      <img
+        loading="lazy"
+        src={require("@site/static/img/page/home/bgHeader.webp").default}
+        className="absolute inset-0 -z-10 hidden h-full w-full object-cover sm:block"
+      />
       <Navbar dark />
-      <div className="px-10 pt-15 pb-19 sm:pt-12.5 md:pt-20 lg:pt-54 sm:pb-16.5 sm:pb-32.5 lg:pb-79 sm:text-center container mx-auto">
-        <div className="text-white text-10 sm:text-11 md:text-15.5 leading-12 sm:leading-13.5 md:leading-20 font-normal sm:font-medium -tracking-0.1 mx-auto">{title}</div>
-        <div className="mt-7.5 sm:mt-6 md:mt-8 lg:mt-12 max-w-232 mx-auto text-white text-opacity-90 text-base lg:text-lg font-normal">
-          <Translate>Protect your crypto with mature multisig and MPC technology. Get access to trading, lending, decentralized recovery and inheritance.</Translate>
+      <div className="pt-15 pb-19 sm:pt-12.5 lg:pt-54 sm:pb-16.5 sm:pb-32.5 lg:pb-79 container mx-auto px-10 sm:text-center md:pt-20">
+        <div className="text-10 sm:text-11 md:text-15.5 leading-12 sm:leading-13.5 md:leading-20 -tracking-0.1 mx-auto font-normal text-white sm:font-medium">
+          {title}
+        </div>
+        <div className="mt-7.5 max-w-232 mx-auto text-base font-normal text-white text-opacity-90 sm:mt-6 md:mt-8 lg:mt-12 lg:text-lg">
+          <Translate>
+            Protect your crypto with mature multisig and MPC technology. Get
+            access to trading, lending, decentralized recovery and inheritance.
+          </Translate>
         </div>
 
-        <div className="mt-24.5 sm:mt-12.5 md:mt-18.5 lg:mt-21.5 grid gap-y-5 gap-x-7.5 sm:grid-cols-2 sm:w-fit mx-auto">
-          <LocalLink className="order-last sm:order-none sm:w-57.5 h-12 bg-neutral-100 rounded-sm text-black! font-medium uppercase flex-center" to="/pricing">
+        <div className="mt-24.5 sm:mt-12.5 md:mt-18.5 lg:mt-21.5 gap-x-7.5 mx-auto grid gap-y-5 sm:w-fit sm:grid-cols-2">
+          <LocalLink
+            className="sm:w-57.5 text-black! flex-center order-last h-12 rounded-sm bg-neutral-100 font-medium uppercase sm:order-none"
+            to="/pricing"
+          >
             <Translate>Get started</Translate>
           </LocalLink>
-          <LocalLink href="https://calendly.com/mixin-safe/30min" className="sm:w-57.5 h-12 rounded-sm border border-neutral-100 text-white! font-medium w-full uppercase flex-center">
+          <LocalLink
+            href="https://calendly.com/mixin-safe/30min"
+            className="sm:w-57.5 text-white! flex-center h-12 w-full rounded-sm border border-neutral-100 font-medium uppercase"
+          >
             <Translate>Book a consultation</Translate>
           </LocalLink>
         </div>
@@ -155,15 +170,18 @@ export default function Root() {
 
           {
             question: translate({
-              message: "What is the relationship between Mixin, Mixin Network and Mixin Messenger?",
+              message:
+                "What is the relationship between Mixin, Mixin Network and Mixin Messenger?",
             }),
             answer: translate({
-              message: "Mixin is the abbreviation of the Mixin Network ecosystem. Mixin Network is a public chain, and Mixin Messenger is the first open source Dapp on Mixin Network.",
+              message:
+                "Mixin is the abbreviation of the Mixin Network ecosystem. Mixin Network is a public chain, and Mixin Messenger is the first open source Dapp on Mixin Network.",
             }),
           },
           {
             question: translate({
-              message: "Are Mixin Network, Mixin Messenger, Exin, and Pando developed by the same team?",
+              message:
+                "Are Mixin Network, Mixin Messenger, Exin, and Pando developed by the same team?",
             }),
             answer: translate({
               message:

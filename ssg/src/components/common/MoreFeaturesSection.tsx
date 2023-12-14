@@ -3,20 +3,48 @@ import SectionTitle from "./SectionTitle"
 import Translate, { translate } from "@docusaurus/Translate"
 import LocalLink from "./LocaleLink"
 
-const Item = ({ title, description, cover, to }: { title: string; description: string; cover: string; to: string }) => (
-  <LocalLink to={to} className="bg-white rounded-sm shadow-lg space-y-5 pb-12">
-    <img loading="lazy" className="object-cover aspect-335/225 w-full" src={require("@site/static/img/common/feature/" + cover).default} alt={title} />
-    <div className="text-[#333] text-xl font-medium leading-snug px-5">{title}</div>
-    <div className="text-[#333] text-opacity-80 text-sm font-normal leading-snug px-5">{description}</div>
+const Item = ({
+  title,
+  description,
+  cover,
+  to,
+}: {
+  title: string
+  description: string
+  cover: string
+  to: string
+}) => (
+  <LocalLink to={to} className="space-y-5 rounded-sm bg-white pb-12 shadow-lg">
+    <img
+      loading="lazy"
+      className="aspect-335/225 w-full object-cover"
+      src={require("@site/static/img/common/feature/" + cover).default}
+      alt={title}
+    />
+    <div className="px-5 text-xl font-medium leading-snug text-[#333]">
+      {title}
+    </div>
+    <div className="px-5 text-sm font-normal leading-snug text-[#333] text-opacity-80">
+      {description}
+    </div>
   </LocalLink>
 )
 
-export const MoreFeaturesSection = ({ omit }: { omit: "Decentralization" | "Confidence" | "Reliability" | "Privacy" | "Compliance" }) => (
+export const MoreFeaturesSection = ({
+  omit,
+}: {
+  omit:
+    | "Decentralization"
+    | "Confidence"
+    | "Reliability"
+    | "Privacy"
+    | "Compliance"
+}) => (
   <>
     <SectionTitle>
       <Translate>More Features</Translate>
     </SectionTitle>
-    <div className="container mx-auto px-5 grid gap-5 grid-cols-2 lg:grid-cols-4 pb-35">
+    <div className="pb-35 container mx-auto grid grid-cols-2 gap-5 px-5 lg:grid-cols-4">
       {omit !== "Decentralization" && (
         <Item
           key="Decentralization"
@@ -34,7 +62,10 @@ export const MoreFeaturesSection = ({ omit }: { omit: "Decentralization" | "Conf
         <Item
           key="Confidence"
           title={translate({ message: "Confidence" })}
-          description={translate({ message: "Mixin Safe offers a comprehensive suite of solutions to help Bitcoin investors confidently hold." })}
+          description={translate({
+            message:
+              "Mixin Safe offers a comprehensive suite of solutions to help Bitcoin investors confidently hold.",
+          })}
           cover="confidence.webp"
           to="/features/confidence"
         />
@@ -44,7 +75,10 @@ export const MoreFeaturesSection = ({ omit }: { omit: "Decentralization" | "Conf
         <Item
           key="Reliability"
           title={translate({ message: "Reliability" })}
-          description={translate({ message: "Employing the latest innovations in the industry while still leveraging Bitcoin’s proven cryptography." })}
+          description={translate({
+            message:
+              "Employing the latest innovations in the industry while still leveraging Bitcoin’s proven cryptography.",
+          })}
           cover="reliability.webp"
           to="/features/reliability"
         />
@@ -54,7 +88,10 @@ export const MoreFeaturesSection = ({ omit }: { omit: "Decentralization" | "Conf
         <Item
           key="Privacy"
           title={translate({ message: "Privacy" })}
-          description={translate({ message: "We ensure you have maximum privacy by integrating various advanced technologies." })}
+          description={translate({
+            message:
+              "We ensure you have maximum privacy by integrating various advanced technologies.",
+          })}
           cover="privacy.webp"
           to="/features/privacy"
         />
@@ -64,7 +101,10 @@ export const MoreFeaturesSection = ({ omit }: { omit: "Decentralization" | "Conf
         <Item
           key="Compliance"
           title={translate({ message: "Compliance" })}
-          description={translate({ message: "Mixin is committed to working closely and collaboratively with regulators from around the world." })}
+          description={translate({
+            message:
+              "Mixin is committed to working closely and collaboratively with regulators from around the world.",
+          })}
           cover="compliance.webp"
           to="features/compliance"
         />

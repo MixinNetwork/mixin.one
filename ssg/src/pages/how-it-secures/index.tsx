@@ -21,7 +21,8 @@ export default function Root() {
         faqs={[
           {
             question: translate({
-              message: "Why is Mixin Safe more secure than a standalone hardware wallet?",
+              message:
+                "Why is Mixin Safe more secure than a standalone hardware wallet?",
             }),
             answer: translate({
               message:
@@ -30,7 +31,8 @@ export default function Root() {
           },
           {
             question: translate({
-              message: "What does the decentralized multi-party computation (MPC) network used by Mixin Safe specifically refer to?",
+              message:
+                "What does the decentralized multi-party computation (MPC) network used by Mixin Safe specifically refer to?",
             }),
             answer: translate({
               message:
@@ -39,7 +41,8 @@ export default function Root() {
           },
           {
             question: translate({
-              message: "If the Mixin Safe team disbands, can I still withdraw my assets?",
+              message:
+                "If the Mixin Safe team disbands, can I still withdraw my assets?",
             }),
             answer: translate({
               message:
@@ -48,10 +51,12 @@ export default function Root() {
           },
           {
             question: translate({
-              message: "If I lose my private key and the safety time lock also expires, can the Mixin Safe team take away my assets?",
+              message:
+                "If I lose my private key and the safety time lock also expires, can the Mixin Safe team take away my assets?",
             }),
             answer: translate({
-              message: "No, the Mixin Safe team only has one key, which is not enough to transfer your assets unless you have already set up a recovery or inheritance plan.",
+              message:
+                "No, the Mixin Safe team only has one key, which is not enough to transfer your assets unless you have already set up a recovery or inheritance plan.",
             }),
           },
           {
@@ -59,12 +64,14 @@ export default function Root() {
               message: "Is Mixin Safe a custodial wallet?",
             }),
             answer: translate({
-              message: "No, Mixin Safe is a decentralized non-custodial multi-signature wallet solution.",
+              message:
+                "No, Mixin Safe is a decentralized non-custodial multi-signature wallet solution.",
             }),
           },
           {
             question: translate({
-              message: "How is the traditional MPC wallet solution different from Mixin Safe?",
+              message:
+                "How is the traditional MPC wallet solution different from Mixin Safe?",
             }),
             answer: translate({
               message:

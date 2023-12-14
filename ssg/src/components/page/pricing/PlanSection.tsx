@@ -9,7 +9,12 @@ const Advance = () => {
   return (
     <Item
       name={<Translate>Advance</Translate>}
-      description={<Translate>Use multiple keys on multiple devices to avoid single point of failure, and get decentralized recovery service in case of key loss.</Translate>}
+      description={
+        <Translate>
+          Use multiple keys on multiple devices to avoid single point of
+          failure, and get decentralized recovery service in case of key loss.
+        </Translate>
+      }
       price={100}
       features={[
         <Translate>Everything in Free</Translate>,
@@ -26,33 +31,84 @@ const Advance = () => {
   )
 }
 
-const Tab = ({ name, id, selected, onClick }: { name: string; id: string; selected: string; onClick: () => void }) => {
+const Tab = ({
+  name,
+  id,
+  selected,
+  onClick,
+}: {
+  name: string
+  id: string
+  selected: string
+  onClick: () => void
+}) => {
   const checked = id === selected
   return (
-    <button className={clsx("text-center cursor-pointer w-full px-2 pb-5 border-b border-zinc-300", checked && "border-black!")} onClick={onClick}>
+    <button
+      className={clsx(
+        "w-full cursor-pointer border-b border-zinc-300 px-2 pb-5 text-center",
+        checked && "border-black!",
+      )}
+      onClick={onClick}
+    >
       {name}
     </button>
   )
 }
 
-const Section = ({ id, selected, children }: { id: string; selected: string; children: React.ReactNode }) => (
-  <div className={clsx(" col-span-full pt-8 gap-5", id === selected ? "grid!" : "hidden!")}>{children}</div>
+const Section = ({
+  id,
+  selected,
+  children,
+}: {
+  id: string
+  selected: string
+  children: React.ReactNode
+}) => (
+  <div
+    className={clsx(
+      " col-span-full gap-5 pt-8",
+      id === selected ? "grid!" : "hidden!",
+    )}
+  >
+    {children}
+  </div>
 )
 
-const Item = ({ name, description, price, features, cover }: { name: React.ReactNode; description: React.ReactNode; price: number; features: React.ReactNode[]; cover: string }) => {
+const Item = ({
+  name,
+  description,
+  price,
+  features,
+  cover,
+}: {
+  name: React.ReactNode
+  description: React.ReactNode
+  price: number
+  features: React.ReactNode[]
+  cover: string
+}) => {
   return (
-    <div className="bg-zinc-100 bg-opacity-50 rounded-sm border-px border-zinc-300 pt-10 pb-20 px-5 sm:px-10">
+    <div className="border-px rounded-sm border-zinc-300 bg-zinc-100 bg-opacity-50 px-5 pb-20 pt-10 sm:px-10">
       <div className="grid gap-y-5 sm:grid-cols-2">
-        <div className="text-[#333] text-3xl font-medium">{name}</div>
-        <div className="sm:order-last text-[#333] text-opacity-70 text-base font-normal leading-normal">{description}</div>
-        <div className="sm:row-span-2 sm:w-fit sm:ml-auto">
-          <div className="mx-auto w-fit mt-15 sm:mt-0 ">
-            <sup className="text-[#333] text-3xl font-semibold leading-loose align-super">$</sup>
-            <span className="text-[#333] text-6xl font-semibold leading-10">{price.toLocaleString()}</span>
-            <span className="text-[#333] text-xl font-normal leading-normal">/year</span>
+        <div className="text-3xl font-medium text-[#333]">{name}</div>
+        <div className="text-base font-normal leading-normal text-[#333] text-opacity-70 sm:order-last">
+          {description}
+        </div>
+        <div className="sm:row-span-2 sm:ml-auto sm:w-fit">
+          <div className="mt-15 mx-auto w-fit sm:mt-0 ">
+            <sup className="align-super text-3xl font-semibold leading-loose text-[#333]">
+              $
+            </sup>
+            <span className="text-6xl font-semibold leading-10 text-[#333]">
+              {price.toLocaleString()}
+            </span>
+            <span className="text-xl font-normal leading-normal text-[#333]">
+              /year
+            </span>
           </div>
           {price <= 0 && (
-            <div className="mx-auto w-fit text-[#333] text-opacity-70 text-sm font-normal leading-none">
+            <div className="mx-auto w-fit text-sm font-normal leading-none text-[#333] text-opacity-70">
               <Translate>FREE FOREVER</Translate>
             </div>
           )}
@@ -60,42 +116,65 @@ const Item = ({ name, description, price, features, cover }: { name: React.React
       </div>
 
       <LocalLink
-        href={price <= 0 ? "https://messenger.mixin.one/download" : "https://safe.mixin.one/start"}
-        className="mt-17.5 sm:mt-5 py-4 px-13 w-full sm:w-fit bg-zinc-800 rounded-sm text-center text-white text-sm font-medium block"
+        href={
+          price <= 0
+            ? "https://messenger.mixin.one/download"
+            : "https://safe.mixin.one/start"
+        }
+        className="mt-17.5 px-13 block w-full rounded-sm bg-zinc-800 py-4 text-center text-sm font-medium text-white sm:mt-5 sm:w-fit"
       >
-        {price <= 0 ? <Translate>Get Mixin</Translate> : <Translate>Get Started</Translate>}
+        {price <= 0 ? (
+          <Translate>Get Mixin</Translate>
+        ) : (
+          <Translate>Get Started</Translate>
+        )}
       </LocalLink>
-      <div className="mt-15 w-full h-px border-b-px border-zinc-300"></div>
-      <div className="grid items-center sm:grid-cols-2 mt-20 sm:mt-10">
+      <div className="mt-15 border-b-px h-px w-full border-zinc-300"></div>
+      <div className="mt-20 grid items-center sm:mt-10 sm:grid-cols-2">
         <div className="space-y-5">
-          <div className="text-[#333] text-xl font-medium leading-normal">
+          <div className="text-xl font-medium leading-normal text-[#333]">
             <Translate>Features</Translate>
           </div>
           <div className="grid gap-5 sm:grid-cols-2">
             {features.map((feature) => (
-              <div className="flex-center space-x-2.5 w-fit">
+              <div className="flex-center w-fit space-x-2.5">
                 <Checked className="shrink-0" />
-                <div className="text-[#333] text-base font-normal leading-5">{feature}</div>
+                <div className="text-base font-normal leading-5 text-[#333]">
+                  {feature}
+                </div>
               </div>
             ))}
           </div>
         </div>
-        <img loading="lazy" src={require("@site/static/img/page/pricing/" + cover).default} className="mt-20 sm:mt-0 sm:h-50 sm:ms-auto" />
+        <img
+          loading="lazy"
+          src={require("@site/static/img/page/pricing/" + cover).default}
+          className="sm:h-50 mt-20 sm:ms-auto sm:mt-0"
+        />
       </div>
     </div>
   )
 }
 
 export const PlanSection = () => {
-  const [selected, select] = useState<"personal" | "family" | "institution">("personal")
+  const [selected, select] = useState<"personal" | "family" | "institution">(
+    "personal",
+  )
   return (
     <>
-      <SectionTitle description={<Translate>Mixin One membership brings decentralized solutions to serve different needs.</Translate>}>
+      <SectionTitle
+        description={
+          <Translate>
+            Mixin One membership brings decentralized solutions to serve
+            different needs.
+          </Translate>
+        }
+      >
         <Translate>Your Bitcoin is Priceless</Translate>
       </SectionTitle>
 
       <div className="container mx-auto px-5">
-        <div className="w-full grid grid-cols-3">
+        <div className="grid w-full grid-cols-3">
           <Tab
             name={translate({
               message: "Personal",
@@ -124,7 +203,12 @@ export const PlanSection = () => {
           <Section id="personal" selected={selected}>
             <Item
               name={<Translate>Free</Translate>}
-              description={<Translate>Mixin Messenger provides a secure and easy-to-use wallet, that meets the daily needs of small amounts of bitcoin storage.</Translate>}
+              description={
+                <Translate>
+                  Mixin Messenger provides a secure and easy-to-use wallet, that
+                  meets the daily needs of small amounts of bitcoin storage.
+                </Translate>
+              }
               price={0}
               features={[
                 <Translate>Self-custodial MPC wallet</Translate>,
@@ -144,7 +228,13 @@ export const PlanSection = () => {
             <Advance />
             <Item
               name={<Translate>Elite</Translate>}
-              description={<Translate>Manage large fortune in Mixin Safe with family, friends or colleagues, so you can avoid thefts, accidents and custody risks.</Translate>}
+              description={
+                <Translate>
+                  Manage large fortune in Mixin Safe with family, friends or
+                  colleagues, so you can avoid thefts, accidents and custody
+                  risks.
+                </Translate>
+              }
               price={1000}
               features={[
                 <Translate>Everything in Advance</Translate>,
@@ -162,7 +252,12 @@ export const PlanSection = () => {
           <Section id="institution" selected={selected}>
             <Item
               name={<Translate>Prosperity</Translate>}
-              description={<Translate>Professional crypto solutions with 24/7 support, best for family offices, large corporations and financial institutions.</Translate>}
+              description={
+                <Translate>
+                  Professional crypto solutions with 24/7 support, best for
+                  family offices, large corporations and financial institutions.
+                </Translate>
+              }
               price={10000}
               features={[
                 <Translate>Everything in Elite</Translate>,

@@ -1,5 +1,9 @@
 import React from "react"
-import { ButtonGroupProps, CarouselInternalState, CarouselProps } from "react-multi-carousel"
+import {
+  ButtonGroupProps,
+  CarouselInternalState,
+  CarouselProps,
+} from "react-multi-carousel"
 
 export interface CarouselButtonGroupProps extends ButtonGroupProps {
   className?: string
@@ -7,7 +11,10 @@ export interface CarouselButtonGroupProps extends ButtonGroupProps {
 interface Table {
   [key: number]: number
 }
-function getOriginalIndexLookupTableByClones(slidesToShow: number, childrenArr: any[]): Table {
+function getOriginalIndexLookupTableByClones(
+  slidesToShow: number,
+  childrenArr: any[],
+): Table {
   if (childrenArr.length > slidesToShow * 2) {
     const table: Table = {}
     const firstBeginningOfClones = childrenArr.length - slidesToShow * 2
@@ -18,7 +25,8 @@ function getOriginalIndexLookupTableByClones(slidesToShow: number, childrenArr: 
       firstCount++
     }
     const secondBeginningOfClones = childrenArr.length + firstEndOfClones
-    const secondEndOfClones = secondBeginningOfClones + childrenArr.slice(0, slidesToShow * 2).length
+    const secondEndOfClones =
+      secondBeginningOfClones + childrenArr.slice(0, slidesToShow * 2).length
     let secondCount = 0
     for (let i = secondBeginningOfClones; i <= secondEndOfClones; i++) {
       table[i] = secondCount
@@ -47,7 +55,14 @@ function getOriginalIndexLookupTableByClones(slidesToShow: number, childrenArr: 
   }
 }
 
-function getOriginalCounterPart(index: number, { slidesToShow, currentSlide }: { slidesToShow: number; currentSlide: number; totalItems: number }, childrenArr: any[]): number {
+function getOriginalCounterPart(
+  index: number,
+  {
+    slidesToShow,
+    currentSlide,
+  }: { slidesToShow: number; currentSlide: number; totalItems: number },
+  childrenArr: any[],
+): number {
   // this function is only used for "infinite and showDots are true";
   if (childrenArr.length > slidesToShow * 2) {
     const originalCounterPart = index + slidesToShow * 2
@@ -63,7 +78,12 @@ function getOriginalCounterPart(index: number, { slidesToShow, currentSlide }: {
 interface NextSlidesTable {
   [key: number]: number
 }
-function getLookupTableForNextSlides(numberOfDotsToShow: number, state: CarouselInternalState, props: CarouselProps, childrenArr: any[]): NextSlidesTable {
+function getLookupTableForNextSlides(
+  numberOfDotsToShow: number,
+  state: CarouselInternalState,
+  props: CarouselProps,
+  childrenArr: any[],
+): NextSlidesTable {
   const table: NextSlidesTable = {}
   const slidesToSlide = getSlidesToSlide(state, props)
   Array(numberOfDotsToShow)
@@ -81,11 +101,16 @@ function getLookupTableForNextSlides(numberOfDotsToShow: number, state: Carousel
   return table
 }
 
-function getSlidesToSlide(state: CarouselInternalState, props: CarouselProps): number {
+function getSlidesToSlide(
+  state: CarouselInternalState,
+  props: CarouselProps,
+): number {
   const { domLoaded, slidesToShow, containerWidth, itemWidth } = state
   const { deviceType, responsive } = props
   let slidesToScroll = props.slidesToSlide || 1
-  const domFullyLoaded = Boolean(domLoaded && slidesToShow && containerWidth && itemWidth)
+  const domFullyLoaded = Boolean(
+    domLoaded && slidesToShow && containerWidth && itemWidth,
+  )
   const ssr = props.ssr && props.deviceType && !domFullyLoaded
   if (ssr) {
     Object.keys(responsive).forEach((device) => {
@@ -99,7 +124,11 @@ function getSlidesToSlide(state: CarouselInternalState, props: CarouselProps): n
     Object.keys(responsive).forEach((item) => {
       const { breakpoint, slidesToSlide } = responsive[item]
       const { max, min } = breakpoint
-      if (slidesToSlide && window.innerWidth >= min && window.innerWidth <= max) {
+      if (
+        slidesToSlide &&
+        window.innerWidth >= min &&
+        window.innerWidth <= max
+      ) {
         slidesToScroll = slidesToSlide
       }
     })
@@ -107,7 +136,9 @@ function getSlidesToSlide(state: CarouselInternalState, props: CarouselProps): n
   return slidesToScroll
 }
 
-const prepareCarouselData = (props: CarouselButtonGroupProps & CarouselProps) => {
+const prepareCarouselData = (
+  props: CarouselButtonGroupProps & CarouselProps,
+) => {
   const {
     carouselState,
     carouselState: { slidesToShow, currentSlide },
@@ -117,13 +148,22 @@ const prepareCarouselData = (props: CarouselButtonGroupProps & CarouselProps) =>
   const childrenArr = React.Children.toArray(props.children)
   let numberOfDotsToShow: number
   if (!props.infinite) {
-    numberOfDotsToShow = Math.ceil((childrenArr.length - slidesToShow) / slidesToSlide!) + 1
+    numberOfDotsToShow =
+      Math.ceil((childrenArr.length - slidesToShow) / slidesToSlide!) + 1
   } else {
     numberOfDotsToShow = Math.ceil(childrenArr.length / slidesToSlide!)
   }
 
-  const nextSlidesTable = getLookupTableForNextSlides(numberOfDotsToShow, carouselState, props, childrenArr)
-  const lookupTable = getOriginalIndexLookupTableByClones(slidesToShow, childrenArr)
+  const nextSlidesTable = getLookupTableForNextSlides(
+    numberOfDotsToShow,
+    carouselState,
+    props,
+    childrenArr,
+  )
+  const lookupTable = getOriginalIndexLookupTableByClones(
+    slidesToShow,
+    childrenArr,
+  )
   const currentSlides = lookupTable[currentSlide]
 
   const dots = Array(numberOfDotsToShow)
@@ -136,11 +176,18 @@ const prepareCarouselData = (props: CarouselButtonGroupProps & CarouselProps) =>
         const possibleNextSlides = index * slidesToSlide!
         const isAboutToOverSlide = possibleNextSlides > maximumNextSlide
         nextSlide = isAboutToOverSlide ? maximumNextSlide : possibleNextSlides
-        isActive = nextSlide === currentSlide || (currentSlide > nextSlide && currentSlide < nextSlide + slidesToSlide! && currentSlide < childrenArr.length - slidesToShow)
+        isActive =
+          nextSlide === currentSlide ||
+          (currentSlide > nextSlide &&
+            currentSlide < nextSlide + slidesToSlide! &&
+            currentSlide < childrenArr.length - slidesToShow)
       } else {
         nextSlide = nextSlidesTable[index]
         const cloneIndex = lookupTable[nextSlide]
-        isActive = currentSlides === cloneIndex || (currentSlides >= cloneIndex && currentSlides < cloneIndex + slidesToSlide!)
+        isActive =
+          currentSlides === cloneIndex ||
+          (currentSlides >= cloneIndex &&
+            currentSlides < cloneIndex + slidesToSlide!)
       }
       return {
         index,

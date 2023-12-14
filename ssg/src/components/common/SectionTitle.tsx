@@ -14,9 +14,30 @@ export default function SectionTitle({
   descriptionClassName?: string
 }) {
   return (
-    <div className={clsx("container mx-auto py-15 space-y-5 sm:space-y-6.25 md:space-y-7.5 lg:space-y-10", className)}>
-      <div className={clsx("text-center text-[#333] text-7 sm:text-8 lg:text-9 text-3xl font-medium title-container", titleClassName)}>{children}</div>
-      {description && <div className={clsx("text-center text-[#333] text-opacity-66 text-base font-normal leading-normal title-container", descriptionClassName)}>{description}</div>}
+    <div
+      className={clsx(
+        "py-15 sm:space-y-6.25 md:space-y-7.5 container mx-auto space-y-5 lg:space-y-10",
+        className,
+      )}
+    >
+      <div
+        className={clsx(
+          "text-7 sm:text-8 lg:text-9 title-container text-center text-3xl font-medium text-[#333]",
+          titleClassName,
+        )}
+      >
+        {children}
+      </div>
+      {description && (
+        <div
+          className={clsx(
+            "text-opacity-66 title-container text-center text-base font-normal leading-normal text-[#333]",
+            descriptionClassName,
+          )}
+        >
+          {description}
+        </div>
+      )}
     </div>
   )
 }

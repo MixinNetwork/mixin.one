@@ -11,7 +11,7 @@ export function Links() {
   const [link1, link2, link3, link4] = links
 
   return (
-    <div className="grid gap-y-20 md:gap-y-10 grid-cols-[1fr_0.5fr] md:grid-cols-[1fr_1fr_0.5fr] sm:col-span-2">
+    <div className="grid grid-cols-[1fr_0.5fr] gap-y-20 sm:col-span-2 md:grid-cols-[1fr_1fr_0.5fr] md:gap-y-10">
       {[
         {
           className: "order-1",
@@ -36,9 +36,17 @@ export function Links() {
 
         return (
           <div key={title} className={clsx("space-y-4", className)}>
-            {title && <div className="text-white text-base font-normal mb-2">{title}</div>}
+            {title && (
+              <div className="mb-2 text-base font-normal text-white">
+                {title}
+              </div>
+            )}
             {links.map((link) => (
-              <Link key={link.label} {...link} className="text-white text-opacity-70 text-sm font-normal leading-tight block">
+              <Link
+                key={link.label}
+                {...link}
+                className="block text-sm font-normal leading-tight text-white text-opacity-70"
+              >
                 {link.label}
               </Link>
             ))}

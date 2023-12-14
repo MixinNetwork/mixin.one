@@ -18,17 +18,35 @@ export const SpecialLayoutItem = ({
   }[]
 }) => (
   <div className="group">
-    <div className="text-center text-[#333] title-container text-3xl font-medium leading-10">{title}</div>
-    <div className="mt-5 text-center text-[#333] title-container text-opacity-70 text-base font-normal leading-normal">{description}</div>
-    <div className="mt-10 sm:mt-19 md:mt-27 lg:mt-35  grid items-center gap-10 sm:gap-18 md:gap-26 lg:gap-32 sm:grid-cols-2">
-      <img loading="lazy" src={cover} className={clsx("w-full self-start object-cover sm:group-odd:order-last", coverClassName)} />
+    <div className="title-container text-center text-3xl font-medium leading-10 text-[#333]">
+      {title}
+    </div>
+    <div className="title-container mt-5 text-center text-base font-normal leading-normal text-[#333] text-opacity-70">
+      {description}
+    </div>
+    <div className="sm:mt-19 md:mt-27 lg:mt-35 sm:gap-18  md:gap-26 mt-10 grid items-center gap-10 sm:grid-cols-2 lg:gap-32">
+      <img
+        loading="lazy"
+        src={cover}
+        className={clsx(
+          "w-full self-start object-cover sm:group-odd:order-last",
+          coverClassName,
+        )}
+      />
 
       <div className="space-y-16">
         {points.map(({ title, description, icon }) => (
-          <div key={title} className="grid grid-cols-[auto_1fr] grid-rows-[auto_1fr] gap-x-4 gap-y-5">
+          <div
+            key={title}
+            className="grid grid-cols-[auto_1fr] grid-rows-[auto_1fr] gap-x-4 gap-y-5"
+          >
             {icon}
-            <div className="text-[#333] text-xl font-medium leading-snug">{title}</div>
-            <div className="col-span-2 text-[#333] text-opacity-80 text-base font-normal leading-relaxed">{description}</div>
+            <div className="text-xl font-medium leading-snug text-[#333]">
+              {title}
+            </div>
+            <div className="col-span-2 text-base font-normal leading-relaxed text-[#333] text-opacity-80">
+              {description}
+            </div>
           </div>
         ))}
       </div>
@@ -36,4 +54,8 @@ export const SpecialLayoutItem = ({
   </div>
 )
 
-export const SpecialLayout = ({ children }) => <div className="pt-25 pb-45 container mx-auto px-5 space-y-45">{children}</div>
+export const SpecialLayout = ({ children }) => (
+  <div className="pt-25 pb-45 space-y-45 container mx-auto px-5">
+    {children}
+  </div>
+)

@@ -6,10 +6,14 @@ module.exports = {
     },
     function (css) {
       css.walkRules((rule) => {
-        if (rule.nodes.find((node) => node.value?.includes("link-hover-color"))) {
+        if (
+          rule.nodes.find((node) => node.value?.includes("link-hover-color"))
+        ) {
           rule.remove()
         }
-        if (rule.nodes.find((node) => node.value?.includes("container-width"))) {
+        if (
+          rule.nodes.find((node) => node.value?.includes("container-width"))
+        ) {
           rule.remove()
         }
       })

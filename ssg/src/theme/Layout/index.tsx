@@ -1,7 +1,10 @@
 import React, { ReactNode } from "react"
 import clsx from "clsx"
 import ErrorBoundary from "@docusaurus/ErrorBoundary"
-import { SkipToContentFallbackId, ThemeClassNames } from "@docusaurus/theme-common"
+import {
+  SkipToContentFallbackId,
+  ThemeClassNames,
+} from "@docusaurus/theme-common"
 import { useKeyboardNavigation } from "@docusaurus/theme-common/internal"
 import SkipToContent from "@theme/SkipToContent"
 import AnnouncementBar from "@theme/AnnouncementBar"
@@ -17,7 +20,7 @@ import { PageMetadata } from "./PageMetadata"
 export default function Layout(
   props: Props & {
     hiddenNavBar?: boolean
-  }
+  },
 ): JSX.Element {
   const {
     children,
@@ -59,8 +62,17 @@ export default function Layout(
 
       {!hiddenNavBar && <Navbar />}
 
-      <div id={SkipToContentFallbackId} className={clsx(ThemeClassNames.wrapper.main, styles.mainWrapper, wrapperClassName)}>
-        <ErrorBoundary fallback={(params) => <ErrorPageContent {...params} />}>{children}</ErrorBoundary>
+      <div
+        id={SkipToContentFallbackId}
+        className={clsx(
+          ThemeClassNames.wrapper.main,
+          styles.mainWrapper,
+          wrapperClassName,
+        )}
+      >
+        <ErrorBoundary fallback={(params) => <ErrorPageContent {...params} />}>
+          {children}
+        </ErrorBoundary>
       </div>
 
       {!noFooter && <Footer />}

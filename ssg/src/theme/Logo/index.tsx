@@ -29,9 +29,26 @@ export default function Logo(props: Props): JSX.Element {
   const alt = logo?.alt ?? fallbackAlt
 
   return (
-    <Link to={logoLink} {...propsRest} {...(logo?.target && { target: logo.target })} className={clsx("flex-center w-fit space-x-2 decoration-0! dark:text-white dark:text-op-90", props.className)}>
-      <CustomLogo className={clsx("dark:fill-white dark:fill-op-90", props.imageClassName)} />
-      {navbarTitle != null && <b className={clsx("text-lg font-semibold", props.titleClassName)}>{navbarTitle}</b>}
+    <Link
+      to={logoLink}
+      {...propsRest}
+      {...(logo?.target && { target: logo.target })}
+      className={clsx(
+        "flex-center decoration-0! dark:text-op-90 w-fit space-x-2 dark:text-white",
+        props.className,
+      )}
+    >
+      <CustomLogo
+        className={clsx(
+          "dark:fill-op-90 dark:fill-white",
+          props.imageClassName,
+        )}
+      />
+      {navbarTitle != null && (
+        <b className={clsx("text-lg font-semibold", props.titleClassName)}>
+          {navbarTitle}
+        </b>
+      )}
     </Link>
   )
 }
