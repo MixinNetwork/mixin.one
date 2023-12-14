@@ -90,7 +90,7 @@ export const PlanSection = () => {
   const [selected, select] = useState<"personal" | "family" | "institution">("personal")
   return (
     <>
-      <SectionTitle description={<Translate>Mixin One membership brings decentralized solutions to serve different needs.</Translate>}>
+      <SectionTitle description={<Translate>Mixin ONE membership brings decentralized solutions to serve different needs.</Translate>}>
         <Translate>Your Bitcoin is Priceless</Translate>
       </SectionTitle>
 
