@@ -16,9 +16,9 @@
     "preinstall": "npx only-allow pnpm"
   },
   "dependencies": {
-    "@docusaurus/core": "3.0.0",
-    "@docusaurus/preset-classic": "3.0.0",
-    "@docusaurus/theme-common": "^3.0.0",
+    "@docusaurus/core": "3.0.1",
+    "@docusaurus/preset-classic": "3.0.1",
+    "@docusaurus/theme-common": "^3.0.1",
     "@mdx-js/react": "^3.0.0",
     "@unocss/reset": "^0.57.3",
     "clsx": "^1.2.1",
@@ -32,9 +32,9 @@
     "tailwind-styled-components": "^2.2.0"
   },
   "devDependencies": {
-    "@docusaurus/module-type-aliases": "3.0.0",
-    "@docusaurus/tsconfig": "3.0.0",
-    "@docusaurus/types": "3.0.0",
+    "@docusaurus/module-type-aliases": "3.0.1",
+    "@docusaurus/tsconfig": "3.0.1",
+    "@docusaurus/types": "3.0.1",
     "@types/js-cookie": "^3.0.6",
     "@types/react": "^18.2.37",
     "@types/react-dom": "^18.2.15",
