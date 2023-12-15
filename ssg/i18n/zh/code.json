@@ -1308,5 +1308,8 @@
   },
   "Signal": {
     "message": "Signal"
+  },
+  "Bitcoin custody should never sacrifice decentralization, always be confident and reliable. Mixin Safe also makes decentralized recovery and inheritance possible.": {
+    "message": "比特币托管永远不应该牺牲去中心化，始终要自信可靠。Mixin Safe 也使去中心化的恢复和继承成为可能。"
   }
 }
