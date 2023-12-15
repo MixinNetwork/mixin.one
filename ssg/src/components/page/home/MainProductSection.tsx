@@ -14,7 +14,10 @@ const ProductCard = ({
   cover: string
   href: string
 }) => (
-  <a className="flex flex-col overflow-hidden rounded-lg bg-white shadow-lg">
+  <a
+    className="flex flex-col overflow-hidden rounded-lg bg-white shadow-lg"
+    href={href}
+  >
     <img
       loading="lazy"
       src={require("@site/static/img/page/home/product/" + cover).default}
