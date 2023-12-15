@@ -1311,5 +1311,80 @@
   },
   "Bitcoin custody should never sacrifice decentralization, always be confident and reliable. Mixin Safe also makes decentralized recovery and inheritance possible.": {
     "message": "比特币托管永远不应该牺牲去中心化，始终要自信可靠。Mixin Safe 也使去中心化的恢复和继承成为可能。"
+  },
+  "It is a developer friendly network with lightning speed and zero transaction fee, all powered by decentralized nodes.": {
+    "message": "它是一个开发者友好的网络，具有闪电般的速度和零交易费用，所有这些都由去中心化节点提供支持。"
+  },
+  "Network Security": {
+    "message": "网络安全"
+  },
+  "Punitive PoS": {
+    "message": "惩罚性 PoS"
+  },
+  "Each Mixin Kernel node takes 12,000 XIN, which is approximate 2% of the network stake. The Kernel BFT consensus is secured by a strict punitive PoS, if a Kernel Node is determined to be an attacker, all its collateral will be recycled to the mining pool.": {
+    "message": "每个 Mixin Kernel 节点需要 12,000 XIN，大约占网络股份的 2%。内核 BFT 共识由严格的惩罚性 PoS 保护，如果内核节点被确定为攻击者，则其所有抵押品将被回收到矿池。"
+  },
+  "TEE": {
+    "message": "TEE"
+  },
+  "Mixin uses Intel SGX as the implementation of TEE to further enhance security. All full nodes must run in a trusted execution environment to ensure that the \"running code\" of the full node is indeed the \"code it claims to be running\", and no one can change the code running in the trusted execution environment without being noticed.": {
+    "message": "Mixin 使用 Intel SGX 作为 TEE 的实现，以进一步提高安全性。所有全节点必须在可信执行环境中运行，以确保全节点的“运行代码”确实是“它声称正在运行的代码”，并且没有人可以在不被注意的情况下更改可信执行环境中运行的代码。"
+  },
+  "Light Witness": {
+    "message": "轻量见证"
+  },
+  "Mixin Light node is a simplified payment verification (SPV) node to Mixin Kernel. It typically stores all its unspent outputs for easy account balance query. The Light Witness will actively monitor the Mixin Kernel, and will be scheduled to vote automatically on the attacker appeals.": {
+    "message": "Mixin 轻节点是 Mixin Kernel 的简化支付验证（SPV）节点。它通常存储其所有未使用的输出以便于查询账户余额。轻量见证将主动监视 Mixin Kernel，并将被安排自动对攻击者的上诉进行投票。"
+  },
+  "Based on our decentralized network and wallets, developers have built many popular products and services.": {
+    "message": "基于我们的去中心化网络和钱包，开发人员已经构建了许多流行的产品和服务。"
+  },
+  "Service Security": {
+    "message": "服务安全"
+  },
+  "Asset isolation": {
+    "message": "资产隔离"
+  },
+  "User wallet assets and Dapp assets are isolated, and users can directly receive assets in their wallets after trading, lending, minting, etc.": {
+    "message": "用户钱包资产和 Dapp 资产是隔离的，用户可以在交易、借贷、铸币等后直接在钱包中收到资产。"
+  },
+  "Code audit": {
+    "message": "代码审计"
+  },
+  "IOActive, LeastAuthority, and SlowMist and other audit companies participated in the audit of Dapp projects such as Lack and Rings.": {
+    "message": "IOActive、LeastAuthority 和 SlowMist 等审计公司参与了 Lack 和 Rings 等 Dapp 项目的审计。"
+  },
+  "Read-only authorization": {
+    "message": "只读授权"
+  },
+  "Mixin Messenger's read-only authorization ensures that Dapps can launch personalized functions based on users, but cannot transfer users' assets.": {
+    "message": "Mixin Messenger 的只读授权确保 Dapp 可以基于用户启动个性化功能，但不能转移用户的资产。"
+  },
+  "DeFi whitelist": {
+    "message": "DeFi 白名单"
+  },
+  "Mixin Safe's DeFi services insist on using DeFi whitelist strategy to help users reduce potential risks, such as high-risk authorization.": {
+    "message": "Mixin Safe 的 DeFi 服务坚持使用 DeFi 白名单策略，以帮助用户降低潜在风险，例如高风险授权。"
+  },
+  "Create a Dapp": {
+    "message": "创建 Dapp"
+  },
+  "A self-hosted crypto wallet with built-in mature decentralized technologies such as multi-signature, MPC, and time locks.": {
+    "message": "一款自托管的加密货币钱包，内置多重签名、MPC 和时间锁等成熟的去中心化技术。"
+  },
+  "Wallet Security": {
+    "message": "钱包安全"
+  },
+  "Cold Wallet Security": {
+    "message": "冷钱包安全"
+  },
+  "Mixin Safe is a multi-signature cold wallet based on Bitcoin, Ethereum, and other networks. It provides you with a secure multi-signature cold wallet service by combining multiple signatures, time locks, MPC, threshold signatures, segregated witness P2WSH, and hardware wallet technologies.": {
+    "message": "Mixin Safe 是基于比特币、以太坊和其他网络的多重签名冷钱包。它通过多重签名、时间锁、MPC、门限签名、隔离见证 P2WSH 和硬件钱包技术相结合，为您提供安全的多重签名冷钱包服务。"
+  },
+  "MPC Hot Wallet Security": {
+    "message": "MPC 热钱包安全"
+  },
+  "Mixin Messenger's MPC wallet combines Mixin Network wallet and TIP distributed key protocol to provide users with a secure and easy-to-use MPC wallet.": {
+    "message": "Mixin Messenger 的 MPC 钱包结合 Mixin Network 钱包和 TIP 分布式密钥协议，为用户提供安全易用的 MPC 钱包。"
   }
 }
