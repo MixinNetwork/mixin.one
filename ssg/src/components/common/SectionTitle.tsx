@@ -39,9 +39,8 @@ export default function SectionTitle({
       {description && (
         <div
           className={clsx(
-            "text-opacity-66",
-            mode == "small" &&
-              "text-opacity-66 title-container text-center text-base",
+            "text-opacity-66 text-[#333]",
+            mode == "small" && "title-container text-center text-base",
             mode == "large" && "title-container text-center",
             descriptionClassName,
           )}

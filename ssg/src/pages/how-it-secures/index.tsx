@@ -1,11 +1,13 @@
+import { ReactNode } from "react"
 import Layout from "@theme/Layout"
 import { GetStartedSection } from "../../components/common/GetStartedSection"
 import { HowItSecuresSection } from "../../components/page/technology/HowItSecuresSection"
 import { IntegratedSecuritySolutionSection } from "../../components/page/technology/IntegratedSecuritySolutionSection"
-
-import { DontWorrySection } from "../../components/page/technology/DontWorrySection"
 import { FAQSection } from "../../components/common/FAQSection"
 import { translate } from "@docusaurus/Translate"
+import { NetworkSecurity } from "../../components/page/technology/NetworkSecurity"
+import { WalletSecurity } from "../../components/page/technology/WalletSecurity"
+import { ServiceSecurity } from "../../components/page/technology/ServiceSecurity"
 
 export default function Root() {
   return (
@@ -16,7 +18,9 @@ export default function Root() {
     >
       <HowItSecuresSection />
       <IntegratedSecuritySolutionSection />
-      <DontWorrySection />
+      <NetworkSecurity />
+      <WalletSecurity />
+      <ServiceSecurity />
       <FAQSection
         faqs={[
           {

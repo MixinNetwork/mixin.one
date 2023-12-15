@@ -47,7 +47,8 @@ export const HowItSecuresSection = () => {
         <img
           loading="lazy"
           src={require("@site/static/img/page/technology/1.1.webp").default}
-          className="aspect-3582/2517 w-full"
+          width={3582}
+          height={1956}
         />
         <div className="pb-45 mt-20 grid auto-rows-fr gap-y-5 md:mt-5">
           <Item
