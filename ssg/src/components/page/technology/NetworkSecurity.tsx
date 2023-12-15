@@ -8,16 +8,25 @@ const Item = ({
   icon,
   title,
   description,
+  background,
 }: {
   icon: React.ReactNode
   title: React.ReactNode
   description: React.ReactNode
+  background: string
 }) => {
   return (
-    <div className="border-px pb-13.5 border-[#D9D9D9] bg-[#F2F2F280] px-6 pt-10">
-      {icon}
-      <div className="text-6 mt-11.5 font-medium">{title}</div>
-      <div className="mt-5 text-sm">{description}</div>
+    <div className="relative">
+      <img
+        src={require("@site/static/img/page/technology/" + background).default}
+        className="fill object-cover"
+      />
+
+      <div className="border-px pb-13.5 h-full border-[#D9D9D9] bg-[#F2F2F280] px-6 pt-10">
+        {icon}
+        <div className="text-6 mt-11.5 font-medium">{title}</div>
+        <div className="mt-5 text-sm">{description}</div>
+      </div>
     </div>
   )
 }
@@ -42,6 +51,7 @@ export const NetworkSecurity = () => (
         className="sm:py-7.5 lg:py-12.5 md:px-27 lg:px-38 col-span-full bg-[#F2F2F2] px-5 py-5 sm:px-16 md:py-10"
       />
       <Item
+        background="3.2.1.webp"
         icon={<Icon1 />}
         title={<Translate>Punitive PoS</Translate>}
         description={
@@ -55,6 +65,7 @@ export const NetworkSecurity = () => (
       />
 
       <Item
+        background="3.3.1.webp"
         icon={<Icon2 />}
         title={<Translate>TEE</Translate>}
         description={
@@ -68,6 +79,7 @@ export const NetworkSecurity = () => (
         }
       />
       <Item
+        background="3.4.1.webp"
         icon={<Icon3 />}
         title={<Translate>Light Witness</Translate>}
         description={
