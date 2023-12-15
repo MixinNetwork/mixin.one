@@ -123,7 +123,7 @@ export const Section = () => {
           </div>
 
           <button
-            className="mt-10 w-full rounded-sm bg-neutral-800 py-4 text-center text-base font-normal leading-none text-white"
+            className="mt-10 w-full rounded-sm bg-[#333] py-4 text-center text-base font-normal leading-none text-white"
             onClick={async () => {
               const name = nameRef.current?.value.trim()
               const businessType = businessTypeRef.current?.value
