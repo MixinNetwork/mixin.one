@@ -1,17 +1,20 @@
 import Translate, { translate } from "@docusaurus/Translate"
 import LocalLink from "../../common/LocaleLink"
 import SectionTitle from "../../common/SectionTitle"
+import Arrow from "@site/static/img/page/home/product/arrow.svg"
 
 const ProductCard = ({
   title,
   description,
   cover,
+  href,
 }: {
   title: string
   description: string
   cover: string
+  href: string
 }) => (
-  <div className="overflow-hidden rounded-lg bg-white shadow-lg">
+  <a className="flex flex-col overflow-hidden rounded-lg bg-white shadow-lg">
     <img
       loading="lazy"
       src={require("@site/static/img/page/home/product/" + cover).default}
@@ -19,15 +22,21 @@ const ProductCard = ({
       className="aspect-335/225"
     />
 
-    <div className="space-y-3 px-5 py-6 pb-11 sm:pb-6">
-      <div className="text-xl font-medium leading-tight text-[#333]">
-        {title}
+    <div className="sm:space-y-6.2 md:space-y-9.3 lg:space-y-12.5 flex grow flex-col justify-between space-y-3 px-5 py-6">
+      <div className="space-y-3">
+        <div className="text-xl font-medium leading-tight text-[#333]">
+          {title}
+        </div>
+        <div className="text-sm font-normal leading-snug text-[#333] text-opacity-80">
+          {description}
+        </div>
       </div>
-      <div className="text-sm font-normal leading-snug text-[#333] text-opacity-80">
-        {description}
+      <div className="text-3.5 flex items-center font-medium">
+        View Product
+        <Arrow className="ml-2" />
       </div>
     </div>
-  </div>
+  </a>
 )
 
 export const MainProductSection = () => {
@@ -51,6 +60,7 @@ export const MainProductSection = () => {
               "The decentralized crypto wallet is powered by mature MPC technology. Mixin Messenger supports all popular cryptos, end-to-end encrypted chat, free transfers to contacts, fiat on-ramp, and social recovery.",
           })}
           cover={"messenger.webp"}
+          href="https://messenger.mixin.one/"
         />
 
         <ProductCard
@@ -61,6 +71,7 @@ export const MainProductSection = () => {
               "Mixin Safe provides the general public with cutting-edge Bitcoin custody solutions. Bitcoin custody should never sacrifice decentralization, always be confidence and reliability.",
           })}
           cover={"safe.webp"}
+          href="https://safe.mixin.one/"
         />
         <ProductCard
           key="Mixin Wealth"
@@ -70,6 +81,7 @@ export const MainProductSection = () => {
               "We strive to build the safest products to grow your crypto wealth, with the highest standard of decentralized custodian powered by Mixin Safe.",
           })}
           cover={"wealth.webp"}
+          href="https://wealth.mixin.one/"
         />
       </div>
 
