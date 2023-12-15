@@ -6,23 +6,31 @@ export default function SectionTitle({
   className,
   titleClassName,
   descriptionClassName,
+  mode = "small",
 }: {
   children: React.ReactNode
   description?: React.ReactNode
   className?: string
   titleClassName?: string
   descriptionClassName?: string
+  mode?: "large" | "small"
 }) {
   return (
     <div
       className={clsx(
-        "py-15 sm:space-y-6.25 md:space-y-7.5 container mx-auto space-y-5 lg:space-y-10",
+        "container mx-auto",
+        mode == "small" &&
+          "my-15 sm:mt-30 sm:mb-25 sm:space-y-6.25 md:space-y-7.5 space-y-5 lg:space-y-10",
+        mode == "large" && "my-15 space-y-10",
         className,
       )}
     >
       <div
         className={clsx(
-          "text-7 sm:text-8 lg:text-9 title-container text-center text-3xl font-medium text-[#333]",
+          "title-container text-center",
+          mode == "small" && "text-7 sm:text-8 lg:text-9 text-3xl font-medium",
+          mode == "large" &&
+            "text-8 sm:text-11 md:text-15 font-medium text-[#333]",
           titleClassName,
         )}
       >
@@ -31,7 +39,10 @@ export default function SectionTitle({
       {description && (
         <div
           className={clsx(
-            "text-opacity-66 title-container text-center text-base font-normal leading-normal text-[#333]",
+            "text-opacity-66",
+            mode == "small" &&
+              "text-opacity-66 title-container text-center text-base",
+            mode == "large" && "title-container text-center",
             descriptionClassName,
           )}
         >
