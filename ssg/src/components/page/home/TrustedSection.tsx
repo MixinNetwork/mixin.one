@@ -3,21 +3,32 @@ import SectionTitle from "../../common/SectionTitle"
 
 const TrustedItem = ({ name, icon }: { name: string; icon: string }) => (
   <div className="space-y-3">
-    <img loading="lazy" src={require("@site/static/img/page/home/trusted/" + icon).default} alt={name} className="mx-auto aspect-square w-15 object-cover" />
-    <div className="text-center text-white text-xs font-medium leading-3">{name}</div>
+    <img
+      loading="lazy"
+      src={require("@site/static/img/page/home/trusted/" + icon).default}
+      alt={name}
+      className="w-15 mx-auto aspect-square object-cover"
+    />
+    <div className="text-center text-xs font-medium leading-3 text-white">
+      {name}
+    </div>
   </div>
 )
 
 export const TrustedSection = () => (
-  <div className="bg-zinc-800 pt-5 pb-40 sm:pb-20 md:pt-10 md:pb-35 text-white">
+  <div className="md:pb-35 bg-zinc-800 pb-40 pt-5 text-white sm:pb-20 md:pt-10">
     <SectionTitle
       titleClassName="text-white!"
       descriptionClassName="text-white! text-opacity-60!"
-      description={<Translate>Mixin powers leading organizations from Payment to DAOs, and beyond.</Translate>}
+      description={
+        <Translate>
+          Mixin powers leading organizations from Payment to DAOs, and beyond.
+        </Translate>
+      }
     >
       <Translate>Trusted by</Translate>
     </SectionTitle>
-    <div className="mx-auto w-fit grid grid-cols-3 justify-between items-center place-items-center mt-5 sm:mt-0 sm:grid-cols-6 gap-x-8 gap-y-15 sm:gap-x-6 md:gap-x-18 sm:px-12 md:px-0">
+    <div className="gap-y-15 md:gap-x-18 mx-auto mt-5 grid w-fit grid-cols-3 place-items-center items-center justify-between gap-x-8 sm:mt-0 sm:grid-cols-6 sm:gap-x-6 sm:px-12 md:px-0">
       <TrustedItem name={"MixPay"} icon={"mixPay.webp"} />
       <TrustedItem name={"Pando Proto"} icon={"pandoProto.webp"} />
       <TrustedItem name={"ExinPool"} icon={"exinPool.webp"} />

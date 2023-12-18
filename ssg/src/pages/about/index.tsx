@@ -31,20 +31,24 @@ export default function Root() {
               message: "Where is the company of Mixin Safe located?",
             }),
             answer: translate({
-              message: "Mixin Safe is a service provided by Mixin Limited, a company registered in Hong Kong.",
+              message:
+                "Mixin Safe is a service provided by Mixin Limited, a company registered in Hong Kong.",
             }),
           },
           {
             question: translate({
-              message: "What is the relationship between Mixin Safe and Mixin Network?",
+              message:
+                "What is the relationship between Mixin Safe and Mixin Network?",
             }),
             answer: translate({
-              message: "The developers behind Mixin Safe also developed Mixin Network. Mixin Safe uses the same Mixin Network validators to protect the MPC network.",
+              message:
+                "The developers behind Mixin Safe also developed Mixin Network. Mixin Safe uses the same Mixin Network validators to protect the MPC network.",
             }),
           },
           {
             question: translate({
-              message: "If the Mixin Safe team disbands, can I still withdraw my assets?",
+              message:
+                "If the Mixin Safe team disbands, can I still withdraw my assets?",
             }),
             answer: translate({
               message:
@@ -53,10 +57,12 @@ export default function Root() {
           },
           {
             question: translate({
-              message: "If I lose my private key and the safety time lock also expires, can the Mixin Safe team take away my assets?",
+              message:
+                "If I lose my private key and the safety time lock also expires, can the Mixin Safe team take away my assets?",
             }),
             answer: translate({
-              message: "No, the Mixin Safe team only has one key, which is not enough to transfer your assets unless you have already set up a recovery or inheritance plan.",
+              message:
+                "No, the Mixin Safe team only has one key, which is not enough to transfer your assets unless you have already set up a recovery or inheritance plan.",
             }),
           },
         ]}

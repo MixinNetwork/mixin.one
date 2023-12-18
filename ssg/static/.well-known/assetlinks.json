@@ -1,9 +1,12 @@
-[{
-  "relation": ["delegate_permission/common.handle_all_urls"],
-  "target": {
-    "namespace": "android_app",
-    "package_name": "one.mixin.messenger",
-    "sha256_cert_fingerprints":
-    ["02:FB:46:68:74:97:53:38:33:7E:C0:0A:B8:0B:95:B6:23:C0:57:81:43:56:B2:EA:3F:A3:F5:75:78:F8:1A:B6"]
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "one.mixin.messenger",
+      "sha256_cert_fingerprints": [
+        "02:FB:46:68:74:97:53:38:33:7E:C0:0A:B8:0B:95:B6:23:C0:57:81:43:56:B2:EA:3F:A3:F5:75:78:F8:1A:B6"
+      ]
+    }
   }
-}]
+]

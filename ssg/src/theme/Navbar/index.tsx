@@ -13,12 +13,21 @@ import Translate from "@docusaurus/Translate"
 const Item = (data: NavbarItem) => {
   if (data.items?.length) {
     return (
-      <div className="group relative click-area-4">
-        <div className="group-hover:opacity-80 cursor-pointer">{data.label}</div>
+      <div className="click-area-4 group relative">
+        <div className="cursor-pointer group-hover:opacity-80">
+          {data.label}
+        </div>
 
-        <div className={clsx("absolute -left-7.5 pt-6 w-98 rounded-sm transition-all group-hover:op-100 group-hover:pointer-events-auto z-10", "opacity-0 pointer-events-none")}>
-          <div className="pt-7.5 pb-10 px-2.5 bg-white shadow-xl">
-            <div className="ms-5 text-[#333] text-opacity-70 text-xs font-normal uppercase">{data.label}</div>
+        <div
+          className={clsx(
+            "-left-7.5 w-98 group-hover:op-100 absolute z-10 rounded-sm pt-6 transition-all group-hover:pointer-events-auto",
+            "pointer-events-none opacity-0",
+          )}
+        >
+          <div className="pt-7.5 bg-white px-2.5 pb-10 shadow-xl">
+            <div className="ms-5 text-xs font-normal uppercase text-[#333] text-opacity-70">
+              {data.label}
+            </div>
             <div className="mt-4 space-y-1">
               {data.items.map((item) => {
                 const { label, icon, to, description } = item as {
@@ -29,10 +38,22 @@ const Item = (data: NavbarItem) => {
                 }
 
                 return (
-                  <Link key={label} to={to} className="px-5 pt-3.5 pb-2.5 rounded-sm grid gap-x-5 gap-y-2.5 hover:bg-zinc-100 grid-cols-[auto_1fr] grid-rows-[auto_1fr]">
-                    <img loading="lazy" src={useBaseUrl(icon)} width={24} height={24} className="row-span-2" />
-                    <div className="text-[#333] text-sm font-medium leading-tight">{label}</div>
-                    <div className="text-[#333] text-opacity-70 text-xs font-normal leading-none">
+                  <Link
+                    key={label}
+                    to={to}
+                    className="grid grid-cols-[auto_1fr] grid-rows-[auto_1fr] gap-x-5 gap-y-2.5 rounded-sm px-5 pb-2.5 pt-3.5 hover:bg-zinc-100"
+                  >
+                    <img
+                      loading="lazy"
+                      src={useBaseUrl(icon)}
+                      width={24}
+                      height={24}
+                      className="row-span-2"
+                    />
+                    <div className="text-sm font-medium leading-tight text-[#333]">
+                      {label}
+                    </div>
+                    <div className="text-xs font-normal leading-none text-[#333] text-opacity-70">
                       <Translate>{description}</Translate>
                     </div>
                   </Link>
@@ -54,17 +75,28 @@ const MobileItem = (data: NavbarItem) => {
     return (
       <div>
         <input id={id} type="checkbox" className="hidden! peer" />
-        <label htmlFor={id} className={clsx("group py-8 px-6 flex flex-row justify-between peer-checked:svg:-rotate-180 not-default")}>
+        <label
+          htmlFor={id}
+          className={clsx(
+            "peer-checked:svg:-rotate-180 not-default group flex flex-row justify-between px-6 py-8",
+          )}
+        >
           <div className={clsx(defaultClassName)}>{data.label}</div>
           <Arrow className="transition-all duration-300" />
         </label>
 
-        <div className="grid grid-rows-[0fr] transition-all duration-300 peer-checked:grid-rows-[1fr] peer-checked:children:border-op-100">
-          <div className="overflow-hidden border-t-1 border-zinc-200 border-op-0 transition-all duration-300">
-            <div className="text-[#333] text-opacity-70 text-xs font-normal uppercase pb-5 px-6 pt-8">{data.label}</div>
+        <div className="peer-checked:children:border-op-100 grid grid-rows-[0fr] transition-all duration-300 peer-checked:grid-rows-[1fr]">
+          <div className="border-t-1 border-op-0 overflow-hidden border-zinc-200 transition-all duration-300">
+            <div className="px-6 pb-5 pt-8 text-xs font-normal uppercase text-[#333] text-opacity-70">
+              {data.label}
+            </div>
             <div>
               {data.items.map((item) => (
-                <Link key={item.label} {...item} className="block py-3.5 px-7 text-[#333] text-sm leading-tight">
+                <Link
+                  key={item.label}
+                  {...item}
+                  className="block px-7 py-3.5 text-sm leading-tight text-[#333]"
+                >
                   {item.label}
                 </Link>
               ))}
@@ -76,7 +108,7 @@ const MobileItem = (data: NavbarItem) => {
   }
 
   return (
-    <Link {...data} className={clsx("py-8 px-6 block", defaultClassName)}>
+    <Link {...data} className={clsx("block px-6 py-8", defaultClassName)}>
       {data.label}
     </Link>
   )
@@ -89,18 +121,23 @@ export default function Navbar({ dark }: { dark?: boolean }): JSX.Element {
   const [leftItems, rightItems] = splitNavbarItems(items)
   // default class navbar
   return (
-    <nav className={clsx("relative px-6 py-2.5 sm:py-5 sm:px-7.5 flex flex-row justify-between gap-x-2 items-center container mx-auto", dark && "dark")}>
+    <nav
+      className={clsx(
+        "sm:px-7.5 container relative mx-auto flex flex-row items-center justify-between gap-x-2 px-6 py-2.5 sm:py-5",
+        dark && "dark",
+      )}
+    >
       <span className="md:basis-1/3">
         <Logo />
       </span>
 
-      <span className="hidden! sm:flex! flex-row justify-end md:justify-center items-center space-x-14 text-sm grow md:basis-1/3 dark:text-white">
+      <span className="hidden! sm:flex! grow flex-row items-center justify-end space-x-14 text-sm dark:text-white md:basis-1/3 md:justify-center">
         {leftItems.map((item) => {
           return <Item key={item.label} {...item} />
         })}
       </span>
 
-      <span className="hidden! sm:flex! flex-row justify-end items-center space-x-14 text-sm shrink-0 ml-10 md:ml-0 md:basis-1/3 dark:text-white">
+      <span className="hidden! sm:flex! ml-10 shrink-0 flex-row items-center justify-end space-x-14 text-sm dark:text-white md:ml-0 md:basis-1/3">
         {rightItems.map((item) => {
           return (
             <Link key={item.label} {...item}>
@@ -111,19 +148,21 @@ export default function Navbar({ dark }: { dark?: boolean }): JSX.Element {
       </span>
 
       <input id="nav" type="checkbox" className="hidden! peer" />
-      <label htmlFor="nav" className="sm:hidden click-area-4">
-        <Hamburger className="dark:fill-white dark:fill-op-90" />
+      <label htmlFor="nav" className="click-area-4 sm:hidden">
+        <Hamburger className="dark:fill-op-90 dark:fill-white" />
       </label>
 
-      <div className="absolute top-full inset-x-0 grid grid-rows-[0fr] sm:grid-rows-[0fr]! transition-all duration-300 peer-checked:grid-rows-[1fr] z-100">
-        <div className="overflow-hidden bg-white divide-solid divide-zinc-200 divide-y-1">
+      <div className="sm:grid-rows-[0fr]! z-100 absolute inset-x-0 top-full grid grid-rows-[0fr] transition-all duration-300 peer-checked:grid-rows-[1fr]">
+        <div className="divide-y-1 divide-solid divide-zinc-200 overflow-hidden bg-white">
           {leftItems.map((item) => (
             <MobileItem key={item.label} {...item} />
           ))}
 
           {rightItems.map((item) => (
             <Link key={item.label} {...item} className="block p-6 ">
-              <div className="w-fit py-2.5 px-7 bg-zinc-800 rounded-sm text-white text-base font-medium leading-none">{item.label}</div>
+              <div className="w-fit rounded-sm bg-zinc-800 px-7 py-2.5 text-base font-medium leading-none text-white">
+                {item.label}
+              </div>
             </Link>
           ))}
         </div>

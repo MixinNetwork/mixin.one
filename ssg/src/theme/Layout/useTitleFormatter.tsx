@@ -8,6 +8,7 @@ export function useTitleFormatter(title?: string | undefined): string {
   const i18nSiteTitle = translate({ message: siteTitle })
 
   if (i18nSiteTitle === title) return title
-  if (title?.trim().length) return `${title.trim()} ${titleDelimiter} ${i18nSiteTitle}`
+  if (title?.trim().length)
+    return `${title.trim()} ${titleDelimiter} ${i18nSiteTitle}`
   return i18nSiteTitle
 }

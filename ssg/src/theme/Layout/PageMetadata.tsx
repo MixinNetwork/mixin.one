@@ -11,7 +11,13 @@ type PageMetadataProps = {
   readonly children?: ReactNode
 }
 
-export function PageMetadata({ title, description, keywords, image, children }: PageMetadataProps): JSX.Element {
+export function PageMetadata({
+  title,
+  description,
+  keywords,
+  image,
+  children,
+}: PageMetadataProps): JSX.Element {
   const pageTitle = useTitleFormatter(title)
   const { withBaseUrl } = useBaseUrlUtils()
   const pageImage = image ? withBaseUrl(image, { absolute: true }) : undefined

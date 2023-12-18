@@ -6,8 +6,21 @@ import { toast } from "sonner"
 import DropdownIcon from "@site/static/img/common/dropdown.svg"
 import tw from "tailwind-styled-components"
 
-const Item = ({ children, isError }: { children: React.ReactNode; isError: boolean }) => (
-  <div className={clsx("text-sm font-normal space-y-2.5 transition-all", isError ? "text-red" : "text-[#333] text-opacity-80 ")}>{children}</div>
+const Item = ({
+  children,
+  isError,
+}: {
+  children: React.ReactNode
+  isError: boolean
+}) => (
+  <div
+    className={clsx(
+      "space-y-2.5 text-sm font-normal transition-all",
+      isError ? "text-red" : "text-[#333] text-opacity-80 ",
+    )}
+  >
+    {children}
+  </div>
 )
 const Input = tw.input`p-4 w-full rounded-sm border border-zinc-800`
 
@@ -24,15 +37,24 @@ export const Section = () => {
       <SectionTitle>
         <Translate>Contact Us</Translate>
       </SectionTitle>
-      <div className="container mx-auto grid sm:grid-cols-2 gap-y-10 pb-45">
-        <img loading="lazy" src={require("@site/static/img/page/contact/1.webp").default} className="aspect-375/425 sm:aspect-auto w-full h-full object-cover sm:flex-1" />
+      <div className="pb-45 container mx-auto grid gap-y-10 sm:grid-cols-2">
+        <img
+          loading="lazy"
+          src={require("@site/static/img/page/contact/1.webp").default}
+          className="aspect-375/425 h-full w-full object-cover sm:aspect-auto sm:flex-1"
+        />
         <div className="px-8 sm:flex-1 sm:shadow-lg">
           <div className="space-y-6">
             <Item isError={error === "name"}>
               <div>
                 <Translate>Name (required)</Translate>
               </div>
-              <Input ref={nameRef} type="text" inputMode="text" className={clsx(error === "name" && "border-red")} />
+              <Input
+                ref={nameRef}
+                type="text"
+                inputMode="text"
+                className={clsx(error === "name" && "border-red")}
+              />
             </Item>
 
             <Item isError={false}>
@@ -40,8 +62,11 @@ export const Section = () => {
                 <Translate>Business Type (required)</Translate>
               </div>
               <div className="relative">
-                <DropdownIcon className="absolute-vertical-center right-4 stroke-black z-1" />
-                <select ref={businessTypeRef} className="p-4 w-full rounded-sm border border-zinc-800 appearance-none relative z-0">
+                <DropdownIcon className="absolute-vertical-center z-1 right-4 stroke-black" />
+                <select
+                  ref={businessTypeRef}
+                  className="relative z-0 w-full appearance-none rounded-sm border border-zinc-800 p-4"
+                >
                   <option value="exchange">
                     <Translate>Exchange</Translate>
                   </option>
@@ -70,7 +95,12 @@ export const Section = () => {
               <div>
                 <Translate>Email (required)</Translate>
               </div>
-              <Input ref={emailRef} type="text" inputMode="email" className={clsx(error === "email" && "border-red")} />
+              <Input
+                ref={emailRef}
+                type="text"
+                inputMode="email"
+                className={clsx(error === "email" && "border-red")}
+              />
             </Item>
             <Item isError={error === "message"}>
               <div>
@@ -84,13 +114,16 @@ export const Section = () => {
                 })}
                 type="text"
                 inputMode="text"
-                className={clsx("min-h-40", error === "message" && "border-red")}
+                className={clsx(
+                  "min-h-40",
+                  error === "message" && "border-red",
+                )}
               />
             </Item>
           </div>
 
           <button
-            className="mt-10 w-full py-4 bg-neutral-800 rounded-sm text-center text-white text-base font-normal leading-none"
+            className="mt-10 w-full rounded-sm bg-[#333] py-4 text-center text-base font-normal leading-none text-white"
             onClick={async () => {
               const name = nameRef.current?.value.trim()
               const businessType = businessTypeRef.current?.value
@@ -102,7 +135,11 @@ export const Section = () => {
                 return
               }
 
-              if (!/[\w'.%+-]+@(?:[a-zA-Z0-9-]+\.)+[a-zA-Z]{2,4}/.test(email || "")) {
+              if (
+                !/[\w'.%+-]+@(?:[a-zA-Z0-9-]+\.)+[a-zA-Z]{2,4}/.test(
+                  email || "",
+                )
+              ) {
                 setError("email")
                 return
               }
@@ -118,7 +155,7 @@ export const Section = () => {
                 fetch("https://safe-api.mixin.zone/customer_services", {
                   method: "POST",
                   headers: {
-                    "Content-Type": "application/json"
+                    "Content-Type": "application/json",
                   },
                   body: JSON.stringify({
                     full_name: name,
@@ -147,7 +184,7 @@ export const Section = () => {
                     translate({
                       message: "Unknown error, please try again later.",
                     }),
-                }
+                },
               )
             }}
           >

@@ -15,7 +15,12 @@ const ListSection = () => {
     <div className="pb-25">
       <Item
         title={<Translate>Asset Privacy</Translate>}
-        description={<Translate>The types and quantities of assets in your wallet are only known to you.</Translate>}
+        description={
+          <Translate>
+            The types and quantities of assets in your wallet are only known to
+            you.
+          </Translate>
+        }
         points={[
           {
             cover: "1.2.1.webp",
@@ -51,7 +56,11 @@ const ListSection = () => {
       />
       <Item
         title={<Translate>Transfer Privacy</Translate>}
-        description={<Translate>Enhance UTXO transfer privacy through CryptoNote technology.</Translate>}
+        description={
+          <Translate>
+            Enhance UTXO transfer privacy through CryptoNote technology.
+          </Translate>
+        }
         points={[
           {
             cover: "1.3.1.webp",
@@ -92,15 +101,26 @@ const Item = ({
     content: string
   }[]
 }) => (
-  <div className="pb-20 grid items-center gap-5">
+  <div className="grid items-center gap-5 pb-20">
     <SectionTitle description={description}>{title}</SectionTitle>
-    <div className="px-5 space-y-20 lg:space-y-25">
+    <div className="lg:space-y-25 space-y-20 px-5">
       {points.map(({ cover, title, content }) => (
-        <div key={title} className="grid gap-y-10 gap-x-16.5 lg:gap-x-34.5 items-center md:grid-cols-2 group">
-          <img loading="lazy" src={require("@site/static/img/page/privacy/" + cover).default} className="aspect-335/225 w-full md:group-odd:order-last" />
+        <div
+          key={title}
+          className="gap-x-16.5 lg:gap-x-34.5 group grid items-center gap-y-10 md:grid-cols-2"
+        >
+          <img
+            loading="lazy"
+            src={require("@site/static/img/page/privacy/" + cover).default}
+            className="aspect-335/225 w-full md:group-odd:order-last"
+          />
           <div className="space-y-5">
-            <div className="text-[#333] text-5.5 sm:text-7 lg:text-8 font-medium">{title}</div>
-            <div className="text-[#333] text-sm sm:text-base font-normal">{content}</div>
+            <div className="text-5.5 sm:text-7 lg:text-8 font-medium text-[#333]">
+              {title}
+            </div>
+            <div className="text-sm font-normal text-[#333] sm:text-base">
+              {content}
+            </div>
           </div>
         </div>
       ))}
@@ -110,40 +130,74 @@ const Item = ({
 
 function GridSection({}) {
   return (
-    <div className="pb-15 sm:pb-30 md:pb-25 lg:pb-30 grid px-5 gap-5 md:grid-cols-[13fr_20fr_13fr] lg:gap-y-7.5 lg:gap-x-12.5 lg:grid-cols-[296fr_502fr_296fr]">
-      <div className="order-0 md:order-1 md:row-span-2 bg-white rounded-sm shadow pt-8 sm:pt-10 pb-16 px-5 sm:px-30 md:px-6 lg:px-9.5 space-y-10 sm:space-y-15">
-        <div className="text-[#333] text-7 text-center font-medium">
+    <div className="pb-15 sm:pb-30 md:pb-25 lg:pb-30 lg:gap-y-7.5 lg:gap-x-12.5 grid gap-5 px-5 md:grid-cols-[13fr_20fr_13fr] lg:grid-cols-[296fr_502fr_296fr]">
+      <div className="order-0 sm:px-30 lg:px-9.5 sm:space-y-15 space-y-10 rounded-sm bg-white px-5 pb-16 pt-8 shadow sm:pt-10 md:order-1 md:row-span-2 md:px-6">
+        <div className="text-7 text-center font-medium text-[#333]">
           <Translate>Information Privacy</Translate>
         </div>
-        <img loading="lazy" src={require("@site/static/img/page/privacy/1.1.1.webp").default} className="aspect-290/250 w-full" />
+        <img
+          loading="lazy"
+          src={require("@site/static/img/page/privacy/1.1.1.webp").default}
+          className="aspect-290/250 w-full"
+        />
       </div>
-      <GridItem cover={<GridIcon1 />} className="order-1 md:order-0">
-        <Translate>All messages, audios, photos, and files are end-to-end encrypted</Translate>
+      <GridItem cover={<GridIcon1 />} className="md:order-0 order-1">
+        <Translate>
+          All messages, audios, photos, and files are end-to-end encrypted
+        </Translate>
       </GridItem>
       <GridItem cover={<GridIcon2 />} className="order-2">
-        <Translate>Stay connected to your family, friends, and coworker by group chat</Translate>
+        <Translate>
+          Stay connected to your family, friends, and coworker by group chat
+        </Translate>
       </GridItem>
       <GridItem cover={<GridIcon3 />} className="order-3">
-        <Translate>Enhance privacy by turning on the disappearing messages feature</Translate>
+        <Translate>
+          Enhance privacy by turning on the disappearing messages feature
+        </Translate>
       </GridItem>
       <GridItem cover={<GridIcon4 />} className="order-4">
-        <Translate>We can't read your messages or listen to your calls, nor can anyone else</Translate>
+        <Translate>
+          We can't read your messages or listen to your calls, nor can anyone
+          else
+        </Translate>
       </GridItem>
     </div>
   )
 }
 
-const GridItem = ({ cover, children, className }: { cover: React.ReactNode; children: React.ReactNode; className?: string }) => (
-  <div className={clsx("bg-white rounded-sm shadow p-5 pb-11.5 sm:p-7.5 sm:pb-21 md:px-5 md:pt-9 md:pb-6.5 lg:px-7 grid place-items-center gap-y-5", className)}>
+const GridItem = ({
+  cover,
+  children,
+  className,
+}: {
+  cover: React.ReactNode
+  children: React.ReactNode
+  className?: string
+}) => (
+  <div
+    className={clsx(
+      "pb-11.5 sm:p-7.5 sm:pb-21 md:pb-6.5 grid place-items-center gap-y-5 rounded-sm bg-white p-5 shadow md:px-5 md:pt-9 lg:px-7",
+      className,
+    )}
+  >
     {cover}
-    <div className="text-center text-[#333] text-base font-normal">{children}</div>
+    <div className="text-center text-base font-normal text-[#333]">
+      {children}
+    </div>
   </div>
 )
 
 export const DesignSection = () => {
   return (
     <>
-      <SectionTitle description={<Translate>We go out of our way to ensure that you have the utmost privacy.</Translate>}>
+      <SectionTitle
+        description={
+          <Translate>
+            We go out of our way to ensure that you have the utmost privacy.
+          </Translate>
+        }
+      >
         <Translate>Privacy by Design</Translate>
       </SectionTitle>
       <GrayBackgroundWrapper bgClassName="block!">

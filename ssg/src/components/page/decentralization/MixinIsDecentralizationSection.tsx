@@ -17,45 +17,80 @@ export const MixinIsDecentralizationSection = () => {
   return (
     <SpecialLayout>
       <SpecialLayoutItem
-        cover={require("@site/static/img/page/decentralization/3.1.1.webp").default}
+        cover={
+          require("@site/static/img/page/decentralization/3.1.1.webp").default
+        }
         coverClassName="aspect-562/662"
         title={<Translate>Mixin is Decentralization</Translate>}
-        description={<Translate>We lead the development of multiple open-source decentralized networks.</Translate>}
+        description={
+          <Translate>
+            We lead the development of multiple open-source decentralized
+            networks.
+          </Translate>
+        }
         points={[
           {
             icon: <Icon11 />,
             title: translate({
               message: "Based on decentralized networks",
             }),
-            description: <Translate>Integrate assets and smart contracts of Layer 1 networks such as Bitcoin and Ethereum, as well as technologies such as time lock and PSBT.</Translate>,
+            description: (
+              <Translate>
+                Integrate assets and smart contracts of Layer 1 networks such as
+                Bitcoin and Ethereum, as well as technologies such as time lock
+                and PSBT.
+              </Translate>
+            ),
           },
           {
             icon: <Icon12 />,
             title: translate({
               message: "Decentralized MPC network",
             }),
-            description: <Translate>Decentralized MPC network allows your family, friends or colleagues to participate in the management of the vault together.</Translate>,
+            description: (
+              <Translate>
+                Decentralized MPC network allows your family, friends or
+                colleagues to participate in the management of the vault
+                together.
+              </Translate>
+            ),
           },
           {
             icon: <Icon13 />,
             title: translate({
               message: "Decentralized multi-chain ledger",
             }),
-            description: <Translate>Decentralized multi-chain ledger Mixin Network provides a free and fast cross-chain ledger to realize commercial applications.</Translate>,
+            description: (
+              <Translate>
+                Decentralized multi-chain ledger Mixin Network provides a free
+                and fast cross-chain ledger to realize commercial applications.
+              </Translate>
+            ),
           },
           {
             icon: <Icon14 />,
             title: translate({
               message: "Decentralized key network",
             }),
-            description: <Translate>Decentralized key network TIP Network helps users use private keys in an easy-to-remember way.</Translate>,
+            description: (
+              <Translate>
+                Decentralized key network TIP Network helps users use private
+                keys in an easy-to-remember way.
+              </Translate>
+            ),
           },
         ]}
       />
       <SpecialLayoutItem
         title={<Translate>Mixin adopts decentralized technology</Translate>}
-        description={<Translate>We never invent our own cryptographic techniques.</Translate>}
-        cover={require("@site/static/img/page/decentralization/3.2.1.webp").default}
+        description={
+          <Translate>
+            We never invent our own cryptographic techniques.
+          </Translate>
+        }
+        cover={
+          require("@site/static/img/page/decentralization/3.2.1.webp").default
+        }
         coverClassName="aspect-562/662"
         points={[
           {
@@ -64,7 +99,11 @@ export const MixinIsDecentralizationSection = () => {
               message: "Multisig",
             }),
             description: (
-              <Translate>Multi-signature technology makes it easy for you and your family, friends and colleagues to jointly manage large assets to avoid single point of failure.</Translate>
+              <Translate>
+                Multi-signature technology makes it easy for you and your
+                family, friends and colleagues to jointly manage large assets to
+                avoid single point of failure.
+              </Translate>
             ),
           },
           {
@@ -72,21 +111,36 @@ export const MixinIsDecentralizationSection = () => {
             title: translate({
               message: "MPC - TSS",
             }),
-            description: <Translate>Multi-party computing (MPC) threshold signature scheme (TSS) helps you to control your assets more securely and conveniently.</Translate>,
+            description: (
+              <Translate>
+                Multi-party computing (MPC) threshold signature scheme (TSS)
+                helps you to control your assets more securely and conveniently.
+              </Translate>
+            ),
           },
           {
             icon: <Icon23 />,
             title: translate({
               message: "MTG",
             }),
-            description: <Translate>Mixin Trust Group (MTG) technology allows you to interact with decentralized applications in a smoother and easier way.</Translate>,
+            description: (
+              <Translate>
+                Mixin Trust Group (MTG) technology allows you to interact with
+                decentralized applications in a smoother and easier way.
+              </Translate>
+            ),
           },
           {
             icon: <Icon24 />,
             title: translate({
               message: "More",
             }),
-            description: <Translate>Smart contracts, PSBT technology and time lock technology ensure that the Mixin team cannot do evil and take away your assets.</Translate>,
+            description: (
+              <Translate>
+                Smart contracts, PSBT technology and time lock technology ensure
+                that the Mixin team cannot do evil and take away your assets.
+              </Translate>
+            ),
           },
         ]}
       />
