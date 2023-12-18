@@ -86,7 +86,10 @@ export const ServiceSecurity = () => (
       />
     </div>
 
-    <a className="px-13 mt-30 rw-10 mx-auto block bg-[#333] py-4 text-center text-white sm:w-fit">
+    <a
+      href="https://developers.mixin.one/docs/dapp/getting-started/create-dapp"
+      className="px-13 mt-30 rw-10 mx-auto block bg-[#333] py-4 text-center text-white sm:w-fit"
+    >
       <Translate>Create a Dapp</Translate>
     </a>
   </>

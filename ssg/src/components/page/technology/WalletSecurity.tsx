@@ -5,10 +5,12 @@ const Item = ({
   cover,
   title,
   description,
+  href,
 }: {
   cover: string
   title: React.ReactNode
   description: React.ReactNode
+  href: string
 }) => (
   <div className="sm:gap-x-7.3 md:gap-x-14.7 lg:gap-x-22 group container mx-auto grid items-center gap-x-0 gap-y-5 px-5 sm:grid-cols-2">
     <img
@@ -22,7 +24,10 @@ const Item = ({
         {title}
       </div>
       <div className="mt-5 text-sm sm:text-base">{description}</div>
-      <a className="mt-10 block bg-[#333] py-4 text-center text-white  sm:w-fit sm:px-7">
+      <a
+        href={href}
+        className="mt-10 block bg-[#333] py-4 text-center text-white  sm:w-fit sm:px-7"
+      >
         <Translate>Technology Detail</Translate>
       </a>
     </div>
@@ -55,6 +60,7 @@ export const WalletSecurity = () => (
             witness P2WSH, and hardware wallet technologies.
           </Translate>
         }
+        href="https://safe.mixin.one/how-it-secures"
       />
       <Item
         cover="4.2.webp"
@@ -66,6 +72,7 @@ export const WalletSecurity = () => (
             easy-to-use MPC wallet.
           </Translate>
         }
+        href="https://messenger.mixin.one/how-it-works"
       />
     </div>
   </>
