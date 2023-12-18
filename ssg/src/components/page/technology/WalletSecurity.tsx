@@ -17,12 +17,12 @@ const Item = ({
       width={1584}
       height={1056}
     />
-    <div className="text-center sm:group-odd:text-start">
+    <div className="text-start">
       <div className="text-5 sm:text-6 md:text-7 lg:text-8 font-medium">
         {title}
       </div>
       <div className="mt-5 text-sm sm:text-base">{description}</div>
-      <a className="sm:group-odd sm:group-odd: mx-auto mt-10 block bg-[#333] py-4 text-center text-white  sm:w-fit sm:px-7 sm:group-odd:mx-0">
+      <a className="mt-10 block bg-[#333] py-4 text-center text-white  sm:w-fit sm:px-7">
         <Translate>Technology Detail</Translate>
       </a>
     </div>
