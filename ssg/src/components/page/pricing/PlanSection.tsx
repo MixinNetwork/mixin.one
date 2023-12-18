@@ -165,7 +165,7 @@ export const PlanSection = () => {
       <SectionTitle
         description={
           <Translate>
-            Mixin One membership brings decentralized solutions to serve
+            Mixin ONE membership brings decentralized solutions to serve
             different needs.
           </Translate>
         }
