@@ -3,6 +3,11 @@
 @unocss all;
 
 :root,
+html {
+  @apply overflow-x-hidden;
+}
+
+:root,
 html,
 body {
   --ifm-global-spacing: 0;
@@ -22,7 +27,7 @@ body {
     "Segoe UI Emoji",
     "Segoe UI Symbol",
     "Noto Color Emoji";
-  @apply overflow-x-hidden font-normal text-[#333];
+  @apply font-normal text-[#333];
 }
 
 a:not(.not-default),
