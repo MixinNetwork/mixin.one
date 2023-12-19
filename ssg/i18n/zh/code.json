@@ -1015,59 +1015,8 @@
   "Privacy Compliance": {
     "message": "隐私合规"
   },
-  "Don't worry about save": {
-    "message": "放心存"
-  },
-  "With our decentralized product, you can easily hold assets such as Bitcoin and other cryptocurrencies, say goodbye to the terrifying issues of asset loss and theft, and focus on holding and wealth growth.": {
-    "message": "我们整合先进并且可靠的技术为您提供安全的自托管钱包和去中心化的资产恢复和遗产继承服务。"
-  },
-  "Custody Security": {
-    "message": "托管安全"
-  },
-  "Most cryptocurrency losses are due to poor private key management by users. If you want to store cryptocurrency assets such as Bitcoin for a long time, a multi-signature wallet is essential. The dual multi-signature we designed significantly improves this situation.": {
-    "message": "大多数加密货币丢失是由于用户的私钥管理不善，想要长期存储比特币等加密货币资产，多重签名钱包必不可少，我们设计的双重多次签名显著改善这一现状。"
-  },
-  "Asset Recovery": {
-    "message": "资产恢复"
-  },
-  "Legacy Inheritance": {
-    "message": "遗产继承"
-  },
-  "By combining the multi-signature and time lock scripts of the Bitcoin network and adopting a decentralized and mature multi-party computing MPC technology, Mixin Safe has successfully implemented a complete decentralized inheritance solution.": {
-    "message": "通过组合比特币网络的多重签名与时间锁脚本，并采用去中心化的成熟的多方计算 MPC 技术，Mixin Safe 成功实现了一套完整的去中心化遗产继承方案。"
-  },
   "Asset Isolation": {
     "message": "资产隔离"
-  },
-  "Our multi-vault design can help you isolate assets, establish multiple vaults according to usage, and set different co-managers for different vaults, which can effectively enhance the privacy and security of assets.": {
-    "message": "我们的多金库设计能帮助您进行资产隔离，按用途建立多个金库并为不同的金库设置不同的共管人，可有效的增强资产的私密性和安全性。"
-  },
-  "Use with Confidence": {
-    "message": "放心用"
-  },
-  "We integrate advanced and reliable technologies to provide you with secure self-hosted wallets and decentralized asset recovery and inheritance services.": {
-    "message": "通过我们去中心化的产品您可以轻松的持有比特币等加密货币资产，告别令人胆战心惊的资产丢失被盗的问题，专注持有和财富增长。"
-  },
-  "Easy to Use": {
-    "message": "简单易用"
-  },
-  "The mobile phone number login is easy to use and will not lose the account. The 6-digit password manages the MPC wallet, which is safe, simple and easy to remember.": {
-    "message": "手机号登录易用且不会丢失账号，6 位数字密码管理 MPC 钱包安全简单且易于记忆。"
-  },
-  "Less Prone to Errors": {
-    "message": "不易出错"
-  },
-  "The address whitelist and multi-person co-management vault review can effectively reduce the occurrence of wrong address and wrong chain transfers.": {
-    "message": "地址白名单和多人共同管理金库审核每笔转账可有效减少转错地址、转错链等情况。"
-  },
-  "Privacy Protection": {
-    "message": "隐私保护"
-  },
-  "Enjoy the Interaction": {
-    "message": "尽享交互"
-  },
-  "Complete documents and considerate customer service are always ready to help you solve various problems you are facing, so you can focus on wealth growth.": {
-    "message": "完善的文档和贴心的客服随时帮助您解决面临的各种问题，您可以专注财富增长。"
   },
   "How it Secures": {
     "message": "工作原理"
@@ -1342,9 +1291,6 @@
   "Service Security": {
     "message": "服务安全"
   },
-  "Asset isolation": {
-    "message": "资产隔离"
-  },
   "User wallet assets and Dapp assets are isolated, and users can directly receive assets in their wallets after trading, lending, minting, etc.": {
     "message": "用户钱包资产和 Dapp 资产是隔离的，用户可以在交易、借贷、铸币等后直接在钱包中收到资产。"
   },
@@ -1386,5 +1332,11 @@
   },
   "Mixin Messenger's MPC wallet combines Mixin Network wallet and TIP distributed key protocol to provide users with a secure and easy-to-use MPC wallet.": {
     "message": "Mixin Messenger 的 MPC 钱包结合 Mixin Network 钱包和 TIP 分布式密钥协议，为用户提供安全易用的 MPC 钱包。"
+  },
+  "Technology": {
+    "message": "技术方案"
+  },
+  "Company": {
+    "message": "公司"
   }
 }

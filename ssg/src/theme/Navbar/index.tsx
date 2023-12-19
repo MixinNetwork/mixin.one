@@ -5,7 +5,7 @@ import React, { ComponentType, SVGProps } from "react"
 import Link from "@docusaurus/Link"
 import clsx from "clsx"
 import Arrow from "@site/static/img/common/nav/arrow.svg"
-import Translate from "@docusaurus/Translate"
+import Translate, { translate } from "@docusaurus/Translate"
 
 import Contact from "@site/static/img/common/nav/contact.svg"
 import About from "@site/static/img/common/nav/about.svg"
@@ -136,7 +136,9 @@ const MobileItem = (data: NavItemProps) => {
 export default function Navbar({ dark }: { dark?: boolean }): JSX.Element {
   const leftItems: NavItemProps[] = [
     {
-      label: "Technology",
+      label: translate({
+        message: "Technology",
+      }),
       to: "/how-it-secures",
     },
     {
@@ -144,21 +146,25 @@ export default function Navbar({ dark }: { dark?: boolean }): JSX.Element {
       to: "/pricing",
     },
     {
-      label: "Company",
+      label: translate({ message: "Company" }),
       groups: [
         {
-          label: "Company",
+          label: translate({ message: "Company" }),
           items: [
             {
-              label: "Contact Us",
+              label: translate({ message: "Contact Us" }),
               to: "/contact",
-              description: "If you have any questions, please contact us",
+              description: translate({
+                message: "If you have any questions, please contact us",
+              }),
               icon: Contact,
             },
             {
-              label: "About Us",
+              label: translate({ message: "About Us" }),
               to: "/about",
-              description: "Mixin helps you secure and grow your wealth",
+              description: translate({
+                message: "Mixin helps you secure and grow your wealth",
+              }),
               icon: About,
             },
           ],
