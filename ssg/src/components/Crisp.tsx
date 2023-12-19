@@ -7,20 +7,12 @@ export default function Root() {
   } = useDocusaurusContext()
 
   useEffect(() => {
-    // @ts-ignore
-    window.CRISP_RUNTIME_CONFIG = {
-      locale: currentLocale,
-    }
-    // @ts-ignore
-    window.$crisp = []
-    // @ts-ignore
-    window.CRISP_WEBSITE_ID = "52662bba-be49-4b06-9edc-7baa9a78f714"
-    ;(function () {
-      const s = document.createElement("script")
-      s.src = "https://client.crisp.chat/l.js"
-      s.async = true
-      document.getElementsByTagName("head")[0].appendChild(s)
-    })()
+    import("crisp-sdk-web").then(({ Crisp }) => {
+      Crisp.configure("52662bba-be49-4b06-9edc-7baa9a78f714", {
+        autoload: true,
+        locale: currentLocale,
+      })
+    })
   }, [currentLocale])
 
   return <></>
