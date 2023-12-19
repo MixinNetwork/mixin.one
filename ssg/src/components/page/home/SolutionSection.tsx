@@ -6,8 +6,7 @@ export const SolutionSection = () => (
     <div className="mt-25 md:mt-30 sm:px-21.7 md:px-33.3 lg:px-45 container mx-auto space-y-5 px-10 text-center font-medium md:space-y-6 lg:space-y-8">
       <div className="text-4.5 sm:text-5 md:text-7 lg:text-9.5">
         <Translate>
-          Provide the general public with state-of-the-art crypto financial
-          services solutions.
+          Provide the general public with state-of-the-art open financial services.
         </Translate>
       </div>
       <div className="text-sm text-[#333] text-opacity-80 sm:text-base">
