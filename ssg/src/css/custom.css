@@ -53,3 +53,7 @@ button {
 svg {
   @apply align-base inline;
 }
+
+summary {
+  @apply list-none;
+}
