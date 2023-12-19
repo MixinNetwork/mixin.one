@@ -10,6 +10,11 @@
                  "comment": "Share a message"
                },
                {
+                 "/": "/pay/*",
+                 "?": "*",
+                 "comment": "Request payment"
+               },
+               {
                  "/": "/pay",
                  "?": "*",
                  "comment": "Request payment"
