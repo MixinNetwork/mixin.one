@@ -1338,5 +1338,68 @@
   },
   "Company": {
     "message": "公司"
+  },
+  "Coming Soon": {
+    "message": "即将来临"
+  },
+  "Solutions": {
+    "message": "解决方案"
+  },
+  "Individuals": {
+    "message": "个人"
+  },
+  "MPC Wallet": {
+    "message": "MPC 钱包"
+  },
+  "Secure and easy-to-use MPC self-hosted wallet": {
+    "message": "安全易用的 MPC 自托管钱包告别私钥助记词漏洞"
+  },
+  "Buy Cryptocurrencies": {
+    "message": "购买加密货币"
+  },
+  "Social Recovery": {
+    "message": "社交恢复"
+  },
+  "In extreme cases, the emergency contact can help you log back into the wallet and avoid losing assets": {
+    "message": "在极端情况下，紧急联系人可以帮助您重新登录钱包，避免资产丢失"
+  },
+  "All-in-One Asset Management": {
+    "message": "一站式资产管理"
+  },
+  "A true multi-chain wallet, from Bitcoin, Ethereum, MobileCoin, Polygon, Doge and 2400+ cryptoassets": {
+    "message": "真正的多链钱包，支持比特币、以太坊、MobileCoin、Polygon、Doge 和 2400 多种加密货币"
+  },
+  "Family & business": {
+    "message": "家庭和企业"
+  },
+  "Custody": {
+    "message": "托管"
+  },
+  "As a self-custodial wallet, the address and all transactions are open and transparent to the owner.": {
+    "message": "作为自托管钱包，地址和所有交易对所有者都是公开透明的。"
+  },
+  "Collaboration": {
+    "message": "协作"
+  },
+  "Complete approval process and timely notification service, allowing the owner of the vault to safely and conveniently manage the funds together with the co-manager.": {
+    "message": "完整的审批流程和及时的通知服务，使金库的所有者可以与共同管理者一起安全、便捷地管理资金。"
+  },
+  "Staking": {
+    "message": "质押"
+  },
+  "Receive rewards on your stored cryptocurrency": {
+    "message": "在您存储的加密货币上获得奖励"
+  },
+  "Collateralized Loans": {
+    "message": "抵押贷款"
+  },
+  "Leverage crypto asset holdings for increased liquidity with collateralised loans": {
+    "message": "通过抵押贷款提高加密资产持有量，增加流动性"
+  },
+  "Recovery": {
+    "message": "恢复"
+  },
+  "Our decentralized recovery solution can help recover the funds in the event of private key loss.": {
+    "message": "我们的去中心化恢复解决方案可以在私钥丢失的情况下帮助恢复资金。"
   }
 }

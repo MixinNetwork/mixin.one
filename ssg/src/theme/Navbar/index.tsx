@@ -10,6 +10,18 @@ import Translate, { translate } from "@docusaurus/Translate"
 import Contact from "@site/static/img/common/nav/contact.svg"
 import About from "@site/static/img/common/nav/about.svg"
 
+import MPC from "@site/static/img/common/nav/1.1.1.svg"
+import Buy from "@site/static/img/common/nav/1.1.2.svg"
+import Social from "@site/static/img/common/nav/1.1.3.svg"
+import AllInOne from "@site/static/img/common/nav/1.1.4.svg"
+
+import Custody from "@site/static/img/common/nav/1.2.1.svg"
+import Collaboration from "@site/static/img/common/nav/1.2.2.svg"
+import Staking from "@site/static/img/common/nav/1.2.3.svg"
+import CollateralizedLoans from "@site/static/img/common/nav/1.2.4.svg"
+import Recovery from "@site/static/img/common/nav/1.2.5.svg"
+import Inheritance from "@site/static/img/common/nav/1.2.6.svg"
+
 interface NavItemLinkProps {
   label: string
   to: Parameters<typeof Link>[0]["to"]
@@ -23,7 +35,7 @@ interface NavItemGroupProps {
     label: string
     items: {
       label: string
-      to: Parameters<typeof Link>[0]["to"]
+      to?: Parameters<typeof Link>[0]["to"]
       description: string
       icon: ComponentType<SVGProps<SVGSVGElement>>
     }[]
@@ -45,31 +57,62 @@ const Item = (data: NavItemProps) => {
 
         <div
           className={clsx(
-            "-left-7.5 w-98 group-hover:op-100 absolute z-10 rounded-sm pt-6 transition-all group-hover:pointer-events-auto",
+            "-left-7.5 w-103 group-hover:op-100 absolute z-10 rounded-sm pt-6 transition-all group-hover:pointer-events-auto",
             "pointer-events-none opacity-0",
+            data.groups.find((data) => data.items.length > 2) && "w-206",
           )}
         >
-          <div className="bg-white px-2.5 pb-10 shadow-xl">
+          <div className="bg-white px-5 pb-10 shadow-xl">
             {data.groups.map((data) => (
               <>
                 <div className="pt-7.5 ms-5 text-xs font-normal uppercase text-[#333] text-opacity-70">
                   {data.label}
                 </div>
-                <div className="mt-4 space-y-1">
+                <div
+                  className={clsx(
+                    "mt-4 grid space-y-1",
+                    data.items.length > 2 && "grid-cols-2",
+                  )}
+                >
                   {data.items.map((item) => {
+                    const containerClassName =
+                      "grid grid-cols-[auto_1fr] grid-rows-[auto_1fr] gap-x-5 gap-y-2.5 rounded-lg px-5 py-3 hover:bg-zinc-100"
+
+                    const children = (
+                      <>
+                        <item.icon className="row-span-2 h-7" />
+                        <div className="flex-center w-fit space-x-2.5 text-sm font-medium text-[#333]">
+                          <div> {item.label}</div>
+                          {!item.to && (
+                            <div className="text-3 text-op-66 w-fit bg-[#F2F2F2] px-2.5 py-1 text-[#333]">
+                              <Translate>Coming Soon</Translate>
+                            </div>
+                          )}
+                        </div>
+
+                        <div className="text-xs font-normal text-[#333] text-opacity-70">
+                          {item.description}
+                        </div>
+                      </>
+                    )
+
+                    if (!item.to)
+                      return (
+                        <span
+                          key={item.label}
+                          className={clsx(containerClassName, "cursor-default")}
+                        >
+                          {children}
+                        </span>
+                      )
+
                     return (
                       <Link
                         key={item.label}
                         to={item.to}
-                        className="grid grid-cols-[auto_1fr] grid-rows-[auto_1fr] gap-x-5 gap-y-2.5 rounded-sm px-5 pb-2.5 pt-3.5 hover:bg-zinc-100"
+                        className={containerClassName}
                       >
-                        <item.icon className="row-span-2" />
-                        <div className="text-sm font-medium leading-tight text-[#333]">
-                          {item.label}
-                        </div>
-                        <div className="text-xs font-normal leading-none text-[#333] text-opacity-70">
-                          <Translate>{item.description}</Translate>
-                        </div>
+                        {children}
                       </Link>
                     )
                   })}
@@ -112,7 +155,7 @@ const MobileItem = (data: NavItemProps) => {
                     <Link
                       key={item.label}
                       {...item}
-                      className="block px-7 py-3.5 text-sm leading-tight text-[#333]"
+                      className="block px-7 py-3.5 text-sm text-[#333]"
                     >
                       {item.label}
                     </Link>
@@ -135,6 +178,106 @@ const MobileItem = (data: NavItemProps) => {
 
 export default function Navbar({ dark }: { dark?: boolean }): JSX.Element {
   const leftItems: NavItemProps[] = [
+    {
+      label: translate({ message: "Solutions" }),
+      groups: [
+        {
+          label: translate({ message: "Individuals" }),
+          items: [
+            {
+              label: translate({ message: "MPC Wallet" }),
+              to: "/solutions/MPC-Wallet",
+              description: translate({
+                message: "Secure and easy-to-use MPC self-hosted wallet",
+              }),
+              icon: MPC,
+            },
+
+            {
+              label: translate({ message: "Buy Cryptocurrencies" }),
+              to: "/solutions/Buy-Cryptocurrencies",
+              description: translate({
+                message: "Buy Cryptocurrencies",
+              }),
+              icon: Buy,
+            },
+            {
+              label: translate({ message: "Social Recovery" }),
+              to: "/solutions/Social-Recovery",
+              description: translate({
+                message:
+                  "In extreme cases, the emergency contact can help you log back into the wallet and avoid losing assets",
+              }),
+              icon: Social,
+            },
+            {
+              label: translate({ message: "All-in-One Asset Management" }),
+              to: "/solutions/All-in-One-Asset-Management",
+              description: translate({
+                message:
+                  "A true multi-chain wallet, from Bitcoin, Ethereum, MobileCoin, Polygon, Doge and 2400+ cryptoassets",
+              }),
+              icon: AllInOne,
+            },
+          ],
+        },
+        {
+          label: translate({ message: "Family & business" }),
+          items: [
+            {
+              label: translate({ message: "Custody" }),
+              to: "/solutions/Custody",
+              description: translate({
+                message:
+                  "As a self-custodial wallet, the address and all transactions are open and transparent to the owner.",
+              }),
+              icon: Custody,
+            },
+
+            {
+              label: translate({ message: "Collaboration" }),
+              to: "/solutions/Collaboration",
+              description: translate({
+                message:
+                  "Complete approval process and timely notification service, allowing the owner of the vault to safely and conveniently manage the funds together with the co-manager.",
+              }),
+              icon: Collaboration,
+            },
+            {
+              label: translate({ message: "Staking" }),
+              description: translate({
+                message: "Receive rewards on your stored cryptocurrency",
+              }),
+              icon: Staking,
+            },
+            {
+              label: translate({ message: "Collateralized Loans" }),
+              description: translate({
+                message:
+                  "Leverage crypto asset holdings for increased liquidity with collateralised loans",
+              }),
+              icon: Collaboration,
+            },
+            {
+              label: translate({ message: "Recovery" }),
+              description: translate({
+                message:
+                  "Our decentralized recovery solution can help recover the funds in the event of private key loss.",
+              }),
+              icon: Recovery,
+            },
+            {
+              label: translate({ message: "Inheritance" }),
+              description: translate({
+                message:
+                  "Leverage crypto asset holdings for increased liquidity with collateralised loans",
+              }),
+              icon: Inheritance,
+            },
+          ],
+        },
+      ],
+    },
     {
       label: translate({
         message: "Technology",
@@ -178,7 +321,7 @@ export default function Navbar({ dark }: { dark?: boolean }): JSX.Element {
       label: "Get Started",
       to: "/pricing",
       className:
-        "px-6 py-3 dark:bg-white dark:text-zinc-800 bg-zinc-800 text-white rounded-sm font-medium leading-none",
+        "px-6 py-3 dark:bg-white dark:text-zinc-800 bg-zinc-800 text-white rounded-sm font-medium",
     },
   ]
   return (
@@ -222,7 +365,7 @@ export default function Navbar({ dark }: { dark?: boolean }): JSX.Element {
 
           {rightItems.map((item) => (
             <Link key={item.label} {...item} className="block p-6 ">
-              <div className="w-fit rounded-sm bg-zinc-800 px-7 py-2.5 text-base font-medium leading-none text-white">
+              <div className="w-fit rounded-sm bg-zinc-800 px-7 py-2.5 text-base font-medium text-white">
                 {item.label}
               </div>
             </Link>
