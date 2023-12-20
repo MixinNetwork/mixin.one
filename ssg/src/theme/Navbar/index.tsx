@@ -151,15 +151,45 @@ const MobileItem = (data: NavItemProps) => {
                   {data.label}
                 </div>
                 <div>
-                  {data.items.map((item) => (
-                    <Link
-                      key={item.label}
-                      {...item}
-                      className="block px-7 py-3.5 text-sm text-[#333]"
-                    >
-                      {item.label}
-                    </Link>
-                  ))}
+                  {data.items.map((item) => {
+                    const containerClassName =
+                      "flex items-center space-x-2.5 px-7 py-3.5 text-sm text-[#333]"
+                    const children = (
+                      <>
+                        <div>{item.label}</div>
+                        {!item.to && (
+                          <div className="text-3 text-op-66 w-fit bg-[#F2F2F2] px-2.5 py-1 text-[#333]">
+                            <Translate>Coming Soon</Translate>
+                          </div>
+                        )}
+                      </>
+                    )
+
+                    if (!item.to)
+                      return (
+                        <span
+                          key={item.label}
+                          className={clsx(containerClassName, "cursor-default")}
+                        >
+                          {children}
+                        </span>
+                      )
+
+                    return (
+                      <Link
+                        key={item.label}
+                        {...item}
+                        className="flex items-center space-x-2.5 px-7 py-3.5 text-sm text-[#333]"
+                      >
+                        <div>{item.label}</div>
+                        {!item.to && (
+                          <div className="text-3 text-op-66 w-fit bg-[#F2F2F2] px-2.5 py-1 text-[#333]">
+                            <Translate>Coming Soon</Translate>
+                          </div>
+                        )}
+                      </Link>
+                    )
+                  })}
                 </div>
               </div>
             ))}
