@@ -48,7 +48,7 @@ jobs:
       - name: Remove sitemap.xml
         run: rm release/ssg/**/sitemap.xml
 
-      - name: Remove well-known for another language
+      - name: Remove .well-known for another language
         run: rm -r release/ssg/*/.well-known
 
       - uses: montudor/action-zip@v1
