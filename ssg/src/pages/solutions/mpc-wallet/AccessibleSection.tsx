@@ -37,7 +37,7 @@ const Item = ({
 export const AccessibleSection = () => {
   return (
     <GrayBackgroundWrapper>
-      <div>
+      <div className="container mx-auto">
         <SectionTitle
           description={
             <Translate>

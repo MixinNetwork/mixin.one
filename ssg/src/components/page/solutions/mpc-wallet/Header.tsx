@@ -67,7 +67,7 @@ export const Header = () => (
     >
       <Translate>What are the benefits of MPC wallets?</Translate>
     </SectionTitle>
-    <div className="grid gap-5 px-5 pb-40 md:grid-cols-2">
+    <div className="container mx-auto grid gap-5 px-5 pb-40 md:grid-cols-2">
       <Item
         cover="1.1.webp"
         background="1.6.webp"
