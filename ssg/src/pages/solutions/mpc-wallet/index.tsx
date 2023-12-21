@@ -5,7 +5,7 @@ import { GetStartedSection } from "../../../components/common/GetStartedSection"
 import { MoreFeaturesSection } from "../../../components/common/MoreFeaturesSection"
 import { translate } from "@docusaurus/Translate"
 import { Header } from "../../../components/page/solutions/mpc-wallet/Header"
-import { AccessibleSection } from "./AccessibleSection"
+import { AccessibleSection } from "../../../components/page/solutions/mpc-wallet/AccessibleSection"
 
 export default function Root() {
   return (
