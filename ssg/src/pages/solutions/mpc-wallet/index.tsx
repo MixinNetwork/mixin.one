@@ -13,19 +13,21 @@ const Item = ({
   title,
   description,
   className,
+  coverClassName,
 }: {
   cover: string
   background: string
   title: string
   description: string
   className?: string
+  coverClassName?: string
 }) => {
   return (
     <div
       className={clsx(
-        "relative flex flex-col gap-y-5 bg-[#F2F2F2] px-5 pb-5 pt-10",
+        "relative flex flex-col gap-y-5 overflow-hidden bg-[#F2F2F2] px-5 pb-5 pt-10",
         "sm:pl-15 sm:pt-12.5 sm:pb-6.5 sm:h-124.25 sm:justify-between sm:pr-10",
-        "md:h-88.5 md:px-10 md:py-5",
+        "md:h-88 md:px-10 md:py-5",
         "lg:h-110 lg:pb-6.5 lg:p-10",
         className,
       )}
@@ -43,7 +45,13 @@ const Item = ({
         }
         width={1098}
         height={678}
-        className=" sm:w-94 z-1 w-full sm:order-last sm:self-end"
+        className={clsx(
+          "z-1 w-full object-contain sm:order-last sm:self-end",
+          "sm:w-94",
+          "md:w-68.75 md:absolute md:bottom-3 md:right-3",
+          "lg:w-94 lg:bottom-6.5 lg:right-10",
+          coverClassName,
+        )}
       />
       <div className="z-1">
         <div className="text-5.5 sm:text-8">{title}</div>
@@ -92,7 +100,15 @@ const Header = () => (
           message:
             "Users can only hold their assets online and no longer need cold-storage devices",
         })}
-        className="md:col-span-full"
+        className={clsx(
+          "!sm:h-160",
+          "!md:h-88 md:gap-x-18 md:col-span-full md:flex-row",
+          "!lg:h-110 lg:gap-x-25",
+        )}
+        coverClassName={clsx(
+          "!md:w-90 !md:static !md:self-center",
+          "!lg:w-122",
+        )}
       />
 
       <Item
