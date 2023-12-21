@@ -7,6 +7,8 @@ import { translate } from "@docusaurus/Translate"
 import { Header } from "../../../components/page/solutions/mpc-wallet/Header"
 import { AccessibleSection } from "../../../components/page/solutions/mpc-wallet/AccessibleSection"
 
+import { CompareSection } from "../../../components/page/solutions/mpc-wallet/CompareSection"
+
 export default function Root() {
   return (
     <Layout
@@ -16,7 +18,7 @@ export default function Root() {
     >
       <Header />
       <AccessibleSection />
-      <MoreFeaturesSection omit="Compliance" />
+      <CompareSection />
       <GetStartedSection />
     </Layout>
   )
