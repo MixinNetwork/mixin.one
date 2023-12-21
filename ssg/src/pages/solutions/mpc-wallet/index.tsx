@@ -5,6 +5,7 @@ import { GetStartedSection } from "../../../components/common/GetStartedSection"
 import { MoreFeaturesSection } from "../../../components/common/MoreFeaturesSection"
 import { translate } from "@docusaurus/Translate"
 import { Header } from "../../../components/page/solutions/mpc-wallet/Header"
+import { AccessibleSection } from "./AccessibleSection"
 
 export default function Root() {
   return (
@@ -14,6 +15,7 @@ export default function Root() {
       })}
     >
       <Header />
+      <AccessibleSection />
       <MoreFeaturesSection omit="Compliance" />
       <GetStartedSection />
     </Layout>
