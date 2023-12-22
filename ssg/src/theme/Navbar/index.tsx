@@ -233,7 +233,7 @@ export default function Navbar({ dark }: { dark?: boolean }): JSX.Element {
             },
             {
               label: translate({ message: "Social Recovery" }),
-              to: "/solutions/Social-Recovery",
+              to: "/solutions/social-recovery",
               description: translate({
                 message:
                   "In extreme cases, the emergency contact can help you log back into the wallet and avoid losing assets",
