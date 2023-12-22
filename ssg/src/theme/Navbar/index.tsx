@@ -225,7 +225,7 @@ export default function Navbar({ dark }: { dark?: boolean }): JSX.Element {
 
             {
               label: translate({ message: "Buy Cryptocurrencies" }),
-              to: "/solutions/Buy-Cryptocurrencies",
+              to: "/solutions/buy-cryptocurrencies",
               description: translate({
                 message: "Buy Cryptocurrencies",
               }),
