@@ -144,7 +144,7 @@ const MobileItem = (data: NavItemProps) => {
         </details>
 
         <div className="peer-open:children:border-op-100 grid grid-rows-[0fr] transition-all duration-300 peer-open:grid-rows-[1fr]">
-          <div className="border-op-0 overflow-hidden border-t border-[#F2F2F2]  transition-all duration-300">
+          <div className="border-op-0 border-#F2F2F2 overflow-hidden border-t  transition-all duration-300">
             {data.groups.map((data) => (
               <div key={data.label}>
                 <div className="px-6 pb-5 pt-8 text-xs font-normal uppercase text-[#333] text-opacity-70">
@@ -266,7 +266,7 @@ export default function Navbar({ dark }: { dark?: boolean }): JSX.Element {
 
             {
               label: translate({ message: "Collaboration" }),
-              to: "/solutions/Collaboration",
+              to: "/solutions/collaboration",
               description: translate({
                 message:
                   "Complete approval process and timely notification service, allowing the owner of the vault to safely and conveniently manage the funds together with the co-manager.",

@@ -11,7 +11,7 @@ export default function Root() {
   return (
     <Layout
       title={translate({
-        message: "MPC Wallets",
+        message: "Buy Cryptocurrencies",
       })}
     >
       <Header />

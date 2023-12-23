@@ -67,7 +67,7 @@ const Section = ({
 }) => (
   <div
     className={clsx(
-      " col-span-full gap-5 pt-8",
+      "col-span-full gap-5 pt-8",
       id === selected ? "grid!" : "hidden!",
     )}
   >
