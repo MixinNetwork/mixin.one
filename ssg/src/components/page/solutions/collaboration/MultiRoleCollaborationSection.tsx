@@ -57,7 +57,7 @@ export const MultiRoleCollaborationSection = () => {
         className={clsx(
           "mx-a mt-15 pb-15 container grid gap-5 px-5",
           "gap-5 lg:gap-12",
-          "sm:grid-cols-3",
+          "md:grid-cols-3",
         )}
       >
         <Item
