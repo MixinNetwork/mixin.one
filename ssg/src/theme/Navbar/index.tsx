@@ -256,7 +256,7 @@ export default function Navbar({ dark }: { dark?: boolean }): JSX.Element {
           items: [
             {
               label: translate({ message: "Custody" }),
-              to: "/solutions/Custody",
+              to: "/solutions/custody",
               description: translate({
                 message:
                   "As a self-custodial wallet, the address and all transactions are open and transparent to the owner.",
