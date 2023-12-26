@@ -242,7 +242,7 @@ export default function Navbar({ dark }: { dark?: boolean }): JSX.Element {
             },
             {
               label: translate({ message: "All-in-One Asset Management" }),
-              to: "/solutions/All-in-One-Asset-Management",
+              to: "/solutions/all-in-one-asset-management",
               description: translate({
                 message:
                   "A true multi-chain wallet, from Bitcoin, Ethereum, MobileCoin, Polygon, Doge and 2400+ cryptoassets",

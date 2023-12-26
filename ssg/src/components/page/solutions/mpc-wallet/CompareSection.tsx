@@ -25,21 +25,6 @@ export const CompareSection = () => {
     ["Complexity", true, true, false, false],
   ]
 
-  // a function to generate a table
-  const generateTable = (tableData) => {
-    return (
-      <table className="container mx-auto table">
-        {tableData.map((row, i) => (
-          <tr key={i}>
-            {row.map((cell, j) => (
-              <td key={j}>{cell}</td>
-            ))}
-          </tr>
-        ))}
-      </table>
-    )
-  }
-
   return (
     <>
       <SectionTitle

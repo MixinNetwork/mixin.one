@@ -1,6 +1,6 @@
 import React from "react"
 import Translate, { translate } from "@docusaurus/Translate"
-import SectionTitle from "../../../components/common/SectionTitle"
+import SectionTitle from "../../../common/SectionTitle"
 
 const Item = ({
   cover,
