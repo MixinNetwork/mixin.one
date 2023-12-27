@@ -30,7 +30,7 @@ const ProductCard = ({
         <div className="text-xl font-medium leading-tight text-[#333]">
           {title}
         </div>
-        <div className="text-sm font-normal leading-snug text-[#333] text-opacity-80">
+        <div className="text-sm font-normal leading-[1.5] text-[#333] text-opacity-80">
           {description}
         </div>
       </div>
