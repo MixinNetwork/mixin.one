@@ -19,7 +19,7 @@ const StatisticGridItem = ({
 
 export const StatisticGridSection = () => (
   <div className="bg-zinc-100">
-    <div className="sm:py-17.5 sm:divide-x-1 container mx-auto grid grid-cols-2 gap-[1px] bg-zinc-300 bg-opacity-50 sm:grid-cols-4 sm:divide-zinc-300 sm:divide-opacity-50 sm:bg-zinc-100 sm:bg-opacity-100">
+    <div className="sm:py-17.5 sm:divide-x-1 grid grid-cols-2 gap-[1px] bg-zinc-300 bg-opacity-50 sm:grid-cols-4 sm:divide-zinc-300 sm:divide-opacity-50 sm:bg-zinc-100 sm:bg-opacity-100">
       <StatisticGridItem
         title={translate({
           message: "2017",

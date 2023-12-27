@@ -3,7 +3,29 @@ import {
   presetUno,
   transformerVariantGroup,
   transformerDirectives,
+  DynamicShortcutMatcher,
 } from "unocss"
+
+const responsiveDynamicShortcutMatcher: DynamicShortcutMatcher<{
+  breakpoints: Record<string, string>
+}> = ([, prefix, lowest, highest]: string[], { theme }) => {
+  const breakpoints = Object.entries(theme.breakpoints)
+    .map(([key, value]) => [key, value.match(/\d+/)[0]])
+    .sort((a, b) => +a[1] - +b[1])
+    .map(([key]) => key)
+    .filter((key) => ["sm", "md", "lg"].includes(key))
+
+  const totalGears = breakpoints.length + 1
+  const step = (+highest - +lowest) / (totalGears - 1)
+
+  const result = [
+    `${prefix}-${lowest}`,
+    ...breakpoints.map(
+      (key, i) => `${key}:${prefix}-${+lowest + step * (i + 1)}`,
+    ),
+  ]
+  return result
+}
 
 export default defineConfig({
   content: {
@@ -36,6 +58,25 @@ export default defineConfig({
       ([, num]) =>
         `relative before:content-[''] before:absolute before:-inset-${num}`,
       { autocomplete: ["click-area-<num>"] },
+    ],
+    [
+      /^((?:(?:p|m)(?:-[rltbsexy])?)|(?:text)|(?:(?:gap|space)(?:-[xy]?)))-(-?\d+(?:\.\d+)?)-(-?\d+(?:\.\d+)?)$/,
+      responsiveDynamicShortcutMatcher,
+      {
+        autocomplete: [
+          "p<directions>-<num>-<num>",
+          "p(xy)-<num>-<num>",
+          "p-<num>-<num>",
+          "m<directions>-<num>-<num>",
+          "m(xy)-<num>-<num>",
+          "m-<num>-<num>",
+          "text-<num>-<num>",
+          "gap-<num>-<num>",
+          "gap-(xy)-<num>-<num>",
+          "space-<num>-<num>",
+          "space-(xy)-<num>-<num>",
+        ],
+      },
     ],
   ],
   theme: {
