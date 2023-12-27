@@ -70,7 +70,7 @@ export const MakeItSampleSection = () => {
       >
         <Translate>We make it simple</Translate>
       </SectionTitle>
-      <div className="mx-a md:pb-55 container grid grid-flow-row auto-rows-fr gap-5 px-5 pb-40 md:grid-cols-2">
+      <div className="mx-a md:pb-55 container grid grid-flow-row auto-rows-fr gap-5  pb-40 md:grid-cols-2">
         <Item
           cover="2.1.webp"
           background="2.5.webp"

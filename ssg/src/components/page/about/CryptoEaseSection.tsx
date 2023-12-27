@@ -43,7 +43,7 @@ export const CryptoEaseSection = () => {
         <Translate>About Us</Translate>
       </SectionTitle>
       <GrayBackgroundWrapper bgClassName="block!">
-        <div className="mt-15! md:mt-20! pb-30 container mx-auto grid gap-x-6 gap-y-10 px-5 md:grid-cols-3">
+        <div className="mt-15! md:mt-20! pb-30 container mx-auto grid gap-x-6 gap-y-10  md:grid-cols-3">
           <Item
             icon={<Icon1 className={svgClassName} />}
             title={<Translate>2017</Translate>}

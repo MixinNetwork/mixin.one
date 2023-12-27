@@ -47,7 +47,7 @@ export const SingerSection = () => {
         <Translate>Reliable Singer</Translate>
       </SectionTitle>
 
-      <div className="pb-45 container mx-auto grid auto-rows-fr gap-5 px-5 sm:grid-cols-2">
+      <div className="pb-45 container mx-auto grid auto-rows-fr gap-5  sm:grid-cols-2">
         <Item
           icon="3.1.1.svg"
           titleIcon={<TitleIcon1 />}

@@ -57,3 +57,7 @@ svg {
 summary {
   @apply list-none;
 }
+
+.container {
+  @apply px-5/100 lg:px-42 sm:px-5 md:px-10;
+}

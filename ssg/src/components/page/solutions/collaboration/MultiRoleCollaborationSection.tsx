@@ -50,12 +50,12 @@ export const MultiRoleCollaborationSection = () => {
         }
         width={335}
         height={181}
-        className="mx-a container px-5"
+        className="mx-a container"
       />
 
       <div
         className={clsx(
-          "mx-a mt-15 pb-15 container grid gap-5 px-5",
+          "mx-a mt-15 pb-15 container grid gap-5 ",
           "gap-5 lg:gap-12",
           "md:grid-cols-3",
         )}

@@ -18,7 +18,7 @@ export const PrivacyComplianceSection = () => {
       >
         <Translate>Privacy Compliance</Translate>
       </SectionTitle>
-      <GDPR className="container mx-auto mt-5 block h-fit px-5" />
+      <GDPR className="container mx-auto mt-5 block h-fit " />
     </div>
   )
 }

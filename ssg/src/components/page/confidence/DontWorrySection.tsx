@@ -40,7 +40,7 @@ export const DontWorrySection = () => {
         <Translate>Don't worry</Translate>
       </SectionTitle>
 
-      <div className="container mx-auto grid gap-5 px-5 sm:grid-cols-2">
+      <div className="container mx-auto grid gap-5  sm:grid-cols-2">
         <Item
           icon="3.1.svg"
           title={translate({

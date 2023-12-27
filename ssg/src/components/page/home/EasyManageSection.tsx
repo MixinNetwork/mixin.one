@@ -33,7 +33,7 @@ export const EasyManageSection = () => {
     i18n: { currentLocale },
   } = useDocusaurusContext()
   return (
-    <div className="sm:pb-30 container mx-auto px-5 py-5 sm:pt-10">
+    <div className="sm:pb-30 container mx-auto  py-5 sm:pt-10">
       <SectionTitle
         description={
           <Translate>

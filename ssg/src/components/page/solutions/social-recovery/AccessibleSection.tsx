@@ -80,7 +80,7 @@ export const AccessibleSection = () => (
     </SectionTitle>
     <div
       className={clsx(
-        "mx-a container grid auto-rows-fr gap-5 px-5 pb-20",
+        "mx-a container grid auto-rows-fr gap-5  pb-20",
         "sm:grid-cols-2",
         "md:grid-cols-3",
       )}

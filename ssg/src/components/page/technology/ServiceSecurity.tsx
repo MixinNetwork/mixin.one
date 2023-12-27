@@ -38,9 +38,9 @@ export const ServiceSecurity = () => (
       width={3096}
       height={1410}
       src={require("@site/static/img/page/technology/5.1.webp").default}
-      className="sm:px-10.3 md:px-15.7 lg:px-21 sm:py-8.7 md:py-12.3 container mx-auto bg-[#F2F2F2] px-5 py-5 lg:py-16"
+      className="sm:px-10.3 md:px-15.7 lg:px-21 sm:py-8.7 md:py-12.3 container mx-auto bg-[#F2F2F2]  py-5 lg:py-16"
     />
-    <div className="sm:px-6.7 md:px-8.3 sm:gap-x-8.3 md:gap-x-16.7  lg:gap-x-25 container mx-auto grid gap-x-0 gap-y-10 px-5 pt-10  sm:grid-cols-2 lg:px-10 ">
+    <div className="sm:px-6.7 md:px-8.3 sm:gap-x-8.3 md:gap-x-16.7  lg:gap-x-25 container mx-auto grid gap-x-0 gap-y-10  pt-10  sm:grid-cols-2 lg:px-10 ">
       <Item
         icon={<Icon1 />}
         title={<Translate>Asset Isolation</Translate>}

@@ -32,7 +32,7 @@ export const ServiceSection = () => {
       >
         <Translate>Reliable Service</Translate>
       </SectionTitle>
-      <div className="pb-45 container mx-auto grid auto-rows-fr gap-5 px-5 sm:grid-cols-2 md:grid-cols-4">
+      <div className="pb-45 container mx-auto grid auto-rows-fr gap-5  sm:grid-cols-2 md:grid-cols-4">
         <Item
           icon={<SvgIcon1 />}
           title={translate({

@@ -173,7 +173,7 @@ export const PlanSection = () => {
         <Translate>Your Bitcoin is Priceless</Translate>
       </SectionTitle>
 
-      <div className="container mx-auto px-5">
+      <div className="container mx-auto ">
         <div className="grid w-full grid-cols-3">
           <Tab
             name={translate({

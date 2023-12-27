@@ -44,7 +44,7 @@ export const MoreFeaturesSection = ({
     <SectionTitle>
       <Translate>More Features</Translate>
     </SectionTitle>
-    <div className="pb-35 container mx-auto grid grid-cols-2 gap-5 px-5 lg:grid-cols-4">
+    <div className="pb-35 container mx-auto grid grid-cols-2 gap-5  lg:grid-cols-4">
       {omit !== "Decentralization" && (
         <Item
           key="Decentralization"

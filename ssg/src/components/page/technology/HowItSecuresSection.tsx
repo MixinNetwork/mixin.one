@@ -43,7 +43,7 @@ export const HowItSecuresSection = () => {
         <Translate>How it Secures</Translate>
       </SectionTitle>
 
-      <div className="container mx-auto px-5">
+      <div className="container mx-auto ">
         <img
           loading="lazy"
           src={require("@site/static/img/page/technology/1.1.webp").default}

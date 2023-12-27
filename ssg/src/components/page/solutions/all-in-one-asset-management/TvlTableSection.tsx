@@ -18,7 +18,7 @@ export const TvlTableSection = () => {
     [<MOB />, "MOB", "$27,411,420", ""],
   ]
   return (
-    <div className="mx-a md:mt-15 lg:mt-25 mb-45 container px-5 sm:mt-9">
+    <div className="mx-a md:mt-15 lg:mt-25 mb-45 container sm:mt-9">
       <table className="!sm:table !hidden">
         {table.map((row, i) => (
           <tr

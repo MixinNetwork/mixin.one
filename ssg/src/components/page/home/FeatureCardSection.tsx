@@ -43,7 +43,7 @@ const FeatureCard = ({
 
 export const FeatureCardSection = () => {
   return (
-    <div className="sm:pt-22.5 sm:pb-45 container mx-auto grid gap-y-5 px-5 py-20 sm:grid-cols-2 sm:gap-3">
+    <div className="sm:pt-22.5 sm:pb-45 container mx-auto grid gap-y-5  py-20 sm:grid-cols-2 sm:gap-3">
       <FeatureCard
         key="Decentralization"
         title={translate({ message: "Decentralization" })}

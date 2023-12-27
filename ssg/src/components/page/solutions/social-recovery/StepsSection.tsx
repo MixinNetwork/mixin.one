@@ -74,7 +74,7 @@ export const StepsSection = () => (
     >
       <Translate>Recover with Emergency Contacts</Translate>
     </SectionTitle>
-    <div className={clsx("mx-a space-y-30 container grid px-5")}>
+    <div className={clsx("mx-a space-y-30 container grid ")}>
       <Itme
         cover="3.1.webp"
         name={translate({

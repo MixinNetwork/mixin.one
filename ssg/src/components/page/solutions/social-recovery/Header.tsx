@@ -24,7 +24,7 @@ export const Header = () => (
       }
       width={335}
       height={135}
-      className="mx-a container mb-40 w-full px-5"
+      className="mx-a container mb-40 w-full "
     />
   </>
 )

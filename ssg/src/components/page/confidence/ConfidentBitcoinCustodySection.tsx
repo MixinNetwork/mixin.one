@@ -4,7 +4,7 @@ import Translate, { translate } from "@docusaurus/Translate"
 import LocalLink from "../../common/LocaleLink"
 
 const TechnologySection = () => (
-  <div className="pt-15 pb-30 container mx-auto px-5">
+  <div className="pt-15 pb-30 container mx-auto ">
     <div className="relative rounded-sm">
       <img
         loading="lazy"
@@ -67,7 +67,7 @@ export const ConfidentBitcoinCustodySection = () => {
       >
         <Translate>Confident Bitcoin Custody</Translate>
       </SectionTitle>
-      <div className="pb-15 container mx-auto grid gap-5 px-5 sm:grid-cols-2">
+      <div className="pb-15 container mx-auto grid gap-5  sm:grid-cols-2">
         <Item
           cover="1.1.webp"
           title={translate({

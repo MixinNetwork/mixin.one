@@ -12,7 +12,7 @@ const Item = ({
   description: React.ReactNode
   href: string
 }) => (
-  <div className="sm:gap-x-7.3 md:gap-x-14.7 lg:gap-x-22 group container mx-auto grid items-center gap-x-0 gap-y-5 px-5 sm:grid-cols-2">
+  <div className="sm:gap-x-7.3 md:gap-x-14.7 lg:gap-x-22 group container mx-auto grid items-center gap-x-0 gap-y-5  sm:grid-cols-2">
     <img
       src={require("@site/static/img/page/technology/" + cover).default}
       className="sm:group-odd:order-last"

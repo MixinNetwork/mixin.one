@@ -34,7 +34,7 @@ export const NeverSacrificeDecentralizationSection = () => (
     </SectionTitle>
 
     <GrayBackgroundWrapper>
-      <div className="pb-15 container mx-auto grid gap-5 px-5 sm:grid-cols-2">
+      <div className="pb-15 container mx-auto grid gap-5  sm:grid-cols-2">
         <Item
           cover={"1.1.webp"}
           description={translate({

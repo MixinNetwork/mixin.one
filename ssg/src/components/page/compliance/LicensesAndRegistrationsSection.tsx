@@ -50,7 +50,7 @@ export const LicensesAndRegistrationsSection = () => {
       </SectionTitle>
       <GrayBackgroundWrapper bgClassName="block!">
         <div className="py-15">
-          <div className="container mx-auto grid auto-rows-fr gap-5 px-5">
+          <div className="container mx-auto grid auto-rows-fr gap-5 ">
             <Item
               cover="1.1.webp"
               title={translate({

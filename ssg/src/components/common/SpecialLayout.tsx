@@ -55,7 +55,5 @@ export const SpecialLayoutItem = ({
 )
 
 export const SpecialLayout = ({ children }) => (
-  <div className="pt-25 pb-45 space-y-45 container mx-auto px-5">
-    {children}
-  </div>
+  <div className="pt-25 pb-45 space-y-45 container mx-auto ">{children}</div>
 )

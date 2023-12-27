@@ -67,7 +67,7 @@ export const ThePriceofCentralizationSection = () => {
       <SectionTitle>
         <Translate>The Price of Centralization</Translate>
       </SectionTitle>
-      <div className="pb-25 container mx-auto grid gap-5 px-5 sm:grid-cols-2">
+      <div className="pb-25 container mx-auto grid gap-5  sm:grid-cols-2">
         <SpecialItem />
         <Item
           cover={"2.2.webp"}

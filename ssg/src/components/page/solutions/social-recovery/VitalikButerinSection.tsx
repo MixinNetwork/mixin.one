@@ -4,7 +4,7 @@ import { WoodGrainBackgroundTextSection } from "../../../common/WoodGrainBackgro
 import QuotationMark from "@site/static/img/common/quotationMark.svg"
 
 export const VitalikButerinSection = () => (
-  <div className="container mx-auto px-5">
+  <div className="container mx-auto ">
     <WoodGrainBackgroundTextSection>
       <div className="grid grid-cols-[auto_1fr_auto]">
         <QuotationMark />
