@@ -103,23 +103,29 @@ const Item = ({
 }) => (
   <div className="grid items-center gap-5 pb-20">
     <SectionTitle description={description}>{title}</SectionTitle>
-    <div className="lg:space-y-25 space-y-20 px-5">
+    <div className="">
       {points.map(({ cover, title, content }) => (
-        <div
-          key={title}
-          className="gap-x-16.5 lg:gap-x-34.5 group grid items-center gap-y-10 md:grid-cols-2"
-        >
-          <img
-            loading="lazy"
-            src={require("@site/static/img/page/privacy/" + cover).default}
-            className="aspect-335/225 w-full md:group-odd:order-last"
-          />
-          <div className="space-y-5">
-            <div className="text-5.5 sm:text-7 lg:text-8 text-#333 font-medium">
-              {title}
-            </div>
-            <div className="text-#333 text-sm font-normal sm:text-base">
-              {content}
+        <div key={title} className={clsx("group ", "pt-15-33.5 pb-20-33.5")}>
+          <div
+            className={clsx(
+              "mx-a px-0-10 container",
+              "gap-10-20 grid items-center",
+              "group-odd:grid-cols-[508fr_528fr]",
+              "group-even:grid-cols-[528fr_508fr]",
+            )}
+          >
+            <img
+              loading="lazy"
+              src={require("@site/static/img/page/privacy/" + cover).default}
+              className="w-full sm:group-odd:order-last"
+              width={528}
+              height={352}
+            />
+            <div className="space-y-4">
+              <div className="text-5-8 font-medium">{title}</div>
+              <div className="text-#333 text-3.5-4 text-opacity-80">
+                {content}
+              </div>
             </div>
           </div>
         </div>
@@ -130,8 +136,8 @@ const Item = ({
 
 function GridSection({}) {
   return (
-    <div className="pb-15 sm:pb-30 md:pb-25 lg:pb-30 lg:gap-y-7.5 lg:gap-x-12.5 grid gap-5 px-5 md:grid-cols-[13fr_20fr_13fr] lg:grid-cols-[296fr_502fr_296fr]">
-      <div className="order-0 sm:px-30 lg:px-9.5 sm:space-y-15 space-y-10 rounded-sm bg-white px-5 pb-16 pt-8 shadow sm:pt-10 md:order-1 md:row-span-2 md:px-6">
+    <div className="pb-15 sm:pb-30 md:pb-25 lg:pb-30 lg:gap-y-7.5 lg:gap-x-12.5 mx-a container grid gap-5 md:grid-cols-[13fr_20fr_13fr] lg:grid-cols-[296fr_502fr_296fr]">
+      <div className="order-0 sm:px-30 lg:px-9.5 sm:space-y-15 space-y-10 rounded-sm bg-white px-5 pb-16 pt-8 shadow-[0_4px_20px_0_rgba(43,89,255,0.06)] sm:pt-10 md:order-1 md:row-span-2 md:px-6">
         <div className="text-7 text-#333 text-center font-medium">
           <Translate>Information Privacy</Translate>
         </div>
@@ -177,7 +183,7 @@ const GridItem = ({
 }) => (
   <div
     className={clsx(
-      "pb-11.5 sm:p-7.5 sm:pb-21 md:pb-6.5 grid place-items-center gap-y-5 rounded-sm bg-white p-5 shadow md:px-5 md:pt-9 lg:px-7",
+      "pb-11.5 sm:p-7.5 sm:pb-21 md:pb-6.5 grid place-items-center gap-y-5 rounded-sm bg-white p-5 shadow-[0_4px_20px_0_rgba(43,89,255,0.06)] md:px-5 md:pt-9 lg:px-7",
       className,
     )}
   >
@@ -201,7 +207,7 @@ export const DesignSection = () => {
         <Translate>Privacy by Design</Translate>
       </SectionTitle>
       <GrayBackgroundWrapper bgClassName="block!">
-        <div className="mt-15 container mx-auto">
+        <div className="mt-15">
           <GridSection />
           <ListSection />
         </div>
