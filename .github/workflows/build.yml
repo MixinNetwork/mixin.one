@@ -51,5 +51,10 @@ jobs:
       - name: Remove .well-known for another language
         run: rm -r release/ssg/*/.well-known
 
-      - name: Show files
-        run: cd release/ssg && ls -a && cd zh && ls -a
+      - name: Show files for release/ssg
+        working-directory: release/ssg
+        run: ls -a
+
+      - name: Show files for release/ssg/zh
+        working-directory: release/ssg/zh
+        run: ls -a
