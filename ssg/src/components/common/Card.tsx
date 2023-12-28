@@ -4,16 +4,19 @@ const Card = ({
   cover,
   title,
   description,
+  className,
 }: {
   cover: string
   title: React.ReactNode
   description: React.ReactNode
+  className?: string
 }) => (
   <div
     className={clsx(
       "bg-#F2F2F2 bg-op-50 pt-15-12 pb-20-12 gap-x-0-24 group grid w-full items-center gap-y-10 rounded-sm",
       "odd:pr-0-25.5 odd:pl-0-30.5 sm:odd:grid-cols-[460fr_420fr]",
       "even:pl-0-25.5 even:pr-0-30.5 sm:even:grid-cols-[420fr_460fr]",
+      className,
     )}
   >
     <img
