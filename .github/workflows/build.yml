@@ -49,11 +49,7 @@ jobs:
         run: rm release/ssg/**/sitemap.xml
 
       - name: Remove .well-known for another language
-        run: rm -r release/ssg/*/.well-known
-
-      - uses: montudor/action-zip@v1
-        with:
-          args: zip -qq -r release.zip release
+        run: rm release/ssg/*/.well-known
 
       - name: Show files
-        run: ls
+        run: cd release/ssg && ls -a && cd zh && ls -a
