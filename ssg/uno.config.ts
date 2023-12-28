@@ -60,7 +60,7 @@ export default defineConfig({
       { autocomplete: ["click-area-<num>"] },
     ],
     [
-      /^((?:(?:p|m)(?:[rltbsexy])?)|(?:text)|(?:(?:gap|space)(?:-[xy])?))-(-?\d+(?:\.\d+)?)-(-?\d+(?:\.\d+)?)$/,
+      /^((?:(?:p|m)(?:[rltbsexy])?)|(?:text)|(?:[w|h])|(?:(?:gap|space)(?:-[xy])?))-(-?\d+(?:\.\d+)?)-(-?\d+(?:\.\d+)?)$/,
       responsiveDynamicShortcutMatcher,
       {
         autocomplete: [
@@ -75,6 +75,8 @@ export default defineConfig({
           "gap-(xy)-<num>-<num>",
           "space-<num>-<num>",
           "space-(xy)-<num>-<num>",
+          "w-<num>-<num>",
+          "h-<num>-<num>",
         ],
       },
     ],
