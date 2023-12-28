@@ -13,7 +13,7 @@ const FAQItem = ({
   <div className="lg:max-w-240 container mx-auto border-b border-neutral-200 px-2.5">
     <details name="faq" className="not-default group peer">
       <summary className="pb-5.5 flex cursor-pointer flex-row items-start justify-between space-x-1 pt-9">
-        <div className="text-base font-medium leading-normal text-[#333]">
+        <div className="text-#333 text-base font-medium leading-normal">
           {question}
         </div>
         <Arrow className="mt-1 shrink-0 transition-all duration-300 group-open:-rotate-180" />
@@ -21,7 +21,7 @@ const FAQItem = ({
     </details>
     <div className="grid grid-rows-[0fr] transition-all duration-300 peer-open:grid-rows-[1fr]">
       <div className="overflow-hidden">
-        <div className="mb-3.5 cursor-default pe-6 text-sm font-normal leading-snug text-[#333] text-opacity-75">
+        <div className="text-#333 mb-3.5 cursor-default pe-6 text-sm font-normal leading-snug text-opacity-75">
           {answer}
         </div>
       </div>

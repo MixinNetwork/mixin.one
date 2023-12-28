@@ -28,7 +28,7 @@ const Item = ({
         className="md:w-18 lg:24 row-span-2 aspect-square w-12"
       />
       {titleIcon}
-      <div className="text-sm font-normal leading-normal text-[#333] text-opacity-80">
+      <div className="text-#333 text-sm font-normal leading-normal text-opacity-80">
         {description}
       </div>
     </div>

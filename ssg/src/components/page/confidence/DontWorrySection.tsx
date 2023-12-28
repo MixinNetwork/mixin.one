@@ -19,10 +19,10 @@ const Item = ({
       className="sm:w-18 row-span-2 aspect-square w-12"
     />
 
-    <div className="h-fit text-base font-medium leading-tight text-[#333]">
+    <div className="text-#333 h-fit text-base font-medium leading-tight">
       {title}
     </div>
-    <div className="text-opacity-66 text-sm font-normal leading-snug text-[#333]">
+    <div className="text-opacity-66 text-#333 text-sm font-normal leading-snug">
       {description}
     </div>
   </div>

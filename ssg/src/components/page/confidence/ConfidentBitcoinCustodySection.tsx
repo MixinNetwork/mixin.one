@@ -46,10 +46,10 @@ const Item = ({
       alt={description}
       className="aspect-335/250 w-full"
     />
-    <div className="sm:mt-6.5 sm:px-6.5 mt-5 px-5 text-xl font-medium leading-snug text-[#333] md:mt-8 md:px-8 lg:mt-10 lg:px-10">
+    <div className="sm:mt-6.5 sm:px-6.5 text-#333 mt-5 px-5 text-xl font-medium leading-snug md:mt-8 md:px-8 lg:mt-10 lg:px-10">
       {title}
     </div>
-    <div className="sm:px-6.5 text-op-80 mt-5 px-5 text-base font-normal leading-relaxed text-[#333] md:px-8 lg:px-10">
+    <div className="sm:px-6.5 text-op-80 text-#333 mt-5 px-5 text-base font-normal leading-relaxed md:px-8 lg:px-10">
       {description}
     </div>
   </div>

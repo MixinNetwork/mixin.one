@@ -18,10 +18,10 @@ export const SpecialLayoutItem = ({
   }[]
 }) => (
   <div className="group">
-    <div className="title-container text-center text-3xl font-medium leading-10 text-[#333]">
+    <div className="title-container text-#333 text-center text-3xl font-medium leading-10">
       {title}
     </div>
-    <div className="title-container mt-5 text-center text-base font-normal leading-normal text-[#333] text-opacity-70">
+    <div className="title-container text-#333 mt-5 text-center text-base font-normal leading-normal text-opacity-70">
       {description}
     </div>
     <div className="sm:mt-19 md:mt-27 lg:mt-35 sm:gap-18  md:gap-26 mt-10 grid items-center gap-10 sm:grid-cols-2 lg:gap-32">
@@ -41,10 +41,10 @@ export const SpecialLayoutItem = ({
             className="grid grid-cols-[auto_1fr] grid-rows-[auto_1fr] gap-x-4 gap-y-5"
           >
             {icon}
-            <div className="text-xl font-medium leading-snug text-[#333]">
+            <div className="text-#333 text-xl font-medium leading-snug">
               {title}
             </div>
-            <div className="col-span-2 text-base font-normal leading-relaxed text-[#333] text-opacity-80">
+            <div className="text-#333 col-span-2 text-base font-normal leading-relaxed text-opacity-80">
               {description}
             </div>
           </div>

@@ -26,10 +26,10 @@ const Item = ({
     />
 
     <div className="w-full space-y-5">
-      <div className="text-xl font-medium leading-snug text-[#333] sm:text-2xl">
+      <div className="text-#333 text-xl font-medium leading-snug sm:text-2xl">
         {title}
       </div>
-      <div className="text-base font-normal leading-relaxed text-[#333] text-opacity-80">
+      <div className="text-#333 text-base font-normal leading-relaxed text-opacity-80">
         {description}
       </div>
     </div>

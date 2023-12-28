@@ -30,7 +30,7 @@ export default function SectionTitle({
           "title-container text-center",
           mode == "small" && "text-7 sm:text-8 lg:text-9 text-3xl font-medium",
           mode == "large" &&
-            "text-8 sm:text-11 md:text-15 font-medium text-[#333]",
+            "text-8 sm:text-11 md:text-15 text-#333 font-medium",
           titleClassName,
         )}
       >
@@ -39,7 +39,7 @@ export default function SectionTitle({
       {description && (
         <div
           className={clsx(
-            "text-opacity-66 text-[#333]",
+            "text-opacity-66 text-#333",
             mode == "small" && "title-container text-center text-base",
             mode == "large" && "title-container text-center",
             descriptionClassName,

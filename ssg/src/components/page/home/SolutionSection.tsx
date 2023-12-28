@@ -11,7 +11,7 @@ export const SolutionSection = () => (
           }
         </Translate>
       </div>
-      <div className="text-sm text-[#333] text-opacity-80 sm:text-base">
+      <div className="text-#333 text-sm text-opacity-80 sm:text-base">
         <Translate>
           {
             "Bitcoin custody should never sacrifice decentralization, always be confident and reliable. Mixin Safe also makes decentralized recovery and inheritance possible."

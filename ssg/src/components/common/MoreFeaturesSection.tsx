@@ -21,10 +21,10 @@ const Item = ({
       src={require("@site/static/img/common/feature/" + cover).default}
       alt={title}
     />
-    <div className="px-5 text-xl font-medium leading-snug text-[#333]">
+    <div className="text-#333 px-5 text-xl font-medium leading-snug">
       {title}
     </div>
-    <div className="px-5 text-sm font-normal leading-snug text-[#333] text-opacity-80">
+    <div className="text-#333 px-5 text-sm font-normal leading-snug text-opacity-80">
       {description}
     </div>
   </LocalLink>

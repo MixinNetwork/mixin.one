@@ -16,7 +16,7 @@ const Item = ({
   <div
     className={clsx(
       "space-y-2.5 text-sm font-normal transition-all",
-      isError ? "text-red" : "text-[#333] text-opacity-80 ",
+      isError ? "text-red" : "text-#333 text-opacity-80 ",
     )}
   >
     {children}

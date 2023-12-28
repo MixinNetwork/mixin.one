@@ -115,10 +115,10 @@ const Item = ({
             className="aspect-335/225 w-full md:group-odd:order-last"
           />
           <div className="space-y-5">
-            <div className="text-5.5 sm:text-7 lg:text-8 font-medium text-[#333]">
+            <div className="text-5.5 sm:text-7 lg:text-8 text-#333 font-medium">
               {title}
             </div>
-            <div className="text-sm font-normal text-[#333] sm:text-base">
+            <div className="text-#333 text-sm font-normal sm:text-base">
               {content}
             </div>
           </div>
@@ -132,7 +132,7 @@ function GridSection({}) {
   return (
     <div className="pb-15 sm:pb-30 md:pb-25 lg:pb-30 lg:gap-y-7.5 lg:gap-x-12.5 grid gap-5 px-5 md:grid-cols-[13fr_20fr_13fr] lg:grid-cols-[296fr_502fr_296fr]">
       <div className="order-0 sm:px-30 lg:px-9.5 sm:space-y-15 space-y-10 rounded-sm bg-white px-5 pb-16 pt-8 shadow sm:pt-10 md:order-1 md:row-span-2 md:px-6">
-        <div className="text-7 text-center font-medium text-[#333]">
+        <div className="text-7 text-#333 text-center font-medium">
           <Translate>Information Privacy</Translate>
         </div>
         <img
@@ -182,7 +182,7 @@ const GridItem = ({
     )}
   >
     {cover}
-    <div className="text-center text-base font-normal text-[#333]">
+    <div className="text-#333 text-center text-base font-normal">
       {children}
     </div>
   </div>

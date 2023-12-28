@@ -11,7 +11,7 @@ const StatisticGridItem = ({
     <div className="text-3xl font-semibold text-slate-900 sm:text-4xl">
       {title}
     </div>
-    <div className="px-2 text-center text-xs font-normal text-[#333] text-opacity-70 sm:text-sm">
+    <div className="text-#333 px-2 text-center text-xs font-normal text-opacity-70 sm:text-sm">
       {description}
     </div>
   </div>

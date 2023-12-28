@@ -91,24 +91,24 @@ const Item = ({
   return (
     <div className="border-px rounded-sm border-zinc-300 bg-zinc-100 bg-opacity-50 px-5 pb-20 pt-10 sm:px-10">
       <div className="grid gap-y-5 sm:grid-cols-2">
-        <div className="text-3xl font-medium text-[#333]">{name}</div>
-        <div className="text-base font-normal leading-normal text-[#333] text-opacity-70 sm:order-last">
+        <div className="text-#333 text-3xl font-medium">{name}</div>
+        <div className="text-#333 text-base font-normal leading-normal text-opacity-70 sm:order-last">
           {description}
         </div>
         <div className="sm:row-span-2 sm:ml-auto sm:w-fit">
           <div className="mt-15 mx-auto w-fit sm:mt-0 ">
-            <sup className="align-super text-3xl font-semibold leading-loose text-[#333]">
+            <sup className="text-#333 align-super text-3xl font-semibold leading-loose">
               $
             </sup>
-            <span className="text-6xl font-semibold leading-10 text-[#333]">
+            <span className="text-#333 text-6xl font-semibold leading-10">
               {price.toLocaleString()}
             </span>
-            <span className="text-xl font-normal leading-normal text-[#333]">
+            <span className="text-#333 text-xl font-normal leading-normal">
               /year
             </span>
           </div>
           {price <= 0 && (
-            <div className="mx-auto w-fit text-sm font-normal leading-none text-[#333] text-opacity-70">
+            <div className="text-#333 mx-auto w-fit text-sm font-normal leading-none text-opacity-70">
               <Translate>FREE FOREVER</Translate>
             </div>
           )}
@@ -132,14 +132,14 @@ const Item = ({
       <div className="mt-15 border-b-px h-px w-full border-zinc-300"></div>
       <div className="mt-20 grid items-center sm:mt-10 sm:grid-cols-2">
         <div className="space-y-5">
-          <div className="text-xl font-medium leading-normal text-[#333]">
+          <div className="text-#333 text-xl font-medium leading-normal">
             <Translate>Features</Translate>
           </div>
           <div className="grid gap-5 sm:grid-cols-2">
             {features.map((feature) => (
               <div className="flex-center w-fit space-x-2.5">
                 <Checked className="shrink-0" />
-                <div className="text-base font-normal leading-5 text-[#333]">
+                <div className="text-#333 text-base font-normal leading-5">
                   {feature}
                 </div>
               </div>

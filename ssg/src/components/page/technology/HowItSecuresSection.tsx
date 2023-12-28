@@ -1,34 +1,7 @@
+import clsx from "clsx"
 import SectionTitle from "../../common/SectionTitle"
 import Translate from "@docusaurus/Translate"
-
-const Item = ({
-  cover,
-  title,
-  description,
-}: {
-  cover: string
-  title: React.ReactNode
-  description: React.ReactNode
-}) => (
-  <div className="pb-30 md:px-30 group grid items-center overflow-hidden rounded-sm bg-zinc-100 px-5 md:grid-cols-2 md:gap-20 md:pb-0">
-    <div className="p-15 lg:p-15 md:p-5 md:group-odd:order-last">
-      <img
-        loading="lazy"
-        src={require("@site/static/img/page/technology/" + cover).default}
-        className="aspect-335/320 w-full object-cover "
-      />
-    </div>
-
-    <div className="md:py-15">
-      <div className="text-xl font-medium leading-snug text-[#333]">
-        {title}
-      </div>
-      <div className="mt-6.5 text-base font-normal leading-relaxed text-[#333] text-opacity-80">
-        {description}
-      </div>
-    </div>
-  </div>
-)
+import Card from "../../common/Card"
 
 export const HowItSecuresSection = () => {
   return (
@@ -43,16 +16,16 @@ export const HowItSecuresSection = () => {
         <Translate>How it Secures</Translate>
       </SectionTitle>
 
-      <div className="container mx-auto ">
+      <div className="container mx-auto">
         <img
           loading="lazy"
           src={require("@site/static/img/page/technology/1.1.webp").default}
           width={3582}
           height={1956}
         />
-        <div className="pb-45 mt-20 grid auto-rows-fr gap-y-5 md:mt-5">
-          <Item
-            cover="1.2.webp"
+        <div className="mt-15-20 pb-40-20 grid auto-rows-fr gap-y-5">
+          <Card
+            cover={require("@site/static/img/page/technology/1.2.webp").default}
             title={<Translate>Decentralized Network</Translate>}
             description={
               <Translate>
@@ -65,8 +38,8 @@ export const HowItSecuresSection = () => {
             }
           />
 
-          <Item
-            cover="1.3.webp"
+          <Card
+            cover={require("@site/static/img/page/technology/1.3.webp").default}
             title={<Translate>Decentralized Wallet</Translate>}
             description={
               <Translate>
@@ -78,8 +51,8 @@ export const HowItSecuresSection = () => {
             }
           />
 
-          <Item
-            cover="1.4.webp"
+          <Card
+            cover={require("@site/static/img/page/technology/1.4.webp").default}
             title={<Translate>Decentralized Apps</Translate>}
             description={
               <Translate>
