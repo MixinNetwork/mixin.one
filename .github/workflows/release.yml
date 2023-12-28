@@ -45,10 +45,10 @@ jobs:
           mv ssg/build release/ssg
 
       - name: Remove robots.txt
-        run: rm release/ssg/**/robots.txt
+        run: rm release/ssg/robots.txt && rm release/ssg/**/robots.txt
 
       - name: Remove sitemap.xml
-        run: rm release/ssg/**/sitemap.xml
+        run: rm release/ssg/sitemap.xml && rm release/ssg/**/sitemap.xml
 
       - name: Remove .well-known for another language
         run: rm -r release/ssg/*/.well-known
