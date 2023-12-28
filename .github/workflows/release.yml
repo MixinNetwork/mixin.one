@@ -53,6 +53,14 @@ jobs:
       - name: Remove .well-known for another language
         run: rm -r release/ssg/*/.well-known
 
+      - name: Show files for release/ssg
+        working-directory: release/ssg
+        run: ls -a
+
+      - name: Show files for release/ssg/zh
+        working-directory: release/ssg/zh
+        run: ls -a
+
       - uses: montudor/action-zip@v1
         with:
           args: zip -qq -r release.zip release
