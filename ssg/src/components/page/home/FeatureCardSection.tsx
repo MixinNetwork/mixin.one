@@ -30,7 +30,7 @@ const FeatureCard = ({
         />
         <div className="bg bg-#333 px-4 pb-8 pt-5 text-white ">
           <div className="text-4.5 font-medium ">{title}</div>
-          <div className="text-3.5 text-op-80 mt-2 text-white">
+          <div className="text-3.5 text-op-80mt-2 leading-[1.5] text-white">
             {description}
           </div>
           <div className="mt-6 inline-flex items-center justify-start gap-2 shadow">
@@ -56,7 +56,7 @@ const FeatureCard = ({
         <div className={clsx("font-medium text-white", "text-4-6")}>
           {title}
         </div>
-        <div className="text-op-90 text-3.5-4 mt-4 text-white">
+        <div className="text-op-90 text-3.5-4 mt-4 leading-[1.5] text-white">
           {description}
         </div>
         <div className="mt-7 inline-flex items-center justify-start gap-2 shadow">

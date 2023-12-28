@@ -13,7 +13,7 @@ const Item = (props: {
         {props.title}
       </div>
 
-      <div className="text-#333 text-sm font-normal leading-normal text-opacity-80">
+      <div className="text-#333 text-sm leading-[1.5] text-opacity-80">
         {props.description}
       </div>
     </div>

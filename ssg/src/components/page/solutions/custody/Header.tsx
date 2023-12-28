@@ -41,7 +41,9 @@ export const Header = () => (
       height={520}
       className="mx-a container"
     />
-    <div className={clsx("pb-15 mt-5 grid gap-5 px-5", "md:grid-cols-3")}>
+    <div
+      className={clsx("pb-15 mx-a container mt-5 grid gap-5", "md:grid-cols-3")}
+    >
       <Item
         icon={<Svg1 />}
         title={<Translate>Two-of-three custody</Translate>}

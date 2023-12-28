@@ -21,7 +21,7 @@ const FAQItem = ({
     </details>
     <div className="grid grid-rows-[0fr] transition-all duration-300 peer-open:grid-rows-[1fr]">
       <div className="overflow-hidden">
-        <div className="text-#333 mb-3.5 cursor-default pe-6 text-sm font-normal leading-snug text-opacity-75">
+        <div className="text-#333 mb-3.5 cursor-default pe-6 text-sm font-normal leading-[1.5] leading-snug text-opacity-75">
           {answer}
         </div>
       </div>

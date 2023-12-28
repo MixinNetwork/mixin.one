@@ -20,8 +20,8 @@ const FullItem = ({
         className={clsx(
           "mx-a px-0-10 container",
           "gap-10-20 grid items-center",
-          "group-odd:grid-cols-[508fr_528fr]",
-          "group-even:grid-cols-[528fr_508fr]",
+          "sm:group-odd:grid-cols-[508fr_528fr]",
+          "sm:group-even:grid-cols-[528fr_508fr]",
         )}
       >
         <img
@@ -33,7 +33,7 @@ const FullItem = ({
         />
         <div className="space-y-4">
           <div className="text-5-8 font-medium">{title}</div>
-          <div className="text-#333 text-3.5-4 text-opacity-80">
+          <div className="text-#333 text-3.5-4 leading-[1.5] text-opacity-80">
             {description}
           </div>
         </div>

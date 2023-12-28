@@ -1,6 +1,7 @@
 import React from "react"
 import Translate, { translate } from "@docusaurus/Translate"
 import SectionTitle from "../../../common/SectionTitle"
+import FullItem from "../../../common/FullItem"
 
 const Item = ({
   cover,
@@ -41,12 +42,15 @@ export const FeatureSection = () => (
       description={
         <Translate>{"Self-hosted wallet, you own the private key."}</Translate>
       }
+      className="!mb-0"
     >
       <Translate>Own your assets</Translate>
     </SectionTitle>
-    <div className="grid auto-rows-fr">
-      <Item
-        cover={"2.1.webp"}
+    <div className="odd:children:bg-#F2F2F2">
+      <FullItem
+        cover={
+          require("@site/static/img/page/solutions/custody/2.1.webp").default
+        }
         title={translate({
           message: "Multi-signature custody",
         })}
@@ -56,8 +60,10 @@ The Bitcoin address of the vault is controlled by 3 private keys, and the owner 
 Co-manager private keys are jointly controlled by MPC-TSS technology, which supports up to 16 people to jointly manage the same vault at the same time. Each transaction requires the signature of any M of N co-managers to obtain the complete co-manager private key signature.`,
         })}
       />
-      <Item
-        cover={"2.2.webp"}
+      <FullItem
+        cover={
+          require("@site/static/img/page/solutions/custody/2.2.webp").default
+        }
         title={translate({
           message: "Approval process",
         })}
@@ -66,8 +72,10 @@ Co-manager private keys are jointly controlled by MPC-TSS technology, which supp
 Our perfect notification service allows the vault owner and vault co-managers to receive notifications that need to be approved for the first time, and reduce the problem of untimely approval through repeated regular notifications, effectively improving the efficiency of approval.`,
         })}
       />
-      <Item
-        cover={"2.3.webp"}
+      <FullItem
+        cover={
+          require("@site/static/img/page/solutions/custody/2.3.webp").default
+        }
         title={translate({
           message: "Simple collaboration",
         })}
@@ -75,8 +83,10 @@ Our perfect notification service allows the vault owner and vault co-managers to
           message: `Complexity is a hidden danger. Your family, friends, and colleagues do not need professional cryptocurrency knowledge. Through Mixin Messenger's secure and private information communication, through the 6-digit password to securely participate in asset management, and through setting emergency contacts to avoid further reducing the risk of single point of failure.`,
         })}
       />
-      <Item
-        cover={"2.4.webp"}
+      <FullItem
+        cover={
+          require("@site/static/img/page/solutions/custody/2.4.webp").default
+        }
         title={translate({
           message: "Asset isolation",
         })}

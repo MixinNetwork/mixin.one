@@ -59,10 +59,5 @@ summary {
 }
 
 .container {
-  /* 
-  sm: 680px, container: 640px
-  md: 1280px, container: 960px
-  lg: 1520px, container: 1200px
-  */
-  @apply px-5/100 sm:px-5 md:px-40;
+  @apply px-5;
 }
