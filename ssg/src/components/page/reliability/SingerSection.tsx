@@ -1,4 +1,3 @@
-import SectionTitle from "../../common/SectionTitle"
 import Translate, { translate } from "@docusaurus/Translate"
 
 import TitleIcon1 from "@site/static/img/page/reliability/3.1.2.svg"
@@ -21,53 +20,7 @@ import GridIcon8 from "@site/static/img/page/reliability/3.8.1.svg"
 import GridIcon9 from "@site/static/img/page/reliability/3.9.1.svg"
 import GridIcon10 from "@site/static/img/page/reliability/3.10.svg"
 
-import { ComponentType, HTMLAttributes } from "react"
-
-const Item = (props: {
-  icon: ComponentType<Pick<HTMLAttributes<unknown>, "className">>
-  titleIcon: React.ReactNode
-  description: string
-}) => {
-  return (
-    <div className="pt-4-8 gap-x-3-7 px-4-8 pb-6-11 grid grid-cols-[auto_1fr] grid-rows-[auto_1fr] gap-y-3 rounded-sm bg-white shadow-[0_4px_20px_0_rgba(43,89,255,0.06)]">
-      <props.icon className="w-12-24 h-12-24 row-span-2 aspect-square" />
-      <div className="h-8-10 svg:h-8-10 flex items-center overflow-hidden">
-        {props.titleIcon}
-      </div>
-
-      <div className="text-#333 text-sm font-normal leading-normal text-opacity-80">
-        {props.description}
-      </div>
-    </div>
-  )
-}
-
-const CardSectionLayout = ({
-  title,
-  description,
-  items,
-}: {
-  title: string
-  description?: string
-  items: {
-    icon: ComponentType<Pick<HTMLAttributes<unknown>, "className">>
-    title: React.ReactNode
-    description: string
-  }[]
-}) => {
-  return (
-    <div className="bg-#F1F6FC66">
-      <SectionTitle description={description} className="!mb-20">
-        {title}
-      </SectionTitle>
-      <div className="pb-45 container mx-auto grid auto-rows-fr gap-5  sm:grid-cols-2">
-        {items.map((item) => (
-          <Item {...item} titleIcon={item.title} />
-        ))}
-      </div>
-    </div>
-  )
-}
+import { CardSectionLayout } from "../../common/CardSectionLayout"
 
 export const SingerSection = () => {
   return (
