@@ -9,6 +9,7 @@ import GridIcon1 from "@site/static/img/page/privacy/1.1.2.svg"
 import GridIcon2 from "@site/static/img/page/privacy/1.1.3.svg"
 import GridIcon3 from "@site/static/img/page/privacy/1.1.4.svg"
 import GridIcon4 from "@site/static/img/page/privacy/1.1.5.svg"
+import FullItem from "../../common/FullItem"
 
 const ListSection = () => {
   return (
@@ -21,6 +22,7 @@ const ListSection = () => {
             you.
           </Translate>
         }
+        itemClassName="odd:bg-#F2F2F2"
         points={[
           {
             cover: "1.2.1.webp",
@@ -61,6 +63,7 @@ const ListSection = () => {
             Enhance UTXO transfer privacy through CryptoNote technology.
           </Translate>
         }
+        itemClassName="even:bg-#F2F2F2"
         points={[
           {
             cover: "1.3.1.webp",
@@ -92,6 +95,7 @@ const Item = ({
   title,
   description,
   points,
+  itemClassName,
 }: {
   title: React.ReactNode
   description?: React.ReactNode
@@ -100,6 +104,7 @@ const Item = ({
     title: string
     content: string
   }[]
+  itemClassName?: string
 }) => (
   <div className="gap-5-10 grid items-center pb-20">
     <SectionTitle description={description} className="!mb-0">
@@ -107,30 +112,12 @@ const Item = ({
     </SectionTitle>
     <div className="">
       {points.map(({ cover, title, content }) => (
-        <div key={title} className={clsx("group ", "pt-15-33.5 pb-20-33.5")}>
-          <div
-            className={clsx(
-              "mx-a px-0-10 container",
-              "gap-10-20 grid items-center",
-              "group-odd:grid-cols-[508fr_528fr]",
-              "group-even:grid-cols-[528fr_508fr]",
-            )}
-          >
-            <img
-              loading="lazy"
-              src={require("@site/static/img/page/privacy/" + cover).default}
-              className="w-full sm:group-odd:order-last"
-              width={528}
-              height={352}
-            />
-            <div className="space-y-4">
-              <div className="text-5-8 font-medium">{title}</div>
-              <div className="text-#333 text-3.5-4 text-opacity-80">
-                {content}
-              </div>
-            </div>
-          </div>
-        </div>
+        <FullItem
+          cover={require("@site/static/img/page/privacy/" + cover).default}
+          title={title}
+          description={content}
+          className={itemClassName}
+        />
       ))}
     </div>
   </div>
