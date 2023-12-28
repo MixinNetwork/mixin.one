@@ -49,7 +49,7 @@ jobs:
         run: rm release/ssg/**/sitemap.xml
 
       - name: Remove .well-known for another language
-        run: rm release/ssg/*/.well-known
+        run: rm -r release/ssg/*/.well-known
 
       - name: Show files
         run: cd release/ssg && ls -a && cd zh && ls -a
