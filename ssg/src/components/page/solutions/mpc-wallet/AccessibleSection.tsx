@@ -35,7 +35,7 @@ const Item = ({
 
 export const AccessibleSection = () => {
   return (
-    <div className="bg-#F2F2F2 bg-op-50 pb-40-45">
+    <div className="bg-#F2F2F2 bg-op-50 pb-20-45">
       <div className="container mx-auto">
         <SectionTitle
           description={
