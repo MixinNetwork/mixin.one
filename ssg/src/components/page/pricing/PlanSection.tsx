@@ -46,8 +46,8 @@ const Tab = ({
   return (
     <button
       className={clsx(
-        "w-full cursor-pointer border-b border-zinc-300 px-2 pb-5 text-center",
-        checked && "border-black!",
+        "text-#333 text-3.5-4.5 pb-3-5 w-full cursor-pointer border-b px-2 text-center",
+        checked ? "text-op-100 border-#333" : "text-op-80 border-#D9D9D9",
       )}
       onClick={onClick}
     >
