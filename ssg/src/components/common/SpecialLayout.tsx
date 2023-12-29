@@ -1,4 +1,5 @@
 import clsx from "clsx"
+import SectionTitle from "./SectionTitle"
 
 export const SpecialLayoutItem = ({
   title,
@@ -18,12 +19,7 @@ export const SpecialLayoutItem = ({
   }[]
 }) => (
   <div className="group">
-    <div className="title-container text-#333 text-7.5 text-center font-medium leading-10">
-      {title}
-    </div>
-    <div className="title-container text-#333 text-4 mt-5 text-center font-normal leading-[1.5] text-opacity-70">
-      {description}
-    </div>
+    <SectionTitle description={description}>{title}</SectionTitle>
     <div className="sm:mt-19 md:mt-27 lg:mt-35 sm:gap-18  md:gap-26 mt-10 grid items-center gap-10 sm:grid-cols-2 lg:gap-32">
       <img
         loading="lazy"
