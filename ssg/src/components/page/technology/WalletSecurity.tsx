@@ -12,7 +12,7 @@ const Item = ({
   description: React.ReactNode
   href: string
 }) => (
-  <div className="sm:gap-x-7.3 md:gap-x-14.7 lg:gap-x-22 group container mx-auto grid items-center gap-x-0 gap-y-5  sm:grid-cols-2">
+  <div className="sm:gap-x-7.3 md:gap-x-14.7 lg:gap-x-22 group container mx-auto grid items-center gap-x-0 gap-y-10  sm:grid-cols-2">
     <img
       loading="lazy"
       src={require("@site/static/img/page/technology/" + cover).default}
@@ -24,12 +24,12 @@ const Item = ({
       <div className="text-5 sm:text-6 md:text-7 lg:text-8 font-medium">
         {title}
       </div>
-      <div className="text-#333 text-op-80 text-3.5 sm:text-4 mt-5">
+      <div className="text-#333 text-op-80 text-3.5 sm:text-4 mt-4">
         {description}
       </div>
       <a
         href={href}
-        className="mt-10 block bg-[#333] py-4 text-center text-white  sm:w-fit sm:px-7"
+        className="mt-15-10 block bg-[#333] py-4 text-center text-white  sm:w-fit sm:px-7"
       >
         <Translate>Technology Detail</Translate>
       </a>
