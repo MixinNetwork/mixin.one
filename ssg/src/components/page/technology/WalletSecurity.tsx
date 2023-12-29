@@ -23,7 +23,9 @@ const Item = ({
       <div className="text-5 sm:text-6 md:text-7 lg:text-8 font-medium">
         {title}
       </div>
-      <div className="mt-5 text-sm sm:text-base">{description}</div>
+      <div className="text-#333 text-op-80 mt-5 text-sm sm:text-base">
+        {description}
+      </div>
       <a
         href={href}
         className="mt-10 block bg-[#333] py-4 text-center text-white  sm:w-fit sm:px-7"

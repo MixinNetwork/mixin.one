@@ -18,7 +18,9 @@ const Item = ({
   <div className="grid grid-cols-[auto_1fr] items-center gap-x-4 gap-y-5">
     {icon}
     <div className="text-5 font-medium">{title}</div>
-    <div className="col-span-full text-sm">{description}</div>
+    <div className="text-#333 text-op-80 col-span-full text-sm">
+      {description}
+    </div>
   </div>
 )
 
