@@ -19,7 +19,9 @@ export default function SectionTitle({
     <div
       className={clsx(
         "container mx-auto",
-        "my-15 sm:mt-30 sm:mb-25 space-y-5",
+        "mt-15-30 mb-15-25",
+        !large && "space-y-5",
+        large && "space-y-7",
         className,
       )}
     >
