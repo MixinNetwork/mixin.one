@@ -5,6 +5,7 @@ import useDocusaurusContext from "@docusaurus/useDocusaurusContext"
 import DropdownIcon from "@site/static/img/common/dropdown.svg"
 import DropdownNavbarItem from "@theme/NavbarItem/DropdownNavbarItem"
 import Cookies from "js-cookie"
+import clsx from "clsx"
 
 export function LocalSwitcer({}) {
   const {
@@ -36,7 +37,12 @@ export function LocalSwitcer({}) {
   })
 
   return (
-    <div className="[&>*]:block! [&>*]:px-0! [&_ul]:bg-white [&_ul]:bg-opacity-20">
+    <div
+      className={clsx(
+        "[&>*]:block! [&>*]:px-0!",
+        "![&_ul]:translate-y-px [&_ul]:top-full [&_ul]:rounded-sm [&_ul]:bg-white [&_ul]:bg-opacity-20",
+      )}
+    >
       <DropdownNavbarItem
         className="after:hidden! text-4 w-fit space-x-3.5 rounded-sm bg-white bg-opacity-20 py-1.5 pl-5 pr-2 font-medium text-white text-opacity-60"
         items={localeItems}
