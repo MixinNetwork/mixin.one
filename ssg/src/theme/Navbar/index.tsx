@@ -1,24 +1,19 @@
 import Logo from "@theme/Logo"
 import Hamburger from "@site/static/img/common/nav/hamburger.svg"
-
 import React, { ComponentType, SVGProps } from "react"
 import Link from "@docusaurus/Link"
 import clsx from "clsx"
 import Arrow from "@site/static/img/common/nav/arrow.svg"
 import Translate, { translate } from "@docusaurus/Translate"
-
 import Contact from "@site/static/img/common/nav/contact.svg"
 import About from "@site/static/img/common/nav/about.svg"
-
 import MPC from "@site/static/img/common/nav/1.1.1.svg"
 import Buy from "@site/static/img/common/nav/1.1.2.svg"
 import Social from "@site/static/img/common/nav/1.1.3.svg"
 import AllInOne from "@site/static/img/common/nav/1.1.4.svg"
-
 import Custody from "@site/static/img/common/nav/1.2.1.svg"
 import Collaboration from "@site/static/img/common/nav/1.2.2.svg"
 import Staking from "@site/static/img/common/nav/1.2.3.svg"
-import CollateralizedLoans from "@site/static/img/common/nav/1.2.4.svg"
 import Recovery from "@site/static/img/common/nav/1.2.5.svg"
 import Inheritance from "@site/static/img/common/nav/1.2.6.svg"
 
