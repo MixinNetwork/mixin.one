@@ -33,6 +33,10 @@ http://mixin.one:80 {
         root /var/www/mixin.one/ssg
         try_files {path} {path}/index.html
       }
+      file {
+        root /var/www/mixin.one/ssg/zh
+        try_files {path} {path}/index.html
+      }
       expression header_regexp('Cookie', 'lang=zh') || (!header_regexp('Cookie', 'lang=') && header_regexp('Accept-Language', '^zh'))
       not {
         path_regexp ^/zh(/|$)
@@ -66,7 +70,11 @@ http://messenger.mixin.one:80 {
     @chineseLanguageRedirectMatcher {
       file {
         root /var/www/messenger.mixin.one
-        try_files {path} {path}/index.html /zh/404.html
+        try_files {path} {path}/index.html
+      }
+      file {
+        root /var/www/messenger.mixin.one/zh
+        try_files {path} {path}/index.html
       }
       expression header_regexp('Cookie', 'lang=zh') || (!header_regexp('Cookie', 'lang=') && header_regexp('Accept-Language', '^zh'))
       not {
