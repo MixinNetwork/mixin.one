@@ -64,6 +64,7 @@ export const Header = () => (
         message:
           "Using MPC technology for wallets offers several advantages, including eliminating the need to trust third parties, enhanced data privacy, increased accuracy, the removal of single points of failure, increased difficulty for hackers, and reduced reliance on cold storage.",
       })}
+      large
     >
       <Translate>What are the benefits of MPC wallets?</Translate>
     </SectionTitle>

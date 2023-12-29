@@ -169,6 +169,7 @@ export const PlanSection = () => {
             different needs.
           </Translate>
         }
+        large
       >
         <Translate>Your Bitcoin is Priceless</Translate>
       </SectionTitle>

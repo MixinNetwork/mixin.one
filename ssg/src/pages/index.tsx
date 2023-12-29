@@ -94,7 +94,7 @@ const Header = () => {
       />
       <Navbar dark />
       <div className="pt-15 pb-19 sm:pt-12.5 lg:pt-54 sm:pb-16.5 sm:pb-32.5 lg:pb-79 container mx-auto px-10 sm:text-center md:pt-20">
-        <div className="text-10 max-w-239 sm:text-11 md:text-15.5 leading-12 sm:leading-13.5 md:leading-20 -tracking-0.1 mx-auto font-normal text-white sm:font-medium">
+        <div className="text-10-16 max-w-239 -tracking-0.1 font-300-400 mx-auto leading-[1.125] text-white">
           {title}
         </div>
         <div className="mt-7.5 max-w-232 text-4 lg:text-4.5 mx-auto font-normal text-white text-opacity-90 sm:mt-6 md:mt-8 lg:mt-12">

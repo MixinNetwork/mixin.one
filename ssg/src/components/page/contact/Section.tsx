@@ -34,7 +34,7 @@ export const Section = () => {
 
   return (
     <>
-      <SectionTitle>
+      <SectionTitle large>
         <Translate>Contact Us</Translate>
       </SectionTitle>
       <div className="pb-45 container mx-auto grid gap-y-10 sm:grid-cols-2">

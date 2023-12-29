@@ -32,6 +32,7 @@ export const Header = () => (
           }
         </Translate>
       }
+      large
     >
       <Translate>Sleep soundly knowing your bitcoin are secure</Translate>
     </SectionTitle>

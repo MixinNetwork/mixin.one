@@ -12,6 +12,7 @@ export const LicensesAndRegistrationsSection = () => {
             We go out of our way to ensure that you have the utmost privacy.
           </Translate>
         }
+        large
       >
         <Translate>Licenses and registrations</Translate>
       </SectionTitle>

@@ -12,6 +12,7 @@ export const Header = () => (
           }
         </Translate>
       }
+      large
     >
       <Translate>
         Why we need wide adoption of social recovery wallets?

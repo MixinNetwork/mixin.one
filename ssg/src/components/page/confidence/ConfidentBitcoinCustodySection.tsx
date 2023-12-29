@@ -64,6 +64,7 @@ export const ConfidentBitcoinCustodySection = () => {
             Never worry about losing your keys or centralized evil custody.
           </Translate>
         }
+        large
       >
         <Translate>Confident Bitcoin Custody</Translate>
       </SectionTitle>

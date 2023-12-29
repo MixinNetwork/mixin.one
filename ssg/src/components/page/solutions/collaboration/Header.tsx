@@ -17,6 +17,7 @@ export const Header = () => {
             }
           </Translate>
         }
+        large
       >
         {replace(
           translate(

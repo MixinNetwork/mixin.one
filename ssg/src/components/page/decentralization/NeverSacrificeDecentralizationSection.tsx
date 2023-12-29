@@ -29,6 +29,7 @@ export const NeverSacrificeDecentralizationSection = () => (
         message:
           "Never worry about losing your keys or centralized evil custody.",
       })}
+      large
     >
       <Translate>Never Sacrifice Decentralization</Translate>
     </SectionTitle>

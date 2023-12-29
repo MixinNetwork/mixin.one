@@ -6,12 +6,14 @@ export default function SectionTitle({
   className,
   titleClassName,
   descriptionClassName,
+  large,
 }: {
   children: React.ReactNode
   description?: React.ReactNode
   className?: string
   titleClassName?: string
   descriptionClassName?: string
+  large?: boolean
 }) {
   return (
     <div
@@ -23,8 +25,9 @@ export default function SectionTitle({
     >
       <div
         className={clsx(
-          "title-container text-center",
-          "text-7-12 font-medium leading-[1.4]",
+          "title-container text-center font-medium",
+          !large && "text-7-12",
+          large && "text-8-15",
           titleClassName,
         )}
       >

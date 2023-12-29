@@ -190,6 +190,7 @@ export const DesignSection = () => {
             We go out of our way to ensure that you have the utmost privacy.
           </Translate>
         }
+        large
       >
         <Translate>Privacy by Design</Translate>
       </SectionTitle>

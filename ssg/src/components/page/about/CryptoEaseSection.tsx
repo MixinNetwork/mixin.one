@@ -39,6 +39,7 @@ export const CryptoEaseSection = () => {
         description={
           <Translate>Mixin team helps you better manage your wealth.</Translate>
         }
+        large
       >
         <Translate>About Us</Translate>
       </SectionTitle>

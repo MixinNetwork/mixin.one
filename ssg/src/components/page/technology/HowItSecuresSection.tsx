@@ -12,6 +12,7 @@ export const HowItSecuresSection = () => {
             We never invent our own cryptographic techniques.
           </Translate>
         }
+        large
       >
         <Translate>How it Secures</Translate>
       </SectionTitle>

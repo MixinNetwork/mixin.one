@@ -12,6 +12,7 @@ export const Header = () => (
           }
         </Translate>
       }
+      large
     >
       <Translate>
         All-in-one wallet suite for comprehensive asset management
