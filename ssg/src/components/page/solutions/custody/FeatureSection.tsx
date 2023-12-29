@@ -46,7 +46,7 @@ export const FeatureSection = () => (
     >
       <Translate>Own your assets</Translate>
     </SectionTitle>
-    <div className="odd:children:bg-#F2F2F2">
+    <div className="even:children:bg-#F2F2F2">
       <FullItem
         cover={
           require("@site/static/img/page/solutions/custody/2.1.webp").default
