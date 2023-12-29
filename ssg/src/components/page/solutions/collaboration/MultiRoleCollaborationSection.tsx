@@ -24,7 +24,9 @@ const Item = ({
     >
       {icon}
       <div className="text-6 mt-11.5 mt-9 font-medium">{title}</div>
-      <div className="mt-5">{description}</div>
+      <div className="text-3.5-4 text-#333 text-op-80 mt-5 leading-[1.5]">
+        {description}
+      </div>
     </div>
   )
 }
