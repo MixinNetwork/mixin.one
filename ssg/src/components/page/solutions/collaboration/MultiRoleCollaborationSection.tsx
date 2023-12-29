@@ -45,16 +45,18 @@ export const MultiRoleCollaborationSection = () => {
       >
         <Translate>Multi-Role Collaboration</Translate>
       </SectionTitle>
-      <img
-        loading="lazy"
-        src={
-          require("@site/static/img/page/solutions/collaboration/2.1.webp")
-            .default
-        }
-        width={335}
-        height={181}
-        className="mx-a container"
-      />
+      <div className="mx-a container">
+        <img
+          loading="lazy"
+          src={
+            require("@site/static/img/page/solutions/collaboration/2.1.webp")
+              .default
+          }
+          width={250}
+          height={131}
+          className="bg-#F2F2F2 px-5-25 py-2.5-15 w-full"
+        />
+      </div>
 
       <div
         className={clsx(
