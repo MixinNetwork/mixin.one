@@ -57,9 +57,11 @@ const Item = (data: NavItemProps) => {
 
         <div
           className={clsx(
-            "-left-7.5 w-103 group-hover:op-100 absolute z-10 rounded-sm pt-6 transition-all group-hover:pointer-events-auto",
+            "-left-7.5 group-hover:op-100 absolute z-10 rounded-sm pt-6 transition-all group-hover:pointer-events-auto",
             "pointer-events-none opacity-0",
-            data.groups.find((data) => data.items.length > 2) && "w-206",
+            data.groups.find((data) => data.items.length > 2)
+              ? "w-110-200"
+              : "w-55-100",
           )}
         >
           <div className="bg-white px-5 pb-10 shadow-xl">
@@ -84,7 +86,7 @@ const Item = (data: NavItemProps) => {
                         <div className="flex-center text-#333 w-fit space-x-2.5 text-sm font-medium">
                           <div> {item.label}</div>
                           {!item.to && (
-                            <div className="text-3 text-op-66 text-#333 w-fit bg-[#F2F2F2] px-2.5 py-1">
+                            <div className="text-3 text-op-66 text-#333 w-fit shrink-0 bg-[#F2F2F2] px-2.5 py-1">
                               <Translate>Coming Soon</Translate>
                             </div>
                           )}
