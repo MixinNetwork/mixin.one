@@ -90,7 +90,7 @@ export const MainProductSection = () => {
 
       <LocalLink
         to="/pricing"
-        className="mt-24.5 text-4 mx-auto rounded-sm bg-zinc-800 px-7 py-4 font-medium leading-none text-white"
+        className="mt-24.5 text-4 mx-auto rounded-sm bg-zinc-800 px-7 py-4 font-medium text-white"
       >
         <Translate>Start for Free</Translate>
       </LocalLink>

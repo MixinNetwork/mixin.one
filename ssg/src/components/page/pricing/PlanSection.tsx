@@ -92,7 +92,7 @@ const Item = ({
     <div className="border-px rounded-sm border-zinc-300 bg-zinc-100 bg-opacity-50 px-5 pb-20 pt-10 sm:px-10">
       <div className="grid gap-y-5 sm:grid-cols-2">
         <div className="text-#333 text-7.5 font-medium">{name}</div>
-        <div className="text-#333 text-4 font-normal leading-normal text-opacity-70 sm:order-last">
+        <div className="text-#333 text-4 font-normal leading-[1.5] text-opacity-70 sm:order-last">
           {description}
         </div>
         <div className="sm:row-span-2 sm:ml-auto sm:w-fit">
@@ -103,12 +103,12 @@ const Item = ({
             <span className="text-#333 text-6xl font-semibold leading-10">
               {price.toLocaleString()}
             </span>
-            <span className="text-#333 text-5 font-normal leading-normal">
+            <span className="text-#333 text-5 font-normal leading-[1.5]">
               /year
             </span>
           </div>
           {price <= 0 && (
-            <div className="text-#333 text-3.5 mx-auto w-fit font-normal leading-none text-opacity-70">
+            <div className="text-#333 text-3.5 mx-auto w-fit font-normal text-opacity-70">
               <Translate>FREE FOREVER</Translate>
             </div>
           )}
@@ -132,7 +132,7 @@ const Item = ({
       <div className="mt-15 border-b-px h-px w-full border-zinc-300"></div>
       <div className="mt-20 grid items-center sm:mt-10 sm:grid-cols-2">
         <div className="space-y-5">
-          <div className="text-#333 text-5 font-medium leading-normal">
+          <div className="text-#333 text-5 font-medium leading-[1.5]">
             <Translate>Features</Translate>
           </div>
           <div className="grid gap-5 sm:grid-cols-2">

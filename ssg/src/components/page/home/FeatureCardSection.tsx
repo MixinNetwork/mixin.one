@@ -60,7 +60,7 @@ const FeatureCard = ({
           {description}
         </div>
         <div className="mt-7 inline-flex items-center justify-start gap-2 shadow">
-          <div className="text-3.5-4 font-medium leading-none text-white">
+          <div className="text-3.5-4 font-medium text-white">
             {subDescription} →
           </div>
         </div>

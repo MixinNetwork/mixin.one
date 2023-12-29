@@ -23,7 +23,7 @@ const Item = ({
         left && "md:flex-row-reverse",
       )}
     >
-      <div className="flex-center text-3.5 h-5 w-5 rounded-full bg-zinc-800 leading-none text-white">
+      <div className="flex-center text-3.5 h-5 w-5 rounded-full bg-zinc-800 text-white">
         {index}
       </div>
       <div className="text-5.5 text-#333 font-medium leading-tight">
@@ -33,7 +33,7 @@ const Item = ({
 
     <div
       className={clsx(
-        "text-3.5 text-#333 col-span-2 font-normal leading-snug text-opacity-80",
+        "text-3.5 text-#333 col-span-2 font-normal leading-[1.5] text-opacity-80",
         left ? "lg:mr-11.5 md:mr-10 md:text-end" : "lg:ml-11.5 md:ml-10",
       )}
     >

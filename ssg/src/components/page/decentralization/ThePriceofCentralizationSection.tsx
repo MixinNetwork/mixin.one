@@ -17,7 +17,7 @@ const SpecialItem = () => (
       <div className="sm:text-7 md:text-7.5 lg:text-8 text-5 font-medium text-white">
         <Translate>The Mt. Gox Debacle</Translate>
       </div>
-      <div className="text-3.5 font-normal leading-snug text-white text-opacity-90">
+      <div className="text-3.5 font-normal leading-[1.5] text-white text-opacity-90">
         <Translate>
           Mt. Gox was a bitcoin exchange based in Shibuya, Tokyo, Japan.
           Launched in 2010, it was handling over 70% of all bitcoin (BTC)
