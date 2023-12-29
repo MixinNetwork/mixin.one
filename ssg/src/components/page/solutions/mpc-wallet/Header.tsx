@@ -53,7 +53,9 @@ const Item = ({
       />
       <div className="z-1">
         <div className="text-5.5 sm:text-8">{title}</div>
-        <div className="mt-3 leading-[1.625]">{description}</div>
+        <div className="text-3.5 text-#333 text-op-80 mt-4 leading-[1.5]">
+          {description}
+        </div>
       </div>
     </div>
   )
