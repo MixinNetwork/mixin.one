@@ -26,7 +26,9 @@ const LargeItem = ({
       height={100}
     />
     <div className="text-6 mt-8">{title}</div>
-    <div className="text-#333 text-op-80 mt-4">{description}</div>
+    <div className="text-3.5-4 text-#333 text-op-80 mt-3 leading-[1.5]">
+      {description}
+    </div>
   </div>
 )
 
@@ -62,7 +64,9 @@ const SmallItem = ({
       <div className="text-#333 text-op-66 col-span-2">@{id}</div>
     </div>
 
-    <div className="text-#333 text-op-80 mt-4">{content}</div>
+    <div className="text-5 text-#333 text-op-80 mt-4 leading-[1.5]">
+      {content}
+    </div>
     <div className="text-#333 text-op-33 mt-3">{time}</div>
   </div>
 )

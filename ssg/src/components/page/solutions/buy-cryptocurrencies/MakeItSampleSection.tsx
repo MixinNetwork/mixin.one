@@ -50,9 +50,11 @@ const Item = ({
           "sm:w-43 sm:right-12.5 sm:absolute sm:bottom-5",
         )}
       />
-      <div className="sm:space-y-4.5 space-y-3 md:space-y-3">
+      <div className="sm:space-y-4.5">
         <div className="text-5.5 sm:text-7 font-medium">{title}</div>
-        <div className="text-#333 text-op-80">{description}</div>
+        <div className="text-3.5-4 text-#333 text-op-80 mt-4 leading-[1.5]">
+          {description}
+        </div>
       </div>
     </div>
   )
