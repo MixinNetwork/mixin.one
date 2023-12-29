@@ -19,8 +19,7 @@ export default function SectionTitle({
     <div
       className={clsx(
         "container mx-auto",
-        mode == "small" &&
-          "my-15 sm:mt-30 sm:mb-25 sm:space-y-6.25 md:space-y-7.5 space-y-5 lg:space-y-10",
+        mode == "small" && "my-15 sm:mt-30 sm:mb-25 space-y-5",
         mode == "large" && "my-15 space-y-10",
         className,
       )}
@@ -28,7 +27,7 @@ export default function SectionTitle({
       <div
         className={clsx(
           "title-container text-center",
-          mode == "small" && "text-7 sm:text-8 lg:text-9 text-3xl font-medium",
+          mode == "small" && "text-7-12 font-medium leading-[1.4]",
           mode == "large" &&
             "text-8 sm:text-11 md:text-15 text-#333 font-medium",
           titleClassName,
@@ -40,7 +39,7 @@ export default function SectionTitle({
         <div
           className={clsx(
             "text-opacity-66 text-#333 leading-[1.5]",
-            mode == "small" && "title-container text-center text-base",
+            mode == "small" && "title-container text-3.5-4 text-center",
             mode == "large" && "title-container text-center",
             descriptionClassName,
           )}

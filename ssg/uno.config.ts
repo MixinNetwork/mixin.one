@@ -51,7 +51,7 @@ export default defineConfig({
       "absolute-horizontal-center":
         "absolute left-1/2 -translate-x-1/2 transform",
       fill: "absolute inset-0 w-full h-full",
-      "title-container": "max-w-3/4 sm:max-w-2/3 mx-auto",
+      "title-container": "max-w-239 mx-auto",
     },
     [
       /^click-area-(\d+)$/,
