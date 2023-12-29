@@ -5,9 +5,7 @@ import clsx from "clsx"
 import FullItem from "../../../common/FullItem"
 
 export const StepsSection = () => (
-  <div
-    className={clsx("bg-#F2F2F2 mt-20", "pb-70 sm:pb-61.7 md:pb-53.3 lg:pb-45")}
-  >
+  <div>
     <SectionTitle
       description={
         <Translate>
@@ -18,7 +16,7 @@ export const StepsSection = () => (
     >
       <Translate>Notification Service</Translate>
     </SectionTitle>
-    <div className="odd:children:bg-#F2F2F2">
+    <div className="even:children:bg-#F2F2F2">
       <FullItem
         cover={
           require("@site/static/img/page/solutions/collaboration/3.1.webp")
