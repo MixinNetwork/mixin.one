@@ -44,7 +44,7 @@ export const SpecialLayoutItem = ({
             <div className="text-#333 text-5 font-medium leading-snug">
               {title}
             </div>
-            <div className="text-#333 text-4 col-span-2 font-normal leading-relaxed text-opacity-80">
+            <div className="text-#333 text-4 col-span-2 font-normal leading-[1.5] text-opacity-80">
               {description}
             </div>
           </div>
