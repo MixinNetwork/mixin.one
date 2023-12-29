@@ -36,7 +36,7 @@ export const MultiRoleCollaborationSection = () => {
         description={
           <Translate>
             {
-              "The establishment of multiple roles facilitates institutions to establish customisable workflows according to their needs, allowing them to work more efficiently, and support operation scaling. Creators will be able to create a segregation of duties by managing users and assigning permissions and roles."
+              "Creators will be able to create a segregation of duties by managing users and assigning permissions and roles."
             }
           </Translate>
         }

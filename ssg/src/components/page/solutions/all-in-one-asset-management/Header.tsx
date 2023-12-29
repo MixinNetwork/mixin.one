@@ -26,7 +26,17 @@ export const Header = () => (
       }
       width={1194}
       height={480}
-      className="mx-a container"
+      className="mx-a !sm:block container !hidden"
+    />
+    <img
+      loading="lazy"
+      src={
+        require("@site/static/img/page/solutions/all-in-one-asset-management/1.1.0.webp")
+          .default
+      }
+      width={288}
+      height={192}
+      className="mx-a !sm:hidden container"
     />
   </>
 )

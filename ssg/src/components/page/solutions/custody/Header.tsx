@@ -41,7 +41,16 @@ export const Header = () => (
       src={require("@site/static/img/page/solutions/custody/1.1.webp").default}
       width={1194}
       height={520}
-      className="mx-a container"
+      className="mx-a !sm:block container !hidden"
+    />
+    <img
+      loading="lazy"
+      src={
+        require("@site/static/img/page/solutions/custody/1.1.0.webp").default
+      }
+      width={288}
+      height={192}
+      className="mx-a !sm:hidden container"
     />
     <div
       className={clsx("pb-15 mx-a container mt-5 grid gap-5", "md:grid-cols-3")}
