@@ -21,7 +21,7 @@ const Item = ({
   return (
     <div
       className={clsx(
-        "pb-17.5 space-y-5 bg-white px-5 pt-5 text-center shadow",
+        "pb-17.5 text-3.5-4 space-y-5 bg-white px-5 pt-5 text-center shadow",
         className,
       )}
     >
