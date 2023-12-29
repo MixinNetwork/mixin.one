@@ -52,7 +52,7 @@ export default defineConfig({
         "absolute left-1/2 -translate-x-1/2 transform",
       fill: "absolute inset-0 w-full h-full",
       "title-container": "max-w-239 mx-auto",
-      shadow: "shadow-[0_4px_20px_0_rgba(0,0,0,0.06)]",
+      shadow: "shadow-default",
     },
     [
       /^click-area-(\d+)$/,
@@ -126,6 +126,9 @@ export default defineConfig({
         "marquee-md": "infinite",
         "marquee-lg": "infinite",
       },
+    },
+    boxShadow: {
+      default: "0px 4px 20px 0px rgba(0, 0, 0, 0.06);",
     },
     breakpoints: {
       sm: "680px",
