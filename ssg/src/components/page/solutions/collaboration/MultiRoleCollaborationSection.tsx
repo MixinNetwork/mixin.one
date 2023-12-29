@@ -44,6 +44,7 @@ export const MultiRoleCollaborationSection = () => {
         <Translate>Multi-Role Collaboration</Translate>
       </SectionTitle>
       <img
+        loading="lazy"
         src={
           require("@site/static/img/page/solutions/collaboration/2.1.webp")
             .default

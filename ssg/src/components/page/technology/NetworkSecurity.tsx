@@ -18,6 +18,7 @@ const Item = ({
   return (
     <div className="relative">
       <img
+        loading="lazy"
         src={require("@site/static/img/page/technology/" + background).default}
         className="fill object-cover"
       />
@@ -45,6 +46,7 @@ export const NetworkSecurity = () => (
     </SectionTitle>
     <div className="pb-30 container mx-auto grid gap-5  sm:grid-cols-3">
       <img
+        loading="lazy"
         src={require("@site/static/img/page/technology/3.1.webp").default}
         width={2682}
         height={1215}

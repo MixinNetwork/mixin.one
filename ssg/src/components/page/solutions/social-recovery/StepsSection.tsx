@@ -22,6 +22,7 @@ const Itme = ({
     )}
   >
     <img
+      loading="lazy"
       src={
         require("@site/static/img/page/solutions/social-recovery/" + cover)
           .default

@@ -15,6 +15,7 @@ const Item = ({
   <div className="even:bg-#F2F2F2 even:bg-op-50 group w-full">
     <div className="mx-a pt-15 gap-y-15 container grid items-center gap-x-10  pb-20 md:grid-cols-2 md:gap-x-20">
       <img
+        loading="lazy"
         src={
           require("@site/static/img/page/solutions/custody/" + cover).default
         }

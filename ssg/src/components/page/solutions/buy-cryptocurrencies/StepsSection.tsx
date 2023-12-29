@@ -25,6 +25,7 @@ export const StepsSection = () => {
       )}
     >
       <img
+        loading="lazy"
         src={
           require("@site/static/img/page/solutions/buy-cryptocurrencies/3.1.webp")
             .default

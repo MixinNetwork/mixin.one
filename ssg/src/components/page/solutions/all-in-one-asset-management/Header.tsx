@@ -19,6 +19,7 @@ export const Header = () => (
       </Translate>
     </SectionTitle>
     <img
+      loading="lazy"
       src={
         require("@site/static/img/page/solutions/all-in-one-asset-management/1.1.webp")
           .default

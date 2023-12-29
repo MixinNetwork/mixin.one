@@ -25,6 +25,7 @@ export function UseNowSection() {
       </div>
 
       <img
+        loading="lazy"
         src={require("@site/static/img/common/useNow.webp").default}
         width={2139}
         height={1578}

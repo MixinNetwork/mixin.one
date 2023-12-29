@@ -37,6 +37,7 @@ export const ServiceSecurity = () => (
       <Translate>Service Security</Translate>
     </SectionTitle>
     <img
+      loading="lazy"
       width={3096}
       height={1410}
       src={require("@site/static/img/page/technology/5.1.webp").default}

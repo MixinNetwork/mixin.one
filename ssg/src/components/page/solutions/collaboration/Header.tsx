@@ -40,6 +40,7 @@ export const Header = () => {
       </SectionTitle>
 
       <img
+        loading="lazy"
         src={
           require("@site/static/img/page/solutions/collaboration/1.1.webp")
             .default

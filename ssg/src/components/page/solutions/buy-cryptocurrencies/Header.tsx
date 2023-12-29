@@ -52,6 +52,7 @@ export const Header = () => {
         </div>
       </div>
       <img
+        loading="lazy"
         src={
           require("@site/static/img/page/solutions/buy-cryptocurrencies/1.1.webp")
             .default

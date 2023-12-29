@@ -17,6 +17,7 @@ const LargeItem = ({
 }) => (
   <div className={clsx("bg-#F2F2F2 row-span-2 px-5 pb-24 pt-10", className)}>
     <img
+      loading="lazy"
       src={
         require("@site/static/img/page/solutions/social-recovery/" + avatar)
           .default
@@ -47,6 +48,7 @@ const SmallItem = ({
   <div className={clsx("bg-#F2F2F2 px-5 pb-16 pt-10", className)}>
     <div className="grid grid-cols-[auto_auto_1fr] items-center gap-y-2.5">
       <img
+        loading="lazy"
         src={
           require("@site/static/img/page/solutions/social-recovery/" + avatar)
             .default

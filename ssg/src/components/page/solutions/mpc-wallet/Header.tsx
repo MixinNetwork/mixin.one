@@ -29,6 +29,7 @@ const Item = ({
       )}
     >
       <img
+        loading="lazy"
         src={
           require("@site/static/img/page/solutions/mpc-wallet/" + background)
             .default
@@ -36,6 +37,7 @@ const Item = ({
         className="fill op-0 sm:op-100"
       />
       <img
+        loading="lazy"
         src={
           require("@site/static/img/page/solutions/mpc-wallet/" + cover).default
         }

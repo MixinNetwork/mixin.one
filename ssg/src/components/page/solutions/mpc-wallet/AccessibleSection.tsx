@@ -56,6 +56,7 @@ export const AccessibleSection = () => {
           )}
         >
           <img
+            loading="lazy"
             src={
               require("@site/static/img/page/solutions/mpc-wallet/2.2.webp")
                 .default

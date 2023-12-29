@@ -46,6 +46,7 @@ export const AllInOneSolution = () => (
     </SectionTitle>
     <div className="mx-a gap-x-12.5 pb-45 container grid items-center gap-y-5 md:grid-cols-[296fr_505fr_296fr]">
       <img
+        loading="lazy"
         src={
           require("@site/static/img/page/solutions/all-in-one-asset-management/3.1.webp")
             .default

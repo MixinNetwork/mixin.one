@@ -37,6 +37,7 @@ export const Header = () => (
       <Translate>Sleep soundly knowing your bitcoin are secure</Translate>
     </SectionTitle>
     <img
+      loading="lazy"
       src={require("@site/static/img/page/solutions/custody/1.1.webp").default}
       width={1194}
       height={520}
