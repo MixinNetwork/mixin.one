@@ -1,4 +1,3 @@
-import { ReactNode } from "react"
 import Layout from "@theme/Layout"
 import { GetStartedSection } from "../../components/common/GetStartedSection"
 import { HowItSecuresSection } from "../../components/page/technology/HowItSecuresSection"

@@ -15,7 +15,7 @@ const LargeItem = ({
   description: string
   className?: string
 }) => (
-  <div className={clsx("bg-#F2F2F2 row-span-2 px-5 pb-24 pt-10", className)}>
+  <div className={clsx("bg-#F2F2F2 row-span-2 px-5 py-10", className)}>
     <img
       loading="lazy"
       src={
@@ -47,7 +47,7 @@ const SmallItem = ({
   time: string
   className?: string
 }) => (
-  <div className={clsx("bg-#F2F2F2 px-5 pb-16 pt-10", className)}>
+  <div className={clsx("bg-#F2F2F2 px-5 py-8", className)}>
     <div className="grid grid-cols-[auto_auto_1fr] items-center gap-y-2.5">
       <img
         loading="lazy"
@@ -64,7 +64,7 @@ const SmallItem = ({
       <div className="text-#333 text-op-66 col-span-2">@{id}</div>
     </div>
 
-    <div className="text-5 text-#333 text-op-80 mt-4 leading-[1.5]">
+    <div className="text-3.5-4 text-#333 text-op-80 mt-4 leading-[1.5]">
       {content}
     </div>
     <div className="text-#333 text-op-33 mt-3">{time}</div>
