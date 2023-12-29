@@ -1,7 +1,6 @@
 import React from "react"
 import SectionTitle from "../../common/SectionTitle"
 import Translate, { translate } from "@docusaurus/Translate"
-import Checked from "@site/static/img/common/checked.svg"
 import GrayBackgroundWrapper from "../../common/GrayBackground"
 import clsx from "clsx"
 
@@ -22,7 +21,6 @@ const ListSection = () => {
             you.
           </Translate>
         }
-        itemClassName="odd:bg-#F2F2F2"
         points={[
           {
             cover: "1.2.1.webp",
@@ -33,6 +31,8 @@ const ListSection = () => {
               message:
                 "When your crypto assets are recharged into the Mixin wallet, only you have the right to view the types and specific amounts of assets in the wallet. Because the recharge address and withdrawal address of the wallet are not the same address, other third parties cannot infer the actual types and quantities of assets in your wallet through the recharge address or withdrawal address on the chain.",
             }),
+            className:
+              "first:bg-gradient-to-b first:from-transparent first:to-#F2F2F2",
           },
           {
             cover: "1.2.2.webp",
@@ -43,6 +43,7 @@ const ListSection = () => {
               message:
                 "If you lose the owner's private key of Mixin Safe vault, you can contact the Mixin team to recover the vault assets. At the same time, you don't have to worry about the leakage of asset information due to the leakage of private keys. The person who gets your private key cannot view the types and quantities of assets through the private key.",
             }),
+            className: "odd:bg-#F2F2F2",
           },
           {
             cover: "1.2.3.webp",
@@ -53,6 +54,7 @@ const ListSection = () => {
               message:
                 "Using Mixin Safe to host assets and using inheritance services can ensure that your wealth is successfully inherited to the next generation. Inheritance is solid privacy protection, and the heir and executor of the property cannot know in advance the types and quantities of assets to be inherited, nor can they infer all assets from the transfer records on the blockchain.",
             }),
+            className: "odd:bg-#F2F2F2",
           },
         ]}
       />
@@ -103,6 +105,7 @@ const Item = ({
     cover: string
     title: string
     content: string
+    className?: string
   }[]
   itemClassName?: string
 }) => (
@@ -111,12 +114,12 @@ const Item = ({
       {title}
     </SectionTitle>
     <div className="">
-      {points.map(({ cover, title, content }) => (
+      {points.map(({ cover, title, content, className }) => (
         <FullItem
           cover={require("@site/static/img/page/privacy/" + cover).default}
           title={title}
           description={content}
-          className={itemClassName}
+          className={className}
         />
       ))}
     </div>
