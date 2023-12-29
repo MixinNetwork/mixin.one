@@ -10,7 +10,7 @@ export const WoodGrainBackgroundTextSection = ({
         src={require("@site/static/img/common/woodGrain.webp").default}
         className="absolute inset-0 -z-10 h-full w-full object-cover"
       />
-      <div className="text-center text-base font-normal leading-relaxed text-white text-opacity-90">
+      <div className="text-3.5-4.5 text-center leading-[1.5] text-white text-opacity-90">
         {children}
       </div>
     </div>
