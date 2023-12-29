@@ -1,6 +1,5 @@
 import React, { ReactNode } from "react"
 import Translate, { translate } from "@docusaurus/Translate"
-import GrayBackgroundWrapper from "../../../common/GrayBackground"
 import SectionTitle from "../../../common/SectionTitle"
 import Cover1 from "@site/static/img/page/solutions/mpc-wallet/2.3.svg"
 import Cover2 from "@site/static/img/page/solutions/mpc-wallet/2.4.svg"
@@ -36,7 +35,7 @@ const Item = ({
 
 export const AccessibleSection = () => {
   return (
-    <GrayBackgroundWrapper>
+    <div className="bg-#F2F2F2 bg-op-50 pb-40-45">
       <div className="container mx-auto">
         <SectionTitle
           description={
@@ -131,6 +130,6 @@ export const AccessibleSection = () => {
           </div>
         </div>
       </div>
-    </GrayBackgroundWrapper>
+    </div>
   )
 }
