@@ -14,7 +14,7 @@ const Item = ({
   cover: string
   to: string
 }) => (
-  <LocalLink to={to} className="space-y-5 rounded-sm bg-white pb-12 shadow-lg">
+  <LocalLink to={to} className="space-y-5 rounded-sm bg-white pb-12 shadow">
     <img
       loading="lazy"
       className="aspect-335/225 w-full object-cover"

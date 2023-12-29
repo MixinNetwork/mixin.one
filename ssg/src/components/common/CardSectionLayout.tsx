@@ -7,7 +7,7 @@ const Item = (props: {
   description: string
 }) => {
   return (
-    <div className="pt-4-8 gap-x-3-7 px-4-8 pb-6-11 grid grid-cols-[auto_1fr] grid-rows-[auto_1fr] gap-y-3 rounded-sm bg-white shadow-[0_4px_20px_0_rgba(43,89,255,0.06)]">
+    <div className="pt-4-8 gap-x-3-7 px-4-8 pb-6-11 grid grid-cols-[auto_1fr] grid-rows-[auto_1fr] gap-y-3 rounded-sm bg-white shadow">
       <props.icon className="w-12-24 h-12-24 row-span-2 aspect-square" />
       <div className="h-8-10 svg:h-8-10 flex items-center overflow-hidden">
         {props.title}

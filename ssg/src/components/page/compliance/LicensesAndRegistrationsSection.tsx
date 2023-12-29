@@ -32,7 +32,7 @@ export const LicensesAndRegistrationsSection = () => {
                   Registration of Activities in the Field of Virtual Currencies.
                 </Translate>
               }
-              className="!bg-white shadow-[0_4px_20px_0_rgba(43,89,255,0.06)]"
+              className="!bg-white shadow"
             />
             <Card
               cover={
@@ -52,7 +52,7 @@ export const LicensesAndRegistrationsSection = () => {
                   card data.
                 </Translate>
               }
-              className="!bg-white shadow-[0_4px_20px_0_rgba(43,89,255,0.06)]"
+              className="!bg-white shadow"
             />
             <Card
               cover={
@@ -71,7 +71,7 @@ export const LicensesAndRegistrationsSection = () => {
                   conducted annually.
                 </Translate>
               }
-              className="!bg-white shadow-[0_4px_20px_0_rgba(43,89,255,0.06)]"
+              className="!bg-white shadow"
             />
           </div>
         </div>

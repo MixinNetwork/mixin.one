@@ -43,7 +43,7 @@ export const Section = () => {
           src={require("@site/static/img/page/contact/1.webp").default}
           className="aspect-375/425 h-full w-full object-cover sm:aspect-auto sm:flex-1"
         />
-        <div className="px-8 sm:flex-1 sm:shadow-lg">
+        <div className="px-8 sm:flex-1 sm:shadow">
           <div className="space-y-6">
             <Item isError={error === "name"}>
               <div>

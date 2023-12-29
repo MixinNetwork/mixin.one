@@ -15,7 +15,7 @@ const ProductCard = ({
   href: string
 }) => (
   <a
-    className="flex flex-col overflow-hidden rounded-lg bg-white shadow-lg"
+    className="flex flex-col overflow-hidden rounded-lg bg-white shadow"
     href={href}
   >
     <img

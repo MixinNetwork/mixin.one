@@ -59,7 +59,7 @@ const Item = (data: NavItemProps) => {
               : "w-65-100 -left-30-7.5 ",
           )}
         >
-          <div className="bg-white px-5 pb-10 shadow-xl">
+          <div className="bg-white px-5 pb-10 shadow">
             {data.groups.map((data) => (
               <>
                 <div className="pt-7.5 text-#333 text-3 ms-5 font-normal uppercase text-opacity-70">
