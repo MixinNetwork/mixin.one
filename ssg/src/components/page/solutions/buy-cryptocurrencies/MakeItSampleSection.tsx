@@ -81,7 +81,7 @@ export const MakeItSampleSection = () => {
             message:
               "Kado allows you to spend what you wantwithout giving up an arm and a leg.",
           })}
-          className="md:mt-15 sm:bg-white"
+          className="md:mt-15"
         />
         <Item
           cover="2.2.webp"
