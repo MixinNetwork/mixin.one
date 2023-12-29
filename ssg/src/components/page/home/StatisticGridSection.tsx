@@ -8,10 +8,10 @@ const StatisticGridItem = ({
   description: string
 }) => (
   <div className="flex-center aspect-square flex-col space-y-2 bg-zinc-100 sm:aspect-auto">
-    <div className="text-3xl font-semibold text-slate-900 sm:text-4xl">
+    <div className="text-7.5 font-semibold text-slate-900 sm:text-4xl">
       {title}
     </div>
-    <div className="text-#333 px-2 text-center text-xs font-normal text-opacity-70 sm:text-sm">
+    <div className="text-#333 sm:text-3.5 text-3 px-2 text-center font-normal text-opacity-70">
       {description}
     </div>
   </div>

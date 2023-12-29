@@ -28,7 +28,7 @@ export function LocalSwitcer({}) {
       target: "_self",
       autoAddBaseUrl: false,
       // selected: locale === currentLocale,
-      className: "text-white! text-opacity-60 text-base font-medium",
+      className: "text-white! text-opacity-60 text-4 font-medium",
       onClick: () => {
         Cookies.set("lang", lang)
       },
@@ -38,7 +38,7 @@ export function LocalSwitcer({}) {
   return (
     <div className="[&>*]:block! [&>*]:px-0! [&_ul]:bg-white [&_ul]:bg-opacity-20">
       <DropdownNavbarItem
-        className="after:hidden! w-fit space-x-3.5 rounded-sm bg-white bg-opacity-20 py-1.5 pl-5 pr-2 text-base font-medium text-white text-opacity-60"
+        className="after:hidden! text-4 w-fit space-x-3.5 rounded-sm bg-white bg-opacity-20 py-1.5 pl-5 pr-2 font-medium text-white text-opacity-60"
         items={localeItems}
         label={
           <>

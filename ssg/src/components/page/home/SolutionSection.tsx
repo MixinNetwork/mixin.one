@@ -11,7 +11,7 @@ export const SolutionSection = () => (
           }
         </Translate>
       </div>
-      <div className="text-#333 text-sm leading-[1.5] text-opacity-80 sm:text-base">
+      <div className="text-#333 text-3.5 sm:text-4 leading-[1.5] text-opacity-80">
         <Translate>
           {
             "Bitcoin custody should never sacrifice decentralization, always be confident and reliable. Mixin Safe also makes decentralized recovery and inheritance possible."
@@ -22,13 +22,13 @@ export const SolutionSection = () => (
     <div className="sm:mb-25 md:mb-30 lg:mt-14.5 container mb-20 mt-20 grid w-full gap-x-8 gap-y-5 sm:mx-auto sm:mt-12 sm:w-fit sm:grid-cols-2">
       <LocalLink
         to="/how-it-secures"
-        className="flex-center text-white! h-12 rounded-sm bg-[#333] text-base font-medium sm:px-10"
+        className="flex-center text-white! text-4 h-12 rounded-sm bg-[#333] font-medium sm:px-10"
       >
         <Translate>How it Secures</Translate>
       </LocalLink>
       <LocalLink
         to="/pricing"
-        className="flex-center text-black! h-12 rounded-sm border border-[#333] text-base font-medium sm:px-10 "
+        className="flex-center text-black! text-4 h-12 rounded-sm border border-[#333] font-medium sm:px-10 "
       >
         <Translate>Pricing & Plans</Translate>
       </LocalLink>

@@ -23,7 +23,7 @@ const Item = ({
       <div className="text-5.5 sm:text-8 lg:text-10 text-#333 font-medium">
         {title}
       </div>
-      <div className="text-#333 text-sm font-normal text-opacity-75">
+      <div className="text-#333 text-3.5 font-normal text-opacity-75">
         {description}
       </div>
     </div>

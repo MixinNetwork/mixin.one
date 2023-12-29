@@ -97,7 +97,7 @@ const Header = () => {
         <div className="text-10 max-w-239 sm:text-11 md:text-15.5 leading-12 sm:leading-13.5 md:leading-20 -tracking-0.1 mx-auto font-normal text-white sm:font-medium">
           {title}
         </div>
-        <div className="mt-7.5 max-w-232 mx-auto text-base font-normal text-white text-opacity-90 sm:mt-6 md:mt-8 lg:mt-12 lg:text-lg">
+        <div className="mt-7.5 max-w-232 text-4 lg:text-4.5 mx-auto font-normal text-white text-opacity-90 sm:mt-6 md:mt-8 lg:mt-12">
           <Translate>
             Protect your crypto with mature multisig and MPC technology. Get
             access to trading, lending, decentralized recovery and inheritance.

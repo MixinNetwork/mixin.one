@@ -23,7 +23,7 @@ const Item = ({
         left && "md:flex-row-reverse",
       )}
     >
-      <div className="flex-center h-5 w-5 rounded-full bg-zinc-800 text-sm leading-none text-white">
+      <div className="flex-center text-3.5 h-5 w-5 rounded-full bg-zinc-800 leading-none text-white">
         {index}
       </div>
       <div className="text-5.5 text-#333 font-medium leading-tight">

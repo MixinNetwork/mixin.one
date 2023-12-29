@@ -29,7 +29,7 @@ const Item = ({
     >
       {cover}
       <div className="mt-2.5 font-medium">{title}</div>
-      <div className="mt-2 text-center text-sm">{description}</div>
+      <div className="text-3.5 mt-2 text-center">{description}</div>
     </div>
   )
 }

@@ -13,7 +13,7 @@ export function LogoAndCopyright() {
     <div>
       <Logo />
 
-      <div className="mt-4 text-sm font-normal leading-tight text-white text-opacity-60">
+      <div className="text-3.5 mt-4 font-normal leading-tight text-white text-opacity-60">
         {copyright}
       </div>
     </div>

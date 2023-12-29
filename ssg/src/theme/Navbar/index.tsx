@@ -62,7 +62,7 @@ const Item = (data: NavItemProps) => {
           <div className="bg-white px-5 pb-10 shadow-xl">
             {data.groups.map((data) => (
               <>
-                <div className="pt-7.5 text-#333 ms-5 text-xs font-normal uppercase text-opacity-70">
+                <div className="pt-7.5 text-#333 text-3 ms-5 font-normal uppercase text-opacity-70">
                   {data.label}
                 </div>
                 <div
@@ -78,7 +78,7 @@ const Item = (data: NavItemProps) => {
                     const children = (
                       <>
                         <item.icon className="row-span-2 h-7" />
-                        <div className="flex-center text-#333 w-fit space-x-2.5 text-sm font-medium">
+                        <div className="flex-center text-#333 text-3.5 w-fit space-x-2.5 font-medium">
                           <div>{item.label}</div>
                           {!item.to && (
                             <div className="text-3 text-op-66 text-#333 w-fit shrink-0 bg-[#F2F2F2] px-2.5 py-1">
@@ -87,7 +87,7 @@ const Item = (data: NavItemProps) => {
                           )}
                         </div>
 
-                        <div className="text-#333 text-xs font-normal text-opacity-70">
+                        <div className="text-#333 text-3 font-normal text-opacity-70">
                           {item.description}
                         </div>
                       </>
@@ -125,7 +125,7 @@ const Item = (data: NavItemProps) => {
 }
 
 const MobileItem = (data: NavItemProps) => {
-  const defaultClassName = "text-#333 text-sm font-normal"
+  const defaultClassName = "text-#333 text-3.5 font-normal"
   if (data.groups?.length) {
     return (
       <div key={data.label}>
@@ -144,13 +144,13 @@ const MobileItem = (data: NavItemProps) => {
           <div className="border-op-0 border-#F2F2F2 overflow-hidden border-t  transition-all duration-300">
             {data.groups.map((data) => (
               <div key={data.label}>
-                <div className="text-#333 px-6 pb-5 pt-8 text-xs font-normal uppercase text-opacity-70">
+                <div className="text-#333 text-3 px-6 pb-5 pt-8 font-normal uppercase text-opacity-70">
                   {data.label}
                 </div>
                 <div>
                   {data.items.map((item) => {
                     const containerClassName =
-                      "flex items-center space-x-2.5 px-7 py-3.5 text-sm text-#333"
+                      "flex items-center space-x-2.5 px-7 py-3.5 text-3.5 text-#333"
                     const children = (
                       <>
                         <div>{item.label}</div>
@@ -176,7 +176,7 @@ const MobileItem = (data: NavItemProps) => {
                       <Link
                         key={item.label}
                         {...item}
-                        className="text-#333 flex items-center space-x-2.5 px-7 py-3.5 text-sm"
+                        className="text-#333 text-3.5 flex items-center space-x-2.5 px-7 py-3.5"
                       >
                         <div>{item.label}</div>
                         {!item.to && (
@@ -362,13 +362,13 @@ export default function Navbar({ dark }: { dark?: boolean }): JSX.Element {
         <Logo />
       </span>
 
-      <span className="hidden! sm:flex! children:shrink-0 space-x-6-14 grow flex-row items-center justify-end text-sm dark:text-white md:basis-1/3 md:justify-center">
+      <span className="hidden! sm:flex! children:shrink-0 space-x-6-14 text-3.5 grow flex-row items-center justify-end dark:text-white md:basis-1/3 md:justify-center">
         {leftItems.map((item) => {
           return <Item key={item.label} {...item} />
         })}
       </span>
 
-      <span className="hidden! sm:flex! children:shrink-0 space-x-6-14 ml-10 shrink-0 flex-row items-center justify-end text-sm dark:text-white md:ml-0 md:basis-1/3">
+      <span className="hidden! sm:flex! children:shrink-0 space-x-6-14 text-3.5 ml-10 shrink-0 flex-row items-center justify-end dark:text-white md:ml-0 md:basis-1/3">
         {rightItems.map((item) => {
           return (
             <Link key={item.label} {...item}>
@@ -392,7 +392,7 @@ export default function Navbar({ dark }: { dark?: boolean }): JSX.Element {
 
           {rightItems.map((item) => (
             <Link key={item.label} {...item} className="block p-6 ">
-              <div className="w-fit rounded-sm bg-zinc-800 px-7 py-2.5 text-base font-medium text-white">
+              <div className="text-4 w-fit rounded-sm bg-zinc-800 px-7 py-2.5 font-medium text-white">
                 {item.label}
               </div>
             </Link>

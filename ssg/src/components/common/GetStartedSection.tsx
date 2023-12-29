@@ -18,10 +18,10 @@ export const GetStartedSection = () => (
         className="aspect-355/204 md:aspect-657/376 md:order-last"
       />
       <div className="px-10 md:flex md:flex-col md:px-0">
-        <div className="mt-17.5 text-3xl font-medium leading-10 text-white md:mt-0 md:w-fit">
+        <div className="mt-17.5 text-7.5 font-medium leading-10 text-white md:mt-0 md:w-fit">
           <Translate>Secure Your Bitcoin Wealth Without Effort</Translate>
         </div>
-        <div className="mt-7 text-sm font-normal leading-normal text-white md:w-fit">
+        <div className="text-3.5 mt-7 font-normal leading-normal text-white md:w-fit">
           <Translate>
             Our professional Bitcoin wealth managers are ready to show you how
             easy it is to use a completely decentralized custody suite to manage
@@ -29,7 +29,7 @@ export const GetStartedSection = () => (
           </Translate>
         </div>
         <LocalLink
-          className="flex-center text-#333 mt-7 w-fit rounded-sm bg-white bg-opacity-95 px-7 py-4 text-base font-medium leading-none md:mt-auto"
+          className="flex-center text-#333 text-4 mt-7 w-fit rounded-sm bg-white bg-opacity-95 px-7 py-4 font-medium leading-none md:mt-auto"
           href="https://calendly.com/mixin-safe/30min?month=2023-11"
         >
           <Translate>Schedule a demo</Translate>

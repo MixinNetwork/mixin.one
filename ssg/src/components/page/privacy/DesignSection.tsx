@@ -177,9 +177,7 @@ const GridItem = ({
     )}
   >
     {cover}
-    <div className="text-#333 text-center text-base font-normal">
-      {children}
-    </div>
+    <div className="text-#333 text-4 text-center font-normal">{children}</div>
   </div>
 )
 

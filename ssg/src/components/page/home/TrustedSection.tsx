@@ -9,7 +9,7 @@ const TrustedItem = ({ name, icon }: { name: string; icon: string }) => (
       alt={name}
       className="w-15 mx-auto aspect-square object-cover"
     />
-    <div className="text-center text-xs font-medium leading-3 text-white">
+    <div className="text-3 text-center font-medium leading-3 text-white">
       {name}
     </div>
   </div>
