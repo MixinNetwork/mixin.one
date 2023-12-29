@@ -19,8 +19,8 @@ export const StepsSection = () => {
   return (
     <div
       className={clsx(
-        "gap-y-15 container mx-auto grid place-items-center  pb-40",
-        "md:grid-cols-[470fr_450fr] md:place-items-start md:gap-x-10",
+        "gap-y-15 container mx-auto grid place-items-center pb-40",
+        "md:grid-cols-[470fr_450fr] md:gap-x-10",
         "lg:gap-x-38 lg:grid-cols-[536fr_507fr]",
       )}
     >
@@ -34,14 +34,14 @@ export const StepsSection = () => {
         height={483}
         className="max-w-120 md:w-full"
       />
-      <div className="md:mt-12">
+      <div>
         <div className="text-#333 text-op-66">
           <Translate>It’s less complicated than you think</Translate>
         </div>
         <div className="text-7 sm:text-8 md:text-9 mt-3 font-medium">
           <Translate>Buy crypto in 4 simple steps</Translate>
         </div>
-        <div className="mt-15 md:space-y-5.5 space-y-12">
+        <div className="mt-15 space-y-12">
           <Item
             stepName={<Translate>STEP 1</Translate>}
             description={

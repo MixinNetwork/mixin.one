@@ -21,7 +21,7 @@ const MobileItem = ({
     />
     <div className="bg-#333 space-y-4 px-8 pb-8 pt-5">
       <div className="text-5 font-medium text-white">{title}</div>
-      <div className="text-3.5 leading-[1.5] text-white text-opacity-80">
+      <div className="text-3.5-4 leading-[1.5] text-white text-opacity-80">
         {description}
       </div>
     </div>
@@ -54,10 +54,8 @@ const SpecialItem = () => {
         />
 
         <div className="z-1 sm:pl-15 sm:pt-15 space-y-4 p-5 pb-10">
-          <div className="sm:text-7 md:text-7.5 lg:text-8 text-5 font-medium text-white">
-            {title}
-          </div>
-          <div className="text-3.5 font-normal leading-[1.5] text-white text-opacity-90">
+          <div className="text-5-6 font-medium text-white">{title}</div>
+          <div className="text-3.5-4 leading-[1.5] text-white text-opacity-90">
             {description}
           </div>
         </div>
@@ -87,10 +85,8 @@ const Item = ({
       />
       <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black" />
       <div className="absolute inset-0 top-auto space-y-4 p-5">
-        <div className="sm:text-7 md:text-7.5 lg:text-8 text-5 font-medium text-white">
-          {title}
-        </div>
-        <div className="text-3.5 font-normal leading-[1.5] text-white text-opacity-90">
+        <div className="text-5-6 font-medium text-white">{title}</div>
+        <div className="text-3.5-4 leading-[1.5] text-white text-opacity-90">
           {description}
         </div>
       </div>

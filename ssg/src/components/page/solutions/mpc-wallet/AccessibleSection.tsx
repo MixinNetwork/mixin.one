@@ -28,7 +28,9 @@ const Item = ({
     >
       {cover}
       <div className="mt-2.5 font-medium">{title}</div>
-      <div className="text-3.5 mt-2 text-center">{description}</div>
+      <div className="text-3.5-4 text-#333 text-op-80 mt-2 text-center leading-[1.5]">
+        {description}
+      </div>
     </div>
   )
 }

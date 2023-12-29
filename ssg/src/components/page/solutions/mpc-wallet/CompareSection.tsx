@@ -43,9 +43,13 @@ export const CompareSection = () => {
           <tr key={i} className="!bg-white">
             {row.map((cell, j) => {
               const align = j === 0 ? "left" : "center"
-              const className = "px-5 !odd:bg-[#F2F2F2]"
+              const className = "px-0-10 !odd:bg-[#F2F2F2]"
               return i === 0 ? (
-                <th key={j} align={align} className={clsx("py-8", className)}>
+                <th
+                  key={j}
+                  align={align}
+                  className={clsx("py-8 font-medium", className)}
+                >
                   {cell}
                 </th>
               ) : (

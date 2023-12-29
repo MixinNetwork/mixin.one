@@ -34,13 +34,13 @@ export const SpecialLayoutItem = ({
         {points.map(({ title, description, icon }) => (
           <div
             key={title}
-            className="grid grid-cols-[auto_1fr] grid-rows-[auto_1fr] gap-x-4 gap-y-5"
+            className="grid grid-cols-[auto_1fr] grid-rows-[auto_1fr] gap-x-4 gap-y-4"
           >
             {icon}
-            <div className="text-#333 text-5 font-medium leading-[1.5]">
+            <div className="text-#333 text-4.5-6 font-medium leading-[1.5]">
               {title}
             </div>
-            <div className="text-#333 text-4 col-span-2 font-normal leading-[1.5] text-opacity-80">
+            <div className="text-#333 text-3.4-4 col-span-2 leading-[1.5] text-opacity-80">
               {description}
             </div>
           </div>
