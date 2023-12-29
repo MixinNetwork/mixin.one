@@ -52,11 +52,11 @@ const Item = (data: NavItemProps) => {
 
         <div
           className={clsx(
-            "-left-7.5 group-hover:op-100 absolute z-10 rounded-sm pt-6 transition-all group-hover:pointer-events-auto",
+            "group-hover:op-100 absolute z-10 rounded-sm pt-6 transition-all group-hover:pointer-events-auto",
             "pointer-events-none opacity-0",
             data.groups.find((data) => data.items.length > 2)
-              ? "w-110-200"
-              : "w-55-100",
+              ? "w-130-200 -left-45-7.5 "
+              : "w-65-100 -left-30-7.5 ",
           )}
         >
           <div className="bg-white px-5 pb-10 shadow-xl">
@@ -79,7 +79,7 @@ const Item = (data: NavItemProps) => {
                       <>
                         <item.icon className="row-span-2 h-7" />
                         <div className="flex-center text-#333 w-fit space-x-2.5 text-sm font-medium">
-                          <div> {item.label}</div>
+                          <div>{item.label}</div>
                           {!item.to && (
                             <div className="text-3 text-op-66 text-#333 w-fit shrink-0 bg-[#F2F2F2] px-2.5 py-1">
                               <Translate>Coming Soon</Translate>
@@ -362,13 +362,13 @@ export default function Navbar({ dark }: { dark?: boolean }): JSX.Element {
         <Logo />
       </span>
 
-      <span className="hidden! sm:flex! space-x-6-14 grow flex-row items-center justify-end text-sm dark:text-white md:basis-1/3 md:justify-center">
+      <span className="hidden! sm:flex! children:shrink-0 space-x-6-14 grow flex-row items-center justify-end text-sm dark:text-white md:basis-1/3 md:justify-center">
         {leftItems.map((item) => {
           return <Item key={item.label} {...item} />
         })}
       </span>
 
-      <span className="hidden! sm:flex! space-x-6-14 ml-10 shrink-0 flex-row items-center justify-end text-sm dark:text-white md:ml-0 md:basis-1/3">
+      <span className="hidden! sm:flex! children:shrink-0 space-x-6-14 ml-10 shrink-0 flex-row items-center justify-end text-sm dark:text-white md:ml-0 md:basis-1/3">
         {rightItems.map((item) => {
           return (
             <Link key={item.label} {...item}>
