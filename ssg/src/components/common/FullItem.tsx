@@ -4,11 +4,16 @@ const FullItem = ({
   cover,
   title,
   description,
+  link,
   className,
 }: {
   cover: string
   title: string
   description: string
+  link?: {
+    href: string
+    text: string
+  }
   className?: string
 }) => {
   return (
@@ -18,7 +23,7 @@ const FullItem = ({
     >
       <div
         className={clsx(
-          "mx-a px-0-10 container",
+          "mx-a !sm:px-11.7 !md:px-13.3 !lg:px-15 container px-10",
           "gap-10-20 grid items-center",
           "sm:group-odd:grid-cols-[508fr_528fr]",
           "sm:group-even:grid-cols-[528fr_508fr]",
@@ -36,6 +41,14 @@ const FullItem = ({
           <div className="text-#333 text-3.5-4 leading-[1.5] text-opacity-80">
             {description}
           </div>
+          {link && (
+            <a
+              href={link.href}
+              className="!mt-15 !sm:mt-10 block bg-[#333] py-4 text-center text-white  sm:w-fit sm:px-7"
+            >
+              {link.text}
+            </a>
+          )}
         </div>
       </div>
     </div>

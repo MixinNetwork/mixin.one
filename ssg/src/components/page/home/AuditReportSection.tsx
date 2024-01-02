@@ -4,7 +4,7 @@ import LocalLink from "../../common/LocaleLink"
 // Security Audits
 export const AuditReportSection = () => (
   <div className="bg-zinc-100 bg-opacity-50">
-    <div className="sm:pt-50 md:py-27 gap-x-27.5 container mx-auto grid gap-y-20  pb-40 pt-20 text-center sm:pb-20 md:grid-cols-[474fr_356fr] md:text-start">
+    <div className="sm:pt-50 md:py-27 gap-x-27.5 lg:max-w-240 container mx-auto grid gap-y-20  pb-40 pt-20 text-center sm:pb-20 md:grid-cols-[474fr_356fr] md:text-start">
       <div className="md:py-12.5 flex flex-col justify-center">
         <div className="text-#333 text-7.5 font-medium leading-10">
           <Translate>Security Audits</Translate>

@@ -25,7 +25,7 @@ const Item = ({
 
       <div className="border-px pb-13.5 h-full border-[#D9D9D9] bg-[#F2F2F280] px-6 pt-10">
         {icon}
-        <div className="text-6 mt-11.5 font-medium">{title}</div>
+        <div className="text-5-6 mt-11.5 font-medium">{title}</div>
         <div className="text-#333 text-op-80 text-3.5-4 mt-5 leading-[1.5]">
           {description}
         </div>

@@ -46,7 +46,7 @@ const Item = (data: NavItemProps) => {
   if (data.groups?.length) {
     return (
       <div className="click-area-4 group relative">
-        <div className="cursor-pointer group-hover:opacity-80">
+        <div className="cursor-pointer font-medium group-hover:opacity-80">
           {data.label}
         </div>
 
@@ -121,7 +121,11 @@ const Item = (data: NavItemProps) => {
       </div>
     )
   }
-  return <Link {...data}>{data.label}</Link>
+  return (
+    <Link {...data} className={clsx("font-medium", data.className)}>
+      {data.label}
+    </Link>
+  )
 }
 
 const MobileItem = (data: NavItemProps) => {
@@ -215,7 +219,7 @@ export default function Navbar({ dark }: { dark?: boolean }): JSX.Element {
               label: translate({ message: "MPC Wallet" }),
               to: "/solutions/mpc-wallet",
               description: translate({
-                message: "Secure and easy-to-use MPC self-hosted wallet",
+                message: "MPC Self-Custodial Wallet.",
               }),
               icon: MPC,
             },
@@ -224,7 +228,7 @@ export default function Navbar({ dark }: { dark?: boolean }): JSX.Element {
               label: translate({ message: "Buy Cryptocurrencies" }),
               to: "/solutions/buy-cryptocurrencies",
               description: translate({
-                message: "Buy Cryptocurrencies",
+                message: "Buy cryptocurrencies with your bank card.",
               }),
               icon: Buy,
             },
@@ -233,7 +237,7 @@ export default function Navbar({ dark }: { dark?: boolean }): JSX.Element {
               to: "/solutions/social-recovery",
               description: translate({
                 message:
-                  "In extreme cases, the emergency contact can help you log back into the wallet and avoid losing assets",
+                  "Regain control of your assets through emergency contacts.",
               }),
               icon: Social,
             },
@@ -241,8 +245,7 @@ export default function Navbar({ dark }: { dark?: boolean }): JSX.Element {
               label: translate({ message: "All-in-One Asset Management" }),
               to: "/solutions/all-in-one-asset-management",
               description: translate({
-                message:
-                  "A true multi-chain wallet, from Bitcoin, Ethereum, MobileCoin, Polygon, Doge and 2400+ cryptoassets",
+                message: "Manage multiple blockchain assets with one wallet.",
               }),
               icon: AllInOne,
             },
@@ -255,8 +258,7 @@ export default function Navbar({ dark }: { dark?: boolean }): JSX.Element {
               label: translate({ message: "Custody" }),
               to: "/solutions/custody",
               description: translate({
-                message:
-                  "As a self-custodial wallet, the address and all transactions are open and transparent to the owner.",
+                message: "Self-custody multi-signature cold wallet.",
               }),
               icon: Custody,
             },
@@ -265,31 +267,28 @@ export default function Navbar({ dark }: { dark?: boolean }): JSX.Element {
               label: translate({ message: "Collaboration" }),
               to: "/solutions/collaboration",
               description: translate({
-                message:
-                  "Complete approval process and timely notification service, allowing the owner of the vault to safely and conveniently manage the funds together with the co-manager.",
+                message: "Manage funds with family, friends and colleagues.",
               }),
               icon: Collaboration,
             },
             {
               label: translate({ message: "Staking" }),
               description: translate({
-                message: "Receive rewards on your stored cryptocurrency",
+                message: "Earn node rewards by staking.",
               }),
               icon: Staking,
             },
             {
               label: translate({ message: "Collateralized Loans" }),
               description: translate({
-                message:
-                  "Leverage crypto asset holdings for increased liquidity with collateralised loans",
+                message: "Collateralize your crypto assets to get loans.",
               }),
               icon: Collaboration,
             },
             {
               label: translate({ message: "Recovery" }),
               description: translate({
-                message:
-                  "Our decentralized recovery solution can help recover the funds in the event of private key loss.",
+                message: "Recover your assets in a decentralized way.",
               }),
               icon: Recovery,
             },
@@ -297,7 +296,7 @@ export default function Navbar({ dark }: { dark?: boolean }): JSX.Element {
               label: translate({ message: "Inheritance" }),
               description: translate({
                 message:
-                  "Leverage crypto asset holdings for increased liquidity with collateralised loans",
+                  "Protect your bitcoin wealth and pass it on to your descendants.",
               }),
               icon: Inheritance,
             },
