@@ -4,16 +4,13 @@ const FullItem = ({
   cover,
   title,
   description,
-  link,
+  children,
   className,
 }: {
   cover: string
-  title: string
-  description: string
-  link?: {
-    href: string
-    text: string
-  }
+  title?: string
+  description?: string
+  children?: React.ReactNode
   className?: string
 }) => {
   return (
@@ -36,20 +33,17 @@ const FullItem = ({
           width={528}
           height={352}
         />
-        <div className="space-y-4">
-          <div className="text-5-8 font-medium">{title}</div>
-          <div className="text-#333 text-3.5-4 leading-[1.5] text-opacity-80">
-            {description}
+        {(title || description) && (
+          <div className="space-y-4">
+            {title && <div className="text-5-8 font-medium">{title}</div>}
+            {description && (
+              <div className="text-#333 text-3.5-4 leading-[1.5] text-opacity-80">
+                {description}
+              </div>
+            )}
+            {children}
           </div>
-          {link && (
-            <a
-              href={link.href}
-              className="!mt-15 !sm:mt-10 block bg-[#333] py-4 text-center text-white  sm:w-fit sm:px-7"
-            >
-              {link.text}
-            </a>
-          )}
-        </div>
+        )}
       </div>
     </div>
   )
