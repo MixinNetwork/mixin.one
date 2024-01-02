@@ -38,45 +38,50 @@ export const CompareSection = () => {
         <Translate>Compare Wallets</Translate>
       </SectionTitle>
 
-      <table className="!md:table container mx-auto mb-40 !hidden font-medium">
-        {table.map((row, i) => (
-          <tr key={i} className="!bg-white">
-            {row.map((cell, j) => {
-              const align = j === 0 ? "left" : "center"
-              const className = "px-0-10 !odd:bg-[#F2F2F2]"
-              return i === 0 ? (
-                <th
-                  key={j}
-                  align={align}
-                  className={clsx(
-                    "py-8",
-                    j === 0 ? "text-5" : "text-4.5",
-                    className,
-                  )}
-                >
-                  {cell}
-                </th>
-              ) : (
-                <td
-                  key={j}
-                  align={align}
-                  className={clsx("text-3.5 py-3.5", className)}
-                >
-                  {typeof cell === "boolean" ? (
-                    cell ? (
-                      <CheckMark className="mx-auto" />
+      <div className="mx-a container">
+        <table className="!md:table mb-40 !hidden w-full">
+          {table.map((row, i) => (
+            <tr
+              key={i}
+              className="border-t-0.5px border-#D9D9D9 last:border-b-0.5px !bg-white"
+            >
+              {row.map((cell, j) => {
+                const align = j === 0 ? "left" : "center"
+                const className = "px-0-10 !odd:bg-[#F2F2F2]"
+                return i === 0 ? (
+                  <th
+                    key={j}
+                    align={align}
+                    className={clsx(
+                      "py-8 font-medium",
+                      j === 0 ? "text-5" : "text-4.5",
+                      className,
+                    )}
+                  >
+                    {cell}
+                  </th>
+                ) : (
+                  <td
+                    key={j}
+                    align={align}
+                    className={clsx("py-3.5", className)}
+                  >
+                    {typeof cell === "boolean" ? (
+                      cell ? (
+                        <CheckMark className="mx-auto" />
+                      ) : (
+                        <XMark className="mx-auto" />
+                      )
                     ) : (
-                      <XMark className="mx-auto" />
-                    )
-                  ) : (
-                    cell
-                  )}
-                </td>
-              )
-            })}
-          </tr>
-        ))}
-      </table>
+                      cell
+                    )}
+                  </td>
+                )
+              })}
+            </tr>
+          ))}
+        </table>
+      </div>
     </>
   )
 }

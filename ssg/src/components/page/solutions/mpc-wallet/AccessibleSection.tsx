@@ -22,7 +22,7 @@ const Item = ({
   return (
     <div
       className={clsx(
-        "flex flex-col items-center bg-white p-6 pb-8 shadow",
+        "flex flex-col items-center bg-white p-6 pb-8 text-center shadow",
         className,
       )}
     >
