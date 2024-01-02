@@ -18,7 +18,7 @@ const Item = ({
   <div className="border-#D9D9D9 bg-#F2F2F2 border px-5 pb-12 pt-6">
     {icon}
     <div className="mt-9.5 text-6 font-medium">{title}</div>
-    <div className="mt-5">{description}</div>
+    <div className="mt-5 leading-[1.5]">{description}</div>
   </div>
 )
 
@@ -53,7 +53,10 @@ export const Header = () => (
       className="mx-a !sm:hidden container"
     />
     <div
-      className={clsx("pb-15 mx-a container mt-5 grid gap-5", "md:grid-cols-3")}
+      className={clsx(
+        "mx-a mt-5-12 pb-15 gap-5-12 container grid",
+        "md:grid-cols-3",
+      )}
     >
       <Item
         icon={<Svg1 />}
