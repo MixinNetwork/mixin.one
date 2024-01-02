@@ -1,4 +1,4 @@
-import React from "react"
+import React, { ComponentType, SVGProps } from "react"
 import SectionTitle from "../../common/SectionTitle"
 import Translate, { translate } from "@docusaurus/Translate"
 import GrayBackgroundWrapper from "../../common/GrayBackground"
@@ -139,22 +139,22 @@ function GridSection({}) {
           className="aspect-290/250 w-full"
         />
       </div>
-      <GridItem cover={<GridIcon1 />} className="sm:order-0 order-1">
+      <GridItem cover={GridIcon1} className="sm:order-0 order-1">
         <Translate>
           All messages, audios, photos, and files are end-to-end encrypted
         </Translate>
       </GridItem>
-      <GridItem cover={<GridIcon2 />} className="order-2">
+      <GridItem cover={GridIcon2} className="order-2">
         <Translate>
           Stay connected to your family, friends, and coworker by group chat
         </Translate>
       </GridItem>
-      <GridItem cover={<GridIcon3 />} className="order-3">
+      <GridItem cover={GridIcon3} className="order-3">
         <Translate>
           Enhance privacy by turning on the disappearing messages feature
         </Translate>
       </GridItem>
-      <GridItem cover={<GridIcon4 />} className="order-4">
+      <GridItem cover={GridIcon4} className="order-4">
         <Translate>
           We can't read your messages or listen to your calls, nor can anyone
           else
@@ -165,22 +165,24 @@ function GridSection({}) {
 }
 
 const GridItem = ({
-  cover,
   children,
   className,
+  ...props
 }: {
-  cover: React.ReactNode
+  cover: ComponentType<SVGProps<SVGSVGElement>>
   children: React.ReactNode
   className?: string
 }) => (
   <div
     className={clsx(
-      "pb-11.5 sm:p-7.5 sm:pb-21 sm:pb-6.5 grid place-items-center gap-y-5 rounded-sm bg-white p-5 shadow sm:px-5 sm:pt-9 lg:px-7",
+      "pb-11.5 sm:p-7.5 sm:pb-21 sm:pb-6.5 grid gap-y-5 rounded-sm bg-white p-5 shadow sm:px-5 sm:pt-9 lg:px-7",
       className,
     )}
   >
-    {cover}
-    <div className="text-#333 text-4 text-center font-normal">{children}</div>
+    <props.cover className="place-self-center self-end" />
+    <div className="text-#333 text-4 text-center font-normal leading-[1.5]">
+      {children}
+    </div>
   </div>
 )
 
