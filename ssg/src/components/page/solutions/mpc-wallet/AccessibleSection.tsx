@@ -22,7 +22,7 @@ const Item = ({
   return (
     <div
       className={clsx(
-        "pb-12.5 flex flex-col items-center bg-white p-5 shadow",
+        "flex flex-col items-center bg-white p-6 pb-8 shadow",
         className,
       )}
     >
@@ -109,7 +109,7 @@ export const AccessibleSection = () => {
             />
           </div>
 
-          <div className="flex flex-col justify-between gap-y-5 md:order-3">
+          <div className="flex flex-col justify-around gap-y-5 md:order-3">
             <Item
               cover={<Cover4 />}
               title={translate({
