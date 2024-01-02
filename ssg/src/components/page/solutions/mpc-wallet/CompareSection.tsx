@@ -39,7 +39,7 @@ export const CompareSection = () => {
       </SectionTitle>
 
       <div className="mx-a container">
-        <table className="!md:table mb-40 !hidden w-full">
+        <table className="!md:table !hidden w-full">
           {table.map((row, i) => (
             <tr
               key={i}

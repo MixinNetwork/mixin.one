@@ -11,7 +11,7 @@ export const Header = () => {
     <div
       className={clsx(
         "mt-15 container mx-auto grid justify-items-center gap-y-20 ",
-        "sm:mt-30 sm:mt-25",
+        "mt-15-25",
         "md:gap-x-0-35.5 md:grid-cols-2",
       )}
     >

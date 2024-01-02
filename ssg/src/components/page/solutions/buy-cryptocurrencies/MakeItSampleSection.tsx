@@ -20,7 +20,7 @@ const Item = ({
     <div
       className={clsx(
         "bg-#F2F2F2 space-y-5 px-5 pb-8 pt-10",
-        "sm:h-166 sm:border-#333 sm:border-op-33 sm:relative sm:space-y-0 sm:rounded-lg sm:border sm:p-10",
+        "sm:h-166 sm:relative sm:space-y-0 sm:p-10",
         "md:h-88.75",
         "lg:h-110",
         className,

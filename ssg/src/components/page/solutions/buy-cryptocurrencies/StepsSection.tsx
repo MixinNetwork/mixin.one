@@ -19,7 +19,7 @@ export const StepsSection = () => {
   return (
     <div
       className={clsx(
-        "gap-y-15 container mx-auto grid place-items-center pb-40",
+        "gap-y-15 pb-15 container mx-auto grid place-items-center",
         "md:grid-cols-[470fr_450fr] md:gap-x-10",
         "lg:gap-x-38 lg:grid-cols-[536fr_507fr]",
       )}
