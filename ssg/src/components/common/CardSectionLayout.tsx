@@ -9,7 +9,7 @@ const Item = (props: {
   return (
     <div className="pt-4-8 gap-x-3-7 px-4-8 pb-6-11 grid grid-cols-[auto_1fr] grid-rows-[auto_1fr] gap-y-3 rounded-sm bg-white shadow">
       <props.icon className="w-12-24 h-12-24 row-span-2 aspect-square" />
-      <div className="h-8-10 svg:h-8-10 text-4.5-6 flex items-center overflow-hidden">
+      <div className="h-8-10 svg:h-8-10 text-4.5-6 flex items-center overflow-hidden font-medium">
         {props.title}
       </div>
       <div className="text-#333 text-3.5-4 leading-[1.5] text-opacity-80">
