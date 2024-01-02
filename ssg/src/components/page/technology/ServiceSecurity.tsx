@@ -36,57 +36,60 @@ export const ServiceSecurity = () => (
     >
       <Translate>Service Security</Translate>
     </SectionTitle>
-    <img
-      loading="lazy"
-      width={3096}
-      height={1410}
-      src={require("@site/static/img/page/technology/5.1.webp").default}
-      className="sm:px-10.3 md:px-15.7 lg:px-21 sm:py-8.7 md:py-12.3 container mx-auto bg-[#F2F2F2]  py-5 lg:py-16"
-    />
-    <div className="gap-x-0-25 !sm:px-10 container mx-auto grid gap-y-10 pt-10 sm:grid-cols-2">
-      <Item
-        icon={<Icon1 />}
-        title={<Translate>Asset Isolation</Translate>}
-        description={
-          <Translate>
-            User wallet assets and Dapp assets are isolated, and users can
-            directly receive assets in their wallets after trading, lending,
-            minting, etc.
-          </Translate>
-        }
+    <div className="mx-a container">
+      <img
+        loading="lazy"
+        width={3096}
+        height={1410}
+        src={require("@site/static/img/page/technology/5.1.webp").default}
+        className="sm:px-10.3 md:px-15.7 lg:px-21 sm:py-8.7 md:py-12.3 mx-a bg-[#F2F2F2] py-5 lg:py-16"
       />
-      <Item
-        icon={<Icon2 />}
-        title={<Translate>Code audit</Translate>}
-        description={
-          <Translate>
-            IOActive, LeastAuthority, and SlowMist and other audit companies
-            participated in the audit of Dapp projects such as Lack and Rings.
-          </Translate>
-        }
-      />
-      <Item
-        icon={<Icon3 />}
-        title={<Translate>Read-only authorization</Translate>}
-        description={
-          <Translate>
-            Mixin Messenger's read-only authorization ensures that Dapps can
-            launch personalized functions based on users, but cannot transfer
-            users' assets.
-          </Translate>
-        }
-      />
-      <Item
-        icon={<Icon4 />}
-        title={<Translate>DeFi whitelist</Translate>}
-        description={
-          <Translate>
-            Mixin Safe's DeFi services insist on using DeFi whitelist strategy
-            to help users reduce potential risks, such as high-risk
-            authorization.
-          </Translate>
-        }
-      />
+
+      <div className="gap-x-0-25 mx-a grid gap-y-10 pt-10 sm:grid-cols-2 sm:px-10">
+        <Item
+          icon={<Icon1 />}
+          title={<Translate>Asset Isolation</Translate>}
+          description={
+            <Translate>
+              User wallet assets and Dapp assets are isolated, and users can
+              directly receive assets in their wallets after trading, lending,
+              minting, etc.
+            </Translate>
+          }
+        />
+        <Item
+          icon={<Icon2 />}
+          title={<Translate>Code audit</Translate>}
+          description={
+            <Translate>
+              IOActive, LeastAuthority, and SlowMist and other audit companies
+              participated in the audit of Dapp projects such as Lack and Rings.
+            </Translate>
+          }
+        />
+        <Item
+          icon={<Icon3 />}
+          title={<Translate>Read-only authorization</Translate>}
+          description={
+            <Translate>
+              Mixin Messenger's read-only authorization ensures that Dapps can
+              launch personalized functions based on users, but cannot transfer
+              users' assets.
+            </Translate>
+          }
+        />
+        <Item
+          icon={<Icon4 />}
+          title={<Translate>DeFi whitelist</Translate>}
+          description={
+            <Translate>
+              Mixin Safe's DeFi services insist on using DeFi whitelist strategy
+              to help users reduce potential risks, such as high-risk
+              authorization.
+            </Translate>
+          }
+        />
+      </div>
     </div>
 
     <a
