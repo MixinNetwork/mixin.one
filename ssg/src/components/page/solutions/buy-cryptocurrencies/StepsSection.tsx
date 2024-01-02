@@ -34,7 +34,7 @@ export const StepsSection = () => {
         height={483}
         className="max-w-120 md:w-full"
       />
-      <div>
+      <div className="px-4 sm:px-0">
         <div className="text-#333 text-op-66">
           <Translate>It’s less complicated than you think</Translate>
         </div>

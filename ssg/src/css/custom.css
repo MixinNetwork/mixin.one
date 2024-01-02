@@ -41,7 +41,7 @@ button {
 }
 
 * {
-  @apply font-medium outline-none;
+  @apply outline-none;
 }
 
 [class*="sm:"],
@@ -58,6 +58,10 @@ summary {
   @apply list-none;
 }
 
+summary::-webkit-details-marker {
+  @apply !hidden;
+}
+
 .container {
-  @apply px-5;
+  @apply px-1/20 sm:px-5;
 }

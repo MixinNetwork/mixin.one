@@ -34,7 +34,7 @@ const Item = ({
               background,
           ).default
         }
-        className="fill op-0 sm:op-100"
+        className="fill op-0 sm:op-100 pointer-events-none "
       />
       <img
         loading="lazy"
@@ -70,7 +70,7 @@ export const MakeItSampleSection = () => {
             hassle-free.
           </Translate>
         }
-        className="md:children:max-w-full md:children:w-full md:children:text-start md:mb-8 md:px-5"
+        className="!md:children:max-w-full !md:children:w-full !md:children:text-start !md:mb-8 !md:px-5"
       >
         <Translate>We make it simple</Translate>
       </SectionTitle>

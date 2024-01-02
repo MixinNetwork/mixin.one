@@ -32,21 +32,9 @@ const Itme = ({
       className="w-full group-odd:order-last"
     />
 
-    <div className="sm:space-y-9.7 md:space-y-12.3 lg:space-y-15 space-y-7">
-      <div
-        className={clsx(
-          "font-medium",
-          "text-5.5 sm:text-5.7 md:text-5.8 lg:text-6",
-        )}
-      >
-        {name}
-      </div>
-      <div
-        className={clsx(
-          "grid",
-          "sm:gap-y-8.3 md:gap-y-9.7 gap-y-7 lg:gap-y-11",
-        )}
-      >
+    <div className="space-y-7.5">
+      <div className={clsx("text-5-8 font-medium")}>{name}</div>
+      <div className={clsx("grid gap-y-5")}>
         {steps.map((item) => {
           return (
             <div className="leading-6.5 flex gap-4">

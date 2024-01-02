@@ -141,7 +141,7 @@ const MobileItem = (data: NavItemProps) => {
         </details>
 
         <div className="peer-open:children:border-op-100 grid grid-rows-[0fr] transition-all duration-300 peer-open:grid-rows-[1fr]">
-          <div className="border-op-0 border-#F2F2F2 overflow-hidden border-t  transition-all duration-300">
+          <div className="border-op-0 border-#F2F2F2 overflow-hidden border-t transition-all duration-300">
             {data.groups.map((data) => (
               <div key={data.label}>
                 <div className="text-#333 text-3 px-6 pb-5 pt-8 font-normal uppercase text-opacity-70">

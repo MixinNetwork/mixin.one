@@ -1,6 +1,5 @@
 import React from "react"
 import Translate, { translate } from "@docusaurus/Translate"
-import SectionTitle from "../../../common/SectionTitle"
 import replace from "../../../../helper/replace"
 import clsx from "clsx"
 
@@ -13,8 +12,7 @@ export const Header = () => {
       className={clsx(
         "mt-15 container mx-auto grid justify-items-center gap-y-20 ",
         "sm:mt-30 sm:mt-25",
-        "md:grid-cols-[484fr_446fr] md:gap-x-8",
-        "lg:grid-cols-[587fr_519fr] lg:gap-x-16",
+        "md:gap-x-0-35.5 md:grid-cols-2",
       )}
     >
       <div className={clsx("space-y-10 text-center", "md:my-a md:text-start")}>

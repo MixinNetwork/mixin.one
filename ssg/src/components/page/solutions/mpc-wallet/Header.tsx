@@ -21,7 +21,7 @@ const Item = ({
   return (
     <div
       className={clsx(
-        "relative flex flex-col gap-y-5 overflow-hidden bg-[#F2F2F2] px-5 pb-5 pt-10",
+        "pt-15 relative flex flex-col gap-y-5 overflow-hidden bg-[#F2F2F2] px-4 pb-20",
         "sm:pl-15 sm:pt-12.5 sm:pb-6.5 sm:h-124.25 sm:justify-between sm:pr-10",
         "md:h-88 md:px-10 md:py-5",
         "lg:h-110 lg:pb-6.5 lg:p-10",
@@ -34,7 +34,7 @@ const Item = ({
           require("@site/static/img/page/solutions/mpc-wallet/" + background)
             .default
         }
-        className="fill op-0 sm:op-100"
+        className="fill op-0 sm:op-100 pointer-events-none"
       />
       <img
         loading="lazy"

@@ -48,12 +48,20 @@ export const CompareSection = () => {
                 <th
                   key={j}
                   align={align}
-                  className={clsx("py-8 font-medium", className)}
+                  className={clsx(
+                    "py-8",
+                    j === 0 ? "text-5" : "text-4.5",
+                    className,
+                  )}
                 >
                   {cell}
                 </th>
               ) : (
-                <td key={j} align={align} className={clsx("py-3.5", className)}>
+                <td
+                  key={j}
+                  align={align}
+                  className={clsx("text-3.5 py-3.5", className)}
+                >
                   {typeof cell === "boolean" ? (
                     cell ? (
                       <CheckMark className="mx-auto" />
