@@ -53,7 +53,7 @@ const SpecialItem = () => {
           className="aspect-375/300 -z-1 h-full w-full object-cover sm:order-last"
         />
 
-        <div className="z-1 sm:pl-15 sm:pt-15 space-y-4 p-5 pb-10">
+        <div className="z-1 sm:pt-15 space-y-4 p-5 pb-10 sm:pl-10">
           <div className="text-5-6 font-medium text-white">{title}</div>
           <div className="text-3.5-4 leading-[1.5] text-white text-opacity-90">
             {description}
@@ -84,7 +84,7 @@ const Item = ({
         className="fill"
       />
       <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black" />
-      <div className="absolute inset-0 top-auto space-y-4 p-5">
+      <div className="p-5-10 absolute inset-0 top-auto space-y-4">
         <div className="text-5-6 font-medium text-white">{title}</div>
         <div className="text-3.5-4 leading-[1.5] text-white text-opacity-90">
           {description}
@@ -97,7 +97,12 @@ const Item = ({
 export const ThePriceofCentralizationSection = () => {
   return (
     <>
-      <SectionTitle>
+      <SectionTitle
+        description={translate({
+          message:
+            "The Harrowing Tales of Losses in the Era of Centralized Exchanges, Wallets, and Custodial Services.",
+        })}
+      >
         <Translate>The Price of Centralization</Translate>
       </SectionTitle>
       <div className="pb-25 container mx-auto grid gap-5  sm:grid-cols-2">
