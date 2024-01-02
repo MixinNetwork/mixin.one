@@ -23,8 +23,49 @@ export default function Root() {
       <FAQSection
         faqs={[
           {
-            question: "foo",
-            answer: "bar",
+            question: translate({
+              message: "What is Social Recovery?",
+            }),
+            answer: translate({
+              message:
+                "Social Recovery is a recovery method that does not require a seed or mnemonic wallet, and also ensures that the recovery process is completely non-custodial.",
+            }),
+          },
+          {
+            question: translate({
+              message: "Why do I need a wallet with social recovery?",
+            }),
+            answer: translate({
+              message:
+                "Most users lose their cryptocurrency assets not because they are stolen, but because the owners do not manage their private keys well. The Mixin wallet with social recovery function can set up an emergency contact to effectively avoid single-point failures.",
+            }),
+          },
+          {
+            question: translate({
+              message: "How to set up the social recovery function?",
+            }),
+            answer: translate({
+              message:
+                "You can enable the social recovery function by setting an emergency contact in Mixin Messenger.",
+            }),
+          },
+          {
+            question: translate({
+              message: "Is the social recovery function a paid function?",
+            }),
+            answer: translate({
+              message:
+                "At present, all functions of Mixin Messenger are free to use, including this social recovery function. You can rest assured to invite your family, friends or colleagues to join Mixin and set them as emergency contacts.",
+            }),
+          },
+          {
+            question: translate({
+              message: "Can I set myself as an emergency contact?",
+            }),
+            answer: translate({
+              message:
+                "If you have multiple devices, you can log in to Mixin Messenger on both devices and set each other as emergency contacts.",
+            }),
           },
         ]}
       />
