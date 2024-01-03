@@ -117,7 +117,7 @@ export const EasyManageSection = () => {
 
       <LocalLink
         to="/pricing"
-        className="sm:mt-15 rw-10 flex-center mx-auto mt-20 rounded-sm bg-zinc-700 py-4 font-medium leading-[1.5] text-white sm:w-fit sm:px-7"
+        className="sm:mt-15 rw-10 text-3.5-4 flex-center mx-auto mt-20 rounded-sm bg-zinc-700 py-4 font-medium leading-[1.5] text-white sm:w-fit sm:px-7"
       >
         <Translate>Start for Free</Translate>
       </LocalLink>

@@ -106,14 +106,14 @@ const Header = () => {
 
         <div className="mt-24.5 sm:mt-12.5 md:mt-18.5 lg:mt-21.5 gap-x-7.5 mx-auto grid gap-y-5 sm:w-fit sm:grid-cols-2">
           <LocalLink
-            className="sm:w-57.5 text-black! flex-center order-last h-12 rounded-sm bg-neutral-100 font-medium uppercase sm:order-none"
+            className="sm:w-57.5 text-black! text-3.5-4 flex-center order-last h-12 rounded-sm bg-neutral-100 font-medium uppercase sm:order-none"
             to="/pricing"
           >
             <Translate>Get started</Translate>
           </LocalLink>
           <LocalLink
             href="https://calendly.com/mixin-safe/30min"
-            className="sm:w-57.5 text-white! flex-center h-12 w-full rounded-sm border border-neutral-100 font-medium uppercase"
+            className="sm:w-57.5 text-white! text-3.5-4 flex-center h-12 w-full rounded-sm border border-neutral-100 font-medium uppercase"
           >
             <Translate>Book a consultation</Translate>
           </LocalLink>
