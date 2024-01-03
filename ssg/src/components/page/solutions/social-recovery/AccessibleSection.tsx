@@ -15,7 +15,7 @@ const LargeItem = ({
   description: string
   className?: string
 }) => (
-  <div className={clsx("bg-#F2F2F2 row-span-2 px-5 py-10", className)}>
+  <div className={clsx("bg-#F2F2F2 pb-20-10 row-span-2 px-4 pt-10", className)}>
     <img
       loading="lazy"
       src={
@@ -25,7 +25,7 @@ const LargeItem = ({
       width={100}
       height={100}
     />
-    <div className="text-6 mt-8 font-medium">{title}</div>
+    <div className="text-5-6 mt-8 font-medium">{title}</div>
     <div className="text-3.5-4 text-#333 text-op-80 mt-3 leading-[1.5]">
       {description}
     </div>
@@ -86,9 +86,9 @@ export const AccessibleSection = () => (
     </SectionTitle>
     <div
       className={clsx(
-        "mx-a container grid auto-rows-fr gap-5  pb-20",
+        "mx-a container grid gap-5  pb-20",
         "sm:grid-cols-2",
-        "md:grid-cols-3",
+        "md:auto-rows-fr md:grid-cols-3",
       )}
     >
       <LargeItem
