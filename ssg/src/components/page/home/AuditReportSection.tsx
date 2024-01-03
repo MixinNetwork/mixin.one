@@ -24,7 +24,7 @@ export const AuditReportSection = () => (
         </LocalLink>
       </div>
 
-      <div className="container mx-auto grid grid-cols-2 gap-4">
+      <div className="mx-auto grid grid-cols-2 gap-4">
         {Array(4)
           .fill(undefined)
           .map((_, i) => (
@@ -42,7 +42,7 @@ export const AuditReportSection = () => (
 
       <LocalLink
         href="https://github.com/MixinNetwork/audits"
-        className="sm:mt-12.5 rw-10 flex-center mx-auto mt-10 rounded-sm bg-zinc-700 py-4 font-medium leading-[1.5] text-white sm:w-fit sm:px-7 md:hidden"
+        className="sm:mt-12.5 rw-10 flex-center text-3.5-4 mx-auto mt-10 rounded-sm bg-zinc-700 py-4 font-medium leading-[1.5] text-white sm:w-fit sm:px-7 md:hidden"
       >
         View Audit Reports
       </LocalLink>
