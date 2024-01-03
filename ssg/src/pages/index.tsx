@@ -32,7 +32,7 @@ const Header = () => {
           message: "Decentralization",
         }),
         replace: (match) => (
-          <div className="min-h-12 sm:min-h-13.5 md:min-h-20">
+          <div className="sm:min-h-13.5 min-h-12 md:min-h-20">
             <TypeAnimation
               speed={{
                 type: "keyStrokeDelayInMs",
@@ -94,10 +94,10 @@ const Header = () => {
       />
       <Navbar dark />
       <div className="pt-15 pb-19 sm:pt-12.5 lg:pt-54 sm:pb-16.5 sm:pb-32.5 lg:pb-79 container mx-auto px-10 sm:text-center md:pt-20">
-        <div className="text-10-16 max-w-239 -tracking-0.1 font-300-400 mx-auto leading-[1.125] text-white">
+        <div className="text-10-16 max-w-239 -tracking-0.1 font-300-400 mx-auto leading-[1.2] text-white">
           {title}
         </div>
-        <div className="mt-7.5 max-w-232 text-4 lg:text-4.5 mx-auto font-normal text-white text-opacity-90 sm:mt-6 md:mt-8 lg:mt-12">
+        <div className="mt-7.5 max-w-232 text-4 lg:text-4.5 mx-auto font-normal leading-[1.5] text-white text-opacity-90 sm:mt-6 md:mt-8 lg:mt-12">
           <Translate>
             Protect your crypto with mature multisig and MPC technology. Get
             access to trading, lending, decentralized recovery and inheritance.
