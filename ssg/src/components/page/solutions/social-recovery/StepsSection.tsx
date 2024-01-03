@@ -10,17 +10,12 @@ export const StepsSection = () => {
       <div className="bg-#333 flex-center text-3.5 h-5 w-5 shrink-0 rounded-full text-white">
         {i + 1}
       </div>
-      {item}
+      <div className="text-3.5-4">{item}</div>
     </div>
   )
 
   return (
-    <div
-      className={clsx(
-        "bg-#F2F2F2 mt-20",
-        "pb-70 sm:pb-61.7 md:pb-53.3 lg:pb-45",
-      )}
-    >
+    <div className={clsx("bg-#F2F2F2 mt-20", "pb-20-30")}>
       <SectionTitle
         description={
           <Translate>
