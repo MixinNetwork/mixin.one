@@ -21,7 +21,7 @@ export const GetStartedSection = () => (
         <div className="mt-17.5 text-7-8 font-medium leading-10 text-white md:mt-0 md:w-fit">
           <Translate>Secure Your Bitcoin Wealth Without Effort</Translate>
         </div>
-        <div className="text-3.5 mt-7 font-normal leading-[1.5] text-white md:w-fit">
+        <div className="text-3.5-4 mt-7 font-normal leading-[1.5] text-white md:w-fit">
           <Translate>
             Our professional Bitcoin wealth managers are ready to show you how
             easy it is to use a completely decentralized custody suite to manage
