@@ -12,7 +12,7 @@ const ButtonGroup = (props: CarouselButtonGroupProps & CarouselProps) => {
   const { next, previous, dots } = prepareCarouselData(props)
 
   return (
-    <div className="ml-16.5 space-x-6.5 mt-6.5 flex h-fit w-fit items-center sm:ml-24">
+    <div className="space-x-6.5 mt-6.5 ml-8-32 flex h-fit w-fit items-center">
       <button className="click-area-4" onClick={previous}>
         <NextArrow className="rotate-180" />
       </button>
@@ -47,7 +47,7 @@ const Item = ({
   name: string
   title: string
 }) => (
-  <div className="pl-16.5 pr-8.5 lg:pr-30 flex h-full flex-col justify-between gap-y-20 sm:pl-24 sm:pr-20 md:pr-16">
+  <div className="ml-8-32 mr-8-32 flex h-full flex-col justify-between gap-y-20">
     <div className="text-4.5 text-op-90 font-normal leading-9 text-white">
       {content}
     </div>
@@ -115,7 +115,7 @@ export const HearFromOurCustomersSection = () => {
           className="aspect-375/250 sm:aspect-664/443 md:aspect-315/364 lg:aspect-432/500 h-full w-full object-cover md:order-last"
         />
         <div className="pt-15 lg:pt-15 pb-13 flex h-full flex-col overflow-hidden bg-[#333] sm:pb-20 sm:pt-10 md:pb-10 lg:pb-20">
-          <QuotationMark className="ml-9.5 sm:h-9 sm:w-12 lg:ml-12" />
+          <QuotationMark className="ml-8-12 h-4.5-8.75 w-6-12" />
           <Carousel
             {...props}
             className="children:h-full grow"
