@@ -7,7 +7,7 @@ export const SolutionSection = () => (
       <div className="text-4.5 sm:text-5 md:text-7 lg:text-9.5">
         <Translate>
           {
-            "Provide the general public with state-of-the-art open financial services."
+            "Provide the general public with state-of-the-art crypto financial services solutions."
           }
         </Translate>
       </div>
