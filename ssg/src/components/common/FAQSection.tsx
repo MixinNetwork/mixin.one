@@ -13,7 +13,7 @@ const FAQItem = ({
   <div className="lg:max-w-240 container mx-auto border-b border-neutral-200 px-2.5">
     <details name="faq" className="not-default group peer">
       <summary className="pb-5.5 flex cursor-pointer flex-row items-start justify-between space-x-1 pt-9">
-        <div className="text-#333 text-4 font-medium leading-[1.5]">
+        <div className="text-#333 text-4-4.5 font-medium leading-[1.5]">
           {question}
         </div>
         <Arrow className="mt-1 shrink-0 transition-all duration-300 group-open:-rotate-180" />
