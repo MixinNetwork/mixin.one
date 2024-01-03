@@ -15,9 +15,11 @@ export const GetStartedSection = () => (
         loading="lazy"
         src={require("@site/static/img/common/getStartedPerson.webp").default}
         alt={"try safe"}
-        className="aspect-355/204 md:aspect-657/376 md:order-last"
+        width={308}
+        height={178}
+        className="w-full md:order-last"
       />
-      <div className="px-10 md:flex md:flex-col md:px-0">
+      <div className="px-4 md:flex md:flex-col md:px-0">
         <div className="mt-17.5 text-7-8 font-medium leading-10 text-white md:mt-0 md:w-fit">
           <Translate>Secure Your Bitcoin Wealth Without Effort</Translate>
         </div>
