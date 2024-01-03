@@ -312,7 +312,7 @@ export default function Navbar({ dark }: { dark?: boolean }): JSX.Element {
     },
     {
       label: translate({
-        message: 'Pricing'
+        message: "Pricing",
       }),
       to: "/pricing",
     },
@@ -346,7 +346,9 @@ export default function Navbar({ dark }: { dark?: boolean }): JSX.Element {
 
   const rightItems: NavItemProps[] = [
     {
-      label: "Get Started",
+      label: translate({
+        message: "Get Started",
+      }),
       to: "/pricing",
     },
   ]
@@ -361,13 +363,13 @@ export default function Navbar({ dark }: { dark?: boolean }): JSX.Element {
         <Logo />
       </span>
 
-      <span className="hidden! sm:flex! children:shrink-0 space-x-6-14 text-3.5 grow flex-row items-center justify-end dark:text-white md:basis-1/3 md:justify-center">
+      <span className="hidden! sm:flex! children:shrink-0 space-x-6-14 text-3.5 grow flex-row items-center justify-end md:basis-1/3 md:justify-center dark:text-white">
         {leftItems.map((item) => {
           return <Item key={item.label} {...item} />
         })}
       </span>
 
-      <span className="hidden! sm:flex! children:shrink-0 space-x-6-14 text-3.5 ml-10 shrink-0 flex-row items-center justify-end dark:text-white md:ml-0 md:basis-1/3">
+      <span className="hidden! sm:flex! children:shrink-0 space-x-6-14 text-3.5 ml-10 shrink-0 flex-row items-center justify-end md:ml-0 md:basis-1/3 dark:text-white">
         {rightItems.map((item) => {
           return (
             <Link key={item.label} {...item}>
