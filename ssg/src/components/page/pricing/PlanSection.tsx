@@ -46,8 +46,8 @@ const Tab = ({
   return (
     <button
       className={clsx(
-        "text-#333 text-3.5-4.5 pb-3-5 w-full cursor-pointer border-b px-2 text-center font-medium",
-        checked ? "text-op-100 border-#333" : "text-op-80 border-#D9D9D9",
+        "text-#333 text-3.5-4.5 pb-3-5 w-full cursor-pointer border-b px-2 text-center",
+        checked ? "text-op-100 border-#333 font-medium" : "text-op-80 border-#D9D9D9",
       )}
       onClick={onClick}
     >
@@ -121,7 +121,7 @@ const Item = ({
             ? "https://messenger.mixin.one/download"
             : "https://safe.mixin.one/start"
         }
-        className="px-13 text-3.5 sm:mt-6.5 mt-20 block w-full rounded-sm bg-zinc-800 py-4 text-center font-medium text-white sm:w-fit"
+        className="px-13 text-3.5 mt-20 block w-full rounded-sm bg-zinc-800 py-4 text-center font-medium text-white sm:mt-6.5 sm:w-fit"
       >
         {price <= 0 ? (
           <Translate>Get Mixin</Translate>
