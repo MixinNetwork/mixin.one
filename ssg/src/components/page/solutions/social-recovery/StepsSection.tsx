@@ -7,7 +7,7 @@ import FullItem from "../../../common/FullItem"
 export const StepsSection = () => {
   const stepGenerator = (item: string, i: number) => (
     <div className="flex-center w-fit gap-x-4">
-      <div className="bg-#333 flex-center text-3.5 h-5 w-5 shrink-0 rounded-full text-white">
+      <div className="bg-#333 flex-center text-3.5 h-5 w-5 shrink-0 rounded-full leading-[1.5] text-white">
         {i + 1}
       </div>
       <div className="text-3.5-4">{item}</div>
