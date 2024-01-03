@@ -311,7 +311,9 @@ export default function Navbar({ dark }: { dark?: boolean }): JSX.Element {
       to: "/how-it-secures",
     },
     {
-      label: "Pricing",
+      label: translate({
+        message: 'Pricing'
+      }),
       to: "/pricing",
     },
     {
