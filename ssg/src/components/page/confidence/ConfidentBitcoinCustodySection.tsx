@@ -11,8 +11,8 @@ const TechnologySection = () => (
         src={require("@site/static/img/common/woodGrain.webp").default}
         className="absolute inset-0 -z-10 h-full w-full object-cover"
       />
-      <div className="pt-15 space-y-33 lg:pt-26 md:px-15 md:pb-15 flex flex-col justify-between px-5 pb-10 sm:space-y-14 md:pt-20 lg:px-20 lg:pb-20 ">
-        <div className="text-3.5-4.5 text-center font-normal leading-[1.5] text-white text-opacity-90">
+      <div className="pb-24-22 px-4-30 flex flex-col justify-between">
+        <div className="text-3.5-4.5 mt-24-22 mb-11 text-center leading-[1.5] text-white text-opacity-90">
           <Translate>
             Decentralized bitcoin custody is challenging, which is why we made
             Mixin Safe to meet public demand. Never worry about losing your keys
@@ -21,7 +21,7 @@ const TechnologySection = () => (
         </div>
         <LocalLink
           to="/how-it-secures"
-          className="flex-center text-3.5-4 rounded-sm bg-white px-7 py-4 font-medium sm:mx-auto sm:w-fit"
+          className="flex-center mx-a text-3.5-4 w-full rounded-sm bg-white px-7 py-4 font-medium sm:w-fit"
         >
           <Translate>Technology Detail</Translate>
         </LocalLink>
