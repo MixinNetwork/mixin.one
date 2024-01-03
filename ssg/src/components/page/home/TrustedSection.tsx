@@ -28,7 +28,7 @@ export const TrustedSection = () => (
     >
       <Translate>Trusted by</Translate>
     </SectionTitle>
-    <div className="gap-y-15 md:gap-x-18 mx-auto mt-5 grid w-fit grid-cols-3 place-items-center items-center justify-between gap-x-8 sm:mt-0 sm:grid-cols-6 sm:gap-x-6 sm:px-12 md:px-0">
+    <div className="gap-y-15 lg:max-w-240 container mx-auto mt-5 grid grid-cols-3 place-items-center items-center justify-between sm:flex">
       <TrustedItem name={"MixPay"} icon={"mixPay.webp"} />
       <TrustedItem name={"Pando Proto"} icon={"pandoProto.webp"} />
       <TrustedItem name={"ExinPool"} icon={"exinPool.webp"} />
