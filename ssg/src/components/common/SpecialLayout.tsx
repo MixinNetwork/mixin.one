@@ -30,7 +30,7 @@ export const SpecialLayoutItem = ({
         )}
       />
 
-      <div className="space-y-16">
+      <div className="space-y-16 px-4 sm:px-0">
         {points.map(({ title, description, icon }) => (
           <div
             key={title}

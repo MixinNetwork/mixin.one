@@ -90,9 +90,9 @@ const Item = ({
 }) => {
   return (
     <div className="border-px rounded-sm border-zinc-300 bg-zinc-100 bg-opacity-50 px-5 pb-20 pt-10 sm:px-10">
-      <div className="grid gap-y-5 sm:grid-cols-2">
-        <div className="text-#333 text-7.5 font-medium">{name}</div>
-        <div className="text-#333 text-4 font-normal leading-[1.5] text-opacity-70 sm:order-last">
+      <div className="grid gap-y-4 sm:grid-cols-2">
+        <div className="text-#333 text-7-8 font-medium">{name}</div>
+        <div className="text-#333 text-3.5-4 leading-[1.5] text-opacity-80 sm:order-last">
           {description}
         </div>
         <div className="sm:row-span-2 sm:ml-auto sm:w-fit">
@@ -121,7 +121,7 @@ const Item = ({
             ? "https://messenger.mixin.one/download"
             : "https://safe.mixin.one/start"
         }
-        className="mt-17.5 px-13 text-3.5 block w-full rounded-sm bg-zinc-800 py-4 text-center font-medium text-white sm:mt-5 sm:w-fit"
+        className="px-13 text-3.5 sm:mt-6.5 mt-20 block w-full rounded-sm bg-zinc-800 py-4 text-center font-medium text-white sm:w-fit"
       >
         {price <= 0 ? (
           <Translate>Get Mixin</Translate>
@@ -135,13 +135,11 @@ const Item = ({
           <div className="text-#333 text-5 font-medium leading-[1.5]">
             <Translate>Features</Translate>
           </div>
-          <div className="grid gap-5 sm:grid-cols-2">
+          <div className="grid gap-4 sm:grid-cols-2">
             {features.map((feature) => (
               <div className="flex-center w-fit space-x-2.5">
                 <Checked className="shrink-0" />
-                <div className="text-#333 text-4 font-normal leading-5">
-                  {feature}
-                </div>
+                <div className="text-#333 text-3.5-4 leading-5">{feature}</div>
               </div>
             ))}
           </div>
