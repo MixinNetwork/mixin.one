@@ -45,7 +45,7 @@ export const ServiceSecurity = () => (
         className="sm:px-10.3 md:px-15.7 lg:px-21 sm:py-8.7 md:py-12.3 mx-a bg-[#F2F2F2] py-5 lg:py-16"
       />
 
-      <div className="gap-x-0-25 mx-a grid gap-y-10 pt-10 sm:grid-cols-2 sm:px-10">
+      <div className="gap-x-0-25 mx-a px-4-10 grid gap-y-10 pt-10 sm:grid-cols-2">
         <Item
           icon={<Icon1 />}
           title={<Translate>Asset Isolation</Translate>}
