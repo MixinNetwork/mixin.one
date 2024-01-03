@@ -10,6 +10,16 @@
                  "comment": "Share a message"
                },
                {
+                 "/": "/pay/*",
+                 "?": "*",
+                 "comment": "Request payment"
+               },
+               {
+                 "/": "/multisigs/*",
+                 "?": "*",
+                 "comment": "Request multisigs payment"
+               },
+               {
                  "/": "/pay",
                  "?": "*",
                  "comment": "Request payment"

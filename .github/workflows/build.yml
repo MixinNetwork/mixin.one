@@ -43,14 +43,18 @@ jobs:
           mv ssg/build release/ssg
 
       - name: Remove robots.txt
-        run: find release/ssg -type f -name "robots.txt" -delete
+        run: rm release/ssg/robots.txt && rm release/ssg/**/robots.txt
 
       - name: Remove sitemap.xml
-        run: find release/ssg -type f -name "sitemap.xml" -delete
+        run: rm release/ssg/sitemap.xml && rm release/ssg/**/sitemap.xml
 
-      - uses: montudor/action-zip@v1
-        with:
-          args: zip -qq -r release.zip release
+      - name: Remove .well-known for another language
+        run: rm -r release/ssg/*/.well-known
 
-      - name: Show files
-        run: ls
+      - name: Show files for release/ssg
+        working-directory: release/ssg
+        run: ls -a
+
+      - name: Show files for release/ssg/zh
+        working-directory: release/ssg/zh
+        run: ls -a

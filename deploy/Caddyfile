@@ -1,0 +1,90 @@
+# The Caddyfile is an easy way to configure your Caddy web server.
+#
+# Unless the file starts with a global options block, the first
+# uncommented line is always the address of your site.
+#
+# To use your own domain name (with automatic HTTPS), first make
+# sure your domain's A/AAAA DNS records are properly pointed to
+# this machine's public IP, then replace ":80" below with your
+# domain name.
+
+
+# Refer to the Caddy docs for more information:
+# https://caddyserver.com/docs/caddyfile
+#
+
+http://www.mixin.one:80 {
+  redir https://mixin.one{uri}
+}
+
+http://mixin.one:80 {
+  handle {
+    root * /var/www/mixin.one
+
+    encode gzip
+
+    @cachedFiles {
+      path *.js *.jpg *.jpeg *.gif *.png *.webp *.svg *.css *.woff *.woff2 *.ttf *.eot *.otf
+    }
+    header @cachedFiles +Cache-Control "public, max-age=604800, must-revalidate"
+
+    @chineseLanguageRedirectMatcher {
+      file {
+        root /var/www/mixin.one/ssg
+        try_files {path} {path}/index.html
+      }
+      file {
+        root /var/www/mixin.one/ssg/zh
+        try_files {path} {path}/index.html
+      }
+      expression header_regexp('Cookie', 'lang=zh') || (!header_regexp('Cookie', 'lang=') && header_regexp('Accept-Language', '^zh'))
+      not {
+        path_regexp ^/zh(/|$)
+      }
+    }
+
+    redir @chineseLanguageRedirectMatcher /zh{path} 302
+
+    @wellKnown {
+      path /.well-known/*
+    }
+
+    header @wellKnown +Content-Type "application/json; charset=utf-8"
+
+    try_files /ssg{path} /ssg{path}/index.html /spa{path} /spa/index.html
+    file_server
+  }
+}
+
+http://messenger.mixin.one:80 {
+  handle {
+    root * /var/www/messenger.mixin.one
+
+    encode gzip
+
+    @cachedFiles {
+      path *.js *.jpg *.jpeg *.gif *.png *.webp *.svg *.css *.woff *.woff2 *.ttf *.eot *.otf
+    }
+    header @cachedFiles Cache-Control "public, max-age=604800, must-revalidate"
+
+    @chineseLanguageRedirectMatcher {
+      file {
+        root /var/www/messenger.mixin.one
+        try_files {path} {path}/index.html
+      }
+      file {
+        root /var/www/messenger.mixin.one/zh
+        try_files {path} {path}/index.html
+      }
+      expression header_regexp('Cookie', 'lang=zh') || (!header_regexp('Cookie', 'lang=') && header_regexp('Accept-Language', '^zh'))
+      not {
+        path_regexp ^/zh(/|$)
+      }
+    }
+
+    redir @chineseLanguageRedirectMatcher /zh{path} 302
+
+    try_files {path} {path}/index.html /404.html
+    file_server
+  }
+}
