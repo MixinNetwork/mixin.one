@@ -3,7 +3,7 @@ import { WoodGrainBackgroundTextSection } from "../../common/WoodGrainBackground
 
 export const IntegratedSecuritySolutionSection = () => {
   return (
-    <WoodGrainBackgroundTextSection>
+    <WoodGrainBackgroundTextSection className="mb-25-15">
       <Translate>
         Based on decentralized networks such as Bitcoin, Ethereum, and key
         sharding, combined with technologies such as multi-signature, smart

@@ -51,7 +51,7 @@ const Item = ({
         )}
       />
       <div className="">
-        <div className="text-5.5 sm:text-7 font-medium">{title}</div>
+        <div className="text-5-7 font-medium">{title}</div>
         <div className="text-3.5-4 text-#333 text-op-80 mt-4 leading-[1.5]">
           {description}
         </div>
