@@ -23,7 +23,7 @@ export const StepsSection = () => (
             .default
         }
         title={translate({
-          message: "crafted Notifications",
+          message: "Crafted Notifications",
         })}
         description={translate({
           message:
