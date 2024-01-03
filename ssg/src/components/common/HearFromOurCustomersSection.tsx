@@ -117,7 +117,7 @@ export const HearFromOurCustomersSection = () => {
           className="aspect-375/250 sm:aspect-664/443 md:aspect-315/364 lg:aspect-432/500 h-full w-full object-cover md:order-last"
         />
         <div className="pt-15 lg:pt-15 pb-13 flex h-full flex-col overflow-hidden bg-[#333] sm:pb-20 sm:pt-10 md:pb-10 lg:pb-20">
-          <QuotationMark className="ml-8-12 h-4.5-8.75 w-6-12" />
+          <QuotationMark className="ml-8-12 h-4.5-8.75 w-6-12 mb-2.5-0" />
           <Carousel
             {...props}
             className="children:h-full grow"
