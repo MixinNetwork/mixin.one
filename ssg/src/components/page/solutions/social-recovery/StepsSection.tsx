@@ -56,7 +56,7 @@ export const StepsSection = () => {
               .default
           }
           title={translate({
-            message: "Transfer privacy",
+            message: "Login with emergency contacts",
           })}
         >
           <div className="mt-7.5 space-y-5">

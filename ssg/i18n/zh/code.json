@@ -1930,9 +1930,6 @@
   "Set your family and friends as emergency contacts": {
     "message": "Set your family and friends as emergency contacts"
   },
-  "Transfer privacy": {
-    "message": "Transfer privacy"
-  },
   "Install Mixin Messenger on a new device and enter the old phone number": {
     "message": "Install Mixin Messenger on a new device and enter the old phone number"
   },
@@ -1947,5 +1944,8 @@
   },
   "Vitalik Buterin": {
     "message": "Vitalik Buterin"
+  },
+  "Login with emergency contacts": {
+    "message": "通过紧急联系人登录"
   }
 }
