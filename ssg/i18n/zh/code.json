@@ -1374,5 +1374,578 @@
   },
   "Recovery": {
     "message": "恢复"
+  },
+  "Use Mixin Messenger Now": {
+    "message": "Use Mixin Messenger Now"
+  },
+  "Secure, private and easy-to-use crypto wallet.": {
+    "message": "Secure, private and easy-to-use crypto wallet."
+  },
+  "Download": {
+    "message": "Download"
+  },
+  "MPC Self-Custodial Wallet.": {
+    "message": "MPC Self-Custodial Wallet."
+  },
+  "Buy cryptocurrencies with your bank card.": {
+    "message": "Buy cryptocurrencies with your bank card."
+  },
+  "Regain control of your assets through emergency contacts.": {
+    "message": "Regain control of your assets through emergency contacts."
+  },
+  "Manage multiple blockchain assets with one wallet.": {
+    "message": "Manage multiple blockchain assets with one wallet."
+  },
+  "Self-custody multi-signature cold wallet.": {
+    "message": "Self-custody multi-signature cold wallet."
+  },
+  "Manage funds with family, friends and colleagues.": {
+    "message": "Manage funds with family, friends and colleagues."
+  },
+  "Earn node rewards by staking.": {
+    "message": "Earn node rewards by staking."
+  },
+  "Collateralize your crypto assets to get loans.": {
+    "message": "Collateralize your crypto assets to get loans."
+  },
+  "Recover your assets in a decentralized way.": {
+    "message": "Recover your assets in a decentralized way."
+  },
+  "Protect your bitcoin wealth and pass it on to your descendants.": {
+    "message": "Protect your bitcoin wealth and pass it on to your descendants."
+  },
+  "The Harrowing Tales of Losses in the Era of Centralized Exchanges, Wallets, and Custodial Services.": {
+    "message": "The Harrowing Tales of Losses in the Era of Centralized Exchanges, Wallets, and Custodial Services."
+  },
+  "Decentralized Recovery": {
+    "message": "Decentralized Recovery"
+  },
+  "Mixin Safe provides a decentralized recovery solution based on the Bitcoin network. You can set up a decentralized recovery plan for your wallet, and you can also help your friends recover their wallets.": {
+    "message": "Mixin Safe provides a decentralized recovery solution based on the Bitcoin network. You can set up a decentralized recovery plan for your wallet, and you can also help your friends recover their wallets."
+  },
+  "What chains does Mixin support?": {
+    "message": "What chains does Mixin support?"
+  },
+  "Mixin supports 48 popular public chains such as Bitcoin, Ethereum, Polygon, and protocols such as ERC20 and TRC20.": {
+    "message": "Mixin supports 48 popular public chains such as Bitcoin, Ethereum, Polygon, and protocols such as ERC20 and TRC20."
+  },
+  "How to exchange assets?": {
+    "message": "How to exchange assets?"
+  },
+  "Search for 7000101276 in Mixin Messenger to use ExinOne's flash exchange and order placement functions.": {
+    "message": "Search for 7000101276 in Mixin Messenger to use ExinOne's flash exchange and order placement functions."
+  },
+  "How to mortgage and borrow?": {
+    "message": "How to mortgage and borrow?"
+  },
+  "Search for 7000104159 in Mixin Messenger to use Pando Rings' mortgage and borrowing functions.": {
+    "message": "Search for 7000104159 in Mixin Messenger to use Pando Rings' mortgage and borrowing functions."
+  },
+  "How to invest regularly?": {
+    "message": "How to invest regularly?"
+  },
+  "Search for 7000101276 in Mixin Messenger to use ExinOne's regular investment function.": {
+    "message": "Search for 7000101276 in Mixin Messenger to use ExinOne's regular investment function."
+  },
+  "When using some bots, I am often asked to authorize, will there be security issues?": {
+    "message": "When using some bots, I am often asked to authorize, will there be security issues?"
+  },
+  "Mixin Messenger's asset-related authorization is designed as read-only permission, and your assets will not have security issues, but there may be privacy issues. Your transfer records and balances can be accessed by these bots in an authorized manner.": {
+    "message": "Mixin Messenger's asset-related authorization is designed as read-only permission, and your assets will not have security issues, but there may be privacy issues. Your transfer records and balances can be accessed by these bots in an authorized manner."
+  },
+  "What cryptocurrencies are supported?": {
+    "message": "What cryptocurrencies are supported?"
+  },
+  "Currently we only support TRC20 version of USDT, and will support popular cryptocurrencies such as USDC and BTC in the future.": {
+    "message": "Currently we only support TRC20 version of USDT, and will support popular cryptocurrencies such as USDC and BTC in the future."
+  },
+  "Where is the wallet address of the cryptocurrency I purchased?": {
+    "message": "Where is the wallet address of the cryptocurrency I purchased?"
+  },
+  "The cryptocurrency you purchased with fiat currency is in your Mixin wallet.": {
+    "message": "The cryptocurrency you purchased with fiat currency is in your Mixin wallet."
+  },
+  "How do I use the service of buying cryptocurrencies with fiat currency?": {
+    "message": "How do I use the service of buying cryptocurrencies with fiat currency?"
+  },
+  "Visit https://messenger.mixin.one/download to download the latest version of Android, and you can easily find the entrance of this function on the homepage of the built-in wallet. Please note that this service only supports the Android version, and the iOS version is not supported for the time being.": {
+    "message": "Visit https://messenger.mixin.one/download to download the latest version of Android, and you can easily find the entrance of this function on the homepage of the built-in wallet. Please note that this service only supports the Android version, and the iOS version is not supported for the time being."
+  },
+  "What age do I need to be to use MoonPay?": {
+    "message": "What age do I need to be to use MoonPay?"
+  },
+  "You need to be 18 years old to use our service.": {
+    "message": "You need to be 18 years old to use our service."
+  },
+  "How do I contact customer service?": {
+    "message": "How do I contact customer service?"
+  },
+  "Please leave a message to Team Mixin 7000 customer service in Mixin Messenger, or leave a message in the customer service floating window in the lower right corner of the website.": {
+    "message": "Please leave a message to Team Mixin 7000 customer service in Mixin Messenger, or leave a message in the customer service floating window in the lower right corner of the website."
+  },
+  "What is Multi-role Collaboration?": {
+    "message": "What is Multi-role Collaboration?"
+  },
+  "Multi-role collaboration refers to the joint management of asset certificates with your family, friends or colleagues. Each time you transfer, you need the approval of part or all of the collaborators to complete the transfer.": {
+    "message": "Multi-role collaboration refers to the joint management of asset certificates with your family, friends or colleagues. Each time you transfer, you need the approval of part or all of the collaborators to complete the transfer."
+  },
+  "How many collaborators can I set up to manage asset certificates?": {
+    "message": "How many collaborators can I set up to manage asset certificates?"
+  },
+  "Now you can set up to 10 people.": {
+    "message": "Now you can set up to 10 people."
+  },
+  "Can I manage my assets with Mixin Safe by myself?": {
+    "message": "Can I manage my assets with Mixin Safe by myself?"
+  },
+  "Yes, you can manage assets through 2 or more devices, such as using a hardware wallet to manage private keys, and managing asset certificates through Mixin Messenger on your mobile phone. At the same time, it is recommended to set up an emergency contact for the account that manages the asset certificate, which can be another Mixin Messenger account.": {
+    "message": "Yes, you can manage assets through 2 or more devices, such as using a hardware wallet to manage private keys, and managing asset certificates through Mixin Messenger on your mobile phone. At the same time, it is recommended to set up an emergency contact for the account that manages the asset certificate, which can be another Mixin Messenger account."
+  },
+  "Can I only manage private keys without participating in asset certificate management?": {
+    "message": "Can I only manage private keys without participating in asset certificate management?"
+  },
+  "Yes, please find trusted family members, friends or team members to participate in the management of asset certificates.": {
+    "message": "Yes, please find trusted family members, friends or team members to participate in the management of asset certificates."
+  },
+  "Do members who manage asset certificates with me need to pay to upgrade their membership?": {
+    "message": "Do members who manage asset certificates with me need to pay to upgrade their membership?"
+  },
+  "No.": {
+    "message": "No."
+  },
+  "Why is Mixin Safe safer than a standalone hardware wallet?": {
+    "message": "Why is Mixin Safe safer than a standalone hardware wallet?"
+  },
+  "The multi-signature and time lock technologies of Mixin Safe effectively avoid single-point failures such as loss or damage of a single hardware wallet device while maintaining decentralization, thereby greatly improving the security of the wallet.": {
+    "message": "The multi-signature and time lock technologies of Mixin Safe effectively avoid single-point failures such as loss or damage of a single hardware wallet device while maintaining decentralization, thereby greatly improving the security of the wallet."
+  },
+  "What does the decentralized MPC network used by Mixin Safe mean?": {
+    "message": "What does the decentralized MPC network used by Mixin Safe mean?"
+  },
+  "The decentralized MPC network (Safe Network) in Mixin Safe shares validators and security with Mixin Network. Mixin Network is a PoS network composed of 25 pledged full nodes. It has been running stably for more than 5 years and has a total value of more than $1 billion.": {
+    "message": "The decentralized MPC network (Safe Network) in Mixin Safe shares validators and security with Mixin Network. Mixin Network is a PoS network composed of 25 pledged full nodes. It has been running stably for more than 5 years and has a total value of more than $1 billion."
+  },
+  "Yes, your assets are still safe. You can withdraw your assets at any time through your wallet private key and decentralized MPC network. Even if the Mixin Safe team disbands, your assets are still safe in your hands.": {
+    "message": "Yes, your assets are still safe. You can withdraw your assets at any time through your wallet private key and decentralized MPC network. Even if the Mixin Safe team disbands, your assets are still safe in your hands."
+  },
+  "If my private key is lost and the security time lock has expired, can the Mixin Safe team take away my assets?": {
+    "message": "If my private key is lost and the security time lock has expired, can the Mixin Safe team take away my assets?"
+  },
+  "No, the Mixin Safe team only has one key, which is not enough to transfer your assets unless you have formulated a recovery or inheritance plan.": {
+    "message": "No, the Mixin Safe team only has one key, which is not enough to transfer your assets unless you have formulated a recovery or inheritance plan."
+  },
+  "What is the difference between the traditional MPC wallet solution and Mixin Safe?": {
+    "message": "What is the difference between the traditional MPC wallet solution and Mixin Safe?"
+  },
+  "Mixin Safe combines MPC, hardware wallets, multi-signature and time lock technologies, fully utilizing the advantages of each technology while discarding the disadvantages.": {
+    "message": "Mixin Safe combines MPC, hardware wallets, multi-signature and time lock technologies, fully utilizing the advantages of each technology while discarding the disadvantages."
+  },
+  "MPC Wallets": {
+    "message": "MPC Wallets"
+  },
+  "What is MPC Wallet?": {
+    "message": "What is MPC Wallet?"
+  },
+  "An MPC wallet is a cryptocurrency and digital asset wallet that uses multi-party computation to offer strong security guarantees to individuals, firms, financial institutions, and governments that manage digital assets.": {
+    "message": "An MPC wallet is a cryptocurrency and digital asset wallet that uses multi-party computation to offer strong security guarantees to individuals, firms, financial institutions, and governments that manage digital assets."
+  },
+  "Is MPC Wallet free?": {
+    "message": "Is MPC Wallet free?"
+  },
+  "Mixin's MPC wallet (Mixin Messenger) can be used for free.": {
+    "message": "Mixin's MPC wallet (Mixin Messenger) can be used for free."
+  },
+  "What is the difference between MPC Wallet and Multisig Wallet?": {
+    "message": "What is the difference between MPC Wallet and Multisig Wallet?"
+  },
+  "Although both have effective single-point fault exclusion, MPC wallets have only one private key, and multisig wallets require multiple private keys to use, which is more complicated.": {
+    "message": "Although both have effective single-point fault exclusion, MPC wallets have only one private key, and multisig wallets require multiple private keys to use, which is more complicated."
+  },
+  "How do I back up my MPC wallet?": {
+    "message": "How do I back up my MPC wallet?"
+  },
+  "Just remember your 6-digit PIN code. You can also set up an emergency contact to help you recover your wallet.": {
+    "message": "Just remember your 6-digit PIN code. You can also set up an emergency contact to help you recover your wallet."
+  },
+  "How do I recover my MPC wallet?": {
+    "message": "How do I recover my MPC wallet?"
+  },
+  "You can regain control of your MPC wallet by using your emergency contact and 6-digit PIN code.": {
+    "message": "You can regain control of your MPC wallet by using your emergency contact and 6-digit PIN code."
+  },
+  "What is Social Recovery?": {
+    "message": "What is Social Recovery?"
+  },
+  "Social Recovery is a recovery method that does not require a seed or mnemonic wallet, and also ensures that the recovery process is completely non-custodial.": {
+    "message": "Social Recovery is a recovery method that does not require a seed or mnemonic wallet, and also ensures that the recovery process is completely non-custodial."
+  },
+  "Why do I need a wallet with social recovery?": {
+    "message": "Why do I need a wallet with social recovery?"
+  },
+  "Most users lose their cryptocurrency assets not because they are stolen, but because the owners do not manage their private keys well. The Mixin wallet with social recovery function can set up an emergency contact to effectively avoid single-point failures.": {
+    "message": "Most users lose their cryptocurrency assets not because they are stolen, but because the owners do not manage their private keys well. The Mixin wallet with social recovery function can set up an emergency contact to effectively avoid single-point failures."
+  },
+  "How to set up the social recovery function?": {
+    "message": "How to set up the social recovery function?"
+  },
+  "You can enable the social recovery function by setting an emergency contact in Mixin Messenger.": {
+    "message": "You can enable the social recovery function by setting an emergency contact in Mixin Messenger."
+  },
+  "Is the social recovery function a paid function?": {
+    "message": "Is the social recovery function a paid function?"
+  },
+  "At present, all functions of Mixin Messenger are free to use, including this social recovery function. You can rest assured to invite your family, friends or colleagues to join Mixin and set them as emergency contacts.": {
+    "message": "At present, all functions of Mixin Messenger are free to use, including this social recovery function. You can rest assured to invite your family, friends or colleagues to join Mixin and set them as emergency contacts."
+  },
+  "Can I set myself as an emergency contact?": {
+    "message": "Can I set myself as an emergency contact?"
+  },
+  "If you have multiple devices, you can log in to Mixin Messenger on both devices and set each other as emergency contacts.": {
+    "message": "If you have multiple devices, you can log in to Mixin Messenger on both devices and set each other as emergency contacts."
+  },
+  "Rich robot ecology meets various needs such as trading, fixed investment, earning coins, options, etc.": {
+    "message": "Rich robot ecology meets various needs such as trading, fixed investment, earning coins, options, etc."
+  },
+  "All in one product and service": {
+    "message": "All in one product and service"
+  },
+  "Read-only authz prevents stolen assets from malicious approvals": {
+    "message": "Read-only authz prevents stolen assets from malicious approvals"
+  },
+  "No need to install/uninstall, no storage used, directly open and use": {
+    "message": "No need to install/uninstall, no storage used, directly open and use"
+  },
+  "Purchase products or services in any cryptocurrency with no fees": {
+    "message": "Purchase products or services in any cryptocurrency with no fees"
+  },
+  "Support to interact with bots via flexible interfaces and conversations": {
+    "message": "Support to interact with bots via flexible interfaces and conversations"
+  },
+  "The seamless authentication and notification make the PX complete": {
+    "message": "The seamless authentication and notification make the PX complete"
+  },
+  "The bots provide information, trading, games, tools, you name it.": {
+    "message": "The bots provide information, trading, games, tools, you name it."
+  },
+  "Since 2017, we have supported 48 blockchains and 2200+ tokens, including Ethereum-compatible layer 1 and layer 2 networks.": {
+    "message": "Since 2017, we have supported 48 blockchains and 2200+ tokens, including Ethereum-compatible layer 1 and layer 2 networks."
+  },
+  "All-in-one wallet suite for comprehensive asset management": {
+    "message": "All-in-one wallet suite for comprehensive asset management"
+  },
+  "buy crypto": {
+    "message": "buy crypto"
+  },
+  "Instantly {keyword} with decentralized": {
+    "message": "Instantly {keyword} with decentralized"
+  },
+  "Buying crypto with credit or debit card on Mixin app is easy and safe.": {
+    "message": "Buying crypto with credit or debit card on Mixin app is easy and safe."
+  },
+  "Seamlessly move between fiat and crypto. lnexpensive and hassle-free.": {
+    "message": "Seamlessly move between fiat and crypto. lnexpensive and hassle-free."
+  },
+  "We make it simple": {
+    "message": "We make it simple"
+  },
+  "Lowest Fees": {
+    "message": "Lowest Fees"
+  },
+  "Kado allows you to spend what you wantwithout giving up an arm and a leg.": {
+    "message": "Kado allows you to spend what you wantwithout giving up an arm and a leg."
+  },
+  "Fast & Reliable": {
+    "message": "Fast & Reliable"
+  },
+  "Get crypto to your self-custody walletinstantly. Say goodbye to the long holdtimes & slippage on centralized exchanges.": {
+    "message": "Get crypto to your self-custody walletinstantly. Say goodbye to the long holdtimes & slippage on centralized exchanges."
+  },
+  "Around The Globe": {
+    "message": "Around The Globe"
+  },
+  "Available and fully compliant in 100+countries to give you access whereverand whenever.": {
+    "message": "Available and fully compliant in 100+countries to give you access whereverand whenever."
+  },
+  "Your Money How You Want It.": {
+    "message": "Your Money How You Want It."
+  },
+  "Swap between fiat and crypto instantly.": {
+    "message": "Swap between fiat and crypto instantly."
+  },
+  "It’s less complicated than you think": {
+    "message": "It’s less complicated than you think"
+  },
+  "Buy crypto in 4 simple steps": {
+    "message": "Buy crypto in 4 simple steps"
+  },
+  "STEP 1": {
+    "message": "STEP 1"
+  },
+  "Download Mixin Messenger and register an account, set up a PIN": {
+    "message": "Download Mixin Messenger and register an account, set up a PIN"
+  },
+  "STEP 2": {
+    "message": "STEP 2"
+  },
+  "Upload passport, ID card or driver’s license and complete KYC": {
+    "message": "Upload passport, ID card or driver’s license and complete KYC"
+  },
+  "STEP 3": {
+    "message": "STEP 3"
+  },
+  "Enter the amount, currency, select the payment method and complete the payment, your purchased cryptocurrency will soon enter your Mixin wallet.": {
+    "message": "Enter the amount, currency, select the payment method and complete the payment, your purchased cryptocurrency will soon enter your Mixin wallet."
+  },
+  "transactions signed": {
+    "message": "transactions signed"
+  },
+  "Stop wrangling signers, squinting at addresses, and spending hours creating transactions. Start executing fast.": {
+    "message": "Stop wrangling signers, squinting at addresses, and spending hours creating transactions. Start executing fast."
+  },
+  "Get your multisig {keyword} and executed fast": {
+    "message": "Get your multisig {keyword} and executed fast"
+  },
+  "Creators will be able to create a segregation of duties by managing users and assigning permissions and roles.": {
+    "message": "Creators will be able to create a segregation of duties by managing users and assigning permissions and roles."
+  },
+  "Multi-Role Collaboration": {
+    "message": "Multi-Role Collaboration"
+  },
+  "Two-of-three custody": {
+    "message": "Two-of-three custody"
+  },
+  "A total of three keyscontrol your vault, withtwo of those keysrequired to approve a spend.": {
+    "message": "A total of three keyscontrol your vault, withtwo of those keysrequired to approve a spend."
+  },
+  "You hold two of your keys": {
+    "message": "You hold two of your keys"
+  },
+  "With two keys, you're intotal control of yourbitcoin. Keep each key ina separate location.": {
+    "message": "With two keys, you're intotal control of yourbitcoin. Keep each key ina separate location."
+  },
+  "We secure arecovery key": {
+    "message": "We secure arecovery key"
+  },
+  "With only one key, wecan't move your bitcoin,but we can collaborate tomove bitcoin if you lose akey.": {
+    "message": "With only one key, wecan't move your bitcoin,but we can collaborate tomove bitcoin if you lose akey."
+  },
+  "Quickly approve and execute your multi-signature transactions.": {
+    "message": "Quickly approve and execute your multi-signature transactions."
+  },
+  "Crafted Notifications": {
+    "message": "Crafted Notifications"
+  },
+  "Login to Safe dashboard, create a Safe, be set as a co-signer, approve transactions, recover Safe, etc. All related people will receive notifications, and the content of the notifications is clear at a glance.": {
+    "message": "Login to Safe dashboard, create a Safe, be set as a co-signer, approve transactions, recover Safe, etc. All related people will receive notifications, and the content of the notifications is clear at a glance."
+  },
+  "Repeated Notifications": {
+    "message": "Repeated Notifications"
+  },
+  "Repeated notifications will be sent automatically by Mixin Messenger and SMS bot until your transaction is executed, so you don't need to manually remind the co-signers.": {
+    "message": "Repeated notifications will be sent automatically by Mixin Messenger and SMS bot until your transaction is executed, so you don't need to manually remind the co-signers."
+  },
+  "Self-hosted wallet, you own the private key.": {
+    "message": "Self-hosted wallet, you own the private key."
+  },
+  "Own your assets": {
+    "message": "Own your assets"
+  },
+  "Multi-signature custody": {
+    "message": "Multi-signature custody"
+  },
+  "Most Bitcoins are lost due to owners mismanaging their private keys. If you want to store Bitcoins for a long time, a multi-signature wallet is essential. The double multi-signature we designed significantly improves this situation. Bitcoin address of the vault Controlled by 3 private keys, the owner and co-manager jointly control 2 of the 3 private keys.": {
+    "message": "Most Bitcoins are lost due to owners mismanaging their private keys. If you want to store Bitcoins for a long time, a multi-signature wallet is essential. The double multi-signature we designed significantly improves this situation. Bitcoin address of the vault Controlled by 3 private keys, the owner and co-manager jointly control 2 of the 3 private keys."
+  },
+  "Approval process": {
+    "message": "Approval process"
+  },
+  "We have designed a complete approval process for the vault transfer. Each transfer needs to be approved by the vault co-manager before it can take effect. All suspicious transactions will be rejected in the approval process. The vault co-manager is designed to only participate in asset management, but cannot conspire to steal assets, because all transactions face the final approval of the vault owner.": {
+    "message": "We have designed a complete approval process for the vault transfer. Each transfer needs to be approved by the vault co-manager before it can take effect. All suspicious transactions will be rejected in the approval process. The vault co-manager is designed to only participate in asset management, but cannot conspire to steal assets, because all transactions face the final approval of the vault owner."
+  },
+  "Simple collaboration": {
+    "message": "Simple collaboration"
+  },
+  "Complexity is a hidden danger. Your family, friends, and colleagues do not need professional cryptocurrency knowledge. Through Mixin Messenger's secure and private information communication, they can safely participate in asset management through a 6-digit password, and set emergency contacts to avoid further reducing the risk of single point of failure.": {
+    "message": "Complexity is a hidden danger. Your family, friends, and colleagues do not need professional cryptocurrency knowledge. Through Mixin Messenger's secure and private information communication, they can safely participate in asset management through a 6-digit password, and set emergency contacts to avoid further reducing the risk of single point of failure."
+  },
+  "Asset isolation": {
+    "message": "Asset isolation"
+  },
+  "Our multi-vault design can help you isolate assets, establish multiple vaults according to usage, and set different co-managers for different vaults. Asset isolation can further enhance the privacy and security of assets.": {
+    "message": "Our multi-vault design can help you isolate assets, establish multiple vaults according to usage, and set different co-managers for different vaults. Asset isolation can further enhance the privacy and security of assets."
+  },
+  "Take control of your bitcoin in the safest way possible with our multisig vaults.": {
+    "message": "Take control of your bitcoin in the safest way possible with our multisig vaults."
+  },
+  "Sleep soundly knowing your bitcoin are secure": {
+    "message": "Sleep soundly knowing your bitcoin are secure"
+  },
+  "Next-gen security leverages MPC cryptography instead of seed phrases or private keys.": {
+    "message": "Next-gen security leverages MPC cryptography instead of seed phrases or private keys."
+  },
+  "Mixin wallet makes crypto accessible": {
+    "message": "Mixin wallet makes crypto accessible"
+  },
+  "Onboard users in seconds": {
+    "message": "Onboard users in seconds"
+  },
+  "Simple login via phone number. No seed phrases or extensions necessary.": {
+    "message": "Simple login via phone number. No seed phrases or extensions necessary."
+  },
+  "All features are free to use, so enjoy free chat and transfer services with family and friends.": {
+    "message": "All features are free to use, so enjoy free chat and transfer services with family and friends."
+  },
+  "Non-custodial": {
+    "message": "Non-custodial"
+  },
+  "Marble uses client-side cryptography and multi-party computation to protect user assets.": {
+    "message": "Marble uses client-side cryptography and multi-party computation to protect user assets."
+  },
+  "Supporting multiple chains": {
+    "message": "Supporting multiple chains"
+  },
+  "We’re cross-chain first. Currently on Ethereum-compatible chains and soon expanding to the chain of your choice!": {
+    "message": "We’re cross-chain first. Currently on Ethereum-compatible chains and soon expanding to the chain of your choice!"
+  },
+  "Our solution is decentralized, safer, stronger and cheaper.": {
+    "message": "Our solution is decentralized, safer, stronger and cheaper."
+  },
+  "Compare Wallets": {
+    "message": "Compare Wallets"
+  },
+  "Using MPC technology for wallets offers several advantages, including eliminating the need to trust third parties, enhanced data privacy, increased accuracy, the removal of single points of failure, increased difficulty for hackers, and reduced reliance on cold storage.": {
+    "message": "Using MPC technology for wallets offers several advantages, including eliminating the need to trust third parties, enhanced data privacy, increased accuracy, the removal of single points of failure, increased difficulty for hackers, and reduced reliance on cold storage."
+  },
+  "What are the benefits of MPC wallets?": {
+    "message": "What are the benefits of MPC wallets?"
+  },
+  "Eliminate third-party trust": {
+    "message": "Eliminate third-party trust"
+  },
+  "Data can be shared in a distributed manner without any third parties": {
+    "message": "Data can be shared in a distributed manner without any third parties"
+  },
+  "Increased data privacy": {
+    "message": "Increased data privacy"
+  },
+  "Data is encrypted at rest and in transit so no private information is revealed or compromised": {
+    "message": "Data is encrypted at rest and in transit so no private information is revealed or compromised"
+  },
+  "Reduced reliance on cold storage": {
+    "message": "Reduced reliance on cold storage"
+  },
+  "Users can only hold their assets online and no longer need cold-storage devices": {
+    "message": "Users can only hold their assets online and no longer need cold-storage devices"
+  },
+  "Removal of SPOF": {
+    "message": "Removal of SPOF"
+  },
+  "Private keys are not stored in one single place": {
+    "message": "Private keys are not stored in one single place"
+  },
+  "Increased hacking difficulty": {
+    "message": "Increased hacking difficulty"
+  },
+  "A hacker would need to attack multiple parties across systems and locations": {
+    "message": "A hacker would need to attack multiple parties across systems and locations"
+  },
+  "James Howells: 7,500 Bitcoin": {
+    "message": "James Howells: 7,500 Bitcoin"
+  },
+  "James Howells had 7,500 Bitcoins on an hard drive that he bought in 2010. Unfortunately, in 2013 he threw the hard drive in the trash can and didn’t realize what he had done for months. After that, he tried to search through the landfill with no luck.": {
+    "message": "James Howells had 7,500 Bitcoins on an hard drive that he bought in 2010. Unfortunately, in 2013 he threw the hard drive in the trash can and didn’t realize what he had done for months. After that, he tried to search through the landfill with no luck."
+  },
+  "Campbell Simpson: 1,400 Bitcoin": {
+    "message": "Campbell Simpson: 1,400 Bitcoin"
+  },
+  "Campbell Simpson purchased 1,400 bitcoin for $25 in 2010. Unfortunately, he threw out his hard drive after breaking up with his girlfriend. A mistake that at todays value cost him about $70 million dollars.": {
+    "message": "Campbell Simpson purchased 1,400 bitcoin for $25 in 2010. Unfortunately, he threw out his hard drive after breaking up with his girlfriend. A mistake that at todays value cost him about $70 million dollars."
+  },
+  "MMCrypto": {
+    "message": "MMCrypto"
+  },
+  "I’ll admit: approximately 2 month ago I lost 3 #Bitcoin by not backing up a private key. (Painful)": {
+    "message": "I’ll admit: approximately 2 month ago I lost 3 #Bitcoin by not backing up a private key. (Painful)"
+  },
+  "Aug 14, 2021": {
+    "message": "Aug 14, 2021"
+  },
+  "Shehan": {
+    "message": "Shehan"
+  },
+  "TheCryptoCPA": {
+    "message": "TheCryptoCPA"
+  },
+  "If you ever feel bad , just know that one of my clients lost ZB worth of BTC . He / she can see the balance on the wallet , but ...": {
+    "message": "If you ever feel bad , just know that one of my clients lost ZB worth of BTC . He / she can see the balance on the wallet , but ..."
+  },
+  "Stefan Thomas: 7,002 Bitcoin": {
+    "message": "Stefan Thomas: 7,002 Bitcoin"
+  },
+  "Stefan Thomas from San Francisco, owns 7,002 bitcoins worth around $346 million dollars. His bitcoins were stored on a digital wallet which he lost the password to. He thinks he still has the password to his lost bitcoin on a IronKey encrypted flash drive. The IronKey flash drive gives you 10 password guesses to decrypt the data. After that it deletes...": {
+    "message": "Stefan Thomas from San Francisco, owns 7,002 bitcoins worth around $346 million dollars. His bitcoins were stored on a digital wallet which he lost the password to. He thinks he still has the password to his lost bitcoin on a IronKey encrypted flash drive. The IronKey flash drive gives you 10 password guesses to decrypt the data. After that it deletes..."
+  },
+  "Brad Yasar: A few thousand bitcoin": {
+    "message": "Brad Yasar: A few thousand bitcoin"
+  },
+  "Brad Yasar has lost a few thousand bitcoin and spend hundreds of hours trying to recover them. Fortunately he didn’t lose all of the bitcoin he mined back in the day and seems to be doing quite well.": {
+    "message": "Brad Yasar has lost a few thousand bitcoin and spend hundreds of hours trying to recover them. Fortunately he didn’t lose all of the bitcoin he mined back in the day and seems to be doing quite well."
+  },
+  "Sanity Spa": {
+    "message": "Sanity Spa"
+  },
+  "sanityspa": {
+    "message": "sanityspa"
+  },
+  "1 once deleted a wallet . dat file containing 70 BTC . Lessons Iearned : ( 1 ) stop using Shift ＋ DEL to delete files...": {
+    "message": "1 once deleted a wallet . dat file containing 70 BTC . Lessons Iearned : ( 1 ) stop using Shift ＋ DEL to delete files..."
+  },
+  "Almad": {
+    "message": "Almad"
+  },
+  "MadiniT4": {
+    "message": "MadiniT4"
+  },
+  "My neighbor girlfriend deleted his Bitcoin wallet app with $ 10k inside cuz she was trying to download Tiktok and Playstore ...": {
+    "message": "My neighbor girlfriend deleted his Bitcoin wallet app with $ 10k inside cuz she was trying to download Tiktok and Playstore ..."
+  },
+  "Most users lose their cryptocurrency assets not because they are stolen, but because the owner does not manage their private keys well. 3.7 million bitcoins may be lost forever and cannot be recovered. Mixin Wallet can set up emergency contacts to recover potential loss risks, with high security and simple settings to avoid single point of failure.": {
+    "message": "Most users lose their cryptocurrency assets not because they are stolen, but because the owner does not manage their private keys well. 3.7 million bitcoins may be lost forever and cannot be recovered. Mixin Wallet can set up emergency contacts to recover potential loss risks, with high security and simple settings to avoid single point of failure."
+  },
+  "Why we need wide adoption of social recovery wallets?": {
+    "message": "Why we need wide adoption of social recovery wallets?"
+  },
+  "When you lose your phone with Mixin Messenger installed, you can not only re-login by replacing the SIM card, but also re-gain control of the wallet by logging in with the emergency contact set in advance.": {
+    "message": "When you lose your phone with Mixin Messenger installed, you can not only re-login by replacing the SIM card, but also re-gain control of the wallet by logging in with the emergency contact set in advance."
+  },
+  "Recover with Emergency Contacts": {
+    "message": "Recover with Emergency Contacts"
+  },
+  "Set emergency contacts": {
+    "message": "Set emergency contacts"
+  },
+  "Invite your family or friends to install Mixin Messenger and add each other": {
+    "message": "Invite your family or friends to install Mixin Messenger and add each other"
+  },
+  "Set your family and friends as emergency contacts": {
+    "message": "Set your family and friends as emergency contacts"
+  },
+  "Transfer privacy": {
+    "message": "Transfer privacy"
+  },
+  "Install Mixin Messenger on a new device and enter the old phone number": {
+    "message": "Install Mixin Messenger on a new device and enter the old phone number"
+  },
+  "Ask the emergency contact to get the verification code": {
+    "message": "Ask the emergency contact to get the verification code"
+  },
+  "Change the phone number of the current account": {
+    "message": "Change the phone number of the current account"
+  },
+  "We need wide adoption of social recovery wallets.": {
+    "message": "We need wide adoption of social recovery wallets."
+  },
+  "Vitalik Buterin": {
+    "message": "Vitalik Buterin"
   }
 }
