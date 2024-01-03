@@ -6,7 +6,12 @@ module.exports = {
     },
     function (css) {
       css.walkRules((rule) => {
-        ;["--ifm-table", "--ifm-link", "--ifm-container"].forEach((item) => {
+        ;[
+          "--ifm-table",
+          "--ifm-link",
+          "--ifm-navbar-link",
+          "--ifm-container",
+        ].forEach((item) => {
           if (rule.nodes.find((node) => node.value?.includes(item))) {
             rule.remove()
           }

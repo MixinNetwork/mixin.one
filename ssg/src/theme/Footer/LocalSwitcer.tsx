@@ -39,8 +39,9 @@ export function LocalSwitcer({}) {
   return (
     <div
       className={clsx(
+        "w-fit",
         "[&>*]:block! [&>*]:px-0!",
-        "![&_ul]:translate-y-px [&_ul]:top-full [&_ul]:rounded-sm [&_ul]:bg-white [&_ul]:bg-opacity-20",
+        "![&_ul]:translate-y-[4.5px] [&_ul]:pe-8.5 [&_ul]:top-full [&_ul]:min-w-fit [&_ul]:rounded-sm [&_ul]:bg-white [&_ul]:bg-opacity-20",
       )}
     >
       <DropdownNavbarItem
