@@ -17,7 +17,7 @@ const Item = ({
 }) => (
   <div className="border-#D9D9D9 bg-#F2F2F2 border px-5 pb-12 pt-6">
     {icon}
-    <div className="mt-9.5 text-6 font-medium">{title}</div>
+    <div className="mt-9.5 text-5-6 font-medium">{title}</div>
     <div className="mt-5 leading-[1.5]">{description}</div>
   </div>
 )
