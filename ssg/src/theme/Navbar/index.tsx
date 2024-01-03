@@ -350,6 +350,8 @@ export default function Navbar({ dark }: { dark?: boolean }): JSX.Element {
         message: "Get Started",
       }),
       to: "/pricing",
+      className:
+        "px-6 py-3 dark:bg-white text-3.5-4 dark:text-zinc-800 bg-zinc-800 text-white rounded-sm font-medium",
     },
   ]
   return (

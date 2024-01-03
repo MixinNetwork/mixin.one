@@ -48,10 +48,14 @@ const Item = ({
   title: string
 }) => (
   <div className="pl-16.5 pr-8.5 lg:pr-30 flex h-full flex-col justify-between gap-y-20 sm:pl-24 sm:pr-20 md:pr-16">
-    <div className="text-4.5 font-normal leading-9 text-white">{content}</div>
+    <div className="text-4.5 text-op-90 font-normal leading-9 text-white">
+      {content}
+    </div>
     <div>
       <div className="text-5 font-medium leading-tight text-white">{name}</div>
-      <div className="text-4 mt-4 font-normal text-zinc-300">{title}</div>
+      <div className="text-4 text-op-66 mt-4 font-normal text-white">
+        {title}
+      </div>
     </div>
   </div>
 )
