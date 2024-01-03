@@ -51,7 +51,7 @@ export default function Root() {
           },
           {
             question: translate({
-              message: "What age do I need to be to use MoonPay?",
+              message: "What age do I need to be to use Mixin Route?",
             }),
             answer: translate({
               message: "You need to be 18 years old to use our service.",
