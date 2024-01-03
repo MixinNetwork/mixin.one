@@ -351,25 +351,25 @@ export default function Navbar({ dark }: { dark?: boolean }): JSX.Element {
       }),
       to: "/pricing",
       className:
-        "px-6 py-3 dark:bg-white text-3.5-4 dark:text-zinc-800 bg-zinc-800 text-white rounded-sm font-medium",
+        "px-6 py-3 dark:bg-white text-3.5 dark:text-zinc-800 bg-zinc-800 text-white rounded-sm font-medium",
     },
   ]
   return (
     <nav
       className={clsx(
-        "sm:px-7.5 container relative mx-auto flex flex-row items-center justify-between gap-x-2 px-6 py-2.5 sm:py-5",
+        "sm:px-7.5 container relative mx-auto flex items-center justify-between py-2.5 sm:grid sm:auto-cols-fr sm:grid-cols-[1fr_auto_1fr] sm:py-5",
         dark && "dark",
       )}
     >
       <Logo />
 
-      <span className="hidden! sm:flex! children:shrink-0 space-x-6-14 text-3.5 grow flex-row items-center justify-end md:justify-center dark:text-white">
+      <span className="hidden! sm:flex! children:shrink-0 space-x-6-14 text-3.5 w-fit flex-row items-center justify-end md:justify-center dark:text-white">
         {leftItems.map((item) => {
           return <Item key={item.label} {...item} />
         })}
       </span>
 
-      <span className="hidden! sm:flex! children:shrink-0 space-x-6-14 text-3.5 ml-10 shrink-0 flex-row items-center justify-end md:ml-0 dark:text-white">
+      <span className="hidden! sm:flex! children:shrink-0 space-x-6-14 text-3.5 shrink-0 flex-row items-center justify-end dark:text-white">
         {rightItems.map((item) => {
           return (
             <Link key={item.label} {...item}>
