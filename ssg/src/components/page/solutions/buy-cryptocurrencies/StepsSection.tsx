@@ -10,8 +10,10 @@ const Item = ({
   description: ReactNode
 }) => (
   <div className="space-y-3">
-    <div className="text-5.5 md:text-6 font-medium uppercase">{stepName}</div>
-    <div className="text-#333 text-op-80">{description}</div>
+    <div className="text-5-6 font-medium uppercase">{stepName}</div>
+    <div className="text-#333 text-3.5-4 text-op-80 leading-[1.5]">
+      {description}
+    </div>
   </div>
 )
 
