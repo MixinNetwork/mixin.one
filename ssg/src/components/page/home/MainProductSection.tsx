@@ -35,7 +35,7 @@ const ProductCard = ({
         </div>
       </div>
       <div className="text-3.5 flex items-center font-medium">
-        View Product
+        <Translate>View Product</Translate>
         <Arrow className="ml-2" />
       </div>
     </div>
