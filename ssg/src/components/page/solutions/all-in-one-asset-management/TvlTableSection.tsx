@@ -30,7 +30,7 @@ export const TvlTableSection = () => {
           <tr
             key={i}
             className={clsx(
-              "!odd:bg-#F8F8F8 !even:bg-white border-#333 border-op-33",
+              "!odd:bg-#F8F8F8 !even:bg-white border-#333 border-op-33 text-nowrap",
               {
                 "border-y": i === 0,
                 "border-b border-t-0": i === table.length - 1,
