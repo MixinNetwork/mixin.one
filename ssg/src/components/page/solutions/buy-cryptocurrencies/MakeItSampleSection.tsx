@@ -83,7 +83,7 @@ export const MakeItSampleSection = () => {
           })}
           description={translate({
             message:
-              "Kado allows you to spend what you wantwithout giving up an arm and a leg.",
+              "With the advantage of free transfers on the decentralized Mixin Network, users do not need to pay additional blockchain fees.",
           })}
           className="md:mt-15"
         />
@@ -95,25 +95,25 @@ export const MakeItSampleSection = () => {
           })}
           description={translate({
             message:
-              "Get crypto to your self-custody walletinstantly. Say goodbye to the long holdtimes & slippage on centralized exchanges.",
+              "Get crypto to your self-custody wallet instantly. Say goodbye to the long hold times & slippage on centralized exchanges.",
           })}
         />
         <Item
           cover="2.3.webp"
           background="2.7.webp"
           title={translate({
-            message: "Around The Globe",
+            message: "Global Coverage",
           })}
           description={translate({
             message:
-              "Available and fully compliant in 100+countries to give you access whereverand whenever.",
+              "Available in 150+countries and territories, Support for major global payment/payout methods, with new options constantly added.",
           })}
         />
         <Item
           cover="2.4.webp"
           background="2.8.webp"
           title={translate({
-            message: "Your Money How You Want It.",
+            message: "Your money, your way",
           })}
           description={translate({
             message: "Swap between fiat and crypto instantly.",

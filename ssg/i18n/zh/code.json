@@ -1651,26 +1651,11 @@
   "Lowest Fees": {
     "message": "费用最低"
   },
-  "Kado allows you to spend what you wantwithout giving up an arm and a leg.": {
-    "message": "Kado allows you to spend what you wantwithout giving up an arm and a leg."
-  },
   "Fast & Reliable": {
     "message": "Fast & Reliable"
   },
-  "Get crypto to your self-custody walletinstantly. Say goodbye to the long holdtimes & slippage on centralized exchanges.": {
-    "message": "Get crypto to your self-custody walletinstantly. Say goodbye to the long holdtimes & slippage on centralized exchanges."
-  },
-  "Around The Globe": {
-    "message": "Around The Globe"
-  },
-  "Available and fully compliant in 100+countries to give you access whereverand whenever.": {
-    "message": "Available and fully compliant in 100+countries to give you access whereverand whenever."
-  },
-  "Your Money How You Want It.": {
-    "message": "Your Money How You Want It."
-  },
   "Swap between fiat and crypto instantly.": {
-    "message": "Swap between fiat and crypto instantly."
+    "message": "立即在法定货币和加密货币之间进行交换。"
   },
   "It’s less complicated than you think": {
     "message": "没有你想象的那么复杂"
@@ -2016,5 +2001,20 @@
   },
   "All transactions must be signed by the vault owner to take effect, and multiple vault co-managers cannot collude to steal assets.": {
     "message": "所有交易都必须经过金库所有者签名才会生效，多金库共管人无法合谋窃取资产。"
+  },
+  "With the advantage of free transfers on the decentralized Mixin Network, users do not need to pay additional blockchain fees.": {
+    "message": "凭借去中心化 Mixin Network 上免费转账的优势，用户无需支付额外的区块链费用。"
+  },
+  "Get crypto to your self-custody wallet instantly. Say goodbye to the long hold times & slippage on centralized exchanges.": {
+    "message": "立即将加密货币存入您的自托管钱包。 告别在中心化交易所上等待很长时间以及价格滑点的问题。"
+  },
+  "Global Coverage": {
+    "message": "全球覆盖"
+  },
+  "Available in 150+countries and territories, Support for major global payment/payout methods, with new options constantly added.": {
+    "message": "覆盖 150 多个国家和地区，支持全球主要支付/支付方式，并不断添加新选项。"
+  },
+  "Your money, your way": {
+    "message": "你的钱你做主"
   }
 }
