@@ -1021,9 +1021,6 @@
   "How it Secures": {
     "message": "工作原理"
   },
-  "Secure and grow your crypto wealth with Decentralization": {
-    "message": "加密货币的安全保管与财富增值，充分享受去中心化"
-  },
   "Protect your crypto with mature multisig and MPC technology. Get access to trading, lending, decentralized recovery and inheritance.": {
     "message": "通过成熟的多重签名和去中心化多方计算保护您的加密货币，方便而隐私的执行交易、借贷、去中心化恢复和遗产继承。"
   },
@@ -2016,5 +2013,8 @@
   },
   "Visit {messenger} to download the latest version of Android, and you can easily find the entrance of this function on the homepage of the built-in wallet. Please note that this service only supports the Android version, and the iOS version is not supported for the time being.": {
     "message": "访问 {messenger} 下载 Android 最新版，在内置钱包的首页即可轻松找到该功能的入口。注意该服务仅支持 Android 版本，iOS 版本暂不支持。"
+  },
+  "Secure and grow your crypto wealth with {keyword}": {
+    "message": "加密货币的安全保管与财富增值，充分享受{keyword}"
   }
 }

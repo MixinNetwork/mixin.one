@@ -1,6 +1,5 @@
 import React from "react"
 import Translate, { translate } from "@docusaurus/Translate"
-import replace from "../../../../helper/replace"
 import clsx from "clsx"
 
 export const Header = () => (

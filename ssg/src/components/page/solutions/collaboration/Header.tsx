@@ -19,24 +19,13 @@ export const Header = () => {
         }
         large
       >
-        {replace(
-          translate(
-            {
-              message: "Get your multisig {keyword} and executed fast",
-            },
-            {
-              keyword,
-            },
-          ),
-          [
-            {
-              match: keyword,
-              replace(part) {
-                return <span className="text-blue-500">{part}</span>
-              },
-            },
-          ],
-        )}
+        <Translate
+          values={{
+            keyword: <span className="text-blue-500">transactions signed</span>,
+          }}
+        >
+          {"Get your multisig {keyword} and executed fast"}
+        </Translate>
       </SectionTitle>
 
       <img
