@@ -26,7 +26,7 @@ export const Header = () => (
       }
       width={1194}
       height={480}
-      className="mx-a !sm:block mb-40-45 container !hidden"
+      className="mx-a !sm:block container mb-10 !hidden"
     />
     <img
       loading="lazy"
@@ -36,7 +36,7 @@ export const Header = () => (
       }
       width={288}
       height={192}
-      className="mx-a !sm:hidden mb-40-45 container"
+      className="mx-a !sm:hidden container mb-10"
     />
   </>
 )
