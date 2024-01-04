@@ -1685,7 +1685,7 @@
     "message": "快速执行您的多重{keyword}"
   },
   "Creators will be able to create a segregation of duties by managing users and assigning permissions and roles.": {
-    "message": "创建者可以通过管理用户以及分配角色来创建职责分离。--这个副标题没翻译。"
+    "message": "创建者可以通过管理用户以及分配角色来创建职责分离。"
   },
   "Multi-Role Collaboration": {
     "message": "多人协作"
