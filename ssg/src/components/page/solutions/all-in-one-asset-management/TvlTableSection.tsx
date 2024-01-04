@@ -6,10 +6,16 @@ import XIN from "@site/static/img/page/solutions/all-in-one-asset-management/2.4
 import USDT from "@site/static/img/page/solutions/all-in-one-asset-management/2.5.svg"
 import MOB from "@site/static/img/page/solutions/all-in-one-asset-management/2.6.svg"
 import clsx from "clsx"
+import { translate } from "@docusaurus/Translate"
 
 export const TvlTableSection = () => {
   const table = [
-    ["icon", "name", "TVL", <div className="w-15" />],
+    [
+      translate({ message: "icon" }),
+      translate({ message: "name" }),
+      translate({ message: "TVL" }),
+      <div className="w-15" />,
+    ],
     [<BOX />, "BOX", "$423,073,655", ""],
     [<BTC />, "BTC", "$399,060,380", ""],
     [<ETH />, "ETH", "$192,940,011", ""],

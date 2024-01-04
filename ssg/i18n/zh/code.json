@@ -1989,5 +1989,14 @@
   },
   "Complexity": {
     "message": "复杂性"
+  },
+  "icon": {
+    "message": "图标"
+  },
+  "name": {
+    "message": "名称"
+  },
+  "TVL": {
+    "message": "总价值"
   }
 }
