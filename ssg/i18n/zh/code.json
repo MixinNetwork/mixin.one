@@ -994,17 +994,17 @@
   "Information Privacy": {
     "message": "信息隐私"
   },
-  "All messages, audios, photos, and files are end-to-end encrypted": {
-    "message": "所有消息都经过端到端加密，包括文字、照片、文件和通话"
+  "All messages, audios, photos, and files are end-to-end encrypted.": {
+    "message": "所有消息都经过端到端加密，包括文字、照片、文件和通话。"
   },
-  "Stay connected to your family, friends, and coworker by group chat": {
-    "message": "群聊让您可以轻松、自在地与家人、朋友和同事保持联系"
+  "Stay connected to your family, friends, and coworker by group chat.": {
+    "message": "群聊让您可以轻松、自在地与家人、朋友和同事保持联系。"
   },
-  "Enhance privacy by turning on the disappearing messages feature": {
-    "message": "通过打开聊天的限时消息功能，您可以获得更多隐私保护"
+  "Enhance privacy by turning on the disappearing messages feature.": {
+    "message": "通过打开聊天的限时消息功能，您可以获得更多隐私保护。"
   },
-  "We can't read your messages or listen to your calls, nor can anyone else": {
-    "message": "我们无法读取您的信息或者窃听您的通话，其他人亦然"
+  "We can't read your messages or listen to your calls, nor can anyone else.": {
+    "message": "我们无法读取您的信息或者窃听您的通话，其他人亦然。"
   },
   "Privacy by Design": {
     "message": "默认隐私"
@@ -1769,7 +1769,7 @@
     "message": "数秒内完成注册"
   },
   "Simple login via phone number. No seed phrases or extensions necessary.": {
-    "message": "通过电话号码简单登录。 无需助记词或浏览器插件。"
+    "message": "通过电话号码简单登录，无需助记词或浏览器插件。"
   },
   "All features are free to use, so enjoy free chat and transfer services with family and friends.": {
     "message": "所有功能均可免费使用，因此您可以与家人和朋友免费聊天和转账服务。"

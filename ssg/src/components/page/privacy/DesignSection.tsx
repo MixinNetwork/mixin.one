@@ -141,23 +141,24 @@ function GridSection({}) {
       </div>
       <GridItem cover={GridIcon1} className="sm:order-0 order-1">
         <Translate>
-          All messages, audios, photos, and files are end-to-end encrypted
+          All messages, audios, photos, and files are end-to-end encrypted.
         </Translate>
       </GridItem>
       <GridItem cover={GridIcon2} className="order-2">
         <Translate>
-          Stay connected to your family, friends, and coworker by group chat
+          Stay connected to your family, friends, and coworker by group chat.
         </Translate>
       </GridItem>
       <GridItem cover={GridIcon3} className="order-3">
         <Translate>
-          Enhance privacy by turning on the disappearing messages feature
+          Enhance privacy by turning on the disappearing messages feature.
         </Translate>
       </GridItem>
       <GridItem cover={GridIcon4} className="order-4">
         <Translate>
-          We can't read your messages or listen to your calls, nor can anyone
-          else
+          {
+            "We can't read your messages or listen to your calls, nor can anyone else."
+          }
         </Translate>
       </GridItem>
     </div>
