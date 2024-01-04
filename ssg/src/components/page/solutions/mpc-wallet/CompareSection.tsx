@@ -1,5 +1,5 @@
 import React from "react"
-import Translate from "@docusaurus/Translate"
+import Translate, { translate } from "@docusaurus/Translate"
 import SectionTitle from "../../../common/SectionTitle"
 import CheckMark from "@site/static/img/common/checkmark.svg"
 import XMark from "@site/static/img/common/xmark.svg"
@@ -8,21 +8,27 @@ import clsx from "clsx"
 export const CompareSection = () => {
   const table = [
     [
-      "MPC vs otherCrypto wallets",
-      "MPC wallet",
-      "Multi-sig",
-      "Hot wallet",
-      "Cold wallet",
+      translate({ message: "MPC vs other Crypto wallets" }),
+      translate({ message: "MPC wallet" }),
+      translate({ message: "Multisig wallet" }),
+      translate({ message: "Hot wallet" }),
+      translate({ message: "Cold wallet" }),
     ],
-    ["Security", true, true, false, true],
-    ["Removes Risk of sPOF", true, true, false, false],
-    ["Data Privacy", true, false, false, false],
-    ["Decentralized", true, true, false, false],
-    ["Trustless", true, true, false, true],
-    ["Reduce Risk of Hacking", true, true, false, false],
-    ["Efficiency", true, false, true, false],
-    ["Accuracy", true, false, false, false],
-    ["Complexity", true, true, false, false],
+    [translate({ message: "Security" }), true, true, false, true],
+    [translate({ message: "Removes Risk of sPOF" }), true, true, false, false],
+    [translate({ message: "Data Privacy" }), true, false, false, false],
+    [translate({ message: "Decentralized" }), true, true, false, false],
+    [translate({ message: "Trustless" }), true, true, false, true],
+    [
+      translate({ message: "Reduce Risk of Hacking" }),
+      true,
+      true,
+      false,
+      false,
+    ],
+    [translate({ message: "Efficiency" }), true, false, true, false],
+    [translate({ message: "Accuracy" }), true, false, false, false],
+    [translate({ message: "Complexity" }), true, true, false, false],
   ]
 
   return (

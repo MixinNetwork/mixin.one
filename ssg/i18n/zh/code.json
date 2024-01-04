@@ -1947,5 +1947,47 @@
   },
   "Login with emergency contacts": {
     "message": "通过紧急联系人登录"
+  },
+  "MPC vs other Crypto wallets": {
+    "message": "MPC 钱包对比其他钱包"
+  },
+  "MPC wallet": {
+    "message": "MPC 钱包"
+  },
+  "Multisig wallet": {
+    "message": "多签钱包"
+  },
+  "Hot wallet": {
+    "message": "热钱包"
+  },
+  "Cold wallet": {
+    "message": "冷钱包"
+  },
+  "Security": {
+    "message": "安全"
+  },
+  "Removes Risk of sPOF": {
+    "message": "消除单点故障"
+  },
+  "Data Privacy": {
+    "message": "数据隐私"
+  },
+  "Decentralized": {
+    "message": "去中心化"
+  },
+  "Trustless": {
+    "message": "消除第三方信任"
+  },
+  "Reduce Risk of Hacking": {
+    "message": "减少黑客风险"
+  },
+  "Efficiency": {
+    "message": "高效率"
+  },
+  "Accuracy": {
+    "message": "准确"
+  },
+  "Complexity": {
+    "message": "复杂性"
   }
 }
