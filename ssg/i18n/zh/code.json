@@ -1468,9 +1468,6 @@
   "How do I use the service of buying cryptocurrencies with fiat currency?": {
     "message": "如何使用法币购买加密货币这个服务？"
   },
-  "Visit https://messenger.mixin.one/download to download the latest version of Android, and you can easily find the entrance of this function on the homepage of the built-in wallet. Please note that this service only supports the Android version, and the iOS version is not supported for the time being.": {
-    "message": "访问 https://messenger.mixin.one/download 下载 Android 最新版，在内置钱包的首页即可轻松找到该功能的入口。注意该服务仅支持 Android 版本，iOS 版本暂不支持。"
-  },
   "What age do I need to be to use Mixin Route?": {
     "message": "需要多大年龄才能使用 Mixin Route？ "
   },
@@ -2016,5 +2013,8 @@
   },
   "Your money, your way": {
     "message": "你的钱你做主"
+  },
+  "Visit {messenger} to download the latest version of Android, and you can easily find the entrance of this function on the homepage of the built-in wallet. Please note that this service only supports the Android version, and the iOS version is not supported for the time being.": {
+    "message": "访问 {messenger} 下载 Android 最新版，在内置钱包的首页即可轻松找到该功能的入口。注意该服务仅支持 Android 版本，iOS 版本暂不支持。"
   }
 }

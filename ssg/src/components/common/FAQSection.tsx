@@ -2,13 +2,14 @@ import clsx from "clsx"
 import Arrow from "@site/static/img/arrow.svg"
 import Translate from "@docusaurus/Translate"
 import SectionTitle from "./SectionTitle"
+import React, { ReactNode } from "react"
 
 const FAQItem = ({
   question,
   answer,
 }: {
   question: string
-  answer: string
+  answer: ReactNode
 }) => (
   <div className="lg:max-w-240 container mx-auto border-b border-neutral-200 px-2.5">
     <details name="faq" className="not-default group peer">
@@ -32,7 +33,7 @@ const FAQItem = ({
 export const FAQSection = (props: {
   className?: string
   faqs?: {
-    answer: string
+    answer: ReactNode
     question: string
   }[]
 }) => (

@@ -1,7 +1,7 @@
 import Layout from "@theme/Layout"
 import "react-multi-carousel/lib/styles.css"
 import React from "react"
-import { translate } from "@docusaurus/Translate"
+import Translate, { translate } from "@docusaurus/Translate"
 import { Header } from "../../../components/page/solutions/buy-cryptocurrencies/Header"
 import { MakeItSampleSection } from "../../../components/page/solutions/buy-cryptocurrencies/MakeItSampleSection"
 import { StepsSection } from "../../../components/page/solutions/buy-cryptocurrencies/StepsSection"
@@ -44,10 +44,21 @@ export default function Root() {
               message:
                 "How do I use the service of buying cryptocurrencies with fiat currency?",
             }),
-            answer: translate({
-              message:
-                "Visit https://messenger.mixin.one/download to download the latest version of Android, and you can easily find the entrance of this function on the homepage of the built-in wallet. Please note that this service only supports the Android version, and the iOS version is not supported for the time being.",
-            }),
+            answer: (
+              <Translate
+                values={{
+                  messenger: (
+                    <a href="https://messenger.mixin.one/download">
+                      <Translate>Mixin Messenger</Translate>
+                    </a>
+                  ),
+                }}
+              >
+                {
+                  "Visit {messenger} to download the latest version of Android, and you can easily find the entrance of this function on the homepage of the built-in wallet. Please note that this service only supports the Android version, and the iOS version is not supported for the time being."
+                }
+              </Translate>
+            ),
           },
           {
             question: translate({
