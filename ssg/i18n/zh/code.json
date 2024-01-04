@@ -1998,5 +1998,23 @@
   },
   "TVL": {
     "message": "总价值"
+  },
+  "Multi-Vault": {
+    "message": "多金库"
+  },
+  "Allows you to create multiple vaults for different businesses. Each vault can set a different co-management mode, for example: requiring 2 of the 3 vault co-managers to agree to release any assets for each transaction.": {
+    "message": "允许为不同的业务创建多个金库，每个金库可以设置不同共管模式，例如：要求 3 个金库共管人中的 2 个同意每笔交易才可以释放任何资产。"
+  },
+  "Vault Co-management": {
+    "message": "金库共管"
+  },
+  "Vault co-managers can participate in vault co-management without professional skills. Multiple vault managers are assigned to each vault and emergency contacts are set to avoid single point of failure.": {
+    "message": "金库共管人无需专业技能即可安全的参与金库共管，每个金库分配多个金库管理人并设置紧急联系人避免单点故障。"
+  },
+  "No collusion risk": {
+    "message": "无合谋风险"
+  },
+  "All transactions must be signed by the vault owner to take effect, and multiple vault co-managers cannot collude to steal assets.": {
+    "message": "所有交易都必须经过金库所有者签名才会生效，多金库共管人无法合谋窃取资产。"
   }
 }

@@ -66,33 +66,33 @@ export const MultiRoleCollaborationSection = () => {
       >
         <Item
           icon={<Svg1 />}
-          title={<Translate>Two-of-three custody</Translate>}
+          title={<Translate>{"Multi-Vault"}</Translate>}
           description={
             <Translate>
               {
-                "A total of three keyscontrol your vault, withtwo of those keysrequired to approve a spend."
+                "Allows you to create multiple vaults for different businesses. Each vault can set a different co-management mode, for example: requiring 2 of the 3 vault co-managers to agree to release any assets for each transaction."
               }
             </Translate>
           }
         />
         <Item
           icon={<Svg2 />}
-          title={<Translate>You hold two of your keys</Translate>}
+          title={<Translate>{"Vault Co-management"}</Translate>}
           description={
             <Translate>
               {
-                "With two keys, you're intotal control of yourbitcoin. Keep each key ina separate location."
+                "Vault co-managers can participate in vault co-management without professional skills. Multiple vault managers are assigned to each vault and emergency contacts are set to avoid single point of failure."
               }
             </Translate>
           }
         />
         <Item
           icon={<Svg3 />}
-          title={<Translate>We secure arecovery key</Translate>}
+          title={<Translate>{"No collusion risk"}</Translate>}
           description={
             <Translate>
               {
-                "With only one key, wecan't move your bitcoin,but we can collaborate tomove bitcoin if you lose akey."
+                "All transactions must be signed by the vault owner to take effect, and multiple vault co-managers cannot collude to steal assets."
               }
             </Translate>
           }
