@@ -14,6 +14,7 @@ import AllInOne from "@site/static/img/common/nav/1.1.4.svg"
 import Custody from "@site/static/img/common/nav/1.2.1.svg"
 import Collaboration from "@site/static/img/common/nav/1.2.2.svg"
 import Staking from "@site/static/img/common/nav/1.2.3.svg"
+import CollateralizedLoans from "@site/static/img/common/nav/1.2.4.svg"
 import Recovery from "@site/static/img/common/nav/1.2.5.svg"
 import Inheritance from "@site/static/img/common/nav/1.2.6.svg"
 
@@ -283,7 +284,7 @@ export default function Navbar({ dark }: { dark?: boolean }): JSX.Element {
               description: translate({
                 message: "Collateralize your crypto assets to get loans.",
               }),
-              icon: Collaboration,
+              icon: CollateralizedLoans,
             },
             {
               label: translate({ message: "Recovery" }),
