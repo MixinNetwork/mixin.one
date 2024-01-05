@@ -1693,7 +1693,7 @@
   "Two-of-three custody": {
     "message": "2/3 多签共管"
   },
-  "A total of three keyscontrol your vault, withtwo of those keysrequired to approve a spend.": {
+  "A total of three keys control your vault, withtwo of those keysrequired to approve a spend.": {
     "message": "总共三个密钥控制您的金库，每次花费都需要其中两个密钥签名批准。"
   },
   "You hold two of your keys": {

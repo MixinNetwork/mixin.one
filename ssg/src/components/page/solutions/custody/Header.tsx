@@ -64,7 +64,7 @@ export const Header = () => (
         description={
           <Translate>
             {
-              "A total of three keyscontrol your vault, withtwo of those keysrequired to approve a spend."
+              "A total of three keys control your vault, withtwo of those keysrequired to approve a spend."
             }
           </Translate>
         }
