@@ -64,7 +64,7 @@ export const Header = () => (
         description={
           <Translate>
             {
-              "A total of three keys control your vault, withtwo of those keysrequired to approve a spend."
+              "A total of three keys control your vault, with two of those keys required to approve a spend."
             }
           </Translate>
         }
@@ -75,7 +75,7 @@ export const Header = () => (
         description={
           <Translate>
             {
-              "With two keys, you're intotal control of yourbitcoin. Keep each key ina separate location."
+              "With two keys, you're in total control of your bitcoin. Keep each key ina separate location."
             }
           </Translate>
         }
@@ -86,7 +86,7 @@ export const Header = () => (
         description={
           <Translate>
             {
-              "With only one key, wecan't move your bitcoin,but we can collaborate tomove bitcoin if you lose akey."
+              "With only one key, we can't move your bitcoin,but we can collaborate to move bitcoin if you lose akey."
             }
           </Translate>
         }

@@ -127,7 +127,7 @@ export const AccessibleSection = () => {
               })}
               description={translate({
                 message:
-                  "We’re cross-chain first. Currently on Ethereum-compatible chains and soon expanding to the chain of your choice!",
+                  "We support popular L1 and L2 blockchain networks such as Bitcoin, Ethereum and Polygon.",
               })}
             />
           </div>

@@ -1693,19 +1693,19 @@
   "Two-of-three custody": {
     "message": "2/3 多签共管"
   },
-  "A total of three keys control your vault, withtwo of those keysrequired to approve a spend.": {
+  "A total of three keys control your vault, with two of those keys required to approve a spend.": {
     "message": "总共三个密钥控制您的金库，每次花费都需要其中两个密钥签名批准。"
   },
   "You hold two of your keys": {
     "message": "您持有两个密钥"
   },
-  "With two keys, you're intotal control of yourbitcoin. Keep each key ina separate location.": {
+  "With two keys, you're in total control of your bitcoin. Keep each key ina separate location.": {
     "message": "有了两把密钥，您就可以完全控制您的比特币。注意将每个密钥放在单独的位置。"
   },
   "We secure arecovery key": {
     "message": "恢复密钥托管"
   },
-  "With only one key, wecan't move your bitcoin,but we can collaborate tomove bitcoin if you lose akey.": {
+  "With only one key, we can't move your bitcoin,but we can collaborate to move bitcoin if you lose akey.": {
     "message": "我们只有一把钥匙无法转移您的比特币，但如果您丢失钥匙，我们可以合作转移比特币。"
   },
   "Quickly approve and execute your multi-signature transactions.": {
@@ -1783,7 +1783,7 @@
   "Supporting multiple chains": {
     "message": "支持多链多币种"
   },
-  "We’re cross-chain first. Currently on Ethereum-compatible chains and soon expanding to the chain of your choice!": {
+  "We support popular L1 and L2 blockchain networks such as Bitcoin, Ethereum and Polygon.": {
     "message": "我们支持 Bitcoin、Ethereum、Polygon 等热门 L1 和 L2 区块链网络。"
   },
   "Our solution is decentralized, safer, stronger and cheaper.": {
