@@ -44,7 +44,7 @@ const ProductCard = ({
 
 export const MainProductSection = () => {
   return (
-    <div className="pb-45 sm:pb-35 flex flex-col items-center bg-slate-100 bg-opacity-40 px-5">
+    <div className="pb-45 sm:pb-35 bg-#F2F2F2 bg-op-50 flex flex-col items-center px-5">
       <SectionTitle
         description={
           <Translate>
