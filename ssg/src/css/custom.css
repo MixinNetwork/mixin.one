@@ -27,7 +27,7 @@ body {
     "Segoe UI Emoji",
     "Segoe UI Symbol",
     "Noto Color Emoji";
-  @apply text-#333 font-normal leading-[1.325];
+  @apply text-#000 font-normal leading-[1.325];
 }
 
 a:not(.not-default),

@@ -65,7 +65,7 @@ const Item = (data: NavItemProps) => {
           <div className="bg-white px-5 pb-10 shadow">
             {data.groups.map((data) => (
               <>
-                <div className="pt-7.5 text-#333 text-3 ms-5 font-normal uppercase text-opacity-70">
+                <div className="pt-7.5 text-#000 text-3 ms-5 font-normal uppercase text-opacity-70">
                   {data.label}
                 </div>
                 <div
@@ -81,16 +81,16 @@ const Item = (data: NavItemProps) => {
                     const children = (
                       <>
                         <item.icon className="row-span-2 h-7" />
-                        <div className="flex-center text-#333 text-3.5 w-fit space-x-2.5 font-medium">
+                        <div className="flex-center text-#000 text-3.5 w-fit space-x-2.5 font-medium">
                           <div>{item.label}</div>
                           {!item.to && (
-                            <div className="text-3 text-op-66 text-#333 w-fit shrink-0 bg-[#F2F2F2] px-2.5 py-1">
+                            <div className="text-3 text-op-66 text-#000 w-fit shrink-0 bg-[#F2F2F2] px-2.5 py-1">
                               <Translate>Coming Soon</Translate>
                             </div>
                           )}
                         </div>
 
-                        <div className="text-#333 text-3 font-normal text-opacity-70">
+                        <div className="text-#000 text-3 font-normal text-opacity-70">
                           {item.description}
                         </div>
                       </>
@@ -132,7 +132,7 @@ const Item = (data: NavItemProps) => {
 }
 
 const MobileItem = (data: NavItemProps) => {
-  const defaultClassName = "text-#333 text-3.5 font-normal"
+  const defaultClassName = "text-#000 text-3.5 font-normal"
   if (data.groups?.length) {
     return (
       <div key={data.label}>
@@ -151,18 +151,18 @@ const MobileItem = (data: NavItemProps) => {
           <div className="border-op-0 border-#F2F2F2 overflow-hidden border-t transition-all duration-300">
             {data.groups.map((data) => (
               <div key={data.label}>
-                <div className="text-#333 text-3 px-6 pb-5 pt-8 font-normal uppercase text-opacity-70">
+                <div className="text-#000 text-3 px-6 pb-5 pt-8 font-normal uppercase text-opacity-70">
                   {data.label}
                 </div>
                 <div>
                   {data.items.map((item) => {
                     const containerClassName =
-                      "flex items-center space-x-2.5 px-7 py-3.5 text-3.5 text-#333"
+                      "flex items-center space-x-2.5 px-7 py-3.5 text-3.5 text-#000"
                     const children = (
                       <>
                         <div>{item.label}</div>
                         {!item.to && (
-                          <div className="text-3 text-op-66 text-#333 w-fit bg-[#F2F2F2] px-2.5 py-1">
+                          <div className="text-3 text-op-66 text-#000 w-fit bg-[#F2F2F2] px-2.5 py-1">
                             <Translate>Coming Soon</Translate>
                           </div>
                         )}
@@ -183,11 +183,11 @@ const MobileItem = (data: NavItemProps) => {
                       <Link
                         key={item.label}
                         {...item}
-                        className="text-#333 text-3.5 flex items-center space-x-2.5 px-7 py-3.5"
+                        className="text-#000 text-3.5 flex items-center space-x-2.5 px-7 py-3.5"
                       >
                         <div>{item.label}</div>
                         {!item.to && (
-                          <div className="text-3 text-op-66 text-#333 w-fit bg-[#F2F2F2] px-2.5 py-1">
+                          <div className="text-3 text-op-66 text-#000 w-fit bg-[#F2F2F2] px-2.5 py-1">
                             <Translate>Coming Soon</Translate>
                           </div>
                         )}

@@ -1,6 +1,6 @@
 <svg fill="none" height="126" viewBox="0 0 126 126" width="126" xmlns="http://www.w3.org/2000/svg"
     xmlns:xlink="http://www.w3.org/1999/xlink">
-    <g stroke="#333" stroke-linecap="round" stroke-linejoin="round">
+    <g stroke="#000" stroke-linecap="round" stroke-linejoin="round">
         <path
             d="m8.93902 35.4285c-6.04361 9.6268-3.06968 21.6113 6.64248 26.7681l76.8203 40.7884c9.7122 5.157 22.4842 1.533 28.5282-8.0934 6.044-9.6268 3.07-21.6112-6.642-26.768l-76.8207-40.7888c-9.7121-5.1568-22.4847-1.5331-28.52828 8.0937z"
             fill="#bcbcbc" />
@@ -24,7 +24,7 @@
             fill="#fff" />
     </g>
     <rect fill="#fff" height="33" rx="4" transform="matrix(.866025 .5 .5 -.866025 39.3633 66.752)" width="33" />
-    <rect fill="#333" height="27" rx="3" stroke="#bcbcbc" stroke-linecap="round" stroke-linejoin="round"
+    <rect fill="#000" height="27" rx="3" stroke="#bcbcbc" stroke-linecap="round" stroke-linejoin="round"
         transform="matrix(.866025 .5 .5 -.866025 43.4609 65.6543)" width="27" />
     <path d="m60.1562 48.7363h15v2h-15z" fill="#bcbcbc"
         transform="matrix(.8660254 .5 -.5 .8660254 32.427553 -23.548674)" />

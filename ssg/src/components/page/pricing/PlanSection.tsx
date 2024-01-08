@@ -46,9 +46,9 @@ const Tab = ({
   return (
     <button
       className={clsx(
-        "text-#333 text-3.5-4.5 pb-3-5 w-full cursor-pointer border-b px-2 text-center",
+        "text-#000 text-3.5-4.5 pb-3-5 w-full cursor-pointer border-b px-2 text-center",
         checked
-          ? "text-op-100 border-#333 font-medium"
+          ? "text-op-100 border-#000 font-medium"
           : "text-op-66 border-#D9D9D9",
       )}
       onClick={onClick}
@@ -93,24 +93,24 @@ const Item = ({
   return (
     <div className="border-px rounded-sm border-zinc-300 bg-zinc-100 bg-opacity-50 px-5 pb-20 pt-10 sm:px-10">
       <div className="grid gap-y-4 sm:grid-cols-2">
-        <div className="text-#333 text-7-8 font-medium">{name}</div>
-        <div className="text-#333 text-3.5-4 leading-[1.5] text-opacity-80 sm:order-last">
+        <div className="text-#000 text-7-8 font-medium">{name}</div>
+        <div className="text-#000 text-3.5-4 leading-[1.5] text-opacity-80 sm:order-last">
           {description}
         </div>
         <div className="sm:row-span-2 sm:ml-auto sm:w-fit">
           <div className="mt-15 mx-auto w-fit sm:mt-0 ">
-            <sup className="text-#333 text-7.5 align-super font-semibold leading-loose">
+            <sup className="text-#000 text-7.5 align-super font-semibold leading-loose">
               $
             </sup>
-            <span className="text-#333 text-6xl font-semibold leading-10">
+            <span className="text-#000 text-6xl font-semibold leading-10">
               {price.toLocaleString()}
             </span>
-            <span className="text-#333 text-5 font-normal leading-[1.5]">
+            <span className="text-#000 text-5 font-normal leading-[1.5]">
               /year
             </span>
           </div>
           {price <= 0 && (
-            <div className="text-#333 text-3.5 mx-auto w-fit font-normal text-opacity-70">
+            <div className="text-#000 text-3.5 mx-auto w-fit font-normal text-opacity-70">
               <Translate>FREE FOREVER</Translate>
             </div>
           )}
@@ -134,14 +134,14 @@ const Item = ({
       <div className="mt-15 border-b-px h-px w-full border-zinc-300"></div>
       <div className="mt-20 grid items-center sm:mt-10 sm:grid-cols-2">
         <div className="space-y-5">
-          <div className="text-#333 text-5 font-medium leading-[1.5]">
+          <div className="text-#000 text-5 font-medium leading-[1.5]">
             <Translate>Features</Translate>
           </div>
           <div className="grid gap-4 sm:grid-cols-2">
             {features.map((feature) => (
               <div className="flex-center w-fit space-x-2.5">
                 <Checked className="shrink-0" />
-                <div className="text-#333 text-3.5-4 leading-5">{feature}</div>
+                <div className="text-#000 text-3.5-4 leading-5">{feature}</div>
               </div>
             ))}
           </div>

@@ -19,7 +19,7 @@ const MobileItem = ({
       height={300}
       className="w-full"
     />
-    <div className="bg-#333 space-y-4 px-8 pb-8 pt-5">
+    <div className="bg-#000 space-y-4 px-8 pb-8 pt-5">
       <div className="text-5 font-medium text-white">{title}</div>
       <div className="text-3.5-4 leading-[1.5] text-white text-opacity-80">
         {description}
@@ -42,7 +42,7 @@ const SpecialItem = () => {
       <MobileItem cover={"2.1.webp"} title={title} description={description} />
 
       <div className="!sm:grid relative  !hidden auto-rows-fr sm:col-span-2 sm:grid-cols-2">
-        <div className="fill absolute z-0 bg-gradient-to-t from-slate-950 via-[#010F24] to-transparent sm:bg-gradient-to-r" />
+        <div className="fill from-#000 absolute z-0 bg-gradient-to-t via-[#010F24] to-transparent sm:bg-gradient-to-r" />
 
         <img
           loading="lazy"

@@ -130,7 +130,7 @@ function GridSection({}) {
   return (
     <div className="pb-15 sm:pb-30 sm:pb-25 lg:pb-30 mx-a container grid gap-5 sm:grid-cols-[13fr_20fr_13fr] lg:grid-cols-[296fr_502fr_296fr]">
       <div className="order-0 sm:px-30 lg:px-9.5 sm:space-y-15 space-y-10 rounded-sm bg-white px-5 pb-16 pt-8 shadow sm:order-1 sm:row-span-2 sm:px-6 sm:pt-10">
-        <div className="text-7 text-#333 text-center font-medium">
+        <div className="text-7 text-#000 text-center font-medium">
           <Translate>Information Privacy</Translate>
         </div>
         <img
@@ -181,7 +181,7 @@ const GridItem = ({
     )}
   >
     <props.cover className="place-self-center self-end" />
-    <div className="text-#333 text-4 text-center font-normal leading-[1.5]">
+    <div className="text-#000 text-4 text-center font-normal leading-[1.5]">
       {children}
     </div>
   </div>

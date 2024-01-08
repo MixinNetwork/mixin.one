@@ -2,11 +2,11 @@
     xmlns:xlink="http://www.w3.org/1999/xlink">
     <path
         d="m19.5273 52.373c-1.4329-.8272-1.7736-2.9196-.7611-4.6733l9.3333-16.1658c1.0125-1.7538 2.9949-2.5048 4.4278-1.6775z"
-        fill="#bcbcbc" stroke="#333" stroke-linecap="round" stroke-linejoin="round" />
+        fill="#bcbcbc" stroke="#000" stroke-linecap="round" stroke-linejoin="round" />
     <path
         d="m18.4336 48.2773-7.7942-4.5c-.95662-.5522-1.28437-1.7754-.73209-2.732l7.99999-13.8564c.5523-.9566 1.7755-1.2843 2.7321-.7321l7.7942 4.5z"
-        fill="#e9e9e9" stroke="#333" stroke-linecap="round" stroke-linejoin="round" />
-    <rect fill="#e9e9e9" height="54" rx="11" stroke="#333" stroke-linecap="round" stroke-linejoin="round"
+        fill="#e9e9e9" stroke="#000" stroke-linecap="round" stroke-linejoin="round" />
+    <rect fill="#e9e9e9" height="54" rx="11" stroke="#000" stroke-linecap="round" stroke-linejoin="round"
         transform="matrix(-.8660254 -.5 .5 -.8660254 129.10254 264.592921)" width="101.03" x="100" y="115" />
     <g fill="#252525">
         <path

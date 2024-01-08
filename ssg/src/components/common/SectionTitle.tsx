@@ -38,7 +38,7 @@ export default function SectionTitle({
       {description && (
         <div
           className={clsx(
-            "text-opacity-66 text-#333 leading-[1.5]",
+            "text-opacity-66 text-#000 leading-[1.5]",
             "title-container text-3.5-4 text-center",
             descriptionClassName,
           )}

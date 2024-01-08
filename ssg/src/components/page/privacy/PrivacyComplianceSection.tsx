@@ -5,7 +5,7 @@ import GDPR from "@site/static/img/page/privacy/2.svg"
 
 export const PrivacyComplianceSection = () => {
   return (
-    <div className="bg-slate-100 pb-40">
+    <div className="bg-#F1F6FC66 pb-40">
       <SectionTitle
         description={
           <Translate>

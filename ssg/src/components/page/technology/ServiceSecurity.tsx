@@ -18,7 +18,7 @@ const Item = ({
   <div className="grid grid-cols-[auto_1fr] items-center gap-x-4 gap-y-4">
     {icon}
     <div className="text-4.5-6 font-medium">{title}</div>
-    <div className="text-#333 text-op-80 text-3.5 col-span-full leading-[1.5]">
+    <div className="text-#000 text-op-80 text-3.5 col-span-full leading-[1.5]">
       {description}
     </div>
   </div>
@@ -94,7 +94,7 @@ export const ServiceSecurity = () => (
 
     <a
       href="https://developers.mixin.one/docs/dapp/getting-started/create-dapp"
-      className="px-13 mt-30 rw-10 mx-auto block bg-[#333] py-4 text-center text-white sm:w-fit"
+      className="px-13 mt-30 rw-10 mx-auto block bg-[#000] py-4 text-center text-white sm:w-fit"
     >
       <Translate>Create a Dapp</Translate>
     </a>

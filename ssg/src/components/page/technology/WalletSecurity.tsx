@@ -27,7 +27,7 @@ export const WalletSecurity = () => (
       >
         <a
           href="https://safe.mixin.one/how-it-secures"
-          className="!mt-15 !sm:mt-10 block bg-[#333] py-4 text-center text-white  sm:w-fit sm:px-7"
+          className="!mt-15 !sm:mt-10 block bg-[#000] py-4 text-center text-white  sm:w-fit sm:px-7"
         >
           {translate({
             message: "Technology Detail",
@@ -46,7 +46,7 @@ export const WalletSecurity = () => (
       >
         <a
           href="https://messenger.mixin.one/how-it-works"
-          className="!mt-15 !sm:mt-10 block bg-[#333] py-4 text-center text-white  sm:w-fit sm:px-7"
+          className="!mt-15 !sm:mt-10 block bg-[#000] py-4 text-center text-white  sm:w-fit sm:px-7"
         >
           {translate({
             message: "Technology Detail",

@@ -2,14 +2,14 @@
     <rect width="80" height="80" rx="8" fill="white" />
     <path
         d="M23.5 26C23.5 23.5147 25.5147 21.5 28 21.5H50C52.4853 21.5 54.5 23.5147 54.5 26V52C54.5 54.4853 52.4853 56.5 50 56.5H28C25.5147 56.5 23.5 54.4853 23.5 52V26Z"
-        stroke="#333333" />
+        stroke="#000" />
     <path
         d="M48.5 45.447V29.6845C48.5 28.9255 47.6875 28.4432 47.0211 28.8066L37.7239 33.8779C37.577 33.958 37.4123 34 37.245 34H30C29.4477 34 29 34.4477 29 35V41C29 41.5523 29.4477 42 30 42H37.2834C37.4261 42 37.5672 42.0306 37.6972 42.0896L47.0862 46.3574C47.7483 46.6583 48.5 46.1743 48.5 45.447Z"
-        stroke="#333333" stroke-linecap="round" />
+        stroke="#000" stroke-linecap="round" />
     <path d="M32.5 42L34.2928 48.2747C34.4154 48.704 34.8078 49 35.2543 49H35.5C36.0523 49 36.5 48.5523 36.5 48V42"
-        stroke="#333333" stroke-linecap="round" />
+        stroke="#000" stroke-linecap="round" />
     <path
         d="M58 52C58 56.4183 54.4183 60 50 60C45.5817 60 42 56.4183 42 52C42 47.5817 45.5817 44 50 44C54.4183 44 58 47.5817 58 52Z"
-        fill="white" stroke="#333333" stroke-linecap="round" stroke-linejoin="round" />
-    <path d="M47 52.1643L49.1643 54.3286L53.4929 50" stroke="#333333" stroke-linecap="round" stroke-linejoin="round" />
+        fill="white" stroke="#000" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M47 52.1643L49.1643 54.3286L53.4929 50" stroke="#000" stroke-linecap="round" stroke-linejoin="round" />
 </svg>

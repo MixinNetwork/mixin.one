@@ -27,7 +27,7 @@ const Item = ({
         <div className="text-5.5 sm:text-6.7 md:text-7.8 lg:text-9 font-medium">
           {title}
         </div>
-        <div className="text-3.5-4 text-#333 text-op-80 mt-7 leading-[1.5]">
+        <div className="text-3.5-4 text-#000 text-op-80 mt-7 leading-[1.5]">
           {description.split("\n").map((item) => (
             <p>{item}</p>
           ))}

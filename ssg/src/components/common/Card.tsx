@@ -29,7 +29,7 @@ const Card = ({
 
     <div className="px-4-0 space-y-4">
       <div className="text-5-8 font-medium">{title}</div>
-      <div className="text-#333 text-3.5-4 leading-[1.5] text-opacity-80">
+      <div className="text-#000 text-3.5-4 leading-[1.5] text-opacity-80">
         {description}
       </div>
     </div>

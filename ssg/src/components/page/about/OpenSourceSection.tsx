@@ -16,7 +16,7 @@ export const OpenSourceSection = () => (
         width={423}
         height={380}
       />
-      <div className="py-15 ps-8-12 pe-8-32.5 grow bg-[#333]">
+      <div className="py-15 ps-8-12 pe-8-32.5 grow bg-[#000]">
         <QuotationMark className="h-4.5-8.75 w-6-12" />
         <div className="text-4.5-6 ms-0-7.5 font-normal leading-10 text-white">
           <Translate>
