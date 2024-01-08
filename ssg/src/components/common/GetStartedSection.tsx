@@ -31,7 +31,7 @@ export const GetStartedSection = () => (
           </Translate>
         </div>
         <LocalLink
-          className="flex-center text-#333 text-3.4-4 mt-7 w-fit rounded-sm bg-white bg-opacity-95 px-7 py-4 font-medium md:mt-auto"
+          className="flex-center text-#000 text-3.4-4 mt-7 w-fit rounded-sm bg-white bg-opacity-95 px-7 py-4 font-medium md:mt-auto"
           href="https://calendly.com/mixin-safe/30min?month=2023-11"
         >
           <Translate>Schedule a demo</Translate>

@@ -19,7 +19,7 @@ const MobileItem = ({
       height={300}
       className="w-full"
     />
-    <div className="bg-#333 space-y-4 px-8 pb-8 pt-5">
+    <div className="bg-#000 space-y-4 px-8 pb-8 pt-5">
       <div className="text-5 font-medium text-white">{title}</div>
       <div className="text-3.5-4 leading-[1.5] text-white text-opacity-80">
         {description}

@@ -18,7 +18,7 @@ export function UseNowSection() {
 
         <LocalLink
           href={"https://messenger.mixin.one/download"}
-          className="rw-20 mx-auto mt-8 rounded-sm bg-[#333] py-4 text-center font-medium text-white sm:mx-0 sm:mt-0 sm:w-fit sm:px-8"
+          className="rw-20 mx-auto mt-8 rounded-sm bg-[#000] py-4 text-center font-medium text-white sm:mx-0 sm:mt-0 sm:w-fit sm:px-8"
         >
           <Translate>Download</Translate>
         </LocalLink>

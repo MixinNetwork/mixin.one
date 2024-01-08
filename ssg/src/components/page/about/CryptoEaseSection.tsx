@@ -20,10 +20,10 @@ const Item = ({
     <div className="grid grid-cols-[auto_1fr] grid-rows-[auto_1fr] place-items-start items-start gap-2.5 sm:gap-x-5">
       {icon}
 
-      <div className="text-5.5 sm:text-8 lg:text-10 text-#333 font-medium">
+      <div className="text-5.5 sm:text-8 lg:text-10 text-#000 font-medium">
         {title}
       </div>
-      <div className="text-#333 text-3.5 font-normal leading-[1.5] text-opacity-75">
+      <div className="text-#000 text-3.5 font-normal leading-[1.5] text-opacity-75">
         {description}
       </div>
     </div>

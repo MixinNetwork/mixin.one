@@ -27,10 +27,10 @@ const ProductCard = ({
 
     <div className="sm:space-y-6.2 md:space-y-9.3 lg:space-y-12.5 flex grow flex-col justify-between space-y-3 px-5 py-6">
       <div className="space-y-3">
-        <div className="text-#333 text-5 font-medium leading-tight">
+        <div className="text-#000 text-5 font-medium leading-tight">
           {title}
         </div>
-        <div className="text-#333 text-3.5 font-normal leading-[1.5] text-opacity-80">
+        <div className="text-#000 text-3.5 font-normal leading-[1.5] text-opacity-80">
           {description}
         </div>
       </div>

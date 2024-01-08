@@ -16,7 +16,7 @@ const Item = ({
   <div
     className={clsx(
       "text-3.5 space-y-2.5 font-normal transition-all",
-      isError ? "text-red" : "text-#333 text-opacity-80 ",
+      isError ? "text-red" : "text-#000 text-opacity-80 ",
     )}
   >
     {children}
@@ -123,7 +123,7 @@ export const Section = () => {
           </div>
 
           <button
-            className="text-4 mt-10 w-full rounded-sm bg-[#333] py-4 text-center font-normal text-white"
+            className="text-4 mt-10 w-full rounded-sm bg-[#000] py-4 text-center font-normal text-white"
             onClick={async () => {
               const name = nameRef.current?.value.trim()
               const businessType = businessTypeRef.current?.value

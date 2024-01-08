@@ -11,7 +11,7 @@ const Item = ({
 }) => (
   <div className="space-y-3">
     <div className="text-5-6 font-medium uppercase">{stepName}</div>
-    <div className="text-#333 text-3.5-4 text-op-80 leading-[1.5]">
+    <div className="text-#000 text-3.5-4 text-op-80 leading-[1.5]">
       {description}
     </div>
   </div>
@@ -37,7 +37,7 @@ export const StepsSection = () => {
         className="max-w-120 md:w-full"
       />
       <div className="px-4 sm:px-0">
-        <div className="text-#333 text-op-66">
+        <div className="text-#000 text-op-66">
           <Translate>It’s less complicated than you think</Translate>
         </div>
         <div className="text-7 sm:text-8 md:text-9 mt-3 font-medium">

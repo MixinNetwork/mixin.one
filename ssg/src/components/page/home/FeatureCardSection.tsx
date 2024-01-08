@@ -28,7 +28,7 @@ const FeatureCard = ({
           height={255}
           className="aspect-288/255 w-full object-cover"
         />
-        <div className="bg bg-#333 px-4 pb-8 pt-5 text-white ">
+        <div className="bg bg-#000 px-4 pb-8 pt-5 text-white ">
           <div className="text-4.5 font-medium ">{title}</div>
           <div className="text-3.5 text-op-80 mt-2 leading-[1.5] text-white">
             {description}
