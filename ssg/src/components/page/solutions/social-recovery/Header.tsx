@@ -8,7 +8,7 @@ export const Header = () => (
       description={
         <Translate>
           {
-            "Most users lose their cryptocurrency assets not because they are stolen, but because the owner does not manage their private keys well. 3.7 million bitcoins may be lost forever and cannot be recovered. Mixin Wallet can set up emergency contacts to recover potential loss risks, with high security and simple settings to avoid single point of failure."
+            "Most users lose their cryptocurrency assets not because they are stolen, but because the owner does not manage their private keys well."
           }
         </Translate>
       }

@@ -21,31 +21,31 @@ export default function Root() {
           {
             question: translate({
               message:
-                "Why is Mixin Safe safer than a standalone hardware wallet?",
+                "Why is Mixin Safe safer than a single hardware wallet?",
             }),
             answer: translate({
               message:
-                "The multi-signature and time lock technologies of Mixin Safe effectively avoid single-point failures such as loss or damage of a single hardware wallet device while maintaining decentralization, thereby greatly improving the security of the wallet.",
+                "Mixin Safe's multi-signature and timelock technology effectively avoid single point of failure problems such as loss and damage of a single hardware wallet device while maintaining decentralization, thereby greatly improving the security of the wallet.",
             }),
           },
           {
             question: translate({
               message:
-                "What does the decentralized MPC network used by Mixin Safe mean?",
+                "What exactly does the decentralized MPC network in Mixin Safe refer to?",
             }),
             answer: translate({
               message:
-                "The decentralized MPC network (Safe Network) in Mixin Safe shares validators and security with Mixin Network. Mixin Network is a PoS network composed of 25 pledged full nodes. It has been running stably for more than 5 years and has a total value of more than $1 billion.",
+                "The decentralized MPC network (Safe Network) in Mixin Safe shares validators and security with Mixin Network. Mixin Network is a PoS network composed of 25 pledged full nodes. It has been running stably for more than 5 years and has more than $1B total value secured.",
             }),
           },
           {
             question: translate({
               message:
-                "If the Mixin Safe team disbands, can I still withdraw my assets?",
+                "If Mixin Safe team dissolves, can I still withdraw my assets?",
             }),
             answer: translate({
               message:
-                "Yes, your assets are still safe. You can withdraw your assets at any time through your wallet private key and decentralized MPC network. Even if the Mixin Safe team disbands, your assets are still safe in your hands.",
+                "Yes, your assets are still safe. You can withdraw assets at any time through your wallet private key and the decentralized MPC network. Even if Mixin Safe team is disbanded, your assets are safe in your hand.",
             }),
           },
           {
@@ -55,7 +55,7 @@ export default function Root() {
             }),
             answer: translate({
               message:
-                "No, the Mixin Safe team only has one key, which is not enough to transfer your assets unless you have formulated a recovery or inheritance plan.",
+                "No, Mixin Safe team only has 1 key, that is insufficient to move your assets unless you have set up a recovery or inheritance plan.",
             }),
           },
           {
@@ -70,11 +70,11 @@ export default function Root() {
           {
             question: translate({
               message:
-                "What is the difference between the traditional MPC wallet solution and Mixin Safe?",
+                "What is the difference between a traditional MPC wallet and Mixin Safe?",
             }),
             answer: translate({
               message:
-                "Mixin Safe combines MPC, hardware wallets, multi-signature and time lock technologies, fully utilizing the advantages of each technology while discarding the disadvantages.",
+                "Mixin Safe combines MPC, hardware wallet, multi-signature, and timelock technology, which fully benefits from the advantages of each technology while abandoning the related drawbacks.",
             }),
           },
         ]}

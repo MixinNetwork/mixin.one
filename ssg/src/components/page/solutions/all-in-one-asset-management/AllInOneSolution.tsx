@@ -37,12 +37,12 @@ export const AllInOneSolution = () => (
       description={
         <Translate>
           {
-            "Rich robot ecology meets various needs such as trading, fixed investment, earning coins, options, etc."
+            "Rich bot ecology meets various needs such as trading, fixed investment, earning coins, options, etc."
           }
         </Translate>
       }
     >
-      <Translate>All in one product and service</Translate>
+      <Translate>All-in-one product and service</Translate>
     </SectionTitle>
     <div className="mx-a gap-x-12.5 pb-45 container grid items-center gap-y-5 md:grid-cols-[296fr_505fr_296fr]">
       <img
@@ -59,7 +59,7 @@ export const AllInOneSolution = () => (
         icon={<Svg1 />}
         title={
           <Translate>
-            Read-only authz prevents stolen assets from malicious approvals
+            Read-only authorization prevents stolen assets from malicious approvals.
           </Translate>
         }
         className="mt-10 md:order-1 md:mt-0"
@@ -69,7 +69,7 @@ export const AllInOneSolution = () => (
         icon={<Svg2 />}
         title={
           <Translate>
-            No need to install/uninstall, no storage used, directly open and use
+            No need to install/uninstall, no storage used, directly open and use.
           </Translate>
         }
         className="md:order-3"
@@ -79,7 +79,7 @@ export const AllInOneSolution = () => (
         icon={<Svg3 />}
         title={
           <Translate>
-            Purchase products or services in any cryptocurrency with no fees
+            Purchase products or services in any cryptocurrency with no fees.
           </Translate>
         }
         className="md:order-4"
@@ -90,7 +90,7 @@ export const AllInOneSolution = () => (
         title={
           <Translate>
             {
-              "Support to interact with bots via flexible interfaces and conversations"
+              "Support to interact with bots via flexible interfaces and conversations."
             }
           </Translate>
         }
@@ -102,7 +102,7 @@ export const AllInOneSolution = () => (
         title={
           <Translate>
             {
-              "The seamless authentication and notification make the PX complete"
+              "The seamless authentication and notification make the PX complete."
             }
           </Translate>
         }

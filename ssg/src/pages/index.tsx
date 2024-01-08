@@ -137,11 +137,11 @@ export default function Root() {
           },
           {
             question: translate({
-              message: "Is Mixin Safe safer than my hardware wallet?",
+              message: "Why is Mixin Safe safer than a single hardware wallet?",
             }),
             answer: translate({
               message:
-                "Mixin Safe's multi-signature and time lock technology effectively avoids single-point failures such as loss or damage of a single hardware wallet device while maintaining decentralization, thereby greatly improving the security of the wallet.",
+                "Mixin Safe's multi-signature and timelock technology effectively avoid single point of failure problems such as loss and damage of a single hardware wallet device while maintaining decentralization, thereby greatly improving the security of the wallet.",
             }),
           },
           {

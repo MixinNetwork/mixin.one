@@ -43,7 +43,7 @@ export const AccessibleSection = () => {
           description={
             <Translate>
               {
-                "Next-gen security leverages MPC cryptography instead of seed phrases or private keys."
+                "Utilizing next-gen security encryption technology MPC instead of mnemonic phrases or private keys."
               }
             </Translate>
           }
@@ -117,7 +117,7 @@ export const AccessibleSection = () => {
               })}
               description={translate({
                 message:
-                  "Marble uses client-side cryptography and multi-party computation to protect user assets.",
+                  "The wallet client uses encryption and multi-party computation technology to protect user assets.",
               })}
             />
             <Item

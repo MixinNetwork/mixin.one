@@ -66,8 +66,7 @@ export const MakeItSampleSection = () => {
       <SectionTitle
         description={
           <Translate>
-            Seamlessly move between fiat and crypto. lnexpensive and
-            hassle-free.
+            Seamlessly move between fiat and crypto. Inexpensive and hassle-free.
           </Translate>
         }
         className="!md:children:max-w-full !md:children:w-full !md:children:text-start !md:mb-8 !md:px-5"
@@ -83,7 +82,7 @@ export const MakeItSampleSection = () => {
           })}
           description={translate({
             message:
-              "With the advantage of free transfers on the decentralized Mixin Network, users do not need to pay additional blockchain fees.",
+              "With the advantage of decentralized network Mixin Network, users can transfer funds for free without the need to pay additional blockchain gas fees.",
           })}
           className="md:mt-15"
         />
@@ -106,14 +105,14 @@ export const MakeItSampleSection = () => {
           })}
           description={translate({
             message:
-              "Available in 150+countries and territories, Support for major global payment/payout methods, with new options constantly added.",
+              "Available in 150+ countries and territories, Support for major global payment methods, with new options constantly added.",
           })}
         />
         <Item
           cover="2.4.webp"
           background="2.8.webp"
           title={translate({
-            message: "Your money, your way",
+            message: "Your Money, Your Way",
           })}
           description={translate({
             message: "Swap between fiat and crypto instantly.",

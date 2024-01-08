@@ -20,7 +20,7 @@ export const StepsSection = () => {
         description={
           <Translate>
             {
-              "When you lose your phone with Mixin Messenger installed, you can not only re-login by replacing the SIM card, but also re-gain control of the wallet by logging in with the emergency contact set in advance."
+              "When your device is accidentally lost, you can regain control of the wallet by logging in through a pre-set emergency contact."
             }
           </Translate>
         }
@@ -35,7 +35,7 @@ export const StepsSection = () => {
               .default
           }
           title={translate({
-            message: "Set emergency contacts",
+            message: "Set Emergency Contacts",
           })}
         >
           <div className="mt-7.5 space-y-5">
@@ -45,7 +45,7 @@ export const StepsSection = () => {
                   "Invite your family or friends to install Mixin Messenger and add each other",
               }),
               translate({
-                message: "Set your family and friends as emergency contacts",
+                message: "Set your family or friends as emergency contacts",
               }),
             ].map(stepGenerator)}
           </div>
@@ -56,7 +56,7 @@ export const StepsSection = () => {
               .default
           }
           title={translate({
-            message: "Login with emergency contacts",
+            message: "Login with Emergency Contacts",
           })}
         >
           <div className="mt-7.5 space-y-5">
@@ -70,7 +70,7 @@ export const StepsSection = () => {
                   "Ask the emergency contact to get the verification code",
               }),
               translate({
-                message: "Change the phone number of the current account",
+                message: "Enter the wallet's PIN to confirm asset security, and update the current account's phone number to the new one.",
               }),
             ].map(stepGenerator)}
           </div>

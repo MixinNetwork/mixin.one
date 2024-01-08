@@ -63,7 +63,7 @@ export default function Root() {
             }),
             answer: translate({
               message:
-                "You can regain control of your MPC wallet by using your emergency contact and 6-digit PIN code.",
+                "You can regain control of your MPC wallet through an emergency contact and a 6-digit PIN code.",
             }),
           },
         ]}

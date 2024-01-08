@@ -41,11 +41,11 @@ export const FeatureSection = () => (
   <>
     <SectionTitle
       description={
-        <Translate>{"Self-hosted wallet, you own the private key."}</Translate>
+        <Translate>{"A non-custodial wallet, you control your private keys."}</Translate>
       }
       className="!mb-0"
     >
-      <Translate>Own your assets</Translate>
+      <Translate>Own Your Coins</Translate>
     </SectionTitle>
     <div className="even:children:bg-#F2F2F2">
       <FullItem
@@ -53,10 +53,10 @@ export const FeatureSection = () => (
           require("@site/static/img/page/solutions/custody/2.1.webp").default
         }
         title={translate({
-          message: "Multi-signature custody",
+          message: "Multisig Management",
         })}
         description={translate({
-          message: `Most Bitcoins are lost due to owners mismanaging their private keys. If you want to store Bitcoins for a long time, a multi-signature wallet is essential. The double multi-signature we designed significantly improves this situation. Bitcoin address of the vault Controlled by 3 private keys, the owner and co-manager jointly control 2 of the 3 private keys.`,
+          message: `Most Bitcoin losses occur due to poor management of private keys. If you want to store Bitcoins for a long time, a multisig wallet is essential. Our design of multisig significantly improves this situation: The Bitcoin address is controlled by 3 private keys, with the owner and members jointly controlling 2 of the 3 keys.`,
         })}
       />
       <FullItem
@@ -64,10 +64,10 @@ export const FeatureSection = () => (
           require("@site/static/img/page/solutions/custody/2.2.webp").default
         }
         title={translate({
-          message: "Approval process",
+          message: "Approval Process",
         })}
         description={translate({
-          message: `We have designed a complete approval process for the vault transfer. Each transfer needs to be approved by the vault co-manager before it can take effect. All suspicious transactions will be rejected in the approval process. The vault co-manager is designed to only participate in asset management, but cannot conspire to steal assets, because all transactions face the final approval of the vault owner.`,
+          message: `Every transaction requires approval from the members and owner to take effect. Suspicious transactions are rejected during the approval process.`,
         })}
       />
       <FullItem
@@ -75,10 +75,10 @@ export const FeatureSection = () => (
           require("@site/static/img/page/solutions/custody/2.3.webp").default
         }
         title={translate({
-          message: "Simple collaboration",
+          message: "Simple Collaboration",
         })}
         description={translate({
-          message: `Complexity is a hidden danger. Your family, friends, and colleagues do not need professional cryptocurrency knowledge. Through Mixin Messenger's secure and private information communication, they can safely participate in asset management through a 6-digit password, and set emergency contacts to avoid further reducing the risk of single point of failure.`,
+          message: `Complexity brings risks. Your family, friends, and colleagues do not need specialized knowledge of cryptocurrencies. Through secure and private communication in Mixin Messenger, they can participate in asset management securely with a 6-digit PIN code. By setting emergency contacts, the risk of single point of failure is further reduced.`,
         })}
       />
       <FullItem
@@ -86,10 +86,10 @@ export const FeatureSection = () => (
           require("@site/static/img/page/solutions/custody/2.4.webp").default
         }
         title={translate({
-          message: "Asset isolation",
+          message: "Asset Segregation",
         })}
         description={translate({
-          message: `Our multi-vault design can help you isolate assets, establish multiple vaults according to usage, and set different co-managers for different vaults. Asset isolation can further enhance the privacy and security of assets.`,
+          message: `Our multi-safe design helps you achieve asset segregation. You can create multiple safes for different purposes and set different members for each safe. With asset segregation, different members only have access to their designated safes, further enhances the privacy and security of your assets.`,
         })}
       />
     </div>

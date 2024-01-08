@@ -75,18 +75,18 @@ export const Header = () => (
         description={
           <Translate>
             {
-              "With two keys, you're in total control of your bitcoin. Keep each key ina separate location."
+              "With two keys, you're in total control of your bitcoin. Keep each key in a separate location."
             }
           </Translate>
         }
       />
       <Item
         icon={<Svg3 />}
-        title={<Translate>We secure arecovery key</Translate>}
+        title={<Translate>We secure a recovery key</Translate>}
         description={
           <Translate>
             {
-              "With only one key, we can't move your bitcoin,but we can collaborate to move bitcoin if you lose akey."
+              "With only one key, we can't move your bitcoin, but we can collaborate to move bitcoin if you lose a key."
             }
           </Translate>
         }

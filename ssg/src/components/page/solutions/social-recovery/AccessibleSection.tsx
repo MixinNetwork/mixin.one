@@ -77,12 +77,12 @@ export const AccessibleSection = () => (
       description={
         <Translate>
           {
-            "Next-gen security leverages MPC cryptography instead of seed phrases or private keys."
+            "3.7 million Bitcoin are probably gone forever."
           }
         </Translate>
       }
     >
-      <Translate>Mixin wallet makes crypto accessible</Translate>
+      <Translate>Real People Who Lost Their Bitcoin Fortunes</Translate>
     </SectionTitle>
     <div
       className={clsx(

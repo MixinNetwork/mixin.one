@@ -38,7 +38,7 @@ export const MultiRoleCollaborationSection = () => {
         description={
           <Translate>
             {
-              "Creators will be able to create a segregation of duties by managing users and assigning permissions and roles."
+              "Safely manage large sums of money by segregating and allocating them for different custodians through multi-vault use cases."
             }
           </Translate>
         }
@@ -70,7 +70,7 @@ export const MultiRoleCollaborationSection = () => {
           description={
             <Translate>
               {
-                "Allows you to create multiple vaults for different businesses. Each vault can set a different co-management mode, for example: requiring 2 of the 3 vault co-managers to agree to release any assets for each transaction."
+                "Create multiple vaults with different purposes, each configured with distinct custodial modes, for instance: requiring the agreement of 2 out of 3 vault custodians for any asset expenditure."
               }
             </Translate>
           }
@@ -88,11 +88,11 @@ export const MultiRoleCollaborationSection = () => {
         />
         <Item
           icon={<Svg3 />}
-          title={<Translate>{"No collusion risk"}</Translate>}
+          title={<Translate>{"No Collusion Risk"}</Translate>}
           description={
             <Translate>
               {
-                "All transactions must be signed by the vault owner to take effect, and multiple vault co-managers cannot collude to steal assets."
+                "All transactions require joint signatures from the vault owner and vault custodian to become effective, preventing collusion to steal assets by vault custodians."
               }
             </Translate>
           }

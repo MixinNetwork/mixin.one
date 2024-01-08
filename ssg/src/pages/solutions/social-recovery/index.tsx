@@ -28,7 +28,7 @@ export default function Root() {
             }),
             answer: translate({
               message:
-                "Social Recovery is a recovery method that does not require a seed or mnemonic wallet, and also ensures that the recovery process is completely non-custodial.",
+                "Social recovery refers to a method of wallet recovery that doesn't require a seed or mnemonic phrases, while also ensuring that the wallet is non-custodial.",
             }),
           },
           {
@@ -37,7 +37,7 @@ export default function Root() {
             }),
             answer: translate({
               message:
-                "Most users lose their cryptocurrency assets not because they are stolen, but because the owners do not manage their private keys well. The Mixin wallet with social recovery function can set up an emergency contact to effectively avoid single-point failures.",
+                "Most users lose their cryptocurrency assets not because they are stolen, but because the owners do not manage their private keys well. The Mixin wallet, equipped with social recovery capabilities, can effectively prevent single points of failure.",
             }),
           },
           {

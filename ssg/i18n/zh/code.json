@@ -316,10 +316,10 @@
   "Yes, Mixin Safe combines the multi-signature and time lock scripts of the Bitcoin network, and adopts the decentralized mature multi-party computing MPC technology, and successfully realizes a complete decentralized asset custody solution. Through the Bitcoin native time lock technology, only you have complete control of the wallet, and no one else, including our team, can spend your coins.": {
     "message": "是的，Mixin Safe 通过组合比特币网络的多重签名与时间锁脚本，又采用去中心化的成熟的多方计算 MPC 技术，成功实现了一套完整的去中心化资产托管方案。通过比特币原生的时间锁技术，只有您完整拥有钱包的控制权，其他任何人包括我们团队都无法花费您的币。"
   },
-  "Is Mixin Safe safer than my hardware wallet?": {
-    "message": "Mixin Safe 会比我的硬件钱包更安全吗？"
+  "Why is Mixin Safe safer than a single hardware wallet?": {
+    "message": "Mixin Safe 为什么比单独的硬件钱包更安全？"
   },
-  "Mixin Safe's multi-signature and time lock technology effectively avoids single-point failures such as loss or damage of a single hardware wallet device while maintaining decentralization, thereby greatly improving the security of the wallet.": {
+  "Mixin Safe's multi-signature and timelock technology effectively avoid single point of failure problems such as loss and damage of a single hardware wallet device while maintaining decentralization, thereby greatly improving the security of the wallet.": {
     "message": "Mixin Safe 的多重签名和时间锁技术在保持去中心化的同时，有效避免了单个硬件钱包设备丢失、损坏等单点故障问题，从而大大提高了钱包的安全性。"
   },
   "Do I have to pay to use Mixin products?": {
@@ -397,16 +397,16 @@
   "The developers behind Mixin Safe also developed Mixin Network. Mixin Safe uses the same Mixin Network validators to protect the MPC network.": {
     "message": "Mixin Safe 背后的开发人员还开发了 Mixin Network。Mixin Safe 使用相同的 Mixin Network 验证器来保护 MPC 网络。"
   },
-  "If the Mixin Safe team disbands, can I still withdraw my assets?": {
+  "If Mixin Safe team dissolves, can I still withdraw my assets?": {
     "message": "如果 Mixin Safe 团队解散，我还能提取资产吗？"
   },
-  "Yes, your assets are still safe. You can withdraw your assets at any time through your wallet private key and the decentralized MPC network. Even if the Mixin Safe team disbands, your assets are safe in your hands.": {
+  "Yes, your assets are still safe. You can withdraw assets at any time through your wallet private key and the decentralized MPC network. Even if Mixin Safe team is disbanded, your assets are safe in your hand.": {
     "message": "是的，您的资产仍然安全。您可以随时通过您的钱包私钥和去中心化的 MPC 网络提取资产。即使 Mixin Safe 团队解散，您的资产在您手中也是安全的。"
   },
-  "If I lose my private key and the safety time lock also expires, can the Mixin Safe team take away my assets?": {
+  "If my private key is lost and the timelock expires, can Mixin Safe team take my assets?": {
     "message": "如果我的私钥丢失，安全时间锁也到期，Mixin Safe 团队可以拿走我的资产吗？"
   },
-  "No, the Mixin Safe team only has one key, which is not enough to transfer your assets unless you have already set up a recovery or inheritance plan.": {
+  "No, Mixin Safe team only has 1 key, that is insufficient to move your assets unless you have set up a recovery or inheritance plan.": {
     "message": "不，Mixin Safe 团队只有一把钥匙，除非您已制定恢复或继承计划，否则不足以转移您的资产。"
   },
   "After the plan expires, if I don't renew, can I still withdraw my assets?": {
@@ -439,18 +439,6 @@
   "No, but we will send multiple notifications for you to pay the plan fee before the plan expires.": {
     "message": "不会，但我们会发送多个通知，让您在计划到期前支付计划费用。"
   },
-  "Why is Mixin Safe more secure than a standalone hardware wallet?": {
-    "message": "Mixin Safe 为什么比单独的硬件钱包更安全？"
-  },
-  "Mixin Safe's multi-signature and time-lock technology effectively avoids single-point failure issues such as loss or damage of a single hardware wallet device while maintaining decentralization, thereby greatly improving the security of the wallet.": {
-    "message": "Mixin Safe 的多重签名和时间锁技术在保持去中心化的同时，有效避免了单个硬件钱包设备丢失、损坏等单点故障问题，从而大大提高了钱包的安全性。"
-  },
-  "What does the decentralized multi-party computation (MPC) network used by Mixin Safe specifically refer to?": {
-    "message": "Mixin Safe 使用的去中心化的多方计算 MPC 网络具体指什么？"
-  },
-  "The decentralized MPC network (Safe Network) in Mixin Safe shares validators and security with Mixin Network. Mixin Network is a PoS network composed of 25 pledged full nodes. It has been running stably for more than 5 years, with a total value of over 1 billion dollars.": {
-    "message": "Mixin Safe 中的去中心化 MPC 网络（Safe Network）与 Mixin Network 共享验证器和安全性。Mixin Network 是由 25 个质押的全节点组成的 PoS 网络。它已经稳定运行了 5 年多，总价值超过 10 亿美元。"
-  },
   "Is Mixin Safe a custodial wallet?": {
     "message": "Mixin Safe 是托管钱包吗？"
   },
@@ -459,9 +447,6 @@
   },
   "How is the traditional MPC wallet solution different from Mixin Safe?": {
     "message": "传统的 MPC 钱包方案与 Mixin Safe 比有何不同？"
-  },
-  "Mixin Safe combines MPC, hardware wallets, multi-signature and time-lock technologies, fully utilizing the advantages of each technology while discarding related disadvantages.": {
-    "message": "Mixin Safe 结合了 MPC、硬件钱包、多重签名和时间锁技术，充分利用了每种技术的优点，同时摒弃了相关缺点。"
   },
   "🇭🇰 Mixin Ltd": {
     "message": "🇭🇰 Mixin Ltd"
@@ -881,7 +866,7 @@
     "message": "财富传承"
   },
   "Notification Service": {
-    "message": "及时提醒"
+    "message": "通知服务"
   },
   "We use Mixin Messenger, SMS, Slack, Telegram and other channels to regularly notify safe members to approve transactions as soon as possible to improve efficiency.": {
     "message": "我们通过 Mixin Messenger、SMS、Slack、Telegram 等渠道定期通知钱包合作者尽快批准交易，提高效率。"
@@ -1015,7 +1000,7 @@
   "Privacy Compliance": {
     "message": "隐私合规"
   },
-  "Asset Isolation": {
+  "Asset Segregation": {
     "message": "资产隔离"
   },
   "How it Secures": {
@@ -1463,10 +1448,10 @@
     "message": "您用法币购买的加密货币在您的 Mixin 钱包。"
   },
   "How do I use the service of buying cryptocurrencies with fiat currency?": {
-    "message": "如何使用法币购买加密货币这个服务？"
+    "message": "如何使用法币购买加密货币这项服务？"
   },
-  "What age do I need to be to use Mixin Route?": {
-    "message": "需要多大年龄才能使用 Mixin Route？ "
+  "Is the purchase of cryptocurrency available for individuals under 18?": {
+    "message": "未满 18 岁可以使用购买加密货币这项服务吗？"
   },
   "You need to be 18 years old to use our service.": {
     "message": "您需要年满 18 岁才能使用我们的服务。"
@@ -1475,7 +1460,7 @@
     "message": "如何联系客服？"
   },
   "Please leave a message to Team Mixin 7000 customer service in Mixin Messenger, or leave a message in the customer service floating window in the lower right corner of the website.": {
-    "message": "请通过在 Mixin Messenger 中给 Team Mixin 7000 客服留言，或者网站右下角客服浮窗留言。"
+    "message": "在 Mixin Messenger 中给 Team Mixin 7000 客服留言，或者网站右下角客服浮窗留言。"
   },
   "What is Multi-role Collaboration?": {
     "message": "什么是共管审批？"
@@ -1507,32 +1492,14 @@
   "No.": {
     "message": "不需要。"
   },
-  "Why is Mixin Safe safer than a standalone hardware wallet?": {
-    "message": "Mixin Safe 为什么比单独的硬件钱包更安全？"
-  },
-  "The multi-signature and time lock technologies of Mixin Safe effectively avoid single-point failures such as loss or damage of a single hardware wallet device while maintaining decentralization, thereby greatly improving the security of the wallet.": {
-    "message": "Mixin Safe 的多重签名和时间锁技术在保持去中心化的同时，有效避免了单个硬件钱包设备丢失、损坏等单点故障问题，从而大大提高了钱包的安全性。"
-  },
-  "What does the decentralized MPC network used by Mixin Safe mean?": {
+  "What exactly does the decentralized MPC network in Mixin Safe refer to?": {
     "message": "Mixin Safe 使用的去中心化的多方计算 MPC 网络具体指什么？"
   },
-  "The decentralized MPC network (Safe Network) in Mixin Safe shares validators and security with Mixin Network. Mixin Network is a PoS network composed of 25 pledged full nodes. It has been running stably for more than 5 years and has a total value of more than $1 billion.": {
+  "The decentralized MPC network (Safe Network) in Mixin Safe shares validators and security with Mixin Network. Mixin Network is a PoS network composed of 25 pledged full nodes. It has been running stably for more than 5 years and has more than $1B total value secured.": {
     "message": "Mixin Safe 中的去中心化 MPC 网络（Safe Network）与 Mixin Network 共享验证器和安全性。Mixin Network 是由 25 个质押的全节点组成的 PoS 网络。它已经稳定运行了 5 年多，总价值超过 10 亿美元。"
-  },
-  "Yes, your assets are still safe. You can withdraw your assets at any time through your wallet private key and decentralized MPC network. Even if the Mixin Safe team disbands, your assets are still safe in your hands.": {
-    "message": "是的，您的资产仍然安全。您可以随时通过您的钱包私钥和去中心化的 MPC 网络提取资产。即使 Mixin Safe 团队解散，您的资产在您手中也是安全的。"
   },
   "If my private key is lost and the security time lock has expired, can the Mixin Safe team take away my assets?": {
     "message": "如果我的私钥丢失，安全时间锁也到期，Mixin Safe 团队可以拿走我的资产吗？"
-  },
-  "No, the Mixin Safe team only has one key, which is not enough to transfer your assets unless you have formulated a recovery or inheritance plan.": {
-    "message": "不，Mixin Safe 团队只有一把钥匙，除非您已制定恢复或继承计划，否则不足以转移您的资产。"
-  },
-  "What is the difference between the traditional MPC wallet solution and Mixin Safe?": {
-    "message": "传统的 MPC 钱包方案与 Mixin Safe 比有何不同？"
-  },
-  "Mixin Safe combines MPC, hardware wallets, multi-signature and time lock technologies, fully utilizing the advantages of each technology while discarding the disadvantages.": {
-    "message": "Mixin Safe 结合了 MPC、硬件钱包、多重签名和时间锁技术，充分利用了每种技术的优点，同时摒弃了相关缺点。"
   },
   "MPC Wallets": {
     "message": "MPC 钱包"
@@ -1550,7 +1517,7 @@
     "message": "Mixin 的 MPC 钱包（Mixin Messenger）可以免费使用。"
   },
   "What is the difference between MPC Wallet and Multisig Wallet?": {
-    "message": "为什么 MPC 钱包与多重签名钱包有什么区别？"
+    "message": "MPC 钱包与多重签名钱包有什么区别？"
   },
   "Although both have effective single-point fault exclusion, MPC wallets have only one private key, and multisig wallets require multiple private keys to use, which is more complicated.": {
     "message": "虽然两者都能有效的排除单点故障，但是 MPC 钱包只有一个私钥，多重签名钱包需要多个私钥并且使用起来更加复杂。"
@@ -1564,20 +1531,20 @@
   "How do I recover my MPC wallet?": {
     "message": "如何恢复我的 MPC 钱包？"
   },
-  "You can regain control of your MPC wallet by using your emergency contact and 6-digit PIN code.": {
-    "message": "必要时可以先通过紧急联系人和 6 位 PIN 码重新获得您的 MPC 钱包控制权。"
+  "You can regain control of your MPC wallet through an emergency contact and a 6-digit PIN code.": {
+    "message": "您可以通过紧急联系人和 6 位 PIN 码重新获得您的 MPC 钱包控制权。"
   },
   "What is Social Recovery?": {
     "message": "什么是社交恢复？"
   },
-  "Social Recovery is a recovery method that does not require a seed or mnemonic wallet, and also ensures that the recovery process is completely non-custodial.": {
-    "message": "社交恢复是指一种不需要种子、助记词钱包的恢复方法，同时还确保恢复过程完全非托管。"
+  "Social recovery refers to a method of wallet recovery that doesn't require a seed or mnemonic phrases, while also ensuring that the wallet is non-custodial.": {
+    "message": "社交恢复是指一种不需要私钥、助记词恢复钱包的方法，同时还确保该钱包是一款非托管钱包。"
   },
   "Why do I need a wallet with social recovery?": {
     "message": "为什么我需要具备社交恢复的钱包？"
   },
-  "Most users lose their cryptocurrency assets not because they are stolen, but because the owners do not manage their private keys well. The Mixin wallet with social recovery function can set up an emergency contact to effectively avoid single-point failures.": {
-    "message": "大多数用户丢失加密货币资产并不是因为它们被盗，而是因为所有者没有很好地管理他们的私钥。具备社交恢复功能的 Mixin 钱包可以设置紧急联系人能有效避免单点故障。"
+  "Most users lose their cryptocurrency assets not because they are stolen, but because the owners do not manage their private keys well. The Mixin wallet, equipped with social recovery capabilities, can effectively prevent single points of failure.": {
+    "message": "大多数用户丢失加密货币资产并不是因为它们被盗，而是因为所有者没有很好地管理他们的私钥。具备社交恢复功能的 Mixin 钱包可以有效避免单点故障。"
   },
   "How to set up the social recovery function?": {
     "message": "如何设置社交恢复功能？"
@@ -1595,34 +1562,34 @@
     "message": "我可以设置自己为紧急联系人吗？"
   },
   "If you have multiple devices, you can log in to Mixin Messenger on both devices and set each other as emergency contacts.": {
-    "message": "如果你有多个设备，你可以在两个设备都登录 Mixin Messenger 后相互设置为紧急联系人。"
+    "message": "您可以在多个设备上安装并登录 Mixin Messenger，然后相互设置为紧急联系人。"
   },
-  "Rich robot ecology meets various needs such as trading, fixed investment, earning coins, options, etc.": {
-    "message": "丰富的机器人生态满足交易、定投、赚币、期权等各种需求。"
+  "Rich bot ecology meets various needs such as trading, fixed investment, earning coins, options, etc.": {
+    "message": "丰富的机器人生态满足交易、定投、赚币、期权等不同需求。"
   },
-  "All in one product and service": {
+  "All-in-one product and service": {
     "message": "一站式产品和服务"
   },
-  "Read-only authz prevents stolen assets from malicious approvals": {
-    "message": "只读授权可防止资产未经批准就被转移。"
+  "Read-only authorization prevents stolen assets from malicious approvals.": {
+    "message": "只读授权让您安全畅玩机器人，告别恶意授权资产被盗。"
   },
-  "No need to install/uninstall, no storage used, directly open and use": {
-    "message": "无需安装/卸载，不占用存储空间，直接打开使用。"
+  "No need to install/uninstall, no storage used, directly open and use.": {
+    "message": "无需下载等待，不占用存储空间，打开即用，用完即走。"
   },
-  "Purchase products or services in any cryptocurrency with no fees": {
-    "message": "使用任意加密货币购买产品和服务，没有网络 Gas 费。"
+  "Purchase products or services in any cryptocurrency with no fees.": {
+    "message": "用任意加密货币支付购买喜欢的产品或服务，零手续费。"
   },
-  "Support to interact with bots via flexible interfaces and conversations": {
-    "message": "支持与机器人对话或灵活的界面交互。"
+  "Support to interact with bots via flexible interfaces and conversations.": {
+    "message": "支持与机器人进行多种类型消息交互和灵活的界面交互。"
   },
-  "The seamless authentication and notification make the PX complete": {
-    "message": "授权和通知打造无缝交互。"
+  "The seamless authentication and notification make the PX complete.": {
+    "message": "结合无缝授权和消息通知，您可以获得完整产品的体验。"
   },
   "The bots provide information, trading, games, tools, you name it.": {
-    "message": "社群、交易、游戏、工具各种机器人应有尽有。"
+    "message": "各种资讯、社群、交易、游戏、工具等机器人应有尽有。"
   },
   "Since 2017, we have supported 48 blockchains and 2200+ tokens, including Ethereum-compatible layer 1 and layer 2 networks.": {
-    "message": "支持 48 个区块链  2200+ 种代币存储，包括与以太坊兼容的第 1 层和第 2 层网络。"
+    "message": "2017 年以来，我们支持了 48 个区块链超过 2200 种代币，包括与以太坊兼容的 1 层和 2 层网络。"
   },
   "All-in-one wallet suite for comprehensive asset management": {
     "message": "一站式钱包管理解决方案"
@@ -1631,25 +1598,25 @@
     "message": "购买加密货币"
   },
   "Instantly {keyword} with decentralized": {
-    "message": "用去中心化的方案实时{keyword}"
+    "message": "立刻用去中心化的方案{keyword}"
   },
   "Buying crypto with credit or debit card on Mixin app is easy and safe.": {
-    "message": "在 Mixin 应用程序上使用信用卡或借记卡购买加密货币既简单又安全。"
+    "message": "在 Mixin Messenger 上使用信用卡或借记卡购买加密货币既简单又安全。"
   },
-  "Seamlessly move between fiat and crypto. lnexpensive and hassle-free.": {
+  "Seamlessly move between fiat and crypto. Inexpensive and hassle-free.": {
     "message": "在法定货币和加密货币之间无缝转移，便宜又简单。"
   },
   "We make it simple": {
     "message": "我们让一切变得简单"
   },
   "Lowest Fees": {
-    "message": "费用最低"
+    "message": "费用更低"
   },
   "Fast & Reliable": {
     "message": "快速可靠"
   },
   "Swap between fiat and crypto instantly.": {
-    "message": "立即在法定货币和加密货币之间进行交换。"
+    "message": "立即在法定货币和加密货币之间进行转换。"
   },
   "It’s less complicated than you think": {
     "message": "没有你想象的那么复杂"
@@ -1667,25 +1634,25 @@
     "message": "步骤 2"
   },
   "Upload passport, ID card or driver’s license and complete KYC": {
-    "message": "上传护照、ID 卡或驾照和活体检测完成 KYC 认证。"
+    "message": "上传护照、ID 卡或驾照并进行活体检测完成 KYC 认证。"
   },
   "STEP 3": {
     "message": "步骤 3"
   },
   "Enter the amount, currency, select the payment method and complete the payment, your purchased cryptocurrency will soon enter your Mixin wallet.": {
-    "message": "输入金额、币种，选择支付方式并完成付款，你的购买的加密货币很快进入你的 Mixin 钱包。"
+    "message": "输入金额、币种，然后选择支付方式并完成付款，你的购买的加密货币将很快进入你的 Mixin 钱包。"
   },
-  "transactions signed": {
-    "message": "交易签名"
+  "fast": {
+    "message": "快速"
   },
   "Stop wrangling signers, squinting at addresses, and spending hours creating transactions. Start executing fast.": {
-    "message": "停止与签名者争论、反复检查地址以及花费数小时创建交易，立刻开始快速执行。"
+    "message": "停止与共管人争论、反复检查地址以及花费数小时创建交易，立刻开始快速执行。"
   },
-  "Get your multisig {keyword} and executed fast": {
-    "message": "快速执行您的多重{keyword}"
+  "Get your multisig transactions signed and executed {keyword}": {
+    "message": "{keyword}执行您的多重签名交易"
   },
-  "Creators will be able to create a segregation of duties by managing users and assigning permissions and roles.": {
-    "message": "创建者可以通过管理用户以及分配角色来创建职责分离。"
+  "Safely manage large sums of money by segregating and allocating them for different custodians through multi-vault use cases.": {
+    "message": "通过多金库用途隔离并分配不同的共管人来安全的管理大额资金。"
   },
   "Multi-Role Collaboration": {
     "message": "多人协作"
@@ -1694,19 +1661,19 @@
     "message": "2/3 多签共管"
   },
   "A total of three keys control your vault, with two of those keys required to approve a spend.": {
-    "message": "总共三个密钥控制您的金库，每次花费都需要其中两个密钥签名批准。"
+    "message": "总共有三个密钥控制您的金库，每次花费都需要其中两个密钥签名批准。"
   },
   "You hold two of your keys": {
     "message": "您持有两个密钥"
   },
-  "With two keys, you're in total control of your bitcoin. Keep each key ina separate location.": {
-    "message": "有了两把密钥，您就可以完全控制您的比特币。注意将每个密钥放在单独的位置。"
+  "With two keys, you're in total control of your bitcoin. Keep each key in a separate location.": {
+    "message": "您可以通过两个密钥完全控制您的比特币，注意将每个密钥分开独立存储。"
   },
-  "We secure arecovery key": {
-    "message": "恢复密钥托管"
+  "We secure a recovery key": {
+    "message": "我们确保恢复密钥的安全"
   },
-  "With only one key, we can't move your bitcoin,but we can collaborate to move bitcoin if you lose akey.": {
-    "message": "我们只有一把钥匙无法转移您的比特币，但如果您丢失钥匙，我们可以合作转移比特币。"
+  "With only one key, we can't move your bitcoin, but we can collaborate to move bitcoin if you lose a key.": {
+    "message": "我们只有一个密钥，所以无法独立转移您的比特币。但如果您不慎丢失了一个密钥，我们可以合作转移比特币。"
   },
   "Quickly approve and execute your multi-signature transactions.": {
     "message": "快速批准并执行您的多重签名交易。"
@@ -1723,35 +1690,32 @@
   "Repeated notifications will be sent automatically by Mixin Messenger and SMS bot until your transaction is executed, so you don't need to manually remind the co-signers.": {
     "message": "通过 Mixin Messenger 和 SMS 机器人会自动发送重复通知，直到您的交易被执行，因此您无需手动去提醒金库共管人。"
   },
-  "Self-hosted wallet, you own the private key.": {
+  "A non-custodial wallet, you control your private keys.": {
     "message": "自托管钱包，自己掌握私钥。"
   },
-  "Own your assets": {
-    "message": "拥有你的资产"
+  "Own Your Coins": {
+    "message": "拥有您的资产"
   },
-  "Multi-signature custody": {
+  "Multisig Management": {
     "message": "多签共管"
   },
-  "Most Bitcoins are lost due to owners mismanaging their private keys. If you want to store Bitcoins for a long time, a multi-signature wallet is essential. The double multi-signature we designed significantly improves this situation. Bitcoin address of the vault Controlled by 3 private keys, the owner and co-manager jointly control 2 of the 3 private keys.": {
-    "message": "大多数比特币丢失是由于所有者对自己的私钥管理不善，想要长期存储比特币，多重签名钱包必不可少，我们设计的双重多次签名显著改善这一现状，金库的比特币地址由 3 个私钥控制，所有者和共管人共同控制 3 把私钥中的 2 把。"
+  "Most Bitcoin losses occur due to poor management of private keys. If you want to store Bitcoins for a long time, a multisig wallet is essential. Our design of multisig significantly improves this situation: The Bitcoin address is controlled by 3 private keys, with the owner and members jointly controlling 2 of the 3 keys.": {
+    "message": "大多数比特币丢失是由于所有者对自己的私钥管理不善，想要长期存储比特币，多重签名钱包必不可少，我们设计的双重多次签名显著改善这一现状：金库的比特币地址由 3 个私钥控制，所有者和共管人共同控制 3 把私钥中的 2 把。"
   },
-  "Approval process": {
+  "Approval Process": {
     "message": "审批流程"
   },
-  "We have designed a complete approval process for the vault transfer. Each transfer needs to be approved by the vault co-manager before it can take effect. All suspicious transactions will be rejected in the approval process. The vault co-manager is designed to only participate in asset management, but cannot conspire to steal assets, because all transactions face the final approval of the vault owner.": {
-    "message": "我们为金库转账设计了完整的审批流程，每一笔转账都需要先通过金库共管人的审批，然后再通过金库所有者的审批交易才会生效，所有可疑交易都会在审批的环节被拒绝。金库共管人被设计为只能参与资产管理，但是无法合谋窃取资产，因为所有交易都面临金库所有者最终审批。"
+  "Every transaction requires approval from the members and owner to take effect. Suspicious transactions are rejected during the approval process.": {
+    "message": "我们为金库转账设计了完整的审批流程，每一笔转账都需要先通过金库共管人的审批，然后再通过金库所有者的审批才会生效，所有可疑交易都会在审批的环节被拒绝。"
   },
-  "Simple collaboration": {
+  "Simple Collaboration": {
     "message": "简单协作"
   },
-  "Complexity is a hidden danger. Your family, friends, and colleagues do not need professional cryptocurrency knowledge. Through Mixin Messenger's secure and private information communication, they can safely participate in asset management through a 6-digit password, and set emergency contacts to avoid further reducing the risk of single point of failure.": {
-    "message": "复杂即隐患，你的家人、朋友、同事不需要专业的加密货币知识，通过 Mixin Messenger 安全隐私的信息沟通，通过 6 位字密码安全的参与管理资产，通过设置紧急联系人避免进一步降低单点故障风险。"
+  "Complexity brings risks. Your family, friends, and colleagues do not need specialized knowledge of cryptocurrencies. Through secure and private communication in Mixin Messenger, they can participate in asset management securely with a 6-digit PIN code. By setting emergency contacts, the risk of single point of failure is further reduced.": {
+    "message": "复杂即隐患，您的家人、朋友、同事不需要专业的加密货币知识，通过 Mixin Messenger 安全隐私的信息沟通，通过 6 位数字 PIN 码安全的参与管理资产，通过设置紧急联系人进一步降低单点故障风险。"
   },
-  "Asset isolation": {
-    "message": "资产隔离"
-  },
-  "Our multi-vault design can help you isolate assets, establish multiple vaults according to usage, and set different co-managers for different vaults. Asset isolation can further enhance the privacy and security of assets.": {
-    "message": "我们的多金库设计能帮助你进行资产隔离，按用途建立多个金库并为不同的金库设置不同的共管人，资产隔离可以进一步提升资产的隐私性与安全性。"
+  "Our multi-safe design helps you achieve asset segregation. You can create multiple safes for different purposes and set different members for each safe. With asset segregation, different members only have access to their designated safes, further enhances the privacy and security of your assets.": {
+    "message": "我们的多金库设计能帮助您进行资产隔离，按用途建立多个金库并为不同的金库设置不同的共管人。通过资产隔离，不同成员只能访问自己指定的金库，进一步增强您资产的私密性和安全性。"
   },
   "Take control of your bitcoin in the safest way possible with our multisig vaults.": {
     "message": "通过我们的多重签名金库，以最安全的方式持有您的比特币。"
@@ -1759,7 +1723,7 @@
   "Sleep soundly knowing your bitcoin are secure": {
     "message": "安心睡觉而不必担心资产安全"
   },
-  "Next-gen security leverages MPC cryptography instead of seed phrases or private keys.": {
+  "Utilizing next-gen security encryption technology MPC instead of mnemonic phrases or private keys.": {
     "message": "使用下一代安全加密技术 MPC 而不是助记词或私钥。"
   },
   "Mixin wallet makes crypto accessible": {
@@ -1769,22 +1733,22 @@
     "message": "数秒内完成注册"
   },
   "Simple login via phone number. No seed phrases or extensions necessary.": {
-    "message": "通过电话号码简单登录，无需助记词或浏览器插件。"
+    "message": "通过电话号码简单登录，无需助记词或扩展程序。"
   },
   "All features are free to use, so enjoy free chat and transfer services with family and friends.": {
-    "message": "所有功能均可免费使用，因此您可以与家人和朋友免费聊天和转账服务。"
+    "message": "所有功能均免费使用，因此您可以与家人和朋友享受免费的聊天和转账服务。"
   },
   "Non-custodial": {
     "message": "非托管"
   },
-  "Marble uses client-side cryptography and multi-party computation to protect user assets.": {
-    "message": "采用客户端加密和多方计算来保护用户资产。"
+  "The wallet client uses encryption and multi-party computation technology to protect user assets.": {
+    "message": "钱包客户端使用加密和多方计算技术来保护用户资产。"
   },
   "Supporting multiple chains": {
-    "message": "支持多链多币种"
+    "message": "多链支持"
   },
   "We support popular L1 and L2 blockchain networks such as Bitcoin, Ethereum and Polygon.": {
-    "message": "我们支持 Bitcoin、Ethereum、Polygon 等热门 L1 和 L2 区块链网络。"
+    "message": "我们支持流行的 L1 和 L2 区块链网络，例如比特币、以太坊和 Polygon 。"
   },
   "Our solution is decentralized, safer, stronger and cheaper.": {
     "message": "我们的解决方案是去中心化的并且更安全、更强大、更便宜。"
@@ -1798,38 +1762,44 @@
   "What are the benefits of MPC wallets?": {
     "message": "使用 MPC 钱包有什么好处？"
   },
-  "Eliminate third-party trust": {
+  "Eliminate Third-Party Trust": {
     "message": "消除第三方信任"
   },
   "Data can be shared in a distributed manner without any third parties": {
-    "message": "数据以分布式方式共享，无需信任任何第三方。"
+    "message": "数据以分布式方式存储，无需信任任何第三方。"
   },
-  "Increased data privacy": {
+  "Increased Data Privacy": {
     "message": "提高数据隐私"
   },
   "Data is encrypted at rest and in transit so no private information is revealed or compromised": {
-    "message": "数据存储和传输过程中进行加密，因此不会泄露或泄露私人信息。"
+    "message": "数据存储和传输过程中经过加密，因此不会泄露或损害私人信息的安全。"
   },
-  "Reduced reliance on cold storage": {
+  "Reduced Reliance on Cold Storage": {
     "message": "减少对冷存储的依赖"
   },
   "Users can only hold their assets online and no longer need cold-storage devices": {
-    "message": "用户只能在线持有资产，不再需要冷存储设备。"
+    "message": "用户可以在联网的情况下持有资产，不再需要额外的冷存储设备。"
   },
   "Removal of SPOF": {
     "message": "消除单点故障"
   },
   "Private keys are not stored in one single place": {
-    "message": "私钥不存储在任何一个物理位置。"
+    "message": "私钥不会存储在单一位置，这意味着即使某个地方出现问题，也不会导致资产丢失。"
   },
-  "Increased hacking difficulty": {
-    "message": "增加黑客难度"
+  "Increased Hacking Difficulty": {
+    "message": "增加黑客攻击难度"
   },
   "A hacker would need to attack multiple parties across systems and locations": {
-    "message": "黑客需要跨系统和位置攻击多方。"
+    "message": "黑客需要在多个系统和地点攻击多个参与方，这使得攻击变得更加困难。"
   },
   "James Howells: 7,500 Bitcoin": {
     "message": "James Howells: 7,500 Bitcoin"
+  },
+  "Real People Who Lost Their Bitcoin Fortunes": {
+    "message": "失去比特币财富的真实人物"
+  },
+  "3.7 million Bitcoin are probably gone forever.": {
+    "message": "370 万个比特币可能永远消失了，无法恢复。"
   },
   "James Howells had 7,500 Bitcoins on an hard drive that he bought in 2010. Unfortunately, in 2013 he threw the hard drive in the trash can and didn’t realize what he had done for months. After that, he tried to search through the landfill with no luck.": {
     "message": "James Howells had 7,500 Bitcoins on an hard drive that he bought in 2010. Unfortunately, in 2013 he threw the hard drive in the trash can and didn’t realize what he had done for months. After that, he tried to search through the landfill with no luck."
@@ -1888,26 +1858,26 @@
   "My neighbor girlfriend deleted his Bitcoin wallet app with $ 10k inside cuz she was trying to download Tiktok and Playstore ...": {
     "message": "My neighbor girlfriend deleted his Bitcoin wallet app with $ 10k inside cuz she was trying to download Tiktok and Playstore ..."
   },
-  "Most users lose their cryptocurrency assets not because they are stolen, but because the owner does not manage their private keys well. 3.7 million bitcoins may be lost forever and cannot be recovered. Mixin Wallet can set up emergency contacts to recover potential loss risks, with high security and simple settings to avoid single point of failure.": {
-    "message": "大多数用户加密货币资产丢失不是因为被盗是由于所有者对自己的私钥管理不善。"
+  "Most users lose their cryptocurrency assets not because they are stolen, but because the owner does not manage their private keys well.": {
+    "message": "大多数用户丢失加密货币资产并不是因为它们被盗，而是因为所有者没有很好地管理他们的私钥。"
   },
   "Why we need wide adoption of social recovery wallets?": {
-    "message": "为什么我们需要使用社交恢复钱包？"
+    "message": "为什么我们需要社交恢复钱包？"
   },
-  "When you lose your phone with Mixin Messenger installed, you can not only re-login by replacing the SIM card, but also re-gain control of the wallet by logging in with the emergency contact set in advance.": {
-    "message": "当你安装 Mixin Messenger 的手机不慎丢失时，除了可以通过补办 SIM 卡来重新登录，还可以通过事先设置好的紧急联系人登录以重新获得钱包的控制权。"
+  "When your device is accidentally lost, you can regain control of the wallet by logging in through a pre-set emergency contact.": {
+    "message": "当您的设备不慎丢失时，可以通过事先设置好的紧急联系人登录以重新获得钱包的控制权。"
   },
   "Recover with Emergency Contacts": {
     "message": "通过紧急联系人恢复"
   },
-  "Set emergency contacts": {
+  "Set Emergency Contacts": {
     "message": "设置紧急联系人"
   },
   "Invite your family or friends to install Mixin Messenger and add each other": {
     "message": "邀请你的家人或朋友安装 Mixin Messenger 并相互添加。"
   },
-  "Set your family and friends as emergency contacts": {
-    "message": "设置你的家人和朋友为紧急联系人。"
+  "Set your family or friends as emergency contacts": {
+    "message": "设置你的家人或朋友为紧急联系人。"
   },
   "Install Mixin Messenger on a new device and enter the old phone number": {
     "message": "在新的设备上安装 Mixin Messenger 并输入旧手机号。"
@@ -1915,8 +1885,8 @@
   "Ask the emergency contact to get the verification code": {
     "message": "询问紧急联系人获得验证码登录账号。"
   },
-  "Change the phone number of the current account": {
-    "message": "修改当前账户的手机号。"
+  "Enter the wallet's PIN to confirm asset security, and update the current account's phone number to the new one.": {
+    "message": "输入钱包的 PIN 确认资产安全，修改当前账户的手机号为新的手机号。"
   },
   "We need wide adoption of social recovery wallets.": {
     "message": "We need wide adoption of social recovery wallets."
@@ -1924,7 +1894,7 @@
   "Vitalik Buterin": {
     "message": "Vitalik Buterin"
   },
-  "Login with emergency contacts": {
+  "Login with Emergency Contacts": {
     "message": "通过紧急联系人登录"
   },
   "MPC vs other Crypto wallets": {
@@ -1955,16 +1925,16 @@
     "message": "去中心化"
   },
   "Trustless": {
-    "message": "消除第三方信任"
+    "message": "减少第三方信任"
   },
   "Reduce Risk of Hacking": {
     "message": "减少黑客风险"
   },
   "Efficiency": {
-    "message": "高效率"
+    "message": "高效"
   },
   "Accuracy": {
-    "message": "准确"
+    "message": "交易准确可靠"
   },
   "Complexity": {
     "message": "多层安全"
@@ -1981,38 +1951,38 @@
   "Multi-Vault": {
     "message": "多金库"
   },
-  "Allows you to create multiple vaults for different businesses. Each vault can set a different co-management mode, for example: requiring 2 of the 3 vault co-managers to agree to release any assets for each transaction.": {
-    "message": "允许为不同的业务创建多个金库，每个金库可以设置不同共管模式，例如：要求 3 个金库共管人中的 2 个同意每笔交易才可以释放任何资产。"
+  "Create multiple vaults with different purposes, each configured with distinct custodial modes, for instance: requiring the agreement of 2 out of 3 vault custodians for any asset expenditure.": {
+    "message": "根据用途不同创建多个金库，每个金库设置不同共管模式，例如：要求 3 个金库共管人中的 2 个同意每笔交易才可以花费任何资产。"
   },
   "Vault Co-management": {
-    "message": "金库共管"
+    "message": "多人共管"
   },
   "Vault co-managers can participate in vault co-management without professional skills. Multiple vault managers are assigned to each vault and emergency contacts are set to avoid single point of failure.": {
-    "message": "金库共管人无需专业技能即可安全的参与金库共管，每个金库分配多个金库管理人并设置紧急联系人避免单点故障。"
+    "message": "金库共管人无需专业技能即可安全的参与金库管理，每个金库分配多个金库管理人并设置紧急联系人避免单点故障。"
   },
-  "No collusion risk": {
+  "No Collusion Risk": {
     "message": "无合谋风险"
   },
-  "All transactions must be signed by the vault owner to take effect, and multiple vault co-managers cannot collude to steal assets.": {
-    "message": "所有交易都必须经过金库所有者签名才会生效，多金库共管人无法合谋窃取资产。"
+  "All transactions require joint signatures from the vault owner and vault custodian to become effective, preventing collusion to steal assets by vault custodians.": {
+    "message": "所有交易都必须经过金库所有者和金库共管人共同签名才会生效，金库共管人无法合谋窃取资产。"
   },
-  "With the advantage of free transfers on the decentralized Mixin Network, users do not need to pay additional blockchain fees.": {
-    "message": "凭借去中心化 Mixin Network 上免费转账的优势，用户无需支付额外的区块链费用。"
+  "With the advantage of decentralized network Mixin Network, users can transfer funds for free without the need to pay additional blockchain gas fees.": {
+    "message": "凭借去中心化网络 Mixin Network 免费转账的优势，用户无需支付额外的区块链 Gas 费。"
   },
   "Get crypto to your self-custody wallet instantly. Say goodbye to the long hold times & slippage on centralized exchanges.": {
-    "message": "立即将加密货币存入您的自托管钱包。 告别在中心化交易所上等待很长时间以及价格滑点的问题。"
+    "message": "立即通过你的自托管钱包获得加密货币，告别在中心化交易所提现时间限制和因此带来价格波动问题。"
   },
   "Global Coverage": {
     "message": "全球覆盖"
   },
-  "Available in 150+countries and territories, Support for major global payment/payout methods, with new options constantly added.": {
-    "message": "覆盖 150 多个国家和地区，支持全球主要支付/支付方式，并不断添加新选项。"
+  "Available in 150+ countries and territories, Support for major global payment methods, with new options constantly added.": {
+    "message": "覆盖 150 多个国家和地区，支持全球主要支付方式，并不断添加新选项。"
   },
-  "Your money, your way": {
-    "message": "你的钱你做主"
+  "Your Money, Your Way": {
+    "message": "我的钱我做主"
   },
   "Visit {messenger} to download the latest version of Android, and you can easily find the entrance of this function on the homepage of the built-in wallet. Please note that this service only supports the Android version, and the iOS version is not supported for the time being.": {
-    "message": "访问 {messenger} 下载 Android 最新版，在内置钱包的首页即可轻松找到该功能的入口。注意该服务仅支持 Android 版本，iOS 版本暂不支持。"
+    "message": "下载 {messenger} 的 Android 最新版，在内置钱包的首页即可轻松找到该功能的入口。注意该服务仅支持 Android 版本，iOS 版本暂不支持。"
   },
   "Secure and grow your crypto wealth with {keyword}": {
     "message": "加密货币的安全保管与财富增值，充分享受{keyword}"

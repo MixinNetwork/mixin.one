@@ -18,12 +18,12 @@ export const Header = () => (
         values={{
           keyword: (
             <span className="text-blue-500">
-              <Translate>transactions signed</Translate>
+              <Translate>fast</Translate>
             </span>
           ),
         }}
       >
-        {"Get your multisig {keyword} and executed fast"}
+        {"Get your multisig transactions signed and executed {keyword}"}
       </Translate>
     </SectionTitle>
 

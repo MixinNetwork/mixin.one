@@ -48,7 +48,7 @@ export const ServiceSecurity = () => (
       <div className="gap-x-0-25 mx-a px-4-10 grid gap-y-10 pt-10 sm:grid-cols-2">
         <Item
           icon={<Icon1 />}
-          title={<Translate>Asset Isolation</Translate>}
+          title={<Translate>Asset Segregation</Translate>}
           description={
             <Translate>
               User wallet assets and Dapp assets are isolated, and users can

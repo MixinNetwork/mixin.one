@@ -62,7 +62,7 @@ export default function Root() {
           },
           {
             question: translate({
-              message: "What age do I need to be to use Mixin Route?",
+              message: "Is the purchase of cryptocurrency available for individuals under 18?",
             }),
             answer: translate({
               message: "You need to be 18 years old to use our service.",
