@@ -22,7 +22,7 @@ export default function Root() {
         faqs={[
           {
             question: translate({
-              message: "What is MPC Wallet?",
+              message: "What is MPC wallet?",
             }),
             answer: translate({
               message:
@@ -31,7 +31,7 @@ export default function Root() {
           },
           {
             question: translate({
-              message: "Is MPC Wallet free?",
+              message: "Is MPC wallet free?",
             }),
             answer: translate({
               message:
@@ -41,7 +41,7 @@ export default function Root() {
           {
             question: translate({
               message:
-                "What is the difference between MPC Wallet and Multisig Wallet?",
+                "What is the difference between MPC wallet and multisig wallet?",
             }),
             answer: translate({
               message:

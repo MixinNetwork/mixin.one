@@ -445,7 +445,7 @@
   "No, Mixin Safe is a decentralized non-custodial multi-signature wallet solution.": {
     "message": "不是，Mixin Safe 是一种去中心化的非托管多重签名钱包解决方案。"
   },
-  "How is the traditional MPC wallet solution different from Mixin Safe?": {
+  "What is the difference between a traditional MPC wallet and Mixin Safe?": {
     "message": "传统的 MPC 钱包方案与 Mixin Safe 比有何不同？"
   },
   "🇭🇰 Mixin Ltd": {
@@ -1360,10 +1360,10 @@
   "Secure, private and easy-to-use crypto wallet.": {
     "message": "安全、隐私且易于使用的加密货币钱包。"
   },
-  "Download": {
-    "message": "下载"
+  "Download Now": {
+    "message": "立刻下载"
   },
-  "MPC Self-Custodial Wallet.": {
+  "MPC Self-Custodial wallet.": {
     "message": "MPC 自托管钱包没有私钥助记词漏洞。"
   },
   "Buy cryptocurrencies with your bank card.": {
@@ -1375,7 +1375,7 @@
   "Manage multiple blockchain assets with one wallet.": {
     "message": "一个钱包轻松管理多个区块链资产。"
   },
-  "Self-custody multi-signature cold wallet.": {
+  "Self-custody multisig cold wallet.": {
     "message": "自托管多签冷钱包安全管理大额资产。"
   },
   "Manage funds with family, friends and colleagues.": {
@@ -1448,10 +1448,10 @@
     "message": "如何使用法币购买加密货币这项服务？"
   },
   "Is the purchase of cryptocurrency available for individuals under 18?": {
-    "message": "未满 18 岁可以使用购买加密货币这项服务吗？"
+    "message": "未满 18 岁可以使用法币购买加密货币这项服务吗？"
   },
   "You need to be 18 years old to use our service.": {
-    "message": "您需要年满 18 岁才能使用我们的服务。"
+    "message": "您需要年满 18 岁才能使用我们的法币购买加密货币服务。"
   },
   "How do I contact customer service?": {
     "message": "如何联系客服？"
@@ -1501,19 +1501,19 @@
   "MPC Wallets": {
     "message": "MPC 钱包"
   },
-  "What is MPC Wallet?": {
+  "What is MPC wallet?": {
     "message": "什么是 MPC 钱包？"
   },
   "An MPC wallet is a cryptocurrency and digital asset wallet that uses multi-party computation to offer strong security guarantees to individuals, firms, financial institutions, and governments that manage digital assets.": {
     "message": "MPC 钱包利用多方计算技术加倍保障用户加密货币和其他数字资产的安全。MPC 钱包在多方之间拆分钱包的私钥，以增强隐私性，并降低黑客攻击、泄露和丢失的风险。"
   },
-  "Is MPC Wallet free?": {
+  "Is MPC wallet free?": {
     "message": "MPC 钱包需要收费吗？ "
   },
   "Mixin's MPC wallet (Mixin Messenger) can be used for free.": {
     "message": "Mixin 的 MPC 钱包（Mixin Messenger）可以免费使用。"
   },
-  "What is the difference between MPC Wallet and Multisig Wallet?": {
+  "What is the difference between MPC wallet and multisig wallet?": {
     "message": "MPC 钱包与多重签名钱包有什么区别？"
   },
   "Although both have effective single-point fault exclusion, MPC wallets have only one private key, and multisig wallets require multiple private keys to use, which is more complicated.": {
@@ -1597,7 +1597,7 @@
   "Instantly {keyword} with decentralized": {
     "message": "立刻用去中心化的方案{keyword}"
   },
-  "Buying crypto with credit or debit card on Mixin app is easy and safe.": {
+  "Buying crypto with credit or debit card on Mixin Messenger is easy and safe.": {
     "message": "在 Mixin Messenger 上使用信用卡或借记卡购买加密货币既简单又安全。"
   },
   "Seamlessly move between fiat and crypto. Inexpensive and hassle-free.": {
@@ -1624,13 +1624,13 @@
   "STEP 1": {
     "message": "步骤 1"
   },
-  "Download Mixin Messenger and register an account, set up a PIN": {
+  "Download Mixin Messenger and register an account, set up a PIN.": {
     "message": "下载并注册 Mixin Messenger 账号，设置钱包 PIN 码。"
   },
   "STEP 2": {
     "message": "步骤 2"
   },
-  "Upload passport, ID card or driver’s license and complete KYC": {
+  "Upload passport, ID card or driver’s license and complete KYC.": {
     "message": "上传护照、ID 卡或驾照并进行活体检测完成 KYC 认证。"
   },
   "STEP 3": {
@@ -1723,8 +1723,8 @@
   "Utilizing next-gen security encryption technology MPC instead of mnemonic phrases or private keys.": {
     "message": "使用下一代安全加密技术 MPC 而不是助记词或私钥。"
   },
-  "Mixin wallet makes crypto accessible": {
-    "message": "Mixin 钱包让加密货币变得触手可及"
+  "We makes crypto accessible": {
+    "message": "我们让加密货币变得触手可及"
   },
   "Onboard users in seconds": {
     "message": "数秒内完成注册"
@@ -1738,7 +1738,7 @@
   "Non-custodial": {
     "message": "非托管"
   },
-  "The wallet client uses encryption and multi-party computation technology to protect user assets.": {
+  "The wallet client uses encryption and MPC technology to protect user assets.": {
     "message": "钱包客户端使用加密和多方计算技术来保护用户资产。"
   },
   "Supporting multiple chains": {
@@ -1762,31 +1762,31 @@
   "Eliminate Third-Party Trust": {
     "message": "消除第三方信任"
   },
-  "Data can be shared in a distributed manner without any third parties": {
-    "message": "数据以分布式方式存储，无需信任任何第三方。"
+  "Data can be shared in a distributed manner without any third parties.": {
+    "message": "数据以去中心化方式存储，无需信任任何第三方。"
   },
   "Increased Data Privacy": {
     "message": "提高数据隐私"
   },
-  "Data is encrypted at rest and in transit so no private information is revealed or compromised": {
+  "Data is encrypted at rest and in transit so no private information is revealed or compromised.": {
     "message": "数据存储和传输过程中经过加密，因此不会泄露或损害私人信息的安全。"
   },
   "Reduced Reliance on Cold Storage": {
     "message": "减少对冷存储的依赖"
   },
-  "Users can only hold their assets online and no longer need cold-storage devices": {
+  "Users can only hold their assets online and no longer need cold-storage devices.": {
     "message": "用户可以在联网的情况下持有资产，不再需要额外的冷存储设备。"
   },
   "Removal of SPOF": {
     "message": "消除单点故障"
   },
-  "Private keys are not stored in one single place": {
-    "message": "私钥不会存储在单一位置，这意味着即使某个地方出现问题，也不会导致资产丢失。"
+  "Private keys are not stored in one single place.": {
+    "message": "私钥不会存储在单一位置，这意味着即使某个节点出现问题，也不会导致资产丢失。"
   },
   "Increased Hacking Difficulty": {
     "message": "增加黑客攻击难度"
   },
-  "A hacker would need to attack multiple parties across systems and locations": {
+  "A hacker would need to attack multiple parties across systems and locations.": {
     "message": "黑客需要在多个系统和地点攻击多个参与方，这使得攻击变得更加困难。"
   },
   "James Howells: 7,500 Bitcoin": {
@@ -1864,8 +1864,8 @@
   "When your device is accidentally lost, you can regain control of the wallet by logging in through a pre-set emergency contact.": {
     "message": "当您的设备不慎丢失时，可以通过事先设置好的紧急联系人登录以重新获得钱包的控制权。"
   },
-  "Recover with Emergency Contacts": {
-    "message": "通过紧急联系人恢复"
+  "Emergency Contact": {
+    "message": "紧急联系人"
   },
   "Set Emergency Contacts": {
     "message": "设置紧急联系人"
@@ -1891,8 +1891,8 @@
   "Vitalik Buterin": {
     "message": "Vitalik Buterin"
   },
-  "Login with Emergency Contacts": {
-    "message": "通过紧急联系人登录"
+  "Recovery via Emergency Contact": {
+    "message": "通过紧急联系人恢复"
   },
   "MPC vs other Crypto wallets": {
     "message": "MPC 钱包对比其他钱包"

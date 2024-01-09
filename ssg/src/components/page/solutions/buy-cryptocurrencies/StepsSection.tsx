@@ -48,7 +48,7 @@ export const StepsSection = () => {
             stepName={<Translate>STEP 1</Translate>}
             description={
               <Translate>
-                Download Mixin Messenger and register an account, set up a PIN
+                Download Mixin Messenger and register an account, set up a PIN.
               </Translate>
             }
           />
@@ -56,7 +56,7 @@ export const StepsSection = () => {
             stepName={<Translate>STEP 2</Translate>}
             description={
               <Translate>
-                Upload passport, ID card or driver’s license and complete KYC
+                Upload passport, ID card or driver’s license and complete KYC.
               </Translate>
             }
           />

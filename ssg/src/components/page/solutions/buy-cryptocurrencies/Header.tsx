@@ -32,7 +32,7 @@ export const Header = () => (
       </div>
       <div className="text-#000 text-op-70">
         <Translate>
-          Buying crypto with credit or debit card on Mixin app is easy and safe.
+          Buying crypto with credit or debit card on Mixin Messenger is easy and safe.
         </Translate>
       </div>
     </div>

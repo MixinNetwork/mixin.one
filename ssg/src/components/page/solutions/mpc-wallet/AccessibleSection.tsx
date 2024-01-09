@@ -48,7 +48,7 @@ export const AccessibleSection = () => {
             </Translate>
           }
         >
-          <Translate>Mixin wallet makes crypto accessible</Translate>
+          <Translate>We makes crypto accessible</Translate>
         </SectionTitle>
         <div
           className={clsx(
@@ -117,7 +117,7 @@ export const AccessibleSection = () => {
               })}
               description={translate({
                 message:
-                  "The wallet client uses encryption and multi-party computation technology to protect user assets.",
+                  "The wallet client uses encryption and MPC technology to protect user assets.",
               })}
             />
             <Item

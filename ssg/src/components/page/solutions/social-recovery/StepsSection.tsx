@@ -26,7 +26,7 @@ export const StepsSection = () => {
         }
         className="!mb-10"
       >
-        <Translate>Recover with Emergency Contacts</Translate>
+        <Translate>Emergency Contact</Translate>
       </SectionTitle>
       <div className={clsx("")}>
         <FullItem
@@ -56,7 +56,7 @@ export const StepsSection = () => {
               .default
           }
           title={translate({
-            message: "Login with Emergency Contacts",
+            message: "Recovery via Emergency Contact",
           })}
         >
           <div className="mt-7.5 space-y-5">

@@ -222,7 +222,7 @@ export default function Navbar({ dark }: { dark?: boolean }): JSX.Element {
               label: translate({ message: "MPC Wallet" }),
               to: "/solutions/mpc-wallet",
               description: translate({
-                message: "MPC Self-Custodial Wallet.",
+                message: "MPC Self-Custodial wallet.",
               }),
               icon: MPC,
             },

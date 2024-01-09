@@ -79,7 +79,7 @@ export const Header = () => (
         title={translate({ message: "Eliminate Third-Party Trust" })}
         description={translate({
           message:
-            "Data can be shared in a distributed manner without any third parties",
+            "Data can be shared in a distributed manner without any third parties.",
         })}
       />
 
@@ -89,7 +89,7 @@ export const Header = () => (
         title={translate({ message: "Increased Data Privacy" })}
         description={translate({
           message:
-            "Data is encrypted at rest and in transit so no private information is revealed or compromised",
+            "Data is encrypted at rest and in transit so no private information is revealed or compromised.",
         })}
       />
 
@@ -99,7 +99,7 @@ export const Header = () => (
         title={translate({ message: "Reduced Reliance on Cold Storage" })}
         description={translate({
           message:
-            "Users can only hold their assets online and no longer need cold-storage devices",
+            "Users can only hold their assets online and no longer need cold-storage devices.",
         })}
         className={clsx(
           "!sm:h-160",
@@ -117,7 +117,7 @@ export const Header = () => (
         background="1.9.webp"
         title={translate({ message: "Removal of SPOF" })}
         description={translate({
-          message: "Private keys are not stored in one single place",
+          message: "Private keys are not stored in one single place.",
         })}
       />
 
@@ -127,7 +127,7 @@ export const Header = () => (
         title={translate({ message: "Increased Hacking Difficulty" })}
         description={translate({
           message:
-            "A hacker would need to attack multiple parties across systems and locations",
+            "A hacker would need to attack multiple parties across systems and locations.",
         })}
       />
     </div>

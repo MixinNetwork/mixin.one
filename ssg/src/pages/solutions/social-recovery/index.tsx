@@ -24,7 +24,7 @@ export default function Root() {
         faqs={[
           {
             question: translate({
-              message: "What is Social Recovery?",
+              message: "What is social recovery?",
             }),
             answer: translate({
               message:
