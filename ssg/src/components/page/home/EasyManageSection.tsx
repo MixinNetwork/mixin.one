@@ -19,8 +19,8 @@ const EasyManageItem = ({
       alt={"icon"}
       className="lg:p-4.5 flex-center row-span-2 box-content h-6 w-6 rounded-lg bg-white p-3 shadow"
     />
-    <div className="text-#000 text-4 font-medium leading-tight">{title}</div>
-    <div className="text-#000 text-3.5 text-op-70 font-normal leading-[1.5]">
+    <div className="text-#000 text-4-5 font-medium leading-tight">{title}</div>
+    <div className="text-#000 text-3.5-4 text-op-70 font-normal leading-[1.5]">
       {description}
     </div>
   </div>
