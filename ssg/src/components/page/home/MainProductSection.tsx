@@ -30,11 +30,11 @@ const ProductCard = ({
         <div className="text-#000 text-5 font-medium leading-tight">
           {title}
         </div>
-        <div className="text-#000 text-3.5 text-op-70 font-normal leading-[1.5]">
+        <div className="text-#000 text-4 text-op-70 font-normal leading-[1.5]">
           {description}
         </div>
       </div>
-      <div className="text-3.5 flex items-center font-medium">
+      <div className="text-4 flex items-center font-medium">
         <Translate>View Product</Translate>
         <Arrow className="ml-2" />
       </div>
@@ -90,7 +90,7 @@ export const MainProductSection = () => {
 
       <LocalLink
         to="/pricing"
-        className="mt-24.5 text-3.5-4 mx-auto rounded-sm bg-zinc-800 px-7 py-4 font-medium text-white"
+        className="mt-24.5 text-4 mx-auto rounded-sm bg-zinc-800 px-7 py-4 font-medium text-white"
       >
         <Translate>Start for Free</Translate>
       </LocalLink>
