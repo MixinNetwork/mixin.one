@@ -23,7 +23,7 @@ export const DontWorrySection = () => {
         {
           icon: Icon1,
           title: translate({
-            message: "Enjoy interaction",
+            message: "Enjoy Interaction",
           }),
           description: translate({
             message:
@@ -40,7 +40,7 @@ export const DontWorrySection = () => {
         },
         {
           icon: Icon3,
-          title: translate({ message: "Asset recovery" }),
+          title: translate({ message: "Asset Recovery" }),
           description: translate({
             message:
               "When your vault private key is lost or the MPC wallet cannot be logged in, you can regain control of your assets through the vault recovery service and emergency contact.",
@@ -48,7 +48,7 @@ export const DontWorrySection = () => {
         },
         {
           icon: Icon4,
-          title: translate({ message: "Enhanced privacy" }),
+          title: translate({ message: "Enhanced Privacy" }),
           description: translate({
             message:
               "End-to-end encryption technology and CryptoNote technology protect the privacy of your chat and transfer information. The information is encrypted and ensures that only the two parties of the interaction can decrypt it. No third party can peep into your privacy data.",
@@ -56,7 +56,7 @@ export const DontWorrySection = () => {
         },
         {
           icon: Icon5,
-          title: translate({ message: "Fixed fee" }),
+          title: translate({ message: "Fixed Fee" }),
           description: translate({
             message:
               "Whether the price of Bitcoin rises or you increase your Bitcoin holdings, Mixin Safe only charges a fixed service fee, which will not change with the number and price of assets you host or transfer.",
@@ -64,7 +64,7 @@ export const DontWorrySection = () => {
         },
         {
           icon: Icon6,
-          title: translate({ message: "Customer support" }),
+          title: translate({ message: "Customer Support" }),
           description: translate({
             message:
               "Perfect documentation and intimate customer service are always ready to help you solve various problems. You can focus on wealth growth without being trapped in asset security issues.",

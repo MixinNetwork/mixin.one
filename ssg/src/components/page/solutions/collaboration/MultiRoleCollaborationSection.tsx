@@ -38,12 +38,12 @@ export const MultiRoleCollaborationSection = () => {
         description={
           <Translate>
             {
-              "Safely manage large sums of money by segregating and allocating them for different custodians through multi-vault use cases."
+              "Safely manage large sums of money by segregating and allocating them for different custodians through multi-safe use cases."
             }
           </Translate>
         }
       >
-        <Translate>Multi-Role Collaboration</Translate>
+        <Translate>Multi-Safe Collaboration</Translate>
       </SectionTitle>
       <div className="mx-a container">
         <img
@@ -66,7 +66,7 @@ export const MultiRoleCollaborationSection = () => {
       >
         <Item
           icon={<Svg1 />}
-          title={<Translate>{"Multi-Vault"}</Translate>}
+          title={<Translate>{"Multi-Safe"}</Translate>}
           description={
             <Translate>
               {

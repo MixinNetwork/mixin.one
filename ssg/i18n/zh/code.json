@@ -370,8 +370,8 @@
   "More Features": {
     "message": "更多亮点"
   },
-  "Not your keys, not your coins. Though managing private keys may present a challenge, we should remain steadfast in avoiding centralized firms as custodians for Bitcoin holdings.": {
-    "message": "不是你的私钥，就不是你的币。虽然自己管理私钥充满挑战，并不是一件大众熟悉的事情，但我们要时刻牢记比特币诞生的初心。没有去中心化的比特币就一无是处，永远不能依靠中心化机构来托管资产。"
+  "Not your keys, not your coins. We steadfastly avoid centralized companies acting as custodians of your Bitcoin.": {
+    "message": "不是你的私钥，就不是你的币。没有去中心化的比特币就一无是处，永远不能依靠中心化机构来托管资产。"
   },
   "Employing the latest innovations in the industry while still leveraging Bitcoin’s proven cryptography.": {
     "message": "Mixin Safe 使用最新的技术，同时利用比特币的成熟密码学。"
@@ -496,19 +496,16 @@
   "If you don't truly own your private key, you will never be confidence in your bitcoin holdings. With Mixin Safe, you have full control over your wallet private key.": {
     "message": "如果您不真正拥有自己的私钥，就永远无法对自己持有的比特币充满信心。使用 Mixin Safe，您对自己的钱包私钥拥有完整的掌控。"
   },
-  "Mature technology": {
+  "Mature Technology": {
     "message": "技术成熟"
   },
   "Our solution is built on mature technologies and products such as smart contracts, multi-signature, secure time lock, MPC-TSS and hardware wallets to ensure the security of your assets.": {
     "message": "我们的解决方案基于智能合约、多重签名、安全时间锁、MPC - TSS 和硬件钱包等成熟的技术和产品构建，确保您的资产安全。"
   },
-  "Vault co-management": {
-    "message": "金库共管"
-  },
   "Co-manage large assets with family, friends or team members. Mixin Safe's dual multi-signature technology and key sharding technology can prevent co-managers from conspiring to transfer your assets.": {
     "message": "与家人、朋友或团队成员协作管理大额资产，Mixin Safe 的双重多重签名技术和密钥分片技术能避免金库共管人合谋转移您托管的资产。"
   },
-  "Estate planning": {
+  "Estate Planning": {
     "message": "遗产规划"
   },
   "Estate planning can help you safely pass on your crypto wealth to your descendants. Your heirs can easily inherit your wealth without any professional knowledge.": {
@@ -517,7 +514,7 @@
   "Don't worry": {
     "message": "放心用"
   },
-  "Enjoy interaction": {
+  "Enjoy Interaction": {
     "message": "尽享交互"
   },
   "Thanks to asset read-only authorization, Dapp whitelist and approval process, you can safely consume or invest in cryptocurrencies without worrying about potential risks when using Dapp, such as authorization vulnerabilities.": {
@@ -529,25 +526,25 @@
   "The perfect approval process ensures the security and transparency of funds. Unlike other multi-signature wallets, Mixin Safe's dual multi-signature technology and key sharding technology can avoid potential multi-signature collusion issues.": {
     "message": "完善的审批流程确保资金安全、透明，区别于其他多重签名钱包，Mixin Safe 的双重多重签名技术和密钥分片技术能避免潜在的多签合谋问题。"
   },
-  "Asset recovery": {
+  "Asset Recovery": {
     "message": "资产恢复"
   },
   "When your vault private key is lost or the MPC wallet cannot be logged in, you can regain control of your assets through the vault recovery service and emergency contact.": {
     "message": "当您的金库私钥丢失或 MPC 钱包无法登录时，通过金库的恢复服务和紧急联系人来让您重新获得资产的掌握权。"
   },
-  "Enhanced privacy": {
+  "Enhanced Privacy": {
     "message": "隐私加强"
   },
   "End-to-end encryption technology and CryptoNote technology protect the privacy of your chat and transfer information. The information is encrypted and ensures that only the two parties of the interaction can decrypt it. No third party can peep into your privacy data.": {
     "message": "端对端加密技术和 CryptoNote 技术保护您的聊天和转账信息隐私，信息经过加密并确保只有交互双方才能解密，任何第三方都无法窥探您的隐私数据。"
   },
-  "Fixed fee": {
+  "Fixed Fee": {
     "message": "费用固定"
   },
   "Whether the price of Bitcoin rises or you increase your Bitcoin holdings, Mixin Safe only charges a fixed service fee, which will not change with the number and price of assets you host or transfer.": {
     "message": "无论比特币价格上涨，还是您增加比特币持有量，Mixin Safe 只收取固定的服务费，不会随着您托管或转账的数量和价格而变化。"
   },
-  "Customer support": {
+  "Customer Support": {
     "message": "客服支持"
   },
   "Perfect documentation and intimate customer service are always ready to help you solve various problems. You can focus on wealth growth without being trapped in asset security issues.": {
@@ -595,11 +592,11 @@
   "Privacy Technology": {
     "message": "隐私技术"
   },
-  "Mixin Safe provides the general public with cutting-edge Bitcoin custody solutions. Bitcoin custody should never sacrifice decentralization, always be confidence and reliability.": {
-    "message": "Mixin Safe 提供给公众最先进的比特币托管方案，比特币托管绝不应该牺牲去中心化，始终要信心满满。"
+  "Mixin Safe is a production-grade decentralized Bitcoin custody service that leverages proven timelock technology from Bitcoin Script.": {
+    "message": "Mixin Safe 提供成熟的去中心化比特币托管服务，借助了比特币脚本中成熟的时间锁技术。"
   },
-  "We strive to build the safest products to grow your crypto wealth, with the highest standard of decentralized custodian powered by Mixin Safe.": {
-    "message": "我们努力构建最安全的产品来增长您的加密财富，由 Mixin Safe 提供的最高标准的去中心化托管。"
+  "Mixin Wealth is a decentralized fund marketplace that provides secure fund raising and subscription services for fund managers and investors.": {
+    "message": "Mixin Wealth 是一个去中心化的基金市场，面向基金经理和投资者提供安全的基金募集与申购服务。"
   },
   "Pricing & Plans": {
     "message": "开始上手"
@@ -1072,8 +1069,8 @@
   "Core Products": {
     "message": "核心产品"
   },
-  "The decentralized crypto wallet is powered by mature MPC technology. Mixin Messenger supports all popular cryptos, end-to-end encrypted chat, free transfers to contacts, fiat on-ramp, and social recovery.": {
-    "message": "去中心化的加密货币钱包由成熟的 MPC 技术提供支持。Mixin Messenger 支持所有流行的加密货币，端到端加密聊天，免费转账给联系人，法币兑换，社交恢复。"
+  "Mixin Messenger is an open-source cryptocurrency wallet and signal protocol messenger, which supports almost all popular cryptocurrencies.": {
+    "message": "Mixin Messenger 支持所有流行的加密货币，端到端加密聊天，免费转账给联系人，法币兑换，社交恢复等。"
   },
   "Provide the general public with state-of-the-art open financial services.": {
     "message": "将最先进的加密货币金融解决方案带给公众，安全容易上手。"
@@ -1462,10 +1459,10 @@
   "Please leave a message to Team Mixin 7000 customer service in Mixin Messenger, or leave a message in the customer service floating window in the lower right corner of the website.": {
     "message": "在 Mixin Messenger 中给 Team Mixin 7000 客服留言，或者网站右下角客服浮窗留言。"
   },
-  "What is Multi-role Collaboration?": {
+  "What is custodial approval?": {
     "message": "什么是共管审批？"
   },
-  "Multi-role collaboration refers to the joint management of asset certificates with your family, friends or colleagues. Each time you transfer, you need the approval of part or all of the collaborators to complete the transfer.": {
+  "Custodial approval refers to jointly managing asset certificates with your family, friends, or colleagues, requiring partial or full custodial approval for each transfer to be completed.": {
     "message": "共管审批指的是与你的家人、朋友或同事一起共同管理资产凭证，每次转账时都需要部分或者全部共管人审批同意才能完成转账。"
   },
   "How many collaborators can I set up to manage asset certificates?": {
@@ -1651,11 +1648,11 @@
   "Get your multisig transactions signed and executed {keyword}": {
     "message": "{keyword}执行您的多重签名交易"
   },
-  "Safely manage large sums of money by segregating and allocating them for different custodians through multi-vault use cases.": {
+  "Safely manage large sums of money by segregating and allocating them for different custodians through multi-safe use cases.": {
     "message": "通过多金库用途隔离并分配不同的共管人来安全的管理大额资金。"
   },
-  "Multi-Role Collaboration": {
-    "message": "多人协作"
+  "Multi-Safe Collaboration": {
+    "message": "多金库协作共管"
   },
   "Two-of-three custody": {
     "message": "2/3 多签共管"
@@ -1948,7 +1945,7 @@
   "TVL": {
     "message": "总价值"
   },
-  "Multi-Vault": {
+  "Multi-Safe": {
     "message": "多金库"
   },
   "Create multiple vaults with different purposes, each configured with distinct custodial modes, for instance: requiring the agreement of 2 out of 3 vault custodians for any asset expenditure.": {

@@ -60,7 +60,7 @@ export const MainProductSection = () => {
           title={"Mixin Messenger"}
           description={translate({
             message:
-              "The decentralized crypto wallet is powered by mature MPC technology. Mixin Messenger supports all popular cryptos, end-to-end encrypted chat, free transfers to contacts, fiat on-ramp, and social recovery.",
+              "Mixin Messenger is an open-source cryptocurrency wallet and signal protocol messenger, which supports almost all popular cryptocurrencies.",
           })}
           cover={"messenger.webp"}
           href="https://messenger.mixin.one/"
@@ -71,7 +71,7 @@ export const MainProductSection = () => {
           title={"Mixin Safe"}
           description={translate({
             message:
-              "Mixin Safe provides the general public with cutting-edge Bitcoin custody solutions. Bitcoin custody should never sacrifice decentralization, always be confidence and reliability.",
+              "Mixin Safe is a production-grade decentralized Bitcoin custody service that leverages proven timelock technology from Bitcoin Script.",
           })}
           cover={"safe.webp"}
           href="https://safe.mixin.one/"
@@ -81,7 +81,7 @@ export const MainProductSection = () => {
           title={"Mixin Wealth"}
           description={translate({
             message:
-              "We strive to build the safest products to grow your crypto wealth, with the highest standard of decentralized custodian powered by Mixin Safe.",
+              "Mixin Wealth is a decentralized fund marketplace that provides secure fund raising and subscription services for fund managers and investors.",
           })}
           cover={"wealth.webp"}
           href="https://wealth.mixin.one/"

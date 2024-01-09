@@ -81,7 +81,7 @@ export const ConfidentBitcoinCustodySection = () => {
         />
         <Item
           cover="1.2.webp"
-          title={translate({ message: "Mature technology" })}
+          title={translate({ message: "Mature Technology" })}
           description={translate({
             message:
               "Our solution is built on mature technologies and products such as smart contracts, multi-signature, secure time lock, MPC-TSS and hardware wallets to ensure the security of your assets.",
@@ -89,7 +89,7 @@ export const ConfidentBitcoinCustodySection = () => {
         />
         <Item
           cover="1.3.webp"
-          title={translate({ message: "Vault co-management" })}
+          title={translate({ message: "Vault Co-management" })}
           description={translate({
             message:
               "Co-manage large assets with family, friends or team members. Mixin Safe's dual multi-signature technology and key sharding technology can prevent co-managers from conspiring to transfer your assets.",
@@ -97,7 +97,7 @@ export const ConfidentBitcoinCustodySection = () => {
         />
         <Item
           cover="1.4.webp"
-          title={translate({ message: "Estate planning" })}
+          title={translate({ message: "Estate Planning" })}
           description={translate({
             message:
               "Estate planning can help you safely pass on your crypto wealth to your descendants. Your heirs can easily inherit your wealth without any professional knowledge.",

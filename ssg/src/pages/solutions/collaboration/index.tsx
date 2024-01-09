@@ -22,11 +22,11 @@ export default function Root() {
         faqs={[
           {
             question: translate({
-              message: "What is Multi-role Collaboration?",
+              message: "What is custodial approval?",
             }),
             answer: translate({
               message:
-                "Multi-role collaboration refers to the joint management of asset certificates with your family, friends or colleagues. Each time you transfer, you need the approval of part or all of the collaborators to complete the transfer.",
+                "Custodial approval refers to jointly managing asset certificates with your family, friends, or colleagues, requiring partial or full custodial approval for each transfer to be completed.",
             }),
           },
           {

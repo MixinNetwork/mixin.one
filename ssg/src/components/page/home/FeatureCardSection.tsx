@@ -77,7 +77,7 @@ export const FeatureCardSection = () => {
         title={translate({ message: "Decentralization" })}
         description={translate({
           message:
-            "Not your keys, not your coins. Though managing private keys may present a challenge, we should remain steadfast in avoiding centralized firms as custodians for Bitcoin holdings.",
+            "Not your keys, not your coins. We steadfastly avoid centralized companies acting as custodians of your Bitcoin.",
         })}
         subDescription={translate({
           message: "Learn Decentralization",
