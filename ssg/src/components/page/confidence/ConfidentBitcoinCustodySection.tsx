@@ -89,7 +89,7 @@ export const ConfidentBitcoinCustodySection = () => {
         />
         <Item
           cover="1.3.webp"
-          title={translate({ message: "Vault Co-management" })}
+          title={translate({ message: "Safe Collaboration" })}
           description={translate({
             message:
               "Co-manage large assets with family, friends or team members. Mixin Safe's dual multi-signature technology and key sharding technology can prevent co-managers from conspiring to transfer your assets.",

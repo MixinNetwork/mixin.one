@@ -109,7 +109,7 @@ export const EasyManageSection = () => {
             message: "Notification",
           })}
           description={translate({
-            message: "Get notified whenever anything happens to your accounts.",
+            message: "Get notified whenever anything happens to your safe.",
           })}
           icon={"notification.svg"}
         />

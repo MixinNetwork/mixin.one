@@ -1040,22 +1040,22 @@
     "message": "轻松管理数字资产"
   },
   "Easily view your assets distribution anywhere and anytime.": {
-    "message": "随时随地轻松查看您的资产分布。"
+    "message": "随时随地的查看您的资产信息，方便快捷是 Mixin 产品设计的信条。"
   },
   "Own Your Data": {
-    "message": "掌管你的数据"
+    "message": "数据永远归您"
   },
   "Download all your account and transaction history conveniently.": {
-    "message": "方便得下载您的所有账户和交易历史记录。"
+    "message": "因为完全去中心化的产品设计，您可以随时下载完整的账户与交易信息。"
   },
   "Joint Accounts": {
-    "message": "协作账户"
+    "message": "无忧协作"
   },
   "Cater to your internal risk control needs with receivers whitelist.": {
-    "message": "通过接收者白名单满足您的内部风控需求。"
+    "message": "通过多重签名管理的收款人白名单，可以避免将您的币发给不合适的人。"
   },
-  "Get notified whenever anything happens to your accounts.": {
-    "message": "当您的账户发生任何变化时，我们会及时通知您。"
+  "Get notified whenever anything happens to your safe.": {
+    "message": "多种途径的实时通知让您随时掌握钱包动态，及时完成多重签名的交易流程审批。"
   },
   "Start for Free": {
     "message": "免费使用"
@@ -1462,11 +1462,11 @@
   "What is custodial approval?": {
     "message": "什么是共管审批？"
   },
-  "Custodial approval refers to jointly managing asset certificates with your family, friends, or colleagues, requiring partial or full custodial approval for each transfer to be completed.": {
-    "message": "共管审批指的是与你的家人、朋友或同事一起共同管理资产凭证，每次转账时都需要部分或者全部共管人审批同意才能完成转账。"
+  "Custodial approval refers to jointly managing asset with your family, friends, or colleagues, requiring partial or full custodial approval for each transfer to be completed.": {
+    "message": "共管审批指的是与你的家人、朋友或同事一起共同管理资产，每次转账时都需要部分或者全部共管人审批同意才能完成转账。"
   },
-  "How many collaborators can I set up to manage asset certificates?": {
-    "message": "最多可以设置几个共管人参与管理资产凭证？"
+  "How many collaborators can be set for managing assets in a single Safe?": {
+    "message": "单个金库最多可以设置几个共管人参与管理资产？"
   },
   "Now you can set up to 10 people.": {
     "message": "现在最多可以设置 10 人。"
@@ -1483,8 +1483,8 @@
   "Yes, please find trusted family members, friends or team members to participate in the management of asset certificates.": {
     "message": "可以，请找信任的家人、朋友或者团队成员参与管理资产凭证。"
   },
-  "Do members who manage asset certificates with me need to pay to upgrade their membership?": {
-    "message": "与我共同管理资产凭证的成员需要付费升级会员吗？"
+  "Do collaborators who manage assets with me need to upgrade to a paid membership?": {
+    "message": "与我共同管理资产的成员需要付费升级会员吗？"
   },
   "No.": {
     "message": "不需要。"
@@ -1951,16 +1951,16 @@
   "Create multiple vaults with different purposes, each configured with distinct custodial modes, for instance: requiring the agreement of 2 out of 3 vault custodians for any asset expenditure.": {
     "message": "根据用途不同创建多个金库，每个金库设置不同共管模式，例如：要求 3 个金库共管人中的 2 个同意每笔交易才可以花费任何资产。"
   },
-  "Vault Co-management": {
-    "message": "多人共管"
+  "Safe Collaboration": {
+    "message": "金库共管"
   },
-  "Vault co-managers can participate in vault co-management without professional skills. Multiple vault managers are assigned to each vault and emergency contacts are set to avoid single point of failure.": {
+  "Safe collaborators can securely participate in Safe management without the need for specialized skills. Multiple Safe collaborators are assigned to each vault, and an emergency contact is set up to prevent single points of failure.": {
     "message": "金库共管人无需专业技能即可安全的参与金库管理，每个金库分配多个金库管理人并设置紧急联系人避免单点故障。"
   },
   "No Collusion Risk": {
     "message": "无合谋风险"
   },
-  "All transactions require joint signatures from the vault owner and vault custodian to become effective, preventing collusion to steal assets by vault custodians.": {
+  "All transactions require joint signatures from the Safe owner and collaborators to become effective, preventing collaborators from conspiring to steal assets.": {
     "message": "所有交易都必须经过金库所有者和金库共管人共同签名才会生效，金库共管人无法合谋窃取资产。"
   },
   "With the advantage of decentralized network Mixin Network, users can transfer funds for free without the need to pay additional blockchain gas fees.": {

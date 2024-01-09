@@ -77,11 +77,11 @@ export const MultiRoleCollaborationSection = () => {
         />
         <Item
           icon={<Svg2 />}
-          title={<Translate>{"Vault Co-management"}</Translate>}
+          title={<Translate>{"Safe Collaboration"}</Translate>}
           description={
             <Translate>
               {
-                "Vault co-managers can participate in vault co-management without professional skills. Multiple vault managers are assigned to each vault and emergency contacts are set to avoid single point of failure."
+                "Safe collaborators can securely participate in Safe management without the need for specialized skills. Multiple Safe collaborators are assigned to each vault, and an emergency contact is set up to prevent single points of failure."
               }
             </Translate>
           }
@@ -92,7 +92,7 @@ export const MultiRoleCollaborationSection = () => {
           description={
             <Translate>
               {
-                "All transactions require joint signatures from the vault owner and vault custodian to become effective, preventing collusion to steal assets by vault custodians."
+                "All transactions require joint signatures from the Safe owner and collaborators to become effective, preventing collaborators from conspiring to steal assets."
               }
             </Translate>
           }

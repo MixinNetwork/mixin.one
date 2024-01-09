@@ -26,13 +26,13 @@ export default function Root() {
             }),
             answer: translate({
               message:
-                "Custodial approval refers to jointly managing asset certificates with your family, friends, or colleagues, requiring partial or full custodial approval for each transfer to be completed.",
+                "Custodial approval refers to jointly managing asset with your family, friends, or colleagues, requiring partial or full custodial approval for each transfer to be completed.",
             }),
           },
           {
             question: translate({
               message:
-                "How many collaborators can I set up to manage asset certificates?",
+                "How many collaborators can be set for managing assets in a single Safe?",
             }),
             answer: translate({
               message: "Now you can set up to 10 people.",
@@ -60,7 +60,7 @@ export default function Root() {
           {
             question: translate({
               message:
-                "Do members who manage asset certificates with me need to pay to upgrade their membership?",
+                "Do collaborators who manage assets with me need to upgrade to a paid membership?",
             }),
             answer: translate({
               message: "No.",
