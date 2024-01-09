@@ -1427,7 +1427,7 @@
     "message": "在使用一些机器人是经常被要求授权，会有安全问题吗？"
   },
   "Mixin Messenger's asset-related authorization is designed as read-only permission, and your assets will not have security issues, but there may be privacy issues. Your transfer records and balances can be accessed by these bots in an authorized manner.": {
-    "message": "Mixin Messenger 资产相关授权被设计为只读权限，您的资产不会有安全问题，但是可能有隐私问题，您的转账记录和余额可以被这些机器人以授权的方式访问。"
+    "message": "Mixin Messenger 资产相关授权被设计为只读权限，您的资产不会有安全问题，但需要注意潜在的隐私问题，您的转账记录和余额数据可以被已经授予了资产权限的机器人访问。"
   },
   "What cryptocurrencies are supported?": {
     "message": "支持哪些加密货币？"
@@ -1535,7 +1535,7 @@
     "message": "为什么我需要具备社交恢复的钱包？"
   },
   "Most users lose their cryptocurrency assets not because they are stolen, but because the owners do not manage their private keys well. The Mixin wallet, equipped with social recovery capabilities, can effectively prevent single points of failure.": {
-    "message": "大多数用户丢失加密货币资产并不是因为它们被盗，而是因为所有者没有很好地管理他们的私钥。具备社交恢复功能的 Mixin 钱包可以有效避免单点故障。"
+    "message": "大多数用户丢失加密货币资产并不是因为被盗，而是因为私钥没有被很好的管理。具备社交恢复功能的 Mixin 钱包可以有效避免单点故障。"
   },
   "How to set up the social recovery function?": {
     "message": "如何设置社交恢复功能？"
@@ -1547,7 +1547,7 @@
     "message": "社交恢复功能是一项付费功能吗？"
   },
   "At present, all functions of Mixin Messenger are free to use, including this social recovery function. You can rest assured to invite your family, friends or colleagues to join Mixin and set them as emergency contacts.": {
-    "message": "目前 Mixin Messenger 所有功能均是免费使用，包括这个社交恢复功能，你可以放心的邀请你的家人、朋友或同事加入 Mixin 并设置其为紧急联系人。"
+    "message": "目前 Mixin Messenger 所有功能均免费使用，包括社交恢复功能，您可以放心的邀请您的家人、朋友或同事加入 Mixin 并相互设置为紧急联系人。"
   },
   "Can I set myself as an emergency contact?": {
     "message": "我可以设置自己为紧急联系人吗？"
@@ -1652,19 +1652,19 @@
     "message": "2/3 多签共管"
   },
   "A total of three keys control your vault, with two of those keys required to approve a spend.": {
-    "message": "总共有三个密钥控制您的金库，每次花费都需要其中两个密钥签名批准。"
+    "message": "总共有三个私钥控制您的金库，每次花费都需要其中两个私钥签名批准。"
   },
   "You hold two of your keys": {
-    "message": "您持有两个密钥"
+    "message": "您持有两个私钥"
   },
   "With two keys, you're in total control of your bitcoin. Keep each key in a separate location.": {
-    "message": "您可以通过两个密钥完全控制您的比特币，注意将每个密钥分开独立存储。"
+    "message": "您可以通过两个私钥完全控制您的比特币，请注意将每个私钥分开独立存储。"
   },
   "We secure a recovery key": {
-    "message": "我们确保恢复密钥的安全"
+    "message": "我们确保恢复私钥的安全"
   },
   "With only one key, we can't move your bitcoin, but we can collaborate to move bitcoin if you lose a key.": {
-    "message": "我们只有一个密钥，所以无法独立转移您的比特币。但如果您不慎丢失了一个密钥，我们可以合作转移比特币。"
+    "message": "我们只有一个私钥且受到时间锁限制，所以无法独立转移您的比特币。但如果您不慎丢失了一个私钥，我们可以合作转移比特币。"
   },
   "Quickly approve and execute your multi-signature transactions.": {
     "message": "快速批准并执行您的多重签名交易。"
@@ -1850,7 +1850,7 @@
     "message": "My neighbor girlfriend deleted his Bitcoin wallet app with $ 10k inside cuz she was trying to download Tiktok and Playstore ..."
   },
   "Most users lose their cryptocurrency assets not because they are stolen, but because the owner does not manage their private keys well.": {
-    "message": "大多数用户丢失加密货币资产并不是因为它们被盗，而是因为所有者没有很好地管理他们的私钥。"
+    "message": "大多数用户丢失加密货币资产并不是因为被盗，而是因为私钥没有被很好的管理。"
   },
   "Why we need wide adoption of social recovery wallets?": {
     "message": "为什么我们需要社交恢复钱包？"
@@ -1958,7 +1958,7 @@
     "message": "所有交易都必须经过金库所有者和金库共管人共同签名才会生效，金库共管人无法合谋窃取资产。"
   },
   "With the advantage of decentralized network Mixin Network, users can transfer funds for free without the need to pay additional blockchain gas fees.": {
-    "message": "凭借去中心化网络 Mixin Network 免费转账的优势，用户无需支付额外的区块链 Gas 费。"
+    "message": "凭借去中心化网络 Mixin Network 免费转账的优势，用户无需支付额外的区块链节点矿工费。"
   },
   "Get crypto to your self-custody wallet instantly. Say goodbye to the long hold times & slippage on centralized exchanges.": {
     "message": "立即通过你的自托管钱包获得加密货币，告别在中心化交易所提现时间限制和因此带来价格波动问题。"
