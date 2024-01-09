@@ -14,17 +14,17 @@ const Item = ({
   cover: string
   to: string
 }) => (
-  <LocalLink to={to} className="space-y-5 rounded-sm bg-white pb-12 shadow">
+  <LocalLink to={to} className="rounded-sm bg-white pb-12 shadow">
     <img
       loading="lazy"
       className="aspect-335/225 w-full object-cover"
       src={require("@site/static/img/common/feature/" + cover).default}
       alt={title}
     />
-    <div className="text-#000 text-5 px-5 font-medium leading-[1.5]">
+    <div className="text-#000 text-5 mt-6-8 px-5 font-medium leading-[1.5]">
       {title}
     </div>
-    <div className="text-#000 text-3.5-4 text-op-70 px-5 font-normal leading-[1.5]">
+    <div className="text-#000 text-3.5-4 text-op-70 mt-2-2.5 px-5 font-normal leading-[1.5]">
       {description}
     </div>
   </LocalLink>
