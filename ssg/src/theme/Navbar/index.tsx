@@ -267,7 +267,7 @@ export default function Navbar({ dark }: { dark?: boolean }): JSX.Element {
             },
 
             {
-              label: translate({ message: "Collaboration" }),
+              label: translate({ id: "navbar.solution.collaboration" }),
               to: "/solutions/collaboration",
               description: translate({
                 message: "Manage funds with family, friends and colleagues.",

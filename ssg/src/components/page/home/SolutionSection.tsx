@@ -2,7 +2,7 @@ import Translate from "@docusaurus/Translate"
 import LocalLink from "../../common/LocaleLink"
 
 export const SolutionSection = () => (
-  <>
+  <div className="bg-#F2F2F2 bg-op-50 ">
     <div className="mt-25 md:mt-30 sm:px-21.7 md:px-33.3 lg:px-45 container mx-auto space-y-5 text-center font-medium md:space-y-6 lg:space-y-8">
       <div className="text-4.5 sm:text-5 md:text-7 lg:text-9.5">
         <Translate>
@@ -33,5 +33,5 @@ export const SolutionSection = () => (
         <Translate>Pricing & Plans</Translate>
       </LocalLink>
     </div>
-  </>
+  </div>
 )

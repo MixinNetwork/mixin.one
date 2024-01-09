@@ -1343,7 +1343,7 @@
     "message": "托管"
   },
   "Collaboration": {
-    "message": "协作"
+    "message": "无忧协作"
   },
   "Staking": {
     "message": "质押"
@@ -1374,9 +1374,6 @@
   },
   "Manage multiple blockchain assets with one wallet.": {
     "message": "一个钱包轻松管理多个区块链资产。"
-  },
-  "Self-custody multisig cold wallet.": {
-    "message": "自托管多签冷钱包安全管理大额资产。"
   },
   "Manage funds with family, friends and colleagues.": {
     "message": "与家人、朋友和同事共同管理资金。"
@@ -1530,9 +1527,6 @@
   },
   "You can regain control of your MPC wallet through an emergency contact and a 6-digit PIN code.": {
     "message": "您可以通过紧急联系人和 6 位 PIN 码重新获得您的 MPC 钱包控制权。"
-  },
-  "What is Social Recovery?": {
-    "message": "什么是社交恢复？"
   },
   "Social recovery refers to a method of wallet recovery that doesn't require a seed or mnemonic phrases, while also ensuring that the wallet is non-custodial.": {
     "message": "社交恢复是指一种不需要私钥、助记词恢复钱包的方法，同时还确保该钱包是一款非托管钱包。"
@@ -1986,5 +1980,17 @@
   },
   "View Product": {
     "message": "查看产品"
+  },
+  "Mixin Safe combines MPC, hardware wallet, multi-signature, and timelock technology, which fully benefits from the advantages of each technology while abandoning the related drawbacks.": {
+    "message": "Mixin Safe 结合了 MPC、硬件钱包、多重签名和时间锁技术，充分利用了每种技术的优点，同时摒弃了相关缺点。"
+  },
+  "Self-custody multi-signature cold wallet.": {
+    "message": "自托管多签冷钱包安全管理大额资产。"
+  },
+  "navbar.solution.collaboration": {
+    "message": "协作"
+  },
+  "What is social recovery?": {
+    "message": "什么是社交恢复？"
   }
 }
