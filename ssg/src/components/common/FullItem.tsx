@@ -36,7 +36,7 @@ const FullItem = ({
         <div className="children:px-4 children:sm:px-0 space-y-4">
           {title && <div className="text-5-8 font-medium">{title}</div>}
           {description && (
-            <div className="text-#000 text-3.5-4 leading-[1.5] text-opacity-80">
+            <div className="text-#000 text-3.5-4 text-op-70 leading-[1.5]">
               {description}
             </div>
           )}

@@ -24,8 +24,7 @@ export default function Root() {
         faqs={[
           {
             question: translate({
-              message:
-                "Why is Mixin Safe safer than a single hardware wallet?",
+              message: "Why is Mixin Safe safer than a single hardware wallet?",
             }),
             answer: translate({
               message:

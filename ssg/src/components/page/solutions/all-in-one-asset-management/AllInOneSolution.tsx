@@ -59,7 +59,8 @@ export const AllInOneSolution = () => (
         icon={<Svg1 />}
         title={
           <Translate>
-            Read-only authorization prevents stolen assets from malicious approvals.
+            Read-only authorization prevents stolen assets from malicious
+            approvals.
           </Translate>
         }
         className="mt-10 md:order-1 md:mt-0"
@@ -69,7 +70,8 @@ export const AllInOneSolution = () => (
         icon={<Svg2 />}
         title={
           <Translate>
-            No need to install/uninstall, no storage used, directly open and use.
+            No need to install/uninstall, no storage used, directly open and
+            use.
           </Translate>
         }
         className="md:order-3"

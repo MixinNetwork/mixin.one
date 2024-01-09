@@ -11,7 +11,7 @@ const Item = ({
 }) => (
   <div className="space-y-3">
     <div className="text-5-6 font-medium uppercase">{stepName}</div>
-    <div className="text-#000 text-3.5-4 text-op-80 leading-[1.5]">
+    <div className="text-#000 text-3.5-4 text-op-70 leading-[1.5]">
       {description}
     </div>
   </div>

@@ -70,7 +70,8 @@ export const StepsSection = () => {
                   "Ask the emergency contact to get the verification code",
               }),
               translate({
-                message: "Enter the wallet's PIN to confirm asset security, and update the current account's phone number to the new one.",
+                message:
+                  "Enter the wallet's PIN to confirm asset security, and update the current account's phone number to the new one.",
               }),
             ].map(stepGenerator)}
           </div>

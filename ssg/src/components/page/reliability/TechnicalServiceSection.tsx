@@ -33,7 +33,7 @@ const Item = ({
 
     <div
       className={clsx(
-        "text-3.5 text-#000 col-span-2 font-normal leading-[1.5] text-opacity-80",
+        "text-3.5 text-#000 text-op-70 col-span-2 font-normal leading-[1.5]",
         left ? "lg:mr-11.5 md:mr-10 md:text-end" : "lg:ml-11.5 md:ml-10",
       )}
     >

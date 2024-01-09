@@ -83,7 +83,7 @@ const Header = () => (
           {"Secure and grow your crypto wealth with {keyword}"}
         </Translate>
       </div>
-      <div className="mt-7.5 max-w-232 text-4 lg:text-4.5 mx-auto font-normal leading-[1.5] text-white text-opacity-90 sm:mt-6 md:mt-8 lg:mt-12">
+      <div className="mt-7.5 max-w-232 text-4 lg:text-4.5 text-op-90 mx-auto font-normal leading-[1.5] text-white sm:mt-6 md:mt-8 lg:mt-12">
         <Translate>
           Protect your crypto with mature multisig and MPC technology. Get
           access to trading, lending, decentralized recovery and inheritance.

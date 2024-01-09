@@ -9,7 +9,7 @@ export const AuditReportSection = () => (
         <div className="text-#000 text-7.5 font-medium leading-10">
           <Translate>Security Audits</Translate>
         </div>
-        <div className="text-#000 text-4 mt-5 font-normal leading-[1.5] text-opacity-60">
+        <div className="text-#000 text-4 text-op-60 mt-5 font-normal leading-[1.5]">
           <Translate>
             We have an ongoing security audit process that keeps all Mixin
             infrastructures secured.

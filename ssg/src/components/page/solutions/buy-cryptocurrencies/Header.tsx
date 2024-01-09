@@ -30,7 +30,7 @@ export const Header = () => (
           {"Instantly {keyword} with decentralized"}
         </Translate>
       </div>
-      <div className="text-#000 text-op-80">
+      <div className="text-#000 text-op-70">
         <Translate>
           Buying crypto with credit or debit card on Mixin app is easy and safe.
         </Translate>

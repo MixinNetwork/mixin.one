@@ -13,7 +13,7 @@ const AddressItem = ({
 }) => (
   <div className={clsx("col-span-2 space-y-3 sm:col-span-1", className)}>
     <div className="text-4 font-normal text-white">{name}</div>
-    <div className="text-3.5 font-normal leading-tight text-white text-opacity-60">
+    <div className="text-3.5 text-op-60 font-normal leading-tight text-white">
       {address}
     </div>
   </div>

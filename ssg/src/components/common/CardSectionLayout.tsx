@@ -12,7 +12,7 @@ const Item = (props: {
       <div className="h-8-10 svg:h-8-10 text-4.5-6 flex items-center overflow-hidden font-medium">
         {props.title}
       </div>
-      <div className="text-#000 text-3.5-4 leading-[1.5] text-opacity-80">
+      <div className="text-#000 text-3.5-4 text-op-70 leading-[1.5]">
         {props.description}
       </div>
     </div>

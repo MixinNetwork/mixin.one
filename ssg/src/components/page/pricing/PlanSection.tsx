@@ -94,7 +94,7 @@ const Item = ({
     <div className="border-px rounded-sm border-zinc-300 bg-zinc-100 bg-opacity-50 px-5 pb-20 pt-10 sm:px-10">
       <div className="grid gap-y-4 sm:grid-cols-2">
         <div className="text-#000 text-7-8 font-medium">{name}</div>
-        <div className="text-#000 text-3.5-4 leading-[1.5] text-opacity-80 sm:order-last">
+        <div className="text-#000 text-3.5-4 text-op-70 leading-[1.5] sm:order-last">
           {description}
         </div>
         <div className="sm:row-span-2 sm:ml-auto sm:w-fit">
@@ -110,7 +110,7 @@ const Item = ({
             </span>
           </div>
           {price <= 0 && (
-            <div className="text-#000 text-3.5 mx-auto w-fit font-normal text-opacity-70">
+            <div className="text-#000 text-3.5 text-op-70 mx-auto w-fit font-normal">
               <Translate>FREE FOREVER</Translate>
             </div>
           )}

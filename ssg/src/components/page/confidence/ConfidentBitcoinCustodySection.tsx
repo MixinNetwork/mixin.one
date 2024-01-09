@@ -12,7 +12,7 @@ const TechnologySection = () => (
         className="absolute inset-0 -z-10 h-full w-full object-cover"
       />
       <div className="pb-24-22 px-4-30 flex flex-col justify-between">
-        <div className="text-3.5-4.5 mt-24-22 mb-11 text-center leading-[1.5] text-white text-opacity-90">
+        <div className="text-3.5-4.5 mt-24-22 text-op-90 mb-11 text-center leading-[1.5] text-white">
           <Translate>
             Decentralized bitcoin custody is challenging, which is why we made
             Mixin Safe to meet public demand. Never worry about losing your keys
@@ -49,7 +49,7 @@ const Item = ({
     <div className="sm:mt-6.5 sm:px-6.5 text-#000 text-5-7 mt-5 px-5 font-medium leading-[1.5] md:mt-8 md:px-8 lg:mt-10 lg:px-10">
       {title}
     </div>
-    <div className="sm:px-6.5 text-op-80 text-#000 text-4 mt-5 px-5 font-normal leading-[1.5] md:px-8 lg:px-10">
+    <div className="sm:px-6.5 text-op-70 text-#000 text-4 mt-5 px-5 font-normal leading-[1.5] md:px-8 lg:px-10">
       {description}
     </div>
   </div>

@@ -43,7 +43,7 @@ export function Links() {
               <Link
                 key={link.label}
                 {...link}
-                className="text-3.5 block font-normal leading-tight text-white text-opacity-70"
+                className="text-3.5 text-op-70 block font-normal leading-tight text-white"
               >
                 {link.label}
               </Link>

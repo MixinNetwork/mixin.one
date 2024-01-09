@@ -62,7 +62,8 @@ export default function Root() {
           },
           {
             question: translate({
-              message: "Is the purchase of cryptocurrency available for individuals under 18?",
+              message:
+                "Is the purchase of cryptocurrency available for individuals under 18?",
             }),
             answer: translate({
               message: "You need to be 18 years old to use our service.",

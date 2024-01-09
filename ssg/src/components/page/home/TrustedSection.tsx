@@ -19,7 +19,7 @@ export const TrustedSection = () => (
   <div className="md:pb-35 bg-zinc-800 pb-40 pt-5 text-white sm:pb-20 md:pt-10">
     <SectionTitle
       titleClassName="text-white!"
-      descriptionClassName="text-white! text-opacity-60!"
+      descriptionClassName="text-white! text-op-60!"
       description={
         <Translate>
           Mixin powers leading organizations from Payment to DAOs, and beyond.

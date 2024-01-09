@@ -52,7 +52,7 @@ const Item = ({
       />
       <div className="">
         <div className="text-5-7 font-medium">{title}</div>
-        <div className="text-3.5-4 text-#000 text-op-80 mt-4 leading-[1.5]">
+        <div className="text-3.5-4 text-#000 text-op-70 mt-4 leading-[1.5]">
           {description}
         </div>
       </div>
@@ -66,7 +66,8 @@ export const MakeItSampleSection = () => {
       <SectionTitle
         description={
           <Translate>
-            Seamlessly move between fiat and crypto. Inexpensive and hassle-free.
+            Seamlessly move between fiat and crypto. Inexpensive and
+            hassle-free.
           </Translate>
         }
         className="!md:children:max-w-full !md:children:w-full !md:children:text-start !md:mb-8 !md:px-5"

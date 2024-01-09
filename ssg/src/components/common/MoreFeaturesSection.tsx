@@ -24,7 +24,7 @@ const Item = ({
     <div className="text-#000 text-5 px-5 font-medium leading-[1.5]">
       {title}
     </div>
-    <div className="text-#000 text-3.5 px-5 font-normal leading-[1.5] text-opacity-80">
+    <div className="text-#000 text-3.5 text-op-70 px-5 font-normal leading-[1.5]">
       {description}
     </div>
   </LocalLink>

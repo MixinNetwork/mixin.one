@@ -27,7 +27,7 @@ const Item = ({
         <div className="text-5.5 sm:text-6.7 md:text-7.8 lg:text-9 font-medium">
           {title}
         </div>
-        <div className="text-3.5-4 text-#000 text-op-80 mt-7 leading-[1.5]">
+        <div className="text-3.5-4 text-#000 text-op-70 mt-7 leading-[1.5]">
           {description.split("\n").map((item) => (
             <p>{item}</p>
           ))}
@@ -41,7 +41,9 @@ export const FeatureSection = () => (
   <>
     <SectionTitle
       description={
-        <Translate>{"A non-custodial wallet, you control your private keys."}</Translate>
+        <Translate>
+          {"A non-custodial wallet, you control your private keys."}
+        </Translate>
       }
       className="!mb-0"
     >

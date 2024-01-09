@@ -65,7 +65,7 @@ const Item = (data: NavItemProps) => {
           <div className="bg-white px-5 pb-10 shadow">
             {data.groups.map((data) => (
               <>
-                <div className="pt-7.5 text-#000 text-3 ms-5 font-normal uppercase text-opacity-70">
+                <div className="pt-7.5 text-#000 text-3 text-op-70 ms-5 font-normal uppercase">
                   {data.label}
                 </div>
                 <div
@@ -90,7 +90,7 @@ const Item = (data: NavItemProps) => {
                           )}
                         </div>
 
-                        <div className="text-#000 text-3 font-normal text-opacity-70">
+                        <div className="text-#000 text-3 text-op-70 font-normal">
                           {item.description}
                         </div>
                       </>
@@ -151,7 +151,7 @@ const MobileItem = (data: NavItemProps) => {
           <div className="border-op-0 border-#F2F2F2 overflow-hidden border-t transition-all duration-300">
             {data.groups.map((data) => (
               <div key={data.label}>
-                <div className="text-#000 text-3 px-6 pb-5 pt-8 font-normal uppercase text-opacity-70">
+                <div className="text-#000 text-3 text-op-70 px-6 pb-5 pt-8 font-normal uppercase">
                   {data.label}
                 </div>
                 <div>
