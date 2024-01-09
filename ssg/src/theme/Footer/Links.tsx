@@ -37,15 +37,13 @@ export function Links() {
         return (
           <div key={title} className={clsx("space-y-4", className)}>
             {title && (
-              <div className="mb-2 text-base font-normal text-white">
-                {title}
-              </div>
+              <div className="text-4 mb-2 font-normal text-white">{title}</div>
             )}
             {links.map((link) => (
               <Link
                 key={link.label}
                 {...link}
-                className="block text-sm font-normal leading-tight text-white text-opacity-70"
+                className="text-3.5 text-op-70 block font-normal leading-tight text-white"
               >
                 {link.label}
               </Link>

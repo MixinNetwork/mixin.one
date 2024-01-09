@@ -23,17 +23,17 @@ const Item = ({
         left && "md:flex-row-reverse",
       )}
     >
-      <div className="flex-center h-5 w-5 rounded-full bg-zinc-800 text-sm leading-none text-white">
+      <div className="flex-center text-3.5 h-5 w-5 rounded-full bg-zinc-800 text-white">
         {index}
       </div>
-      <div className="text-5.5 font-medium leading-tight text-[#333]">
+      <div className="text-5.5 text-#000 font-medium leading-tight">
         {title}
       </div>
     </div>
 
     <div
       className={clsx(
-        "text-3.5 col-span-2 font-normal leading-snug text-[#333] text-opacity-80",
+        "text-3.5 text-#000 text-op-70 col-span-2 font-normal leading-[1.5]",
         left ? "lg:mr-11.5 md:mr-10 md:text-end" : "lg:ml-11.5 md:ml-10",
       )}
     >
@@ -62,12 +62,13 @@ export const TechnicalServiceSection = () => {
         description={translate({
           message: "We never invent our own cryptographic techniques.",
         })}
+        large
       >
         <Translate>Reliable Technical Service</Translate>
       </SectionTitle>
       <GrayBackgroundWrapper bgClassName="block!">
-        <div className="pb-15">
-          <div className="gap-y-15 lg:gap-x-22 md:pb-45 container mx-auto mt-10 grid px-10 pb-20 md:grid-cols-[1fr_auto_1fr] md:gap-x-12">
+        <div className="pb-15 mx-a container">
+          <div className="gap-y-15 lg:gap-x-22 md:pb-45 px-4-0 mt-10 grid pb-20 sm:px-0 md:grid-cols-[1fr_auto_1fr] md:gap-x-12">
             <img
               loading="lazy"
               src={useBaseUrl("/img/page/reliability/1.1.svg")}

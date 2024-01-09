@@ -15,8 +15,8 @@ const Item = ({
 }) => (
   <div
     className={clsx(
-      "space-y-2.5 text-sm font-normal transition-all",
-      isError ? "text-red" : "text-[#333] text-opacity-80 ",
+      "text-3.5 space-y-2.5 font-normal transition-all",
+      isError ? "text-red" : "text-#000 text-op-70 ",
     )}
   >
     {children}
@@ -34,7 +34,7 @@ export const Section = () => {
 
   return (
     <>
-      <SectionTitle>
+      <SectionTitle large>
         <Translate>Contact Us</Translate>
       </SectionTitle>
       <div className="pb-45 container mx-auto grid gap-y-10 sm:grid-cols-2">
@@ -43,7 +43,7 @@ export const Section = () => {
           src={require("@site/static/img/page/contact/1.webp").default}
           className="aspect-375/425 h-full w-full object-cover sm:aspect-auto sm:flex-1"
         />
-        <div className="px-8 sm:flex-1 sm:shadow-lg">
+        <div className="sm:flex-1 sm:p-5 sm:shadow">
           <div className="space-y-6">
             <Item isError={error === "name"}>
               <div>
@@ -123,7 +123,7 @@ export const Section = () => {
           </div>
 
           <button
-            className="mt-10 w-full rounded-sm bg-[#333] py-4 text-center text-base font-normal leading-none text-white"
+            className="text-4 mt-10 w-full rounded-sm bg-[#000] py-4 text-center font-normal text-white"
             onClick={async () => {
               const name = nameRef.current?.value.trim()
               const businessType = businessTypeRef.current?.value

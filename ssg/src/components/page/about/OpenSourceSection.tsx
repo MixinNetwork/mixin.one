@@ -8,15 +8,17 @@ export const OpenSourceSection = () => (
     <SectionTitle>
       <Translate>Our Mission</Translate>
     </SectionTitle>
-    <div className="container mx-auto md:grid md:grid-cols-[645fr_315fr] lg:grid-cols-[762fr_432fr]">
+    <div className="container mx-auto md:grid md:grid-cols-[768fr_432fr]">
       <img
         loading="lazy"
         src={require("@site/static/img/page/about/2.webp").default}
-        className="aspect-375/250 sm:aspect-664/443 md:aspect-315/364 lg:aspect-432/500 h-full w-full object-cover md:order-last"
+        className="w-full object-cover md:order-last"
+        width={423}
+        height={380}
       />
-      <div className="pb-25 md:p-15 grow bg-[#333] p-10">
-        <QuotationMark className="sm:h-9 sm:w-12" />
-        <div className="text-xl font-normal leading-10 text-white sm:ms-12">
+      <div className="py-15 ps-8-12 pe-8-32.5 grow bg-[#000]">
+        <QuotationMark className="h-4.5-8.75 w-6-12" />
+        <div className="text-4.5-6 ms-0-7.5 font-normal leading-10 text-white">
           <Translate>
             We build open source software that always puts security, privacy and
             decentralization first.

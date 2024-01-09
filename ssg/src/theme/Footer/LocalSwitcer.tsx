@@ -5,6 +5,7 @@ import useDocusaurusContext from "@docusaurus/useDocusaurusContext"
 import DropdownIcon from "@site/static/img/common/dropdown.svg"
 import DropdownNavbarItem from "@theme/NavbarItem/DropdownNavbarItem"
 import Cookies from "js-cookie"
+import clsx from "clsx"
 
 export function LocalSwitcer({}) {
   const {
@@ -28,7 +29,7 @@ export function LocalSwitcer({}) {
       target: "_self",
       autoAddBaseUrl: false,
       // selected: locale === currentLocale,
-      className: "text-white! text-opacity-60 text-base font-medium",
+      className: "text-white! text-op-60 text-3.5-4 font-medium",
       onClick: () => {
         Cookies.set("lang", lang)
       },
@@ -36,9 +37,15 @@ export function LocalSwitcer({}) {
   })
 
   return (
-    <div className="[&>*]:block! [&>*]:px-0! [&_ul]:bg-white [&_ul]:bg-opacity-20">
+    <div
+      className={clsx(
+        "w-fit",
+        "[&>*]:block! [&>*]:px-0!",
+        "![&_ul]:translate-y-[4.5px] [&_ul]:pe-8.5 [&_ul]:top-full [&_ul]:min-w-fit [&_ul]:rounded-sm [&_ul]:bg-white [&_ul]:bg-opacity-20",
+      )}
+    >
       <DropdownNavbarItem
-        className="after:hidden! w-fit space-x-3.5 rounded-sm bg-white bg-opacity-20 py-1.5 pl-5 pr-2 text-base font-medium text-white text-opacity-60"
+        className="after:hidden! text-3.5-4 text-op-60 w-fit space-x-3.5 rounded-sm bg-white bg-opacity-20 py-1.5 pl-5 pr-2 font-medium text-white"
         items={localeItems}
         label={
           <>

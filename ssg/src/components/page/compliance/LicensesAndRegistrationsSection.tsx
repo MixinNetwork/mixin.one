@@ -1,40 +1,7 @@
-import { ReactNode } from "react"
 import SectionTitle from "../../common/SectionTitle"
 import Translate, { translate } from "@docusaurus/Translate"
-
-import clsx from "clsx"
 import GrayBackgroundWrapper from "../../common/GrayBackground"
-const Item = ({
-  cover,
-  title,
-  description,
-}: {
-  cover: string
-  title: string
-  description: ReactNode
-}) => (
-  <div
-    className={clsx(
-      "md:p-15 group grid items-center gap-10 rounded-sm bg-white px-5 pb-10 pt-5 shadow sm:grid-cols-2 lg:px-32",
-    )}
-  >
-    <img
-      loading="lazy"
-      src={require("@site/static/img/page/compliance/" + cover).default}
-      alt={title}
-      className="aspect-335/220 w-full object-contain px-6 sm:group-odd:order-last "
-    />
-
-    <div className="w-full space-y-5">
-      <div className="text-xl font-medium leading-snug text-[#333] sm:text-2xl">
-        {title}
-      </div>
-      <div className="text-base font-normal leading-relaxed text-[#333] text-opacity-80">
-        {description}
-      </div>
-    </div>
-  </div>
-)
+import Card from "../../common/Card"
 
 export const LicensesAndRegistrationsSection = () => {
   return (
@@ -45,14 +12,18 @@ export const LicensesAndRegistrationsSection = () => {
             We go out of our way to ensure that you have the utmost privacy.
           </Translate>
         }
+        large
       >
         <Translate>Licenses and registrations</Translate>
       </SectionTitle>
       <GrayBackgroundWrapper bgClassName="block!">
         <div className="py-15">
-          <div className="container mx-auto grid auto-rows-fr gap-5 px-5">
-            <Item
-              cover="1.1.webp"
+          <div className="container mx-auto grid auto-rows-fr gap-5 ">
+            <Card
+              cover={
+                require("@site/static/img/page/compliance/" + "1.1.webp")
+                  .default
+              }
               title={translate({
                 message: "Ministry of Finance",
               })}
@@ -61,9 +32,13 @@ export const LicensesAndRegistrationsSection = () => {
                   Registration of Activities in the Field of Virtual Currencies.
                 </Translate>
               }
+              className="!bg-white shadow"
             />
-            <Item
-              cover="1.2.webp"
+            <Card
+              cover={
+                require("@site/static/img/page/compliance/" + "1.2.webp")
+                  .default
+              }
               title={translate({
                 message: "PCI/DSS",
               })}
@@ -77,9 +52,13 @@ export const LicensesAndRegistrationsSection = () => {
                   card data.
                 </Translate>
               }
+              className="!bg-white shadow"
             />
-            <Item
-              cover="1.3.webp"
+            <Card
+              cover={
+                require("@site/static/img/page/compliance/" + "1.3.webp")
+                  .default
+              }
               title={translate({
                 message: "EU GDPR compliance",
               })}
@@ -92,6 +71,7 @@ export const LicensesAndRegistrationsSection = () => {
                   conducted annually.
                 </Translate>
               }
+              className="!bg-white shadow"
             />
           </div>
         </div>

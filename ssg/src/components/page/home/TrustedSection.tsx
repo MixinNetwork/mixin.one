@@ -9,7 +9,7 @@ const TrustedItem = ({ name, icon }: { name: string; icon: string }) => (
       alt={name}
       className="w-15 mx-auto aspect-square object-cover"
     />
-    <div className="text-center text-xs font-medium leading-3 text-white">
+    <div className="text-3-4 text-op-90 text-center font-medium leading-3 text-white">
       {name}
     </div>
   </div>
@@ -19,7 +19,7 @@ export const TrustedSection = () => (
   <div className="md:pb-35 bg-zinc-800 pb-40 pt-5 text-white sm:pb-20 md:pt-10">
     <SectionTitle
       titleClassName="text-white!"
-      descriptionClassName="text-white! text-opacity-60!"
+      descriptionClassName="text-white! text-op-60!"
       description={
         <Translate>
           Mixin powers leading organizations from Payment to DAOs, and beyond.
@@ -28,7 +28,7 @@ export const TrustedSection = () => (
     >
       <Translate>Trusted by</Translate>
     </SectionTitle>
-    <div className="gap-y-15 md:gap-x-18 mx-auto mt-5 grid w-fit grid-cols-3 place-items-center items-center justify-between gap-x-8 sm:mt-0 sm:grid-cols-6 sm:gap-x-6 sm:px-12 md:px-0">
+    <div className="gap-y-15 lg:max-w-240 container mx-auto mt-5 grid grid-cols-3 place-items-center items-center justify-between sm:flex">
       <TrustedItem name={"MixPay"} icon={"mixPay.webp"} />
       <TrustedItem name={"Pando Proto"} icon={"pandoProto.webp"} />
       <TrustedItem name={"ExinPool"} icon={"exinPool.webp"} />

@@ -45,7 +45,7 @@ export default function Logo(props: Props): JSX.Element {
         )}
       />
       {navbarTitle != null && (
-        <b className={clsx("text-lg font-semibold", props.titleClassName)}>
+        <b className={clsx("text-4.5 font-semibold", props.titleClassName)}>
           {navbarTitle}
         </b>
       )}

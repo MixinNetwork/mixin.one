@@ -2,28 +2,27 @@ import clsx from "clsx"
 import Arrow from "@site/static/img/arrow.svg"
 import Translate from "@docusaurus/Translate"
 import SectionTitle from "./SectionTitle"
+import React, { ReactNode } from "react"
 
 const FAQItem = ({
   question,
   answer,
 }: {
   question: string
-  answer: string
+  answer: ReactNode
 }) => (
   <div className="lg:max-w-240 container mx-auto border-b border-neutral-200 px-2.5">
-    <input id={question} type="radio" name="faq" className="hidden! peer" />
-    <label
-      htmlFor={question}
-      className="pb-5.5 peer-checked:svg:-rotate-180 not-default flex cursor-pointer flex-row items-start justify-between space-x-1 pt-9"
-    >
-      <div className="text-base font-medium leading-normal text-[#333]">
-        {question}
-      </div>
-      <Arrow className="mt-1 shrink-0 transition-all duration-300" />
-    </label>
-    <div className="grid grid-rows-[0fr] transition-all duration-300 peer-checked:grid-rows-[1fr]">
+    <details name="faq" className="not-default group peer">
+      <summary className="pb-5.5 flex cursor-pointer flex-row items-start justify-between space-x-1 pt-9">
+        <div className="text-#000 text-4-4.5 font-medium leading-[1.5]">
+          {question}
+        </div>
+        <Arrow className="mt-1 shrink-0 transition-all duration-300 group-open:-rotate-180" />
+      </summary>
+    </details>
+    <div className="grid grid-rows-[0fr] transition-all duration-300 peer-open:grid-rows-[1fr]">
       <div className="overflow-hidden">
-        <div className="mb-3.5 cursor-default pe-6 text-sm font-normal leading-snug text-[#333] text-opacity-75">
+        <div className="text-#000 text-3.5-4 text-op-75 mb-3.5 cursor-default pe-6 font-normal leading-[1.5] leading-[1.5]">
           {answer}
         </div>
       </div>
@@ -34,7 +33,7 @@ const FAQItem = ({
 export const FAQSection = (props: {
   className?: string
   faqs?: {
-    answer: string
+    answer: ReactNode
     question: string
   }[]
 }) => (

@@ -1,7 +1,6 @@
-import React from "react"
+import React, { ComponentType, SVGProps } from "react"
 import SectionTitle from "../../common/SectionTitle"
 import Translate, { translate } from "@docusaurus/Translate"
-import Checked from "@site/static/img/common/checked.svg"
 import GrayBackgroundWrapper from "../../common/GrayBackground"
 import clsx from "clsx"
 
@@ -9,6 +8,7 @@ import GridIcon1 from "@site/static/img/page/privacy/1.1.2.svg"
 import GridIcon2 from "@site/static/img/page/privacy/1.1.3.svg"
 import GridIcon3 from "@site/static/img/page/privacy/1.1.4.svg"
 import GridIcon4 from "@site/static/img/page/privacy/1.1.5.svg"
+import FullItem from "../../common/FullItem"
 
 const ListSection = () => {
   return (
@@ -31,6 +31,8 @@ const ListSection = () => {
               message:
                 "When your crypto assets are recharged into the Mixin wallet, only you have the right to view the types and specific amounts of assets in the wallet. Because the recharge address and withdrawal address of the wallet are not the same address, other third parties cannot infer the actual types and quantities of assets in your wallet through the recharge address or withdrawal address on the chain.",
             }),
+            className:
+              "first:bg-gradient-to-b first:from-transparent first:to-#F2F2F2",
           },
           {
             cover: "1.2.2.webp",
@@ -41,6 +43,7 @@ const ListSection = () => {
               message:
                 "If you lose the owner's private key of Mixin Safe vault, you can contact the Mixin team to recover the vault assets. At the same time, you don't have to worry about the leakage of asset information due to the leakage of private keys. The person who gets your private key cannot view the types and quantities of assets through the private key.",
             }),
+            className: "odd:bg-#F2F2F2",
           },
           {
             cover: "1.2.3.webp",
@@ -51,6 +54,7 @@ const ListSection = () => {
               message:
                 "Using Mixin Safe to host assets and using inheritance services can ensure that your wealth is successfully inherited to the next generation. Inheritance is solid privacy protection, and the heir and executor of the property cannot know in advance the types and quantities of assets to be inherited, nor can they infer all assets from the transfer records on the blockchain.",
             }),
+            className: "odd:bg-#F2F2F2",
           },
         ]}
       />
@@ -61,6 +65,7 @@ const ListSection = () => {
             Enhance UTXO transfer privacy through CryptoNote technology.
           </Translate>
         }
+        itemClassName="even:bg-#F2F2F2"
         points={[
           {
             cover: "1.3.1.webp",
@@ -92,6 +97,7 @@ const Item = ({
   title,
   description,
   points,
+  itemClassName,
 }: {
   title: React.ReactNode
   description?: React.ReactNode
@@ -99,30 +105,22 @@ const Item = ({
     cover: string
     title: string
     content: string
+    className?: string
   }[]
+  itemClassName?: string
 }) => (
-  <div className="grid items-center gap-5 pb-20">
-    <SectionTitle description={description}>{title}</SectionTitle>
-    <div className="lg:space-y-25 space-y-20 px-5">
-      {points.map(({ cover, title, content }) => (
-        <div
-          key={title}
-          className="gap-x-16.5 lg:gap-x-34.5 group grid items-center gap-y-10 md:grid-cols-2"
-        >
-          <img
-            loading="lazy"
-            src={require("@site/static/img/page/privacy/" + cover).default}
-            className="aspect-335/225 w-full md:group-odd:order-last"
-          />
-          <div className="space-y-5">
-            <div className="text-5.5 sm:text-7 lg:text-8 font-medium text-[#333]">
-              {title}
-            </div>
-            <div className="text-sm font-normal text-[#333] sm:text-base">
-              {content}
-            </div>
-          </div>
-        </div>
+  <div className="gap-5-10 grid items-center pb-20">
+    <SectionTitle description={description} className="!mb-0">
+      {title}
+    </SectionTitle>
+    <div className="">
+      {points.map(({ cover, title, content, className }) => (
+        <FullItem
+          cover={require("@site/static/img/page/privacy/" + cover).default}
+          title={title}
+          description={content}
+          className={className}
+        />
       ))}
     </div>
   </div>
@@ -130,9 +128,9 @@ const Item = ({
 
 function GridSection({}) {
   return (
-    <div className="pb-15 sm:pb-30 md:pb-25 lg:pb-30 lg:gap-y-7.5 lg:gap-x-12.5 grid gap-5 px-5 md:grid-cols-[13fr_20fr_13fr] lg:grid-cols-[296fr_502fr_296fr]">
-      <div className="order-0 sm:px-30 lg:px-9.5 sm:space-y-15 space-y-10 rounded-sm bg-white px-5 pb-16 pt-8 shadow sm:pt-10 md:order-1 md:row-span-2 md:px-6">
-        <div className="text-7 text-center font-medium text-[#333]">
+    <div className="pb-15 sm:pb-30 sm:pb-25 lg:pb-30 mx-a container grid gap-5 sm:grid-cols-[13fr_20fr_13fr] lg:grid-cols-[296fr_502fr_296fr]">
+      <div className="order-0 sm:px-30 lg:px-9.5 sm:space-y-15 space-y-10 rounded-sm bg-white px-5 pb-16 pt-8 shadow sm:order-1 sm:row-span-2 sm:px-6 sm:pt-10">
+        <div className="text-7 text-#000 text-center font-medium">
           <Translate>Information Privacy</Translate>
         </div>
         <img
@@ -141,25 +139,26 @@ function GridSection({}) {
           className="aspect-290/250 w-full"
         />
       </div>
-      <GridItem cover={<GridIcon1 />} className="md:order-0 order-1">
+      <GridItem cover={GridIcon1} className="sm:order-0 order-1">
         <Translate>
-          All messages, audios, photos, and files are end-to-end encrypted
+          All messages, audios, photos, and files are end-to-end encrypted.
         </Translate>
       </GridItem>
-      <GridItem cover={<GridIcon2 />} className="order-2">
+      <GridItem cover={GridIcon2} className="order-2">
         <Translate>
-          Stay connected to your family, friends, and coworker by group chat
+          Stay connected to your family, friends, and coworker by group chat.
         </Translate>
       </GridItem>
-      <GridItem cover={<GridIcon3 />} className="order-3">
+      <GridItem cover={GridIcon3} className="order-3">
         <Translate>
-          Enhance privacy by turning on the disappearing messages feature
+          Enhance privacy by turning on the disappearing messages feature.
         </Translate>
       </GridItem>
-      <GridItem cover={<GridIcon4 />} className="order-4">
+      <GridItem cover={GridIcon4} className="order-4">
         <Translate>
-          We can't read your messages or listen to your calls, nor can anyone
-          else
+          {
+            "We can't read your messages or listen to your calls, nor can anyone else."
+          }
         </Translate>
       </GridItem>
     </div>
@@ -167,22 +166,22 @@ function GridSection({}) {
 }
 
 const GridItem = ({
-  cover,
   children,
   className,
+  ...props
 }: {
-  cover: React.ReactNode
+  cover: ComponentType<SVGProps<SVGSVGElement>>
   children: React.ReactNode
   className?: string
 }) => (
   <div
     className={clsx(
-      "pb-11.5 sm:p-7.5 sm:pb-21 md:pb-6.5 grid place-items-center gap-y-5 rounded-sm bg-white p-5 shadow md:px-5 md:pt-9 lg:px-7",
+      "pb-11.5 sm:p-7.5 sm:pb-21 sm:pb-6.5 grid gap-y-5 rounded-sm bg-white p-5 shadow sm:px-5 sm:pt-9 lg:px-7",
       className,
     )}
   >
-    {cover}
-    <div className="text-center text-base font-normal text-[#333]">
+    <props.cover className="place-self-center self-end" />
+    <div className="text-#000 text-4 text-center font-normal leading-[1.5]">
       {children}
     </div>
   </div>
@@ -197,11 +196,12 @@ export const DesignSection = () => {
             We go out of our way to ensure that you have the utmost privacy.
           </Translate>
         }
+        large
       >
         <Translate>Privacy by Design</Translate>
       </SectionTitle>
       <GrayBackgroundWrapper bgClassName="block!">
-        <div className="mt-15 container mx-auto">
+        <div className="mt-15">
           <GridSection />
           <ListSection />
         </div>

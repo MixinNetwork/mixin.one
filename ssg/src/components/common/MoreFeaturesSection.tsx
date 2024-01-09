@@ -14,17 +14,17 @@ const Item = ({
   cover: string
   to: string
 }) => (
-  <LocalLink to={to} className="space-y-5 rounded-sm bg-white pb-12 shadow-lg">
+  <LocalLink to={to} className="rounded-sm bg-white pb-12 shadow">
     <img
       loading="lazy"
       className="aspect-335/225 w-full object-cover"
       src={require("@site/static/img/common/feature/" + cover).default}
       alt={title}
     />
-    <div className="px-5 text-xl font-medium leading-snug text-[#333]">
+    <div className="text-#000 text-5 mt-6-8 px-5 font-medium leading-[1.5]">
       {title}
     </div>
-    <div className="px-5 text-sm font-normal leading-snug text-[#333] text-opacity-80">
+    <div className="text-#000 text-3.5-4 text-op-70 mt-2-2.5 px-5 font-normal leading-[1.5]">
       {description}
     </div>
   </LocalLink>
@@ -44,14 +44,14 @@ export const MoreFeaturesSection = ({
     <SectionTitle>
       <Translate>More Features</Translate>
     </SectionTitle>
-    <div className="pb-35 container mx-auto grid grid-cols-2 gap-5 px-5 lg:grid-cols-4">
+    <div className="pb-35 container mx-auto grid grid-cols-1 gap-5 sm:grid-cols-2 md:grid-cols-4">
       {omit !== "Decentralization" && (
         <Item
           key="Decentralization"
           title={translate({ message: "Decentralization" })}
           description={translate({
             message:
-              "Not your keys, not your coins. Though managing private keys may present a challenge, we should remain steadfast in avoiding centralized firms as custodians for Bitcoin holdings.",
+              "Not your keys, not your coins. We steadfastly avoid centralized companies acting as custodians of your Bitcoin.",
           })}
           cover="decentralization.webp"
           to="/features/decentralization"

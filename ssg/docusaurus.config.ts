@@ -60,53 +60,6 @@ const config: Config = {
     image: "img/docusaurus-social-card.jpg",
     navbar: {
       title: "Mixin",
-      items: [
-        // {
-        //   type: "docSidebar",
-        //   sidebarId: "tutorialSidebar",
-        //   position: "left",
-        //   label: "Tutorial",
-        // },
-        // { to: "/blog", label: "Blog", position: "left" },
-        // {
-        //   href: "https://github.com/facebook/docusaurus",
-        //   label: "GitHub",
-        //   position: "right",
-        // },
-        {
-          label: "Technology",
-          to: "/how-it-secures",
-        },
-        {
-          label: "Pricing",
-          to: "/pricing",
-        },
-        {
-          label: "Company",
-          items: [
-            {
-              label: "Contact Us",
-              to: "/contact",
-              description: "If you have any questions, please contact us",
-              icon: "/img/common/nav/contact.svg",
-            },
-            {
-              label: "About Us",
-              to: "/about",
-              description: "Mixin helps you secure and grow your wealth",
-              icon: "/img/common/nav/about.svg",
-            },
-          ],
-          position: "left",
-        },
-        {
-          label: "Get Started",
-          to: "/pricing",
-          position: "right",
-          className:
-            "px-6 py-3 dark:bg-white dark:text-zinc-800 bg-zinc-800 text-white rounded-sm font-medium leading-none",
-        },
-      ],
     },
     footer: {
       style: "dark",

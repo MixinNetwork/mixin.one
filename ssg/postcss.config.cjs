@@ -6,16 +6,16 @@ module.exports = {
     },
     function (css) {
       css.walkRules((rule) => {
-        if (
-          rule.nodes.find((node) => node.value?.includes("link-hover-color"))
-        ) {
-          rule.remove()
-        }
-        if (
-          rule.nodes.find((node) => node.value?.includes("container-width"))
-        ) {
-          rule.remove()
-        }
+        ;[
+          "--ifm-table",
+          "--ifm-link",
+          "--ifm-navbar-link",
+          "--ifm-container",
+        ].forEach((item) => {
+          if (rule.nodes.find((node) => node.value?.includes(item))) {
+            rule.remove()
+          }
+        })
       })
     },
   ],

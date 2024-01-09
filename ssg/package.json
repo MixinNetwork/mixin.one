@@ -16,14 +16,15 @@
     "preinstall": "npx only-allow pnpm"
   },
   "dependencies": {
-    "@docusaurus/core": "3.0.0",
-    "@docusaurus/preset-classic": "3.0.0",
+    "@docusaurus/core": "3.0.1",
+    "@docusaurus/preset-classic": "3.0.1",
     "@docusaurus/theme-common": "^3.0.1",
     "@mdx-js/react": "^3.0.0",
     "@unocss/reset": "^0.57.7",
     "clsx": "^1.2.1",
+    "crisp-sdk-web": "^1.0.21",
     "js-cookie": "^3.0.5",
-    "prism-react-renderer": "^2.3.0",
+    "prism-react-renderer": "^2.3.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-multi-carousel": "^2.8.4",
@@ -32,9 +33,9 @@
     "tailwind-styled-components": "^2.2.0"
   },
   "devDependencies": {
-    "@docusaurus/module-type-aliases": "3.0.0",
-    "@docusaurus/tsconfig": "3.0.0",
-    "@docusaurus/types": "3.0.0",
+    "@docusaurus/module-type-aliases": "3.0.1",
+    "@docusaurus/tsconfig": "3.0.1",
+    "@docusaurus/types": "3.0.1",
     "@types/js-cookie": "^3.0.6",
     "@types/react": "^18.2.45",
     "@types/react-dom": "^18.2.18",

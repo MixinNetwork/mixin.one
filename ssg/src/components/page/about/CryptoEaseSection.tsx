@@ -20,10 +20,10 @@ const Item = ({
     <div className="grid grid-cols-[auto_1fr] grid-rows-[auto_1fr] place-items-start items-start gap-2.5 sm:gap-x-5">
       {icon}
 
-      <div className="text-5.5 sm:text-8 lg:text-10 font-medium text-[#333]">
+      <div className="text-5.5 sm:text-8 lg:text-10 text-#000 font-medium">
         {title}
       </div>
-      <div className="text-sm font-normal text-[#333] text-opacity-75">
+      <div className="text-#000 text-3.5-4 text-op-75 font-normal leading-[1.5]">
         {description}
       </div>
     </div>
@@ -39,11 +39,12 @@ export const CryptoEaseSection = () => {
         description={
           <Translate>Mixin team helps you better manage your wealth.</Translate>
         }
+        large
       >
         <Translate>About Us</Translate>
       </SectionTitle>
       <GrayBackgroundWrapper bgClassName="block!">
-        <div className="mt-15! md:mt-20! pb-30 container mx-auto grid gap-x-6 gap-y-10 px-5 md:grid-cols-3">
+        <div className="mt-15! md:mt-20! pb-30 container mx-auto grid gap-x-6 gap-y-10  md:grid-cols-3">
           <Item
             icon={<Icon1 className={svgClassName} />}
             title={<Translate>2017</Translate>}

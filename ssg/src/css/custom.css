@@ -27,7 +27,7 @@ body {
     "Segoe UI Emoji",
     "Segoe UI Symbol",
     "Noto Color Emoji";
-  @apply font-normal text-[#333];
+  @apply text-#000 font-normal leading-[1.325];
 }
 
 a:not(.not-default),
@@ -41,7 +41,7 @@ button {
 }
 
 * {
-  @apply font-medium outline-none;
+  @apply outline-none;
 }
 
 [class*="sm:"],
@@ -52,4 +52,16 @@ button {
 
 svg {
   @apply align-base inline;
+}
+
+summary {
+  @apply list-none;
+}
+
+summary::-webkit-details-marker {
+  @apply !hidden;
+}
+
+.container {
+  @apply px-1/20 sm:px-5;
 }

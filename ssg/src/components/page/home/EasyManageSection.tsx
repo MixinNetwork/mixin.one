@@ -17,12 +17,10 @@ const EasyManageItem = ({
       loading="lazy"
       src={require("@site/static/img/page/home/easy/" + icon).default}
       alt={"icon"}
-      className="lg:p-4.5 shadow-opacity-10 flex-center row-span-2 box-content h-6 w-6 rounded-lg bg-white p-3 shadow-lg shadow-blue-600"
+      className="lg:p-4.5 flex-center row-span-2 box-content h-6 w-6 rounded-lg bg-white p-3 shadow"
     />
-    <div className="text-base font-medium leading-tight text-[#333]">
-      {title}
-    </div>
-    <div className="text-sm font-normal leading-tight text-[#333] text-opacity-70">
+    <div className="text-#000 text-4-5 font-medium leading-tight">{title}</div>
+    <div className="text-#000 text-3.5-4 text-op-70 font-normal leading-[1.5]">
       {description}
     </div>
   </div>
@@ -33,7 +31,7 @@ export const EasyManageSection = () => {
     i18n: { currentLocale },
   } = useDocusaurusContext()
   return (
-    <div className="sm:pb-30 container mx-auto px-5 py-5 sm:pt-10">
+    <div className="sm:pb-30 container mx-auto  py-5 sm:pt-10">
       <SectionTitle
         description={
           <Translate>
@@ -111,7 +109,7 @@ export const EasyManageSection = () => {
             message: "Notification",
           })}
           description={translate({
-            message: "Get notified whenever anything happens to your accounts.",
+            message: "Get notified whenever anything happens to your safe.",
           })}
           icon={"notification.svg"}
         />
@@ -119,7 +117,7 @@ export const EasyManageSection = () => {
 
       <LocalLink
         to="/pricing"
-        className="sm:mt-15 rw-10 flex-center mx-auto mt-20 rounded-sm bg-zinc-700 py-4 font-medium leading-snug text-white sm:w-fit sm:px-7"
+        className="sm:mt-15 rw-10 text-3.5-4 flex-center mx-auto mt-20 rounded-sm bg-zinc-700 py-4 font-medium leading-[1.5] text-white sm:w-fit sm:px-7"
       >
         <Translate>Start for Free</Translate>
       </LocalLink>

@@ -1,4 +1,5 @@
 import clsx from "clsx"
+import SectionTitle from "./SectionTitle"
 
 export const SpecialLayoutItem = ({
   title,
@@ -18,12 +19,7 @@ export const SpecialLayoutItem = ({
   }[]
 }) => (
   <div className="group">
-    <div className="title-container text-center text-3xl font-medium leading-10 text-[#333]">
-      {title}
-    </div>
-    <div className="title-container mt-5 text-center text-base font-normal leading-normal text-[#333] text-opacity-70">
-      {description}
-    </div>
+    <SectionTitle description={description}>{title}</SectionTitle>
     <div className="sm:mt-19 md:mt-27 lg:mt-35 sm:gap-18  md:gap-26 mt-10 grid items-center gap-10 sm:grid-cols-2 lg:gap-32">
       <img
         loading="lazy"
@@ -34,17 +30,17 @@ export const SpecialLayoutItem = ({
         )}
       />
 
-      <div className="space-y-16">
+      <div className="space-y-16 px-4 sm:px-0">
         {points.map(({ title, description, icon }) => (
           <div
             key={title}
-            className="grid grid-cols-[auto_1fr] grid-rows-[auto_1fr] gap-x-4 gap-y-5"
+            className="grid grid-cols-[auto_1fr] grid-rows-[auto_1fr] gap-x-4 gap-y-4"
           >
             {icon}
-            <div className="text-xl font-medium leading-snug text-[#333]">
+            <div className="text-#000 text-4.5-6 font-medium leading-[1.5]">
               {title}
             </div>
-            <div className="col-span-2 text-base font-normal leading-relaxed text-[#333] text-opacity-80">
+            <div className="text-#000 text-3.4-4 text-op-70 col-span-2 leading-[1.5]">
               {description}
             </div>
           </div>
@@ -55,7 +51,5 @@ export const SpecialLayoutItem = ({
 )
 
 export const SpecialLayout = ({ children }) => (
-  <div className="pt-25 pb-45 space-y-45 container mx-auto px-5">
-    {children}
-  </div>
+  <div className="pt-25 pb-45 space-y-45 container mx-auto ">{children}</div>
 )

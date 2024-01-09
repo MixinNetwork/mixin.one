@@ -48,21 +48,21 @@ export default function Root() {
           {
             question: translate({
               message:
-                "If the Mixin Safe team disbands, can I still withdraw my assets?",
+                "If Mixin Safe team dissolves, can I still withdraw my assets?",
             }),
             answer: translate({
               message:
-                "Yes, your assets are still safe. You can withdraw your assets at any time through your wallet private key and the decentralized MPC network. Even if the Mixin Safe team disbands, your assets are safe in your hands.",
+                "Yes, your assets are still safe. You can withdraw assets at any time through your wallet private key and the decentralized MPC network. Even if Mixin Safe team is disbanded, your assets are safe in your hand.",
             }),
           },
           {
             question: translate({
               message:
-                "If I lose my private key and the safety time lock also expires, can the Mixin Safe team take away my assets?",
+                "If my private key is lost and the timelock expires, can Mixin Safe team take my assets?",
             }),
             answer: translate({
               message:
-                "No, the Mixin Safe team only has one key, which is not enough to transfer your assets unless you have already set up a recovery or inheritance plan.",
+                "No, Mixin Safe team only has 1 key, that is insufficient to move your assets unless you have set up a recovery or inheritance plan.",
             }),
           },
         ]}

@@ -14,10 +14,12 @@ const Item = ({
   description: string
   icon: React.ReactNode
 }) => (
-  <div className="pb-26 rounded-sm bg-zinc-100 px-5 pt-7 text-[#333]">
+  <div className="pb-26 text-#000 rounded-sm bg-zinc-100 px-5 pt-7">
     {icon}
-    <div className="mt-10.5 text-xl font-medium leading-snug">{title}</div>
-    <div className="mt-5 text-base font-normal leading-7">{description}</div>
+    <div className="mt-10.5 text-5 font-medium">{title}</div>
+    <div className="text-3.5-4 text-#000 text-op-70 mt-5 font-normal leading-[1.5]">
+      {description}
+    </div>
   </div>
 )
 
@@ -32,7 +34,7 @@ export const ServiceSection = () => {
       >
         <Translate>Reliable Service</Translate>
       </SectionTitle>
-      <div className="pb-45 container mx-auto grid auto-rows-fr gap-5 px-5 sm:grid-cols-2 md:grid-cols-4">
+      <div className="pb-45 container mx-auto grid auto-rows-fr gap-5  sm:grid-cols-2 md:grid-cols-4">
         <Item
           icon={<SvgIcon1 />}
           title={translate({

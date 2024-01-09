@@ -46,8 +46,10 @@ const Tab = ({
   return (
     <button
       className={clsx(
-        "w-full cursor-pointer border-b border-zinc-300 px-2 pb-5 text-center",
-        checked && "border-black!",
+        "text-#000 text-3.5-4.5 pb-3-5 w-full cursor-pointer border-b px-2 text-center",
+        checked
+          ? "text-op-100 border-#000 font-medium"
+          : "text-op-66 border-#D9D9D9",
       )}
       onClick={onClick}
     >
@@ -67,7 +69,7 @@ const Section = ({
 }) => (
   <div
     className={clsx(
-      " col-span-full gap-5 pt-8",
+      "col-span-full gap-5 pt-8",
       id === selected ? "grid!" : "hidden!",
     )}
   >
@@ -90,25 +92,25 @@ const Item = ({
 }) => {
   return (
     <div className="border-px rounded-sm border-zinc-300 bg-zinc-100 bg-opacity-50 px-5 pb-20 pt-10 sm:px-10">
-      <div className="grid gap-y-5 sm:grid-cols-2">
-        <div className="text-3xl font-medium text-[#333]">{name}</div>
-        <div className="text-base font-normal leading-normal text-[#333] text-opacity-70 sm:order-last">
+      <div className="grid gap-y-4 sm:grid-cols-2">
+        <div className="text-#000 text-7-8 font-medium">{name}</div>
+        <div className="text-#000 text-3.5-4 text-op-70 leading-[1.5] sm:order-last">
           {description}
         </div>
         <div className="sm:row-span-2 sm:ml-auto sm:w-fit">
           <div className="mt-15 mx-auto w-fit sm:mt-0 ">
-            <sup className="align-super text-3xl font-semibold leading-loose text-[#333]">
+            <sup className="text-#000 text-7.5 align-super font-semibold leading-loose">
               $
             </sup>
-            <span className="text-6xl font-semibold leading-10 text-[#333]">
+            <span className="text-#000 text-6xl font-semibold leading-10">
               {price.toLocaleString()}
             </span>
-            <span className="text-xl font-normal leading-normal text-[#333]">
+            <span className="text-#000 text-5 font-normal leading-[1.5]">
               /year
             </span>
           </div>
           {price <= 0 && (
-            <div className="mx-auto w-fit text-sm font-normal leading-none text-[#333] text-opacity-70">
+            <div className="text-#000 text-3.5 text-op-70 mx-auto w-fit font-normal">
               <Translate>FREE FOREVER</Translate>
             </div>
           )}
@@ -121,7 +123,7 @@ const Item = ({
             ? "https://messenger.mixin.one/download"
             : "https://safe.mixin.one/start"
         }
-        className="mt-17.5 px-13 block w-full rounded-sm bg-zinc-800 py-4 text-center text-sm font-medium text-white sm:mt-5 sm:w-fit"
+        className="px-13 text-3.5 sm:mt-6.5 mt-20 block w-full rounded-sm bg-zinc-800 py-4 text-center font-medium text-white sm:w-fit"
       >
         {price <= 0 ? (
           <Translate>Get Mixin</Translate>
@@ -132,16 +134,14 @@ const Item = ({
       <div className="mt-15 border-b-px h-px w-full border-zinc-300"></div>
       <div className="mt-20 grid items-center sm:mt-10 sm:grid-cols-2">
         <div className="space-y-5">
-          <div className="text-xl font-medium leading-normal text-[#333]">
+          <div className="text-#000 text-5 font-medium leading-[1.5]">
             <Translate>Features</Translate>
           </div>
-          <div className="grid gap-5 sm:grid-cols-2">
+          <div className="grid gap-4 sm:grid-cols-2">
             {features.map((feature) => (
               <div className="flex-center w-fit space-x-2.5">
                 <Checked className="shrink-0" />
-                <div className="text-base font-normal leading-5 text-[#333]">
-                  {feature}
-                </div>
+                <div className="text-#000 text-3.5-4 leading-5">{feature}</div>
               </div>
             ))}
           </div>
@@ -169,11 +169,12 @@ export const PlanSection = () => {
             different needs.
           </Translate>
         }
+        large
       >
         <Translate>Your Bitcoin is Priceless</Translate>
       </SectionTitle>
 
-      <div className="container mx-auto px-5">
+      <div className="container mx-auto ">
         <div className="grid w-full grid-cols-3">
           <Tab
             name={translate({

@@ -18,14 +18,17 @@ const Item = ({
   return (
     <div className="relative">
       <img
+        loading="lazy"
         src={require("@site/static/img/page/technology/" + background).default}
         className="fill object-cover"
       />
 
-      <div className="border-px pb-13.5 h-full border-[#D9D9D9] bg-[#F2F2F280] px-6 pt-10">
+      <div className="border-px px-4-6 pt-6-10 h-full border-[#D9D9D9] bg-[#F2F2F280] pb-10">
         {icon}
-        <div className="text-6 mt-11.5 font-medium">{title}</div>
-        <div className="mt-5 text-sm">{description}</div>
+        <div className="text-5-6 mt-11.5 font-medium">{title}</div>
+        <div className="text-#000 text-op-70 text-3.5-4 mt-5 leading-[1.5]">
+          {description}
+        </div>
       </div>
     </div>
   )
@@ -43,8 +46,9 @@ export const NetworkSecurity = () => (
     >
       <Translate>Network Security</Translate>
     </SectionTitle>
-    <div className="pb-30 container mx-auto grid gap-5 px-5 sm:grid-cols-3">
+    <div className="pb-30 container mx-auto grid gap-5  sm:grid-cols-3">
       <img
+        loading="lazy"
         src={require("@site/static/img/page/technology/3.1.webp").default}
         width={2682}
         height={1215}

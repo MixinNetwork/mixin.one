@@ -3,7 +3,29 @@ import {
   presetUno,
   transformerVariantGroup,
   transformerDirectives,
+  DynamicShortcutMatcher,
 } from "unocss"
+
+const responsiveDynamicShortcutMatcher: DynamicShortcutMatcher<{
+  breakpoints: Record<string, string>
+}> = ([, prefix, lowest, highest]: string[], { theme }) => {
+  const breakpoints = Object.entries(theme.breakpoints)
+    .map(([key, value]) => [key, value.match(/\d+/)[0]])
+    .sort((a, b) => +a[1] - +b[1])
+    .map(([key]) => key)
+    .filter((key) => ["sm", "md", "lg"].includes(key))
+
+  const totalGears = breakpoints.length + 1
+  const step = (+highest - +lowest) / (totalGears - 1)
+
+  const result = [
+    `${prefix}-${lowest}`,
+    ...breakpoints.map(
+      (key, i) => `${key}:${prefix}-${+lowest + step * (i + 1)}`,
+    ),
+  ]
+  return result
+}
 
 export default defineConfig({
   content: {
@@ -29,13 +51,40 @@ export default defineConfig({
       "absolute-horizontal-center":
         "absolute left-1/2 -translate-x-1/2 transform",
       fill: "absolute inset-0 w-full h-full",
-      "title-container": "max-w-3/4 sm:max-w-2/3 mx-auto",
+      "title-container": "max-w-239 mx-auto",
+      shadow: "shadow-default",
     },
     [
       /^click-area-(\d+)$/,
       ([, num]) =>
         `relative before:content-[''] before:absolute before:-inset-${num}`,
       { autocomplete: ["click-area-<num>"] },
+    ],
+    [
+      /^((?:(?:p|m)(?:[rltbsexy])?)|(?:text|left|right|top|bottom|font)|(?:[w|h])|(?:(?:gap|space)(?:-[xy])?))-(-?\d+(?:\.\d+)?)-(-?\d+(?:\.\d+)?)$/,
+      responsiveDynamicShortcutMatcher,
+      {
+        autocomplete: [
+          "p<directions>-<num>-<num>",
+          "p(xy)-<num>-<num>",
+          "p-<num>-<num>",
+          "m<directions>-<num>-<num>",
+          "m(xy)-<num>-<num>",
+          "m-<num>-<num>",
+          "text-<num>-<num>",
+          "gap-<num>-<num>",
+          "gap-(xy)-<num>-<num>",
+          "space-<num>-<num>",
+          "space-(xy)-<num>-<num>",
+          "w-<num>-<num>",
+          "h-<num>-<num>",
+          "left-<num>-<num>",
+          "right-<num>-<num>",
+          "top-<num>-<num>",
+          "bottom-<num>-<num>",
+          "font-<num>-<num>",
+        ],
+      },
     ],
   ],
   theme: {
@@ -78,10 +127,13 @@ export default defineConfig({
         "marquee-lg": "infinite",
       },
     },
+    boxShadow: {
+      default: "0px 4px 20px 0px rgba(0, 0, 0, 0.06);",
+    },
     breakpoints: {
-      sm: "720px",
-      md: "960px",
-      lg: "1200px",
+      sm: "680px",
+      md: "1000px",
+      lg: "1240px",
     },
   },
 })
