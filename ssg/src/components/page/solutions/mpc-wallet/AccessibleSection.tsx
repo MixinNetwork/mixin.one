@@ -80,7 +80,7 @@ export const AccessibleSection = () => {
             <Item
               cover={<Cover1 />}
               title={translate({
-                message: "Onboard users in seconds",
+                message: "Onboard in seconds",
               })}
               description={translate({
                 message:
@@ -100,7 +100,7 @@ export const AccessibleSection = () => {
             <Item
               cover={<Cover3 />}
               title={translate({
-                message: "Social Recovery",
+                message: "Social recovery",
               })}
               description={translate({
                 message:
@@ -117,7 +117,7 @@ export const AccessibleSection = () => {
               })}
               description={translate({
                 message:
-                  "The wallet client uses encryption and MPC technology to protect user assets.",
+                  "Mixin Messenger uses encryption and MPC technology to protect user assets.",
               })}
             />
             <Item

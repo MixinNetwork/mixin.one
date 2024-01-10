@@ -310,7 +310,7 @@
   "Book a consultation": {
     "message": "预约演示"
   },
-  "Is Mixin Safe really completely decentralization?": {
+  "Is Mixin Safe completely decentralized?": {
     "message": "Mixin Safe 真的是完全去中心化的吗？"
   },
   "Yes, Mixin Safe combines the multi-signature and time lock scripts of the Bitcoin network, and adopts the decentralized mature multi-party computing MPC technology, and successfully realizes a complete decentralized asset custody solution. Through the Bitcoin native time lock technology, only you have complete control of the wallet, and no one else, including our team, can spend your coins.": {
@@ -431,7 +431,7 @@
     "message": "我可以用法定货币支付计划和服务费吗？"
   },
   "Not currently, but it will be supported soon.": {
-    "message": "- 目前没有，但很快就会得到支持。"
+    "message": "目前没有，但很快就会得到支持。"
   },
   "Will my plan be automatically renewed after it expires?": {
     "message": "我的计划到期后会自动续订吗？"
@@ -490,7 +490,7 @@
   "Never worry about losing your keys or centralized evil custody.": {
     "message": "永远不必担心丢失钥匙或中心化邪恶保管。"
   },
-  "Self-custody": {
+  "Self-Custody": {
     "message": "私钥自持"
   },
   "If you don't truly own your private key, you will never be confidence in your bitcoin holdings. With Mixin Safe, you have full control over your wallet private key.": {
@@ -1363,7 +1363,7 @@
   "Download Now": {
     "message": "立刻下载"
   },
-  "MPC Self-Custodial wallet.": {
+  "MPC self-custodial wallet.": {
     "message": "MPC 自托管钱包没有私钥助记词漏洞。"
   },
   "Buy cryptocurrencies with your bank card.": {
@@ -1720,7 +1720,7 @@
   "We makes crypto accessible": {
     "message": "我们让加密货币变得触手可及"
   },
-  "Onboard users in seconds": {
+  "Onboard in seconds": {
     "message": "数秒内完成注册"
   },
   "Simple login via phone number. No seed phrases or extensions necessary.": {
@@ -1732,7 +1732,7 @@
   "Non-custodial": {
     "message": "非托管"
   },
-  "The wallet client uses encryption and MPC technology to protect user assets.": {
+  "Mixin Messenger uses encryption and MPC technology to protect user assets.": {
     "message": "钱包客户端使用加密和多方计算技术来保护用户资产。"
   },
   "Supporting multiple chains": {
@@ -1984,7 +1984,7 @@
   "Mixin Safe combines MPC, hardware wallet, multi-signature, and timelock technology, which fully benefits from the advantages of each technology while abandoning the related drawbacks.": {
     "message": "Mixin Safe 结合了 MPC、硬件钱包、多重签名和时间锁技术，充分利用了每种技术的优点，同时摒弃了相关缺点。"
   },
-  "Self-custody multi-signature cold wallet.": {
+  "Self-custodial multi-signature cold wallet.": {
     "message": "自托管多签冷钱包安全管理大额资产。"
   },
   "navbar.solution.collaboration": {

@@ -72,7 +72,7 @@ export const ConfidentBitcoinCustodySection = () => {
         <Item
           cover="1.1.webp"
           title={translate({
-            message: "Self-custody",
+            message: "Self-Custody",
           })}
           description={translate({
             message:

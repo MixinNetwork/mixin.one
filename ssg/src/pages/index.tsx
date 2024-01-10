@@ -128,7 +128,7 @@ export default function Root() {
         faqs={[
           {
             question: translate({
-              message: "Is Mixin Safe really completely decentralization?",
+              message: "Is Mixin Safe completely decentralized?",
             }),
             answer: translate({
               message:

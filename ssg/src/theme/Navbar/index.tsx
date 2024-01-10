@@ -222,7 +222,7 @@ export default function Navbar({ dark }: { dark?: boolean }): JSX.Element {
               label: translate({ message: "MPC Wallet" }),
               to: "/solutions/mpc-wallet",
               description: translate({
-                message: "MPC Self-Custodial wallet.",
+                message: "MPC self-custodial wallet.",
               }),
               icon: MPC,
             },
@@ -261,7 +261,7 @@ export default function Navbar({ dark }: { dark?: boolean }): JSX.Element {
               label: translate({ message: "Custody" }),
               to: "/solutions/custody",
               description: translate({
-                message: "Self-custody multi-signature cold wallet.",
+                message: "Self-custodial multi-signature cold wallet.",
               }),
               icon: Custody,
             },
