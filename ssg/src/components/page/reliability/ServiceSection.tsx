@@ -14,7 +14,7 @@ const Item = ({
   description: string
   icon: React.ReactNode
 }) => (
-  <div className="pb-26 text-#000 rounded-sm bg-zinc-100 px-5 pt-7">
+  <div className="pb-26 text-#000 bg-#F2F2F2 rounded-sm px-5 pt-7">
     {icon}
     <div className="mt-10.5 text-5 font-medium">{title}</div>
     <div className="text-3.5-4 text-#000 text-op-70 mt-5 font-normal leading-[1.5]">

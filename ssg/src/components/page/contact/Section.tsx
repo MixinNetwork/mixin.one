@@ -22,7 +22,7 @@ const Item = ({
     {children}
   </div>
 )
-const Input = tw.input`p-4 w-full rounded-sm border border-zinc-800`
+const Input = tw.input`p-4 w-full rounded-sm border border-#000`
 
 export const Section = () => {
   const [error, setError] = useState<"name" | "email" | "message">()
@@ -65,7 +65,7 @@ export const Section = () => {
                 <DropdownIcon className="absolute-vertical-center z-1 right-4 stroke-black" />
                 <select
                   ref={businessTypeRef}
-                  className="relative z-0 w-full appearance-none rounded-sm border border-zinc-800 p-4"
+                  className="border-#000 relative z-0 w-full appearance-none rounded-sm border p-4"
                 >
                   <option value="exchange">
                     <Translate>Exchange</Translate>

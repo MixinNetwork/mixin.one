@@ -16,7 +16,7 @@ const TrustedItem = ({ name, icon }: { name: string; icon: string }) => (
 )
 
 export const TrustedSection = () => (
-  <div className="md:pb-35 bg-zinc-800 pb-40 pt-5 text-white sm:pb-20 md:pt-10">
+  <div className="md:pb-35 bg-#000 pb-40 pt-5 text-white sm:pb-20 md:pt-10">
     <SectionTitle
       titleClassName="text-white!"
       descriptionClassName="text-white! text-op-60!"

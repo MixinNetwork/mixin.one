@@ -5,31 +5,7 @@ import Svg1 from "@site/static/img/page/solutions/collaboration/2.2.svg"
 import Svg2 from "@site/static/img/page/solutions/collaboration/2.3.svg"
 import Svg3 from "@site/static/img/page/solutions/collaboration/2.4.svg"
 import clsx from "clsx"
-
-const Item = ({
-  icon,
-  title,
-  description,
-}: {
-  icon: ReactNode
-  title: ReactNode
-  description: ReactNode
-}) => {
-  return (
-    <div
-      className={clsx(
-        "border-#D9D9D9 bg-#F2F2F2 bg-op-50 border px-5 pb-8 pt-10",
-        "lg:pb-22.5",
-      )}
-    >
-      {icon}
-      <div className="text-5-6 mt-11.5 mt-9 font-medium">{title}</div>
-      <div className="text-3.5-4 text-#000 text-op-70 mt-4 leading-[1.5]">
-        {description}
-      </div>
-    </div>
-  )
-}
+import { WoodGrainItem } from "../../../common/WoodGrainItem"
 
 export const MultiRoleCollaborationSection = () => {
   return (
@@ -64,7 +40,7 @@ export const MultiRoleCollaborationSection = () => {
           "md:grid-cols-3",
         )}
       >
-        <Item
+        <WoodGrainItem
           icon={<Svg1 />}
           title={<Translate>{"Multi-Safe"}</Translate>}
           description={
@@ -74,8 +50,9 @@ export const MultiRoleCollaborationSection = () => {
               }
             </Translate>
           }
+          background={1}
         />
-        <Item
+        <WoodGrainItem
           icon={<Svg2 />}
           title={<Translate>{"Safe Collaboration"}</Translate>}
           description={
@@ -85,8 +62,9 @@ export const MultiRoleCollaborationSection = () => {
               }
             </Translate>
           }
+          background={2}
         />
-        <Item
+        <WoodGrainItem
           icon={<Svg3 />}
           title={<Translate>{"No Collusion Risk"}</Translate>}
           description={
@@ -96,6 +74,7 @@ export const MultiRoleCollaborationSection = () => {
               }
             </Translate>
           }
+          background={3}
         />
       </div>
     </>

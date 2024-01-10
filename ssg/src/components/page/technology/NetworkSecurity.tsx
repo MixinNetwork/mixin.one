@@ -3,36 +3,7 @@ import SectionTitle from "../../common/SectionTitle"
 import Icon1 from "@site/static/img/page/technology/3.2.svg"
 import Icon2 from "@site/static/img/page/technology/3.3.svg"
 import Icon3 from "@site/static/img/page/technology/3.4.svg"
-
-const Item = ({
-  icon,
-  title,
-  description,
-  background,
-}: {
-  icon: React.ReactNode
-  title: React.ReactNode
-  description: React.ReactNode
-  background: string
-}) => {
-  return (
-    <div className="relative">
-      <img
-        loading="lazy"
-        src={require("@site/static/img/page/technology/" + background).default}
-        className="fill object-cover"
-      />
-
-      <div className="border-px px-4-6 pt-6-10 h-full border-[#D9D9D9] bg-[#F2F2F280] pb-10">
-        {icon}
-        <div className="text-5-6 mt-11.5 font-medium">{title}</div>
-        <div className="text-#000 text-op-70 text-3.5-4 mt-5 leading-[1.5]">
-          {description}
-        </div>
-      </div>
-    </div>
-  )
-}
+import { WoodGrainItem } from "../../common/WoodGrainItem"
 
 export const NetworkSecurity = () => (
   <>
@@ -54,8 +25,8 @@ export const NetworkSecurity = () => (
         height={1215}
         className="sm:py-7.5 lg:py-12.5 md:px-27 lg:px-38 col-span-full bg-[#F2F2F2] px-5 py-5 sm:px-16 md:py-10"
       />
-      <Item
-        background="3.2.1.webp"
+      <WoodGrainItem
+        background={1}
         icon={<Icon1 />}
         title={<Translate>Punitive PoS</Translate>}
         description={
@@ -68,8 +39,8 @@ export const NetworkSecurity = () => (
         }
       />
 
-      <Item
-        background="3.3.1.webp"
+      <WoodGrainItem
+        background={2}
         icon={<Icon2 />}
         title={<Translate>TEE</Translate>}
         description={
@@ -82,8 +53,8 @@ export const NetworkSecurity = () => (
           </Translate>
         }
       />
-      <Item
-        background="3.4.1.webp"
+      <WoodGrainItem
+        background={3}
         icon={<Icon3 />}
         title={<Translate>Light Witness</Translate>}
         description={

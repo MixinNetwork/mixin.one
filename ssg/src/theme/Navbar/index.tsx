@@ -76,7 +76,7 @@ const Item = (data: NavItemProps) => {
                 >
                   {data.items.map((item) => {
                     const containerClassName =
-                      "grid grid-cols-[auto_1fr] grid-rows-[auto_1fr] gap-x-5 gap-y-2.5 rounded-lg px-5 py-3 hover:bg-zinc-100"
+                      "grid grid-cols-[auto_1fr] grid-rows-[auto_1fr] gap-x-5 gap-y-2.5 rounded-lg px-5 py-3 bg-opacity-50 hover:bg-#F2F2F2"
 
                     const children = (
                       <>
@@ -354,7 +354,7 @@ export default function Navbar({ dark }: { dark?: boolean }): JSX.Element {
       }),
       to: "/pricing",
       className:
-        "px-6 py-3 dark:bg-white text-3.5 dark:text-zinc-800 bg-zinc-800 text-white rounded-sm font-medium",
+        "px-6 py-3 dark:bg-white text-3.5 dark:text-#000 bg-#000 text-white rounded-sm font-medium",
     },
   ]
   return (
@@ -396,7 +396,7 @@ export default function Navbar({ dark }: { dark?: boolean }): JSX.Element {
 
           {rightItems.map((item) => (
             <Link key={item.label} {...item} className="block p-6 ">
-              <div className="text-3.5-4 w-fit rounded-sm bg-zinc-800 px-7 py-2.5 font-medium text-white">
+              <div className="text-3.5-4 bg-#000 w-fit rounded-sm px-7 py-2.5 font-medium text-white">
                 {item.label}
               </div>
             </Link>

@@ -5,22 +5,7 @@ import clsx from "clsx"
 import Svg1 from "@site/static/img/page/solutions/custody/1.2.svg"
 import Svg2 from "@site/static/img/page/solutions/custody/1.3.svg"
 import Svg3 from "@site/static/img/page/solutions/custody/1.4.svg"
-
-const Item = ({
-  icon,
-  title,
-  description,
-}: {
-  icon: React.ReactNode
-  title: React.ReactNode
-  description: React.ReactNode
-}) => (
-  <div className="border-#D9D9D9 bg-#F2F2F2 border px-5 pb-12 pt-6">
-    {icon}
-    <div className="mt-9.5 text-5-6 font-medium">{title}</div>
-    <div className="mt-5 leading-[1.5]">{description}</div>
-  </div>
-)
+import { WoodGrainItem } from "../../../common/WoodGrainItem"
 
 export const Header = () => (
   <>
@@ -58,7 +43,7 @@ export const Header = () => (
         "md:grid-cols-3",
       )}
     >
-      <Item
+      <WoodGrainItem
         icon={<Svg1 />}
         title={<Translate>Two-of-three custody</Translate>}
         description={
@@ -68,8 +53,9 @@ export const Header = () => (
             }
           </Translate>
         }
+        background={1}
       />
-      <Item
+      <WoodGrainItem
         icon={<Svg2 />}
         title={<Translate>You hold two of your keys</Translate>}
         description={
@@ -79,8 +65,9 @@ export const Header = () => (
             }
           </Translate>
         }
+        background={2}
       />
-      <Item
+      <WoodGrainItem
         icon={<Svg3 />}
         title={<Translate>We secure a recovery key</Translate>}
         description={
@@ -90,6 +77,7 @@ export const Header = () => (
             }
           </Translate>
         }
+        background={3}
       />
     </div>
   </>
