@@ -412,8 +412,8 @@
   "After the plan expires, if I don't renew, can I still withdraw my assets?": {
     "message": "计划到期后，如果我不续费，我还能提取我的资产吗？"
   },
-  "After the package expires, your Mixin Safe account will be frozen, the fee will no longer increase, and it will be unfrozen after renewal. During the freezing period, your own vault can only be viewed and not transferred, which does not affect the approval of other vaults.": {
-    "message": "套餐到期后，您的 Mixin Safe 账户将被冻结，费用不再增加，续费后解冻。冻结期间，您自己的金库只能查看不能转账，不影响其他金库的审批。"
+  "The Mixin Safe Network is decentralized, giving you full control over your Bitcoin multi-signature private keys, allowing you to withdraw your assets at any time. Our membership services are primarily designed to enhance your user experience.": {
+    "message": "Mixin Safe 网络是去中心化的，您自己掌握比特币多重签名的私钥，所以您可以随时提取自己的资产，我们的会员服务主要是方便您更好的使用。"
   },
   "Can I pay for plans and service fees with other cryptocurrencies?": {
     "message": "我可以用其他加密货币支付计划和服务费吗？"

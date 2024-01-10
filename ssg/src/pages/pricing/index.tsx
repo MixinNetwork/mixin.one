@@ -21,7 +21,7 @@ export default function Root() {
             }),
             answer: translate({
               message:
-                "After the package expires, your Mixin Safe account will be frozen, the fee will no longer increase, and it will be unfrozen after renewal. During the freezing period, your own vault can only be viewed and not transferred, which does not affect the approval of other vaults.",
+                "The Mixin Safe Network is decentralized, giving you full control over your Bitcoin multi-signature private keys, allowing you to withdraw your assets at any time. Our membership services are primarily designed to enhance your user experience.",
             }),
           },
           {
