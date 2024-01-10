@@ -17,7 +17,7 @@ const StatisticGridItem = ({
 
 export const StatisticGridSection = () => (
   <div className="bg-#D9D9D9">
-    <div className="sm:py-17.5 sm:divide-x-1 bg-#D9D9D9 grid grid-cols-2 gap-[1px] sm:grid-cols-4 sm:divide-zinc-300 sm:divide-opacity-50 sm:bg-white">
+    <div className="sm:py-17.5 sm:divide-x-1 bg-#D9D9D9 sm:divide-#D9D9D9 grid grid-cols-2 gap-[1px] sm:grid-cols-4 sm:bg-white">
       <StatisticGridItem
         title={translate({
           message: "2017",

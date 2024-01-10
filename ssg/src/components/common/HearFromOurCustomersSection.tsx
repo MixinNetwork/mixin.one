@@ -24,7 +24,7 @@ const ButtonGroup = (props: CarouselButtonGroupProps & CarouselProps) => {
               key={index}
               className={clsx(
                 "click-area-2 h-1.5 w-1.5 rounded-full transition-all",
-                isActive ? "bg-blue-500" : "bg-zinc-300",
+                isActive ? "bg-blue-500" : "bg-white",
               )}
               onClick={handleClick}
             />

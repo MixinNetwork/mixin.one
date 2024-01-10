@@ -91,7 +91,7 @@ const Item = ({
   cover: string
 }) => {
   return (
-    <div className="border-px rounded-sm border-zinc-300 bg-zinc-100 bg-opacity-50 px-5 pb-20 pt-10 sm:px-10">
+    <div className="border-px border-#D9D9D9 bg-#F2F2F2 rounded-sm bg-opacity-50 px-5 pb-20 pt-10 sm:px-10">
       <div className="grid gap-y-4 sm:grid-cols-2">
         <div className="text-#000 text-7-8 font-medium">{name}</div>
         <div className="text-#000 text-3.5-4 text-op-70 leading-[1.5] sm:order-last">
@@ -123,7 +123,7 @@ const Item = ({
             ? "https://messenger.mixin.one/download"
             : "https://safe.mixin.one/start"
         }
-        className="px-13 text-3.5 sm:mt-6.5 mt-20 block w-full rounded-sm bg-zinc-800 py-4 text-center font-medium text-white sm:w-fit"
+        className="px-13 text-3.5 sm:mt-6.5 bg-#000 mt-20 block w-full rounded-sm py-4 text-center font-medium text-white sm:w-fit"
       >
         {price <= 0 ? (
           <Translate>Get Mixin</Translate>
@@ -131,7 +131,7 @@ const Item = ({
           <Translate>Get Started</Translate>
         )}
       </LocalLink>
-      <div className="mt-15 border-b-px h-px w-full border-zinc-300"></div>
+      <div className="mt-15 border-b-px border-#D9D9D9 h-px w-full"></div>
       <div className="mt-20 grid items-center sm:mt-10 sm:grid-cols-2">
         <div className="space-y-5">
           <div className="text-#000 text-5 font-medium leading-[1.5]">
