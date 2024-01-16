@@ -188,7 +188,7 @@ export const Section = () => {
               )
             }}
           >
-            Submit
+            <Translate>Submit</Translate>
           </button>
         </div>
       </div>
