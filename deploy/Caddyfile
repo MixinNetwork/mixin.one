@@ -18,42 +18,40 @@ http://www.mixin.one:80 {
 }
 
 http://mixin.one:80 {
-  handle {
-    root * /var/www/mixin.one
+  root * /var/www/mixin.one
 
-    encode gzip
+  encode gzip
 
-    @cachedFiles {
-      path *.js *.jpg *.jpeg *.gif *.png *.webp *.svg *.css *.woff *.woff2 *.ttf *.eot *.otf
-    }
-    header @cachedFiles +Cache-Control "public, max-age=604800, must-revalidate"
-
-    @chineseLanguageRedirectMatcher {
-      file {
-        root /var/www/mixin.one/ssg
-        try_files {path} {path}/index.html
-      }
-      file {
-        root /var/www/mixin.one/ssg/zh
-        try_files {path} {path}/index.html
-      }
-      expression header_regexp('Cookie', 'lang=zh') || (!header_regexp('Cookie', 'lang=') && header_regexp('Accept-Language', '^zh'))
-      not {
-        path_regexp ^/zh(/|$)
-      }
-    }
-
-    redir @chineseLanguageRedirectMatcher /zh{path} 302
-
-    @wellKnown {
-      path /.well-known/*
-    }
-
-    header @wellKnown +Content-Type "application/json; charset=utf-8"
-
-    try_files /ssg{path} /ssg{path}/index.html /spa{path} /spa/index.html
-    file_server
+  @cachedFiles {
+    path *.js *.jpg *.jpeg *.gif *.png *.webp *.svg *.css *.woff *.woff2 *.ttf *.eot *.otf
   }
+  header @cachedFiles +Cache-Control "public, max-age=604800, must-revalidate"
+
+  @chineseLanguageRedirectMatcher {
+    file {
+      root /var/www/mixin.one/ssg
+      try_files {path} {path}/index.html
+    }
+    file {
+      root /var/www/mixin.one/ssg/zh
+      try_files {path} {path}/index.html
+    }
+    expression header_regexp('Cookie', 'lang=zh') || (!header_regexp('Cookie', 'lang=') && header_regexp('Accept-Language', '^zh'))
+    not {
+      path_regexp ^/zh(/|$)
+    }
+  }
+
+  redir @chineseLanguageRedirectMatcher /zh{path} 302
+
+  @wellKnown {
+    path /.well-known/*
+  }
+
+  header @wellKnown +Content-Type "application/json; charset=utf-8"
+
+  try_files /ssg{path} /ssg{path}/index.html /spa{path} /spa/index.html
+  file_server
 }
 
 http://messenger.mixin.one:80 {
