@@ -1995,5 +1995,14 @@
   },
   "Submit": {
     "message": "提交"
+  },
+  "Page not found...": {
+    "message": "页面未找到..."
+  },
+  "We’re unable to find the page you’re looking for.": {
+    "message": "我们无法找到您要查找的页面。"
+  },
+  "Back to home": {
+    "message": "返回首页"
   }
 }
