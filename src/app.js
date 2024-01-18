@@ -114,6 +114,6 @@ router
     },
   })
   .notFound(function () {
-    window.location = "https://mixin.one/404"
+    window.location = "https://mixin.zone/404.html"
   })
   .resolve()
