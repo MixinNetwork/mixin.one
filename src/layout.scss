@@ -45,28 +45,14 @@ input::-webkit-inner-spin-button {
 }
 
 .error.layout {
-  background: url("./assets/images/masthead.webp");
-  background-position: center top;
-  background-repeat: no-repeat;
+      img {
+          height: auto;
+  }
+
   height: 100%;
 
   #layout-container {
     height: 100%;
-    position: relative;
-  }
-
-  .error.content {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    font-family: $font-main-title;
-    text-align: center;
-
-    h1 {
-      font-size: 64px;
-      letter-spacing: 8px;
-    }
   }
 }
 
