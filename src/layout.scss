@@ -21,17 +21,18 @@ a {
   text-decoration: none;
 }
 
-input, textarea {
+input,
+textarea {
   -webkit-appearance: none;
 }
 
 input[type='number'] {
-    -moz-appearance:textfield;
+  -moz-appearance: textfield;
 }
 
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
-    -webkit-appearance: none;
+  -webkit-appearance: none;
 }
 
 .loading.layout {
@@ -45,14 +46,149 @@ input::-webkit-inner-spin-button {
 }
 
 .error.layout {
-      img {
-          height: auto;
-  }
-
   height: 100%;
 
   #layout-container {
     height: 100%;
+
+    > div {
+      height: 100%;
+
+      box-sizing: border-box;
+
+      margin-left: auto;
+      margin-right: auto;
+
+      width: 100%;
+
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      padding-left: 2rem;
+      padding-right: 2rem;
+
+      padding-bottom: 5rem;
+      padding-top: 5rem;
+
+      row-gap: 5rem;
+
+      @media (min-width: 680px) {
+        max-width: 680px;
+
+        flex-direction: row;
+
+        padding-top: 8.75rem;
+        padding-bottom: 8.75rem;
+
+        column-gap: 4.0833333333rem;
+      }
+
+      @media (min-width: 1000px) {
+        max-width: 1000px;
+
+        padding-top: 12.5rem;
+        padding-bottom: 12.5rem;
+
+        column-gap: 8.1666666667rem;
+      }
+
+      @media (min-width: 1240px) {
+        max-width: 1240px;
+
+        padding-top: 16.25rem;
+        padding-bottom: 16.25rem;
+
+        column-gap: 12.25rem;
+      }
+
+      > img {
+        height: auto;
+        width: 16rem;
+
+        @media (min-width: 680px) {
+          width: 17.75rem;
+        }
+
+        @media (min-width: 1000px) {
+          width: 19.5rem;
+        }
+
+        @media (min-width: 1240px) {
+          width: 21.25rem;
+        }
+      }
+
+      > div {
+        div.title {
+          font-weight: 400;
+          font-size: 1.5rem;
+
+          @media (min-width: 680px) {
+            font-size: 2.3333333333rem;
+          }
+
+          @media (min-width: 1000px) {
+            font-size: 3.1666666667rem;
+          }
+
+          @media (min-width: 1240px) {
+            font-size: 4rem;
+          }
+        }
+
+        div.subtitle {
+          font-size: 0.875rem;
+          margin-top: 0.75rem;
+
+          @media (min-width: 680px) {
+            font-size: 0.9166666667rem;
+            margin-top: 0.9166666667rem;
+          }
+
+          @media (min-width: 1000px) {
+            font-size: 0.9583333333rem;
+            margin-top: 1.0833333333rem;
+          }
+
+          @media (min-width: 1240px) {
+            font-size: 1rem;
+            margin-top: 1.25rem;
+          }
+        }
+
+        a.action {
+          background-color: black;
+          width: 100%;
+          border-radius: 2px;
+          display: block;
+          padding-top: 0.75rem;
+          padding-bottom: 0.75rem;
+          text-align: center;
+          font-weight: 400;
+          color: white;
+
+          margin-top: 3.75rem;
+
+          @media (min-width: 680px) {
+            padding-left: 1.5rem;
+            padding-right: 1.5rem;
+            width: fit-content;
+
+            margin-top: 4.1666666667rem;
+          }
+
+          @media (min-width: 1000px) {
+            margin-top: 4.5833333333rem;
+          }
+
+          @media (min-width: 1240px) {
+            margin-top: 5rem;
+          }
+        }
+      }
+    }
   }
 }
 
@@ -90,8 +226,8 @@ input::-webkit-inner-spin-button {
   }
 
   .spinner .rect3 {
-    -webkit-animation-delay: -1.0s;
-    animation-delay: -1.0s;
+    -webkit-animation-delay: -1s;
+    animation-delay: -1s;
   }
 
   .spinner .rect4 {
@@ -105,17 +241,26 @@ input::-webkit-inner-spin-button {
   }
 
   @-webkit-keyframes sk-stretchdelay {
-    0%, 40%, 100% { -webkit-transform: scaleY(0.4) }
-    20% { -webkit-transform: scaleY(1.0) }
+    0%,
+    40%,
+    100% {
+      -webkit-transform: scaleY(0.4);
+    }
+    20% {
+      -webkit-transform: scaleY(1);
+    }
   }
 
   @keyframes sk-stretchdelay {
-    0%, 40%, 100% {
+    0%,
+    40%,
+    100% {
       transform: scaleY(0.4);
       -webkit-transform: scaleY(0.4);
-    }  20% {
-      transform: scaleY(1.0);
-      -webkit-transform: scaleY(1.0);
+    }
+    20% {
+      transform: scaleY(1);
+      -webkit-transform: scaleY(1);
     }
   }
 }
@@ -131,16 +276,16 @@ input::-webkit-inner-spin-button {
     padding: 16px;
   }
 
-  .noty_has_timeout .noty_progressbar{
+  .noty_has_timeout .noty_progressbar {
     background-color: transparent;
   }
 
   .noty_type__success {
-    background-color: #00B379;
+    background-color: #00b379;
   }
 
   .noty_type__warning {
-    background-color: #FF884D;
+    background-color: #ff884d;
   }
 }
 
