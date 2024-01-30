@@ -1,6 +1,5 @@
 import 'simple-line-icons/scss/simple-line-icons.scss';
 import './layout.scss';
-import './uno.scss';
 import $ from 'zepto-webpack';
 import Navigo from 'navigo';
 import MixinUtils from './utils/mixin.js';
