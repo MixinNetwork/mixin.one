@@ -86,5 +86,10 @@
     },
     "back.title": "Back to Mixin Network",
     "chains.title": "Chains"
+  },
+  "notFound": {
+    "title": "页面未找到...",
+    "subtitle": "我们无法找到您要查找的页面。",
+    "action": "返回首页"
   }
 }

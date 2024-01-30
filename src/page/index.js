@@ -1,6 +1,7 @@
 import './index.scss';
 import $ from 'zepto-webpack';
 import blueLogo from '../assets/icons/logo.png';
+import notFoundUrl from '../assets/images/404.webp';
 
 function Page(router) {
   this.router = router;
@@ -12,27 +13,29 @@ function Page(router) {
 Page.prototype = {
   show: function (id) {
     const self = this;
-    if (id === "terms") {
+    if (id === 'terms') {
       self.terms();
-      return
+      return;
     }
-    if (id === "privacy") {
+    if (id === 'privacy') {
       self.privacy();
-      return
+      return;
     }
     try {
       var layout = require('./' + id + '.' + i18n.locale + '.html');
       $('body').attr('class', 'page layout');
-      $('#layout-container').html(layout({
-        logoURL: blueLogo
-      }));
+      $('#layout-container').html(
+        layout({
+          logoURL: blueLogo,
+        })
+      );
       self.router.updatePageLinks();
     } catch (e) {
       if (e.message.indexOf('Cannot find module') !== 0) {
         throw e;
       }
       $('body').attr('class', 'error layout');
-      $('#layout-container').html(self.Error404());
+      $('#layout-container').html(self.Error404({ notFoundUrl }));
       self.router.updatePageLinks();
     }
   },
@@ -40,18 +43,22 @@ Page.prototype = {
   terms: function () {
     const self = this;
     $('body').attr('class', 'page layout');
-    $('#layout-container').html(self.templateTerms({
-      logoURL: blueLogo
-    }));
+    $('#layout-container').html(
+      self.templateTerms({
+        logoURL: blueLogo,
+      })
+    );
     self.router.updatePageLinks();
   },
 
   privacy: function () {
     const self = this;
     $('body').attr('class', 'page layout');
-    $('#layout-container').html(self.templatePrivacy({
-      logoURL: blueLogo
-    }));
+    $('#layout-container').html(
+      self.templatePrivacy({
+        logoURL: blueLogo,
+      })
+    );
     self.router.updatePageLinks();
   },
 };

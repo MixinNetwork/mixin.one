@@ -1,3 +1,9 @@
-<div class="error content">
-  <h1>404</h1>
+<div class="h-full box-border py-20-65 gap-x-0-49 mx-a container flex flex-col items-center justify-center gap-y-20 px-8 sm:flex-row">
+  <img src="{{notFoundUrl}}" loading="lazy" height="1020" width="1080" class="w-64-85" />
+
+  <div>
+    <div class="text-6-16 font-medium">{{t 'notFound.title'}}</div>
+    <div class="text-3.5-4 mt-3-5">{{t 'notFound.subtitle'}}</div>
+    <a class="mt-15-20 bg-black rounded-2px block w-full py-3 text-center font-medium text-white sm:w-fit sm:px-6" href="/">{{t 'notFound.action'}}</a>
+  </div>
 </div>

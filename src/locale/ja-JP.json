@@ -55,5 +55,10 @@
     },
     "back.title": "Mixinネットワークに戻る",
     "chains.title": "チェーン"
+  },
+  "notFound": {
+    "title": "ページが見つかりません",
+    "subtitle": "お探しのページが見つかりませんでした",
+    "action": "ホームに戻る"
   }
 }

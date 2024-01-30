@@ -86,5 +86,10 @@
     },
     "back.title": "Back to Mixin Network",
     "chains.title": "Chains"
+  },
+  "notFound": {
+    "title": "Page not found...",
+    "subtitle": "We’re unable to find the page you’re looking for.",
+    "action": "Back to home"
   }
 }
