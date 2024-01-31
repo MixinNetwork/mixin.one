@@ -139,19 +139,31 @@ Pay.prototype = {
       self.router.updatePageLinks();
       return true;
     }
-    self.api.network.assetsShow((resp) => {
-      if (resp.error && (resp.error.code === 404)) resp.error = undefined;
-      const asset = resp.data;
-      if (asset) {
-        var preloadImage = new Image();
-        preloadImage.src = asset.icon_url;
+    self.api.code.generateSchema((resp) => {
+      if (resp.error) {
+        self.api.notify('error', i18n.t('general.errors.' + resp.error.code));
+        if (resp.error.code === 400 || resp.error.code === 10002) {
+          $('#layout-container').html(self.ErrorGeneral());
+          $('body').attr('class', 'error layout');
+          self.router.updatePageLinks();
+          return true;
+        }
       }
-      const params = {
-        isInitialized: false,
-        address, asset, amount, traceId, memo
-      };
-      self.refreshSafePayment(params);
-    }, assetId)
+      const scheme_id = resp.data.scheme_id;
+      self.api.network.assetsShow((resp) => {
+        if (resp.error && (resp.error.code === 404)) resp.error = undefined;
+        const asset = resp.data;
+        if (asset) {
+          var preloadImage = new Image();
+          preloadImage.src = asset.icon_url;
+        }
+        const params = {
+          isInitialized: false,
+          address, asset, amount, traceId, memo, scheme_id
+        };
+        self.refreshSafePayment(params);
+      }, assetId)
+    }, location.href)
   },
 
   refreshPayment: function (params) {
@@ -223,7 +235,7 @@ Pay.prototype = {
 
   refreshSafePayment: function (params) {
     const self = this;
-    const { isInitialized, address, asset, amount, traceId, memo } = params;
+    const { isInitialized, address, asset, amount, traceId, memo, scheme_id } = params;
     self.api.payment.fetchSafeTrace(function (resp) {
       if (resp.error) {
         if (resp.error.code === 404) {
@@ -242,7 +254,7 @@ Pay.prototype = {
 
       const payment = resp.data;
       const mixinURL = `mixin://mixin.one${window.location.pathname}${window.location.search}`;
-      const qrCodeURL = `https://mixin.one${window.location.pathname}${self.queryFilter()}`;
+      const qrCodeURL = `https://mixin.one/schemes/${scheme_id}`;
       const data = {
         logoURL: blueLogo,
         title: i18n.t('schema.title.transfer'),
