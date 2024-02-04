@@ -117,7 +117,12 @@ router
     },
   })
   .notFound(function () {
-    $('#layout-container').html(Error404({ notFoundUrl }));
+    $('#layout-container').html(
+      Error404({
+        notFoundUrl,
+        homePath: navigator.language.startsWith('zh') ? '/zh' : '/',
+      })
+    );
     $('body').attr('class', 'error layout');
     router.updatePageLinks();
   })

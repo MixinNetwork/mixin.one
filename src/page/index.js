@@ -35,7 +35,12 @@ Page.prototype = {
         throw e;
       }
       $('body').attr('class', 'error layout');
-      $('#layout-container').html(self.Error404({ notFoundUrl }));
+      $('#layout-container').html(
+        self.Error404({
+          notFoundUrl,
+          homePath: navigator.language.startsWith('zh') ? '/zh' : '/',
+        })
+      );
       self.router.updatePageLinks();
     }
   },
