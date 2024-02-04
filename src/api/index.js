@@ -86,7 +86,12 @@ API.prototype = {
           );
           break;
         case 404:
-          $('#layout-container').html(Error404({ notFoundUrl }));
+          $('#layout-container').html(
+            Error404({
+              notFoundUrl,
+              homePath: navigator.language.startsWith('zh') ? '/zh' : '/',
+            })
+          );
           $('body').attr('class', 'error layout');
           this.router.updatePageLinks();
           break;

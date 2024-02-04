@@ -1,7 +1,7 @@
 on:
   push:
     tags:
-      - "v*.*.*"
+      - 'v*.*.*'
 
 jobs:
   build-and-publish:
@@ -14,12 +14,12 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: "lts/*"
+          node-version: 'lts/*'
 
       - uses: pnpm/action-setup@v2
         name: Install pnpm
         with:
-          version: "latest"
+          version: 'latest'
 
       - name: Install dependencies
         run: pnpm i
@@ -30,7 +30,7 @@ jobs:
 
       - name: Build SPA
         working-directory: .
-        run: pnpm run build
+        run: pnpm run dist
 
       - name: Build SSG
         working-directory: ssg/
@@ -59,6 +59,10 @@ jobs:
 
       - name: Show files for release/ssg/zh
         working-directory: release/ssg/zh
+        run: ls -a
+
+      - name: Show files for release/spa
+        working-directory: release/spa
         run: ls -a
 
       - uses: montudor/action-zip@v1
