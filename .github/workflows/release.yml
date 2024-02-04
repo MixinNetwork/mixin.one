@@ -61,6 +61,10 @@ jobs:
         working-directory: release/ssg/zh
         run: ls -a
 
+      - name: Show files for release/spa
+        working-directory: release/spa
+        run: ls -a
+
       - uses: montudor/action-zip@v1
         with:
           args: zip -qq -r release.zip release

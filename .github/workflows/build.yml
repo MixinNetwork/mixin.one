@@ -58,3 +58,7 @@ jobs:
       - name: Show files for release/ssg/zh
         working-directory: release/ssg/zh
         run: ls -a
+
+      - name: Show files for release/spa
+        working-directory: release/spa
+        run: ls -a
