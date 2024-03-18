@@ -15,8 +15,8 @@ dependencies:
     specifier: ^10.4.3
     version: 10.4.3
   favicons:
-    specifier: ^7.1.5
-    version: 7.1.5
+    specifier: ^7.2.0
+    version: 7.2.0
   handlebars:
     specifier: ^4.7.8
     version: 4.7.8
@@ -60,7 +60,7 @@ devDependencies:
     version: 6.10.0(webpack@5.90.3)
   favicons-webpack-plugin:
     specifier: ^6.0.1
-    version: 6.0.1(favicons@7.1.5)(webpack@5.90.3)
+    version: 6.0.1(favicons@7.2.0)(webpack@5.90.3)
   handlebars-loader:
     specifier: ^1.7.3
     version: 1.7.3(handlebars@4.7.8)
@@ -1384,14 +1384,14 @@ packages:
     resolution: {integrity: sha512-483XLLxTVIwWK3QTrMGRqUfUpoOs/0hbQrl2oz4J0pAcm3A3bu84wxTFqGqkJzewCLdME38xJLJAxBABfQT8sQ==}
     dev: true
 
-  /favicons-webpack-plugin@6.0.1(favicons@7.1.5)(webpack@5.90.3):
+  /favicons-webpack-plugin@6.0.1(favicons@7.2.0)(webpack@5.90.3):
     resolution: {integrity: sha512-Gl0Co4zIZq74EKXdpfe8FaoJqbuf0undV4UgpsL34vqICRAYUDwQdp3D+z+uxEOV0i9o+vHDn7Q6jaSxRiDJUA==}
     engines: {node: '>=16'}
     peerDependencies:
       favicons: ^7.0.1
       webpack: ^5.0.0
     dependencies:
-      favicons: 7.1.5
+      favicons: 7.2.0
       find-root: 1.1.0
       parse-author: 2.0.0
       parse5: 7.1.2
@@ -1402,8 +1402,8 @@ packages:
       - '@rspack/core'
     dev: true
 
-  /favicons@7.1.5:
-    resolution: {integrity: sha512-OVqWHqVnxGmvcQdXGmA9wGkfiZTrgaaVNvoeemzrV1YHP/boAyGJVRFGwib5NxLm+sQmJrf2MuRaJX33sJkMVw==}
+  /favicons@7.2.0:
+    resolution: {integrity: sha512-k/2rVBRIRzOeom3wI9jBPaSEvoTSQEW4iM0EveBmBBKFxO8mSyyRWtDlfC3VnEfu0avmjrMzy8/ZFPSe6F71Hw==}
     engines: {node: '>=14.0.0'}
     dependencies:
       escape-html: 1.0.3

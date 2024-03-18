@@ -7,7 +7,7 @@
     "@ethersproject/basex": "^5.7.0",
     "buffer": "^6.0.3",
     "decimal.js": "^10.4.3",
-    "favicons": "^7.1.5",
+    "favicons": "^7.2.0",
     "handlebars": "^4.7.8",
     "navigo": "^8.11.1",
     "node-polyglot": "^2.5.0",
